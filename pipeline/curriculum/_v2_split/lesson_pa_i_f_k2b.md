@@ -1,0 +1,27 @@
+## PA.I.F.K2b: Factors affecting performance, including: Pilot technique.
+
+### 1. The Oral Standard (The Direct Answer)
+Manufacturer performance charts represent the absolute peak capability of the aircraft, heavily assuming that the pilot will execute flawless technique. Any deviation from the POH-prescribed airspeeds, configuration deployment timings, or coordinated aerodynamic control inputs will exponentially degrade the aircraft's actual performance. Poor techniques—such as over-rotating during the takeoff roll, flying in an uncoordinated slip during a climb, or failing to apply maximum aerodynamic and mechanical braking immediately upon touchdown—will result in performance that falls far short of the calculated book data.
+
+### 2. The Expert Deep Dive (The "Textbook")
+
+**Regulatory Basis:** Compliance with **14 CFR 91.9** mandates adherence to the operating limitations set forth in the flight manual. However, achieving the performance numbers printed within that manual requires a level of practical execution governed by the rigorous certification standards detailed in the Airman Certification Standards (ACS).
+
+**The "Why":** Aerodynamic efficiency is fundamentally defined by the minimization of drag. Aircraft engines produce a finite amount of thrust; any thrust utilized to overcome unnecessary, pilot-induced drag is thrust that cannot be used for acceleration or climbing.
+* **Uncoordinated Flight:** If a pilot fails to maintain coordinated flight (indicated by a centered inclinometer ball), the aircraft enters a slip or a skid. This presents the broad side of the fuselage to the relative wind. The resulting massive spike in form (parasitic) drag essentially acts as an airbrake, obliterating the aircraft's rate of climb.
+* **Takeoff Rotation Errors:** During a short-field takeoff, the goal is to reach liftoff speed ($V_R$) as rapidly as possible. If a pilot succumbs to the psychological pressure of a looming obstacle and hauls back on the yoke prematurely (over-rotating), they drastically increase the angle of attack of the wing and the downward deflection of the elevator. This generates immense induced and parasitic drag before the aircraft possesses sufficient kinetic energy. The engine must fight this newly created drag, severely prolonging the ground roll and destroying the climb gradient.
+* **Landing Deceleration Errors:** Maximum braking performance relies on the weight of the aircraft resting entirely on the main wheels, creating high friction between the tire and the pavement. If a pilot lands fast and "floats," or fails to promptly retract the flaps upon touchdown (if recommended by the manufacturer), residual lift continues to act upon the wings. This residual lift counteracts the aircraft's weight, rendering the wheel brakes highly ineffective and vastly lengthening the landing rollout.
+
+**Scenario Application:** Two pilots are tasked with departing a 2,000-foot runway obstructed by 50-foot trees at the departure end. Pilot A holds the aircraft precisely on the centerline, leaves the elevator neutral to minimize drag during acceleration, rotates smoothly at the exact $V_R$, and pitches to perfectly capture the Best Angle of Climb speed ($V_X$) with the rudder coordinated. Pilot A clears the trees with an 80-foot margin. Pilot B, feeling anxious, applies heavy back pressure early in the takeoff roll, inducing massive drag. Upon lifting off, Pilot B lets the nose wander, requiring crossed controls to maintain the runway heading. The uncoordinated flight and excessive drag prevent the aircraft from achieving the $V_X$ climb gradient, leading to a fatal collision with the tree canopy.
+
+### 3. Common Errors & Gotchas
+* **The "Pull Harder" Instinct:** When a pilot perceives that the aircraft is not climbing fast enough to clear an obstacle, human instinct screams to pull further back on the yoke. This action pushes the wing past the optimal $V_X$ angle of attack, drastically increasing induced drag, slowing the aircraft down, and guaranteeing a shallower, more dangerous climb path.
+* **Sloppy Rudder Work:** Attempting to maintain a runway centerline or climb heading primarily using ailerons while ignoring adverse yaw. This results in the pilot fighting the aircraft through a continuous sequence of uncoordinated slips and skids during the most critical, high-power phase of departure.
+* **Threshold Overspeed:** Carrying just 10% excess airspeed (e.g., crossing the threshold at 71 knots instead of a POH-mandated 65 knots) creates a disproportionate amount of excess kinetic energy ($KE = \frac{1}{2}mv^2$). This excess energy forces the aircraft to float in ground effect, consuming hundreds or thousands of feet of usable runway before the tires ever touch the pavement.
+
+### 4. Bridge Keys (Metadata)
+* **Regs:** 14 CFR 91.9
+* **Docs:** FAA-H-8083-3C (AFH Ch 6, Ch 8, Ch 9)
+* **Keywords:** Uncoordinated Flight, Parasitic Drag, Induced Drag, Over-rotation, Ground Effect, $V_X$, Kinetic Energy.
+
+---
