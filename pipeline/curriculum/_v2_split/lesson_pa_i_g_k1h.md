@@ -26,5 +26,3 @@ The pitot-static system routes ram air and ambient air pressure to drive the Air
 * **Regs:** 14 CFR 91.205
 * **Docs:** FAA-H-8083-25C Chapter 8
 * **Keywords:** Bernoulli's Principle, Dynamic Pressure, Alternate Static Source, Vacuum Pump, Gyroscopic Precession, Aneroid Wafer
-
----

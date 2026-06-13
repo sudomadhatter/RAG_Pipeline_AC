@@ -18,5 +18,3 @@
 * **Regs:** 14 CFR 91.17, 14 CFR 61.53
 * **Docs:** FAA-H-8083-25 (PHAK Ch 17)
 * **Keywords:** Bottle to Throttle, 0.04 BAC, Under the Influence, Implied Consent, Crewmember.
-
----

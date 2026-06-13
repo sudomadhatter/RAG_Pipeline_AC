@@ -40,5 +40,3 @@ To operate safely and legally within the NAS, a pilot must seamlessly decode the
 * **Regs:** N/A (Cartography Standards).
 * **Docs:** FAA Aeronautical Chart Users' Guide, FAA-H-8083-25C (PHAK) Chapter 15.
 * **Keywords:** Sectional Chart, Magenta Vignette, Mode C Veil, Military Training Routes, TRSA, Class D Ceiling, VFR Navigation.
-
----

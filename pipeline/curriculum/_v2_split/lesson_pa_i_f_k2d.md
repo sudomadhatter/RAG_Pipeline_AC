@@ -23,5 +23,3 @@ The airport environment encompasses the physical characteristics of the runway, 
 * **Regs:** 14 CFR 91.103(b)
 * **Docs:** AC 91-79A, FAA-H-8083-3C (AFH Ch 11), Chart Supplement
 * **Keywords:** Runway Gradient, Rolling Resistance, Braking Friction, Dynamic Hydroplaning, AC 91-79A, Wet Grass, Contaminated Surfaces.
-
----

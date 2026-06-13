@@ -23,5 +23,3 @@ Excessive aircraft weight acts as a severe penalty multiplier across every singl
 * **Regs:** 14 CFR 91.9(a), 14 CFR 91.103
 * **Docs:** FAA-H-8083-1B (W&B Handbook Ch 4 & Ch 10)
 * **Keywords:** Basic Empty Weight, Useful Load, Payload, Excess Power, Structural Integrity, Max Gross Weight, Electronic Flight Bag (EFB).
-
----

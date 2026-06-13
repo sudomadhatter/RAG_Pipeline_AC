@@ -51,5 +51,3 @@ Class G rules shift based on altitude and time of day, reflecting the inherent r
 * **Regs:** 14 CFR 91.155.
 * **Docs:** FAA-H-8083-25C (PHAK), AC 90-48E.
 * **Keywords:** Basic VFR Weather Minimums, 3-152, 5-111, Clear of Clouds, See and Avoid, Closure Rate, Class G Weather.
-
----

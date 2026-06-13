@@ -23,5 +23,3 @@ Aerodynamics is the applied science of how air interacts with solid objects in m
 * **Regs:** N/A (Physics principles governing Part 91 operations).
 * **Docs:** FAA-H-8083-25C (PHAK Ch 4 & Ch 5)
 * **Keywords:** Four Forces of Flight, Critical Angle of Attack, Boundary Layer Separation, Parasitic Drag, Induced Drag, $L/D_{Max}$, Ground Effect.
-
----

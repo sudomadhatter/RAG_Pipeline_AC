@@ -19,5 +19,3 @@ The aircraft electrical system is typically a 14-volt or 28-volt direct current 
 * **Regs:** 14 CFR 23.2525, 14 CFR 91.205
 * **Docs:** FAA-H-8083-25C Chapter 7
 * **Keywords:** Alternator, Rectifier, Diode, Bus Bar, Voltage Regulator, Ammeter, Loadmeter
-
----

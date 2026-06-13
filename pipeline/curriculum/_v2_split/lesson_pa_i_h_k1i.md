@@ -18,5 +18,3 @@ Dehydration is a critical depletion of bodily fluids that causes headaches, seve
 * **Regs:** 14 CFR 61.53
 * **Docs:** FAA-H-8083-25, AIM 8-1-1
 * **Keywords:** Insensible Fluid Loss, Hypoglycemia, Relative Humidity, Cognitive Degradation.
-
----

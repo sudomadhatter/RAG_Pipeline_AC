@@ -23,5 +23,3 @@ The primary risk associated with performance charts is the pilot blindly trustin
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 91-79A, SAFO 06012, FAA-H-8083-2A (Risk Management Handbook)
 * **Keywords:** Safety Margins, Test Pilot Data, Extrapolation, Aircraft Degradation, Confirmation Bias.
-
----

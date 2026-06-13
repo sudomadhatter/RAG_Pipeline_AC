@@ -19,5 +19,3 @@ Improper management of a system failure occurs when a pilot loses positive contr
 * **Regs:** 14 CFR 91.3
 * **Docs:** FAA-H-8083-2A Chapter 6, FAA-H-8083-3C Chapter 18
 * **Keywords:** Aviate Navigate Communicate, Startle Response, Threat and Error Management, Fixation, Troubleshooting, Spiral Dive
-
----

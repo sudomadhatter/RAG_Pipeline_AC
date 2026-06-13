@@ -39,5 +39,3 @@ Issued dynamically via Notices to Air Missions (NOTAMs) under 14 CFR 91.137 - 91
 * **Regs:** 14 CFR Part 73, 14 CFR Part 93, 14 CFR 91.137, 14 CFR 91.141, 14 CFR 91.161.
 * **Docs:** AIM 3-4-1 (Special Use Airspace), AIM 3-5-1 (Other Airspace Areas), NOTAMs.
 * **Keywords:** Prohibited Area, Restricted Area, MOA, Warning Area, CFA, SFRA, SATR, TFR, Part 93, Gateway Screening, eSecure Flight.
-
----

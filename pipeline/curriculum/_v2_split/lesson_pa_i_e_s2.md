@@ -36,5 +36,3 @@ A pilot can legally fly into a TRSA, ignore the approach controller, contact the
 * **Regs:** 14 CFR 91.215, 14 CFR 91.225, 14 CFR 91.129, 14 CFR 91.130.
 * **Docs:** AIM 3-2-5 (Class C Airspace), FAA Order JO 7110.65.
 * **Keywords:** Establish Two-Way Radio Communication, Aircraft Calling Standby, Transponder Requirements, ADS-B Out, Terminal Radar Service Area, Mode C Veil.
-
----

@@ -26,5 +26,3 @@ The fuel system safely stores and delivers proper aviation fuel to the powerplan
 * **Regs:** 14 CFR 91.205
 * **Docs:** FAA-H-8083-25C Chapter 7
 * **Keywords:** Pascal's Law, Hydrostatic Pressure, Stoichiometric, Viscosity, Condensation, 100LL, Jet-A
-
----

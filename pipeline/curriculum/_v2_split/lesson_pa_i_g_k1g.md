@@ -19,5 +19,3 @@ Modern avionics systems replace mechanical gyroscopes and pneumatic instruments 
 * **Regs:** 14 CFR 91.205, 14 CFR 23.2500
 * **Docs:** FAA-H-8083-25C Chapter 8
 * **Keywords:** AHRS, ADC, MEMS, Magnetometer, Reversionary Mode, Transducer, Technically Advanced Aircraft
-
----

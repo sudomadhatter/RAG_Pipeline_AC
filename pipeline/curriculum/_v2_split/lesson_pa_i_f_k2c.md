@@ -29,5 +29,3 @@ Airplane configuration describes the physical state and position of deployable a
 * **Regs:** 14 CFR 91.9
 * **Docs:** FAA-H-8083-25C (PHAK Ch 5, Ch 6)
 * **Keywords:** Aerodynamic Configuration, Camber, Coefficient of Lift ($C_L$), Parasitic Drag, Go-Around, Balked Landing, Soft-Field.
-
----

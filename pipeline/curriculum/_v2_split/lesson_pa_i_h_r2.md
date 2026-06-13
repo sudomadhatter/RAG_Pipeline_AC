@@ -26,5 +26,3 @@ Pilots must demonstrate the ability to identify the five recognized hazardous at
 * **Regs:** None specifically.
 * **Docs:** FAA-H-8083-25 (PHAK Ch 2), AC 60-22
 * **Keywords:** Antidotes, Behavior Modification, Macho, Impulsivity, Resignation, Cognitive Circuit-Breaker.
-
----

@@ -18,5 +18,3 @@ Hypothermia is a dangerous drop in core body temperature below the normal 98.6°
 * **Regs:** 14 CFR 91.13
 * **Docs:** FAA-H-8083-25, FAA Survival Handbook
 * **Keywords:** Standard Lapse Rate, Core Body Temperature, Vasoconstriction, Manual Dexterity, Wind Chill.
-
----

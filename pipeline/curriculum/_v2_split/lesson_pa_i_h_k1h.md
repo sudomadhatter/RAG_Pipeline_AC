@@ -18,5 +18,3 @@ Fatigue is a dangerous degradation of attention, concentration, and cognitive pr
 * **Regs:** 14 CFR 91.13, 14 CFR 61.53
 * **Docs:** FAA-H-8083-25, AC 120-100 (Basics of Aviation Fatigue)
 * **Keywords:** Acute Fatigue, Chronic Fatigue, Circadian Rhythm, Microsleeps, Sleep Debt, Prefrontal Cortex.
-
----

@@ -25,5 +25,3 @@ Oxygen systems store highly compressed aviation-grade breathing oxygen and deliv
 * **Regs:** 14 CFR 91.211
 * **Docs:** FAA-H-8083-25C Chapter 17, AC 61-107
 * **Keywords:** Hypoxic Hypoxia, Partial Pressure, Continuous Flow, Diluter-Demand, Pressure-Demand, Alveolar Membrane
-
----

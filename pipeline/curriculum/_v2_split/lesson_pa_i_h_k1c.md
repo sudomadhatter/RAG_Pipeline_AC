@@ -18,5 +18,3 @@ During flight, atmospheric pressure changes require the middle ear and sinuses t
 * **Regs:** 14 CFR 61.53
 * **Docs:** FAA-H-8083-25, AIM 8-1-2
 * **Keywords:** Eustachian Tube, Boyle's Law, Valsalva Maneuver, Reverse Block, Tympanic Membrane.
-
----

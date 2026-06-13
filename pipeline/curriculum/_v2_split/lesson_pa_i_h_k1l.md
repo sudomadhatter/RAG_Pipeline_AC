@@ -26,5 +26,3 @@ The FAA AIM recommended wait times are based on the risk of supersaturation:
 * **Regs:** 14 CFR 61.53
 * **Docs:** AIM 8-1-2, FAA-H-8083-25 (PHAK Ch 17)
 * **Keywords:** Decompression Sickness (DCS), Henry's Law, Controlled Ascent, Nitrogen Bubbles, The Bends.
-
----

@@ -24,5 +24,3 @@ $$\Delta CG = \frac{WeightShifted \times DistanceShifted}{TotalWeight}$$
 * **Regs:** 14 CFR 91.9
 * **Docs:** FAA-H-8083-1B (W&B Handbook Ch 4 & Ch 10)
 * **Keywords:** $\Delta CG$, FATCAT, Weight Shift Formula, Moment, Zero Fuel Weight, In-Flight CG Shift, Arm, Datum.
-
----

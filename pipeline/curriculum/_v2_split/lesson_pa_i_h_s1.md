@@ -18,5 +18,3 @@ The applicant must demonstrate the practical skill to rapidly correlate physiolo
 * **Regs:** None specifically.
 * **Docs:** FAA-H-8083-25 (PHAK Ch 17)
 * **Keywords:** Symptom Correlation, Emergency Diagnosis, Physiological Failure, Root Cause Analysis.
-
----

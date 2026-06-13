@@ -21,5 +21,3 @@ The primary flight controls consist of the ailerons, elevator (or stabilator), a
 * **Regs:** 14 CFR 23.2300
 * **Docs:** FAA-H-8083-25C Chapter 6, FAA-H-8083-3C Chapter 3
 * **Keywords:** Adverse Yaw, Differential Ailerons, Frise-type Ailerons, Axis of Rotation, Induced Drag, Aerodynamic Camber
-
----

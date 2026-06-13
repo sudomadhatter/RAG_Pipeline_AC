@@ -22,5 +22,3 @@ Exceeding an airplane's published limitations forces the aircraft into untested 
 * **Regs:** 14 CFR 91.9
 * **Docs:** FAA-H-8083-25C (PHAK Ch 5)
 * **Keywords:** V-G Diagram, Maneuvering Speed ($V_A$), Limit Load Factor, Ultimate Load, Structural Deformation, Placards.
-
----

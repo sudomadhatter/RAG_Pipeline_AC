@@ -24,5 +24,3 @@ Calculated performance is a theoretical, mathematical prediction; actual perform
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 91-79A, SAFO 06012, FAA-H-8083-2A
 * **Keywords:** Safety Margin, Deceleration Delay, AC 91-79A, Threshold Crossing Height (TCH), Personal Minimums, Kinetic Energy, Runway Excursion.
-
----

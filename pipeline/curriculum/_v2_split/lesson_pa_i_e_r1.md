@@ -30,5 +30,3 @@ Modern Electronic Flight Bags (EFBs) like ForeFlight provide excellent situation
 * **Regs:** 14 CFR 91.117, 14 CFR 91.155.
 * **Docs:** FAA-H-8083-2A (Risk Management Handbook), AC 90-48E (Pilots' Role in Collision Avoidance).
 * **Keywords:** Airspace Compression, Wake Turbulence, Closure Rate, See and Avoid, Flight Following Limitations, EFB Fixation, Midair Collision.
-
----

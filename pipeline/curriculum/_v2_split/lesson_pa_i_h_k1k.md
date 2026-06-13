@@ -28,5 +28,3 @@ The following table summarizes the most critical illusions and their associated 
 * **Regs:** 14 CFR 91.119
 * **Docs:** FAA-H-8083-25, AIM 8-1-5, AC 60-22
 * **Keywords:** Runway Width Illusion, Black Hole Approach, VASI, PAPI, Featureless Terrain, Autokinesis.
-
----

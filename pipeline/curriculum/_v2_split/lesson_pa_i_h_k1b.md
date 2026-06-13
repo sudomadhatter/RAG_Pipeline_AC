@@ -18,5 +18,3 @@ Hyperventilation is an abnormal increase in the volume of air breathed in and ou
 * **Regs:** 14 CFR 61.53
 * **Docs:** FAA-H-8083-25, AIM 8-1-3
 * **Keywords:** Respiratory Alkalosis, Carbon Dioxide, Vasoconstriction, Stress Response, Sensory Mismatch.
-
----

@@ -55,5 +55,3 @@ It extends from the surface up to the overlying Class E airspace. Flight visibil
 * **Regs:** 14 CFR 71.33, 14 CFR 91.129, 14 CFR 91.130, 14 CFR 91.131.
 * **Docs:** AIM Chapter 3, FAA Order JO 7110.65, Doremire Legal Interpretation.
 * **Keywords:** Airspace Classes, Establish Two-Way Communication, Class B Clearance, Uncontrolled Airspace, Terminal Radar Service Area.
-
----

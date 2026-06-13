@@ -18,5 +18,3 @@ Pilots must aggressively mitigate distractions and task saturation by strictly a
 * **Regs:** 14 CFR 91.3
 * **Docs:** FAA-H-8083-2 (Risk Management Handbook)
 * **Keywords:** Aviate Navigate Communicate, Task Saturation, Sterile Cockpit, Channelized Attention, SRM.
-
----

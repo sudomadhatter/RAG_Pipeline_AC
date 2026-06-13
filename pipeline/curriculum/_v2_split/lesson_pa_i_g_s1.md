@@ -19,5 +19,3 @@ The applicant must physically demonstrate the correct normal operation, identify
 * **Regs:** 14 CFR 91.9 (Civil aircraft flight manual, marking, and placard requirements)
 * **Docs:** Aircraft POH/AFM Sections 4 & 7
 * **Keywords:** Switchology, System Limitations, Practical Application, Cockpit Familiarization, Preventative Maintenance
-
----

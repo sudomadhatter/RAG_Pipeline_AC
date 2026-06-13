@@ -19,5 +19,3 @@ Deicing systems, such as pneumatic rubber boots, are reactive systems designed t
 * **Regs:** 14 CFR 91.527
 * **Docs:** AC 91-74B, FAA-H-8083-25C Chapter 7
 * **Keywords:** Pneumatic Boots, TKS Weeping Wing, FIKI, Supercooled Water Droplets, Boundary Layer Separation, Holdover Time
-
----

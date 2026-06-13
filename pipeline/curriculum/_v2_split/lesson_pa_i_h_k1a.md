@@ -28,5 +28,3 @@ The Time of Useful Consciousness (TUC) drops exponentially at higher altitudes, 
 * **Regs:** 14 CFR 91.211
 * **Docs:** FAA-H-8083-25, AIM 8-1-2
 * **Keywords:** Hypoxic, Hypemic, Stagnant, Histotoxic, Dalton's Law, Cyanosis, Time of Useful Consciousness.
-
----

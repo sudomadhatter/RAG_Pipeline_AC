@@ -19,5 +19,3 @@ Landing gear systems support the aircraft during ground operations, provide stee
 * **Regs:** 14 CFR 91.205(b)(10), 14 CFR 23.2300
 * **Docs:** FAA-H-8083-25C Chapter 7
 * **Keywords:** Oleo-Pneumatic Strut, MIL-H-5606, Metering Pin, Squat Switch, Over-Center Locks, Kinetic Energy Dissipation
-
----

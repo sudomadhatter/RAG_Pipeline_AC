@@ -19,5 +19,3 @@ General aviation training aircraft are generally powered by horizontally opposed
 * **Regs:** 14 CFR 23.2400, 14 CFR 91.205
 * **Docs:** FAA-H-8083-25C Chapter 7
 * **Keywords:** Otto Cycle, Stoichiometric Ratio, Constant-Speed Governor, Flyweights, Centrifugal Twisting Moment, Detonation
-
----

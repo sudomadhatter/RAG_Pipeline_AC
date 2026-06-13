@@ -30,5 +30,3 @@ Atmospheric conditions dictate aircraft performance by altering the density of t
 * **Regs:** 14 CFR 91.103
 * **Docs:** FAA-H-8083-25C (PHAK Ch 11), FAA-P-8740-02 (Density Altitude)
 * **Keywords:** Density Altitude, Pressure Altitude, Humidity, Air Density, Engine Performance, 3-H (High, Hot, Humid), Charles's Law.
-
----

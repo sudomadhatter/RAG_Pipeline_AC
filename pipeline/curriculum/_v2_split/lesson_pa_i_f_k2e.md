@@ -27,5 +27,3 @@ The physical location of the Center of Gravity (CG) fundamentally dictates an ai
 * **Regs:** 14 CFR 91.9
 * **Docs:** FAA-H-8083-25C (PHAK Ch 10), FAA-H-8083-1B
 * **Keywords:** Center of Lift (CL), Tail-down Force, Longitudinal Stability, Induced Drag, Moment Arm, Elevator Authority, Wheelbarrowing.
-
----

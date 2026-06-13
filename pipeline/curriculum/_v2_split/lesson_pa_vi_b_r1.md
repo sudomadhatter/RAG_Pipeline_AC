@@ -1,0 +1,25 @@
+## PA.VI.B.R1: Management of automated navigation and autoflight systems
+
+### 1. The Oral Standard (The Direct Answer)
+[cite_start]Automated navigation and autoflight systems (autopilots) are specifically designed to reduce pilot workload and exponentially enhance situational awareness, but they introduce profound risks if mismanaged by the crew. [cite: 1457] [cite_start]The primary hazard is "automation surprise," where the system executes a flight maneuver the pilot did not anticipate due to mode confusion or incorrect data programming. [cite: 1458] [cite_start]Effective risk mitigation requires the pilot to actively monitor the flight mode annunciator, maintain high proficiency in manual hand-flying, and be entirely willing to immediately disconnect the automation if the aircraft deviates from the desired flight path. [cite: 1459]
+
+### 2. The Expert Deep Dive (The "Textbook")
+
+#### A. The Psychology of Automation in TAA
+[cite_start]Modern Technologically Advanced Aircraft (TAA) feature highly integrated glass cockpits (such as the Garmin G1000) coupled to sophisticated, multi-axis digital autopilots. [cite: 1462] [cite_start]While these systems dramatically increase navigational precision, they insidiously degrade the pilot's tactile feedback loop. [cite: 1463] [cite_start]The FAA recognizes that over-reliance on automation leads to rapid cognitive skill degradation. [cite: 1464] [cite_start]When a pilot psychologically transitions from being an active aviator to a passive "system monitor," their reaction time to system anomalies or environmental changes increases drastically. [cite: 1465]
+
+#### B. Mode Confusion and Automation Surprise
+[cite_start]The most critical point of failure in autoflight management is Mode Confusion. [cite: 1467] [cite_start]Digital autopilots operate under a matrix of various lateral modes (Heading, Navigation, Approach) and vertical modes (Altitude Hold, Vertical Speed, Flight Level Change). [cite: 1468] [cite_start]A catastrophic error occurs when a pilot engages the autopilot believing it is capturing a pre-selected altitude in Pitch (PIT) mode, while it is actually holding a specific, aggressive vertical speed (VS). [cite: 1469] [cite_start]As engine performance degrades with altitude, the autopilot will endlessly pitch the nose up to maintain the VS target, eventually stalling the aircraft. [cite: 1470] The resulting unexpected behavior is termed Automation Surprise. [cite_start]The pilot's immediate psychological reaction is often to attempt to reprogram or troubleshoot the system while the aircraft is actively deviating from controlled flight—a highly dangerous cognitive trap. [cite: 1471]
+
+#### C. The Disconnect Doctrine
+[cite_start]Rigorous risk management protocols mandate a strict rule hierarchy for automated flight: Aviate, Navigate, Communicate, then Program. [cite: 1472] [cite_start]If the autopilot executes any command that is unexpected, unexplained, or uncommanded, the absolute first step is to press the Autopilot Disconnect button mounted on the control yoke and manually fly the airplane. [cite: 1473] [cite_start]The pilot must never physically fight the autopilot through the flight controls. [cite: 1474] [cite_start]Overriding the servos manually without disconnecting can trim the aircraft into an extreme, unrecoverable out-of-trim condition when the servos finally release or the mechanical clutch slips. [cite: 1475]
+
+### 3. Common Errors & Gotchas
+* [cite_start]**The "Heads-Down" Trap:** Programming a complex flight plan modification or loading an approach into the GPS while taxiing or during the critical, high-workload takeoff and climb phases. [cite: 1477] [cite_start]This destroys external situational awareness and invites runway incursions or spatial disorientation. [cite: 1478]
+* [cite_start]**Garbage In, Garbage Out:** Failing to verify the specific waypoints on the Multifunction Display (MFD) map before executing a direct-to command. [cite: 1479] [cite_start]The autopilot is incredibly literal and will flawlessly fly the aircraft to the wrong destination if programmed incorrectly by the pilot. [cite: 1480]
+* [cite_start]**Failure to Monitor the Annunciator:** Looking down at the physical buttons pressed on the autopilot bezel rather than confirming the active and armed modes displayed on the Primary Flight Display (PFD) Flight Mode Annunciator (FMA). [cite: 1481] [cite_start]The FMA is the only true indication of what the computer is actually executing. [cite: 1482]
+
+### 4. Bridge Keys (Metadata)
+* [cite_start]**Regs:** 14 CFR 91.3 [cite: 1484]
+* [cite_start]**Docs:** AC 61-134, FAA-H-8083-25C, FAA-H-8083-2A [cite: 1485]
+* [cite_start]**Keywords:** Automation Surprise, Mode Confusion, Autoflight, Technologically Advanced Aircraft, Flight Mode Annunciator [cite: 1486]

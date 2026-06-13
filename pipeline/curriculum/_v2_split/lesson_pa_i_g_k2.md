@@ -27,5 +27,3 @@ Managing system abnormalities requires the pilot to maintain positive aircraft c
 * **Regs:** 14 CFR 91.213(d), 14 CFR 91.205
 * **Docs:** AC 91-67A, FAA Order 8900.1 (Volume 4)
 * **Keywords:** Minimum Equipment List, ATOMATOFLAMES, Deactivation, Placard, Airworthiness Directive, KOEL
-
----

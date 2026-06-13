@@ -39,5 +39,3 @@ If a Private Pilot without an instrument rating encounters sub-VFR weather at ni
 * **Regs:** 14 CFR 91.157, 14 CFR 91.155, 14 CFR Part 91 Appendix D.
 * **Docs:** FAA Order JO 7110.65 Chapter 7 Section 5 (Special VFR), AIM 4-4-6.
 * **Keywords:** SVFR, Clear of Clouds, 1 Statute Mile, Night SVFR, IFR Rated, No SVFR, ATC Clearances.
-
----

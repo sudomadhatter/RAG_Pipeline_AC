@@ -20,5 +20,3 @@ Expectation bias occurs when a pilot hears or sees what they *expect* to happen 
 * **Regs:** None specifically.
 * **Docs:** FAA Risk Management Handbook (FAA-H-8083-2A)
 * **Keywords:** Expectation Bias, Confirmation Bias, Plan Continuation Error, Cross-check, Cognitive Bias.
-
----

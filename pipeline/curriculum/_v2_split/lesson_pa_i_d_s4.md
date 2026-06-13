@@ -25,5 +25,3 @@ The applicant must demonstrate the ability to manage fuel dynamically while in f
 * **Regs:** 14 CFR 91.151
 * **Docs:** FAA-H-8083-25 (PHAK Ch 16)
 * **Keywords:** Fuel Recalculation, In-flight Diversion, Mental Math, Time/Distance/Fuel, E6B
-
----

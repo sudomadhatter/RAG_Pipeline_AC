@@ -18,5 +18,3 @@ Motion sickness is a debilitating condition caused by the brain receiving confli
 * **Regs:** 14 CFR 61.53, 14 CFR 91.17
 * **Docs:** FAA-H-8083-25, AME Guide
 * **Keywords:** Sensory Mismatch, Vestibular System, Anti-Emetics, Proprioceptive, Pallor.
-
----

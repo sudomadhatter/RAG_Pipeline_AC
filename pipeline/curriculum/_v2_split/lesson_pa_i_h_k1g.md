@@ -18,5 +18,3 @@ Stress is the body's physiological and psychological response to demands placed 
 * **Regs:** 14 CFR 61.53
 * **Docs:** FAA-H-8083-2, FAA-H-8083-25, AIM 8-1-1
 * **Keywords:** Acute Stress, Chronic Stress, Cognitive Tunneling, Sympathetic Nervous System, IMSAFE.
-
----

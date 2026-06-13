@@ -21,5 +21,3 @@ Alcohol acts as a central nervous system depressant, severely degrading reaction
 * **Regs:** 14 CFR 61.53, 14 CFR 91.17
 * **Docs:** FAA Guide for Aviation Medical Examiners (AME Guide), FAA-H-8083-25 (PHAK)
 * **Keywords:** Histotoxic Hypoxia, 5-Times Half-Life, Diphenhydramine, Central Nervous System Depressant.
-
----

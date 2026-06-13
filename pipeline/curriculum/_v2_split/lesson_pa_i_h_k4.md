@@ -21,5 +21,3 @@ Aeronautical Decision-Making (ADM) is a systematic, mental approach used by pilo
 * **Regs:** None specifically.
 * **Docs:** FAA-H-8083-2 (Risk Management Handbook), AC 60-22 (Aeronautical Decision Making), FAA-H-8083-25 (PHAK)
 * **Keywords:** DECIDE Model, 3P Model, 5 Ps, SRM, CRM, Task Saturation.
-
----

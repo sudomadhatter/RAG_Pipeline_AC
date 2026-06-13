@@ -23,5 +23,3 @@ Manufacturer performance charts represent the absolute peak capability of the ai
 * **Regs:** 14 CFR 91.9
 * **Docs:** FAA-H-8083-3C (AFH Ch 6, Ch 8, Ch 9)
 * **Keywords:** Uncoordinated Flight, Parasitic Drag, Induced Drag, Over-rotation, Ground Effect, $V_X$, Kinetic Energy.
-
----

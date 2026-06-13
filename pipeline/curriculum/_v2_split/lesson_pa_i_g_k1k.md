@@ -19,5 +19,3 @@ Water rudders are small, mechanically actuated steering surfaces mounted on the 
 * **Regs:** 14 CFR 91.115 (Right-of-way rules: water operations)
 * **Docs:** FAA-H-8083-23 Chapter 4
 * **Keywords:** Weathervaning, Hydrodynamic Drag, Displacement Taxi, Step Taxi, Center of Buoyancy, Centrifugal Force
-
----

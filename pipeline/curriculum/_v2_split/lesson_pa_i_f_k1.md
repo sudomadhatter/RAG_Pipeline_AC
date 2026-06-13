@@ -21,5 +21,3 @@ To accurately extract data from these matrices, a pilot must frequently employ i
 * **Regs:** 14 CFR 91.9, 14 CFR 91.103
 * **Docs:** FAA-H-8083-25C (PHAK Ch 11), POH/AFM Section 5
 * **Keywords:** Interpolation, Extrapolation, Performance Charts, Tabular Data, Nomogram, Preflight Action.
-
----

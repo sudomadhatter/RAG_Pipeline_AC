@@ -1,0 +1,25 @@
+## PA.VI.B.K3: Radar assistance to visual flight rules (VFR) aircraft
+
+### 1. The Oral Standard (The Direct Answer)
+[cite_start]Air Traffic Control (ATC) provides radar assistance to VFR aircraft, commonly referred to as "Flight Following" or radar traffic advisories. [cite: 1389] [cite_start]This service utilizes primary and secondary radar systems to provide the pilot with continuous traffic alerts, safety alerts, and optional navigational vectors. [cite: 1390] [cite_start]However, VFR radar services are strictly provided on a workload-permitting basis; [cite: 1391] [cite_start]controller participation does not relieve the pilot-in-command of their primary statutory responsibility to see and avoid other aircraft and maintain minimum VFR weather distances. [cite: 1392]
+
+### 2. The Expert Deep Dive (The "Textbook")
+
+#### A. Radar Modalities: Primary versus Secondary
+[cite_start]Modern Air Traffic Control relies on a fused picture from two distinct radar technologies to build a comprehensive situational display. [cite: 1395] [cite_start]Primary Radar operates on the principle of radio wave reflection; [cite: 1396] [cite_start]the spinning dish blasts a high-energy radio pulse that physically bounces off the metallic skin of the aircraft (a "skin paint") and returns to the receiver. [cite: 1397] [cite_start]It measures distance and azimuth but requires no equipment in the aircraft. [cite: 1398] [cite_start]Secondary Radar (the Air Traffic Control Radar Beacon System, or ATCRBS) requires a cooperative transponder installed on the aircraft. [cite: 1399] [cite_start]The ground station sends an interrogation pulse, and the aircraft's transponder actively transmits a powerful reply containing a discrete squawk code and altitude data. [cite: 1400] [cite_start]This cooperative system is vastly more reliable, boasts significantly greater range, and effectively eliminates weather and ground clutter from the controller's screen. [cite: 1401]
+
+#### B. VFR Flight Following (Radar Traffic Advisories)
+[cite_start]Under VFR, a pilot may request traffic advisories from the overlying Air Route Traffic Control Center (ARTCC) or Terminal Radar Approach Control (TRACON). [cite: 1402] [cite_start]Upon establishing radar contact, the controller will issue traffic calls using the 12-hour clock format relative to the aircraft's radar ground track (e.g., "Traffic, 10 o'clock, 5 miles, eastbound, altitude indicates 4,500"). [cite: 1403] [cite_start]The absolute operational limitation of this service is its workload-permitting nature. [cite: 1404] [cite_start]If the controller becomes saturated with separating mandatory IFR traffic, they may drop the VFR aircraft from radar services entirely without warning, stating "Radar service terminated, squawk VFR". [cite: 1405]
+
+#### C. Terminal Radar Service Areas (TRSA)
+[cite_start]While Class B and Class C airspace strictly mandate two-way radio communication and transponder utilization for mandatory radar sequencing, a TRSA is a voluntary radar environment surrounding certain high-volume Class D airports. [cite: 1407] [cite_start]Pilots are highly encouraged to contact TRACON upon entering a TRSA to receive basic radar service, sequencing, and separation from IFR and participating VFR traffic. [cite: 1408] [cite_start]Despite the robust services provided, participation within a TRSA remains legally optional for VFR aircraft. [cite: 1409]
+
+### 3. Common Errors & Gotchas
+* [cite_start]**The "Clearance" Misconception:** A VFR pilot receiving flight following may erroneously assume they are automatically cleared to transition through Class B airspace. [cite: 1411] [cite_start]Flight following is an advisory service; a pilot must hear the explicit, specific phrase "Cleared into the Class Bravo airspace" before penetrating the boundary. [cite: 1412]
+* [cite_start]**Abdication of See-and-Avoid:** Pilots utilizing flight following frequently spend excessive time "heads down" analyzing traffic on their multifunction displays or waiting for ATC to verbally warn them of conflicts. [cite: 1413] [cite_start]This behavior violates 14 CFR 91.113(b), which mandates that vigilance must be continuously maintained to see and avoid other aircraft. [cite: 1414]
+* [cite_start]**Clock Position Translation Errors:** ATC issues traffic calls based on the aircraft's radar ground track, not its magnetic heading. [cite: 1415] [cite_start]In strong crosswind conditions where a pilot has established a significant wind correction angle (crab angle), the traffic called at "12 o'clock" by ATC may actually appear out the side window of the cockpit. [cite: 1416]
+
+### 4. Bridge Keys (Metadata)
+* [cite_start]**Regs:** 14 CFR 91.113 [cite: 1418]
+* [cite_start]**Docs:** AIM 4-1-15, AIM 4-1-20 [cite: 1419]
+* [cite_start]**Keywords:** Flight Following, Primary Radar, Secondary Radar, Traffic Advisories, TRSA, See and Avoid, ATCRBS [cite: 1420]

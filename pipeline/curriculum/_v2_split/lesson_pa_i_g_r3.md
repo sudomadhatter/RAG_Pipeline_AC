@@ -19,5 +19,3 @@ Automated systems, such as advanced autopilots and glass cockpit avionics, signi
 * **Regs:** N/A
 * **Docs:** FAA-H-8083-2A Chapter 6, AC 61-136B
 * **Keywords:** Mode Confusion, Paradox of Automation, Systems Manager, Autopilot Disconnect, Technically Advanced Aircraft (TAA), GIGO
-
----

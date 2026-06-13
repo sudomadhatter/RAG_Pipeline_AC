@@ -19,5 +19,3 @@ Detecting system malfunctions early relies on the pilot maintaining continuous s
 * **Regs:** 14 CFR 91.3 (Pilot in Command responsibility)
 * **Docs:** FAA-H-8083-2A Chapter 6
 * **Keywords:** Situational Awareness, Instrument Scan, Complacency, Confirmation Bias, Early Detection, Threat and Error Management
-
----

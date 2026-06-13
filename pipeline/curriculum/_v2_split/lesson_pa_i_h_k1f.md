@@ -18,5 +18,3 @@ Carbon monoxide (CO) is a colorless, odorless, and tasteless gas found in engine
 * **Regs:** 14 CFR 91.7
 * **Docs:** FAA-H-8083-25, AIM 8-1-4
 * **Keywords:** Hypemic Hypoxia, Hemoglobin, Carboxyhemoglobin, Exhaust Shroud Heater, Colorless/Odorless.
-
----

@@ -26,5 +26,3 @@ Secondary flight controls include wing flaps, trim systems, leading-edge devices
 * **Regs:** 14 CFR 23.2300(b)
 * **Docs:** FAA-H-8083-25C Chapter 6
 * **Keywords:** Fowler Flaps, Anti-Servo Tab, Balance Tab, Coefficient of Lift, Aerodynamic Leverage
-
----

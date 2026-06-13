@@ -18,5 +18,3 @@ Spatial disorientation is a loss of proper spatial awareness resulting from conf
 * **Regs:** None specifically.
 * **Docs:** FAA-H-8083-25, AIM 8-1-5, FAA Safety Brochure "Spatial Disorientation"
 * **Keywords:** Vestibular System, Semicircular Canals, Otolith Organs, The Leans, Graveyard Spiral, Coriolis Illusion.
-
----

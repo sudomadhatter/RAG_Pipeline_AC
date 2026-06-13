@@ -18,5 +18,3 @@ The applicant must demonstrate the ability to identify, assess, and mitigate ris
 * **Regs:** 14 CFR 61.53, 14 CFR Part 68
 * **Docs:** FAA-H-8083-2 (Risk Management Handbook), FAA-H-8083-25 (PHAK)
 * **Keywords:** IMSAFE, Self-Assessment, Go/No-Go Decision, Hazard Identification, BasicMed.
-
----
