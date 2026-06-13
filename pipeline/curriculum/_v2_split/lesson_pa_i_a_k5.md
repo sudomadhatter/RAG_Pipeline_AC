@@ -45,5 +45,3 @@ When flying under BasicMed, the pilot is subject to strict operational envelopes
 * **Regs:** 14 CFR Part 68, 14 CFR 61.113(i), 14 CFR 61.23(c)(3).
 * **Docs:** AC 68-1A (BasicMed Implementation).
 * **Keywords:** CMEC, 48 Months, 6000 lbs, 250 Knots, State-Licensed Physician.
-
----

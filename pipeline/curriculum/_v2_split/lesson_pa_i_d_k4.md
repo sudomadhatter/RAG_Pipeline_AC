@@ -25,5 +25,3 @@ A VFR flight plan, now typically filed using the FAA Form 7233-4 (International 
 * **Regs:** 14 CFR 91.153
 * **Docs:** AIM 5-1-4, AIM 5-1-6, FAA Form 7233-4
 * **Keywords:** VFR Flight Plan, Search and Rescue, ICAO Flight Plan, Form 7233-4, Equipment Suffixes
-
----

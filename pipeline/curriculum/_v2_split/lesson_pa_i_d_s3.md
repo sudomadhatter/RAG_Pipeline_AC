@@ -25,5 +25,3 @@ The applicant must physically construct a navigation log (manual or electronic) 
 * **Regs:** 14 CFR 91.153
 * **Docs:** AIM 5-1-4, FAA Form 7233-4
 * **Keywords:** Navigation Log, Simulate Filing, Flight Service Radio Call, ICAO Flight Plan
-
----

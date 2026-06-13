@@ -26,5 +26,3 @@ Calculating these navigational elements requires applying the wind triangle to c
 * **Regs:** 14 CFR 91.103
 * **Docs:** FAA-H-8083-25 (PHAK Ch 16)
 * **Keywords:** True Course, Magnetic Heading, Wind Correction Angle, Groundspeed, Top of Descent, Wind Triangle
-
----

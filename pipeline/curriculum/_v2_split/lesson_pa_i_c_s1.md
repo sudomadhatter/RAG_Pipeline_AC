@@ -33,5 +33,3 @@ To obtain an adequate weather briefing, the applicant must demonstrate the skill
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 91-92, AIM 7-1-5
 * **Keywords:** Standard Briefing, Abbreviated Briefing, Outlook Briefing, 1800wxbrief, ForeFlight, Preflight Action.
-
----

@@ -25,5 +25,3 @@ To accurately calculate fuel requirements, a pilot determines the exact amount o
 * **Regs:** 14 CFR 91.151, 14 CFR 91.103, 14 CFR 23.1337
 * **Docs:** FAA-H-8083-25 (PHAK Ch 16), FAA-H-8083-2A (Risk Management)
 * **Keywords:** Fuel Reserve, VFR Fuel Requirements, GPH, Fuel Exhaustion, Mixture Leaning
-
----

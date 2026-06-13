@@ -25,5 +25,3 @@ The applicant must demonstrate the precise ability to extract and apply operatio
 * **Regs:** 14 CFR 91.103
 * **Docs:** Aeronautical Chart User's Guide, Chart Supplement U.S., AIM 5-1-3
 * **Keywords:** NOTAM Decoding, Chart Supplement, Right Traffic Pattern, Sectional Chart Symbols, TFRs
-
----

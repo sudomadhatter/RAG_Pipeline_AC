@@ -26,5 +26,3 @@ If intercepted by military or law enforcement aircraft, a civilian pilot must im
 * **Regs:** 14 CFR 99
 * **Docs:** AIM 5-6-2, AIM 5-6-4
 * **Keywords:** Intercept Procedures, 121.5, Squawk 7700, Visual Signals, TFR Incursion, ICAO Annex 2
-
----

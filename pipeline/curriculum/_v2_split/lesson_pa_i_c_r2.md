@@ -21,5 +21,3 @@ Effective risk management requires the understanding that no single weather prod
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 00-63B, AIM 7-1, FAA-H-8083-28
 * **Keywords:** Radar Latency, TAF 5SM Limit, ASOS Limitations, Inflight Weather Resources, FIS-B, NEXRAD.
-
----

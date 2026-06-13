@@ -21,5 +21,3 @@ The applicant must translate raw meteorological data and acronyms into operation
 * **Regs:** N/A (Skill/Analysis based)
 * **Docs:** FAA-H-8083-28 (Aviation Weather Handbook), FAA-H-8083-25 (PHAK Chapter 12)
 * **Keywords:** Weather Implications, Temp/Dewpoint Spread, Frontal Passage, Mountain Wave, Freezing Rain.
-
----

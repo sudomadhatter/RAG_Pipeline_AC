@@ -26,5 +26,3 @@ An Electronic Flight Bag (EFB) is a portable or installed electronic device used
 * **Regs:** 14 CFR 91.21, 14 CFR 91.503
 * **Docs:** AC 91-78A, AC 120-76D
 * **Keywords:** Electronic Flight Bag, EFB, ForeFlight, Backup charts, AC 91-78A
-
----

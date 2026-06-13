@@ -20,5 +20,3 @@ However, FSS remains a vital consultative resource. Weather service to aviation 
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 91-92, AIM Chapter 7 Section 1, FAA-H-8083-28
 * **Keywords:** FSS, 1800wxbrief, AviationWeather.gov, Self-Briefing, 14 CFR 91.103, Preflight Action, EWINS, National Weather Service.
-
----

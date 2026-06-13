@@ -25,5 +25,3 @@ Aircraft risk management requires verifying that the specific airplane is airwor
 * **Regs:** 14 CFR 91.7, 14 CFR 91.205, 14 CFR 91.213
 * **Docs:** FAA-H-8083-2A (Risk Management), FAA-H-8083-25 (PHAK Ch 10)
 * **Keywords:** Airworthiness, Density Altitude, Weight and Balance, Inoperative Equipment, KOEL, 91.213
-
----

@@ -52,5 +52,3 @@ A common misconception among private pilots is the belief that all flight time m
 * **Regs:** 14 CFR 61.56, 14 CFR 61.57, 14 CFR 61.51, 14 CFR 61.103, 14 CFR 1.1.
 * **Docs:** AC 61-98D (Currency & Flight Review), AC 61-65H (Endorsements), FAA-H-8083-25C (PHAK).
 * **Keywords:** Flight Review, Sole Manipulator, Calendar Month, Full Stop, WINGS Program, Tailwheel Currency, Civil Twilight.
-
----

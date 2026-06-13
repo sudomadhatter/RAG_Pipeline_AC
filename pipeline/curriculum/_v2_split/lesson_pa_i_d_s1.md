@@ -25,5 +25,3 @@ The applicant must present a fully completed navigational log and flight plan to
 * **Regs:** 14 CFR 61.43, 14 CFR 91.103
 * **Docs:** FAA-S-ACS-6C (Private Pilot ACS)
 * **Keywords:** Navlog, Checkride Presentation, Route Justification, Go/No-Go Decision, ADM
-
----

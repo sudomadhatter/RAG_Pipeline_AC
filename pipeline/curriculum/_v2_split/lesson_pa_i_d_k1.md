@@ -26,5 +26,3 @@ Route planning involves selecting a safe, efficient path from departure to desti
 * **Regs:** 14 CFR 91.103, 14 CFR 91.119
 * **Docs:** FAA-H-8083-25 (PHAK Ch 16), Chart Supplement U.S.
 * **Keywords:** Route Planning, Pilotage, Dead Reckoning, Special Use Airspace, NWKRAFT
-
----

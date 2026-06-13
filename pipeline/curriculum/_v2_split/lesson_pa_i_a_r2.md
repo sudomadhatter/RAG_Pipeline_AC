@@ -31,5 +31,3 @@ Negative Transfer occurs when a habit from a previous aircraft causes an error i
 * **Regs:** 14 CFR 61.31 (Type Ratings/Endorsements).
 * **Docs:** AC 90-109A, FAA-H-8083-25C (PHAK Ch 2).
 * **Keywords:** Negative Transfer, Automation Surprise, TAA, Transition Training, AC 90-109.
-
----

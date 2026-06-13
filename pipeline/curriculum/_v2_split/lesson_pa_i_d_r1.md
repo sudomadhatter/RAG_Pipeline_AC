@@ -28,5 +28,3 @@ Pilot risk management involves relentlessly assessing one's own physical and men
 * **Regs:** 14 CFR 61.53, 14 CFR 91.17
 * **Docs:** FAA-H-8083-2A (Risk Management Ch 2 & 3)
 * **Keywords:** IMSAFE, PAVE, Hazardous Attitudes, Aeronautical Decision Making, Fatigue, 61.53
-
----

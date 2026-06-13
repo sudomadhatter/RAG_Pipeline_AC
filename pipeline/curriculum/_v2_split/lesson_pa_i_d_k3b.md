@@ -25,5 +25,3 @@ Estimated Time of Arrival (ETA) is calculated by dividing the total distance of 
 * **Regs:** 14 CFR 91.153
 * **Docs:** FAA-H-8083-25 (PHAK Ch 16), AIM 4-2-12
 * **Keywords:** UTC, Zulu Time, ETA, ETE, Time Zones, Base 60 Math
-
----

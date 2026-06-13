@@ -26,5 +26,3 @@ Environmental risk management encompasses mitigating severe hazards outside the 
 * **Regs:** 14 CFR 91.103, 14 CFR 91.155
 * **Docs:** FAA-H-8083-2A (Risk Management), AC 91-92 (Preflight Briefing)
 * **Keywords:** Personal Minimums, VFR-into-IMC, CFIT, Maximum Elevation Figure, Weather Briefing
-
----

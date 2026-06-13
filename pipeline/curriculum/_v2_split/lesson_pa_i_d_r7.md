@@ -25,5 +25,3 @@ EFB risk management involves mitigating the dual hazards of technological failur
 * **Regs:** 14 CFR 91.21
 * **Docs:** AC 91-78A, FAA-H-8083-2A (Risk Management)
 * **Keywords:** Electronic Flight Bag, Thermal Shutdown, Distraction, Backup Charts, EFB Fixation
-
----

@@ -22,5 +22,3 @@ Flight deck displays of digital weather, primarily utilizing ADS-B (FIS-B) or co
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 00-63B, AIM 7-1-11
 * **Keywords:** FIS-B, ADS-B, SiriusXM, NEXRAD Latency, Strategic vs. Tactical, UAT 978, Datalink Weather.
-
----

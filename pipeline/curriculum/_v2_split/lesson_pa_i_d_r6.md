@@ -25,5 +25,3 @@ Fuel planning risk management involves aggressively mitigating the dangers of fu
 * **Regs:** 14 CFR 91.151, 14 CFR 91.9, 14 CFR 23.1337
 * **Docs:** FAA-H-8083-25 (PHAK Ch 16)
 * **Keywords:** Fuel Exhaustion, Fuel Starvation, Fuel Dipstick, Mixture Leaning, Personal Minimums
-
----

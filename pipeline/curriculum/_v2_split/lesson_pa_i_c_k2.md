@@ -33,5 +33,3 @@ A complete weather briefing utilizes a combination of observations and forecasts
 * **Regs:** 14 CFR 91.103
 * **Docs:** AC 00-45H, AIM 7-1, FAA-H-8083-28 (Aviation Weather Handbook)
 * **Keywords:** METAR, SPECI, TAF, PIREP, CVA, GFA, Winds Aloft, Convective Outlook, AIRMET, SIGMET, CWA.
-
----

@@ -25,5 +25,3 @@ A pilot files a VFR flight plan while on the ground via an EFB application, a Fl
 * **Regs:** 14 CFR 91.153
 * **Docs:** AIM 5-1-4, AIM 5-1-14
 * **Keywords:** Activate Flight Plan, Close Flight Plan, Flight Service Station, FSS, Search and Rescue, ALNOT
-
----

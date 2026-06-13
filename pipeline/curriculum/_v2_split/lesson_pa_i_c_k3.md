@@ -31,5 +31,3 @@ Weather is fundamentally driven by the unequal heating of the Earth's surface, w
 * **Regs:** 14 CFR 91.103
 * **Docs:** FAA-H-8083-28 (Aviation Weather Handbook), FAA-H-8083-25 (PHAK Chapter 12), AC 00-54
 * **Keywords:** Lapse Rate, Temperature Inversion, Coriolis Force, Low Level Wind Shear, Microburst, Clear Ice, Rime Ice, Radiation Fog, Sublimation, Volcanic Ash.
-
----

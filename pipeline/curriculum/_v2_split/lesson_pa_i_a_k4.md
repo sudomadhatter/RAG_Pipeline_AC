@@ -39,5 +39,3 @@ There is a persistent myth that a private pilot must carry their logbook at all 
 * **Regs:** 14 CFR 61.3, 47 CFR 87.18, 47 CFR 13.9.
 * **Docs:** FCC Form 605, LOI on "Readily Accessible".
 * **Keywords:** Photo ID, Restricted Radiotelephone Operator Permit, Station License, Physical Possession.
-
----

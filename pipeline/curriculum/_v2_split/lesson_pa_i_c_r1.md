@@ -20,5 +20,3 @@ Making a safe go/no-go decision requires evaluating weather conditions against t
 * **Regs:** 14 CFR 91.103, 14 CFR 91.155
 * **Docs:** FAA-H-8083-2A (Risk Management Handbook), PAVE Checklist, IMSAFE
 * **Keywords:** Personal Minimums, Go/No-Go, Diversion, VFR into IMC, External Pressures, ADM, PAVE.
-
----

@@ -55,5 +55,3 @@ A private pilot may act as PIC of an aircraft towing a glider if they meet the e
 * **Regs:** 14 CFR 61.113, 14 CFR 91.146, 14 CFR 61.69.
 * **Docs:** AC 61-142 (Sharing Expenses), AC 120-12A (Private Carriage vs. Common Carriage).
 * **Keywords:** Pro Rata Share, Common Purpose Doctrine, Compensation, Holding Out, Incidental to Business, Flytenow, Charitable Airlift.
-
----

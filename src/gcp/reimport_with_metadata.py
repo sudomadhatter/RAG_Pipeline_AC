@@ -34,12 +34,12 @@ def split_task_file(filepath: Path) -> list[dict]:
     lines = content.split('\n')
     
     # Find all lines that contain an ACS code pattern like PA.I.X.K1
-    acs_pattern = re.compile(r'PA\.I\.\w+\.\w+')
+    acs_pattern = re.compile(r'PA\.(?:I{1,3}|IV|V|VI{0,3}|IX|X{1,3}|XI{1,3})\.\w+\.\w+')
     element_starts = []
     
     for i, line in enumerate(lines):
         # Match lines like: ### **PA.I.A.K1: ...  OR  **PA.I.C.K1: ...
-        if acs_pattern.search(line) and ('**PA.' in line or '**PA.' in line):
+        if acs_pattern.search(line):
             # Make sure it's a heading/title line, not a reference in body text
             stripped = line.strip()
             if stripped.startswith('#') or stripped.startswith('**PA.'):
@@ -63,7 +63,7 @@ def split_task_file(filepath: Path) -> list[dict]:
         acs_code = acs_match.group(0) if acs_match else 'UNKNOWN'
         
         # Extract title (text after the ACS code and colon)
-        title_match = re.search(r'PA\.I\.\w+\.\w+[^:]*:\s*(.+?)(?:\*\*|$)', heading_line)
+        title_match = re.search(r'PA\.(?:I{1,3}|IV|V|VI{0,3}|IX|X{1,3}|XI{1,3})\.\w+\.\w+[^:]*:\s*(.+?)(?:\*\*|$)', heading_line)
         title = title_match.group(1).strip().rstrip('*').strip() if title_match else heading_line.strip().strip('#').strip('*').strip()
         
         # Generate document ID

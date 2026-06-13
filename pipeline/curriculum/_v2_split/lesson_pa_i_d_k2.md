@@ -26,5 +26,3 @@ Altitude selection requires balancing regulatory mandates, aerodynamic physics, 
 * **Regs:** 14 CFR 91.159, 14 CFR 91.119
 * **Docs:** FAA-H-8083-25 (PHAK Ch 11), AIM 3-1-4
 * **Keywords:** NEODD SWEVEN, VFR Cruising Altitude, Magnetic Course, Glide Distance, MEF
-
----

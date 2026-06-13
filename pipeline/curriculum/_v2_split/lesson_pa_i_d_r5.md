@@ -25,5 +25,3 @@ While ATC provides incredibly valuable VFR Flight Following and radar traffic ad
 * **Regs:** 14 CFR 91.113
 * **Docs:** AIM 4-1-18, FAA Order JO 7110.65 (ATC)
 * **Keywords:** Flight Following, Workload Permitting, See and Avoid, Radar Limitations, Traffic Advisories
-
----

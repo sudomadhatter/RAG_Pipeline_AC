@@ -41,5 +41,3 @@ For pilots with disqualifying conditions that are static or progressive but cont
 * **Regs:** 14 CFR 61.23, 14 CFR 61.53, 14 CFR Part 67.
 * **Docs:** FAA Guide for Aviation Medical Examiners (AME Guide).
 * **Keywords:** 60th Month, Self-Grounding, SODA, Special Issuance, Step-Down Privileges.
-
----

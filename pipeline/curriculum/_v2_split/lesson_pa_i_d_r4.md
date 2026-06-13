@@ -25,5 +25,3 @@ External pressures are the social, financial, or psychological influences that u
 * **Regs:** 14 CFR 91.13, 14 CFR 91.519
 * **Docs:** FAA-H-8083-2A (Risk Management Ch 2)
 * **Keywords:** External Pressures, Get-There-Itis, PAVE Checklist, Passenger Briefing, ADM
-
----

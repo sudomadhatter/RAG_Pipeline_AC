@@ -31,5 +31,3 @@ To mitigate the gap between legal currency and safety, pilots must establish Per
 * **Regs:** N/A (Concept based).
 * **Docs:** FAA-H-8083-2A (Risk Management Handbook), FAA P-8740-36.
 * **Keywords:** Personal Minimums, IMSAFE, PAVE, LOC-I, Skill Degradation.
-
----
