@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_IX_C_01",
+  "title": "Systems Malfunctions, Fire & Startle Response",
+  "questions": [
+    {
+      "id": "PPL_PA_IX_C_01_Q001", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "On a summer day with an outside air temperature of 65°F and high humidity, a pilot notices a gradual decrease in RPM with no other abnormal engine indications. What is the most likely cause?",
+      "options": [
+        {"label": "A", "text": "Carburetor icing. Despite the seemingly warm temperature, the venturi effect inside the carburetor accelerates the air, dropping its pressure (Bernoulli's Principle). Simultaneously, fuel vaporization absorbs massive amounts of heat (latent heat of vaporization). The combined effect can drop the temperature inside the carburetor throat by up to 70°F — from 65°F ambient to below freezing. High humidity provides the moisture that freezes on the throttle valve, progressively choking the air supply. The remedy: apply full carburetor heat immediately. Expect an initial RPM DROP (warm, less-dense air entering the engine). Leave carb heat ON until RPM stabilizes and rises as the ice melts."},
+        {"label": "B", "text": "Fuel contamination. Water or sediment in the fuel is clogging the fuel injectors, reducing engine power output gradually."},
+        {"label": "C", "text": "Magneto failure. One of the two magnetos has failed, reducing the number of spark plugs firing and causing a gradual RPM decrease."},
+        {"label": "D", "text": "Alternator overload. Too many electrical devices are drawing power from the alternator, placing a parasitic drag on the engine through the accessory drive."}
+      ],
+      "correct_answer": "A",
+      "explanation": "A gradual RPM decrease with no other abnormal indications in warm, humid conditions is the textbook presentation of carburetor icing. The 70°F temperature drop from venturi effect + fuel vaporization makes icing possible at ambient temps up to ~70°F. Option B (fuel contamination) would typically cause roughness, not a smooth RPM decrease. Option C (single magneto failure) causes a sudden, noticeable RPM drop, not a gradual decrease. Option D (alternator load) produces negligible RPM effect.",
+      "far_reference": null, "acs_element": "PA.IX.C.K1"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q002", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot is climbing through 8,000 feet when they notice the airspeed indicator shows 120 knots and INCREASING, despite maintaining a constant climb pitch attitude. The altimeter and VSI are reading normally. What is happening?",
+      "options": [
+        {"label": "A", "text": "The pitot tube AND its drain hole have frozen over (likely due to icing conditions). The total pressure (PT) is TRAPPED in the pitot line at the value from the altitude where the blockage occurred. As the aircraft climbs, the actual static pressure (PS) entering the ASI casing decreases. The ASI computes dynamic pressure as q = PT(trapped) - PS(decreasing) = an INCREASING q value. The ASI reads as if the aircraft is accelerating, but it is actually acting like an altimeter — showing changes in altitude, not airspeed. The altimeter and VSI are normal because they use the static port, which is unaffected. CRITICAL DANGER: if the pilot trusts this indication and pulls back to 'slow down,' they will increase AOA toward a stall while the ASI continues showing 'fast.'"},
+        {"label": "B", "text": "The aircraft is actually accelerating due to a tailwind at this altitude. The ASI is reading correctly."},
+        {"label": "C", "text": "The static port is blocked. A blocked static port causes the ASI to read high during a climb because the trapped static pressure is lower than actual."},
+        {"label": "D", "text": "The pitot heat has malfunctioned and is overheating the pitot tube, creating artificially high ram air pressure readings."}
+      ],
+      "correct_answer": "A",
+      "explanation": "This is the classic pitot tube + drain blockage scenario. When both are frozen, PT is trapped. During a climb, PS drops, making q (PT - PS) artificially large. The ASI reads like an altimeter — 'faster' as you climb, 'slower' as you descend. The altimeter and VSI use only the static port, so they're unaffected. Option C is wrong because a blocked static port would affect ALL three instruments. Option B is wrong because tailwinds don't affect indicated airspeed (IAS measures airspeed relative to the air mass, not the ground).",
+      "far_reference": "14 CFR 91.411", "acs_element": "PA.IX.C.K2c"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q003", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot smells burning plastic and sees thin white smoke emanating from behind the instrument panel. What is the FIRST action?",
+      "options": [
+        {"label": "A", "text": "Turn the Master Switch OFF immediately. This kills the battery and alternator, cutting all electrical power to the short circuit that is generating heat. The engine will continue running — the dual magneto ignition system is mechanically driven off the engine and is completely independent of the electrical system. With the heat source eliminated, the fire should stop. After confirming the fire is out, the pilot can begin systematic load shedding: turn the battery ON, then turn individual breakers ON one at a time to identify the faulty circuit."},
+        {"label": "B", "text": "Identify the source of the smoke first. Pull each circuit breaker one at a time to isolate the faulty circuit before turning off the Master Switch."},
+        {"label": "C", "text": "Open the cockpit window immediately to ventilate the smoke. Smoke inhalation is the primary danger, and clearing the cabin takes priority."},
+        {"label": "D", "text": "Use the cabin fire extinguisher to spray behind the instrument panel. Direct chemical application will suppress the fire faster than cutting power."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Master Switch OFF is always the first action for an electrical fire. It cuts the heat source instantly. Option B (isolating circuits first) takes too long — the fire is actively burning. Option C (opening the window) can create an aerodynamic vacuum that sucks the flames across the pilot's face — ventilation must follow the POH procedure, not intuition. Option D (fire extinguisher) is appropriate if the fire doesn't stop after cutting power, but electrical current must be interrupted first. The engine runs independently on magnetos.",
+      "far_reference": "14 CFR 91.3", "acs_element": "PA.IX.C.K3"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q004", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "During flight, the alternator fails and the battery dies. All avionics, radios, and electrical instruments go dark. Will the engine continue to run?",
+      "options": [
+        {"label": "A", "text": "Yes. The engine will continue running normally. The dual magneto ignition system is MECHANICALLY DRIVEN off the engine's accessory gear case. It generates its own electrical spark independently of the aircraft's battery and alternator. The pilot loses all electrical systems (radios, GPS, transponder, electric fuel pump, electric trim, landing lights, etc.) but retains: the engine, the magnetic compass, the airspeed indicator, the altimeter, and the VSI (which are pressure-driven, not electrical). The pilot should land at the nearest suitable airport and signal the tower with light gun signals if entering controlled airspace."},
+        {"label": "B", "text": "No. The engine requires electrical power from the battery to fire the spark plugs. Without the battery or alternator, the magnetos cannot generate sufficient voltage to maintain combustion."},
+        {"label": "C", "text": "Yes, but only for approximately 30 minutes. The magnetos have a small internal capacitor that stores enough energy for temporary operation."},
+        {"label": "D", "text": "It depends on the engine type. Fuel-injected engines will stop because the fuel injectors are electrically powered. Carbureted engines will continue running."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Magnetos are completely self-sustaining — they are mechanical generators driven by the engine's rotating accessory gears. They produce high-voltage sparks independently of ANY external electrical source. No battery, no alternator, no problem — the engine runs indefinitely. Option B fundamentally misunderstands magneto operation. Option C invents a non-existent 'internal capacitor.' Option D is partially correct that fuel-injected engines have electric fuel pumps, but the engine-driven mechanical fuel pump will continue providing fuel.",
+      "far_reference": null, "acs_element": "PA.IX.C.K1"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q005", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "During cruise, a pilot notices the altimeter has stopped moving despite the aircraft being in a descent. The VSI reads zero. The airspeed indicator shows a higher-than-expected value. What is the malfunction?",
+      "options": [
+        {"label": "A", "text": "The static port is blocked. A blocked static port traps the ambient pressure from the altitude where the blockage occurred. The altimeter reads that trapped pressure — so it FREEZES at the blockage altitude regardless of actual altitude changes. The VSI, which measures the RATE OF CHANGE of static pressure, sees no change (because the pressure is trapped) and freezes at zero. The ASI is affected because it compares pitot (ram) pressure against the trapped static: during a descent, actual static pressure is HIGHER than the trapped value, so q = PT - PS(trapped, lower) = artificially HIGH — the ASI reads FASTER than actual. The remedy: open the alternate static source if available."},
+        {"label": "B", "text": "The pitot tube is blocked. A pitot blockage would cause the altimeter and VSI to freeze."},
+        {"label": "C", "text": "The vacuum pump has failed. The altimeter and VSI are vacuum-driven instruments, and a pump failure would cause them to freeze."},
+        {"label": "D", "text": "The aircraft's static ports have frozen at the same altitude the aircraft is currently at. The instruments will resume normal operation once the aircraft changes altitude significantly."}
+      ],
+      "correct_answer": "A",
+      "explanation": "A frozen altimeter + frozen VSI + erroneous ASI = blocked static port. All three instruments use the static port. The altimeter reads pure static pressure (frozen = frozen altitude). The VSI measures rate of change (no change in trapped pressure = zero). The ASI compares pitot vs. static — with trapped static from a higher altitude during descent, the ASI reads artificially high. Option B is wrong — pitot blockage only affects the ASI. Option C is wrong — the altimeter and VSI are static pressure instruments, not vacuum instruments (the attitude indicator and heading indicator are vacuum-driven).",
+      "far_reference": null, "acs_element": "PA.IX.C.K2c"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q006", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_04",
+      "text": "After completing the engine failure memory items (Fuel Selector BOTH, Mixture RICH, Carb Heat ON, Magnetos BOTH, Primer IN AND LOCKED), the pilot considers whether to pull out the printed emergency checklist. They think: 'I've already done everything from memory. The checklist is redundant.' Is this correct?",
+      "options": [
+        {"label": "A", "text": "No. The printed emergency checklist is NOT redundant — it is a critical cognitive aid that catches the items the stressed brain skips. Under acute physiological stress (cortisol, adrenaline), working memory capacity drops from 4-7 items to even fewer. The checklist contains secondary items that the memory flow doesn't cover but are LIFE-SAVING: unlatching the cabin door before touchdown (prevents entrapment from frame warping), securing the electrical system (prevents post-crash fire), squawking 7700, transmitting on 121.5, and ELT verification. The Do-Verify method: perform the memory flow first, then VERIFY against the printed checklist to catch omissions."},
+        {"label": "B", "text": "Correct — if the pilot has completed all memory items, the printed checklist adds no value and wastes time that should be spent flying the aircraft."},
+        {"label": "C", "text": "It depends on altitude. If the pilot has less than 1,000 feet AGL remaining, they should skip the checklist and focus on the landing."},
+        {"label": "D", "text": "The checklist is only needed if the memory items didn't work and the engine hasn't restarted. If the engine restarts, the checklist is unnecessary."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The printed checklist is specifically designed to catch what the stressed brain misses. Memory items cover the TIME-CRITICAL actions. The printed checklist covers the SURVIVAL items that don't seem urgent but are critical: door unlatching, electrical shutdown, communications. Option C has some validity — if you're at 200 feet, fly the airplane. But at 2,000+ feet, there's time to verify. Option D is wrong — even after a restart, the checklist may contain monitoring procedures for the cause of the failure.",
+      "far_reference": "AC 120-71B", "acs_element": "PA.IX.C.R1"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_04",
+      "text": "A pilot experiences a sudden, loud bang from the engine compartment followed by severe vibration. The pilot freezes for several seconds, then looks at the instruments but cannot process what they're seeing. Their hands are shaking. What is happening and what should the pilot do?",
+      "options": [
+        {"label": "A", "text": "The pilot is experiencing the startle response — the amygdala has hijacked the brain's logical processing. The freeze, tunnel vision, and inability to process instruments are classic symptoms. The pilot should execute the PPLA framework: (1) PITCH to the horizon or best glide attitude — this is a physical, rote action that doesn't require logical processing. (2) POWER to appropriate setting (idle if engine is failing). (3) LEVEL the wings. (4) ANALYZE what happened. These physical actions stabilize the aircraft and buy time for the prefrontal cortex to come back online. The pre-takeoff briefing that should have been performed before this flight was specifically designed to short-circuit this freeze.", "hazardous_attitude": null},
+        {"label": "B", "text": "The pilot should immediately look at the engine gauges to diagnose the problem. The bang and vibration could indicate several different malfunctions, and the correct response depends on identifying the specific failure.", "hazardous_attitude": "impulsivity"},
+        {"label": "C", "text": "The pilot should declare an emergency on 121.5 immediately. ATC can provide guidance on what to do based on the pilot's description of the symptoms.", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "The shaking hands and confusion indicate the pilot is not physically capable of flying the aircraft. They should engage the autopilot immediately to maintain control while they recover.", "hazardous_attitude": null}
+      ],
+      "correct_answer": "A",
+      "sjt_rationale": "Option B (impulsivity) tells the pilot to diagnose — but the pilot literally CANNOT process instrument information right now (the prefrontal cortex is offline). Trying to analyze gauges during the amygdala hijack wastes the precious seconds where the aircraft needs physical stabilization. Option C (resignation) delegates decision-making to ATC — but ATC cannot fly the airplane, and the radio call doesn't stabilize the flight path. Option D is reasonable IF an autopilot is available, but many training aircraft don't have one, and the autopilot button may be hard to find during a startle response. Option A provides the PHYSICAL, rote-action framework that the amygdala-hijacked brain CAN execute.",
+      "explanation": "The startle response is a biological reflex that cannot be eliminated — only mitigated. The PPLA framework provides physical, muscle-memory actions that the brain can execute even when logical processing is impaired. The pre-takeoff briefing is the preventive measure: by pre-loading a decision script ('if the engine fails, I pitch for Vg and land ahead'), the brain has a response ready before the amygdala fires.",
+      "far_reference": "AC 120-111", "acs_element": "PA.IX.C.R4"
+    },
+    {
+      "id": "PPL_PA_IX_C_01_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_03",
+      "text": "During cruise, an engine fire warning illuminates. Smoke begins entering the cabin. The pilot begins the engine fire checklist: Mixture to idle cut-off, Fuel Selector OFF. Then the pilot hesitates at the next step — they realize that turning off the fuel means the engine will die and they'll be forced to make an emergency landing on unfamiliar terrain. What should the pilot do?",
+      "options": [
+        {"label": "A", "text": "Complete the fuel shutoff and accept the forced landing. An engine fire that has already produced cabin smoke is an IMMEDIATELY LIFE-THREATENING emergency. The structural integrity of the engine mount and firewall is actively degrading. If the fire breaches the firewall, cabin temperature and toxic smoke will render the aircraft unflyable within minutes. A controlled forced landing on unfamiliar terrain with a dead engine is survivable. Continued flight with an active engine fire is not. Complete the checklist, execute the emergency descent, and put the aircraft on the ground at the first opportunity.", "hazardous_attitude": null},
+        {"label": "B", "text": "Leave the fuel on and attempt to fly to the nearest airport. The engine fire may extinguish itself, and maintaining engine power gives the pilot more options for landing.", "hazardous_attitude": "invulnerability"},
+        {"label": "C", "text": "Turn the fuel off but attempt to restart the engine after the fire goes out. If the fire was caused by a minor fuel leak, cutting and restoring fuel may resolve the issue.", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Declare an emergency and ask ATC for vectors to the nearest airport while keeping the engine running. ATC can coordinate emergency services to meet the aircraft on arrival.", "hazardous_attitude": "get_there_itis"}
+      ],
+      "correct_answer": "A",
+      "sjt_rationale": "Option B (invulnerability) keeps feeding fuel to an active fire — the fire triangle needs fuel, and the pilot is providing it. The fire will not 'extinguish itself' while fuel continues flowing. Option C (macho) attempts to restart into a fire scenario — reintroducing fuel to a hot engine compartment risks re-ignition or explosion. Option D (get-there-itis) prioritizes reaching an airport over extinguishing the fire — the airport is irrelevant if the firewall fails and the cabin fills with toxic smoke en route. Option A correctly prioritizes eliminating the fuel leg of the fire triangle and accepting the forced landing.",
+      "explanation": "An engine fire with cabin smoke is a 'land now' emergency. The firewall's structural integrity is measured in minutes. Every second of continued fuel flow feeds the fire. A controlled forced landing without an engine is a practiced, survivable maneuver. An uncontrolled fire that breaches the cabin is not survivable. The decision hierarchy: extinguish the fire first, find a landing site second.",
+      "far_reference": "14 CFR 91.3", "acs_element": "PA.IX.C.K3"
+    }
+  ]
+}

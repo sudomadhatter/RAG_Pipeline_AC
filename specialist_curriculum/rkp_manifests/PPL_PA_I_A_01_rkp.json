@@ -1,0 +1,55 @@
+{
+  "lesson_id": "PPL_PA_I_A_01",
+  "title": "Privileges & Limitations",
+  "acs_task_reference": "Area I, Task A",
+  "acs_element_keys": [
+    "PA.I.A.K1",
+    "PA.I.A.K2",
+    "PA.I.A.R1"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "Certification & Currency",
+      "why": "Ensures pilots meet baseline legal and safety standards before carrying passengers.",
+      "knowledge": "A private pilot must hold a valid pilot certificate, a current medical or BasicMed, and a government-issued photo ID. To carry passengers, pilots need 3 takeoffs and landings within the preceding 90 days in the same category, class, and type (full stop at night or in tailwheel aircraft). A flight review is required every 24 calendar months.",
+      "acs_elements": ["PA.I.A.K1"],
+      "far_references": ["14 CFR 61.56", "14 CFR 61.57", "14 CFR 61.51", "14 CFR 61.103", "14 CFR 1.1"],
+      "bridge_keys": ["AC 61-98D", "AC 61-65H", "FAA-H-8083-25C"],
+      "knowledge_formatted": "### Required Documents\n- **Valid pilot certificate** (plastic card only)\n- **Current medical certificate** or valid **BasicMed** qualification\n- **Government-issued photo ID** (driver's license, passport, or military ID)\n\n### Passenger Currency (14 CFR 61.57)\n- **3 takeoffs and landings** within the preceding **90 days**\n- Must be in the **same category, class, and type** of aircraft\n- At night: landings must be **full stop** — no touch-and-goes\n- In a **tailwheel aircraft**: landings must also be **full stop**\n\n### Flight Review (14 CFR 61.56)\n- Required every **24 calendar months**\n- Validity extends to the **end of the 24th calendar month** — not the anniversary date"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Privileges & Limitations",
+      "why": "Prevents private pilots from illegally competing with commercial operators and assuming inappropriate risk.",
+      "knowledge": "Private pilots may not carry passengers or property for compensation or hire. They may share operating expenses (fuel, oil, rental fees) with passengers on a pro rata basis, provided there is a bona fide common purpose for the flight. Exceptions include incidental business flying, providing no passengers are carried, and charitable airlifts under strict sponsor and experience limits.",
+      "acs_elements": ["PA.I.A.K2"],
+      "far_references": ["14 CFR 61.113", "14 CFR 91.146", "14 CFR 61.69"],
+      "bridge_keys": ["AC 61-142", "AC 120-12A", "Chero Interpretation", "Hancock Interpretation"],
+      "knowledge_formatted": "### Core Limitation (14 CFR 61.113)\n- Cannot carry passengers or property for **compensation or hire**\n- Goodwill counts as compensation — flying a contact to generate business is a violation *(Hancock Interpretation)*\n\n### Pro Rata Expense Sharing — Allowed If:\n- Sharing **fuel, oil, and rental fees** only (not landing fees or charts)\n- Pilot pays their **equal share** — cannot pay less than each passenger\n- Flight has a **bona fide common purpose** — pilot would make the trip regardless *(Chero Interpretation)*\n\n### Exceptions\n- **Incidental business flying** (**14 CFR 61.113(b)**): reimbursed by employer — but **no passengers** allowed\n- **Charitable airlifts** (**14 CFR 91.146**): strict sponsor approval and experience requirements apply"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Proficiency vs. Currency",
+      "why": "Legal currency alone does not guarantee the pilot possesses the skills needed for safe flight in challenging conditions.",
+      "knowledge": "Currency is complying with the legal minimum to operate, such as logging 3 landings in 90 days. Proficiency is the actual competence to safely execute a flight and handle emergencies, which degrades over time independently of legal status. Pilots must actively employ personal minimums and honestly evaluate their recent experience using risk paradigms like PAVE.",
+      "acs_elements": ["PA.I.A.R1"],
+      "far_references": [],
+      "bridge_keys": ["FAA-H-8083-2A", "FAA P-8740-36"],
+      "knowledge_formatted": "### Currency\n- Meeting the **legal minimum** required to act as PIC or carry passengers\n- Example: **3 landings in 90 days** — a checkbox, not a quality measure\n- Currency is **black and white** — you either meet the FAR or you don't\n\n### Proficiency\n- Your **actual skill level** to safely execute the flight and handle emergencies\n- Degrades **independently** of legal currency — a pilot can be current but not proficient\n- Influenced by recency, complexity of conditions, and self-assessment\n\n### The Standard to Apply\n- Use **personal minimums** — self-imposed limits that exceed the FARs\n- Use the **PAVE checklist** (Pilot, Aircraft, enVironment, External pressures) to assess risk honestly\n- If conditions exceed your personal minimums, the answer is **no-go** — regardless of legal status"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Medical Certificates & BasicMed",
+      "why": "A pilot who does not understand when their medical authorization expires may unknowingly fly without valid medical clearance, creating both a legal and safety hazard.",
+      "knowledge": "Private pilots must hold at least a Third-Class medical certificate or qualify under BasicMed (14 CFR Part 68). Third-Class medical duration depends on age at issuance: 60 calendar months for pilots under 40, 24 calendar months for pilots 40 and older. BasicMed requires an initial Third-Class medical certificate issued after July 15, 2006, a physical examination with a state-licensed physician every 48 months, and completion of an online medical education course every 24 months. BasicMed restricts operations to aircraft with no more than 6 seats, 6,000 pounds max takeoff weight, flights below 18,000 feet MSL, and speeds not exceeding 250 knots.",
+      "acs_elements": ["PA.I.A.K1"],
+      "far_references": ["14 CFR 61.23", "14 CFR Part 68"],
+      "bridge_keys": ["AC 68-1"],
+      "knowledge_formatted": "### Third-Class Medical (14 CFR 61.23)\n- Required for private, recreational, and student pilot operations\n- Valid **60 calendar months** if pilot was **under age 40** at time of exam\n- Valid **24 calendar months** if pilot was **age 40 or older** at time of exam\n- Validity extends to the **end of the calendar month** — not the exact date\n\n### BasicMed (14 CFR Part 68) — Requirements\n- Must have held a valid FAA medical issued **after July 14, 2006**\n- Physical exam with any **state-licensed physician** every **48 months** (using FAA CMEC form)\n- Online medical education course completed every **24 months**\n- Must hold a valid **U.S. driver's license**\n\n### BasicMed — Operational Restrictions\n- Aircraft: no more than **6 seats**, max takeoff weight **≤ 6,000 lbs**\n- Altitude: must remain **below 18,000 feet MSL**\n- Speed: must not exceed **250 knots**\n- Cannot fly for **compensation or hire**"
+    }
+  ],
+  "lesson_overview": "## Privileges & Limitations\n\nBefore you ever turn a key in an airplane, you need to answer a question cold: **\"Am I legal to make this flight?\"** It sounds simple, but the answer has layers — and getting even one wrong means you're flying illegally, whether you know it or not.\n\n**Start with yourself.** To act as pilot in command, you need three things on your person: a valid pilot certificate, a current medical (or BasicMed qualification), and a government-issued photo ID. But *holding* those isn't enough — you also need to be **current**. That means a flight review within the past 24 calendar months, and if you're carrying passengers, three takeoffs and landings in the preceding 90 days in the same category and class of aircraft. Flying at night? Those landings must be to a **full stop** — no touch-and-goes. One nuance that trips people up: \"24 calendar months\" gives you a grace period to the *end* of the month, not the anniversary date. A flight review completed on July 4th doesn't expire until July 31st, two years later.\n\n**Now the money question — literally.** A private pilot cannot carry passengers or property for compensation or hire. Period. But there are exceptions, and the most common one — **pro rata expense sharing** — is also the most commonly misunderstood. You can split fuel, oil, and rental fees with your passengers, but only if you pay your equal share *and* you have a **bona fide common purpose** for the flight. This is the rule the FAA established in the *Chero* interpretation: \"Would you make this trip even if the passengers weren't coming?\" If a friend asks you to fly them to a city where you have zero reason to be, you can't split the costs. You're acting as a taxi driver without a taxi license. You pay 100%, or you don't go.\n\nThe other traps are subtler. A business owner who flies to a client meeting can be reimbursed by their company — that's the **incidental business exception** under 61.113(b). But the moment they invite a client along and also accept reimbursement, the flight becomes illegal. That exception is a *solo-pilot* exception. And if you're thinking \"no money changed hands, so it's fine\" — think again. The FAA's *Hancock* interpretation says **goodwill is compensation**. Flying a contact for free to generate future business counts.\n\n**Finally, know the difference between currency and proficiency.** Currency is a checkbox: did you meet the legal minimums? Proficiency is the real question: *can you fly safely right now?* A pilot who logged three landings on day 89 in calm, smooth air is current — but may not be proficient for a gusty crosswind approach with a full load of passengers today. The NTSB accident database is full of pilots who were \"current but not proficient.\" Build **personal minimums** — self-imposed rules that exceed the FARs — and commit to them *before* you're under pressure to fly. The trap is always the same: you don't decide to lower your standards on a calm Tuesday morning. You decide under pressure, at the ramp, with people watching.\n\n**The checkride trap:** Your DPE will stack a scenario with multiple factors — an expired flight review, a friend offering to split fuel, weather that's technically VFR but marginal. The pilots who pass don't just spot one violation. They catch all three.",
+  "audio_file": "PPL_PA_I_A_audio.m4a",
+  "video_file": "PPL_PA_I_A_video.mp4"
+}

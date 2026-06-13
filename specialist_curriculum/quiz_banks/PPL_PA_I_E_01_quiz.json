@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_E_01",
+  "title": "Class A, B, and C Airspace — Entry Requirements and Equipment",
+  "questions": [
+    {
+      "id": "PPL_PA_I_E_01_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A VFR private pilot plans a cross-country that would require cruising at 18,500 feet MSL to clear mountain terrain. The pilot has a private certificate, current medical, and a VFR-capable aircraft. Can this flight be conducted legally under 14 CFR 91.135?",
+      "options": [
+        {"label": "A", "text": "Yes — a private pilot with a current medical may operate VFR at 18,500 feet MSL with a Special VFR clearance authorized by ARTCC; the Class A floor at FL180 applies only to commercial operations under Parts 119 and 121"},
+        {"label": "B", "text": "Yes — VFR operations are permitted up to and including FL180 (18,000 feet MSL) because Class A does not begin until above FL180; at exactly 18,500 feet the pilot enters Class A, which requires obtaining an IFR clearance from a Class A-capable ATC facility"},
+        {"label": "C", "text": "No — 14 CFR 91.135 prohibits any VFR operations at or above 18,000 feet MSL (FL180); Class A airspace spans FL180 and above, and requires an IFR clearance, IFR-equipped aircraft, and instrument-rated pilot; no exceptions exist for private pilots regardless of weather or aircraft capability"},
+        {"label": "D", "text": "Yes — but only if the flight is conducted at night when traffic density in Class A airspace is sufficiently low to permit VFR-on-top operations; FAA Order JO 7110.65 authorizes ARTCC to issue nighttime VFR clearances in Class A for single-engine non-turbine aircraft"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 91.135 classifies FL180 (18,000 feet MSL) and above as Class A airspace, where VFR operations are entirely prohibited. The restriction is absolute: no Special VFR, no VFR-on-top, no time-of-day exceptions. A private pilot operating in this airspace must hold an instrument rating, fly an IFR-equipped aircraft, and operate under an active IFR clearance from ATC. 18,500 feet MSL is well within Class A (FL185). The only legally compliant path to 18,500 feet is under IFR with appropriate ratings and equipment. Option A invents a Special VFR provision for Class A that does not exist — Special VFR is only applicable in Class B, C, D, and E surface areas. Option B correctly identifies FL180 as the beginning of Class A but then incorrectly suggests the pilot 'enters' Class A at 18,500 rather than at FL180 (18,000). Option D invents a VFR nighttime exception that has no basis in regulation.",
+      "far_reference": "14 CFR 91.135",
+      "acs_element": "PA.I.E.K1a"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A private pilot calls Atlanta Approach and says: 'Atlanta Approach, Cessna 123AB, request transit through Class Bravo.' The controller responds: 'Cessna 3AB, Atlanta Approach, radar contact, expect clearance in 5 minutes, standby.' May the pilot enter Class B airspace?",
+      "options": [
+        {"label": "A", "text": "Yes — two-way radio communication has been established; 14 CFR 91.131 requires only two-way communication before Class B entry, which is satisfied by the controller acknowledging the callsign '3AB'"},
+        {"label": "B", "text": "No — ATC has not issued an explicit clearance into Class B airspace; 14 CFR 91.131 requires a specific clearance to enter Class Bravo; 'standby' or 'expect clearance in 5 minutes' is not the required verbal clearance authorization"},
+        {"label": "C", "text": "Yes — the controller said 'radar contact,' which is the FAA-standard verification phrase for Class B entry; radar contact combined with callsign acknowledgment satisfies the clearance requirement of 14 CFR 91.131 for VFR aircraft"},
+        {"label": "D", "text": "No — but only because the response did not include the words 'Class Bravo' specifically; if the controller had said 'radar contact, Class Bravo' the communication would constitute sufficient legal clearance to enter under 14 CFR 91.131"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.131 requires an explicit ATC clearance to operate within Class B airspace — not merely two-way radio communication (which is the Class C standard). The controller's response 'expect clearance in 5 minutes, standby' explicitly tells the pilot that clearance has NOT been issued yet. The pilot must remain clear of Class B boundaries until ATC specifically authorizes entry with language equivalent to 'Cessna 3AB, cleared into Class Bravo airspace.' Option A confuses the Class B clearance standard with the Class C communication standard (Class C requires only two-way contact, not a clearance). Option C falsely elevates 'radar contact' to the status of a clearance — radar contact and a clearance to enter specific airspace are distinctly different ATC communications. Option D correctly identifies the issue (no clearance yet) but incorrectly demands the specific phrase 'Class Bravo' — the regulation requires a clearance, not a specific verbal formula, though 'cleared into Class Bravo' is standard phraseology per AIM 3-2-3.",
+      "far_reference": "14 CFR 91.131",
+      "acs_element": "PA.I.E.K1b"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q003",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A pilot is approaching Class C airspace. The pilot calls the approach control frequency and says: 'Gainesville Approach, Piper 4567T, 15 miles south, 3,500, inbound.' The controller responds: 'Piper 4567T, Gainesville Approach, say altitude.' Has two-way communication been established, and may the pilot enter the Class C outer ring?",
+      "options": [
+        {"label": "A", "text": "No — although the controller responded, the response 'say altitude' indicates the controller did not have radar contact; AIM 4-1-15 requires both radio contact AND radar contact before Class C entry is permitted"},
+        {"label": "B", "text": "Yes — the controller acknowledged the callsign '4567T' in the response 'Piper 4567T'; AIM 3-2-4 establishes that two-way communication is satisfied when ATC acknowledges the aircraft's callsign, even if the acknowledgment is a question; entry into the Class C outer circle is now permitted"},
+        {"label": "C", "text": "No — the controller's response is a question, not an acknowledgment; for Class C entry, ATC must respond with a complete message including the aircraft type, position, and either clearance or traffic advisory before two-way communication is legally established"},
+        {"label": "D", "text": "No — two-way communication is not established because the pilot did not include the full ICAO equipment suffix code in the initial call; without identifying the transponder and radio equipment package, Class C communication requirements under 14 CFR 91.130 are not met"}
+      ],
+      "correct_answer": "B",
+      "explanation": "AIM 3-2-4 and 14 CFR 91.130 establish that two-way radio communication for Class C entry is satisfied when ATC acknowledges the aircraft's callsign. The controller's response 'Piper 4567T, Gainesville Approach, say altitude' unambiguously acknowledged the callsign '4567T' — two-way communication is established. The pilot may now enter the outer ring of Class C airspace. Note: if the controller had responded only 'aircraft calling Gainesville Approach, standby' without repeating the specific callsign, communication would NOT be established because the controller did not identify the specific aircraft. Option A invents a radar-contact requirement for Class C entry — radar contact provides services but is not legally required for entry. Option C sets an unrealistically high communication standard — AIM does not require a position confirmation or traffic advisory in the initial exchange. Option D invents an equipment suffix requirement for Class C radio contact.",
+      "far_reference": "14 CFR 91.130",
+      "acs_element": "PA.I.E.K1c"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q004",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A VFR pilot is flying at 6,000 feet MSL, 22 nautical miles southeast of Hartsfield-Jackson Atlanta International Airport (KATL — a Class B primary airport). The aircraft is below the Class B shelves at this location. Under 14 CFR 91.215 and 91.225, what equipment is required?",
+      "options": [
+        {"label": "A", "text": "No special equipment required — the aircraft is outside Class B airspace and below the Class B shelves; the Mode C and ADS-B Out requirements are triggered only when the aircraft is operating inside the defined Class B airspace boundaries depicted on the sectional chart"},
+        {"label": "B", "text": "An altitude-encoding (Mode C) transponder and ADS-B Out equipment are both required — the Mode C veil (14 CFR 91.215) and ADS-B requirement (14 CFR 91.225) extend 30 NM from any Class B primary airport from the surface to 10,000 feet MSL, regardless of whether the aircraft is inside the Class B shelves"},
+        {"label": "C", "text": "A Mode C transponder is required but ADS-B Out is not — the ADS-B requirement (14 CFR 91.225) applies only inside Class B airspace boundaries; aircraft operating below Class B shelves outside the lateral boundary are subject only to the 91.215 Mode C veil requirement"},
+        {"label": "D", "text": "ADS-B Out is required but a Mode C transponder is not — the transition in 2020 to ADS-B Out superseded the legacy Mode C veil requirement; aircraft equipped with ADS-B Out satisfy both 91.215 and 91.225 without requiring a separate altitude-encoding transponder"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Both the Mode C veil (14 CFR 91.215) and the ADS-B requirement (14 CFR 91.225) extend to within 30 NM of any Class B airport primary airport, from the surface to 10,000 feet MSL. At 22 NM from KATL at 6,000 feet MSL, the aircraft is within both the Mode C veil and the ADS-B coverage area — regardless of whether it is inside or outside the Class B shelf structure. Both requirements are separate and both apply simultaneously. Option A incorrectly applies only the Class B shelf boundaries — the Mode C veil and ADS-B requirements are explicitly written to extend beyond the shelf structure. Option C correctly identifies Mode C as required but incorrectly limits ADS-B Out to inside Class B boundaries — 91.225 uses the same 30 NM footprint as 91.215. Option D incorrectly claims ADS-B Out superseded Mode C — Mode C transponders are still separately required under 91.215; ADS-B Out does not entirely substitute for a Mode C transponder in all contexts.",
+      "far_reference": "14 CFR 91.215; 14 CFR 91.225",
+      "acs_element": "PA.I.E.K1b"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q005",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A student pilot has a solo cross-country endorsement from her CFI for local solo in Class D airspace. She wishes to fly solo through a Class B airport's outer shelf at 4,000 feet, remaining below the Class B floor. What is the regulatory requirement under 14 CFR 61.95?",
+      "options": [
+        {"label": "A", "text": "The student may fly under the Class B shelf without any additional endorsement — 14 CFR 61.95 applies only to student pilots landing at a primary Class B airport; flight below Class B shelves without landing does not require additional endorsement"},
+        {"label": "B", "text": "The student needs a specific CFI endorsement naming the Class B airport to operate solo in, to, or from that Class B airport's primary airport — but flight under the Class B shelf without entering Class B airspace is permitted without additional endorsement if the student has a current solo endorsement"},
+        {"label": "C", "text": "The student needs a specific CFI endorsement for the specific Class B airport before operating solo in the airspace underlying the Class B, regardless of altitude — 14 CFR 61.95 requires endorsement for any flight in the area of a Class B airport during solo operations"},
+        {"label": "D", "text": "The student must obtain a Letter of Authorization (LOA) from the Class B TRACON before conducting any solo flight within 30 nautical miles of the Class B primary airport; CFI endorsement alone is insufficient for Class B proximity flight"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 61.95 requires that a student pilot have 'received ground and flight training from an authorized instructor on that Class B airport's operations and procedures, and received an endorsement in the student's logbook for the specific Class B airport.' This endorsement is required for flight to, from, or at the primary Class B airport — not merely for passage under the Class B vault without entering Class B. Flying under the Class B shelf (remaining below the Class B floor) without entering Class B airspace and without intending to land at the Class B primary airport does not trigger the 61.95 endorsement requirement. The student's current solo endorsement allows the underfly — but a separate endorsement would be needed to enter the Class B or land at its primary airport. Option A correctly identifies that operation below Class B shelves without entering doesn't require the 61.95 endorsement, but the explanation should be noted carefully. Option C overstates the requirement by extending it to flight 'underlying Class B regardless of altitude.' Option D invents an LOA requirement that does not exist in 14 CFR Part 61.",
+      "far_reference": "14 CFR 61.95; 14 CFR 91.131",
+      "acs_element": "PA.I.E.K1b"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot owns a high-performance piston aircraft with an oxygen system and climbs to FL190 during a cross-country. The pilot planned to operate VFR to avoid IFR procedures. What condition has occurred?",
+      "options": [
+        {"label": "A", "text": "The pilot has exceeded the VFR altitude ceiling for single-engine aircraft — 14 CFR 91.159 limits VFR cruising altitudes to a maximum of 17,500 feet MSL for piston aircraft; FL190 requires a turbine endorsement and Class A IFR clearance simultaneously"},
+        {"label": "B", "text": "The pilot has entered Class A airspace without an IFR clearance, an instrument rating, or meeting the IFR equipment requirements — this constitutes an unauthorized deviation from 14 CFR 91.135; the pilot must immediately begin a descent to below FL180 and contact ATC to report the deviation"},
+        {"label": "C", "text": "No violation has occurred — FL190 is technically Class A airspace, but the FAA has a published waiver process for high-performance piston aircraft operating above FL180 during daylight VMC conditions; the pilot must file a post-flight deviation report within 72 hours"},
+        {"label": "D", "text": "No violation has occurred — 14 CFR 91.135 Class A regulations are enforced only for air carrier and commercial operators; Part 91 private operations at FL190 under VMC conditions constitute VFR-on-top operations legally distinct from Class A restrictions"}
+      ],
+      "correct_answer": "B",
+      "explanation": "This is a serious airspace violation. FL190 is firmly inside Class A airspace (FL180 and above). Operating VFR in Class A is absolutely prohibited by 14 CFR 91.135 — there is no piston aircraft exception, no daylight VMC exception, no partial waiver. The correct immediate action is to begin descent below FL180 and contact ATC to report the deviation. Intentional unauthorized operation in Class A can result in certificate action and civil penalty. Option A invents a 17,500 feet VFR ceiling and a 'turbine endorsement' that do not exist in 14 CFR 91.159 or any other regulation. Option C invents a daylight VMC waiver process that has no regulatory basis. Option D falsely restricts Class A enforcement to commercial operators — 14 CFR 91.135 applies to ALL operations in U.S. airspace, including Part 91 private operations.",
+      "far_reference": "14 CFR 91.135",
+      "acs_element": "PA.I.E.K1a"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "While leveling at 4,500 feet on a cross-country, you notice that based on your current position, you have inadvertently entered the outermost shelf of the Class B airspace without a clearance. ATC has not called you. What is the SAFEST and most legally correct immediate action?",
+      "options": [
+        {"label": "A", "text": "Continue at 4,500 feet — since ATC has not called, the aircraft's ADS-B may not have been detected by Class B TRACON; continuing silently and exiting the airspace without alerting ATC avoids administrative action while resolving the situation fastest", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Immediately exit Class B airspace by the most direct route that does not create a further safety issue, then contact ATC on the appropriate frequency to report the deviation and position; cooperation and self-reporting is both legally advisable and consistent with 14 CFR 91.123", "hazardous_attitude": null},
+        {"label": "C", "text": "Immediately declare an emergency on 121.5 — an unauthorized Class B entry is a flight emergency under 14 CFR 91.3 because collision risk with commercial traffic is elevated; declaring emergency grants priority handling and legal protection from certificate action under the emergency provision", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Request an immediate ATC clearance for Class B retroactively — TRACON can issue a 'retroactive clearance' if the aircraft reports the incursion and has appropriate equipment; this legally regularizes the entry and avoids a pilot deviation report", "hazardous_attitude": "invulnerability"}
+      ],
+      "correct_answer": "B",
+      "explanation": "An inadvertent Class B incursion is a serious regulatory event. The correct action has two parts: (1) EXIT — leave Class B airspace immediately by the most direct route that does not create an additional conflict. Descending below the shelf or turning away from the boundary are both valid depending on position. (2) REPORT — contact ATC, identify yourself, and report the deviation. Self-reporting is legally advantageous under the NASA Aviation Safety Reporting System (ASRS) and demonstrates good faith that can influence enforcement outcomes. 14 CFR 91.123 requires compliance with ATC instructions; voluntarily contacting ATC upon realizing a violation is the professional and legally correct response. Option A is Macho — the rationalization that ATC 'didn't see' the violation and therefore silence is acceptable. ADS-B Out broadcasts position continuously; ATC almost certainly has the track. Option C over-escalates — an airspace incursion is not an in-flight emergency unless it creates an immediate collision hazard. Option D invents 'retroactive clearances' that do not exist.",
+      "sjt_rationale": "Option A is Macho — hoping to get away with the violation rather than correcting it. Option C is Resignation — over-escalating to emergency declarations to avoid accountability. Option D is Invulnerability — believing ATC can legalize a regulatory violation after the fact. Option B is the professional airmanship standard.",
+      "far_reference": "14 CFR 91.131; 14 CFR 91.123",
+      "acs_element": "PA.I.E.K1b"
+    },
+    {
+      "id": "PPL_PA_I_E_01_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "Approaching Class C airspace, the pilot transmits: 'Sarasota Approach, Cessna 9876B, 10 miles north, 3,000 feet inbound.' The controller responds: 'Aircraft calling Sarasota, standby.' The pilot continues inbound without further communication. At 9.9 NM from the Class C primary airport, the pilot enters the outer ring. Has the pilot violated 14 CFR 91.130?",
+      "options": [
+        {"label": "A", "text": "No violation — two-way radio communication was established when the controller responded; 'standby' is an ATC acknowledgment and satisfies the communication requirement for Class C entry under AIM 3-2-4"},
+        {"label": "B", "text": "Yes — the controller responded 'aircraft calling Sarasota' without repeating the specific callsign '9876B'; AIM 3-2-4 requires ATC to acknowledge the specific aircraft callsign for two-way communication to be established; entering Class C without callsign acknowledgment violates 14 CFR 91.130"},
+        {"label": "C", "text": "No violation — the pilot was 10 miles away when establishing initial contact; under 14 CFR 91.130, two-way communication must only be established before entering the 5 NM inner circle, not the 10 NM outer ring; the pilot has time to establish communication before reaching the inner ring"},
+        {"label": "D", "text": "No violation — 'standby' from any ATC facility constitutes a de facto clearance to enter Class C outer ring airspace under FAA Order JO 7110.65; only the inner 5 NM circle requires explicit verbal clearance using the aircraft callsign"}
+      ],
+      "correct_answer": "B",
+      "explanation": "This is the critical Class C communication trap. AIM 3-2-4 explicitly states that two-way radio communication is established when ATC acknowledges the aircraft using its specific callsign. The controller responded 'aircraft calling Sarasota, standby' — without using the callsign '9876B.' This does NOT establish two-way communication because the controller has not identified and acknowledged the specific aircraft. The generic phrase 'aircraft calling' indicates ATC heard a transmission but has not yet sorted out which aircraft is calling. If the pilot enters the outer ring at this point, it is a 14 CFR 91.130 violation. The correct action: remain clear of Class C and await a response that includes '9876B' as the callsign acknowledgment. Compare the correct scenario: if the controller had said '9876B, standby' — that WOULD establish communication (callsign acknowledged) and the pilot could enter. Option A is the most dangerous wrong answer — many pilots interpret any controller response as 'communication established.' It is not. Option C incorrectly limits the communication requirement to the inner ring. Option D invents a 'standby = clearance' doctrine that does not exist.",
+      "sjt_rationale": "This question operationalizes one of the most common Class C violations in real-world GA operations. The behavioral failure is Complacency — hearing the radio respond and assuming the requirement is met without verifying callsign acknowledgment. AIM 3-2-4 is precise on this point.",
+      "far_reference": "14 CFR 91.130",
+      "acs_element": "PA.I.E.K1c"
+    }
+  ]
+}

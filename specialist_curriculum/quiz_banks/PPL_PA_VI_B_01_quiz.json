@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_VI_B_01",
+  "title": "Ground-Based & Satellite Navigation",
+  "questions": [
+    {
+      "id": "PPL_PA_VI_B_01_Q001", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot is planning a VFR cross-country using a panel-mounted GPS. The navigation database expired 3 weeks ago. Can the pilot legally use the GPS for VFR navigation?",
+      "options": [
+        {"label": "A", "text": "Yes — for VFR operations, the FAA does not require a current GPS database. However, the pilot MUST manually verify all intended waypoints against current aeronautical charts (a valid Sectional or Chart Supplement) to ensure the database accurately reflects the current airspace structure. An expired database may not show newly established restricted areas, altered Class B boundaries, or relocated waypoints."},
+        {"label": "B", "text": "No — 14 CFR 91.205 requires all installed navigation equipment to have current databases regardless of VFR or IFR operation."},
+        {"label": "C", "text": "Yes — GPS databases never change significantly enough to affect VFR navigation. Waypoints and airports don't move."},
+        {"label": "D", "text": "No — an expired database means the GPS is considered inoperative and must be placarded INOP under 91.213(d)."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Per AIM 1-1-17 and AC 90-100A, database currency is mandatory only for IFR operations. VFR pilots may use an expired database but must cross-reference waypoints with current publications. Option B invents a universal database requirement that doesn't exist in 91.205. Option C dangerously assumes databases don't change — airspace is restructured regularly. Option D incorrectly treats an expired database as inoperative equipment.",
+      "far_reference": "AIM 1-1-17", "acs_element": "PA.VI.B.K2"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q002", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "While tracking inbound to a VOR, the CDI needle begins to swing wildly from side to side and the TO/FROM flag briefly disappears. What is happening and what should the pilot do?",
+      "options": [
+        {"label": "A", "text": "The aircraft is entering the cone of confusion — the inverted cone-shaped area directly above the VOR station where the receiver cannot accurately determine the phase difference between the reference and variable signals. The pilot should HOLD the current heading and altitude. Do NOT chase the needle. True station passage is confirmed only when the aircraft exits the far side of the cone and the TO/FROM flag firmly flips from TO to FROM."},
+        {"label": "B", "text": "The VOR receiver is malfunctioning. The pilot should tune and identify a different VOR station and discontinue using the current one."},
+        {"label": "C", "text": "The aircraft has flown outside the VOR's service volume. The signal is too weak at this distance for reliable navigation. The pilot should climb to restore signal."},
+        {"label": "D", "text": "Another aircraft's transponder is interfering with the VOR signal. The pilot should wait until the interference passes and the needle stabilizes."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The cone of confusion is a normal, expected phenomenon when crossing directly over a VOR station. It is not a malfunction. The phase-difference measurement breaks down when the signal path becomes nearly vertical. The CDI and TO/FROM flag will behave erratically until the aircraft exits the cone. The key pilot action is to HOLD HEADING — do not attempt to correct. Station passage = TO/FROM reversal on the far side.",
+      "far_reference": "AIM 1-1-3", "acs_element": "PA.VI.B.K1"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q003", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot in flight notices the GPS displays a warning: 'RAIM NOT AVAILABLE.' What does this mean, and how does it affect navigation?",
+      "options": [
+        {"label": "A", "text": "RAIM (Receiver Autonomous Integrity Monitoring) requires at least 5 satellites with adequate geometry to cross-check signals and detect a corrupted satellite. Without RAIM, the GPS receiver CANNOT verify the integrity of its navigation solution — it may be providing an accurate position, or it may be silently drifting without any warning. The pilot cannot trust the GPS position as reliable. The pilot should transition to backup navigation (VOR, pilotage, dead reckoning) and inform ATC if receiving radar services."},
+        {"label": "B", "text": "RAIM is only relevant for IFR approaches. For VFR navigation, RAIM status has no practical impact on the accuracy of the GPS position."},
+        {"label": "C", "text": "The GPS has lost all satellite signals and is no longer providing any position data. The pilot should power-cycle the GPS to re-acquire satellites."},
+        {"label": "D", "text": "RAIM is a ground-based augmentation system that is undergoing maintenance. The GPS is still fully functional using direct satellite signals."}
+      ],
+      "correct_answer": "A",
+      "explanation": "RAIM is the GPS receiver's internal integrity monitoring. Without it, the receiver cannot detect if a satellite is transmitting corrupted data — it may compute and display a position that is progressively drifting from reality with no warning flag. This is especially dangerous because the pilot has NO visual indication that the position is wrong. The moving map looks normal. Option B incorrectly limits RAIM to IFR — integrity matters for all operations. Option C confuses RAIM loss with total signal loss. Option D incorrectly describes RAIM as a ground system.",
+      "far_reference": null, "acs_element": "PA.VI.B.K2"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q004", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot wants to determine their exact position using two VOR stations. After tuning and identifying VOR A, the pilot rotates the OBS until the CDI centers and reads the heading under the top index. The TO/FROM flag shows 'TO.' The pilot then plots a line FROM VOR A on that heading. Is this correct?",
+      "options": [
+        {"label": "A", "text": "No. The pilot used a TO indication, which gives the course TO the station — not the radial FROM the station. To plot position on a chart, the pilot must center the CDI with a FROM flag. The FROM indication shows the radial emanating outward from the VOR, which can be drawn directly from the VOR symbol on the chart. Using TO gives the reciprocal (180° opposite), resulting in plotting the wrong line and a completely incorrect position fix."},
+        {"label": "B", "text": "Yes. The TO/FROM flag does not affect the accuracy of the radial reading. The heading at the top of the OBS is the same whether TO or FROM is displayed."},
+        {"label": "C", "text": "Yes, as long as the pilot adds 180° to the reading when plotting. The TO reading is the reciprocal of the FROM radial, so the pilot can mathematically correct it."},
+        {"label": "D", "text": "It depends on which direction the aircraft is flying. If the aircraft is heading toward the station, TO gives the correct radial for plotting."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The TO/FROM flag fundamentally changes what the OBS reading represents. FROM = the radial you are ON (emanating from the station outward). TO = the course TO the station (the reciprocal). When plotting on a chart, you draw from the VOR symbol outward — so you need the FROM radial. Option C is partially correct that you COULD add 180°, but this introduces unnecessary error potential and is not standard practice — the correct method is to center with FROM. Option B is factually wrong — the heading reading IS different between TO and FROM (they're reciprocals).",
+      "far_reference": null, "acs_element": "PA.VI.B.S2"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q005", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "A pilot tunes a VOR for navigation during a VFR cross-country. The frequency is correct and the CDI centers normally, but the pilot does not listen to the Morse code identifier. Is this an acceptable practice?",
+      "options": [
+        {"label": "A", "text": "No. Positive identification of a VOR station via Morse code (or voice ID) is mandatory before using the signal for navigation. A VOR undergoing maintenance may transmit a carrier wave that centers the CDI needle WITHOUT transmitting the Morse identifier. If the pilot trusts this signal, they are navigating on unreliable, potentially meaningless data. If the identifier is absent or doesn't match the expected code, the VOR signal must NOT be used for navigation."},
+        {"label": "B", "text": "Yes. If the frequency matches the chart and the CDI is functioning normally, the station is confirmed by frequency correlation alone."},
+        {"label": "C", "text": "Yes, for VFR operations. Morse code identification is only required for IFR navigation under 91.171."},
+        {"label": "D", "text": "No, but only because the DPE will test this on the checkride. In practical VFR flying, frequency verification is sufficient."}
+      ],
+      "correct_answer": "A",
+      "explanation": "VOR identification via Morse code or voice ID is a fundamental safety practice, not a formality. A VOR in maintenance mode can transmit a signal that produces a normal-looking CDI indication but is NOT providing valid navigation data. The maintenance mode removes the Morse identifier specifically to warn pilots. A centered needle on a VOR in maintenance is a trap — the pilot will fly confidently in the wrong direction. This applies equally to VFR and IFR operations.",
+      "far_reference": "14 CFR 91.171", "acs_element": "PA.VI.B.K1"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q006", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "An aircraft is cruising at 12,000 feet MSL directly over a VORTAC station. The DME reads 2.0 NM. Is the aircraft actually 2.0 NM from the station over the ground?",
+      "options": [
+        {"label": "A", "text": "No. DME measures SLANT RANGE — the straight-line distance from the aircraft to the ground station, which is the hypotenuse of the triangle formed by altitude and ground distance. At 12,000 feet directly over the station, the ground distance is essentially zero, but the slant range is the altitude converted to nautical miles (12,000 ft ÷ ~6,076 ft/NM ≈ 2.0 NM). The aircraft is directly overhead, not 2 NM away. At greater distances, the difference between slant range and ground distance becomes negligible."},
+        {"label": "B", "text": "Yes. DME provides ground distance by compensating for altitude using the aircraft's barometric altimeter input."},
+        {"label": "C", "text": "Yes, but only if the aircraft's transponder is transmitting altitude data. DME uses altitude information to calculate ground distance."},
+        {"label": "D", "text": "No. The DME reading is unreliable at all altitudes and should only be used for general situational awareness, never for navigation."}
+      ],
+      "correct_answer": "A",
+      "explanation": "DME measures slant range — the actual distance through the air from aircraft to station, not ground distance. When the aircraft is close to the station at high altitude, the difference is significant (the hypotenuse is much longer than the base of the triangle). At 12,000 feet directly over the station, ground distance = 0, but slant range ≈ 2 NM. At greater distances (beyond ~20 NM), the hypotenuse and base converge and the error becomes negligible for practical navigation.",
+      "far_reference": null, "acs_element": "PA.VI.B.S2"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_02",
+      "text": "A pilot is planning a 200-mile VFR cross-country. They plan to navigate exclusively using an iPad running ForeFlight with GPS. They have no paper charts, no backup device, and the aircraft has no panel-mounted GPS or VOR receiver. What is wrong with this plan?",
+      "options": [
+        {"label": "A", "text": "Nothing is wrong — AC 91-78A explicitly authorizes iPads as a complete replacement for paper charts for Part 91 VFR operations.", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "The plan has a critical single point of failure. If the iPad fails (thermal shutdown from direct sunlight, battery depletion, software crash, or physical damage from turbulence), the pilot has ZERO navigation capability — no panel GPS, no VOR, no paper chart, no backup device. The pilot would be lost with no means of determining position. Proper planning requires at least one backup: a second device, printed charts for the route, or functional panel-mounted navigation. Additionally, the iPad lacks RAIM — it cannot warn of GPS signal degradation.", "hazardous_attitude": null},
+        {"label": "C", "text": "The plan is acceptable as long as the pilot charges the iPad to 100% before departure. Battery management is the only significant risk with EFB-only navigation.", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "The pilot should cancel the flight entirely. VFR cross-country navigation without a panel-mounted GPS is not safe under any circumstances.", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A correctly cites AC 91-78A but ignores that the AC 'heavily suggests' a backup — and in this scenario, there is NO backup at all. A single iPad is a single point of failure. Option C focuses only on battery — thermal shutdown, software crashes, and physical damage are equally likely failures. Option D is extreme — VFR navigation with pilotage and dead reckoning is the oldest form of navigation and works without any electronics. Option B correctly identifies the systemic risk (zero redundancy) and prescribes practical mitigations.",
+      "explanation": "AC 91-78A allows EFBs to replace paper charts but does not prohibit carrying backups — it heavily recommends them. The three most common EFB failure modes are thermal shutdown (direct sun on canopy), battery depletion (GPS + bright screen), and software crashes. Without any backup navigation source, the pilot is one iPad failure away from being completely lost on a 200-mile flight.",
+      "far_reference": "AC 91-78A", "acs_element": "PA.VI.B.K2"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_01",
+      "text": "A pilot is navigating a VFR cross-country using VOR navigation. The pilot has been tracking inbound to a VOR for 30 minutes. The CDI has been centered with a TO indication the entire time. The pilot notices that the Morse code identifier, which was clearly audible earlier, has stopped transmitting — the frequency is now silent. What should the pilot do?",
+      "options": [
+        {"label": "A", "text": "Continue tracking — the CDI is centered and the TO/FROM flag is working normally. The Morse code may have temporarily dropped due to atmospheric conditions or signal propagation variation.", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "Immediately stop using the VOR for navigation. The loss of the Morse code identifier is the primary indicator that the VOR station has been taken offline for maintenance. A VOR in maintenance may transmit a carrier wave that keeps the CDI centered WITHOUT providing valid navigation data. The pilot is potentially flying on a meaningless signal. Transition to backup navigation (GPS, pilotage, dead reckoning) and verify position using other means.", "hazardous_attitude": null},
+        {"label": "C", "text": "Turn up the NAV audio volume — the identifier may have become too quiet to hear due to signal attenuation at distance.", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "Continue using the VOR but switch to a different radial to see if the Morse code returns. The specific radial may be experiencing interference.", "hazardous_attitude": "macho"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A ignores the most critical VOR safety indicator — when the Morse code stops, the station's validity cannot be verified. Option C might be worth a quick check but should not lead to continued use if the identifier is truly absent. Option D misunderstands VOR physics — the identifier is station-wide, not radial-specific. Option B correctly identifies the risk: maintenance mode transmits a signal without the identifier, potentially giving a pilot a perfectly centered, completely meaningless CDI indication.",
+      "explanation": "The Morse code identifier is the VOR's integrity check. When the FAA takes a VOR offline for maintenance, they remove the identifier but may leave the carrier wave transmitting. This means the CDI will center normally and the TO/FROM flag will work — but the navigation data is invalid. A pilot trusting this signal is navigating on phantom data. The instant the identifier disappears, the signal must be treated as unreliable.",
+      "far_reference": "AIM 1-1-3", "acs_element": "PA.VI.B.K1"
+    }
+  ]
+}

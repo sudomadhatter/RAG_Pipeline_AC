@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_B_01",
+  "title": "Required Aircraft Documents (ARROW)",
+  "questions": [
+    {
+      "id": "PPL_PA_I_B_01_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot preparing for a VFR domestic flight in a Cessna 172 finds the aircraft's Radio Station License is missing from the document pouch. The flight will remain entirely within the United States. Which statement is correct?",
+      "options": [
+        {"label": "A", "text": "The flight must be postponed — a Radio Station License is required by 14 CFR 91.203 for all civil aircraft operations regardless of whether the flight is domestic or international"},
+        {"label": "B", "text": "The flight may proceed — for domestic VFR operations within the United States, aircraft are licensed by rule under 47 CFR Part 87, and a physical Radio Station License is only required for international flights"},
+        {"label": "C", "text": "The flight may proceed — the Radio Station License is only required if the pilot intends to communicate with ATC, and VFR operations in uncontrolled airspace need no radio authorization"},
+        {"label": "D", "text": "The flight must be postponed — without a Radio Station License, the aircraft's transponder and ELT cannot be legally operated in the United States national airspace system"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Under 47 CFR Part 87 and consistent with the ARROW framework, an Aircraft Radio Station License is only required for international flights. For all domestic operations within the United States, aircraft radios are licensed by rule — no physical license needs to be on board. The ARROW acronym includes the Radio Station License specifically to address the international flight scenario. Options A and D incorrectly apply the international requirement to domestic operations. Option C introduces an incorrect trigger based on whether ATC communication is intended.",
+      "far_reference": "14 CFR 91.203; 47 CFR Part 87; 47 CFR 87.18",
+      "acs_element": "PA.I.B.K1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "An aircraft's Registration Certificate was issued on June 15, 2021. Under the current 14 CFR 47.40 rule, on what date does it expire?",
+      "options": [
+        {"label": "A", "text": "June 15, 2024 — the registration expires exactly 3 years from the date of issuance per the original 14 CFR 47.40 rule"},
+        {"label": "B", "text": "June 30, 2024 — the registration expires 3 calendar years after the last day of the issuance month under the pre-2022 FAA rule"},
+        {"label": "C", "text": "June 30, 2028 — the registration expires 7 years after the last day of the issuance month per the updated 14 CFR 47.40 rule effective in 2022"},
+        {"label": "D", "text": "June 15, 2028 — the registration expires 7 years from the exact date of issuance rather than the last day of the issuance month"}
+      ],
+      "correct_answer": "C",
+      "explanation": "The FAA updated 14 CFR 47.40 via Direct Final Rule 2022-25289, extending aircraft registration validity from 3 years to 7 years. The expiration is calculated from the LAST DAY of the MONTH of issuance — not the exact issuance date. A certificate issued June 15, 2021 expires on June 30, 2028 (7 years from June 30, 2021). Options A and B apply the outdated 3-year rule. Option D applies the correct 7-year duration but measures from the exact date rather than the last day of the month, producing an incorrect date.",
+      "far_reference": "14 CFR 47.40",
+      "acs_element": "PA.I.B.K1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "During a ramp check, an FAA inspector finds the aircraft's Airworthiness Certificate stored in a binder on the back seat. The binder is visible but closed. The annual inspection and all ADs are current. Is the aircraft in compliance with 14 CFR 91.203(b)?",
+      "options": [
+        {"label": "A", "text": "Yes — the certificate is on board and immediately available for inspection, which satisfies the display requirement since the FAA only requires it to be present in the aircraft"},
+        {"label": "B", "text": "Yes — as long as the certificate can be produced within a reasonable time during an inspection, any location within the cabin satisfies 91.203(b)"},
+        {"label": "C", "text": "No — 91.203(b) requires the Airworthiness Certificate to be displayed at the cabin or cockpit entrance so that it is legible to passengers and crew, not stored in a closed binder"},
+        {"label": "D", "text": "No — the Airworthiness Certificate must be permanently affixed to the cockpit instrument panel using FAA-approved mounting hardware per 91.203(b)"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 91.203(b) states with precision: 'no person may operate a civil aircraft unless...the airworthiness certificate...is displayed at the cabin or cockpit entrance so that it is legible to passengers or crew.' A certificate in a closed binder on the back seat fails this requirement on two counts: it is not at the entrance and it is not legible. The regulation's intent is to ensure that anyone boarding the aircraft can immediately see the airworthiness status — a direct safety function. Option D invents a mounting hardware requirement that does not exist.",
+      "far_reference": "14 CFR 91.203(b); 14 CFR 21.181(a)(1)",
+      "acs_element": "PA.I.B.S1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "The Airworthiness Certificate in the document pouch shows no expiration date. The aircraft's annual inspection is 14 months overdue. Does the Airworthiness Certificate still authorize flight?",
+      "options": [
+        {"label": "A", "text": "Yes — the certificate states it is valid indefinitely and the FAA cannot revoke this specific certificate remotely; the aircraft remains legally airworthy until the FAA physically retrieves the certificate"},
+        {"label": "B", "text": "Yes — the Airworthiness Certificate remains valid because the 14-month overdue inspection is an administrative issue that only affects the 100-hour requirement, not the Standard Airworthiness Certificate"},
+        {"label": "C", "text": "No — the legal authority of the Airworthiness Certificate is conditioned on continuous maintenance compliance with Parts 43 and 91; a 14-month overdue annual inspection voids the certificate's operating authority even though the document remains physical"},
+        {"label": "D", "text": "No — an Airworthiness Certificate automatically expires after 12 calendar months from its issuance date regardless of the maintenance status of the aircraft"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Under 14 CFR 21.181(a)(1), a Standard Airworthiness Certificate remains 'effective as long as the maintenance, preventive maintenance, and alterations are performed in accordance with parts 43 and 91.' A 14-month-old Annual inspection directly violates 14 CFR 91.409(a), which requires an Annual within the preceding 12 calendar months. This maintenance failure suspends the operating authority of the Airworthiness Certificate — the physical document still exists, but it no longer confers legal authority to fly. The aircraft must obtain a Special Flight Permit to move to a maintenance facility. Option D incorrectly assigns a 12-month expiration to the certificate itself.",
+      "far_reference": "14 CFR 21.181(a)(1); 14 CFR 91.409(a); 14 CFR 91.203",
+      "acs_element": "PA.I.B.K1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "During a preflight, a pilot finds a commercially purchased Jeppesen Cessna 172 Pilot's Operating Handbook in the document pouch. The aircraft's original serialized AFM cannot be located. Does this handbook satisfy the 'O' in ARROW?",
+      "options": [
+        {"label": "A", "text": "Yes — any current Cessna 172 POH contains the same Limitations, Performance, and Systems information as the serialized AFM, making it a legal substitute for Part 91 VFR operations"},
+        {"label": "B", "text": "Yes — the FAA allows commercially published POHs as legal substitutes for the original AFM because the content is identical to the manufacturer's approved documentation"},
+        {"label": "C", "text": "No — the operating limitations must be the serialized, FAA-approved Airplane Flight Manual specific to the aircraft's tail number and serial number, containing an FAA approval stamp in the Limitations section"},
+        {"label": "D", "text": "No — commercially published POHs are prohibited from aircraft because they may contain regional variations that conflict with the original FAA type certificate data"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Under 14 CFR 91.9, the aircraft must be operated according to the operating limitations in the approved Airplane Flight Manual. The AFM is a serialized, aircraft-specific document tied to the aircraft's exact tail number and serial number, bearing an FAA approval stamp in Section 2 (Limitations). A commercially published POH — regardless of how accurate its content is — is not the FAA-approved document and does not satisfy the legal requirement. The DPE will specifically check whether the 'O' in ARROW is the generic POH or the actual AFM with the FAA approval notation. Option D invents a regional variations prohibition that is not part of FAA regulations.",
+      "far_reference": "14 CFR 91.9; 14 CFR 91.203",
+      "acs_element": "PA.I.B.K1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A pilot purchases a Piper Cherokee from a private owner on January 15, 2025. The previous registration is immediately suspended. The new owner submits AC Form 8050-1 the same day. What document authorizes the aircraft for domestic flight while the permanent certificate is being processed?",
+      "options": [
+        {"label": "A", "text": "The expired registration from the previous owner, which remains valid for 30 days after the sale to allow transition time for the new registration processing"},
+        {"label": "B", "text": "The pink copy of the AC Form 8050-1 Aircraft Registration Application, which serves as temporary registration authority for domestic flights for up to 90 days"},
+        {"label": "C", "text": "A Special Airworthiness Certificate issued by the local FSDO, which serves as both registration authority and airworthiness approval during the ownership transfer period"},
+        {"label": "D", "text": "No document is available — the aircraft is legally grounded from the moment of sale until the FAA processes the full registration, which typically takes 30 to 60 business days"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Under 14 CFR 47.31, the previous aircraft registration is immediately suspended upon the transfer of ownership. The new owner submits AC Form 8050-1 (Aircraft Registration Application). The pink copy of this completed application serves as temporary registration authority for domestic flights for up to 90 days while the FAA Civil Aviation Registry processes the permanent certificate. This is a common gotcha during the checkride — applicants often believe the aircraft is grounded from the moment of sale. Option A incorrectly preserves the previous owner's registration. Option C creates a fictitious FSDO interim document.",
+      "far_reference": "14 CFR 47.31; 14 CFR 47.40",
+      "acs_element": "PA.I.B.K1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "You arrive at the FBO to preflight for a cross-country flight with two passengers. You discover the aircraft's Registration Certificate expired 6 days ago. The aircraft is otherwise airworthy and your passengers have non-refundable plans. All four options are legal. Which is SAFEST?",
+      "options": [
+        {"label": "A", "text": "Depart anyway — the registration expired only 6 days ago and the aircraft is otherwise airworthy; a minor administrative lapse does not compromise safety and you can renew on return", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Call the FBO manager to request a written exemption document that permits flight during the renewal processing period, then depart with the exemption in the aircraft", "hazardous_attitude": "get_there_itis"},
+        {"label": "C", "text": "Ground the aircraft, contact the aircraft owner to initiate FAA registration renewal, and arrange alternate transportation or reschedule — an expired registration makes flight illegal regardless of other airworthiness factors", "hazardous_attitude": null},
+        {"label": "D", "text": "Cancel the flight and declare the aircraft permanently grounded until the registration is renewed — a registration violation means the aircraft cannot be moved under any circumstances including maintenance ferry flights", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 91.203(a)(1) requires a currently effective registration certificate to be on board. An expired registration is not a 'minor administrative lapse' — it is a direct regulatory violation that prohibits the flight. Option A exemplifies Macho reasoning: assuming administrative rules do not matter when the aircraft 'feels' airworthy. Option B invents an FBO exemption document that does not exist under FAA regulations. Option D is Resignation — a Special Flight Permit can authorize movement to a maintenance facility or owner's location for renewal purposes; the aircraft is not permanently grounded. Option C is correct: ground the aircraft, contact the owner, renew the registration, and arrange alternatives. Reference: FAA Order 2150.3C documents registration violations as common ramp-check enforcement findings; 14 CFR 47.40 governs the renewal timeline.",
+      "sjt_rationale": "Option A is Macho — minimizing a real regulatory violation. Option B is Get-There-Itis — seeking a workaround to depart rather than accepting the necessary delay. Option D is Resignation — treating a correctable situation as permanently irreversible. Option C is the safe and correct response.",
+      "far_reference": "14 CFR 91.203(a)(1); 14 CFR 47.40",
+      "acs_element": "PA.I.B.S1"
+    },
+    {
+      "id": "PPL_PA_I_B_01_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "During preflight at a rented Cessna 172, you locate the Airworthiness Certificate in the maintenance binder on the rear seat. The aircraft's annual inspection is current. The DPE is watching. What is the SAFEST and most correct action?",
+      "options": [
+        {"label": "A", "text": "Proceed with the oral exam and note verbally that the Airworthiness Certificate is accessible in the binder, since it is on board and available for immediate inspection if requested", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Move the Airworthiness Certificate from the binder to the document sleeve at the cockpit entrance before the oral begins, correcting the 91.203(b) display violation", "hazardous_attitude": null},
+        {"label": "C", "text": "Remove the binder from the rear seat and hold it open at the cockpit entrance during the preflight portion, satisfying the display requirement through manual positioning", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "Immediately ground the aircraft and demand a replacement aircraft from the flight school before proceeding with the checkride, since the display violation makes the aircraft unairworthy for the test", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The correct response is to identify the 91.203(b) display violation and immediately correct it by moving the Airworthiness Certificate to the proper document sleeve at the cabin or cockpit entrance. This demonstrates: (1) knowledge of the regulation, (2) the ability to identify and correct a discrepancy during preflight, and (3) practical airworthiness verification skills. The DPE is assessing exactly this competency — PA.I.B.S1 asks the applicant to locate and describe aircraft airworthiness information. Option A ignores a real regulatory violation (Macho). Option C fulfills the letter of the display requirement through an impractical workaround (Get-There-Itis). Option D over-reacts to a correctable issue (Resignation). Reference: 14 CFR 91.203(b); FAA ramp check enforcement documentation consistently cites improper Airworthiness Certificate display as the most common ARROW violation.",
+      "sjt_rationale": "Option A ignores a regulatory violation through Macho rationalization. Option C satisfies the rule through an absurd workaround — Get-There-Itis thinking applied to compliance rather than destinations. Option D treats a correctable condition as catastrophic — Resignation. Option B is simple, correct, and demonstrates practical airworthiness knowledge.",
+      "far_reference": "14 CFR 91.203(b); 14 CFR 21.181",
+      "acs_element": "PA.I.B.S1"
+    }
+  ]
+}

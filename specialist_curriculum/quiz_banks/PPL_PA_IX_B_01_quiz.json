@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_IX_B_01",
+  "title": "Emergency Approach & Landing",
+  "questions": [
+    {
+      "id": "PPL_PA_IX_B_01_Q001", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "An engine fails at 2,500 feet AGL during cruise flight. What should the pilot's FIRST action be?",
+      "options": [
+        {"label": "A", "text": "PITCH for best glide speed (Vg). The instant the engine fails, the aircraft begins decelerating. Without immediate pitch adjustment, the aircraft will decelerate through the stall speed and stall — which is what kills pilots in engine-failure accidents, not the engine failure itself. Pitching for Vg preserves kinetic energy, maximizes glide distance, and maintains flight control. THEN select a landing field. THEN run memory items. THEN transition to the printed checklist."},
+        {"label": "B", "text": "Check the fuel selector position. The most common cause of engine failure is fuel starvation from a mispositioned selector. Correcting it immediately may restore engine power."},
+        {"label": "C", "text": "Squawk 7700 and transmit 'MAYDAY' on 121.5 MHz. Alerting ATC ensures search and rescue will know the aircraft's position if a forced landing is required."},
+        {"label": "D", "text": "Attempt an immediate restart by pulling the mixture to idle cut-off and then pushing it back to rich. This clears any vapor lock or fuel contamination from the engine."}
+      ],
+      "correct_answer": "A",
+      "explanation": "AVIATE is always first. The stall that follows an unmanaged engine failure kills more pilots than the engine failure itself. Pitching for Vg immediately preserves the energy needed to maintain flight control and reach a landing site. Options B, C, and D are all legitimate actions — but they come AFTER the aircraft is aerodynamically stabilized at Vg. Looking inside the cockpit before establishing the glide is the textbook fatal error.",
+      "far_reference": "14 CFR 91.3", "acs_element": "PA.IX.B.K1"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q002", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "An engine fails at 5,000 feet AGL. A suitable airport is 6 miles away, and a small lake is directly below the aircraft. The pilot is considering whether to fly best glide (Vg) toward the airport or minimum sink to stay over the lake. What is the correct decision framework?",
+      "options": [
+        {"label": "A", "text": "If the airport is within gliding range at Vg (based on the aircraft's published glide ratio and current altitude), fly Vg to MAXIMIZE GROUND DISTANCE and reach the airport. If the airport is beyond glide range, fly minimum sink speed to MAXIMIZE TIME ALOFT while troubleshooting the engine restart checklist over the lake. Minimum sink keeps the aircraft airborne longer (lower descent rate) but covers less ground. The decision depends on the math: altitude available ÷ descent rate at Vg = time available × groundspeed = achievable distance. If 6 miles is within that distance, go for the airport."},
+        {"label": "B", "text": "Always fly to the airport regardless of distance. An airport provides the safest landing surface with emergency services available."},
+        {"label": "C", "text": "Always use minimum sink. Staying airborne as long as possible gives the best chance of restarting the engine."},
+        {"label": "D", "text": "Fly at an airspeed halfway between Vg and minimum sink. This provides a compromise between distance and time aloft."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The choice between Vg (max distance) and minimum sink (max time) depends entirely on the tactical objective. If the airport is reachable, Vg is correct — landing on a runway is always preferable. If the airport is unreachable, minimum sink maximizes troubleshooting time. Option B ignores the physics — stretching toward an unreachable airport guarantees crashing into terrain short of it. Option C wastes achievable distance if a runway is within range. Option D is aerodynamically suboptimal for both objectives.",
+      "far_reference": null, "acs_element": "PA.IX.B.K2"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q003", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot's engine fails at 400 feet AGL immediately after takeoff. The runway is directly behind the aircraft. Should the pilot turn back to land on the departure runway?",
+      "options": [
+        {"label": "A", "text": "No. At 400 feet AGL, the aircraft is far below the safe turnback altitude (typically 800-1,200 feet AGL depending on the aircraft). A turnback requires approximately 210 degrees of turn (180° plus alignment), which means sustained banked flight. Banking increases load factor, which increases stall speed and descent rate. At 400 feet, the altitude loss during the turn plus the recovery dive will exceed the available altitude — the aircraft will stall or impact the ground before completing the turn. The pilot must land STRAIGHT AHEAD within 30 degrees of the nose, accepting the off-airport landing as the survivable option."},
+        {"label": "B", "text": "Yes — a 180-degree turn can be completed in approximately 200 feet of altitude loss. At 400 feet, the pilot has sufficient margin."},
+        {"label": "C", "text": "Yes, but only if the pilot executes a steep 60-degree bank to minimize the turn radius and complete the turn quickly."},
+        {"label": "D", "text": "It depends on the wind. If there is a strong headwind on the departure runway, the tailwind component during the turn will help the aircraft reach the runway."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The impossible turn is the single most lethal maneuver in GA. At 400 feet, there is not enough altitude to complete the turn, recover from the dive, and land. Option B drastically underestimates the altitude loss — realistic estimates are 400-800+ feet for a complete turnback including the pull-out. Option C makes it WORSE — 60° bank doubles the load factor, increasing stall speed by 41% at an already low airspeed near Vx/Vy. Option D incorrectly suggests a tailwind helps — the tailwind actually increases groundspeed and makes the turn wider, not tighter.",
+      "far_reference": null, "acs_element": "PA.IX.B.R1"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q004", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "During an emergency approach to a field, the pilot is at 2,000 feet AGL and directly over the intended landing field. The pilot deploys full flaps immediately. Why is this likely a fatal error?",
+      "options": [
+        {"label": "A", "text": "Deploying full flaps at 2,000 feet AGL over the field is premature. Full flaps dramatically increase drag and steepen the descent angle. The pilot is now 2,000 feet above the field with a very steep glide path. If the pilot realizes they will land short (e.g., wind shifts, they misjudge the pattern), they CANNOT recover by retracting flaps — retracting flaps causes a sudden loss of lift and an immediate altitude loss, compounding the emergency. Flaps should only be deployed when the field is ASSURED and excess energy needs to be shed — typically on short final, not from 2,000 feet overhead. The correct technique is to fly the Key Position pattern (High Key → Low Key) clean, then add flaps incrementally on final."},
+        {"label": "B", "text": "Full flaps increase the stall speed, making the aircraft more likely to stall during the approach. Flaps should only be used in emergencies if the aircraft is above 3,000 feet AGL."},
+        {"label": "C", "text": "Full flaps at this altitude is correct. The pilot should use flaps to descend as quickly as possible to reach the field before the engine completely fails."},
+        {"label": "D", "text": "The issue is not the flaps themselves but the altitude. At 2,000 feet, the pilot should be looking for a closer field, not attempting to land directly below."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Flap deployment is an irreversible energy expenditure. Once deployed, the glide path steepens dramatically. If conditions change (wind, misjudgment), the pilot cannot recover the lost energy. Retracting flaps causes an immediate sink — not a recovery. Option B is wrong — flaps actually DECREASE stall speed (they increase Cl). Option C misunderstands the scenario — the engine has already failed; the question is energy management, not speed of descent. The correct approach is to manage energy conservatively and add flaps only when landing is assured.",
+      "far_reference": null, "acs_element": "PA.IX.B.K4"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q005", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot experiences an engine failure and pitches for the published best glide speed of 73 knots. The aircraft is 500 pounds below maximum gross weight. Is 73 knots the optimal glide speed?",
+      "options": [
+        {"label": "A", "text": "No — 73 knots is slightly FASTER than optimal for this weight. The published Vg is calculated at maximum gross weight. A lighter aircraft requires less lift, which generates less induced drag. The L/D max point (where total drag is minimized) shifts to a slightly lower airspeed. Flying at the published Vg when the aircraft is light means flying slightly faster than optimal, which increases parasite drag and wastes glide distance. However, the difference is small (a few knots), and flying at the published Vg is SAFE — it's just not perfectly optimal. In an emergency, flying the published number is acceptable."},
+        {"label": "B", "text": "Yes — Vg is a fixed aerodynamic property of the airfoil and does not change with weight. The published value is always correct."},
+        {"label": "C", "text": "No — at a lighter weight, the pilot should fly FASTER than the published Vg to account for reduced inertia."},
+        {"label": "D", "text": "Yes — the 500-pound difference is too small to have any measurable effect on glide performance."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Vg decreases with weight because a lighter aircraft needs less lift, producing less induced drag. The L/D max point shifts left on the drag curve (to a lower speed). Flying at the published (heavier) Vg adds unnecessary parasite drag. However, the practical difference is small — a few knots — and in an emergency, the published number is perfectly safe to use. The important concept is understanding WHY it changes. Option B is factually wrong. Option C reverses the direction. Option D dismisses a real aerodynamic effect.",
+      "far_reference": null, "acs_element": "PA.IX.B.K2"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q006", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "During an engine failure emergency, the pilot determines the only viable landing site is a state highway that passes through active Class D airspace. The pilot does not have a radio to contact the tower. Can the pilot land on the highway?",
+      "options": [
+        {"label": "A", "text": "Yes. 14 CFR 91.3(b) grants the pilot in command emergency authority to deviate from ANY regulation to the extent required to meet an in-flight emergency. This includes penetrating controlled airspace without communication, landing on non-approved surfaces, and any other regulatory deviation necessary for survival. The pilot must file a report with the FAA only IF requested, after the emergency is resolved. Survival takes absolute precedence over regulatory compliance."},
+        {"label": "B", "text": "No. The pilot must avoid Class D airspace without radio communication, even in an emergency. The pilot should find an alternative landing site outside the airspace."},
+        {"label": "C", "text": "Yes, but only if the pilot squawks 7700 on the transponder first. Without the emergency squawk, ATC has no way to know the aircraft is in distress."},
+        {"label": "D", "text": "No. Landing on a public highway is prohibited under state and federal law, regardless of emergency circumstances."}
+      ],
+      "correct_answer": "A",
+      "explanation": "91.3(b) is absolute: the PIC may deviate from ANY rule to meet an in-flight emergency requiring immediate action. This includes airspace, communication, and landing surface regulations. Option B would potentially kill the pilot by forcing them to fly beyond their glide range to avoid airspace. Option C is good practice (squawk 7700 if time permits) but is NOT a prerequisite for exercising emergency authority. Option D is wrong — 91.3 supersedes state traffic law in an aviation emergency.",
+      "far_reference": "14 CFR 91.3", "acs_element": "PA.IX.B.K1"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_03",
+      "text": "A pilot is gliding toward an emergency landing field after engine failure. From 1,500 feet AGL, the pilot sees two options: (1) a large, harvested farm field 1 mile ahead with no visible obstructions, or (2) a small regional airport 4 miles ahead. The pilot's glide ratio suggests the airport is at the extreme edge of gliding range. Which option should the pilot choose?",
+      "options": [
+        {"label": "A", "text": "Fly to the airport. Airports have runways, emergency services, and are designed for aircraft. The pilot should try to reach it even if it's at the edge of glide range.", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Choose the farm field. The golden rule of energy management is: it is always better to arrive TOO HIGH than too low. The farm field is well within glide range, guaranteeing a controlled approach with energy to spare. The airport at the extreme edge of glide range means zero margin — any headwind, downdraft, or misjudgment guarantees landing short in unknown terrain between the two sites. A controlled, low-speed landing in a harvested field is highly survivable. Crashing into trees or fences short of the airport is not.", "hazardous_attitude": null},
+        {"label": "C", "text": "Split the difference — fly toward the airport but plan to divert to the field if it becomes clear the airport is unreachable.", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "Attempt to restart the engine. Four miles at glide speed gives the pilot approximately 4-5 minutes of troubleshooting time before committing to either option.", "hazardous_attitude": "invulnerability"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A (macho) gambles on reaching the airport with zero margin. Any adverse condition (headwind, thermal sink, misjudged distance) results in crashing short of the runway in unknown terrain. Option C sounds reasonable but requires the pilot to wait until it's 'clear' the airport is unreachable — by which time, they may have also flown past the farm field. Option D delays the decision — troubleshooting is secondary to field selection. Option B correctly applies the golden rule: arrive too high, never too low. A guaranteed controlled landing in a suitable field is always safer than a gamble on reaching a runway.",
+      "explanation": "In emergency landing decisions, the survivable option always beats the optimal option when the optimal option is uncertain. A harvested farm field with no obstructions and excess energy on arrival is a high-probability survivable outcome. An airport at the extreme edge of glide range is a coin flip. The pilot who commits to the certain field and arrives with energy to spare can execute a proper pattern, select a touchdown point, and manage the flare. The pilot who stretches toward the airport and comes up short has no options.",
+      "far_reference": null, "acs_element": "PA.IX.B.R1"
+    },
+    {
+      "id": "PPL_PA_IX_B_01_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_01",
+      "text": "A pilot has successfully completed the engine failure memory items and is trimmed at Vg descending toward a field. They reach for the printed emergency checklist and see the item: 'Unlatch cabin door.' The pilot thinks: 'I'll deal with the door after I land — it's not relevant to flying the airplane.' Is this correct?",
+      "options": [
+        {"label": "A", "text": "Yes — the door is a distraction. The pilot should focus entirely on flying the approach and worry about the door after touchdown.", "hazardous_attitude": "anti_authority"},
+        {"label": "B", "text": "No. The printed checklist item to unlatch the cabin door BEFORE touchdown exists because a hard emergency landing can warp the aircraft's fuselage frame, jamming the door shut. If the aircraft catches fire after impact or ends up in water, a jammed door TRAPS the occupants inside. Unlatching the door while the pilot still has altitude and controllability ensures the door can be opened after impact regardless of fuselage deformation. This is exactly why the printed checklist exists — it contains the items that the stressed brain dismisses as 'unimportant' but are actually life-saving.", "hazardous_attitude": null},
+        {"label": "C", "text": "It depends on the severity of the emergency. If the pilot has time, they should complete every checklist item. If they are low and close to the field, skip the door and focus on the landing.", "hazardous_attitude": null},
+        {"label": "D", "text": "The pilot should open the door completely, not just unlatch it. An open door ensures immediate egress after touchdown.", "hazardous_attitude": "impulsivity"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A dismisses a critical safety item — exactly the cognitive bias the printed checklist is designed to counter. Option C is partially valid (time-permitting prioritization is real) but undervalues the door item. Option D is dangerous — a fully open door in flight changes the aerodynamic profile, can distract the pilot, and may not stay open. UNLATCHING (cracking) is the correct action — it prevents the frame from locking the door while maintaining aerodynamic stability. Option B correctly explains the physics of fuselage deformation and why this item saves lives.",
+      "explanation": "The unlatched door item is one of the most commonly skipped emergency checklist steps — and one of the most critical. Post-crash fires develop rapidly, and water submersion can occur in seconds. A warped fuselage that jams the door shut turns a survivable impact into a fatal entrapment. The printed checklist exists precisely because the stressed brain dismisses these items as 'secondary.'",
+      "far_reference": null, "acs_element": "PA.IX.B.K1"
+    }
+  ]
+}

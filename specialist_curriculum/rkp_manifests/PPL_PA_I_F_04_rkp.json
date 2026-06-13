@@ -1,0 +1,83 @@
+{
+  "lesson_id": "PPL_PA_I_F_04",
+  "title": "Aircraft Systems — Engine, Fuel, Electrical, Pitot-Static, and Gyroscopic Instruments",
+  "acs_task_reference": "Area I, Task F",
+  "acs_element_keys": [
+    "PA.I.F.K4"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "The Four-Stroke Engine Cycle and Carburetor Ice",
+      "why": "The DPE presents a scenario: 'You are at 65% power, cruise flight at 7,500 feet. The engine starts running rough and power decreases gradually. What do you suspect?' The answer is carburetor icing — and the immediate action is carburetor heat ON. Applicants who respond 'fuel issue' miss the most frequent piston engine malfunction. The four-stroke engine knowledge provides the required foundation for understanding where ice forms and why.",
+      "knowledge": "Four-stroke Otto cycle: (1) INTAKE: piston moves down, intake valve opens, fuel/air mixture drawn in from carburetor. (2) COMPRESSION: both valves closed, piston moves up, mixture compressed to approximately 1/8 original volume. (3) POWER: spark plug fires, mixture ignites, expanding gases push piston down — the power stroke. (4) EXHAUST: exhaust valve opens, piston moves up, spent gases exit. Carburetor ice: formed by the temperature drop caused by fuel vaporization and venturi effect in carbureted engines. Ice can form even at OAT of 70°F with high humidity. The carburetor throat temperature drops 20-30°C below ambient during operation — into the ice-formation zone. Ice restricts the venturi, reducing fuel/air flow, causing power loss. Symptoms: gradual RPM drop (fixed-pitch prop) or manifold pressure drop (constant-speed prop), rough running. Carburetor heat application: routes hot air from the exhaust manifold shroud into the carburetor air intake, melting ice. Expected: initial rough running increases (melting ice water ingested), then smooth power restoration. Carburetor heat is ALWAYS the correct response to suspected carb ice. Risk conditions: 20°F to 70°F OAT, high relative humidity — not necessarily cold or wet conditions.",
+      "acs_elements": [
+        "PA.I.F.K4"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 7",
+        "FAA-H-8083-32 Ch 5",
+        "AC 20-113"
+      ],
+      "knowledge_formatted": "### Four-Stroke Otto Cycle\n- **Intake**: Piston moves down, intake valve opens, fuel/air mixture drawn in from carburetor\n- **Compression**: Both valves closed,"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Fuel Systems — Types, Contamination, and the Sump Drain Test",
+      "why": "The DPE asks: 'You drain the sumps and find water. What do you do?' The pilot who says 'I'll drain some more and check again' is correct — but the pilot who says 'I'll just go, it's probably fine' has committed an operational error that has caused fatal accidents. Fuel contamination is the leading cause of power-loss accidents in general aviation. The procedure must be precise.",
+      "knowledge": "Fuel types: (1) AVGAS (aviation gasoline): 100LL (low lead). Blue color. For piston engines. Octane rating = 100. (2) JET-A: kerosene-based. Straw/clear color. For turbines. MISFUELING: putting Jet-A in a piston engine (designed for avgas) causes engine failure — Jet-A has insufficient octane for piston engine detonation requirements. Catastrophic and immediate. This cannot be corrected in flight. Fuel contamination: WATER is denser than avgas and sinks to the bottom of fuel tanks and sump points. Water in fuel causes engine stoppage. SEDIMENT and microbial contamination also possible. Sump drain procedure: (1) Visually inspect sample for: water (appears as clear bubbles below blue fuel layer; or as a separate clear layer if volume is large), sediment (particulates). (2) Blue color confirms avgas (not Jet-A, which is clear to straw). (3) If water or sediment found: drain until clear sample is obtained; reinspect; if water persists, do NOT fly — investigate the source. (4) Drain from ALL sump points: tank sumps AND fuel strainer in the fuel system. Fuel grades and colors: 100LL = Blue. 80/87 (obsolete) = Red. Jet-A = Clear/straw. Mogas: varies.",
+      "acs_elements": [
+        "PA.I.F.K4"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "14 CFR 91.409"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 7",
+        "FAA-H-8083-32 Ch 14"
+      ],
+      "knowledge_formatted": "### Fuel Types and Grades\n- **AVGAS 100LL** (low lead): **Blue** color, for **piston engines**, **100** octane rating"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Pitot-Static System — What Fails When Ice or Blockage Occurs",
+      "why": "The DPE presents a scenario: 'On climbout, your airspeed reads lower than expected and your VSI shows a descent while the altimeter is increasing. What has happened?' The answer: the static port is blocked (perhaps ice). A blocked static port causes the altimeter, VSI, and airspeed indicator to behave in specific — and testable — ways. The pilot who can narrate each instrument's behavior under pitot vs. static blockage scenarios demonstrates the systems depth required by the ACS.",
+      "knowledge": "Pitot-static system instruments: AIRSPEED INDICATOR (ASI) uses both pitot (ram air) and static pressure. ALTIMETER uses static only. VERTICAL SPEED INDICATOR (VSI) uses static only. Blockage scenarios: (1) PITOT TUBE BLOCKED (ice or bug): ASI stops showing accurate speed. If drain hole also blocked: ASI may read zero or slowly increase as altitude increases (acts like altimeter — trapped air in pitot expands at altitude). Altimeter and VSI unaffected (static system clear). (2) PITOT DRAIN HOLE BLOCKED (tube open, drain blocked): ASI freezes at last indicated speed — like a 'stuck' reading. (3) STATIC PORT BLOCKED (ice): ALT shows last altitude. VSI shows zero. ASI shows incorrect reading — speed appears to decrease in a climb (true air pressure differential narrows), speed appears to increase in a descent. The static blockage pattern: altimeter freezes, VSI freezes at zero, airspeed shows false indication relative to airplane energy state. In flight: the alternate static source (if available) should be selected — it provides cabin static pressure as an alternative. Cabin pressure in unpressurized aircraft has slight altimeter error compared to outside; VSI and ASI will be slightly inaccurate but usable. Pitot heat: electric resistance heating prevents pitot ice formation; must be ON in visible moisture at OAT below +5°C (some operators at +10°C as a best practice).",
+      "acs_elements": [
+        "PA.I.F.K4"
+      ],
+      "far_references": [
+        "14 CFR 91.205"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 8",
+        "FAA-H-8083-15B Ch 6"
+      ],
+      "knowledge_formatted": "### Pitot-Static System Instruments\n- **Airspeed Indicator (ASI)** uses both **pitot (ram air)** and **static pressure**\n- **Altimeter** uses **static"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Gyroscopic Instruments — Rigidity, Precession, and Vacuum System Failure",
+      "why": "The DPE asks: 'Your attitude indicator slowly erects toward a banked position during a prolonged turn. What causes this?' The answer is precession — the gyroscope reacts to applied force 90° in the direction of rotation. Applicants must understand gyroscopic rigidity and precession conceptually, and know which instruments fail when the vacuum system fails vs. when the electric system fails.",
+      "knowledge": "Gyroscopic principles: (1) RIGIDITY IN SPACE: a spinning gyroscope resists changes to its plane of rotation; remains pointed at a fixed point in space regardless of aircraft attitude changes. This provides stable attitude reference. (2) PRECESSION: when a force is applied to a spinning gyro, the gyro reacts 90° ahead in the direction of rotation; this causes slow gyro drift in prolonged turns (the turn applies precessive force). Gyroscope-based instruments: ATTITUDE INDICATOR (AI): uses gyro rigidity for pitch and bank reference. Powered by VACUUM (from engine-driven vacuum pump) in most light aircraft. HEADING INDICATOR (HI — also called DG, Directional Gyro): gyro-based, requires periodic synchronization with the magnetic compass (gyros precess over time and drift from magnetic north). Also vacuum-powered in most light aircraft. TURN COORDINATOR: uses gyro precession principle to sense rate of turn and bank. Typically ELECTRICALLY powered (different power source than AI and HI). Vacuum system failure: if the vacuum pump fails, the AI and HI lose their gyro drive; both instruments may rotate, tumble, and give false readings. The TURN COORDINATOR remains functional (electric). The pilot should use partial-panel procedure: turn coordinator, altimeter, airspeed, clock. Magnetic compass: direct magnetic sensing, no gyro. Errors: OSCDILLATION (unsteady in turbulence/acceleration), TURNING ERRORS (leads in north, lags in south, no error on E/W headings), ACCELERATION ERRORS (ANDS — Accelerate North, Decelerate South on east/west headings).",
+      "acs_elements": [
+        "PA.I.F.K4"
+      ],
+      "far_references": [
+        "14 CFR 91.205"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 8",
+        "FAA-H-8083-15B Ch 6"
+      ],
+      "knowledge_formatted": "### Gyroscopic Principles\n- **Rigidity in Space**: A spinning gyroscope resists changes to its plane of rotation\n- Remains pointed at a **fixed point in space** regardless of aircraft"
+    }
+  ],
+  "lesson_overview": "## Aircraft Systems -- The Engine Cycle, Carburetor Ice, and What Happens When the Instruments Lie\n\nSystems knowledge is where the oral examination separates pilots who know procedures from pilots who understand them. The DPE doesn't just want to know if you'd apply carburetor heat -- they want to know why ice forms in the carburetor at 65 degrees Fahrenheit on a clear day, why your airspeed indicator reads higher when the static port is blocked in a climb, and what your gyroscopic heading indicator is doing in the minutes after the vacuum pump fails. Mechanism is the lesson here, not just memory.\n\n**The four-stroke cycle: why carb ice forms where it does.** Every piston engine runs the same Otto cycle: intake, compression, power, exhaust. On the intake stroke, the fuel/air mixture is drawn through the carburetor venturi. The venturi effect -- accelerating airflow through a narrowing -- drops temperature by 20 to 30 degrees Celsius at the throat. Simultaneously, fuel vaporization absorbs heat from the surrounding air. The combined effect: the carburetor throat temperature can drop 20 to 30 degrees below ambient -- into the ice-formation zone even when outside air temperature is 15 to 20 degrees Celsius (59 to 68 degrees Fahrenheit). Carburetor ice doesn't require cold weather. It requires only moisture and low temperature at the venturi. Ice gradually restricts fuel/air flow, reducing RPM in fixed-pitch aircraft (or manifold pressure in constant-speed aircraft). The symptom: gradual, unexplained power loss in cruise. The response: carburetor heat ON immediately. Expect briefly rougher running as melting ice water enters the cylinders -- then smooth restoration as the throat clears.\n\n**Fuel system: contamination, grade, and the sump drain test.** Avgas 100LL (blue) is the standard. Jet-A (clear to straw) physically fits many avgas filler ports and is catastrophically incompatible with piston engine combustion. The FBO should prevent this, but PIC verification is mandatory. Water contamination is the leading cause of fuel-related power loss accidents. Water is denser than avgas -- it sinks to the lowest point of the fuel system and stays there until it feeds the engine. Sump drain process: drain a sample from each tank sump AND the fuel strainer. A clean sample: clear blue, no bubbles, no separation. A contaminated sample: bubbles at the base (water in suspension) or a clear/gray layer beneath blue avgas. Continue draining until completely clean. Persistent water = ground the aircraft, investigate the source.\n\n**Pitot-static blockage: three scenarios, three different instrument behaviors.** The pitot-static system has two pressure inputs: pitot (ram air, total pressure) and static (ambient pressure). The ASI uses both. The altimeter and VSI use static only. This architecture determines exactly which instruments fail -- and how they fail -- under each blockage type. Pitot blocked, static open: ASI reads zero if the drain hole is clear, or falsely increases with altitude if the drain hole is also blocked (trapped pitot pressure stays constant; falling static pressure narrows the differential in the wrong direction). Altimeter and VSI are unaffected. Static blocked, pitot open: altimeter freezes at the altitude of blockage. VSI reads zero. ASI reads erratically -- in a climb, airspeed appears to decrease (pitot pressure rises but static is stuck, so the differential narrows). Alternate static source: inside the cabin. Cabin air pressure is slightly lower than outside static -- the altimeter over-reads by a small amount when alternate static is selected. Factor this in on any instrument approach.\n\n**Gyroscopic instruments: rigidity, precession, and the vacuum failure trap.** The attitude indicator (AI) and heading indicator (HI) are driven by vacuum-powered spinning gyroscopes. The turn coordinator is electrically powered. When the vacuum pump fails: gyros slow, AI and HI begin to drift and eventually tumble or precess to false indications. The deceptive part: the gyros don't fail immediately. They may appear normal for several minutes on residual spin while slowly drifting from true attitude and heading. A pilot who doesn't cross-check the suction gauge may not realize the AI is false until it's showing a significant deviation. Surviving instruments after vacuum failure: turn coordinator (electric), altimeter, airspeed indicator, magnetic compass. Partial panel flying uses these four to maintain controlled flight. Gyroscopic precession: a force applied to a spinning gyro causes it to react 90 degrees ahead in the direction of rotation. This causes gradual HI drift in prolonged turns and requires the pilot to re-sync the HI to the magnetic compass every 15-20 minutes in cruise.\n\n**The checkride trap:** The DPE poses the static blockage scenario: 'You're in a climb and you notice the altimeter is frozen, the VSI reads zero, and the airspeed seems to be decreasing even though power and pitch are unchanged. What has happened and what do you do?' Full answer: static port is blocked. ASI under-reads in climb because pitot pressure is rising but static line pressure is frozen. Select alternate static source if installed. Increase instrument cross-check frequency. The DPE then asks which source the alternate static taps -- the answer is cabin pressure, and it reads slightly higher altitude than actual.",
+  "audio_file": "PPL_PA_I_F_audio.m4a",
+  "video_file": "PPL_PA_I_F_video.mp4"
+}

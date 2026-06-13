@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_E_02",
+  "title": "Class D, E, and G Airspace — Entry, Communications, and Boundaries",
+  "questions": [
+    {
+      "id": "PPL_PA_I_E_02_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot intends to depart from an airport listed as Class D in the Chart Supplement. The pilot arrives at 9:00 PM local time and finds the tower closed. The Chart Supplement notes: 'Class D airspace effective 0700-2200 local. Other times Class E.' What airspace and communication requirements apply for a 9:00 PM departure?",
+      "options": [
+        {"label": "A", "text": "The airport is still Class D — FAA charting updates take 56 days to revise; the sectional chart depicting Class D takes precedence over the Chart Supplement notation for same-day operations"},
+        {"label": "B", "text": "The airport is Class E from the surface; Class E has no communications requirement for VFR operations — the pilot may depart using standard traffic advisory calls on the CTAF frequency without establishing two-way communication with any ATC facility"},
+        {"label": "C", "text": "The airport is Class G — all part-time Class D airports revert to Class G when the tower closes; Class G has no VFR communication requirements and no transponder requirements"},
+        {"label": "D", "text": "The airport remains Class D with the communication requirements suspended — FAA Order JO 7110.65 allows pilots to operate at closed Class D airports without radio communication but still requires squawking 1200 and following Class D pattern procedures"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The Chart Supplement explicitly states that this airport's airspace becomes Class E from the surface when the tower closes (after 2200 local). Class E airspace has NO radio communication requirement for VFR operations — there is no requirement to establish two-way communication with any ATC facility before operating VFR in Class E. The pilot should use CTAF (Common Traffic Advisory Frequency) for traffic advisories as a safety practice, but it is not legally required for VFR operations. Critically, the Chart Supplement governs the part-time airspace schedule — it supersedes the static sectional chart depiction for operational status. Option A incorrectly prioritizes the sectional over the Chart Supplement for part-time airspace status. Option C incorrectly assumes all part-time Class D airports revert to Class G — this airport specifically reverts to Class E (as stated in Chart Supplement). Option D invents a 'communication requirements suspended' doctrine that does not exist.",
+      "far_reference": "14 CFR 91.127; 14 CFR 91.129",
+      "acs_element": "PA.I.E.K1d"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A VFR pilot is cruising in Class E airspace at 11,500 feet MSL. Current visibility is 4 statute miles, with clouds 900 feet above. Is the pilot in compliance with 14 CFR 91.155?",
+      "options": [
+        {"label": "A", "text": "Yes — Class E weather minimums are 3 SM visibility and 500 feet below / 1,000 feet above / 2,000 horizontal clouds at all altitudes; at 4 SM visibility and 900 feet above any cloud layer, both minimums are met and the flight is legal"},
+        {"label": "B", "text": "No — at or above 10,000 feet MSL in Class E airspace, 14 CFR 91.155 increases the VFR weather minimum to 5 SM visibility and 1,000 feet below / 1,000 feet above / 1 SM horizontal cloud separation; 4 SM visibility is below the required 5 SM for this altitude"},
+        {"label": "C", "text": "Yes — the pilot is in Class E, which has the same weather minimums as Class G at the same altitude; above 10,000 MSL, the minimums are 3 SM and 500/1,000/2,000; 4 SM exceeds 3 SM and 900 feet above exceeds the 500-foot requirement"},
+        {"label": "D", "text": "No — Class E airspace above 10,000 MSL requires 10 SM visibility for all VFR operations because aircraft operating at those altitudes are primarily commercial operators subject to enhanced separation requirements under FAA Order JO 7110.65"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.155 sets a critical minimum shift at 10,000 feet MSL for Class E airspace (and all controlled airspace). At or above 10,000 feet MSL in Class E: 5 SM visibility, 1,000 feet below clouds, 1,000 feet above clouds, and 1 statute mile horizontal cloud separation are required. The pilot at 11,500 feet MSL with only 4 SM visibility fails the 5 SM requirement — this is a regulatory violation. The rationale: aircraft operating at higher altitudes are typically faster (higher TAS), increasing closure rates with other traffic. Greater visibility is required to give pilots adequate time to see and avoid other aircraft. Option A applies the below-10,000 standard to 11,500 feet, which is incorrect. Option C incorrectly equates Class E above 10,000 with Class G minimums. Option D invents a 10 SM requirement that does not exist in 91.155.",
+      "far_reference": "14 CFR 91.155",
+      "acs_element": "PA.I.E.K1e"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q003",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A private pilot is conducting a night cross-country at 900 feet AGL in Class G airspace over a rural area. Forward visibility is 2 statute miles. There are no clouds — the sky is clear. Is the flight legal under 14 CFR 91.155?",
+      "options": [
+        {"label": "A", "text": "Yes — Class G airspace has a VFR weather minimum of 1 SM visibility and clear of clouds regardless of time of day; at 2 SM clear of clouds the pilot exceeds the minimum and is legal at any altitude below 1,200 AGL"},
+        {"label": "B", "text": "No — at or below 1,200 AGL in Class G airspace during NIGHT operations, 14 CFR 91.155 requires a minimum of 3 SM visibility and clear of clouds; 2 SM visibility falls below the 3 SM nighttime minimum even though the sky is clear"},
+        {"label": "C", "text": "Yes — the 3 SM nighttime minimum applies only in Class E airspace; Class G night minimums at or below 1,200 AGL are 1 SM and clear of clouds identical to the daytime standard, because ATC is not providing services in Class G at any time"},
+        {"label": "D", "text": "Yes — two statute miles visibility with clear skies exceeds all VFR weather minimums for Part 91 flight regardless of airspace class or time of day; the minimum visibility for any VFR operation is 1 SM under 14 CFR 91.155"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.155 Table 1 contains a critical night/day split for Class G airspace at or below 1,200 feet AGL: Daytime: 1 SM visibility, clear of clouds. Nighttime: 3 SM visibility, clear of clouds. At 900 feet AGL in Class G at night with 2 SM visibility, the pilot is below the 3 SM nighttime minimum. The flight is illegal. The rationale: at night, the physiological limitations of the human visual system significantly degrade the pilot's ability to detect and avoid terrain, obstacles, and other aircraft. The 3 SM nighttime requirement compensates for the reduced effectiveness of see-and-avoid at night. Option A applies the daytime minimum to a nighttime scenario. Option C incorrectly claims Class G has no nighttime minimum increase. Option D falsely claims 1 SM is the universal VFR floor — Class G nighttime at or below 1,200 AGL is 3 SM.",
+      "far_reference": "14 CFR 91.155",
+      "acs_element": "PA.I.E.K1f"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A pilot examines a sectional chart and sees a blue dashed circle around an airport with an airport icon depicted in blue. Inside the circle is a solid magenta dashed line forming a smaller region. What airspace designations are present?",
+      "options": [
+        {"label": "A", "text": "The blue dashed circle is Class D airspace surrounding the towered airport (blue icon); the inner solid magenta dashed line depicts a Class B exclusion zone around the primary runway, creating a no-fly buffer for light aircraft"},
+        {"label": "B", "text": "The blue dashed circle is Class D airspace surrounding the towered airport (blue icon indicates an operating control tower); the inner magenta dashed line is a Class E surface extension — typically a separate instrument approach protected area within or adjacent to the Class D airspace"},
+        {"label": "C", "text": "The blue dashed circle is Class C airspace (inner 5 NM ring) and the magenta dashed line marks the outer 10 NM Class C ring; airports depicted in blue within Class C are primary airports served by an approach control facility"},
+        {"label": "D", "text": "The blue dashed circle is Class E airspace at 1,200 AGL and the inner magenta dashed line is the Class G surface area boundary; the blue airport icon indicates a former Class D airport that is now Part-Time Class E based on Chart Supplement notation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Sectional chart symbology: (1) Blue dashed circle = Class D airspace. This is the standard depiction for towered airport controlled airspace, typically 4 NM radius. (2) Blue airport icon = controlled airport with an operating control tower. (3) Magenta dashed line inside or adjacent to Class D = Class E surface extension. This configuration typically appears when an adjacent instrument approach requires Class E protection extending from the surface — for IFR approach sequencing or obstacle clearance — in an area associated with the towered airport's procedures. The two airspace boundaries can coexist and overlap in the same geographic area. Option A invents a 'Class B exclusion zone' that does not exist as a chart symbol. Option C misidentifies the blue dashed circle as a Class C ring — Class C uses segmented blue circles (different line style), not dashed blue circles. Option D misidentifies the blue dashed circle as Class E — Class E does not use blue dashed boundaries.",
+      "far_reference": "14 CFR 91.129; 14 CFR 91.127",
+      "acs_element": "PA.I.E.K1d"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot approaches an untowered airport that is depicted on the sectional with a magenta airport icon surrounded by a dashed magenta boundary (no blue dashed circle). What does the dashed magenta boundary indicate, and what are the VFR communication requirements for landing?",
+      "options": [
+        {"label": "A", "text": "The dashed magenta boundary is a Class G surface designation; the airport operates without any ATC services; no communication requirements apply for VFR landing at this airport at any time of day or night"},
+        {"label": "B", "text": "The dashed magenta boundary designates a Class E surface extension — Class E from the surface — created to protect IFR approaches at this untowered airport; VFR operations have no ATC communication requirement, but CTAF calls are standard practice for traffic advisories"},
+        {"label": "C", "text": "The dashed magenta boundary is a Class D part-time surface area; VFR pilots must establish two-way radio communication with the designated unicom operator before entering this surface airspace; failure to call unicom before landing violates 14 CFR 91.127"},
+        {"label": "D", "text": "The dashed magenta boundary is a noise abatement zone; pilots must contact the local noise authority on 122.8 MHz before entering to obtain approval; failure to obtain approval results in an automatic noise complaint filed with the FSDO"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A dashed magenta boundary surrounding an airport with a magenta (uncontrolled) airport icon designates a Class E surface extension — Class E airspace beginning at the surface rather than at 700 or 1,200 AGL. These extensions are created to protect IFR instrument approach procedures at airports that do not have an operating control tower. The Class E surface extension ensures IFR separation services can be provided from the surface during instrument approaches. VFR operations in Class E surface extensions: no ATC communication requirement. VFR pilots are not required to call any ATC facility. CTAF calls on the published CTAF frequency are standard safety practice for traffic deconfliction but are not legally mandated. Option A incorrectly identifies the symbol as Class G. Option C incorrectly identifies it as Class D and invents a unicom communication requirement with regulatory force. Option D invents a noise authority designation that does not exist.",
+      "far_reference": "14 CFR 91.155; 14 CFR 91.127",
+      "acs_element": "PA.I.E.K1e"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "During a VFR daytime local flight at 1,500 feet AGL in Class G airspace, the pilot encounters an isolated cloud layer below. Visibility is 2 SM between scattered clouds at the same altitude. The flight is below 10,000 MSL. Is the flight legal?",
+      "options": [
+        {"label": "A", "text": "No — daytime Class G minimums above 1,200 AGL require 1 SM visibility and 500 feet below / 1,000 feet above / 2,000 feet horizontal cloud separation; at 2 SM and scattered clouds at the same altitude without 2,000 feet horizontal separation, the horizontal minimum is not met"},
+        {"label": "B", "text": "Yes — Class G airspace has no cloud separation requirement; the only minimum is visibility, which at 2 SM exceeds the 1 SM Class G daytime minimum; cloud separation requirements apply only in Class A, B, C, D, and E airspace"},
+        {"label": "C", "text": "Yes — Class G airspace below 1,200 AGL has a minimum of 1 SM clear of clouds; although the flight is at 1,500 AGL, the 1,200 AGL standard applies to all Class G below 10,000 MSL regardless of exact altitude"},
+        {"label": "D", "text": "No — the flight is above 1,200 AGL in Class G; daytime minimums above 1,200 AGL in Class G are 1 SM visibility and 500 feet below / 1,000 feet above / 2,000 feet horizontal; with clouds at the same altitude there is no vertical separation, violating the 500-foot below and 1,000-foot above requirements simultaneously"}
+      ],
+      "correct_answer": "A",
+      "explanation": "The flight is at 1,500 feet AGL — above 1,200 AGL in Class G airspace during daytime. At this altitude band in Class G (above 1,200 AGL, below 10,000 MSL, daytime), 14 CFR 91.155 requires: 1 SM visibility AND 500 feet below / 1,000 feet above / 2,000 feet HORIZONTAL cloud separation. The clouds are at roughly the same altitude as the aircraft (not below or above significantly) — meaning horizontal cloud separation of 2,000 feet is the critical measurement. With scattered clouds at the same altitude and 2-mile visibility, the pilot likely cannot maintain 2,000 feet horizontal separation from all cloud elements. The flight violates the horizontal cloud separation requirement even if visibility is above 1 SM. This is an important nuance: Class G above 1,200 AGL has the same cloud separation minimums as Class E (below 10,000). Option B incorrectly claims Class G has no cloud separation requirement — it does above 1,200 AGL. Option C incorrectly applies the below-1,200 AGL 'clear of clouds' standard to 1,500 AGL.",
+      "far_reference": "14 CFR 91.155",
+      "acs_element": "PA.I.E.K1f"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "On a night cross-country, the pilot passes over a small airport that appears quiet. The pilot's EFB shows Class D airspace at this location, but no Tower frequency is on the screen for this hour. The pilot's fuel state requires landing. What is the SAFEST action?",
+      "options": [
+        {"label": "A", "text": "Land immediately — a quiet, unlit tower at night confirms it is NOTAM'd closed; entering a closed Class D airport pattern for an emergency fuel stop is permitted under the Pilot-In-Command emergency authority of 14 CFR 91.3", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "Check the Chart Supplement for the airport's part-time airspace schedule before entering the pattern — determine whether the airspace is currently Class D (requiring radio communication) or Class E/G (no radio requirement); then broadcast on CTAF and enter according to the current airspace class", "hazardous_attitude": null},
+        {"label": "C", "text": "Declare an emergency on 121.5 and request ATC clearance to land — any nighttime landing at a part-time Class D airport requires an emergency declaration to legally bypass the two-way communication requirement for Class D entry", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Overfly the field first to check for tower light signals before entering the pattern — if no green light is observed from the tower cab, the tower is closed and the airport has reverted to Class G with no communication requirements", "hazardous_attitude": null}
+      ],
+      "correct_answer": "B",
+      "explanation": "The correct action is to consult the Chart Supplement before entering the pattern. This takes seconds on an EFB and determines the current airspace class. If the tower closed, the airspace may be Class E (from the surface) or Class G, depending on the Chart Supplement entry. If Class E or G, no communication is legally required, but CTAF broadcasts are essential at night for traffic advisories. If the tower is still technically active (within the published hours), two-way communication must be established. Option A is Invulnerability — assuming a fuel stop justifies bypassing airspace entry requirements without confirming airspace status. Option C over-escalates — a fuel stop at an alternate airport does not require an emergency declaration. Option D is operationally interesting but impractical at night — tower light signals are intended for aircraft with radio failure, not as the primary method for determining airspace class.",
+      "sjt_rationale": "Option A is Invulnerability — the pilot assumes emergency authority without confirming whether a genuine emergency exists or whether the entry is even restricted. Option C is Resignation — declaring an emergency to avoid a quick Chart Supplement check. Option B is correct aeronautical decision making: check the data source that answers the operational question.",
+      "far_reference": "14 CFR 91.129; 14 CFR 91.127; 14 CFR 91.126",
+      "acs_element": "PA.I.E.K1d"
+    },
+    {
+      "id": "PPL_PA_I_E_02_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "During checkride oral, the DPE asks: 'You are at 800 feet AGL at night in Class G. Visibility drops to 2 SM — clear of clouds, no precipitation. What do you do?' The applicant responds: 'I can stay — it's still above the 1 SM minimum.' What is wrong with the applicant's response?",
+      "options": [
+        {"label": "A", "text": "Nothing — 2 SM clear of clouds at 800 AGL in Class G at night is above all applicable VFR weather minimums; the applicant is correct and the DPE is testing regulatory confidence rather than an actual violation scenario"},
+        {"label": "B", "text": "The applicant applied the DAYTIME Class G minimum (1 SM, clear of clouds below 1,200 AGL) to a NIGHTTIME scenario; at night in Class G at or below 1,200 AGL, the minimum is 3 SM and clear of clouds; at 2 SM the pilot is below the nighttime standard and the flight is illegal"},
+        {"label": "C", "text": "The applicant is using the Class E standard (3 SM, 500/1,000/2,000) for Class G airspace; Class G at 800 AGL is not Class E and does not require cloud separation; the 1 SM clear of clouds standard applies day and night below 1,200 AGL in Class G"},
+        {"label": "D", "text": "The applicant is using an outdated VFR minimum table; FAA updated 14 CFR 91.155 in 2019 to require 3 SM visibility in all airspace classes below 3,000 AGL at night regardless of controlled vs. uncontrolled status; 2 SM is below the current universal nighttime minimum"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The applicant committed the classic Table 1 error: applying the daytime minimum to a nighttime scenario. 14 CFR 91.155 Table 1 contains separate day and night minimums for Class G below 1,200 AGL: Daytime: 1 SM, clear of clouds. Nighttime: 3 SM, clear of clouds. At 800 AGL in Class G at night with 2 SM visibility, the pilot is below the 3 SM nighttime minimum — the flight is illegal. The correct response to the DPE should be: 'At night in Class G below 1,200 AGL, the minimum is 3 SM clear of clouds. At 2 SM visibility I'm below minimums. I would either climb into Class E where at least the clear-of-clouds requirement is met along with the 3 SM minimum, or divert to the nearest suitable airport before the visibility deteriorates further.' Option A validates the applicant's incorrect response. Option C falsely claims the 1 SM standard applies night and day. Option D invents a 2019 universal nighttime revision that does not exist.",
+      "sjt_rationale": "The pitfall is Complacency — the applicant knows the Class G minimum as '1 SM clear of clouds' without knowing the Day vs. Night split. The nighttime distinction exists specifically because See-and-Avoid is severely degraded after dark. This question operationalizes one of the most commonly missed items in the VFR minimums table.",
+      "far_reference": "14 CFR 91.155",
+      "acs_element": "PA.I.E.K1f"
+    }
+  ]
+}

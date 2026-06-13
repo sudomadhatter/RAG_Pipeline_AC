@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_VII_A_01",
+  "title": "Slow Flight, Stall Aerodynamics & Recovery",
+  "questions": [
+    {
+      "id": "PPL_PA_VII_A_01_Q001", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "Can an aircraft stall while in a 45-degree banked turn at 90 knots indicated airspeed, if the published stall speed (Vs) in the POH is 50 knots?",
+      "options": [
+        {"label": "A", "text": "Yes. A stall is exclusively a function of exceeding the critical angle of attack, NOT airspeed. In a 45-degree bank, the load factor is approximately 1.41G. The accelerated stall speed = Vs × √1.41 = 50 × 1.19 = 59 knots. While 90 knots is well above 59 knots for a 45-degree bank, if the pilot ALSO pulls back aggressively (increasing G-loading beyond 1.41G), the effective load factor increases further. At 90 knots, a pull to approximately 3.24G would reach the critical AOA — which is possible during a sudden, aggressive pull-up combined with the bank angle."},
+        {"label": "B", "text": "No. The published stall speed is 50 knots. At 90 knots, the aircraft has nearly double the stall speed margin, making a stall aerodynamically impossible regardless of bank angle."},
+        {"label": "C", "text": "No. Stalls can only occur below the published stall speed. Above Vs, the wing is always producing sufficient lift."},
+        {"label": "D", "text": "Yes, but only if the engine fails. Without thrust, the aircraft cannot maintain 90 knots in a bank and will decelerate to stall speed."}
+      ],
+      "correct_answer": "A",
+      "explanation": "A stall depends ONLY on exceeding the critical AOA, which is independent of airspeed. The published Vs assumes 1G flight. Any maneuvering that increases G-loading (bank + pull) increases the stall speed. An aggressive pull at 90 knots can absolutely exceed the critical AOA if the load factor is high enough. Option B and C perpetuate the 'stall = low airspeed' myth. Option D incorrectly ties stalls exclusively to power loss.",
+      "far_reference": null, "acs_element": "PA.VII.B.K1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q002", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "During slow flight practice, a pilot is maintaining altitude at an airspeed just above the stall warning. The aircraft begins to slowly descend. The pilot's instinct is to pull back on the yoke. Why is this wrong, and what should the pilot do instead?",
+      "options": [
+        {"label": "A", "text": "Pulling back is wrong because in the region of reversed command, increasing pitch INCREASES induced drag exponentially, causing the aircraft to decelerate further and descend faster. The correct action is to ADD POWER to arrest the descent. In reversed command, altitude is controlled primarily with the throttle, not pitch. Pulling back without adding power will rapidly stall the wing because the aircraft is already near the critical AOA — any further AOA increase pushes it over the threshold."},
+        {"label": "B", "text": "Pulling back is correct but should be done more aggressively. The pilot needs to increase the angle of attack quickly to generate enough lift to arrest the descent."},
+        {"label": "C", "text": "The pilot should lower the flaps to increase lift and arrest the descent. Flaps increase the wing's camber, generating more lift at the same airspeed."},
+        {"label": "D", "text": "Pulling back is wrong because it will cause the aircraft to climb too rapidly. The pilot should simply add a small amount of power to level off."}
+      ],
+      "correct_answer": "A",
+      "explanation": "In the region of reversed command, the pitch-power relationship is inverted. Adding back pressure increases AOA and induced drag, but the aircraft is already at near-maximum AOA for level flight — any further increase will stall the wing before generating useful additional lift. The throttle is the altitude control in this regime. Option B would stall the wing. Option C is partially valid (flaps increase lift) but doesn't address the fundamental pitch-power reversal and adds drag. Option D has the right action but the wrong reasoning.",
+      "far_reference": null, "acs_element": "PA.VII.A.K1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q003", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_04",
+      "text": "During a power-off stall recovery, the left wing drops suddenly. The pilot's instinct is to apply right aileron to lift it. Why is this dangerous, and what should the pilot do instead?",
+      "options": [
+        {"label": "A", "text": "Applying right aileron to lift the dropped left wing is dangerous because the RIGHT aileron goes UP (reducing lift on the right wing) and the LEFT aileron goes DOWN. The downward-deflected left aileron INCREASES the local angle of attack on the already stalled left wing, deepening the stall on that wing. This increases drag on the left wing while increasing lift on the right, creating asymmetric forces that roll and yaw the aircraft violently to the left — initiating a spin. The correct action is to use OPPOSITE RUDDER (right rudder) to control the yaw and stop the rolling tendency. Ailerons must remain NEUTRAL until the stall is broken by reducing AOA."},
+        {"label": "B", "text": "Right aileron is the correct response to a wing drop during a stall. The aileron deflection will generate enough roll moment to level the wings before the stall deepens."},
+        {"label": "C", "text": "The pilot should apply full left rudder to yaw the aircraft and level the wings. Opposite rudder would yaw the aircraft further out of coordination."},
+        {"label": "D", "text": "The pilot should simultaneously push the yoke forward and apply right aileron. The combination of reduced AOA and aileron input will safely recover from the wing drop."}
+      ],
+      "correct_answer": "A",
+      "explanation": "During a stall, the ailerons can DEEPEN the stall on the already-stalled wing. The downward aileron deflection increases camber and AOA on the dropping wing, which is already beyond the critical AOA. This is the aerodynamic mechanism for entering a spin from a stall. RUDDER is the correct roll control tool during a stall because it yaws the aircraft without changing the wing AOA. Option D is partially correct about pushing forward but the aileron input is still dangerous until the stall is fully broken.",
+      "far_reference": null, "acs_element": "PA.VII.B.K4"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q004", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot on final approach at idle power realizes they are going to land 200 feet short of the runway. The pilot pulls back on the yoke to 'stretch the glide.' What happens aerodynamically?",
+      "options": [
+        {"label": "A", "text": "Pulling back INCREASES the angle of attack, which spikes induced drag exponentially. The aircraft is at idle power — there is no thrust to overcome this additional drag. The glide ratio WORSENS, not improves. The aircraft will descend faster and reach the ground sooner, not later. Additionally, pulling back moves the aircraft further into the region of reversed command, where the speed instability loop accelerates the airspeed decay toward the stall. The correct action is to ADD POWER to extend the glide path, or accept the undershoot and prepare for a landing short of the desired point."},
+        {"label": "B", "text": "Pulling back will initially climb the aircraft, trading airspeed for altitude. The pilot can use this technique to clear the remaining 200 feet and reach the runway threshold."},
+        {"label": "C", "text": "Pulling back has no effect on the glide ratio. The glide distance is fixed by the aircraft's L/D ratio regardless of pitch changes."},
+        {"label": "D", "text": "Pulling back extends the glide by reducing the descent rate. The aircraft will fly slower but cover the same ground distance."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The 'stretching the glide' trap kills pilots every year. Pulling back increases AOA and induced drag. At idle power, the drag increase is unmatched by thrust. The result: steeper descent, faster airspeed decay, and stall. The L/D ratio (Option C) is actually at maximum at ONE specific speed — pulling back moves BELOW that speed, degrading the ratio. Option B incorrectly applies the altitude-for-speed trade — at approach speeds near the stall, there is virtually no kinetic energy reserve to trade. Option D ignores the induced drag spike.",
+      "far_reference": null, "acs_element": "PA.VII.B.K3"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q005", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot feels a distinct vibration (buffet) through the yoke and airframe during approach. The stall horn has NOT yet sounded. What is happening and what does it indicate?",
+      "options": [
+        {"label": "A", "text": "The pilot is experiencing aerodynamic buffet — an impending stall indication. Due to wing washout design, the wing root is stalling BEFORE the wingtips. The turbulent, separated airflow from the stalling root strikes the horizontal stabilizer and elevator, transmitting physical vibration into the yoke and airframe. This buffet occurs BEFORE the stall horn activates (which is calibrated 5-10 knots above actual stall). The buffet is the wing itself warning the pilot. Corrective action: immediately reduce AOA by relaxing back pressure and adding power."},
+        {"label": "B", "text": "The vibration is caused by engine roughness due to the low power setting on approach. The pilot should check the carburetor heat and mixture settings."},
+        {"label": "C", "text": "The buffet is caused by turbulent air (wake turbulence from another aircraft). The pilot should scan for traffic ahead and below."},
+        {"label": "D", "text": "The vibration indicates a mechanical issue with the flight controls. The pilot should land immediately and have the aircraft inspected."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Aerodynamic buffet is one of the three sensory indicators of an impending stall (feel, sound, sight). The wing root stalls first (washout design), and the turbulent wake hits the tail. This is by design — it provides physical warning before the stall horn sounds and before the actual stall break. Option B (engine roughness) would produce a different vibration pattern and would correlate with RPM changes. Option C (wake turbulence) is possible but would be asymmetric and sudden, not a progressive building vibration.",
+      "far_reference": null, "acs_element": "PA.VII.B.K2"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q006", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_04",
+      "text": "During stall recovery, a pilot applies full power and pulls the nose up aggressively to minimize altitude loss. The aircraft suddenly stalls again. What happened?",
+      "options": [
+        {"label": "A", "text": "The pilot induced a secondary stall. During the recovery pull-out, the aircraft's flight path was pointing downward. Aggressively pulling the nose up increased the relative wind's angle against the chord line, exceeding the critical AOA again. Secondary stalls are often MORE violent than the initial stall and result in greater altitude loss. Additionally, the aircraft was now accelerating, meaning the increased load factor from the aggressive pull pushed the accelerated stall speed above the current airspeed. The correct recovery pull-out requires SMOOTH, GENTLE back pressure."},
+        {"label": "B", "text": "The engine stalled due to the sudden application of full power. The pilot should advance the throttle more gradually to prevent engine surge."},
+        {"label": "C", "text": "The power application caused the propeller slipstream to stall the wing. Full power should not be applied during stall recovery."},
+        {"label": "D", "text": "The aircraft entered a secondary stall because the pilot did not retract the flaps before adding power. Flaps increase the stall speed."}
+      ],
+      "correct_answer": "A",
+      "explanation": "A secondary stall occurs when the pilot aggressively pitches up during the recovery dive, re-exceeding the critical AOA. The combination of downward flight path + aggressive pull-up = rapid AOA increase. At higher speed (aircraft is accelerating in the dive), the G-loading from the pull compounds the issue. Option C is physically wrong — power helps recovery. Option D partially valid (flaps affect stall speed) but the primary cause here is the aggressive pitch input, not flap configuration.",
+      "far_reference": null, "acs_element": "PA.VII.B.K4"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_03",
+      "text": "A pilot is turning from base to final in the traffic pattern. A tailwind on the base leg has increased groundspeed. The pilot perceives they will overshoot the runway centerline. What is the safest action?",
+      "options": [
+        {"label": "A", "text": "Apply inside rudder to swing the nose around faster toward the runway. This tightens the turn without increasing the bank angle, which feels dangerous close to the ground.", "hazardous_attitude": "impulsivity"},
+        {"label": "B", "text": "Execute a go-around. Add full power, establish a positive climb, and re-enter the traffic pattern. Overshooting the base-to-final turn is the #1 setup for the cross-control stall/spin — the leading killer in pattern operations. No landing is worth dying for. A go-around is always available and always safe.", "hazardous_attitude": null},
+        {"label": "C", "text": "Increase the bank angle to 60 degrees to tighten the turn radius. The higher bank angle will bring the aircraft around faster without requiring rudder input.", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Continue the current bank angle and accept the overshoot. Once past the centerline, turn back to intercept the extended runway centerline from the other side. The extra maneuvering adds only seconds to the approach.", "hazardous_attitude": null}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A is the EXACT setup for the base-to-final cross-control stall/spin — inside rudder creates a skid, the pilot adds opposite aileron, pulls back, and the aircraft snaps into a spin at 500 ft AGL. This is the #1 GA killer. Option C is dangerous — 60° bank doubles the load factor, increasing the stall speed by 41%. At approach speeds, this puts the aircraft very close to the accelerated stall speed. Option D is acceptable (S-turn to intercept) and could be correct in some scenarios, but the go-around (Option B) is the gold standard response. The FAA explicitly teaches that the go-around is always the safest option when an approach is not stabilized.",
+      "explanation": "The base-to-final overshoot is the most dangerous moment in the traffic pattern. NTSB data shows that the majority of fatal LOC-I accidents in the pattern occur during this turn. The pilot's natural instinct to 'fix' the overshoot with rudder creates the exact aerodynamic setup for a spin entry. A go-around eliminates the risk entirely and costs only the time of one more pattern circuit.",
+      "far_reference": "AC 61-67C", "acs_element": "PA.VII.B.R1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_01",
+      "text": "A pilot is practicing slow flight at 3,000 feet AGL. During the maneuver, the pilot hears the stall horn activate briefly during a gust. The pilot's immediate reaction is to push the nose over aggressively and add full power. Was this response appropriate?",
+      "options": [
+        {"label": "A", "text": "Yes — any stall horn activation requires an immediate, aggressive recovery to prevent loss of control.", "hazardous_attitude": "impulsivity"},
+        {"label": "B", "text": "The response was partially appropriate but excessive. The ACS specifically addresses this scenario: a momentary stall horn activation due to a gust during slow flight does NOT constitute unsatisfactory performance IF the pilot promptly makes an appropriate correction. The appropriate correction for a brief gust-induced activation is a SLIGHT relaxation of back pressure and a modest power increase — not an aggressive nose-over. An aggressive push during slow flight at high AOA can produce negative G-loading and a dangerous pitch excursion. The pilot should match the correction to the severity of the situation.", "hazardous_attitude": null},
+        {"label": "C", "text": "No — the stall horn during slow flight practice is expected and should be ignored. The pilot should continue the maneuver without correction.", "hazardous_attitude": "invulnerability"},
+        {"label": "D", "text": "The pilot should immediately level the wings and exit slow flight entirely. Any stall horn activation means the maneuver is too aggressive for the conditions.", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A over-corrects — an aggressive push during high-AOA flight at slow speed can produce a negative-G pitch excursion that is itself dangerous. Option C ignores the warning entirely — even a brief activation warrants acknowledgment and minor correction. Option D exits the maneuver unnecessarily — the ACS explicitly allows brief gust-induced activations. Option B correctly identifies the proportional response: slight relaxation of back pressure + modest power increase, matching the correction to the gust rather than treating it as a full stall.",
+      "explanation": "The ACS (FAA-S-ACS-6C) explicitly addresses environmental factors during slow flight. A momentary stall horn activation from turbulence or a gust is expected and does not constitute a failure IF the pilot recognizes it and makes a prompt, appropriate correction. The key word is 'appropriate' — the correction should be proportional to the disturbance. At 3,000 AGL with adequate altitude, a slight AOA reduction is all that's needed.",
+      "far_reference": "FAA-S-ACS-6C", "acs_element": "PA.VII.A.R1"
+    }
+  ]
+}

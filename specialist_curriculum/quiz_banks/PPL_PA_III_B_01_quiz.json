@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_III_B_01",
+  "title": "Traffic Patterns & Airport Operations",
+  "questions": [
+    {
+      "id": "PPL_PA_III_B_01_Q001", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "A student pilot on a solo cross-country is cleared to land at a towered airport. The tower then amends the clearance: 'Land Runway 22L, hold short of Runway 28.' The student pilot knows the runway is long enough. What should the student do?",
+      "options": [
+        {"label": "A", "text": "Accept the LAHSO clearance and land, holding short of Runway 28. The clearance is from ATC and must be complied with."},
+        {"label": "B", "text": "Respond 'Unable' and request a full-length landing on Runway 22L. Student pilots are legally PROHIBITED from participating in Land and Hold Short Operations (LAHSO). The student must decline regardless of runway length or personal capability."},
+        {"label": "C", "text": "Accept the clearance but plan to stop well before Runway 28 to provide an extra safety margin. The student can participate if they add additional buffer distance."},
+        {"label": "D", "text": "Request a different runway that does not require LAHSO. If no other runway is available, the student must divert to a different airport."}
+      ],
+      "correct_answer": "B",
+      "explanation": "Student pilots are unconditionally prohibited from participating in LAHSO. This is a hard regulatory prohibition, not a judgment call. The student must respond 'Unable' — this is a standard ATC response and ATC will provide an alternative clearance (full-length landing, different runway, or re-sequencing). Option A violates the prohibition. Option C attempts a workaround that doesn't change the legal status. Option D is unnecessarily extreme — 'Unable' is sufficient.",
+      "far_reference": "14 CFR 91.129", "acs_element": "PA.III.B.K1"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q002", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A Cessna 172 pilot is cleared to land on Runway 27 behind a Boeing 757. The surface wind is reported as 210 at 3 knots (a light left crosswind). Where should the pilot expect the most dangerous wake vortex to be located relative to the runway?",
+      "options": [
+        {"label": "A", "text": "The most dangerous location is directly on the runway centerline. A light crosswind of 3 knots from the left will push the right (downwind) vortex across the runway and arrest the left (upwind) vortex, holding it stationary directly over or very near the centerline. This is the worst-case geometry because the pilot flying a normal centerline approach flies directly into the stalled vortex without any lateral offset. The pilot should offset to the upwind (left) side of the runway and plan to touch down well beyond the 757's touchdown point."},
+        {"label": "B", "text": "Both vortices are pushed to the right side of the runway by the crosswind. The pilot should fly the centerline and the vortices will be clear of the approach path."},
+        {"label": "C", "text": "The vortices dissipate rapidly in any crosswind and are not a concern with a 3-knot wind. Wake turbulence is only dangerous in calm wind conditions."},
+        {"label": "D", "text": "The vortices are above the runway at the pilot's altitude. Wake turbulence only affects aircraft flying above the generating aircraft's flight path."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Wake vortices drift laterally at 2-3 knots. A 3-knot crosswind arrests the upwind vortex by exactly matching its lateral drift speed, holding it stationary on or near the centerline. This is the most dangerous crosswind condition — it concentrates the hazard exactly where the following pilot is flying. Stronger crosswinds actually HELP by pushing both vortices off the runway. Option B incorrectly assumes both vortices move the same direction. Option C incorrectly claims crosswind dissipates vortices — it moves them but doesn't destroy them. Option D is backwards — vortices SINK below the flight path, they don't rise above it.",
+      "far_reference": null, "acs_element": "PA.III.B.R3"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q003", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_04",
+      "text": "While taxiing at night at an unfamiliar airport, a pilot sees the following sequence of signs: a sign with BLACK background and yellow 'B', followed by a sign with YELLOW background and black arrows pointing to 'A' and 'C', followed by a sign with RED background and white '18-36'. What do these signs tell the pilot, and what must the pilot do?",
+      "options": [
+        {"label": "A", "text": "Sign 1 (Black/Yellow 'B') = Location sign: the pilot is currently on Taxiway Bravo. Sign 2 (Yellow/Black 'A' and 'C') = Direction signs: Taxiway Alpha is to one side and Taxiway Charlie is to the other. Sign 3 (Red/White '18-36') = Mandatory instruction sign: the pilot is approaching the hold-short line for Runway 18/36. The pilot MUST stop before crossing this line unless explicitly cleared by ATC to cross the runway."},
+        {"label": "B", "text": "All three signs are informational only. The red sign indicates the pilot is approaching Runway 18/36 but does not require stopping unless there is visible traffic on the runway."},
+        {"label": "C", "text": "The black sign indicates a closed taxiway. The yellow signs indicate detour routes. The red sign marks the beginning of an active runway."},
+        {"label": "D", "text": "The red sign is a stop sign that applies only during IFR conditions. In VFR conditions, the pilot may cross Runway 18/36 after verifying it is clear."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Airport sign color coding: BLACK background = Location (where you ARE). YELLOW background = Direction (where you CAN GO). RED background = Mandatory instruction (you MUST comply). A red sign with a runway designation means the pilot is at a runway hold-short position. The pilot must NOT cross the boundary unless ATC explicitly clears them to cross, regardless of VFR/IFR conditions. This is a mandatory compliance item, not advisory.",
+      "far_reference": "AIM 2-3", "acs_element": "PA.III.B.S1"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q004", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "Two single-engine airplanes are converging at the same altitude. Airplane A is at the 10 o'clock position of Airplane B. Which aircraft has the right-of-way under 14 CFR 91.113?",
+      "options": [
+        {"label": "A", "text": "Airplane A has the right-of-way. When two aircraft of the same category converge, the aircraft to the OTHER'S right has the right-of-way. From Airplane B's perspective, Airplane A is at their 10 o'clock (to their LEFT). From Airplane A's perspective, Airplane B is to their RIGHT. Airplane A, being to the left of Airplane B, is the aircraft that Airplane B sees on their LEFT — meaning Airplane B is the one who sees the other on their RIGHT. Wait — let me reconsider. If A is at B's 10 o'clock, then B is to A's right side (approximately 2 o'clock). The aircraft to the right has priority. B is to A's right, so B has the right-of-way. A must yield to B."},
+        {"label": "B", "text": "Airplane B has the right-of-way. If Airplane A is at Airplane B's 10 o'clock position, then from Airplane A's perspective, Airplane B is at approximately the 2 o'clock position — to Airplane A's RIGHT. The aircraft to the right has the right-of-way. Therefore Airplane B has priority, and Airplane A must alter course to avoid."},
+        {"label": "C", "text": "Both aircraft must turn right simultaneously. When converging at the same altitude, the head-on rule applies and both aircraft alter course to the right."},
+        {"label": "D", "text": "The faster aircraft has the right-of-way because it is less able to maneuver at high speed."}
+      ],
+      "correct_answer": "B",
+      "explanation": "When aircraft of the same category converge at the same altitude, the aircraft to the other's RIGHT has the right-of-way. If A is at B's 10 o'clock (B's left), then geometrically, B is at A's 2 o'clock (A's right). B is to A's right → B has the right-of-way → A must yield. The converging rule is NOT the head-on rule (Option C applies only when aircraft approach each other head-on). Speed is not a factor in the right-of-way hierarchy for same-category aircraft (Option D).",
+      "far_reference": "14 CFR 91.113", "acs_element": "PA.III.B.K3"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q005", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_04",
+      "text": "A pilot approaching an unfamiliar nontowered airport tunes the ASOS frequency from 20 miles out. The broadcast reports: temperature 35°C, dewpoint 15°C, winds 180 at 5, altimeter 29.72. Which of these data points has the most critical operational implication for this flight?",
+      "options": [
+        {"label": "A", "text": "The temperature of 35°C (95°F) is the most critical data point because it indicates extremely high density altitude. At 35°C, the aircraft's true performance — takeoff roll, rate of climb, landing roll — will be significantly degraded compared to standard-day performance charts. If the pilot does not calculate density altitude and apply it to the performance charts, they risk being unable to climb out of the pattern, overrunning the runway on landing, or being unable to clear obstacles on departure. This is the data point most likely to produce a fatal outcome if ignored."},
+        {"label": "B", "text": "The altimeter setting of 29.72 is the most critical because it is significantly below standard (29.92). This indicates low pressure, meaning the aircraft is higher than the altimeter indicates. The pilot must correct the altimeter before descending."},
+        {"label": "C", "text": "The wind is the most critical because it determines the active runway. Wind from 180 means Runway 18 is the most appropriate."},
+        {"label": "D", "text": "The dewpoint spread is the most critical because the wide 20°C spread indicates dry conditions with turbulence potential."}
+      ],
+      "correct_answer": "A",
+      "explanation": "At 35°C, density altitude at even a modest field elevation can exceed 5,000-6,000 feet. This dramatically reduces engine power, propeller efficiency, and wing lift. Takeoff rolls can increase by 50% or more. Climb rates can decrease to dangerously low levels. Many GA fatal accidents occur when pilots ignore high-density altitude conditions. Option B is important but less immediately lethal — a 0.20 inHg deviation affects altitude reading by approximately 200 feet. Option C is operationally relevant but routine. Option D is backwards — a wide spread indicates low fog risk, not turbulence.",
+      "far_reference": "AIM 7-1-12", "acs_element": "PA.III.B.K4"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q006", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "A pilot approaching an unfamiliar nontowered airport has been monitoring the CTAF and hears traffic announcing left downwind for Runway 27. The pilot is approaching from the east (from the direction of the Runway 27 threshold). What is the recommended pattern entry?",
+      "options": [
+        {"label": "A", "text": "Overfly the airport at 500 feet above the published TPA (approximately 1,500 feet AGL). Observe the windsock, segmented circle, and traffic flow to confirm Runway 27 with left traffic. Proceed to the west side of the airport, descend to TPA well clear of the pattern, then maneuver to intercept the left downwind for Runway 27 at a 45-degree angle to the midpoint of the downwind leg. This entry provides maximum scan angle to see existing traffic before merging."},
+        {"label": "B", "text": "Fly a straight-in approach to Runway 27. Since the pilot is already aligned with the runway from the east, a straight-in approach is the most efficient entry and avoids additional maneuvering."},
+        {"label": "C", "text": "Enter a right downwind for Runway 27 directly from the east. This avoids overflying the airport and gets the pilot into the pattern immediately."},
+        {"label": "D", "text": "Descend to TPA while approaching from the east and join the left downwind directly at the departure end of Runway 27. This is faster than overflying and still enters the left pattern."}
+      ],
+      "correct_answer": "A",
+      "explanation": "AC 90-66C recommends the 45-degree entry to the midpoint of the downwind as the standard entry procedure because it provides the best scan geometry for detecting existing traffic. When approaching from the 'wrong side,' the recommended technique is to overfly at 500 feet above TPA, transition to the downwind side, descend, and enter on the 45. Option B (straight-in) is not illegal but bypasses the visual scanning flow of the standard pattern, creating a collision risk with aircraft turning base-to-final. Option C enters a right downwind when left traffic is in use — direct conflict with existing traffic. Option D enters at the departure end where departing traffic is climbing — a dangerous convergence point.",
+      "far_reference": "14 CFR 91.126", "acs_element": "PA.III.B.S2"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_02",
+      "text": "A pilot in a Cessna 172 is turning base-to-final at a nontowered airport. The pilot spots a twin-engine aircraft on a long straight-in final approach for the same runway, moving fast and about 2 miles out. The Cessna is lower and technically has the right-of-way under 91.113(g). What should the pilot do?",
+      "options": [
+        {"label": "A", "text": "Continue the approach — the Cessna has the legal right-of-way as the lower aircraft on final. The twin must yield and go around.", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Execute a go-around or 360-degree turn on the base leg to sequence behind the twin. Although the Cessna technically has right-of-way as the lower aircraft, 91.113 explicitly states pilots shall NOT take advantage of this rule to cut in front of another aircraft. The twin has significantly higher kinetic energy and closure rate — forcing a conflict creates an unacceptable collision risk. The safe and professional choice is to yield despite having right-of-way, re-enter the downwind, and sequence behind.", "hazardous_attitude": null},
+        {"label": "C", "text": "Make a radio call demanding the twin go around. The twin is violating right-of-way rules and must be corrected.", "hazardous_attitude": "anti_authority"},
+        {"label": "D", "text": "Speed up on final to land before the twin reaches the airport. With a 2-mile buffer, there is enough time to get down and clear the runway.", "hazardous_attitude": "impulsivity"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A (macho) hides behind the legal right-of-way while ignoring the physics — a Cessna 172 at 65 knots and a twin at 140+ knots converging on the same point is a geometry problem, not a legal one. Option C (anti-authority) treats a nontowered airport like a court of law — there is no 'enforcement' mechanism. Option D (impulsivity) adds speed to an already converging situation, reducing the time available for either pilot to react. Option B correctly recognizes that right-of-way is a legal framework, not a collision shield, and applies the explicit 91.113 provision against 'cutting in front.'",
+      "explanation": "14 CFR 91.113(g) specifically states that the lower aircraft shall not take advantage of this rule to cut in front of another aircraft on final or to overtake it. The regulation recognizes that a slower, lower aircraft asserting priority against a faster, higher-energy aircraft creates physics that right-of-way cannot overcome. The professional choice is always to yield when the alternative creates unnecessary collision risk.",
+      "far_reference": "14 CFR 91.113", "acs_element": "PA.III.B.K3"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_03",
+      "text": "A pilot is climbing out after takeoff in a high-wing Cessna 172. The pilot is maintaining a straight-ahead climb on the extended runway centerline. The pilot has not performed any clearing turns or banks since liftoff. What is the risk, and what should the pilot be doing?",
+      "options": [
+        {"label": "A", "text": "No additional action is needed — the pilot has the right-of-way as departing traffic. Other aircraft should yield to the climbing aircraft.", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "The pilot should execute gentle S-turns during the climb to clear the blind spot above the aircraft. In a high-wing Cessna, the wing blocks the view of any aircraft above the flight path. An aircraft descending from above — such as traffic entering a right downwind or crossing traffic at a higher altitude — is completely invisible in this configuration. Periodic shallow banks to the left and right lift the wing and expose the hidden airspace. Additionally, the straight-ahead pitch-up attitude during climb partially obscures the view directly ahead.", "hazardous_attitude": null},
+        {"label": "C", "text": "The pilot should level off momentarily to look over the nose for traffic ahead, then resume the climb. The primary blind spot during climb is directly forward, not above.", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "The pilot should rely on the ADS-B traffic display to detect any converging aircraft. Visual scanning during climb is impractical because the pilot needs to focus on maintaining airspeed and climb rate.", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A (invulnerability) assumes right-of-way equals safety — it does not. A descending aircraft may not see the climbing Cessna either. Option C (get-there-itis) addresses the forward blind spot (nose pitch-up) but ignores the more dangerous overhead blind spot from the high wing. Option D (resignation) replaces visual scanning with ADS-B — ADS-B is supplemental and does not show all traffic (gliders, ultralights, non-ADS-B aircraft). Option B correctly identifies the high-wing blind spot geometry and applies the standard mitigation: S-turns to clear above.",
+      "explanation": "Every aircraft design has inherent blind spots. High-wing aircraft like the Cessna 172 block the pilot's view of everything above the wing plane. During a sustained straight climb, this blind spot is directly toward the most likely source of conflicting traffic — aircraft at higher altitudes, crossing traffic, or pattern traffic at TPA. S-turns during climb are a standard recommended practice to periodically expose this hidden airspace.",
+      "far_reference": "AC 90-48D", "acs_element": "PA.III.B.R1"
+    }
+  ]
+}

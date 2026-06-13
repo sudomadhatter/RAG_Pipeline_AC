@@ -12,6 +12,8 @@ auth_keys/
 *.json
 !curriculum_*.jsonl
 !library_*.jsonl
+!specialist_curriculum/rkp_manifests/*.json
+!specialist_curriculum/quiz_banks/*.json
 
 # Python
 __pycache__/

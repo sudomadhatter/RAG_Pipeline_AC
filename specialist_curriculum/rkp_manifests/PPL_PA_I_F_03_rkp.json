@@ -1,0 +1,85 @@
+{
+  "lesson_id": "PPL_PA_I_F_03",
+  "title": "Takeoff and Landing Performance — Charts, Factors, and Obstacle Clearance",
+  "acs_task_reference": "Area I, Task F",
+  "acs_element_keys": [
+    "PA.I.F.K3",
+    "PA.I.F.S2"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "Using the POH Performance Charts — Takeoff Roll vs. Ground Roll vs. Over 50-Foot Obstacle",
+      "why": "DPE trap: 'Your POH says takeoff roll is 900 feet. Runway is 1,200 feet. A large tree is at 900 feet past the runway end. Are you going?' Most students compute takeoff ROLL = 900 feet and assume they clear the tree. But 'over a 50-foot obstacle' distance from the POH is the critical number for obstacle clearance — which may be 1,600-1,800 feet. The applicant who confuses ground roll with 50-foot obstacle distance has failed this discipline.",
+      "knowledge": "POH performance charts (Section 5) provide three distinct takeoff distance figures: (1) GROUND ROLL (or TAKEOFF ROLL): the distance to become airborne — wheels lift off pavement. (2) TAKEOFF DISTANCE OVER 50-FOOT OBSTACLE: the distance from brake release to when the aircraft reaches 50 feet AGL while continuing to climb. This is always significantly longer than ground roll because the aircraft must accelerate, rotate, climb to 50 feet, and then continue. (3) ACCELERATE-STOP DISTANCE: the distance required to accelerate to rotation speed, decide to reject, and stop completely with brakes. This is the safety check for contaminated runways or critical engine failure at V1 equivalents. Landing parallel figures: (1) LANDING ROLL: distance from touchdown to full stop. (2) LANDING DISTANCE OVER 50-FOOT OBSTACLE: from clearing 50 feet to full stop — always longer than landing roll because it includes the approach descent distance. Practical rule: when obstacle clearance matters, use the 50-FOOT OBSTACLE distance — not the ground roll. When determining if a runway can physically accept the aircraft, use ACCELERATE-STOP distance.",
+      "acs_elements": [
+        "PA.I.F.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "POH Section 5"
+      ],
+      "knowledge_formatted": "### POH Performance Charts (Section 5)\n- **POH performance charts** (**Section 5**) provide distinct takeoff and landing distance figures\n\n### Takeoff Distance Figures\n- **GROUND ROLL"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Performance Adjustment Factors — Wind, Slope, Surface, and Weight",
+      "why": "The DPE presents actual conditions: 10° upslope, wet grass, 8-knot headwind. The student who can recite SL/standard performance numbers but cannot apply the correction factors cannot operate the aircraft safely in real conditions. Each factor has a direction (helps or hurts) and a magnitude. Getting both right is the skill.",
+      "knowledge": "Takeoff/landing performance adjustment factors: (1) WIND: headwind reduces takeoff roll (less groundspeed needed for a given airspeed = shorter distance). Rule of thumb: every 10% of headwind component (relative to liftoff airspeed) reduces takeoff distance by approximately 10-20%. Tailwind SIGNIFICANTLY increases distance — a 10-knot tailwind on a 65-knot aircraft can increase takeoff roll by 20-30%. Never take off with a tailwind if avoidable. (2) RUNWAY SLOPE: upslope increases takeoff roll (aircraft works against gravity on departure); downslope assists. Upslope also helps on landing (braking aided by gravity). Rule: +7% distance for every 1% upslope gradient on takeoff (varies by aircraft). (3) SURFACE: wet grass or soft surface increases rolling resistance; can increase takeoff roll 15-25% beyond paved-surface charts. POH charts assume dry, paved, level runways unless otherwise noted. (4) WEIGHT: heavier aircraft require more lift to rotate, require longer roll, and have reduced climb rate. Takeoff roll increases approximately as the SQUARE of weight ratios. A 10% weight increase increases takeoff distance approximately 21% (1.1² = 1.21). (5) DENSITY ALTITUDE: covered in L23 — the input into the performance chart that accounts for temperature and pressure effects.",
+      "acs_elements": [
+        "PA.I.F.K3",
+        "PA.I.F.S2"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "POH Section 5"
+      ],
+      "knowledge_formatted": "### Wind\n- **Headwind** reduces takeoff roll (less groundspeed needed for a given airspeed = shorter distance)\n- Rule of thumb: Every **10% of"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Landing Performance — Approach Speed, Energy, and the Stabilized Approach",
+      "why": "The DPE asks: 'You cross the fence 10 knots fast. What happens to landing roll?' Kinetic energy scales as the SQUARE of velocity. A 10% speed increase results in a 21% increase in landing distance. The pilot who 'knows it'll be a bit long' without quantifying the penalty will run off the end of a short runway. Additionally, the stabilized approach concept prevents the speed excess from being carried all the way to the flare.",
+      "knowledge": "Landing distance physics: (1) ENERGY: kinetic energy = ½mv². Landing roll to stop dissipates this kinetic energy through braking and aerodynamic drag. Since energy scales as v², a 10% airspeed excess produces a 21% distance increase (1.1² = 1.21). (2) APPROACH SPEED: POH landing distances are calculated for the specific approach speed (Vref). Operating above Vref carries excess energy into the touchdown zone — always longer. Operating below Vref risks stall before the runway and hard landing. (3) STABILIZED APPROACH CRITERIA: by 500 feet AGL on final (1,000 feet on IMC approaches), the aircraft should be: at or within 10 knots of Vref, on the correct descent profile (glidepath), in the landing configuration, power stabilized. If not stabilized by 500 feet AGL, the correct action is GO-AROUND. (4) FLOAT AND BALLOONING: excessive approach speed causes float — the aircraft flies level just above the runway as speed bleeds off. Float adds significantly to landing distance. Attempting to force the aircraft onto the runway while it is still flying (floating) risks porpoising and structural damage. (5) STOPPING DEVICES: braking, aerodynamic drag (flaps), and reverse thrust (if available). Maximum braking effectiveness on dry pavement. Wet runway significantly reduces braking effectiveness — landing distance may increase 60-70% on wet pavement.",
+      "acs_elements": [
+        "PA.I.F.K3",
+        "PA.I.F.S2"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "AC 91-79B - Runway Overrun Prevention"
+      ],
+      "knowledge_formatted": "### Energy\n- **Kinetic energy** equals **½mv²**\n- Landing roll to stop dissipates kinetic energy through **braking** and **aerodynamic drag**\n-"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Short Field and Soft Field Technique — When Normal Technique Isn't Enough",
+      "why": "The DPE may designate a runway as 'short field' or present a soft surface scenario. The ACS requires the applicant demonstrate knowledge of the TECHNIQUE changes — not just knowing they exist. The short field takeoff (full flaps as specified, specific rotation speed, obstacle climb speed) differs mechanically from normal takeoff procedure in ways that directly affect obstacle clearance calculation.",
+      "knowledge": "Short Field Takeoff Technique: (1) Maximum allowable flap setting (as specified in POH — often 10° in Cessna aircraft). (2) Position at the very beginning of the runway — use every available foot. (3) Hold brakes, advance to full power before brake release. (4) Accelerate to POH-specified rotation speed (often Vx — best angle of climb speed). (5) Rotate firmly to the Vx pitch attitude. (6) Climb at Vx until the obstacle is cleared, then transition to Vy. Short Field Landing Technique: (1) Stabilize on VREF = 1.3 times Vso (or POH-specified approach speed). (2) Aim for the very touchdown zone markers. (3) Touch down firmly at threshold (do not float). (4) Apply maximum braking immediately (no progressive braking delay). (5) Retract flaps immediately after touchdown to transfer weight to wheels. Soft Field Takeoff Technique: (1) Keep the nosewheel off the soft surface as early as possible — deflect elevator back early in the takeoff roll to reduce nose gear loading. (2) Lift off at the earliest possible speed (may be below normal rotation speed). (3) Accelerate in ground effect to Vx or Vy. The purpose: avoid digging the nose gear into soft surfaces. Soft Field Landing: Fly a very stabilized approach; use power to control the descent; touch down as gently as possible at the slowest possible speed to prevent sinking into soft surface.",
+      "acs_elements": [
+        "PA.I.F.K3",
+        "PA.I.F.S2"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "POH Section 4"
+      ],
+      "knowledge_formatted": "### Short Field Takeoff Technique\n- Use **maximum allowable flap setting** (as specified in **POH** — often **10°** in Cessna aircraft)\n- Position at the **very"
+    }
+  ],
+  "lesson_overview": "## Takeoff and Landing Performance — Using the Charts Before the Runway Runs Out\n\nRunway overrun is one of the most preventable accident categories in general aviation — and it almost always involves a pilot who either didn't consult the performance charts or used the wrong numbers. The POH is a performance calculator, not a coffee table book. On the checkride, you'll be handed real environmental data and asked to compute real takeoff and landing distances. Let's make sure you use the right chart for the right question.\n\n**Three distinct distances — don't confuse them.** The POH Section 5 provides three takeoff distance figures:\n\n1. **Ground Roll (Takeoff Roll):** The distance from brake release until the wheels leave the pavement. This is NOT the distance to clear an obstacle.\n2. **Distance Over a 50-Foot Obstacle:** The distance from brake release until the aircraft has climbed to 50 feet AGL. This is always significantly longer than ground roll because it includes the climb from liftoff to 50 feet at Vx.\n3. **Accelerate-Stop Distance:** The distance to accelerate to rotation speed, abort the takeoff, and stop completely with brakes applied. This is the critical number for contaminated or short runways where an engine failure at Vr must be survivable within the runway.\n\nParallel landing figures:\n- **Landing Roll:** From touchdown to full stop.\n- **Landing Distance Over 50-Foot Obstacle:** From the point where the aircraft crosses the threshold at 50 feet to full stop. Used for obstacle-laden approach ends.\n\n**When obstacles exist: always use the 50-foot obstacle distance.** If there's a tree line, power line, or building past the runway end, the ground roll number is irrelevant. You need to know where in space your aircraft will be aircraft at 50 feet of altitude. That's the obstacle column.\n\n**Adjustment factors: where students lose points.** Raw POH numbers assume: dry, paved, level runway; standard temperature and pressure; calm winds; normal technique. Real flights are never all of those things simultaneously. Apply corrections:\n\n- **Headwind:** Reduces takeoff roll. Roughly 10% distance reduction per 10% headwind component relative to liftoff speed.\n- **Tailwind:** Significantly increases distance. A 10-knot tailwind on a 65-knot aircraft adds 20-30% to takeoff distance. Avoid tailwind departures whenever possible.\n- **Upslope runway:** Increases takeoff distance (gravity working against you). Opposite on landing.\n- **Soft/wet grass surface:** Increases rolling resistance, adds 15-25% to the paved-surface chart numbers.\n- **Weight:** Higher weight = more roll needed. Distance increases as approximately the SQUARE of weight ratio. A 10% increase in weight increases takeoff distance by approximately 21%.\n\n**Landing physics: the energy problem.** Kinetic energy = ½ mv². Crossing the threshold 10 knots above Vref increases your energy by the SQUARE of the speed ratio. 10% speed over = 21% more energy to dissipate = 21% longer stopping distance minimum. On a short field, that math is the difference between stopping on the runway and not. The stabilized approach criteria: by 500 feet AGL, you must be within 10 knots of Vref, on glidepath, in landing configuration. If not, go around. The go-around costs 5 minutes. The non-go-around can cost everything.\n\n**Short field and soft field techniques.** Short field takeoff: full authorized flaps (per POH), full power before brake release, rotate at the POH-specified speed (usually Vx), climb at Vx until obstacle is cleared, then transition to Vy. Short field landing: approach at precise Vref (1.3 Vso), touch down at the threshold markings, maximum braking immediately, retract flaps after touchdown to shift weight to wheels. Soft field takeoff: deflect elevator back early to unload the nosewheel as soon as possible, lift off at the earliest possible speed, accelerate in ground effect to Vx or Vy.\n\n**The checkride trap:** The DPE gives you an environmental scenario: pressure altitude 3,500 feet, OAT 28°C, weight 2,450 lbs, 8-knot headwind, 1% upslope. You compute takeoff roll from the chart and announce a number. The DPE asks: 'Did you account for the upslope and the weight?' Students who only use the altitude/temperature chart entry and forget the correction factors will underestimate actual performance distance every time.",
+  "audio_file": "PPL_PA_I_F_audio.m4a",
+  "video_file": "PPL_PA_I_F_video.mp4"
+}

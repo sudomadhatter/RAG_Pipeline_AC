@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_C_05",
+  "title": "Weather Hazards — Thunderstorms, Icing, and Cockpit Weather Limitations",
+  "questions": [
+    {
+      "id": "PPL_PA_I_C_05_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "AC 00-63B establishes two categories for using cockpit NEXRAD weather displays: strategic and tactical. Which pilot action correctly applies the strategic use of cockpit weather displays?",
+      "options": [
+        {"label": "A", "text": "Using the FIS-B radar display to steer between individual storm cells at a distance of 5 nautical miles, treating the radar picture as real-time data for close-quarters maneuvering around active convection"},
+        {"label": "B", "text": "Using the FIS-B radar display from 80 or more nautical miles away to identify and route around developing convective areas, then confirming the route with updated PIREPs and FSS contact before entering the area"},
+        {"label": "C", "text": "Using the FIS-B radar display as the primary navigation instrument for any weather-related routing because FAA-approved FIS-B data is required to meet the all-available-information standard of 14 CFR 91.103"},
+        {"label": "D", "text": "Using the FIS-B radar display during approach to the destination to confirm final approach path is clear of convection before descending below 3,000 AGL into the terminal area"}
+      ],
+      "correct_answer": "B",
+      "explanation": "AC 00-63B explicitly defines strategic use of cockpit weather displays as long-range (50+ nautical miles) route planning to identify and navigate around broad convective areas. The 15–20 minute data latency inherent in FIS-B NEXRAD makes the product unsuitable for close-quarters or tactical use. At 80 nm from developing convection, a 15-minute-old radar picture still provides useful strategic information. But at 5 nm from a cell, that same 15-minute latency represents atmospheric changes in a storm that can build at thousands of feet per minute — making the radar snapshot operationally obsolete for threading or avoidance at that range. Option A is the 'tactical threading' behavior explicitly prohibited by AC 00-63B. Options C and D misapply the product beyond its intended and safe operational parameters.",
+      "far_reference": "14 CFR 91.103; AC 00-63B",
+      "acs_element": "PA.I.C.R2"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot is flying a carbureted piston aircraft on a warm, humid summer day at 8,500 feet MSL. Outside air temperature is +18°C and visibility is unlimited under clear skies. The pilot notices a 75 RPM drop and slight engine roughness. What condition should the pilot suspect first?",
+      "options": [
+        {"label": "A", "text": "Structural ice formation — clear-air temperatures of +18°C at altitude create a wind-chill effect on the airfoil leading edges that drops the wing surface temperature below 0°C, initiating rime ice accumulation without visible moisture"},
+        {"label": "B", "text": "Carburetor ice — the venturi in a carburetor creates a pressure drop and temperature reduction of up to 70°F regardless of outside temperature, allowing ice to form in the carburetor throat at outside air temperatures as high as +32°C with high relative humidity"},
+        {"label": "C", "text": "Fuel system contamination — an RPM drop under clear, calm conditions at cruise altitude is primarily caused by water contamination introduced during the preflight sump check, which carries minor contamination forward into the carburetor jets"},
+        {"label": "D", "text": "Magneto failure — single-magneto failure causes exactly a 50–75 RPM drop and rough running at cruise; pilots should immediately perform the GUMPS check and select both magnetos to restore symmetric ignition"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Carburetor ice is the primary suspect at +18°C with high humidity, clear skies, and the described symptom profile. The carburetor venturi creates a temperature drop of up to 70°F (39°C) through fuel vaporization and pressure reduction, meaning the interior of the carburetor sees temperatures close to 0°C even when outside air is +18°C. Carburetor ice is most likely in conditions of 70–90°F outside temperature with relative humidity above 60% — precisely the 'warm and humid' scenario described. Structural ice requires visible moisture (clouds or precipitation) — clear skies eliminate that cause entirely. Option D describes a magneto check symptom (75 RPM drop on mag check is normal) but would not cause rough running at cruise in both-magneto-ON position. Remedy: Apply FULL carb heat immediately and hold until smooth operation resumes.",
+      "far_reference": "14 CFR 91.103; FAA-H-8083-25",
+      "acs_element": "PA.I.C.K3"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "When preparing to land, a pilot observes a PIREP reporting a microburst on the approach path 3 minutes ago. The nose of the aircraft is crabbed significantly into a headwind. What is the greatest structural and aerodynamic hazard of continuing the approach?",
+      "options": [
+        {"label": "A", "text": "The headwind creates excessive indicated airspeed that may overstress the landing gear upon touchdown — the pilot should slow to minimum controllable airspeed to reduce structural loading before entering the microburst zone"},
+        {"label": "B", "text": "The initial performance-increasing headwind will transition rapidly to a massive downdraft and then to a performance-decreasing tailwind; if the pilot pitches up aggressively to arrest the sudden altitude loss, a stall near the ground becomes likely and unrecoverable"},
+        {"label": "C", "text": "The microburst downdraft is the primary structural threat — vertical forces exceeding 1G may stress the airframe beyond the published limit load factor if the aircraft enters the core of the downdraft at cruise airspeed"},
+        {"label": "D", "text": "The tailwind phase of the microburst increases groundspeed during the approach; the resulting landing at excessive groundspeed exceeds tire speed requirements, creating a blown-tire runway excursion risk greater than the aerodynamic stall risk"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The microburst presents a specific three-phase performance signature that is aerodynamically fatal if the pilot responds intuitively: (1) Headwind phase — the aircraft enters increasing headwind, airspeed increases, performance improves. Instinctive response: reduce power or pitch down. (2) Downdraft phase — the aircraft hits the central downdraft core (up to 6,000 fpm), altitude collapses. Instinctive response: pitch up aggressively to arrest descent. (3) Tailwind phase — a sudden strong tailwind replaces the headwind, angle of attack increases at the same pitch attitude, airspeed drops dramatically. The combination of high nose pitch + low airspeed + low altitude = unrecoverable stall. The FAA recommends: if a microburst is reported or suspected on approach, execute a missed approach immediately — do not continue the approach. AC 00-54 documents multiple fatal accidents attributed to this exact sequence.",
+      "far_reference": "14 CFR 91.103; AC 00-54",
+      "acs_element": "PA.I.C.K3"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A pilot plans a sunrise departure from a coastal airport after a clear, calm, humid night. The METAR at 0600Z shows visibility 10SM. By the time the pilot arrives at the airport at 0700Z, visibility has dropped to 1/4SM in dense fog. Which fog type most likely developed, and why?",
+      "options": [
+        {"label": "A", "text": "Advection fog — coastal airports always experience advection fog created by sea breeze circulation that transports marine air inland overnight, requiring wind speeds of at least 5 knots to trigger formation near the shoreline"},
+        {"label": "B", "text": "Radiation fog — the clear sky, calm winds, and high humidity created ideal conditions for terrestrial radiation to cool the surface below the dewpoint during the overnight hours, forming a shallow fog layer that intensified near sunrise"},
+        {"label": "C", "text": "Steam fog — the proximity to the ocean caused warm saltwater vapor to evaporate upward into the cool land-surface air mass, creating a steam fog effect that commonly migrates from the shoreline to inland coastal airports at dawn"},
+        {"label": "D", "text": "Upslope fog — the coastal terrain gradient between sea level and the airport elevation caused moisture-laden marine air to rise and cool adiabatically to the dewpoint, forming fog that intensified as the sun began heating the adjacent terrain"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The scenario provides the three defining characteristics of radiation fog: (1) Clear night sky — allows terrestrial radiation to escape, cooling the surface efficiently. (2) Calm winds — no mixing to prevent stratification of the cold surface layer. (3) High humidity — the air needs minimal cooling to reach the dewpoint. Radiation fog typically forms around or after midnight as the earth continues to cool, reaches peak density near sunrise (when the surface temperature is at its lowest), and then rapidly dissipates as solar heating raises the surface temperature after sunrise. The 0600Z METAR showed 10SM because the fog had not yet fully developed; by 0700L it reached peak density. Option A (advection fog) requires wind — the scenario explicitly states calm night, eliminating advection fog. Options C and D describe physically plausible but meteorologically incorrect scenarios for the stated conditions.",
+      "far_reference": "14 CFR 91.103; FAA-H-8083-28",
+      "acs_element": "PA.I.C.K3"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot notices a thin layer of frost on the wings before an early morning departure. The frost is smooth to the touch and the wings look 'mostly shiny.' Can the pilot legally depart, and why?",
+      "options": [
+        {"label": "A", "text": "Yes — smooth frost has negligible aerodynamic impact because it does not change the wing's basic cross-sectional shape; the FAA only prohibits departure with rough or uneven frost accumulation that creates visible texture changes on the leading edge"},
+        {"label": "B", "text": "Yes — frost is acceptable for takeoff when it covers less than 50% of the wing's upper surface area; a thin patchy coating of smooth frost does not reduce stall margin sufficiently to prohibit departure under Part 91"},
+        {"label": "C", "text": "No — all frost must be completely removed from all lifting surfaces before takeoff; even smooth frost disrupts the boundary layer airflow in a manner that can significantly increase stall speed and reduce lift without any visible leading-edge shape change"},
+        {"label": "D", "text": "No — the FAA requires a logbook entry and DA-40 form submission before any Part 91 departure from an airport where frost was observed on lifting surfaces within the 3-hour preflight inspection window"}
+      ],
+      "correct_answer": "C",
+      "explanation": "The FAA's position on frost is unambiguous: ALL frost must be removed from ALL lifting surfaces before takeoff — regardless of how smooth, thin, or cosmetically minimal it appears. Frost forms through sublimation and creates a microscopically rough crystalline surface that, while it does not change the basic aerodynamic shape of the wing, dramatically disrupts the kinetic energy of the boundary layer airflow. This disruption causes the boundary layer to separate earlier in the stall progression, increasing effective stall speed and reducing maximum lift coefficient — which means the aircraft can stall at or below normal rotation speed during takeoff, with insufficient altitude for recovery. Several NTSB fatal accident reports cite frost on lifting surfaces as a primary contributor to runway departure and stall on climb-out. Options A and B incorrectly introduce smoothness or coverage-area thresholds that the FAA does not recognize. Option D invents a non-existent logbook and form requirement.",
+      "far_reference": "14 CFR 91.103; FAA-H-8083-28",
+      "acs_element": "PA.I.C.K3"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "What are the three ingredients required for thunderstorm formation, and during which lifecycle stage is a thunderstorm at its maximum intensity?",
+      "options": [
+        {"label": "A", "text": "Moisture, stable lapse rate, and a surface temperature above 30°C — maximum intensity occurs during the Cumulus stage when updrafts reach their peak vertical velocity before the rain shaft develops"},
+        {"label": "B", "text": "Moisture, unstable lapse rate, and a lifting force — maximum intensity occurs during the Mature stage, which begins when precipitation first reaches the surface and includes both violent updrafts and severe downdrafts simultaneously"},
+        {"label": "C", "text": "Moisture, unstable lapse rate, and relative humidity above 70% at the surface — maximum intensity occurs during the Dissipating stage when all available moisture has condensed and the storm releases accumulated latent heat"},
+        {"label": "D", "text": "Daytime heating, surface temperature above dewpoint, and cumulus cloud tops above 25,000 feet — maximum intensity occurs immediately before the anvil cloud forms, during the transition between the Cumulus and Mature stages"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Three ingredients required for thunderstorm formation: (1) Sufficient moisture in the atmosphere (the fuel), (2) An unstable lapse rate (the instability that allows air to keep rising once lifted), (3) A lifting force (front, surface heating, orographic terrain, convergence). All three must be present simultaneously. The Mature stage is the most intense phase, beginning when precipitation reaches the surface. During the Mature stage: both violent updrafts (100+ mph) AND severe downdrafts coexist within the cell; hail, lightning, severe turbulence, wind shear, and microbursts are most likely. Option A incorrectly identifies the Cumulus stage as most intense and incorrectly specifies a 'stable lapse rate.' Option C invents a humidity-threshold ingredient. Option D replaces the 'unstable lapse rate' with cloud-top altitude, which is a result of instability, not an ingredient itself.",
+      "far_reference": "14 CFR 91.103; FAA-H-8083-28",
+      "acs_element": "PA.I.C.K3"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "You are 50 miles from a developing convective area. Your FIS-B display shows what appears to be a 10-mile gap between two heavy red cells. Your passengers are excited and you are ahead of schedule. What is the SAFEST action?",
+      "options": [
+        {"label": "A", "text": "Thread through the gap — your FIS-B shows clearly open airspace and modern avionics are designed specifically for this type of real-time severe weather avoidance; flying 20 miles through the gap is faster and safer than detouring 80 miles around the cells", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "Use the FIS-B display strategically to identify a wide diversion route that completely bypasses the convective area, request updated PIREPs and FSS Route Advisory on 122.2 MHz, and plan to fly no closer than 20 miles from any visible anvil cloud or storm cell", "hazardous_attitude": null},
+        {"label": "C", "text": "Contact ATC and ask them to radar-vector you through the gap — ATC radar is real-time and ATC controllers are extensively trained in weather avoidance routing; following an ATC vector through the gap transfers responsibility for weather separation to the controller", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Turn back to departure airport without evaluating any diversion options — the presence of any red cells on FIS-B within 100 miles of the route is an automatic no-go condition regardless of GAP size or pilot experience level", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "AC 00-63B is explicit: FIS-B NEXRAD is for strategic routing only, not tactical cell-threading. The 15–20 minute data latency means the 10-mile gap on the display may already be a fully developed cell in the real atmosphere. Thunderstorm cells can contract, expand, and merge in under 10 minutes. The safe action is to use the current FIS-B data from strategic distance (50 miles) to identify a routing around the entire convective area — at a minimum, 20 nm from visible anvil clouds — and confirm the route with FSS and PIREPs. Option A is Invulnerability — trusting stale radar data to thread active convection. Option C is Macho — ATC radar is more current but ATC explicitly cannot guarantee weather separation; ATC thunderstorm avoidance is VFR pilot's responsibility. Option D is Resignation — a 100-mile blanket no-go rule based solely on cell proximity ignores evaluation of safe routing options.",
+      "sjt_rationale": "Option A is Invulnerability — treating 15-minute-old data as real-time clearance to enter convective airspace. Option C is Macho — transferring weather avoidance responsibility to ATC who does not have weather-separation authority. Option D is Resignation — abandoning flight evaluation rather than conducting it. Option B uses the product as designed: strategic, long-range, verify-before-entry.",
+      "far_reference": "14 CFR 91.103; AC 00-63B",
+      "acs_element": "PA.I.C.R2"
+    },
+    {
+      "id": "PPL_PA_I_C_05_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "During a cross-country VFR flight in humid summer air, you notice a 100 RPM drop and slight roughness but your engine is still running acceptably. You are 20 miles from your destination. What is the SAFEST action?",
+      "options": [
+        {"label": "A", "text": "Reduce power slightly and continue to the destination — a minor RPM drop in a normally aspirated engine is an acceptable power variation within the engine's operational tolerance range and will self-resolve as altitude changes", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Apply FULL carburetor heat immediately, accept the temporarily rough running as the ice melts, hold heat until smooth operation returns, then continue the flight with carb heat on or cycling as needed and land at the nearest suitable airport rather than continuing 20 more miles", "hazardous_attitude": null},
+        {"label": "C", "text": "Apply partial carburetor heat — half-heat warms the carburetor throat sufficiently to melt surface ice without the power reduction penalty of full heat, and it is safer than allowing rough running to continue to the destination airport", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Declare an emergency with ATC immediately and request direct routing to the nearest airport — an RPM drop and engine roughness constitute an engine malfunction requiring immediate emergency GPS routing regardless of the magnitude of the power loss", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "An RPM drop with roughness in humid summer conditions at cruise is the classic onset of carburetor ice formation. The correct response is FULL carb heat application immediately. The rough running that follows is expected and desirable — it indicates the ice is melting and the engine is processing the resulting water. Hold full heat until running smooths, then — because you have confirmed carburetor icing is present — consider landing at the nearest suitable airport rather than continuing 20 further miles, as conditions are already confirmed icing-favorable and the ice may re-form during descent. Option A (ignore and continue) is Get-There-Itis — progressive carburetor icing can lead to complete engine stoppage, not self-resolution. Option C is Macho — partial heat is more dangerous than full heat because it partially melts the ice into liquid water that refreezes in the engine induction system. This is explicitly documented in the PHAK and AMT manuals. Option D overreacts — the symptom is manageable with carb heat and does not require an emergency declaration at this stage.",
+      "sjt_rationale": "Option A is Get-There-Itis — continuing to the destination despite an active symptom requiring immediate intervention. Option C is Macho — applying a dangerous half-measure because full heat is inconvenient. Option D is Resignation — escalating to an emergency declaration before exhausting the standard corrective procedure. Option B applies full carb heat correctly, accepts the temporary roughness, confirms ice presence, and makes a conservative landing decision.",
+      "far_reference": "14 CFR 91.103; FAA-H-8083-28",
+      "acs_element": "PA.I.C.K3"
+    }
+  ]
+}

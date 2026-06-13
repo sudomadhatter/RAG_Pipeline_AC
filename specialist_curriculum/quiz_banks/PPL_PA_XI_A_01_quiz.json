@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_XI_A_01",
+  "title": "Night Vision Physiology & Airport Lighting",
+  "questions": [
+    {
+      "id": "PPL_PA_XI_A_01_Q001",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot preparing for a night cross-country uses a bright white flashlight to conduct the preflight walkaround, then immediately taxis to the runway and departs into a moonless night. Five minutes into the climb, the pilot cannot detect a radio tower's red obstruction light directly ahead. What physiological factor most likely explains this failure, and what should the pilot have done differently?",
+      "options": [
+        {"label": "A", "text": "The pilot's rhodopsin was photo-bleached by the white flashlight during preflight. Dark adaptation requires approximately 30 minutes for the rods to re-synthesize rhodopsin to peak scotopic sensitivity. By departing immediately after bright light exposure, the pilot is functionally night-blind in the periphery — the only region of the retina capable of detecting dim obstruction lights. The pilot should have allowed 30 minutes of dark adaptation after the walkaround, or used a red-filtered flashlight that does not significantly degrade rhodopsin."},
+        {"label": "B", "text": "The pilot's cones were fatigued from the bright flashlight. Cone fatigue requires 5-10 minutes to recover, and since cones are the primary photoreceptors for detecting red obstruction lights at night, the pilot temporarily lost the ability to process red-wavelength light. The pilot should have waited 10 minutes before departing."},
+        {"label": "C", "text": "The radio tower light was likely obscured by atmospheric haze. Night visibility is typically 20-30% lower than daytime visibility due to moisture condensation at night. The flashlight exposure is unrelated — human vision adapts to darkness within 2-3 minutes regardless of prior light exposure."},
+        {"label": "D", "text": "The pilot was looking directly at the tower location, which is correct procedure at night. The inability to see the light indicates the tower obstruction light was likely inoperative or below minimum candela output, not a physiological failure. The pilot should file a NOTAM report after landing."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Dark adaptation is a biochemical process dependent on rhodopsin concentration in the rod cells. A bright white flashlight instantly bleaches rhodopsin, resetting the 30-minute dark adaptation clock. At 5 minutes after exposure, the pilot has recovered only a small fraction of scotopic sensitivity. Rod cells — concentrated in the retinal periphery — are the ONLY photoreceptors functional at night. With degraded rods, the pilot cannot detect dim red obstruction lights, especially if attempting to look directly at them (fovea = cones only = blind at night). Option B incorrectly attributes night detection to cones — cones are nonfunctional in scotopic conditions. Option C invents a '2-3 minute' adaptation time — the actual minimum for meaningful rod sensitivity is 10-15 minutes, with full adaptation at ~30 minutes. Option D suggests looking directly at the target, which is the opposite of correct night technique — off-center viewing is required.",
+      "far_reference": "14 CFR 91.211",
+      "acs_element": "PA.XI.A.K1"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot is approaching a non-towered airport at night. The airport appears completely dark. The pilot tunes to the CTAF frequency listed in the Chart Supplement and keys the microphone 7 times within 5 seconds. The runway lights illuminate at maximum intensity. After entering the traffic pattern, approximately 12 minutes pass before the pilot turns final. What should the pilot do and why?",
+      "options": [
+        {"label": "A", "text": "No action is required — once activated, pilot controlled lighting remains on until sunrise or until manually deactivated by the airport manager. The 7-click activation is a one-time event."},
+        {"label": "B", "text": "Key the microphone again (7, 5, or 3 clicks within 5 seconds) to reset the 15-minute PCL timer. Pilot Controlled Lighting operates on a mandatory 15-minute countdown timer. At 12 minutes into the pattern, only 3 minutes remain before the lights automatically extinguish. If the pilot does not reset the timer, the runway lights will go dark during the final approach or landing flare — a catastrophic loss of visual reference."},
+        {"label": "C", "text": "Switch to the AWOS frequency and key the microphone 3 times to activate the low-intensity setting, which is preferred for landing to avoid glare that degrades dark adaptation."},
+        {"label": "D", "text": "Contact the nearest approach control frequency and request that they activate the runway lighting remotely. PCL systems at non-towered airports are always backed up by ATC remote activation capability."}
+      ],
+      "correct_answer": "B",
+      "explanation": "Pilot Controlled Lighting (PCL) operates on a 15-minute automatic timer per AIM 2-1-9. After activation, the system counts down from 15 minutes and then extinguishes all lights automatically. This timer CANNOT be extended — it can only be RESET by re-keying the microphone with the appropriate click count (7/5/3). At 12 minutes into the pattern, the pilot has approximately 3 minutes remaining. Failing to re-key means the runway will go dark during the most critical phase of flight. Option A invents a persistent activation that does not exist. Option C incorrectly directs the pilot to the AWOS frequency — PCL is activated on the CTAF only. Option D invents an ATC remote activation capability that does not exist for most non-towered PCL systems.",
+      "far_reference": "AIM 2-1-9",
+      "acs_element": "PA.XI.A.K2"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A pilot is executing a visual approach at night to a coastal runway. The final approach path crosses entirely over dark ocean with no shoreline lighting. The runway is clearly visible ahead, but the pilot experiences a powerful, instinctive sensation of being dramatically too high and has a strong urge to push the nose down and reduce power. The PAPI shows two white and two red lights. What is happening and what is the correct response?",
+      "options": [
+        {"label": "A", "text": "The pilot is experiencing the Black Hole Approach illusion. The featureless dark ocean provides zero peripheral texture gradient cues, depriving the brain of the depth perception data needed to accurately judge height above the surface. Without perspective references, the brain defaults to perceiving the aircraft as being excessively high. The PAPI showing two white/two red CONFIRMS the aircraft is on the correct glidepath. The correct response: trust the PAPI, maintain current descent rate, cross-check the altimeter and VSI, and absolutely DO NOT push the nose down — doing so would fly the aircraft into the water short of the runway."},
+        {"label": "B", "text": "The pilot is correctly sensing that the approach is too high. The dark ocean creates a visual compression effect that makes the runway appear closer than it actually is, causing the pilot to fly a steep approach. The PAPI is unreliable over water due to light refraction from humidity. The pilot should reduce power to increase the descent rate and recapture a normal visual glidepath."},
+        {"label": "C", "text": "The pilot is experiencing mild hypoxia from the altitude combined with the stress of the night approach. Hypoxia causes perceptual distortion and anxiety. The correct response is to apply supplemental oxygen and continue the visual approach using the outside visual picture as the primary reference."},
+        {"label": "D", "text": "This is normal spatial awareness during a night approach over water. The dark surface removes ground reference clutter, which actually provides better visibility of the runway. The urge to descend is a trained instinct to capture a lower approach angle for landing. The pilot should follow their instincts and transition to a lower approach profile."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The Black Hole Approach is the single deadliest visual illusion in general aviation night flying. It occurs when the approach path crosses featureless dark terrain (water, desert, unlit fields). The brain requires peripheral visual texture — ground features, shoreline, buildings — to construct a reliable model of height above the surface. When this texture gradient is absent, the visual cortex defaults to an incorrect model that consistently overestimates height. The result: 100% of pilots experiencing this illusion report feeling too high. The instinctive correction — pushing the nose down — leads to Controlled Flight Into Terrain (CFIT) short of the runway. The PAPI is the critical countermeasure: two white/two red = on glidepath. The PAPI does not lie. It uses precisely calibrated light angles that are unaffected by the pilot's vestibular state or the presence/absence of ground references. Option B invents a 'PAPI unreliable over water' claim — PAPI is ground-based and unaffected by the surface below the approach path. Option D tells the pilot to follow their instincts — at night, instincts kill.",
+      "far_reference": "AIM 8-1-5",
+      "acs_element": "PA.XI.A.K8"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q004",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "Why does the FAA recommend supplemental oxygen for night flight at altitudes above 5,000 feet MSL, even though 14 CFR 91.211 does not require supplemental oxygen until 12,500 feet MSL for more than 30 minutes?",
+      "options": [
+        {"label": "A", "text": "Rod cells have an extremely high metabolic demand for oxygen compared to other retinal cells. Night vision is the first physiological function to degrade during the onset of hypoxia. At 5,000 feet MSL, the reduced partial pressure of oxygen measurably impairs rod cell function, degrading peripheral vision and scotopic sensitivity — the exact visual capabilities the pilot depends on most at night. Since 14 CFR 91.211 sets only the MINIMUM legal threshold, the physiological recommendation addresses the earlier onset of visual degradation that occurs well below the regulatory altitude."},
+        {"label": "B", "text": "At altitudes above 5,000 feet, the reduced atmospheric pressure causes the lens of the eye to physically deform, changing its focal length. This creates a temporary myopia (nearsightedness) that prevents the pilot from focusing on distant objects at night. Supplemental oxygen pressurizes the anterior chamber of the eye, correcting this deformation."},
+        {"label": "C", "text": "The recommendation is based on carbon monoxide exposure risk. At higher altitudes, the cabin heating system must work harder, increasing the risk of exhaust leakage. The supplemental oxygen recommendation is actually a CO-poisoning mitigation strategy, not a visual performance recommendation."},
+        {"label": "D", "text": "Above 5,000 feet, air temperature drops significantly, which causes the cornea to contract and reduce pupil diameter. Since night vision depends on maximum pupil dilation to gather photons, the cold-induced pupil constriction at altitude degrades night vision. Supplemental oxygen warms the breathing air, preventing corneal contraction."}
+      ],
+      "correct_answer": "A",
+      "explanation": "This question targets the specific physiological mechanism connecting altitude, oxygen, and night vision. Rod cells — the photoreceptors responsible for ALL night vision capability — have an unusually high metabolic oxygen requirement. The rods are among the most oxygen-sensitive cells in the human body. At altitudes as low as 5,000 feet MSL, the reduced partial pressure of atmospheric oxygen measurably impairs the chemical reactions that drive rhodopsin regeneration and signal transduction in rod cells. The result: degraded peripheral sensitivity, delayed dark adaptation, and an expanded night blind spot. Because 14 CFR 91.211 sets a minimum LEGAL altitude (12,500 ft for >30 min), not a physiological performance standard, there is a significant gap between 'legal' and 'optimal.' The FAA's supplemental oxygen recommendation for night flight fills this gap. Options B, C, and D invent fictitious anatomical and chemical mechanisms that do not exist in aviation physiology.",
+      "far_reference": "14 CFR 91.211",
+      "acs_element": "PA.XI.A.K1"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q005",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "At a non-towered airport, a pilot is unable to activate the runway lights using Pilot Controlled Lighting. The pilot has keyed the microphone 7 times within 5 seconds on 122.8 MHz (the published CTAF), but the airport remains dark. What is the most likely cause of the failure, and what should the pilot reference to troubleshoot?",
+      "options": [
+        {"label": "A", "text": "The pilot may be keying on the wrong frequency. While 122.8 MHz is a common CTAF, the specific PCL activation frequency for this airport may differ from the CTAF. The pilot should reference the Chart Supplement (formerly Airport/Facility Directory) for the exact lighting frequency designated for this airport. Additionally, the pilot should verify the microphone is transmitting by checking the transmit indicator and ensure the clicks are sufficiently rapid — all 7 within 5 seconds."},
+        {"label": "B", "text": "PCL systems are automatically disabled when the AWOS reports visibility above 3 statute miles. Since the pilot can see the runway, the visibility exceeds 3 miles and the PCL has been inhibited by the weather system to conserve electrical power. The pilot should fly the approach using available ambient light."},
+        {"label": "C", "text": "PCL systems only operate between the hours of midnight and 6 AM local time. If the pilot is approaching before midnight, the PCL is not yet enabled. The runway lights are managed by the airport authority until midnight."},
+        {"label": "D", "text": "The pilot must first contact the nearest Flight Service Station on 122.2 and request PCL activation authorization. FSS remotely enables the PCL receiver before the pilot can activate the lights via microphone clicks."}
+      ],
+      "correct_answer": "A",
+      "explanation": "PCL activation issues are most commonly caused by: (1) Wrong frequency — the PCL activation frequency may differ from the CTAF. The Chart Supplement is the definitive reference for the specific lighting activation frequency at each airport. (2) Insufficient click rate — all clicks must occur within a 5-second window. (3) Weak or failed microphone transmission — the pilot should verify the transmit indicator illuminates during keying. (4) Equipment failure — the PCL system itself may be inoperative. Option B invents a visibility-based inhibition that does not exist. Option C invents time-based restrictions that do not exist. Option D invents an FSS authorization requirement that does not exist.",
+      "far_reference": "AIM 2-1-9",
+      "acs_element": "PA.XI.A.K2"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "During a night go-around from a missed approach, a pilot applies full power and begins a climb. Within seconds, the pilot experiences an overwhelming sensation of pitching up steeply — as if the aircraft is about to stall. The airspeed indicator shows 80 knots (well above stall speed) and the attitude indicator shows approximately 10 degrees nose-up — a normal climb attitude. What is the pilot experiencing and what is the correct response?",
+      "options": [
+        {"label": "A", "text": "The pilot is experiencing a somatogravic illusion. The rapid linear acceleration during the go-around power application shifts the otolith organs in the vestibular system backward, mimicking the sensory input of a steep pitch-up. Without a visible horizon at night, the vestibular system becomes the dominant sensory input, convincing the pilot the aircraft is about to stall. The correct response: reference the attitude indicator (10° nose-up = normal climb), cross-check the airspeed (80 knots = safe), and IGNORE the body's sensation. Under no circumstances should the pilot push the nose down — doing so at low altitude during a go-around would fly the aircraft into the ground."},
+        {"label": "B", "text": "The pilot is experiencing a genuine aerodynamic stall onset. The airspeed indicator may be lagging due to pitot tube response time during the rapid pitch change. The pilot should reduce pitch to level flight and allow airspeed to stabilize before resuming the climb."},
+        {"label": "C", "text": "The pilot is experiencing spatial disorientation from the abrupt transition between descent and climb. The correct response is to close their eyes for 3-5 seconds to allow the vestibular system to reset, then resume visual scan."},
+        {"label": "D", "text": "The pilot is experiencing the leans — a semicircular canal illusion caused by the abrupt roll correction during the go-around. The pilot should execute a slow, deliberate 30-degree bank turn to reset the semicircular canal fluid, then return to wings level."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The somatogravic illusion is a linear acceleration illusion specific to the otolith organs of the vestibular system. During rapid forward acceleration (go-around, high-performance takeoff), the otolith membrane shifts backward relative to the skull — exactly the same mechanical displacement that occurs during a genuine pitch-up. Without a visible horizon to provide contradicting visual data, the vestibular system dominates perception, creating an overwhelming, physiologically convincing sensation of an extreme pitch-up attitude. The trained response: IMMEDIATELY reference the attitude indicator and airspeed. If the AI shows normal climb attitude (8-12° nose-up) and airspeed is stable above stall, the sensation is a vestibular illusion. Pushing the nose down in response to the illusion has directly caused fatal CFIT accidents during night go-arounds. Option B invents pitot tube lag as a cover for stall onset — at 80 knots in a normal climb, the aircraft is nowhere near stall. Option C suggests closing eyes — this eliminates the ONLY reliable input (instruments) and is extremely dangerous. Option D confuses the somatogravic with the leans — the leans are a semicircular canal illusion from roll, not linear acceleration.",
+      "far_reference": "AIM 8-1-5",
+      "acs_element": "PA.XI.A.K8"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "A private pilot with 250 hours and good instrument proficiency is planning a night VFR cross-country to a coastal airport. The final approach will cross 8 miles of open ocean with no shoreline lighting. The airport has PAPI lights and an RNAV approach, but the pilot is not instrument-rated. The weather is clear with unlimited visibility. How should the pilot manage the approach?",
+      "options": [
+        {"label": "A", "text": "Proceed with the visual approach using outside references — with unlimited visibility and the runway clearly visible from 8 miles, the risk of a Black Hole illusion is minimal. The pilot's 250 hours of experience provide sufficient judgment to detect and correct any perceptual errors during the approach.", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Cancel the flight — a non-instrument-rated pilot should never fly a night approach over water. The Black Hole Approach illusion makes this approach profile unsuitable for any VFR-only pilot regardless of weather conditions or available approach aids.", "hazardous_attitude": "resignation"},
+        {"label": "C", "text": "Fly the approach but add extra altitude margin — arrive at the airport at 2,500 feet AGL instead of the standard 1,500 feet pattern altitude, then execute a steep descent to the runway once directly overhead. The extra altitude provides a larger safety buffer against any illusion-induced descent.", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "Fly the visual approach but treat the PAPI as the PRIMARY glidepath reference — brief the Black Hole Approach risk before beginning descent, establish an instrument scan on the altimeter and VSI as a crosscheck against the PAPI, and refuse to trust any body sensation that contradicts the instruments. If at any point the PAPI shows 3 or 4 red lights, immediately arrest the descent regardless of what the approach 'feels' like."}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A (macho) dismisses the Black Hole illusion based on experience — but the illusion is a physiological constant that affects all humans equally regardless of logbook hours. Unlimited visibility does NOT eliminate the Black Hole effect because the illusion is caused by the absence of peripheral terrain texture, not atmospheric visibility. Option B (resignation) treats the scenario as impossible for any VFR pilot — but the PAPI provides objective vertical guidance that directly mitigates the illusion. Canceling is overly conservative when effective mitigation tools exist. Option C (get-there-itis disguised as caution) creates a steep descent directly over the runway — steep descents at night are MORE dangerous, not less, because they remove the pilot from the PAPI's useful detection range and create a high-energy arrival. Option D uses the available tools correctly: PAPI as primary guidance, instrument crosscheck as backup, pre-briefed awareness of the specific illusion, and a hard decision gate (3+ red = arrest descent immediately).",
+      "explanation": "The Black Hole Approach illusion is triggered by featureless terrain below the flight path — clear visibility does not eliminate it because the illusion mechanism is the absence of peripheral texture, not atmospheric opacity. Even experienced IFR pilots are susceptible. The correct risk management strategy combines multiple mitigation layers: (1) Pre-approach briefing of the specific illusion expected. (2) PAPI as objective primary vertical guidance — immune to vestibular errors. (3) Altimeter/VSI instrument crosscheck as backup. (4) A hard decision gate: if PAPI shows increasing red, the pilot STOPS descending regardless of sensation. This multi-layer defense makes the approach survivable without requiring an instrument rating.",
+      "far_reference": "AIM 8-1-5",
+      "acs_element": "PA.XI.A.R3"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "A pilot is taxiing to the active runway at a large, unfamiliar towered airport at night. The ramp was brightly lit with white floodlights during the preflight inspection, and the pilot departed the FBO 2 minutes ago. The taxi route involves multiple intersections, and the pilot is having difficulty reading the taxiway signs despite the blue taxiway edge lights being clearly visible. The pilot is cleared to taxi to Runway 28L via taxiways Alpha, Charlie, and Foxtrot. What is the primary risk, and what should the pilot do?",
+      "options": [
+        {"label": "A", "text": "The pilot's dark adaptation was destroyed by the FBO floodlights 2 minutes ago. With only 2 minutes of recovery, rhodopsin has barely begun to regenerate — the pilot is functionally night-blind for detail tasks like reading taxiway signs. The correct action: slow the taxi speed significantly, use the airport diagram on the electronic flight bag or knee-board, request progressive taxi instructions from ATC ('Ground, unfamiliar, request progressive taxi'), and absolutely DO NOT rush the taxi — a runway incursion at night due to misidentified signs is a high-probability outcome of degraded night vision at an unfamiliar airport.", "hazardous_attitude": null},
+        {"label": "B", "text": "The blue taxiway lights are sufficient for navigation — if the pilot can see the blue lights, they can follow the route. Taxiway signs are supplemental and not essential for safe taxi. The pilot should maintain normal taxi speed and follow the blue lights to the runway.", "hazardous_attitude": "invulnerability"},
+        {"label": "C", "text": "The pilot should turn on the landing light and taxi light to maximum brightness to illuminate the taxiway signs. The additional light will make the signs readable and compensate for any dark adaptation deficit.", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "The difficulty reading signs is normal at night — all pilots struggle with taxiway signs in the dark. The pilot should continue at normal speed and trust their memory of the taxi clearance to navigate the route.", "hazardous_attitude": "complacency"}
+      ],
+      "correct_answer": "A",
+      "sjt_rationale": "Option B (invulnerability) assumes blue lights are sufficient — but blue edge lights mark boundaries, not identity. Without reading signs, the pilot cannot distinguish Taxiway C from Taxiway D at an intersection. Option C (macho) uses maximum external lighting — while taxi lights help, blasting bright light actually further degrades dark adaptation for distant sign reading and does not address the core problem (2 minutes is insufficient for rhodopsin recovery). Option D (complacency) normalizes the deficit — difficulty reading signs after bright light exposure is NOT normal night operations; it is degraded performance that increases runway incursion risk. Option A correctly identifies the root cause (rhodopsin bleach from FBO lights), applies appropriate mitigation (slow down, use diagram, request progressive taxi), and explicitly addresses the highest-consequence risk (runway incursion at an unfamiliar airport at night).",
+      "explanation": "This scenario combines two high-risk factors: destroyed dark adaptation (2 minutes after FBO floodlights) and unfamiliarity with the airport taxi layout. The rhodopsin recovery timeline means the pilot has perhaps 5-10% of peak scotopic sensitivity — enough to see bright blue edge lights but insufficient to resolve the detail on taxiway signs. At a complex airport with multiple intersections, this creates a high probability of wrong-turn taxi errors. Progressive taxi — where ATC provides turn-by-turn guidance — is specifically designed for this situation and is available at all towered airports on request. There is no penalty for requesting it. The pilot who rushes the taxi to avoid 'bothering' ATC is trading a 10-second radio call for a potential runway incursion investigation.",
+      "far_reference": "AIM 4-3-18",
+      "acs_element": "PA.XI.A.R3"
+    }
+  ]
+}

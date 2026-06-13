@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_III_A_02",
+  "title": "Light Signals, Transponders & Emergency Reporting",
+  "questions": [
+    {
+      "id": "PPL_PA_III_A_02_Q001", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "A pilot with a complete radio failure is in the traffic pattern at a Class D airport. While on downwind, the pilot looks at the tower and sees a FLASHING GREEN light directed at the aircraft. What does this mean and what should the pilot do next?",
+      "options": [
+        {"label": "A", "text": "Flashing Green in flight means 'Return for landing' — it is NOT a clearance to land. The controller is directing the pilot to continue in the pattern and return to the airport for landing. The pilot must continue in the pattern, watching for a subsequent STEADY GREEN light, which IS the clearance to land. The pilot acknowledges by rocking wings (day) or flashing lights (night)."},
+        {"label": "B", "text": "Flashing Green means 'Cleared to land.' The pilot should proceed directly to land and exit the runway."},
+        {"label": "C", "text": "Flashing Green means 'Cleared to taxi' — this signal only applies to aircraft on the ground. The pilot must have misidentified the color."},
+        {"label": "D", "text": "Flashing Green means 'Exercise extreme caution.' The pilot should continue the approach but be prepared for an immediate go-around."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Flashing Green in flight = 'Return for landing' (not cleared to land). Steady Green in flight = 'Cleared to land.' These are distinct signals. The Flashing Green tells the pilot the controller has identified them and wants them to return to land — but the actual landing clearance comes as a Steady Green on final. Option B confuses Flashing with Steady Green. Option C correctly identifies Flashing Green as taxi clearance but only on the GROUND. Option D describes Alternating Red/Green.",
+      "far_reference": "14 CFR 91.125", "acs_element": "PA.III.A.K3"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q002", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot is changing the transponder code from 1200 to a newly assigned squawk of 4523 on an older transponder with mechanical dials. What precaution should the pilot take while changing the code?",
+      "options": [
+        {"label": "A", "text": "Switch the transponder to STANDBY before changing the code, then switch back to ALT after the new code is set. Changing codes on mechanical dials requires passing through intermediate numbers. If the dials pass through 7500, 7600, or 7700 even momentarily, the transponder transmits those emergency codes to ATC, triggering alarms at the facility. Switching to Standby suppresses all transmissions during the code change."},
+        {"label": "B", "text": "Change the code as quickly as possible to minimize the time spent on intermediate numbers. Speed is the primary defense against accidentally triggering emergency codes."},
+        {"label": "C", "text": "No precaution is needed — ATC systems filter out transient code changes and will not trigger an alarm unless the emergency code is transmitted for more than 30 seconds."},
+        {"label": "D", "text": "Turn the transponder completely OFF, change the code, then turn it back ON. This ensures a clean restart with the new code."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Modern ATC systems detect emergency codes almost instantly — there is no '30-second grace period.' Even a momentary transmission of 7500 triggers a hijack alarm. The correct practice is to switch to Standby (which suppresses replies) while dialing, then return to ALT. Option B relies on speed — but mechanical dials must pass through intermediate numbers regardless of speed. Option D turns the transponder completely off, which takes longer to re-acquire and may cause the aircraft to temporarily disappear from all radar and TCAS screens.",
+      "far_reference": "14 CFR 91.215", "acs_element": "PA.III.A.K4"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q003", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "During a firm landing, a pilot loses directional control. The aircraft departs the runway, collapses the nose gear, and bends the firewall. No one is injured. What is the pilot's immediate reporting obligation?",
+      "options": [
+        {"label": "A", "text": "Immediately notify the NTSB. The bent firewall constitutes 'substantial damage' because the firewall is a major structural component that affects the structural strength of the aircraft. This classifies the event as an ACCIDENT under 49 CFR Part 830, requiring immediate NTSB notification. The collapsed nose gear alone would NOT trigger the requirement (landing gear damage is explicitly excluded), but the firewall damage does."},
+        {"label": "B", "text": "File a NASA ASRS report within 10 days. No immediate notification is required because no one was injured and the aircraft can likely be repaired."},
+        {"label": "C", "text": "Notify the local FSDO (Flight Standards District Office) within 48 hours. The FSDO handles all aircraft damage reports for the FAA."},
+        {"label": "D", "text": "No reporting is required. Collapsed nose gear and bent firewall are considered ground damage to landing gear, which is explicitly excluded from the definition of substantial damage under 49 CFR 830."}
+      ],
+      "correct_answer": "A",
+      "explanation": "49 CFR 830 excludes LANDING GEAR damage from the definition of substantial damage — so the collapsed nose gear alone would not trigger reporting. However, the FIREWALL is not landing gear; it is a primary structural component. A bent firewall adversely affects structural strength and flight characteristics, meeting the definition of substantial damage. This makes the event an ACCIDENT requiring immediate NTSB notification. Option B (NASA ASRS) serves a different purpose — it provides immunity from certain FAA enforcement but does NOT satisfy 830 notification requirements. Option C confuses FSDO with NTSB. Option D incorrectly extends the landing gear exclusion to the firewall.",
+      "far_reference": "49 CFR 830.5", "acs_element": "PA.III.A.K8"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q004", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot is taxiing toward Runway 24L at a major airport equipped with Runway Status Lights. The tower clears the pilot: 'Line up and wait, Runway 24L.' As the pilot releases the brakes to enter the runway, the in-pavement REL lights suddenly illuminate bright red. What should the pilot do?",
+      "options": [
+        {"label": "A", "text": "Immediately STOP the aircraft. The illuminated red REL lights indicate the automated system has detected a runway conflict — another aircraft or vehicle is on or approaching the runway. The red lights override the previous ATC clearance. The pilot should hold position and notify ATC: 'Tower, [callsign], holding for red lights on Runway 24L.' Do NOT enter the runway until the lights extinguish AND ATC re-issues a verbal clearance."},
+        {"label": "B", "text": "Continue onto the runway — the tower clearance to 'line up and wait' takes precedence over the automated system. ATC has confirmed the runway is safe for entry."},
+        {"label": "C", "text": "The red lights are a system malfunction. RWSL systems are prone to false alerts. The pilot should report the malfunction to ATC but continue as cleared."},
+        {"label": "D", "text": "Wait for the lights to extinguish, then proceed onto the runway without further ATC communication. The lights extinguishing means the conflict is resolved."}
+      ],
+      "correct_answer": "A",
+      "explanation": "RWSL red lights = absolute STOP regardless of prior ATC clearance. The automated system uses surface surveillance radar to detect conflicts that the controller may not have seen. The lights are designed to override human reaction time delays. Option B is dangerous — red lights override any prior clearance. Option C dismisses the system as unreliable — RWSL has extremely low false-alarm rates by design. Option D partially correct (wait for extinguish) but wrong about proceeding without ATC — extinguished lights are NOT a clearance. Verbal ATC clearance is still required.",
+      "far_reference": "AIM 4-3-19", "acs_element": "PA.III.A.K9"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q005", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot on a VFR cross-country requests Flight Following from Center. Center assigns a squawk code and begins providing traffic advisories. Thirty minutes later, Center states: 'Cessna 3AB, radar services terminated, squawk 1200, frequency change approved.' What does this mean for the pilot?",
+      "options": [
+        {"label": "A", "text": "ATC has terminated Flight Following, likely due to workload. The pilot must squawk 1200 (VFR) and is free to change to any appropriate frequency. The pilot retains FULL responsibility for navigation, terrain clearance, traffic avoidance, and weather avoidance — which they always had, even with Flight Following. Flight Following is advisory only and provided on a workload-permitting basis. ATC can terminate at any time."},
+        {"label": "B", "text": "The pilot has been cleared to continue VFR without any ATC monitoring. This means the airspace ahead is completely clear of traffic and no further scanning is necessary until the destination."},
+        {"label": "C", "text": "The pilot must immediately land at the nearest airport because ATC can only terminate services when there is a safety concern in the pilot's area."},
+        {"label": "D", "text": "The pilot should ignore the termination and continue squawking the assigned code. ATC cannot unilaterally terminate Flight Following without pilot consent."}
+      ],
+      "correct_answer": "A",
+      "explanation": "Flight Following is provided on a WORKLOAD-PERMITTING basis. ATC can terminate at any time, for any reason — most commonly because IFR traffic is increasing and the controller needs the bandwidth. Termination is routine and does not imply any safety concern. The pilot was always responsible for see-and-avoid, navigation, and weather — Flight Following supplemented but never replaced those responsibilities. Option B falsely assumes clear airspace. Option C invents a safety implication. Option D claims the pilot can refuse termination — this is incorrect.",
+      "far_reference": "AIM 4-1-15", "acs_element": "PA.III.A.K7"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q006", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_04",
+      "text": "A pilot is flying at night when the engine begins losing power despite troubleshooting. The aircraft is slowly descending. The pilot thinks: 'It might recover. I don't want to deal with the paperwork of an emergency declaration.' What is wrong with this thinking?",
+      "options": [
+        {"label": "A", "text": "The 'paperwork myth' is actively dangerous. 14 CFR 91.3(c) states that a written report is required ONLY if the Administrator requests one — which rarely happens for legitimate emergencies. Meanwhile, delaying the declaration deprives the pilot of: (1) cleared airspace, (2) priority vectors to the nearest airport, (3) crash-fire-rescue standing by on the ground, and (4) legal authority to deviate from any Part 91 rule. Every minute of hesitation burns altitude, fuel, and options. The engine may not recover — and by the time it's obvious it won't, the pilot may be too low to reach a suitable airport."},
+        {"label": "B", "text": "The pilot's concern about paperwork is valid — every emergency declaration requires a formal written report to the FAA within 10 days, and the FSDO will conduct a full investigation of the pilot's certificate and medical records."},
+        {"label": "C", "text": "The pilot should wait until the engine actually quits before declaring. A rough-running engine is an urgency, not a distress. The declaration should match the severity of the situation."},
+        {"label": "D", "text": "The pilot should file a NASA ASRS report instead of declaring an emergency. The ASRS provides immunity from FAA enforcement and serves the same purpose as an emergency declaration."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The paperwork myth has killed pilots. The actual regulatory requirement (91.3(c)) is minimal: a report is due ONLY if the FAA asks for one. For legitimate emergencies, this is uncommon. Meanwhile, the resources an emergency declaration activates — cleared airspace, priority handling, CFR alerting, legal deviation authority — are the pilot's best tools for survival. Option B fabricates a mandatory 10-day report and FSDO investigation. Option C suggests waiting for total failure — a dangerous delay when altitude is being lost. Option D confuses ASRS (a voluntary safety reporting system) with an emergency declaration (an active request for ATC resources).",
+      "far_reference": "14 CFR 91.3", "acs_element": "PA.III.A.R2"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_01",
+      "text": "A pilot has experienced a complete electrical failure in VFR conditions, 5 miles from a Class D airport. All radios, transponder, and GPS are dead. The pilot can see the airport and the traffic pattern. How should the pilot proceed?",
+      "options": [
+        {"label": "A", "text": "Divert to the nearest non-towered airport to avoid the Class D airspace. Without a radio or transponder, entering Class D is illegal and will result in a certificate action.", "hazardous_attitude": "resignation"},
+        {"label": "B", "text": "Enter the traffic pattern at the Class D airport. Remain at or above the pattern altitude to observe the traffic flow and active runway. Look toward the control tower for light gun signals. Acknowledge signals by rocking wings (day) or flashing available lights (night). Follow the controller's light instructions to sequence and land. The light gun system exists precisely for this scenario. After landing, taxi to the nearest ramp and call ATC by phone to explain the situation.", "hazardous_attitude": null},
+        {"label": "C", "text": "Fly directly over the airport at 500 feet AGL to attract the tower's attention, then circle until they respond with a light signal.", "hazardous_attitude": "impulsivity"},
+        {"label": "D", "text": "Land at the Class D airport without looking for light signals. The emergency nature of a total electrical failure gives the pilot 91.3(b) authority to deviate from any rule, including the radio communication requirement.", "hazardous_attitude": "macho"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A (resignation) incorrectly believes entering Class D without radio is always illegal — the light gun system provides the legal mechanism for NORDO aircraft to operate in Class D. Diverting adds distance and time when a suitable airport is 5 miles away. Option C (impulsivity) flies at 500 feet AGL over an active airport — extremely dangerous and not the standard NORDO procedure. Option D (macho) ignores the light gun system — 91.3(b) authority doesn't eliminate the need for sequencing with other traffic. Option B follows the standard NORDO procedure: observe, sequence visually, watch for light signals, acknowledge, and comply.",
+      "explanation": "The light gun system at towered airports exists specifically for aircraft that have lost radio communication. Tower controllers are trained to use it and watch for NORDO aircraft entering the pattern. The standard procedure is to observe the traffic pattern from above, enter when clear, and watch the tower for light signals. There is no regulatory prohibition against a NORDO aircraft entering Class D — the light gun IS the authorized communication method in this scenario.",
+      "far_reference": "14 CFR 91.125", "acs_element": "PA.III.A.K3"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_04",
+      "text": "A pilot on a VFR cross-country notices the ammeter showing a discharge and the voltage dropping slowly. All avionics are still functioning but the alternator has likely failed. The battery will eventually deplete. The pilot's destination is 45 minutes away. A suitable airport is 10 minutes away. What should the pilot do?",
+      "options": [
+        {"label": "A", "text": "Continue to the destination — the battery should last 45 minutes, and the pilot can always declare an emergency if things get worse en route.", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Shed electrical load immediately (turn off non-essential avionics, lights, autopilot) to extend battery life. Declare an urgency ('Pan-Pan') with ATC, advise of alternator failure and intention to divert to the nearest suitable airport (10 minutes away). Squawk 7700. Navigate direct to the diversion airport using minimum essential avionics. This preserves battery power for critical communications and transponder while minimizing time in a degrading electrical state.", "hazardous_attitude": null},
+        {"label": "C", "text": "Turn off ALL avionics immediately to preserve battery power for landing. Navigate by pilotage and dead reckoning to the nearest airport without any radio communication.", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Reset the alternator circuit breaker or field breaker to attempt to bring the alternator back online. If it trips again, continue to the destination since the battery is still showing adequate voltage.", "hazardous_attitude": "macho"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A (get-there-itis) gambles on battery duration — battery life under load is unpredictable and the 45-minute estimate may be wrong. If the battery dies en route, the pilot loses all communication, navigation, and transponder in a potentially remote area. Option C (resignation) shuts down all avionics prematurely — this throws away the ability to communicate the situation to ATC and receive assistance. Load shedding (turning off non-essential items) is the correct first step, not total shutdown. Option D (macho) correctly suggests resetting the breaker (a valid troubleshooting step) but then continues to the distant destination if it fails again — ignoring the 10-minute alternative. Option B correctly: sheds load, declares urgency, diverts to the nearest suitable airport, and preserves minimum essential systems.",
+      "explanation": "An alternator failure is a time-limited emergency. The battery is now the sole electrical source, and its duration depends on the electrical load. Load shedding extends the window. Declaring urgency (Pan-Pan) alerts ATC to provide priority handling. Diverting to the nearest airport (10 min vs. 45 min) maximizes the probability of landing with functional avionics. Attempting to reset the alternator breaker once is reasonable troubleshooting, but if it fails, the pilot should commit to the diversion immediately.",
+      "far_reference": "14 CFR 91.3", "acs_element": "PA.III.A.R2"
+    }
+  ]
+}

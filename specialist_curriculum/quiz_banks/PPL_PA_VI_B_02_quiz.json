@@ -1,0 +1,112 @@
+{
+  "lesson_id": "PPL_PA_VI_B_02",
+  "title": "Transponders, ADS-B & Radar Services",
+  "questions": [
+    {
+      "id": "PPL_PA_VI_B_02_Q001", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot is flying at 11,500 feet MSL over mountainous terrain where the ground elevation is 9,500 feet MSL. The aircraft is therefore at 2,000 feet AGL. Is a transponder with Mode C and ADS-B Out required?",
+      "options": [
+        {"label": "A", "text": "No. While 14 CFR 91.215 and 91.225 require transponder/ADS-B in Class E airspace at and above 10,000 feet MSL, the regulation explicitly excludes airspace at and below 2,500 feet AGL. At 2,000 feet AGL, the aircraft is below this threshold. This exclusion was specifically designed for mountainous operations where aircraft routinely fly above 10,000 MSL but are close to the terrain. The pilot must remain outside actual Class B or C airspace for the exclusion to apply."},
+        {"label": "B", "text": "Yes. The 10,000-foot MSL rule has no exceptions. Any aircraft operating at or above 10,000 feet MSL in Class E airspace must have an operating transponder with Mode C and ADS-B Out."},
+        {"label": "C", "text": "No, but only if the aircraft is an unpowered glider. The AGL exclusion only applies to aircraft without engine-driven electrical systems."},
+        {"label": "D", "text": "Yes. The 2,500-foot AGL exclusion only applies to Class G airspace, not Class E."}
+      ],
+      "correct_answer": "A",
+      "explanation": "14 CFR 91.215 and 91.225 state: transponder/ADS-B required in Class E at/above 10,000 MSL, EXCLUDING airspace at and below 2,500 feet AGL. At 11,500 MSL over 9,500 MSL terrain (2,000 AGL), the aircraft falls within the exclusion. This applies to ALL aircraft, not just gliders (Option C). The exclusion applies in Class E specifically (Option D is wrong — it IS the Class E rule that contains the exclusion).",
+      "far_reference": "14 CFR 91.215", "acs_element": "PA.VI.B.K4"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q002", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "A pilot receiving VFR Flight Following is approaching the outer shelf of a Class B airspace area. Center says: 'Cessna 3AB, traffic at 2 o'clock, 5 miles, northeast bound, altitude indicates 4,500.' The pilot does NOT hear 'Cleared into the Class Bravo airspace.' Can the pilot enter the Class B?",
+      "options": [
+        {"label": "A", "text": "No. Flight Following is an advisory service — it does NOT constitute a clearance to enter Class B airspace. The pilot must hear the EXPLICIT phrase 'Cleared into the Class Bravo airspace' before penetrating the boundary. Traffic advisories, squawk code assignments, and flight following radar contact are all separate services. Without the specific clearance, the pilot must remain outside Class B and can either request the clearance or navigate around the airspace."},
+        {"label": "B", "text": "Yes. The fact that the controller is providing traffic advisories means the pilot has been approved to enter Class B. The controller would not issue advisories if they intended to deny entry."},
+        {"label": "C", "text": "Yes, as long as the pilot has a Mode C transponder and ADS-B Out. Equipment compliance is the only requirement for Class B entry."},
+        {"label": "D", "text": "No, but the pilot can enter if they transmit their intentions: 'Cessna 3AB, entering the Bravo.' Self-announcement is sufficient at busy facilities."}
+      ],
+      "correct_answer": "A",
+      "explanation": "14 CFR 91.131 requires explicit ATC clearance to enter Class B airspace. Flight Following, traffic advisories, and radar identification are separate services that do NOT imply Class B clearance. The pilot must hear the specific words. Option B conflates advisory services with clearance — a dangerous assumption. Option C confuses equipment requirements with operational clearance. Option D invents a self-announcement procedure that does not exist for Class B.",
+      "far_reference": "14 CFR 91.131", "acs_element": "PA.VI.B.K3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q003", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot programs a Direct-To GPS course to destination airport KPWK. The GPS shows the waypoint loaded and the distance to destination. However, the CDI needle is deflected fully to one side and is not responding to heading changes. What is the most likely cause?",
+      "options": [
+        {"label": "A", "text": "The CDI source is set to VLOC instead of GPS. On Garmin 430/530 and G1000 systems, the CDI source button toggles the navigation instrument between VOR/Localizer (VLOC) data and GPS data. If the source is on VLOC, the CDI needle responds to whatever VOR frequency is tuned in the NAV radio — NOT the GPS course. The GPS waypoint is loaded correctly but the CDI is reading a different system entirely. Fix: press the CDI source button to switch to GPS."},
+        {"label": "B", "text": "The GPS has lost satellite contact and is displaying the last known position. The pilot should power-cycle the GPS unit."},
+        {"label": "C", "text": "The OBS needs to be rotated to match the GPS course. GPS navigation requires manual OBS adjustment just like VOR navigation."},
+        {"label": "D", "text": "The aircraft is so far off the programmed course that the CDI is pegged at full deflection. The pilot should fly toward the destination until the CDI centers."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The CDI source mismatch (VLOC vs GPS) is the #1 cause of 'my GPS is programmed but the needle doesn't work.' The pilot loaded the GPS waypoint correctly, but the physical CDI needle is reading VOR data, not GPS data. Option B would show a GPS failure warning, not a normal CDI deflection. Option C is wrong — in GPS mode with Direct-To, the OBS auto-sets. Option D is possible but unlikely to produce a completely unresponsive needle.",
+      "far_reference": null, "acs_element": "PA.VI.B.S1"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q004", "perspective": "application", "question_type": "mcq", "tested_rkp_id": "RKP_03",
+      "text": "A pilot is tracking the 270 radial outbound from a VOR. The CDI needle slowly drifts to the right. What does this indicate, and what correction should the pilot apply?",
+      "options": [
+        {"label": "A", "text": "The CDI deflecting RIGHT means the desired course is to the RIGHT of the aircraft — the wind is pushing the aircraft to the LEFT (south, in this case). The pilot should apply the bracketing technique: turn approximately 10° to the right (toward the needle deflection) to arrest the drift and re-intercept the course. Once the needle re-centers, remove half the correction (turn 5° back left). If the needle stays centered, the pilot has found the Wind Correction Angle. VOR sensitivity increases as the aircraft approaches the station (angular sensitivity), so corrections should be smaller when close."},
+        {"label": "B", "text": "The CDI deflecting right means the aircraft is drifting right of course. The pilot should turn left to correct back to the radial."},
+        {"label": "C", "text": "The CDI deflecting right indicates the VOR station is to the right. The pilot should fly directly toward the station by turning right."},
+        {"label": "D", "text": "The CDI deflection is normal when tracking outbound. The needle always drifts outbound because the radials are diverging with distance."}
+      ],
+      "correct_answer": "A",
+      "explanation": "When tracking with proper CDI sensing (OBS set to the desired course), the needle deflects TOWARD the desired course. CDI right = course is to the right = aircraft has drifted left of course. The correction is toward the deflection (right). The bracketing technique prevents 'chasing the needle' — a common error where the pilot over-corrects repeatedly, creating a serpentine flight path. Option B reverses the correction direction. Option C confuses course correction with station orientation.",
+      "far_reference": null, "acs_element": "PA.VI.B.S3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q005", "perspective": "legal", "question_type": "mcq", "tested_rkp_id": "RKP_02",
+      "text": "A pilot installs a portable, battery-operated ADS-B transceiver in the cockpit of their aircraft. Does this satisfy the 14 CFR 91.225 ADS-B Out mandate?",
+      "options": [
+        {"label": "A", "text": "No. 14 CFR 91.225 requires INSTALLED, CERTIFICATED ADS-B Out equipment — not portable devices. A portable ADS-B transceiver does not meet the regulatory mandate because it has not been installed per an approved STC or field approval, its antenna placement and signal power may not meet TSO standards, and it cannot be verified by the aircraft's annual inspection. Portable ADS-B receivers (like Stratux) are legal for receiving ADS-B In traffic data for situational awareness, but a portable transmitter does NOT satisfy the ADS-B Out requirement."},
+        {"label": "B", "text": "Yes, as long as the device transmits on the correct frequency (978 MHz or 1090 MHz) and includes a WAAS GPS source."},
+        {"label": "C", "text": "Yes, but only in Class E and G airspace. Portable ADS-B Out is not accepted in Class B or C airspace."},
+        {"label": "D", "text": "It depends on the FAA FSDO's approval. Some districts allow portable ADS-B Out as a temporary solution while permanent installation is pending."}
+      ],
+      "correct_answer": "A",
+      "explanation": "The ADS-B Out mandate requires certified, installed equipment per TSO standards. Portable devices lack the signal power, antenna placement, and certification required by 91.225. The distinction between ADS-B In (receive traffic data — portable is fine) and ADS-B Out (transmit your position — must be installed) is critical. No FSDO has discretion to waive installation requirements.",
+      "far_reference": "14 CFR 91.225", "acs_element": "PA.VI.B.K4"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q006", "perspective": "safety", "question_type": "mcq", "tested_rkp_id": "RKP_01",
+      "text": "A pilot receiving Flight Following hears: 'Cessna 3AB, traffic, 12 o'clock, 3 miles, opposite direction, altitude indicates 4,500.' The pilot is flying a heading of 360° but has a 15° right wind correction angle (crab), so the aircraft's actual magnetic heading is 015°. Where should the pilot look for the traffic?",
+      "options": [
+        {"label": "A", "text": "The pilot should look slightly to the LEFT of the aircraft's nose — approximately at the 11 o'clock position relative to the aircraft's heading. ATC issues traffic calls based on the aircraft's RADAR GROUND TRACK, not its magnetic heading. The radar shows the aircraft tracking 360° (north). So '12 o'clock' means directly ahead on the 360° ground track. But because the aircraft is crabbed 15° to the right (heading 015°), the actual 360° direction is 15° to the LEFT of the nose from the pilot's perspective. The pilot should scan from 10:30 to 1 o'clock to account for imprecision."},
+        {"label": "B", "text": "Directly ahead through the windshield at 12 o'clock. The ATC traffic call is based on the aircraft's magnetic heading, not its ground track."},
+        {"label": "C", "text": "The traffic is behind the aircraft. 'Opposite direction' means the traffic is approaching from behind and will overtake the aircraft."},
+        {"label": "D", "text": "The pilot cannot determine the exact location because ATC traffic calls are only approximate. The pilot should scan the entire forward hemisphere."}
+      ],
+      "correct_answer": "A",
+      "explanation": "ATC traffic calls reference the aircraft's RADAR GROUND TRACK. The radar sees the aircraft moving on a 360° track — so '12 o'clock' means north on the radar display. But the aircraft's nose is pointed at 015° (crabbed right into the wind). From the pilot's perspective, true north (where the traffic is coming from) is 15° to the LEFT of the nose. This is a common source of missed traffic sightings. Option D is partially correct that scanning widely is good practice, but it doesn't explain the geometry.",
+      "far_reference": "AIM 4-1-15", "acs_element": "PA.VI.B.K3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q007", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_03",
+      "text": "During a checkride, the DPE covers the GPS screen and says: 'Your GPS has failed. Navigate to the practice area using the VOR.' The pilot has never practiced VOR navigation since flight training ended 6 months ago and is uncertain about the Tune-Identify-Twist procedure. What is the safest approach?",
+      "options": [
+        {"label": "A", "text": "Tell the DPE you are unable to use VOR navigation and ask to use the iPad as a backup instead.", "hazardous_attitude": "resignation"},
+        {"label": "B", "text": "Attempt the VOR procedure from memory. If the needle doesn't respond correctly, try different frequencies until one works.", "hazardous_attitude": "impulsivity"},
+        {"label": "C", "text": "Follow the standard Tune-Identify-Twist flow methodically: (1) Look up the nearest VOR on the sectional chart and tune the frequency. (2) Pull the NAV audio volume and LISTEN for the Morse code identifier — do NOT proceed until positively identified. (3) Rotate the OBS to center the CDI with a FROM flag to determine current radial. (4) Set the desired course and track. Verbalize each step to the DPE to demonstrate systematic aeronautical decision-making, even if you're rusty.", "hazardous_attitude": null},
+        {"label": "D", "text": "Navigate by pilotage (looking out the window) to the practice area and avoid using the VOR entirely. VOR navigation is outdated and rarely needed in modern aviation.", "hazardous_attitude": "anti_authority"}
+      ],
+      "correct_answer": "C",
+      "sjt_rationale": "Option A (resignation) refuses the task — on a checkride, this is a failure. On a real flight, it demonstrates inability to use backup systems. Option B (impulsivity) skips the identification step and guesses frequencies — dangerous. Option D (anti-authority) dismisses a required ACS skill. Option C applies the standard procedure methodically, demonstrates ADM by verbalizing the process, and shows the DPE that even when rusty, the pilot can fall back on trained procedures.",
+      "explanation": "The Tune-Identify-Twist sequence is a standardized, memorized procedure for exactly this reason — even when a pilot hasn't used VOR in months, the procedure provides a reliable mental checklist. The Identify step (listening for Morse code) is the most commonly skipped and most critical. Verbalizing the procedure demonstrates aeronautical decision-making and systematic thinking, both of which the DPE is actively evaluating.",
+      "far_reference": null, "acs_element": "PA.VI.B.S1"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q008", "perspective": "risk_management", "question_type": "sjt", "tested_rkp_id": "RKP_01",
+      "text": "A pilot is receiving VFR Flight Following during a cross-country. Center calls: 'Cessna 3AB, radar services terminated, squawk VFR, frequency change approved.' The pilot is 50 miles from their destination over unfamiliar terrain. What should the pilot's mental model be?",
+      "options": [
+        {"label": "A", "text": "Panic — ATC terminated services because of a safety concern in the area. The pilot should immediately climb to a higher altitude and consider diverting.", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "Accept the termination, squawk 1200, and continue the flight. The pilot was ALWAYS responsible for their own navigation, terrain clearance, traffic avoidance, and weather avoidance — Flight Following supplemented but never replaced these responsibilities. Termination is routine and usually due to increasing IFR workload, not a safety concern. The pilot should increase vigilance for traffic (no more ATC advisories), ensure the navigation plan is solid, and consider requesting services from the next sector when workable.", "hazardous_attitude": null},
+        {"label": "C", "text": "Ignore the termination and continue squawking the assigned code. ATC will resume service when workload decreases.", "hazardous_attitude": "anti_authority"},
+        {"label": "D", "text": "This means the aircraft is now in uncontrolled airspace with no radar coverage. The pilot should fly lower to remain visible to primary radar.", "hazardous_attitude": "macho"}
+      ],
+      "correct_answer": "B",
+      "sjt_rationale": "Option A invents a safety implication — termination is routine. Option C ignores a direct instruction and continues on an assigned code that may be reassigned to another aircraft. Option D conflates radar service termination with airspace classification — they are unrelated. Option B correctly understands that Flight Following was always advisory, recognizes termination is normal, and adjusts vigilance accordingly without overreacting.",
+      "explanation": "Flight Following is provided on a workload-permitting basis. When IFR traffic increases, the controller needs bandwidth and will drop VFR advisory services. This is routine — it does NOT mean the pilot is in danger or in unmonitored airspace. The pilot was always responsible for see-and-avoid, navigation, and weather — Flight Following only supplemented those responsibilities with traffic advisories.",
+      "far_reference": "AIM 4-1-15", "acs_element": "PA.VI.B.K3"
+    }
+  ]
+}

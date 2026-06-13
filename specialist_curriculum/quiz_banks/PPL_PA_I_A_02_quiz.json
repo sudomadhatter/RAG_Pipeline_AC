@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_A_02",
+  "title": "Medical Certificates (Classes & BasicMed)",
+  "questions": [
+    {
+      "id": "PPL_PA_I_A_02_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A 35-year-old airline transport pilot obtains a First-Class medical on January 1, 2024. She wants to keep exercising private pilot privileges on this single certificate as long as possible. When does it expire for private operations?",
+      "options": [
+        {"label": "A", "text": "January 31, 2025 — First-Class expires at 12 calendar months, and that terminates all privileges on the certificate"},
+        {"label": "B", "text": "January 31, 2026 — the certificate steps down to Second-Class at 12 months, then expires fully at 24 months"},
+        {"label": "C", "text": "January 31, 2029 — the certificate steps down through Second and Third-Class, with Third-Class valid for 60 months under age 40"},
+        {"label": "D", "text": "June 30, 2024 — First-Class for pilots 40 and older expires at 6 months, and she is close to the age threshold"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Under 14 CFR 61.23, a First-Class medical does not expire completely after its ATP duration. It steps down: 12 months for ATP privileges, then continues as Third-Class. For a pilot under 40, Third-Class duration is 60 calendar months from the month of examination. January 2024 + 60 months = January 2029, extended to the end of the month: January 31, 2029. The paper certificate stays the same — its legal utility changes.",
+      "far_reference": "14 CFR 61.23(d)",
+      "acs_element": "PA.I.A.K3"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A private pilot holds a valid Third-Class medical with 18 months remaining. Their doctor prescribes a new antidepressant that appears on the FAA's Do Not Issue / Do Not Fly list. The pilot feels completely normal. Can they legally act as PIC?",
+      "options": [
+        {"label": "A", "text": "Yes — the medical certificate remains valid for 18 more months, and the FAA cannot override a valid certificate remotely"},
+        {"label": "B", "text": "Yes — 14 CFR 61.53 only applies when the pilot experiences noticeable impairment that affects their ability to control the aircraft"},
+        {"label": "C", "text": "No — 14 CFR 61.53 prohibits flying based on the treatment itself, regardless of subjective wellness or side effect perception"},
+        {"label": "D", "text": "No — the FAA's medical database automatically revokes the certificate the moment the pharmacy fills the disqualifying prescription"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 61.53(a)(2) prohibits a pilot from acting as PIC while 'taking medication or receiving other treatment for a medical condition that results in the person being unable to meet the requirements for the medical certificate.' The standard is based on the treatment, not the pilot's subjective feeling. The certificate is not technically revoked (Option D is wrong) — the pilot is simply prohibited from exercising its privileges until the disqualifying condition is resolved.",
+      "far_reference": "14 CFR 61.53(a)",
+      "acs_element": "PA.I.A.K3"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot takes 25 mg of diphenhydramine (Benadryl) for allergies at 10 PM. At 7 AM the next morning — 9 hours later — they feel fully rested and plan a VFR cross-country. Diphenhydramine's half-life is approximately 4 to 6 hours. What is the primary safety risk?",
+      "options": [
+        {"label": "A", "text": "Nine hours comfortably exceeds the FAA's recommended 5x half-life clearance window, so the drug has fully metabolized and the pilot is safe to fly"},
+        {"label": "B", "text": "The 5x half-life rule requires 20 to 30 hours of clearance time, meaning residual sedation and degraded reaction time likely persist at the 9-hour mark"},
+        {"label": "C", "text": "Benadryl is an over-the-counter antihistamine not subject to 14 CFR 61.53, so the pilot is legally and medically clear to operate the aircraft today"},
+        {"label": "D", "text": "The safety risk depends entirely on whether the pilot disclosed the medication to their AME during their most recent medical certification examination"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The FAA recommends waiting at least 5 times the half-life of a medication before flying. Diphenhydramine has a half-life of 4-6 hours, so the clearance window is 20-30 hours. At 9 hours, the pilot is well within the residual impairment window. OTC medications ARE subject to 61.53 (Option C is wrong). The disclosure to an AME is irrelevant to the immediate safety question (Option D is wrong).",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.A.K3"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A 39-year-old private pilot obtains a Third-Class medical on March 10, 2024. They turn 40 on March 25, 2024 — fifteen days after the exam. When does this medical certificate expire for exercising private pilot privileges?",
+      "options": [
+        {"label": "A", "text": "March 31, 2026 — the pilot turns 40 within the same month as the exam, triggering the shorter 24-month duration for pilots age 40 and over"},
+        {"label": "B", "text": "March 31, 2029 — age at the time of the examination was 39, so the 60-month under-40 duration applies with the calendar month extension"},
+        {"label": "C", "text": "March 10, 2029 — the 60-month duration runs from the exact date of examination, expiring day-for-day without the calendar month extension"},
+        {"label": "D", "text": "March 31, 2028 — the FAA uses a 48-month compromise duration when the pilot turns 40 within 30 days of the examination date"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Under 14 CFR 61.23(d), the expiration is determined solely by the pilot's age on the date of the examination. The pilot was 39 on March 10, so the Third-Class medical is valid for 60 calendar months. March 2024 + 60 months = March 2029, extended to the end of the month: March 31, 2029. Turning 40 fifteen days later does NOT retroactively change the duration. There is no '48-month compromise' provision (Option D is fabricated).",
+      "far_reference": "14 CFR 61.23(d)",
+      "acs_element": "PA.I.A.K3"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are preflighting at a non-towered airport for a solo VFR cross-country. You discover your driver's license expired yesterday. You have your valid pilot certificate and current Third-Class medical in your flight bag. Can you legally depart as PIC?",
+      "options": [
+        {"label": "A", "text": "Yes — a valid FAA pilot certificate is sufficient government identification for domestic VFR operations without any additional photo identification"},
+        {"label": "B", "text": "Yes — a recently expired driver's license remains acceptable as photo ID as long as the photograph is still clearly recognizable to inspectors"},
+        {"label": "C", "text": "Yes — the photo identification requirement under 14 CFR 61.3 only applies at towered airports where TSA security screening is conducted"},
+        {"label": "D", "text": "No — 14 CFR 61.3(a)(2) requires a VALID government-issued photo identification, and an expired driver's license does not satisfy this requirement"}
+      ],
+      "correct_answer": "D",
+      "explanation": "14 CFR 61.3(a)(2) explicitly requires a valid photo identification. The word 'valid' means current and unexpired. An expired driver's license — even if it expired yesterday — does not meet the regulatory requirement. The photo ID rule applies everywhere, not just at towered airports (Option C is wrong). A pilot certificate is not a substitute for a government-issued photo ID (Option A is wrong).",
+      "far_reference": "14 CFR 61.3(a)(2)",
+      "acs_element": "PA.I.A.K4"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "You plan a VFR flight from Fort Lauderdale (KFLL) to Nassau, Bahamas (MYNN). You have your pilot certificate, medical, photo ID, and the aircraft's registration and airworthiness certificate. What additional documents do you need?",
+      "options": [
+        {"label": "A", "text": "No additional documents are required beyond the standard pilot and aircraft paperwork because the Bahamas accepts FAA certification directly"},
+        {"label": "B", "text": "An Aircraft Radio Station License for the aircraft is required for international flights, but the pilot does not need any additional personal documentation"},
+        {"label": "C", "text": "Both a Restricted Radiotelephone Operator Permit for the pilot and an Aircraft Radio Station License for the aircraft under 47 CFR Part 87"},
+        {"label": "D", "text": "A specific FAA Letter of Authorization for international operations and a current passport are required in addition to the standard pilot documents"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Under 47 CFR Part 87, international flights require both documents: the pilot must hold a Restricted Radiotelephone Operator Permit (FCC Form 605, lifetime validity, no test required) and the aircraft must have an Aircraft Radio Station License (valid 10 years). Domestic VFR flights within the US require neither — aircraft are 'licensed by rule' domestically.",
+      "far_reference": "47 CFR 87.18; 47 CFR 13.9",
+      "acs_element": "PA.I.A.K4"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "You wake up with moderate sinus congestion. You took pseudoephedrine (not on the Do Not Fly list) 3 hours ago and feel improved. You have a cross-country planned with a passenger to 8,500 feet MSL. All options are legal. Which is SAFEST?",
+      "options": [
+        {"label": "A", "text": "Depart now — the decongestant is working well, the congestion is noticeably clearing, and your passenger rearranged their work schedule for this flight", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Depart now — you have flown with worse sinus congestion before without any issues and you can always descend if the pressure becomes uncomfortable", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the entire flight immediately — any degree of sinus congestion is too unpredictable, and it is irresponsible to risk a passenger on a day like this", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Test equalization with a Valsalva maneuver on the ground first — if it fails or causes pain, cancel; if it clears, depart but plan a lower cruise altitude"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "All four options are legal — pseudoephedrine is not on the Do Not Fly list and the pilot is not prohibited from flying with mild congestion. Option A focuses on the passenger's schedule rather than the pilot's medical state (get-there-itis). Option B dismisses the risk based on past experience — a classic overconfidence trap (macho). Option C treats a manageable situation as hopeless when a reasonable self-assessment exists (resignation). Option D is safest because it introduces an objective test (Valsalva) before committing, and includes a risk mitigation plan (lower altitude).",
+      "explanation": "Sinus congestion at altitude can cause severe barotrauma — a sinus block during descent can produce incapacitating facial pain, disorientation, and nosebleed. The Valsalva maneuver tests whether the Eustachian tubes and sinuses can equalize pressure. If equalization fails on the ground, it will fail worse at 8,500 feet during descent. FAA-H-8083-25C covers the effects of altitude on the sinuses. Reference: NTSB has cited sinus barotrauma as a contributing factor to pilot incapacitation in general aviation accidents (ntsb.gov aeromedical reports); NTSB SS-14/01 ('Drug Use Trends in Aviation') documents that self-medicating pilots who fly with active physiological conditions represent a disproportionate share of incapacitation-related accidents.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.A.K3"
+    },
+    {
+      "id": "PPL_PA_I_A_02_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "You arrive at the airport for a trip with two passengers. While preflighting, you realize your pilot certificate is at home — a 30-minute drive. Under 61.3, you cannot act as PIC without it. Your passengers drove 2 hours and weather deteriorates by late afternoon. All options are legal. Which is SAFEST?",
+      "options": [
+        {"label": "A", "text": "Drive home to retrieve it, then skip the planned fuel stop and fly direct — your fuel calculations show you have just enough to make the destination safely", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Drive home to retrieve it, then depart quickly and fly at higher-than-normal cruise speed — you know this route well enough to handle deteriorating weather", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the entire trip right now — the schedule is already blown, the weather is trending poorly, and it is not worth the effort of driving home and back", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Drive home to retrieve the certificate, accept the hour delay, then re-evaluate weather and fuel planning with the adjusted departure time before deciding"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "All four options acknowledge the legal requirement — the pilot must go get the certificate. The differentiation is in what happens after. Option A skips the fuel stop, introducing the physical risk of marginal fuel reserves (get-there-itis). Option B promises to beat deteriorating weather through speed — overconfidence compounding the original delay (macho). Option C cancels entirely when a reasonable middle path exists — giving up unnecessarily (resignation). Option D is safest because it solves the original problem without introducing new risks: get the document, accept the delay, then make a fresh go/no-go decision.",
+      "explanation": "14 CFR 61.3(a) requires the pilot certificate to be in personal possession or readily accessible in the aircraft. The forgotten certificate creates time pressure that can trigger hazardous attitudes. FAA-H-8083-2A identifies this exact pattern: an initial setback compounds into poor risk management when the pilot tries to 'make up' for lost time instead of accepting the new reality and re-planning. Reference: FAA-H-8083-2A Chapter 2 (Five Hazardous Attitudes — Get-There-Itis, Macho, Resignation); FAA Order 2150.3C documents 14 CFR 61.3 as one of the most commonly cited violations in FAA ramp-check enforcement actions, confirming the real-world consequence of this scenario.",
+      "far_reference": "14 CFR 61.3(a)",
+      "acs_element": "PA.I.A.K4"
+    }
+  ]
+}

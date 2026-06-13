@@ -1,0 +1,84 @@
+{
+  "lesson_id": "PPL_PA_I_F_01",
+  "title": "Density Altitude — Why Hot, High, and Humid Aircraft Underperform",
+  "acs_task_reference": "Area I, Task F",
+  "acs_element_keys": [
+    "PA.I.F.K1a",
+    "PA.I.F.K1b"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "Pressure Altitude vs. Density Altitude — What the Altimeter Doesn't Tell You",
+      "why": "The DPE asks: 'The airport is at 5,000 feet elevation but the DA is 7,500 feet. What does that mean for your takeoff roll?' The pilot who says 'my altimeter already accounts for it' has failed. Density altitude is a performance measurement — not a position measurement. It tells the engine, propeller, and wings what they think the air density is, regardless of where the aircraft physically is.",
+      "knowledge": "Pressure Altitude (PA): the altitude indicated when the altimeter is set to 29.92 in Hg (standard pressure). PA corrects for actual atmospheric pressure vs. standard. Density Altitude (DA): pressure altitude corrected for non-standard temperature. DA = PA + (approximately 120 feet per degree Celsius ABOVE standard temperature). Standard temperature lapse rate: 2°C per 1,000 feet of altitude. Standard temperature at sea level: 15°C (59°F). Standard temperature at 5,000 feet MSL: 15° - (5 × 2°) = 5°C. If the actual temperature at 5,000 feet is 30°C — 25°C above standard — the DA penalty is approximately 25 × 120 = 3,000 additional feet. DA = 5,000 PA + 3,000 = 8,000 feet. The aircraft 'thinks' it is at 8,000 feet for performance purposes — even though it is on the ground at 5,000 feet. DA is the TRUE input for all performance calculations: takeoff roll, climb gradient, accelerate-stop distance, aircraft ceiling. The altimeter does NOT display DA; it displays pressure altitude corrected for current altimeter setting.",
+      "acs_elements": [
+        "PA.I.F.K1a"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "FAA-H-8083-2A Ch 4"
+      ],
+      "knowledge_formatted": "### Pressure Altitude (PA)\n- **Pressure Altitude (PA)** is the altitude indicated when the altimeter is set to **29.92 in Hg** (standard"
+    },
+    {
+      "id": "RKP_02",
+      "title": "The Three Killers — Hot, High, and Humid",
+      "why": "The DPE presents a summer scenario at a high-elevation airport: OAT 95°F, elevation 4,500 feet, relative humidity 75%. The student who calculates only the temperature and pressure components misses humidity. The phrase 'hot, high, and humid' encompasses all three density-reducing factors. The compounding effect can push DA 2,000+ feet above what temperature alone would suggest.",
+      "knowledge": "Density altitude is increased (air becomes 'thinner') by three independent factors: (1) HIGH ALTITUDE: the higher the pressure altitude, the lower the air density. Each 1,000 feet of altitude increases DA by approximately 1,000 feet in standard conditions. (2) HIGH TEMPERATURE: warm air expands, reducing molecular density. The primary DA driver in summer at low-elevation airports. Rule: roughly 120 feet of additional DA per °C above standard temperature at that altitude. (3) HIGH HUMIDITY: water vapor (H2O, molecular weight 18) displaces heavier nitrogen (N2, molecular weight 28) and oxygen (O2, molecular weight 32) molecules. High humidity physically reduces air density — but the effect is not captured in standard DA formulas that use only temperature and pressure. The practical impact: at 90% relative humidity on a hot day, humidity may add an effective 2°C equivalent to the DA calculation — a 240-foot penalty that is not shown on a standard E6B computation. Performance impacts of high DA: (a) Engine: less oxygen per intake stroke → reduced power output (non-turbocharged). (b) Propeller: less air to bite per revolution → reduced thrust. (c) Wings: thinner air requires higher TAS to generate the same lift → longer takeoff roll, reduced climb rate, higher stall speed (in TAS). All POH performance charts must be entered with DA — not field elevation, not MSL altitude.",
+      "acs_elements": [
+        "PA.I.F.K1b"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "FAA-H-8083-2A Ch 4",
+        "NTSB accident reports — density altitude"
+      ],
+      "knowledge_formatted": "air density**, but is **not captured** in standard DA formulas (which use only temperature and pressure)\n    *   Practical impact: At **90% relative humidity** on a hot day,"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Reading the POH Performance Charts — The Right Inputs in the Right Order",
+      "why": "The DPE gives the applicant a POH and environmental data and says 'Calculate your takeoff distance.' Applicants who enter field elevation instead of pressure altitude, or skip the density altitude correction, produce takeoff distances that are significantly shorter than actual — potentially by 30-50%. This directly contributes to runway overruns on hot summer days at mountain airports.",
+      "knowledge": "Performance chart input sequence (POH Section 5): (1) Determine PRESSURE ALTITUDE: set altimeter to 29.92, read indicator — or use the field elevation correction table if altimeter is unavailable. Alternative: pressure altitude = field elevation + [(29.92 - current altimeter setting) × 1,000 feet]. (2) Determine OUTSIDE AIR TEMPERATURE (OAT): read thermometer in Celsius. (3) Enter DENSITY ALTITUDE chart or computation: OAT + PA → DA. (4) Enter TAKEOFF DISTANCE chart with the CORRECT inputs: typically PA and OAT together (many POH charts use PA and OAT directly rather than pre-computed DA). (5) Apply POH correction factors: headwind component (reduce distance), tailwind component (increase distance), upslope runway (increase), downslope (decrease). Common errors: (a) Using field elevation instead of pressure altitude — underestimates density altitude when atmospheric pressure is below standard (common in summer). (b) Using Fahrenheit instead of Celsius for OAT — produces wildly incorrect chart entries. (c) Ignoring headwind correction — an 8-knot headwind reduces takeoff roll approximately 10%; ignoring it adds a false safety margin. NTSB CASE REFERENCE: Multiple fatal takeoff accidents at high-altitude mountain airports occur each year when pilots use field elevation instead of DA in POH chart entries.",
+      "acs_elements": [
+        "PA.I.F.K1a"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 Ch 11",
+        "POH Section 5"
+      ],
+      "knowledge_formatted": "### Performance Chart Input Sequence (POH Section 5)\n- Determine **Pressure Altitude (PA)**: Set altimeter to **29.92** and read indicator, or use the field"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Non-Standard Atmospheric Conditions and the Altimetry Error",
+      "why": "The DPE asks: 'The temperature is well below ISA standard. Does that help or hurt your performance?' The answer: below-standard temperature increases air density, which IMPROVES performance. But it also causes your altimeter to read HIGH — the aircraft is lower than the altimeter indicates. 'From high to low, look out below' is the altimetry error mnemonic. Cold-weather altimetry errors in mountainous terrain have contributed to CFIT accidents.",
+      "knowledge": "Non-standard temperature effects on altimetry and performance: (1) BELOW STANDARD TEMPERATURE (cold): air is denser than standard. Aircraft performance IMPROVES (more air molecules for engine, propeller, and wings). Altimeter reads HIGH — the aircraft is actually lower than indicated. The altimeter assumes standard temperature lapse rate; in cold air, the same pressure gradient exists over a shorter vertical distance. Practical: in mountainous terrain in winter, true altitude may be 300-500 feet LOWER than the altimeter reads. Mnemonic: 'From high to low (pressure/temperature), look out below (aircraft is lower than altimeter shows).' (2) ABOVE STANDARD TEMPERATURE (hot): air is less dense. Performance degrades (DA effect). Altimeter reads LOW — aircraft is higher than indicated in extreme heat but the DA performance penalty still applies. Altitude corrections for cold temperature are required for IFR approaches below certain temperatures (ICAO APEX and FAA cold temperature altitude corrections in AIM 7-2-3). For VFR pilots: understand that cold weather altimetry error increases terrain clearance risk in mountainous flight.",
+      "acs_elements": [
+        "PA.I.F.K1b"
+      ],
+      "far_references": [
+        "14 CFR 91.121",
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "AIM 7-2-3",
+        "FAA-H-8083-15B Ch 12"
+      ],
+      "knowledge_formatted": "### Below Standard Temperature (Cold)\n- Air is **denser than standard**\n- Aircraft performance **IMPROVES** (more air molecules for engine, propeller, and wings)"
+    }
+  ],
+  "lesson_overview": "## Density Altitude — The Invisible Performance Killer\n\nYou're at a mountain strip in August. Elevation 5,500 feet, temperature 95°F, relative humidity 80%. The POH says the aircraft can perform the departure in 900 feet of ground roll at sea level standard conditions. Can you do this departure? Almost certainly not in those conditions — and the pilot who doesn't understand density altitude is the pilot who doesn't make it off the runway. This lesson is about calculating exactly why, and what to do about it.\n\n**Pressure altitude vs. density altitude: the critical distinction.** Your altimeter measures pressure altitude. If you set it to 29.92 in Hg, it reads pressure altitude. But pressure altitude doesn't account for temperature. Density altitude does. Density altitude = pressure altitude corrected for non-standard temperature. When it's hot, the air expands — molecules spread out, density decreases. The aircraft 'thinks' it's at a higher altitude than it physically is. At 5,500 feet pressure altitude on a day that's 30°C above standard, the density altitude might be 8,500 feet. The aircraft's engine, propeller, and wings are all performing as if they were at 8,500 feet.\n\n**Quick DA estimate.** Standard temperature at any altitude = 15°C − (2°C × altitude in thousands of feet). At 5,500 feet: standard temperature = 15 − 11 = 4°C. If actual OAT is 30°C, you're 26°C above standard. DA penalty: approximately 120 feet per °C above standard. 26 × 120 = 3,120 additional feet. DA ≈ 5,500 PA + 3,120 = 8,620 feet. Use the E6B or POH chart for precise calculation.\n\n**The three killers and why humidity is sneaky.** Hot, high, and humid each independently reduce air density and degrade performance. Hot and high are captured in the standard DA formula. Humidity is not — and it compounds the effect. Water vapor (molecular weight 18) displaces heavier nitrogen (28) and oxygen (32) molecules. At 90% relative humidity on a hot day, effective density altitude may be 200–400 feet higher than the temp/pressure calculation shows. No standard E6B accounts for this — it requires judgment.\n\n**Entering the POH performance charts correctly.** POH Section 5 performance charts require: (1) pressure altitude (set altimeter to 29.92, read the indicator OR use the correction formula: field elevation + [(29.92 − current altimeter setting) × 1,000]), and (2) OAT in Celsius. Most charts use these two inputs directly. Do not enter field elevation. Do not use Fahrenheit. After computing takeoff and obstacle distance — apply correction factors: headwind reduces distance, upslope runway increases it, wet grass adds ~20%. Every uncorrected factor is a false margin of safety.\n\n**The cold-temperature altimetry error: the flip side.** Below-standard temperature (cold) increases air density, which improves engine and propeller performance. But it comes with a different problem: your altimeter reads HIGH when it's cold. The pressure gradient compresses over a shorter vertical distance in cold air, so the same pressure that would indicate 4,000 feet in standard conditions actually corresponds to an aircraft that is physically lower. 'From high to low, look out below' — flying from high pressure to low pressure (or high temp to low temp) places the aircraft lower than the altimeter indicates. In mountainous terrain in winter, terrain clearance may be hundreds of feet less than the altimeter shows.\n\n**The checkride trap:** The DPE gives you a mountain airport scenario with an actual temperature 25°C above standard. They ask: 'Is the density altitude higher or lower than field elevation?' Higher — always higher when above standard temperature. Then: 'How does this affect your takeoff roll?' Longer — more roll needed for the same liftoff airspeed because TAS must be higher in thinner air. Then: 'What does your POH call for at this density altitude?' That's when you pull out the chart. Have the complete calculation ready before the checkride.",
+  "audio_file": "PPL_PA_I_F_audio.m4a",
+  "video_file": "PPL_PA_I_F_video.mp4"
+}
