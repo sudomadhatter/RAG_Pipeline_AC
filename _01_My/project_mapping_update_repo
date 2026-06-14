@@ -1,0 +1,49 @@
+# Walkthrough: Dynamic AST Repository Map Generator
+
+I have successfully built and integrated the Dynamic Repository Map generator into your project. The agents now have a full architectural understanding of the code tree without wasting tokens on file contents!
+
+Here is a breakdown of what was created, how it works, and how you can copy it to your other projects.
+
+---
+
+## 1. The Generator Script
+The core engine is located at `scripts/generate_repo_map.py`. 
+
+**How it works:**
+1. **Directory Walking:** It starts at the root directory of your project and recursively walks down the folder tree.
+2. **Filtering Noise:** It skips any directory listed in `IGNORE_DIRS` (like `.git`, `.venv`, `__pycache__`, `auth_keys`, etc.). This ensures the map only contains relevant source code.
+3. **AST Parsing:** When it encounters a `.py` file, it uses Python's built-in `ast` module (Abstract Syntax Tree). Instead of blindly reading text, the AST reads the *logic* structure of the file. It extracts the names of all `class` and `def` (function) definitions along with their arguments.
+4. **Markdown Export:** It formats the tree structure into a clean text block and saves it to `docs/repo-map.md`.
+
+> [!TIP]
+> If you have sensitive folders or build directories you don't want the AI to read, simply add them to the `IGNORE_DIRS` set inside the `generate_repo_map.py` script.
+
+---
+
+## 2. Agent Integration
+For the AI to actually *use* this map, we updated its configuration files:
+
+1. **`CLAUDE.md` and `AGENTS.md`**: We added `docs/repo-map.md` to the **Source-of-Truth Files** table. 
+2. **Session Boot Sequence**: We added an instruction to the **Session Start Ritual** telling the AI that `docs/repo-map.md` is the very first file it should read upon startup. 
+3. **Workflows**: We created a new file at `.agent/workflows/1_update_repo_map.md` (and the Claude equivalent).
+
+---
+
+## 3. How to use it in THIS project
+Whenever you add a new file, a new function, or a new class to the Python backend, simply tell the AI:
+**`/1_update_repo_map`**
+
+The AI will run the script, regenerate the `docs/repo-map.md`, and its structural context will be perfectly synced with the latest codebase.
+
+---
+
+## 4. How to port this to your OTHER projects
+If you want to add this feature to another Python project you own, follow these 3 simple steps:
+
+1. **Copy the script:** Copy `scripts/generate_repo_map.py` to the other project.
+2. **Add to Boot Config:** Open the other project's `CLAUDE.md` or system prompt, and add:
+   > *"Read `docs/repo-map.md` to understand the project structure."*
+3. **Add the Workflow:** Create a quick workflow rule (or just run it yourself manually) telling the AI to run `python scripts/generate_repo_map.py` when things change.
+
+> [!IMPORTANT]
+> If you decide to port this to a **TypeScript / JavaScript** project, the Python `ast` module won't work on `.ts`/`.js` files. For JS/TS projects, you would need to use a tool like `tree-sitter` or write a script utilizing the Node.js `fs` module and a basic regex parser instead!
