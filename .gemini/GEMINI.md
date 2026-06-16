@@ -28,6 +28,9 @@ Never place ad-hoc test scripts, debug outputs, or temp files in the project roo
 ### Rule 6: Artifact Creation Protocol
 Any guide, report, analysis, or documentation **MUST** use `IsArtifact: true` with valid `ArtifactMetadata` so it appears in the IDE Artifacts panel. Non-code docs saved without the artifact flag are considered failed.
 
+Additionally, to maintain a persistent record in the repository, all plans, checklists, walkthroughs, and code review artifacts MUST be saved in the directory `_01_My/_artifacts/<YYYY-MM-DD>_<summary>/` (where `<YYYY-MM-DD>` is the current date and `<summary>` is a brief, lowercase, hyphen-separated summary/slug of the task, e.g., `_01_My/_artifacts/2026-06-16_add-artifact-rules/`).
+
+
 ### Rule 7: Accuracy Over Speed
 **Our primary objective is perfection and accuracy, not speed.** 
 - **Exhaustive Scope Checking:** Comprehensively check all available resources (context, specs, rules, `docs/reference/`) to understand the full scope before acting.

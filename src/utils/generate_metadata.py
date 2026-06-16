@@ -49,7 +49,10 @@ def generate_curriculum_metadata(markdown_path: Path) -> Path:
     - type: Always "lesson_chunk".
     - ancestral_context: The hierarchical path in the ACS, e.g., "Private Pilot > Preflight Preparation > Pilot Qualifications".
     - reg_keys: A list of 14 CFR regulations relevant to this task (e.g., ["14 CFR part 61", "14 CFR part 91"]).
-    - doc_keys: A list of FAA handbooks/ACs relevant to this task (e.g., ["FAA-H-8083-25 (PHAK)", "AC 61-98E"]).
+    - doc_keys: A list of FAA handbooks/ACs at DOCUMENT level only (e.g., ["FAA-H-8083-25C", "AC 61-98D", "AIM"]).
+      IMPORTANT: Use document-level identifiers ONLY. Do NOT include chapter or section
+      (e.g., "FAA-H-8083-25C" not "FAA-H-8083-25C (PHAK Ch 6)"). These keys must match
+      the Vertex AI Search document_tags vocabulary exactly. doc_keys must NOT be empty.
     - keywords: 3 to 6 critical keyword terms.
 
     Here is the lesson text:
@@ -75,6 +78,20 @@ def generate_curriculum_metadata(markdown_path: Path) -> Path:
     
     # Let's ensure it actually loads cleanly
     parsed_dict = json.loads(metadata_json)
+    
+    # Validate against the hardened schema (will fail on empty doc_keys)
+    validated = CurriculumLessonSchema(**parsed_dict)
+    
+    # Post-generation warnings for chapter-level keys
+    for key in validated.structData.doc_keys:
+        if '(' in key or 'Ch ' in key:
+            print(f"  [WARN] Chapter-level key detected: '{key}' — normalize to document level")
+    
+    if not validated.structData.doc_keys:
+        raise ValueError(f"doc_keys is EMPTY after validation — this lesson will break the DB1→DB2 hop")
+    
+    print(f"  doc_keys: {validated.structData.doc_keys}")
+    print(f"  reg_keys: {validated.structData.reg_keys}")
     
     # Write it back out alongside the .md file
     out_path = markdown_path.with_suffix('.json')

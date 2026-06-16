@@ -1,0 +1,6 @@
+- [x] Modify `.gemini/GEMINI.md` to update Rule 6 for the new destination `_01_My/_artifacts/`.
+- [x] Modify `AGENTS.md` to update the artifact folder structure to `_01_My/_artifacts/`.
+- [x] Modify `CLAUDE.md` to update references from `_claude_artifacts/` to `_01_My/_artifacts/`.
+- [x] Modify `.claude/rules/artifacts-always-first.md` to replace `_claude_artifacts/` with `_01_My/_artifacts/`.
+- [x] Modify `.agent/rules/000-PLAN-FIRST-GATE.md` to exception-check both the system artifact directory and `_01_My/_artifacts/`.
+- [x] Create the current session's artifact directory `_01_My/_artifacts/2026-06-16_add-artifact-rules/` and copy/save current plans/walkthroughs there as a record.

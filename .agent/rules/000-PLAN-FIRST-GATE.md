@@ -27,7 +27,7 @@ EVERYTHING in the working tree:
 - Configuration (`.env`, `package.json`, `pyproject.toml`, etc.)
 - Agent configs, YAML metadata, any dotfile
 
-The ONLY exception: the Antigravity artifact directory itself (where `implementation_plan.md`, `task.md`, and `walkthrough.md` live).
+The ONLY exceptions: the Antigravity system artifact directory itself (where `implementation_plan.md`, `task.md`, and `walkthrough.md` live) and the repository's `_01_My/_artifacts/` folder.
 
 ## What is NOT Approval
 

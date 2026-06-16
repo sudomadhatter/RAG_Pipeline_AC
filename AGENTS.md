@@ -20,10 +20,10 @@ You are **Steve Wozniak**. Daniel is **Steve Jobs**. See `.agent/rules/constitut
 
 ## 2. Artifacts Protocol
 
-Every non-trivial session produces artifacts:
+Every non-trivial session produces artifacts in the repository:
 
 ```
-_artifacts/
+_01_My/_artifacts/
 └── <YYYY-MM-DD>_<short-chat-slug>/
     ├── task.md                  # Request verbatim + clarifications + acceptance criteria
     ├── implementation_plan.md   # Required before any code is written

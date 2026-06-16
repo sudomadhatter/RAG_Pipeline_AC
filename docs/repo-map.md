@@ -8,31 +8,189 @@ Ingestion_pipeline_AvCh
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── _01_My
-│   ├── project_context_prps
-│   │   ├── SPECIALIST_AGENT_PRD.md
-│   │   ├── V2.1 Master PRD & Architecture.md
-│   │   ├── acs_6_extracted.txt
-│   │   ├── admin_agent_dag_prp.md
-│   │   ├── admin_agent_telemetry_research.md
-│   │   ├── admin_dashboard_prp.md
+│   ├── instruction_docs
 │   │   ├── bridge_key_guide.md
-│   │   ├── curriculum_mapping_analysis.md
-│   │   ├── dag_prebunking_vision.md
-│   │   ├── graph_rag_architecture_prp.md
-│   │   ├── learning_grading_progression.md
-│   │   ├── learning_progression_and_decay.md
-│   │   ├── prd.md
-│   │   ├── quiz_generator_prompt.md
-│   │   ├── quiz_loop_architecture.md
-│   │   ├── rag_pipeline_architecture_v2.md
-│   │   ├── rag_rkp_quiz_prd.md
-│   │   ├── rag_swarm_logic.md
-│   │   ├── self_learning_tracking_metrics.md
-│   │   ├── socratic_quiz_tutor_architecture.md
-│   │   ├── socratic_teacher_architecture.md
-│   │   └── talker_architecture.md
-│   └── rkp_creation_guide.md
+│   │   ├── curriculum_fix_audit_and_plan.md
+│   │   ├── get_back_on_track.md
+│   │   ├── quiz_authoring_guide.md
+│   │   └── rkp_creation_guide.md
+│   └── project_context_prps
+│       ├── SPECIALIST_AGENT_PRD.md
+│       ├── V2.1 Master PRD & Architecture.md
+│       ├── acs_6_extracted.txt
+│       ├── admin_agent_dag_prp.md
+│       ├── admin_agent_telemetry_research.md
+│       ├── admin_dashboard_prp.md
+│       ├── bridge_key_guide.md
+│       ├── curriculum_mapping_analysis.md
+│       ├── dag_prebunking_vision.md
+│       ├── graph_rag_architecture_prp.md
+│       ├── learning_grading_progression.md
+│       ├── learning_progression_and_decay.md
+│       ├── prd.md
+│       ├── quiz_generator_prompt.md
+│       ├── quiz_loop_architecture.md
+│       ├── rag_pipeline_architecture_v2.md
+│       ├── rag_rkp_quiz_prd.md
+│       ├── rag_swarm_logic.md
+│       ├── self_learning_tracking_metrics.md
+│       ├── socratic_quiz_tutor_architecture.md
+│       ├── socratic_teacher_architecture.md
+│       └── talker_architecture.md
+├── curriculum_components
+│   ├── curriculum_modules
+│   │   ├── Area 1 Task A PPL.md
+│   │   ├── Area 1 Task B PPL.md
+│   │   ├── Area 1 Task C PPL.md
+│   │   ├── Area 1 Task D PPL.md
+│   │   ├── Area 1 Task E PPL.md
+│   │   ├── Area 1 Task F PPL.md
+│   │   ├── Area 1 Task G PPL.md
+│   │   ├── Area 1 Task H PPL.md
+│   │   ├── Area 11 Task A PPL.md
+│   │   ├── Area 3 Tasks A,B PPL.md
+│   │   ├── Area 6 Task B PPL.md
+│   │   ├── Area 7 A,B,D PPL.md
+│   │   └── Area 9 Tasks B,C PPL.md
+│   ├── lesson_podcasts
+│   │   ├── PPL_PA_I_A_01_podcast.md
+│   │   ├── PPL_PA_I_A_02_podcast.md
+│   │   ├── PPL_PA_I_A_03_podcast.md
+│   │   ├── PPL_PA_I_A_04_podcast.md
+│   │   ├── PPL_PA_I_B_01_podcast.md
+│   │   ├── PPL_PA_I_B_02_podcast.md
+│   │   ├── PPL_PA_I_B_03_podcast.md
+│   │   ├── PPL_PA_I_B_04_podcast.md
+│   │   ├── PPL_PA_I_B_05_podcast.md
+│   │   ├── PPL_PA_I_C_01_podcast.md
+│   │   ├── PPL_PA_I_C_02_podcast.md
+│   │   ├── PPL_PA_I_C_03_podcast.md
+│   │   ├── PPL_PA_I_C_04_podcast.md
+│   │   ├── PPL_PA_I_C_05_podcast.md
+│   │   ├── PPL_PA_I_D_01_podcast.md
+│   │   ├── PPL_PA_I_D_02_podcast.md
+│   │   ├── PPL_PA_I_D_03_podcast.md
+│   │   ├── PPL_PA_I_D_04_podcast.md
+│   │   ├── PPL_PA_I_E_01_podcast.md
+│   │   ├── PPL_PA_I_E_02_podcast.md
+│   │   ├── PPL_PA_I_E_03_podcast.md
+│   │   ├── PPL_PA_I_E_04_podcast.md
+│   │   ├── PPL_PA_I_F_01_podcast.md
+│   │   ├── PPL_PA_I_F_02_podcast.md
+│   │   ├── PPL_PA_I_F_03_podcast.md
+│   │   ├── PPL_PA_I_F_04_podcast.md
+│   │   ├── PPL_PA_I_G_01_podcast.md
+│   │   ├── PPL_PA_I_G_02_podcast.md
+│   │   ├── PPL_PA_I_G_03_podcast.md
+│   │   ├── PPL_PA_I_G_04_podcast.md
+│   │   ├── PPL_PA_I_G_05_podcast.md
+│   │   ├── PPL_PA_I_H_01_podcast.md
+│   │   ├── PPL_PA_I_H_02_podcast.md
+│   │   └── PPL_PA_I_H_03_podcast.md
+│   ├── quiz_banks
+│   │   ├── PPL_PA_III_A_01_quiz.json
+│   │   ├── PPL_PA_III_A_02_quiz.json
+│   │   ├── PPL_PA_III_B_01_quiz.json
+│   │   ├── PPL_PA_IX_B_01_quiz.json
+│   │   ├── PPL_PA_IX_C_01_quiz.json
+│   │   ├── PPL_PA_I_A_01_quiz.json
+│   │   ├── PPL_PA_I_A_02_quiz.json
+│   │   ├── PPL_PA_I_A_03_quiz.json
+│   │   ├── PPL_PA_I_A_04_quiz.json
+│   │   ├── PPL_PA_I_B_01_quiz.json
+│   │   ├── PPL_PA_I_B_02_quiz.json
+│   │   ├── PPL_PA_I_B_03_quiz.json
+│   │   ├── PPL_PA_I_B_04_quiz.json
+│   │   ├── PPL_PA_I_B_05_quiz.json
+│   │   ├── PPL_PA_I_C_01_quiz.json
+│   │   ├── PPL_PA_I_C_02_quiz.json
+│   │   ├── PPL_PA_I_C_03_quiz.json
+│   │   ├── PPL_PA_I_C_04_quiz.json
+│   │   ├── PPL_PA_I_C_05_quiz.json
+│   │   ├── PPL_PA_I_D_01_quiz.json
+│   │   ├── PPL_PA_I_D_02_quiz.json
+│   │   ├── PPL_PA_I_D_03_quiz.json
+│   │   ├── PPL_PA_I_D_04_quiz.json
+│   │   ├── PPL_PA_I_E_01_quiz.json
+│   │   ├── PPL_PA_I_E_02_quiz.json
+│   │   ├── PPL_PA_I_E_03_quiz.json
+│   │   ├── PPL_PA_I_E_04_quiz.json
+│   │   ├── PPL_PA_I_F_01_quiz.json
+│   │   ├── PPL_PA_I_F_02_quiz.json
+│   │   ├── PPL_PA_I_F_03_quiz.json
+│   │   ├── PPL_PA_I_F_04_quiz.json
+│   │   ├── PPL_PA_I_G_01_quiz.json
+│   │   ├── PPL_PA_I_G_02_quiz.json
+│   │   ├── PPL_PA_I_G_03_quiz.json
+│   │   ├── PPL_PA_I_G_04_quiz.json
+│   │   ├── PPL_PA_I_G_05_quiz.json
+│   │   ├── PPL_PA_I_H_01_quiz.json
+│   │   ├── PPL_PA_I_H_02_quiz.json
+│   │   ├── PPL_PA_I_H_03_quiz.json
+│   │   ├── PPL_PA_VII_A_01_quiz.json
+│   │   ├── PPL_PA_VII_D_01_quiz.json
+│   │   ├── PPL_PA_VI_B_01_quiz.json
+│   │   ├── PPL_PA_VI_B_02_quiz.json
+│   │   ├── PPL_PA_VI_B_03_quiz.json
+│   │   ├── PPL_PA_XI_A_01_quiz.json
+│   │   ├── PPL_PA_XI_A_02_quiz.json
+│   │   └── PPL_PA_XI_A_03_quiz.json
+│   ├── quiz_schema.md
+│   ├── rkp_manifests
+│   │   ├── PPL_PA_III_A_01_rkp.json
+│   │   ├── PPL_PA_III_A_02_rkp.json
+│   │   ├── PPL_PA_III_B_01_rkp.json
+│   │   ├── PPL_PA_IX_B_01_rkp.json
+│   │   ├── PPL_PA_IX_C_01_rkp.json
+│   │   ├── PPL_PA_I_A_01_rkp.json
+│   │   ├── PPL_PA_I_A_02_rkp.json
+│   │   ├── PPL_PA_I_A_03_rkp.json
+│   │   ├── PPL_PA_I_A_04_rkp.json
+│   │   ├── PPL_PA_I_B_01_rkp.json
+│   │   ├── PPL_PA_I_B_02_rkp.json
+│   │   ├── PPL_PA_I_B_03_rkp.json
+│   │   ├── PPL_PA_I_B_04_rkp.json
+│   │   ├── PPL_PA_I_B_05_rkp.json
+│   │   ├── PPL_PA_I_C_01_rkp.json
+│   │   ├── PPL_PA_I_C_02_rkp.json
+│   │   ├── PPL_PA_I_C_03_rkp.json
+│   │   ├── PPL_PA_I_C_04_rkp.json
+│   │   ├── PPL_PA_I_C_05_rkp.json
+│   │   ├── PPL_PA_I_D_01_rkp.json
+│   │   ├── PPL_PA_I_D_02_rkp.json
+│   │   ├── PPL_PA_I_D_03_rkp.json
+│   │   ├── PPL_PA_I_D_04_rkp.json
+│   │   ├── PPL_PA_I_E_01_rkp.json
+│   │   ├── PPL_PA_I_E_02_rkp.json
+│   │   ├── PPL_PA_I_E_03_rkp.json
+│   │   ├── PPL_PA_I_E_04_rkp.json
+│   │   ├── PPL_PA_I_F_01_rkp.json
+│   │   ├── PPL_PA_I_F_02_rkp.json
+│   │   ├── PPL_PA_I_F_03_rkp.json
+│   │   ├── PPL_PA_I_F_04_rkp.json
+│   │   ├── PPL_PA_I_G_01_rkp.json
+│   │   ├── PPL_PA_I_G_02_rkp.json
+│   │   ├── PPL_PA_I_G_03_rkp.json
+│   │   ├── PPL_PA_I_G_04_rkp.json
+│   │   ├── PPL_PA_I_G_05_rkp.json
+│   │   ├── PPL_PA_I_H_01_rkp.json
+│   │   ├── PPL_PA_I_H_02_rkp.json
+│   │   ├── PPL_PA_I_H_03_rkp.json
+│   │   ├── PPL_PA_VII_A_01_rkp.json
+│   │   ├── PPL_PA_VII_D_01_rkp.json
+│   │   ├── PPL_PA_VI_B_01_rkp.json
+│   │   ├── PPL_PA_VI_B_02_rkp.json
+│   │   ├── PPL_PA_VI_B_03_rkp.json
+│   │   ├── PPL_PA_XI_A_01_rkp.json
+│   │   ├── PPL_PA_XI_A_02_rkp.json
+│   │   └── PPL_PA_XI_A_03_rkp.json
+│   └── scripts
+│       └── generate_knowledge_formatted.py
+│               def format_knowledge(client, knowledge_text, title, why)
+│               def process_manifest(client, filepath, dry_run)
+│               def main()
 ├── docs
+│   └── repo-map.md
 ├── pipeline
 │   └── curriculum
 │       ├── _v2_split
@@ -241,158 +399,6 @@ Ingestion_pipeline_AvCh
 │           def generate_ast_summary(filepath)
 │           def walk_directory(directory, prefix)
 │           def main()
-├── specialist_curriculum
-│   ├── curriculum_modules
-│   │   ├── Area 1 Task A PPL.md
-│   │   ├── Area 1 Task B PPL.md
-│   │   ├── Area 1 Task C PPL.md
-│   │   ├── Area 1 Task D PPL.md
-│   │   ├── Area 1 Task E PPL.md
-│   │   ├── Area 1 Task F PPL.md
-│   │   ├── Area 1 Task G PPL.md
-│   │   ├── Area 1 Task H PPL.md
-│   │   ├── Area 11 Task A PPL.md
-│   │   ├── Area 3 Tasks A,B PPL.md
-│   │   ├── Area 6 Task B PPL.md
-│   │   ├── Area 7 A,B,D PPL.md
-│   │   └── Area 9 Tasks B,C PPL.md
-│   ├── lesson_podcasts
-│   │   ├── PPL_PA_I_A_01_podcast.md
-│   │   ├── PPL_PA_I_A_02_podcast.md
-│   │   ├── PPL_PA_I_A_03_podcast.md
-│   │   ├── PPL_PA_I_A_04_podcast.md
-│   │   ├── PPL_PA_I_B_01_podcast.md
-│   │   ├── PPL_PA_I_B_02_podcast.md
-│   │   ├── PPL_PA_I_B_03_podcast.md
-│   │   ├── PPL_PA_I_B_04_podcast.md
-│   │   ├── PPL_PA_I_B_05_podcast.md
-│   │   ├── PPL_PA_I_C_01_podcast.md
-│   │   ├── PPL_PA_I_C_02_podcast.md
-│   │   ├── PPL_PA_I_C_03_podcast.md
-│   │   ├── PPL_PA_I_C_04_podcast.md
-│   │   ├── PPL_PA_I_C_05_podcast.md
-│   │   ├── PPL_PA_I_D_01_podcast.md
-│   │   ├── PPL_PA_I_D_02_podcast.md
-│   │   ├── PPL_PA_I_D_03_podcast.md
-│   │   ├── PPL_PA_I_D_04_podcast.md
-│   │   ├── PPL_PA_I_E_01_podcast.md
-│   │   ├── PPL_PA_I_E_02_podcast.md
-│   │   ├── PPL_PA_I_E_03_podcast.md
-│   │   ├── PPL_PA_I_E_04_podcast.md
-│   │   ├── PPL_PA_I_F_01_podcast.md
-│   │   ├── PPL_PA_I_F_02_podcast.md
-│   │   ├── PPL_PA_I_F_03_podcast.md
-│   │   ├── PPL_PA_I_F_04_podcast.md
-│   │   ├── PPL_PA_I_G_01_podcast.md
-│   │   ├── PPL_PA_I_G_02_podcast.md
-│   │   ├── PPL_PA_I_G_03_podcast.md
-│   │   ├── PPL_PA_I_G_04_podcast.md
-│   │   ├── PPL_PA_I_G_05_podcast.md
-│   │   ├── PPL_PA_I_H_01_podcast.md
-│   │   ├── PPL_PA_I_H_02_podcast.md
-│   │   └── PPL_PA_I_H_03_podcast.md
-│   ├── quiz_banks
-│   │   ├── PPL_PA_III_A_01_quiz.json
-│   │   ├── PPL_PA_III_A_02_quiz.json
-│   │   ├── PPL_PA_III_B_01_quiz.json
-│   │   ├── PPL_PA_IX_B_01_quiz.json
-│   │   ├── PPL_PA_IX_C_01_quiz.json
-│   │   ├── PPL_PA_I_A_01_quiz.json
-│   │   ├── PPL_PA_I_A_02_quiz.json
-│   │   ├── PPL_PA_I_A_03_quiz.json
-│   │   ├── PPL_PA_I_A_04_quiz.json
-│   │   ├── PPL_PA_I_B_01_quiz.json
-│   │   ├── PPL_PA_I_B_02_quiz.json
-│   │   ├── PPL_PA_I_B_03_quiz.json
-│   │   ├── PPL_PA_I_B_04_quiz.json
-│   │   ├── PPL_PA_I_B_05_quiz.json
-│   │   ├── PPL_PA_I_C_01_quiz.json
-│   │   ├── PPL_PA_I_C_02_quiz.json
-│   │   ├── PPL_PA_I_C_03_quiz.json
-│   │   ├── PPL_PA_I_C_04_quiz.json
-│   │   ├── PPL_PA_I_C_05_quiz.json
-│   │   ├── PPL_PA_I_D_01_quiz.json
-│   │   ├── PPL_PA_I_D_02_quiz.json
-│   │   ├── PPL_PA_I_D_03_quiz.json
-│   │   ├── PPL_PA_I_D_04_quiz.json
-│   │   ├── PPL_PA_I_E_01_quiz.json
-│   │   ├── PPL_PA_I_E_02_quiz.json
-│   │   ├── PPL_PA_I_E_03_quiz.json
-│   │   ├── PPL_PA_I_E_04_quiz.json
-│   │   ├── PPL_PA_I_F_01_quiz.json
-│   │   ├── PPL_PA_I_F_02_quiz.json
-│   │   ├── PPL_PA_I_F_03_quiz.json
-│   │   ├── PPL_PA_I_F_04_quiz.json
-│   │   ├── PPL_PA_I_G_01_quiz.json
-│   │   ├── PPL_PA_I_G_02_quiz.json
-│   │   ├── PPL_PA_I_G_03_quiz.json
-│   │   ├── PPL_PA_I_G_04_quiz.json
-│   │   ├── PPL_PA_I_G_05_quiz.json
-│   │   ├── PPL_PA_I_H_01_quiz.json
-│   │   ├── PPL_PA_I_H_02_quiz.json
-│   │   ├── PPL_PA_I_H_03_quiz.json
-│   │   ├── PPL_PA_VII_A_01_quiz.json
-│   │   ├── PPL_PA_VII_D_01_quiz.json
-│   │   ├── PPL_PA_VI_B_01_quiz.json
-│   │   ├── PPL_PA_VI_B_02_quiz.json
-│   │   ├── PPL_PA_VI_B_03_quiz.json
-│   │   ├── PPL_PA_XI_A_01_quiz.json
-│   │   ├── PPL_PA_XI_A_02_quiz.json
-│   │   └── PPL_PA_XI_A_03_quiz.json
-│   ├── quiz_schema.md
-│   ├── rkp_manifests
-│   │   ├── PPL_PA_III_A_01_rkp.json
-│   │   ├── PPL_PA_III_A_02_rkp.json
-│   │   ├── PPL_PA_III_B_01_rkp.json
-│   │   ├── PPL_PA_IX_B_01_rkp.json
-│   │   ├── PPL_PA_IX_C_01_rkp.json
-│   │   ├── PPL_PA_I_A_01_rkp.json
-│   │   ├── PPL_PA_I_A_02_rkp.json
-│   │   ├── PPL_PA_I_A_03_rkp.json
-│   │   ├── PPL_PA_I_A_04_rkp.json
-│   │   ├── PPL_PA_I_B_01_rkp.json
-│   │   ├── PPL_PA_I_B_02_rkp.json
-│   │   ├── PPL_PA_I_B_03_rkp.json
-│   │   ├── PPL_PA_I_B_04_rkp.json
-│   │   ├── PPL_PA_I_B_05_rkp.json
-│   │   ├── PPL_PA_I_C_01_rkp.json
-│   │   ├── PPL_PA_I_C_02_rkp.json
-│   │   ├── PPL_PA_I_C_03_rkp.json
-│   │   ├── PPL_PA_I_C_04_rkp.json
-│   │   ├── PPL_PA_I_C_05_rkp.json
-│   │   ├── PPL_PA_I_D_01_rkp.json
-│   │   ├── PPL_PA_I_D_02_rkp.json
-│   │   ├── PPL_PA_I_D_03_rkp.json
-│   │   ├── PPL_PA_I_D_04_rkp.json
-│   │   ├── PPL_PA_I_E_01_rkp.json
-│   │   ├── PPL_PA_I_E_02_rkp.json
-│   │   ├── PPL_PA_I_E_03_rkp.json
-│   │   ├── PPL_PA_I_E_04_rkp.json
-│   │   ├── PPL_PA_I_F_01_rkp.json
-│   │   ├── PPL_PA_I_F_02_rkp.json
-│   │   ├── PPL_PA_I_F_03_rkp.json
-│   │   ├── PPL_PA_I_F_04_rkp.json
-│   │   ├── PPL_PA_I_G_01_rkp.json
-│   │   ├── PPL_PA_I_G_02_rkp.json
-│   │   ├── PPL_PA_I_G_03_rkp.json
-│   │   ├── PPL_PA_I_G_04_rkp.json
-│   │   ├── PPL_PA_I_G_05_rkp.json
-│   │   ├── PPL_PA_I_H_01_rkp.json
-│   │   ├── PPL_PA_I_H_02_rkp.json
-│   │   ├── PPL_PA_I_H_03_rkp.json
-│   │   ├── PPL_PA_VII_A_01_rkp.json
-│   │   ├── PPL_PA_VII_D_01_rkp.json
-│   │   ├── PPL_PA_VI_B_01_rkp.json
-│   │   ├── PPL_PA_VI_B_02_rkp.json
-│   │   ├── PPL_PA_VI_B_03_rkp.json
-│   │   ├── PPL_PA_XI_A_01_rkp.json
-│   │   ├── PPL_PA_XI_A_02_rkp.json
-│   │   └── PPL_PA_XI_A_03_rkp.json
-│   └── scripts
-│       └── generate_knowledge_formatted.py
-│               def format_knowledge(client, knowledge_text, title, why)
-│               def process_manifest(client, filepath, dry_run)
-│               def main()
 └── src
     ├── config.py
     ├── gcp
@@ -416,6 +422,7 @@ Ingestion_pipeline_AvCh
     │   ├── upload_manifests.py
     │   │       def main()
     │   ├── upload_quiz_banks.py
+    │   │       def validate_quiz(data, filename)
     │   │       def main()
     │   └── vertex.py
     │           def import_documents_to_vertex(project_id, location, data_store_id, gcs_uri)
@@ -463,6 +470,9 @@ Ingestion_pipeline_AvCh
         └── schema.py
                 class ContentSource:
                 class CurriculumStructData:
+                    def strip_invalid_keys(cls, v)
+                    def validate_doc_keys_non_empty(cls, v)
+                    def warn_chapter_level_keys(cls, v)
                 class CurriculumLessonSchema:
                 class LibraryStructData:
                     def validate_category(cls, v)
