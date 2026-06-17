@@ -13,6 +13,7 @@ I've completed all items on the implementation plan, successfully converting the
 - **Hardened Schema Enforcer:** Modified `schema.py` to strictly enforce the `DB2_VOCABULARY`. Instead of warning on chapter-level keys, `validate_doc_keys()` now raises a `ValueError` for a hard failure if invalid bridge keys are detected. Manually appended valid, missing tags to the vocabulary map.
 - **Unified Main Pipeline:** Updated `curriculum.py` to catch schema validation errors and raise a `ValueError` instead of silently skipping, ensuring bad data never reaches Vertex AI Search.
 - **Cleaned Area 9:** Modified the `Area 9 Tasks B,C PPL.md` master module to properly remove chapter-level annotations that were failing the new schema check, and generated missing JSON sidecars for it natively.
+- **Fixed GCP Credentials Loading:** Updated `src/main.py` and `src/config.py` to correctly utilize `dotenv` to load the `.env` configuration (which points to the `service-account.json`) instead of hard-failing on a missing hardcoded `librarian-service-account.json` path. This fully resolved the GCP upload failure.
 
 ### 2. Synced & Fixed App Quiz Banks (A Tasks)
 - **Synced Files:** Copied the 11 `PPL_PA_*_quiz.json` files to `AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks`.

@@ -71,3 +71,4 @@ Keep `IsArtifact: true` frontmatter for Antigravity compatibility.
 - [ ] `walkthrough.md` — summary + actual test output pasted
 - [ ] `your-action-required.md` — manual steps + git commit command for Daniel
 - [ ] `active-context.md` updated
+- [ ] **Final Chat Output:** Provide a markdown list of clickable links using absolute paths to all artifacts created/modified in the session.

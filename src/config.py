@@ -5,12 +5,13 @@ from pathlib import Path
 PROJECT_ROOT = Path(os.getcwd())
 PIPELINE_ROOT = PROJECT_ROOT / "pipeline"
 
-# Set Google App Credentials to the Librarian SA
-SA_PATH = PROJECT_ROOT / "auth_keys" / "librarian-service-account.json"
-if SA_PATH.exists():
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(SA_PATH)
-else:
-    print(f"Warning: Librarian Service Account key not found at {SA_PATH}")
+# Set Google App Credentials
+if not os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
+    SA_PATH = PROJECT_ROOT / "auth_keys" / "service-account.json"
+    if SA_PATH.exists():
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(SA_PATH)
+    else:
+        print(f"Warning: Service Account key not found at {SA_PATH}")
 
 # Curriculum Paths
 CURRICULUM_ROOT = PIPELINE_ROOT / "curriculum"

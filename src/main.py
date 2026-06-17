@@ -1,6 +1,14 @@
 import argparse
 import sys
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Load GCP credentials and environment configuration
+env_path = Path(__file__).parent.parent / "auth_keys" / ".env"
+if env_path.exists():
+    load_dotenv(dotenv_path=env_path)
+
 from pipeline.curriculum import CurriculumPipeline
 from pipeline.library import LibraryPipeline
 import config
