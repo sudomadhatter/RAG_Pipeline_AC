@@ -11,7 +11,7 @@ description: >
 
 > **Owner:** Woz (Agent) — pipeline-side verification.
 > **Trigger:** After any RKP creation batch, after any Vertex AI ingestion, or on-demand.
-> **Companion:** `_01_My/bridge_key_guide.md` — the standing contract from the app team.
+> **Companion:** `_01_My/instruction_docs/bridge_key_guide.md` — the standing contract from the app team.
 
 ---
 
@@ -151,7 +151,7 @@ Summary: {passed}/{total} passed, {failed} failed, {warnings} warnings
 |---|---|
 | `src/utils/schema.py` | `CurriculumStructData` — `reg_keys`/`doc_keys` validation |
 | `src/utils/generate_metadata.py` | LLM metadata extractor |
-| `_01_My/bridge_key_guide.md` | Standing contract |
+| `_01_My/instruction_docs/bridge_key_guide.md` | Standing contract |
 
 ---
 

@@ -225,8 +225,8 @@ Before creating any RKP, study these existing files:
 |---|---|
 | [PPL_PA_I_A_01_rkp.json](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/rkp_manifests/PPL_PA_I_A_01_rkp.json) | The original gold standard — 4 RKPs, full overview, complete bridge keys |
 | [Area 1 Task A PPL.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/curriculum_modules/Area%201%20Task%20A%20PPL.md) | Master module format — 4-section structure per element |
-| [rkp_creation_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/rkp_creation_guide.md) | Daniel's authoring guide — field definitions and delegation options |
-| [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/bridge_key_guide.md) | Bridge key contract — document-level tokens, DB2 vocab, verification |
+| [rkp_creation_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/rkp_creation_guide.md) | Daniel's authoring guide — field definitions and delegation options |
+| [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/bridge_key_guide.md) | Bridge key contract — document-level tokens, DB2 vocab, verification |
 
 ---
 

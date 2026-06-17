@@ -20,5 +20,5 @@ An engine fire is a catastrophic emergency that rapidly threatens the structural
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.3
-* **Docs**: FAA-H-8083-3C Chapter 17, AC 120-80
+* **Docs**: FAA-H-8083-3C, AC 120-80
 * **Keywords**: Fire Triangle, Load Shedding, Master Switch, Emergency Descent, Slipstream, Asphyxiation

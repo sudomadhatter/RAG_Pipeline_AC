@@ -204,5 +204,5 @@ These 13 are sub-par and must be rewritten (never pushed to Firebase):
 
 - `specialist_curriculum/quiz_banks/PPL_PA_I_A_01_quiz.json` — original gold
 - `specialist_curriculum/quiz_schema.md` — locked JSON schema
-- `_01_My/quiz_authoring_guide.md` — Daniel's quality bar
+- `_01_My/instruction_docs/quiz_authoring_guide.md` — Daniel's quality bar
 - `_01_My/project_context_prps/quiz_generator_prompt.md` — system prompt + 12 Lessons Learned

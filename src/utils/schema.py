@@ -17,7 +17,10 @@ DB2_VOCABULARY = {
     'AC 43-9C', 'AC 43.13-1B', 'AC 43.13-2B', 'AC 60-22', 'AC 61-65H',
     'AC 61-67C', 'AC 61-98D', 'AC 61-107B', 'AC 61-134A', 'AC 61-142',
     'AC 68-1', 'AC 68-1A', 'AC 90-48D', 'AC 90-109A', 'AC 91-67A',
-    'AC 91-73B', 'AC 91-74B', 'AC 120-12A', 'AC 120-71B',
+    'AC 91-73B', 'AC 91-74B', 'AC 120-12A', 'AC 120-71B', 'AC 120-80', 
+    'AC 120-111',
+    # Other
+    'FAA-S-ACS-6C', 'FAA Safety Briefing "Startle Response"'
 }
 
 class ContentSource(BaseModel):
@@ -27,44 +30,31 @@ class ContentSource(BaseModel):
 class CurriculumStructData(BaseModel):
     acs_code: str
     title: str
-    type: str = "lesson_chunk"
+    type: str
     ancestral_context: str
-    reg_keys: List[str] = Field(default_factory=list)
-    doc_keys: List[str] = Field(min_length=1)
-    keywords: List[str] = Field(default_factory=list)
+    reg_keys: List[str]
+    doc_keys: List[str] = Field(..., min_length=1)
+    keywords: List[str]
 
     @field_validator('reg_keys', 'doc_keys', mode='before')
-    @classmethod
-    def strip_invalid_keys(cls, v: List[str]) -> List[str]:
-        """Remove 'N/A', blank strings, and normalize whitespace."""
-        if not isinstance(v, list):
-            return v
-        return [k.strip() for k in v if k.strip() and k.strip().upper() != 'N/A']
+    def clean_na_and_strip(cls, v):
+        if not v:
+            return []
+        cleaned = []
+        for x in v:
+            val = x.strip()
+            if val.upper() != 'N/A' and val:
+                cleaned.append(val)
+        return cleaned
 
     @field_validator('doc_keys')
-    @classmethod
-    def validate_doc_keys_non_empty(cls, v: List[str]) -> List[str]:
-        """doc_keys must have at least 1 entry after cleaning."""
-        if not v:
-            raise ValueError(
-                'doc_keys must contain at least 1 document-level key. '
-                'Empty doc_keys breaks the DB1→DB2 verification hop.'
-            )
-        return v
-
-    @field_validator('doc_keys', 'reg_keys')
-    @classmethod
-    def warn_chapter_level_keys(cls, v: List[str]) -> List[str]:
-        """Log warnings for chapter-level keys (should be document-level)."""
-        import warnings
+    def validate_doc_keys(cls, v: List[str]) -> List[str]:
+        # Enforce that every doc_key is document-level AND in DB2_VOCABULARY
         for key in v:
-            if '(' in key or re.search(r'Ch\s+\d', key):
-                warnings.warn(
-                    f"Chapter-level key detected: '{key}' — should be document-level. "
-                    f"Use 'FAA-H-8083-25C' not 'FAA-H-8083-25C (PHAK Ch 6)'.",
-                    UserWarning,
-                    stacklevel=2,
-                )
+            if '(' in key or 'Ch ' in key or 'Chapter' in key:
+                raise ValueError(f"Chapter-level key detected: '{key}'. Must be document-level only.")
+            if key not in DB2_VOCABULARY:
+                raise ValueError(f"doc_key '{key}' is NOT in DB2_VOCABULARY. Must be a valid DB2 tag.")
         return v
 
 class CurriculumLessonSchema(BaseModel):

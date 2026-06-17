@@ -20,5 +20,5 @@ Most general aviation aircraft utilize a dual magneto ignition system, completel
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.103
-* **Docs**: FAA-H-8083-25C Chapter 7
+* **Docs**: FAA-H-8083-25C
 * **Keywords**: Fuel Starvation, Carburetor Icing, Venturi Effect, Vapor Lock, Magnetos, Latent heat of vaporization

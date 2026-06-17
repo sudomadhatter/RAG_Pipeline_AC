@@ -24,5 +24,5 @@ Turbulence, mechanical rotors, and convective thermal activity can violently dis
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: FAA-H-8083-25C Chapter 11
+* **Docs**: FAA-H-8083-25C
 * **Keywords**: Wind Gradient, Density Altitude, True Airspeed, Kinetic Energy, Groundspeed, Vertical Wind Shear

@@ -88,7 +88,7 @@ Turbulence, mechanical rotors, and convective thermal activity can violently dis
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: FAA-H-8083-25C Chapter 11
+* **Docs**: FAA-H-8083-25C
 * **Keywords**: Wind Gradient, Density Altitude, True Airspeed, Kinetic Energy, Groundspeed, Vertical Wind Shear
 
 ---
@@ -115,7 +115,7 @@ Configuration changes (such as extending flaps or landing gear) are irreversible
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: FAA-H-8083-3C Chapter 17, AC 61-98D
+* **Docs**: FAA-H-8083-3C, AC 61-98D
 * **Keywords**: Potential Energy, Kinetic Energy, High Key, Low Key, Forward Slip, Drag Coefficient, Stabilized Approach
 
 ---
@@ -142,7 +142,7 @@ One of the most lethal risk management failures in General Aviation is the refle
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: FAA-H-8083-2A (Risk Management Handbook), AC 61-98D
+* **Docs**: FAA-H-8083-2A, AC 61-98D
 * **Keywords**: Cone of Safety, CFIT, Target Fixation, Wire Strike, The Impossible Turn, PAVE Checklist, Glide Radius
 
 ---
@@ -200,7 +200,7 @@ Most general aviation aircraft utilize a dual magneto ignition system, completel
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.103
-* **Docs**: FAA-H-8083-25C Chapter 7
+* **Docs**: FAA-H-8083-25C
 * **Keywords**: Fuel Starvation, Carburetor Icing, Venturi Effect, Vapor Lock, Magnetos, Latent heat of vaporization
 
 ---
@@ -240,7 +240,7 @@ To mitigate a completely blocked static port, most aircraft feature an Alternate
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.411
-* **Docs**: FAA-H-8083-25C Chapter 8
+* **Docs**: FAA-H-8083-25C
 * **Keywords**: Total Pressure, Dynamic Pressure, Static Pressure, Alternate Static Source, VSI, Bernoulli's Principle
 
 ---
@@ -267,7 +267,7 @@ An engine fire is a catastrophic emergency that rapidly threatens the structural
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.3
-* **Docs**: FAA-H-8083-3C Chapter 17, AC 120-80
+* **Docs**: FAA-H-8083-3C, AC 120-80
 * **Keywords**: Fire Triangle, Load Shedding, Master Switch, Emergency Descent, Slipstream, Asphyxiation
 
 ---
@@ -294,7 +294,7 @@ A severe risk during complex malfunctions is diagnosing the wrong problem and su
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: AC 120-71B, FAA-H-8083-2A (Risk Management)
+* **Docs**: AC 120-71B, FAA-H-8083-2A
 * **Keywords**: Working Memory, Cognitive Degradation, Do-Verify, Read-Do, Prefrontal Cortex, Flow
 
 ---
@@ -364,5 +364,5 @@ The evaluator will closely and silently monitor the applicant's prioritization o
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.3
-* **Docs**: FAA-H-8083-2A (Risk Management), FAA-S-ACS-6C
+* **Docs**: FAA-H-8083-2A, FAA-S-ACS-6C
 * **Keywords**: DECIDE Model, SRM, PIC Authority, Aviate Navigate Communicate, Mayday, Squawk 7700

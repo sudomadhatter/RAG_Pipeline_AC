@@ -23,6 +23,33 @@ companion: "bridge_key_guide.md (RAG/metadata) · quiz_authoring_guide.md (quiz 
 >   explanation/citation standard). **Corrected:** the SJT answer is **not** always "D" — see its §3.
 > - **`rkp_creation_guide.md`** — RKP manifest mechanics + schema.
 
+> ### ⚠️ Update (2026-06-16, measured against BOTH repos + Daniel's decisions locked)
+> Three measured corrections that change the *order of attack* and shrink the content work, plus the
+> decisions Daniel signed off on. Full task breakdown:
+> `_claude_artifacts/2026-06-16_quiz-and-bridge-key-pipeline-fix/implementation_plan.md`.
+>
+> 1. **The citations already exist — this is verify-and-sync, not author-from-scratch.** The "12 failing
+>    banks" were measured on the **app repo** copy (`AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks/`),
+>    which has `null` citations. **This pipeline repo's copy** (`curriculum_components/quiz_banks/`) has a
+>    citation on **every question of all 47 files — zero nulls.** Verified on `IX_B_01`: six `null`s in the
+>    app copy, all six already filled here. So the fix is: Daniel **verifies** the pipeline citations are
+>    in-scope → sync **pipeline → app** → re-ingest. (Three to eyeball per `quiz_authoring_guide.md` §5.4:
+>    `VII_A_01 Q001` & `VII_D_01 Q001` cite `14 CFR 23.2150` (Part 23 cert, not an operating rule);
+>    `IX_C_01 Q004` cites `AC 120-111` (air-carrier upset training); `IX_C_01 Q003` cites `14 CFR 91.411`
+>    (IFR altimeter tests).)
+> 2. **Canonical source = THIS pipeline repo, kept separate from the app.** Multiple app branches all pull
+>    from this documentation, so this repo is the single upstream. Sync is always **pipeline → app**, never
+>    reverse. Keep the instruction docs current with every finding as we go.
+> 3. **Thread 2's "highest-value fix" is already in the code — but wired to nothing.** `src/utils/schema.py`
+>    is already hardened; the real bug is that `src/gcp/reimport_with_metadata.py` bypasses it (see
+>    `bridge_key_guide.md` v2.8 banner).
+>
+> **Locked decisions (Daniel, 2026-06-16):** (Q4) **delete** `upload_quiz_banks.py` and any other broken
+> pre-scope artifacts — don't neuter-and-keep. (Q2) `I_H_04` is **not special** — remap its perspectives
+> like any other bank AND author a canonical copy back into this pipeline repo so it stops drifting.
+> (Q3) `I_F_01`'s illegal 5th option — fix it the **best** way (drop the weakest distractor, or split into
+> two questions) in the canonical copy, then sync. (Q5/Q6) Thread 2 → top industry standard, no shortcuts.
+
 ---
 
 ## 1. TL;DR (the situation in six lines)
@@ -87,23 +114,28 @@ patch its validator.** (The two SJT archetypes are now documented in `quiz_autho
 
 ## 4. The plan to get back on track (ordered)
 
-1. **Retire `upload_quiz_banks.py`.** Stop running it. (Delete it, or — if the team wants one command
-   in their repo — rewrite it to import the app schema and write the `…/questions/{q}` subcollection.
-   Simplest: retire it; the app already has the correct tool.) Two tools writing one collection is the
-   root of the mess.
+1. **Delete `upload_quiz_banks.py`** *(decision locked 2026-06-16 — delete, not neuter).* The app already
+   has the correct tool; two tools writing one collection is the root of the mess, and Daniel's standing
+   rule is to delete broken pre-scope artifacts outright rather than keep a half-fixed path around.
 2. **Fix the Windows crash in `scripts/ingest_quiz_banks.py`.** It prints a `→` (U+2192) that crashes
    on the cp1252 console mid-run. Add `sys.stdout.reconfigure(encoding="utf-8")` at the top (the
    pipeline script already does this), or replace the arrow with `->`. Until then, `--all` only
    survives with `PYTHONIOENCODING=utf-8` set.
 3. **Fix the 12 schema-failing banks (CONTENT — CFI/team own this):**
-   - Null `far_reference` (11 files): add the correct FAA citation per flagged question. **Do not
-     fabricate** — get the right reg from Daniel (constitution: never invent citations).
-   - `I_H_04`: remap the 5 non-canonical perspectives to the 4 allowed values.
-   - `I_F_01`: drop the 5th option (or split into two questions) so it's ≤4.
-4. **Reconcile drift:** (a) `I_F_01` disk vs DB; (b) the **pipeline repo** `curriculum_components/quiz_banks/`
-   (47 banks) vs the **app repo** `_docs/specialist_lesson/quiz_banks/` (48 — app has `I_H_04`, pipeline
-   doesn't). Decide the **canonical source** (Daniel wants authoring to live with the ingestion team /
-   pipeline repo) and the sync path into the app's ingest input dir.
+   - Null `far_reference` (11 files): **the pipeline copies already carry a citation on every question
+     (zero nulls).** So this is **verify-and-sync, not author:** Daniel confirms the pipeline citations are
+     in-scope (3 flagged in the Update banner above), then sync **pipeline → app**. **Never fabricate** —
+     if a flagged citation is wrong, get the right reg from Daniel (constitution: never invent citations).
+   - `I_H_04` *(decision locked)*: remap the 5 non-canonical perspectives to the 4 allowed values **and**
+     author a canonical copy into this pipeline repo (it's currently app-only) so it stops drifting.
+   - `I_F_01` *(decision locked)*: fix the illegal 5th option the **best** way — drop the weakest distractor
+     if the five collapse cleanly to four, or split into two questions if it tests two facts — in the
+     canonical (pipeline) copy, then sync. (`I_F_01` carries the 5th option in **both** copies' disk JSON.)
+4. **Reconcile drift** *(canonical source decided: this pipeline repo; sync pipeline → app):* (a) `I_F_01`
+   disk vs DB; (b) the **pipeline repo** `curriculum_components/quiz_banks/` (47 banks, all citations
+   filled) is canonical vs the **app repo** `_docs/specialist_lesson/quiz_banks/` (48 — app has `I_H_04`,
+   pipeline doesn't, and the app has the `null`-citation drift). Sync the pipeline copies into the app's
+   ingest input dir. Keep this repo as the single upstream all app branches pull from.
 5. **Re-ingest with the right tool:** `python -m scripts.ingest_quiz_banks --all`. Idempotent (keyed by
    question id). The 14 dark lessons light up; Area I refreshes harmlessly.
 6. **Verify:** take a quiz for a previously-dark lesson (e.g. `XI_A_01`) in the running app, end-to-end.

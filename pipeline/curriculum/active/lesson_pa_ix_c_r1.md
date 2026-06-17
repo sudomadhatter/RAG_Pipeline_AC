@@ -20,5 +20,5 @@ A severe risk during complex malfunctions is diagnosing the wrong problem and su
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: AC 120-71B, FAA-H-8083-2A (Risk Management)
+* **Docs**: AC 120-71B, FAA-H-8083-2A
 * **Keywords**: Working Memory, Cognitive Degradation, Do-Verify, Read-Do, Prefrontal Cortex, Flow

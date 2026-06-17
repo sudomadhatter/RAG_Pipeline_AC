@@ -84,7 +84,8 @@ class CurriculumPipeline(BasePipeline):
                 )
                 lines.append(vertex_entry.model_dump_json(exclude_none=True))
             except Exception as e:
-                print(f" Skipping {f_path.name} in manifest due to error: {e}")
+                print(f" FATAL ERROR: Schema validation failed for {f_path.name}: {e}")
+                raise ValueError(f"Aborting pipeline. Invalid metadata found in {f_path.name}: {e}") from e
 
         manifest_content = "\n".join(lines)
         manifest_path = config.CURRICULUM_ROOT / config.CURRICULUM_JSONL_FILE

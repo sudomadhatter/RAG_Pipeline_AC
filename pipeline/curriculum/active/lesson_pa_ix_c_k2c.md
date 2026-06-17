@@ -33,5 +33,5 @@ To mitigate a completely blocked static port, most aircraft feature an Alternate
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.411
-* **Docs**: FAA-H-8083-25C Chapter 8
+* **Docs**: FAA-H-8083-25C
 * **Keywords**: Total Pressure, Dynamic Pressure, Static Pressure, Alternate Static Source, VSI, Bernoulli's Principle

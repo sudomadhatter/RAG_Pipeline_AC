@@ -336,7 +336,7 @@ This pushes `*_rkp.json` files to the `rkp_manifests` Firestore collection.
 |---|---|
 | [PPL_PA_I_A_01_quiz.json](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/quiz_banks/PPL_PA_I_A_01_quiz.json) | The original gold standard — all 4 perspectives, real SJTs |
 | [quiz_schema.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/quiz_schema.md) | Locked JSON schema + field reference |
-| [quiz_authoring_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/quiz_authoring_guide.md) | Daniel's quality bar — difficulty levers + SJT rules |
+| [quiz_authoring_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/quiz_authoring_guide.md) | Daniel's quality bar — difficulty levers + SJT rules |
 | [quiz_generator_prompt.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/project_context_prps/quiz_generator_prompt.md) | System prompt + 12 Lessons Learned |
 
 ---

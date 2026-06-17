@@ -20,5 +20,5 @@ Configuration changes (such as extending flaps or landing gear) are irreversible
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: FAA-H-8083-3C Chapter 17, AC 61-98D
+* **Docs**: FAA-H-8083-3C, AC 61-98D
 * **Keywords**: Potential Energy, Kinetic Energy, High Key, Low Key, Forward Slip, Drag Coefficient, Stabilized Approach

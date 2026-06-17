@@ -205,8 +205,8 @@ python generate_knowledge_formatted.py --all --write
 |---|---|
 | `specialist_curriculum/rkp_manifests/PPL_PA_I_A_01_rkp.json` | Original gold standard |
 | `specialist_curriculum/curriculum_modules/Area 1 Task A PPL.md` | Master module format |
-| `_01_My/rkp_creation_guide.md` | Daniel's authoring guide |
-| `_01_My/bridge_key_guide.md` | Bridge key contract |
+| `_01_My/instruction_docs/rkp_creation_guide.md` | Daniel's authoring guide |
+| `_01_My/instruction_docs/bridge_key_guide.md` | Bridge key contract |
 
 ---
 

@@ -30,5 +30,5 @@ The evaluator will closely and silently monitor the applicant's prioritization o
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: 14 CFR 91.3
-* **Docs**: FAA-H-8083-2A (Risk Management), FAA-S-ACS-6C
+* **Docs**: FAA-H-8083-2A, FAA-S-ACS-6C
 * **Keywords**: DECIDE Model, SRM, PIC Authority, Aviate Navigate Communicate, Mayday, Squawk 7700

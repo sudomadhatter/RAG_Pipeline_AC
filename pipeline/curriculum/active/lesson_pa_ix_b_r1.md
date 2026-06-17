@@ -20,5 +20,5 @@ One of the most lethal risk management failures in General Aviation is the refle
 
 #### 4. Bridge Keys (Metadata)
 * **Regs**: N/A
-* **Docs**: FAA-H-8083-2A (Risk Management Handbook), AC 61-98D
+* **Docs**: FAA-H-8083-2A, AC 61-98D
 * **Keywords**: Cone of Safety, CFIT, Target Fixation, Wire Strike, The Impossible Turn, PAVE Checklist, Glide Radius

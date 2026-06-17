@@ -15,6 +15,15 @@ gold_standard: "The Area I bank (PPL_PA_I_*). The 13 new-lesson questions (III/V
 > understands from one who memorized*. **Do not model new questions on the 13 new-lesson questions —
 > those are sub-par and being rewritten. The reference is Area I.**
 
+> ### Note (2026-06-16): canonical bank location + citation verification
+> Quiz banks are authored and maintained in **this pipeline repo** (`curriculum_components/quiz_banks/`),
+> which is the **canonical** source the app repo syncs *from* (pipeline → app). When the app serves nothing
+> for a lesson, check the drift: as of 2026-06-16 the pipeline copies already carry a `far_reference` on
+> **every** question (zero nulls), while the app copies had `null`s — so the near-term task is **verifying**
+> the existing pipeline citations are in-scope and syncing, not authoring new ones. Scope still matters: a
+> precise-but-wrong reg (e.g. `14 CFR 23.2150`, a Part 23 *aircraft-certification* standard, on an
+> *operating* question) is exactly the §5.4 trap — flag it for the CFI rather than shipping it.
+
 ---
 
 ## 0. Author from the RKP first (do this before you write a single question)
