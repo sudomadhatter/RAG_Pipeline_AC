@@ -54,10 +54,7 @@ def audit_and_clean_sidecars():
                         needs_save = True
                         print(f"  [{json_file.name}] Stripped chapter string: '{original_key}' -> '{key}'")
                         
-                    # Handle specific Area 9 misses we know about
-                    if key == 'AC 120-111' or key == 'AC 120-80' or key == 'FAA-S-ACS-6C' or key == 'FAA Safety Briefing "Startle Response"' or key == 'FAA-H-8083-2A':
-                        pass # These were added to DB2_VOCABULARY
-                    elif key not in DB2_VOCABULARY:
+                    if key not in DB2_VOCABULARY:
                         print(f"  [ERROR] [{json_file.name}] Unknown key: '{key}'. MUST FIX MANUALLY.")
                         error_files += 1
                         

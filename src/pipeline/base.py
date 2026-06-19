@@ -1,3 +1,4 @@
+import sys
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Tuple
 from pathlib import Path
@@ -78,7 +79,7 @@ class BasePipeline(ABC):
             for e in errors:
                 print(f"  - {e}")
             print("Aborting.")
-            return
+            sys.exit(1)
 
         print(f" Phase 1 Complete. {len(valid_files)} files validated.")
 
@@ -104,24 +105,24 @@ class BasePipeline(ABC):
             uploaded = self.run_phase_3_gcs_upload(valid_files)
         except Exception as e:
             print(f" Phase 3 Failed. Upload error: {e}")
-            return
+            sys.exit(1)
 
         # Phase 4
         try:
             manifest_uri = self.run_phase_4_manifest_gen(uploaded)
         except Exception as e:
             print(f" Phase 4 Failed. Manifest generation error: {e}")
-            return
+            sys.exit(1)
 
         # Phase 5
         try:
             success = self.run_phase_5_vertex_import(manifest_uri)
             if not success:
                print(f" Phase 5 Failed. Vertex returned non-success state.")
-               return 
+               sys.exit(1)
         except Exception as e:
             print(f" Phase 5 Failed. Vertex import error: {e}")
-            return
+            sys.exit(1)
 
         # Phase 6
         try:
@@ -129,6 +130,6 @@ class BasePipeline(ABC):
             print(" Phase 6 Complete. Local filesystem state transitioned.")
         except Exception as e:
             print(f" Phase 6 Failed during lifecycle commit: {e}")
-            return
+            sys.exit(1)
 
         print(f" Pipeline {self.name} successfully updated data stores.")

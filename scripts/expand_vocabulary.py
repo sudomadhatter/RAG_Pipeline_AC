@@ -25,7 +25,7 @@ def query_live_db2_tags():
     # We must use credentials from the environment, using the standard pattern
     cred_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
     if not cred_path:
-        cred_path = str(Path(__file__).parent.parent / "auth_keys" / "librarian-service-account.json")
+        cred_path = str(Path(__file__).parent.parent / "auth_keys" / "service-account.json")
         if Path(cred_path).exists():
             os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = cred_path
         else:

@@ -32,3 +32,8 @@ Thumbs.db
 
 # Data files
 *.pdf
+
+# Generated Vertex import manifests — the pipeline regenerates these at phase 4.
+# Never commit them: a partial manifest + FULL reconciliation would wipe the live store.
+/pipeline/curriculum/curriculum.jsonl
+/pipeline/library/library_metadata.jsonl

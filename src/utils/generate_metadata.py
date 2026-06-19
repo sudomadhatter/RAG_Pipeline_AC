@@ -83,8 +83,12 @@ def generate_curriculum_metadata(content: str, offline: bool = False, existing_s
     and strictly output a validated CurriculumLessonSchema JSON dict.
     Returns the raw parsed dict.
     """
-    if offline and existing_sidecar:
-        print("  [Offline Mode] Using existing JSON sidecar.")
+    if offline:
+        if not existing_sidecar:
+            raise ValueError("Offline mode requires an existing JSON sidecar, but none was found.")
+        print("  [Offline] Reusing existing JSON sidecar (validated).")
+        # Validate even the reused sidecar — a stale/bad one must fail HERE, not slip to DB1.
+        CurriculumLessonSchema(**existing_sidecar)
         return existing_sidecar
 
     api_key = os.getenv("GEMINI_API_KEY")
@@ -139,7 +143,7 @@ def generate_curriculum_metadata(content: str, offline: bool = False, existing_s
     
     return parsed_dict
 
-def process_master_module(markdown_path: Path, offline: bool = True):
+def process_master_module(markdown_path: Path, offline: bool = False):
     import config
     
     if not markdown_path.exists():
@@ -179,12 +183,12 @@ def process_master_module(markdown_path: Path, offline: bool = True):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AI Metadata Generator & Module Splitter")
     parser.add_argument("file", help="Path to the master .md curriculum module")
-    parser.add_argument("--regenerate", action="store_true", help="Force LLM regeneration even if JSON sidecar exists")
-    
+    parser.add_argument("--offline", action="store_true", help="Reuse existing JSON sidecars instead of calling the LLM (deterministic re-runs; fails if a sidecar is missing)")
+
     args = parser.parse_args()
     file_path = Path(args.file)
-    
+
     try:
-        process_master_module(file_path, offline=not args.regenerate)
+        process_master_module(file_path, offline=args.offline)
     except Exception as e:
         print(f"Failed to process module: {e}")

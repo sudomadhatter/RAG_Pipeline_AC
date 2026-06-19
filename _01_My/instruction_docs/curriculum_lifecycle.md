@@ -14,18 +14,17 @@ companion: "Sits above the four authoring guides in this folder — it is the in
 > forces a re-build. Read `get_back_on_track.md` for the current recovery work; read this when you
 > need to know "where does X fit, and is it covered?"
 
-> ### ⚠️ Verified & corrected (2026-06-16, measured against the live code — aligns with bridge_key_guide v2.8)
-> This doc came from the app team and was mostly right, but two pipeline-side facts were oversimplified:
+> ### ⚠️ Verified & corrected (2026-06-18, measured against the LIVE stores — aligns with bridge_key_guide v3.0)
+> Earlier notes here described tools and a mechanism that don't match reality. Corrections:
 >
-> 1. **Bridge-key extraction is not simply "LLM-extracted" today.** There are **two** extractors. The
->    standalone LLM one (`src/utils/generate_metadata.py`) is correct, but the tool that actually writes
->    DB1 — `src/gcp/reimport_with_metadata.py` — currently uses a **regex** over the master-doc `Bridge
->    Keys` block **and bypasses the hardened schema guard entirely.** So *right now* master-doc formatting
->    **does** matter for the production path. **Locked decision (v2.8):** unify on the LLM extractor + the
->    schema guard and retire the regex — after which "LLM-extracted, formatting-agnostic" becomes true.
->    See `bridge_key_guide.md` (v2.8) for the full correction.
-> 2. **`src/gcp/upload_quiz_banks.py` is being DELETED** (not just "don't use it") — wrong layout, inert
->    writes. The only quiz-ingest tool is the app repo's `scripts/ingest_quiz_banks.py`.
+> 1. **The DB1→DB2 bridge filters on the RKP MANIFEST `bridge_keys`, not DB1 `structData.doc_keys`**
+>    (`app: backend/tools/librarian.py::_search_db2_bridge_hop`), and it matches the DB2 field
+>    `document_tags` — which had to be created (no DB2 doc had it before 2026-06-18). The phantom
+>    `src/gcp/reimport_with_metadata.py` referenced in older drafts **does not exist**. The real DB1 writer
+>    is `src/gcp/reimport_db1_keys.py` (pull-clean-augment-upsert); the live store was built by the LLM
+>    extractor, not a regex. See `bridge_key_guide.md` v3.0 for the verified mechanism.
+> 2. **Quiz ingest is `src/gcp/ingest_quiz_banks.py`** (this repo) → Firestore `quiz_banks/{lesson}/questions/{q}`.
+>    The old `src/gcp/upload_quiz_banks.py` (wrong layout) is superseded.
 
 ---
 
@@ -83,7 +82,7 @@ This is the heart of the map. Seven artifacts per lesson:
 | 2 | **RKP manifest** (RKPs, `lesson_overview`, `far_references`, `bridge_keys`, `knowledge`) | `curriculum_components/rkp_manifests/PPL_PA_*_rkp.json` | Ingestion team | Specialist tutor + flashcard UI | `rkp_creation_guide.md` | Any knowledge/ACS change |
 | 3 | **Flashcards** (`knowledge_formatted`) | a field inside the RKP manifest; written by `curriculum_components/scripts/generate_knowledge_formatted.py` (Gemini 2.5 Pro) | Ingestion team (run the script) | **App** — `FlashcardDeck` / `FlashcardCard` UI | **`flashcard_creation_guide.md`** | Whenever `knowledge` changes |
 | 4 | **Quiz bank** (8 questions) | `curriculum_components/quiz_banks/PPL_PA_*_quiz.json` | Ingestion team | App quiz router + tutor | `quiz_authoring_guide.md` | RKP facts change |
-| 5 | **Bridge keys / `structData` metadata** (`reg_keys`/`doc_keys`) | Extracted at ingest → DB1 structData. **Target (v2.8):** LLM (`src/utils/generate_metadata.py`) + schema guard. **Today:** the production writer `src/gcp/reimport_with_metadata.py` uses a regex and bypasses the guard — being migrated. | Ingestion team (pipeline) | The DB1→DB2 RAG verification hop | `bridge_key_guide.md` (v2.8) | Sources/regs change |
+| 5 | **Bridge keys** — DB1 `structData.doc_keys` (display refs) + DB2 `document_tags` (the match target) + RKP manifest `bridge_keys` (what the app filters on) | DB1 via `src/gcp/reimport_db1_keys.py`; DB2 tags via `src/gcp/import_db2_docs.py`; manifests via `src/gcp/upload_manifests.py` | Ingestion team (pipeline) | The DB1→DB2 RAG verification hop | `bridge_key_guide.md` (v3.0) | Sources/regs change |
 | 6 | **Media assets** (`audio_file`, `video_file`, `notes_file`) | referenced in the RKP manifest | **Separate process / Daniel** (NOT the team) | App lesson player | none (out of team scope) | Overview re-recorded |
 | 7 | **Curriculum Key** (ACS entries) | the curriculum key (Step 3, "Manual" in `rkp_creation_guide.md`) | Ingestion team / Woz | Lesson planner / mastery map | none (manual step) | New lesson added |
 
