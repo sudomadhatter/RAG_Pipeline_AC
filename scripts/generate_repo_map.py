@@ -4,12 +4,13 @@ from pathlib import Path
 
 # Configuration
 PROJECT_ROOT = Path(__file__).parent.parent
-OUTPUT_FILE = PROJECT_ROOT / "docs" / "repo-map.md"
+OUTPUT_FILE = PROJECT_ROOT / "_docs" / "docs_prds" / "repo-map.md"
 
 IGNORE_DIRS = {
-    ".git", ".venv", "venv", "__pycache__", "node_modules", 
-    ".agent", ".claude", ".gemini", "auth_keys", 
-    "_artifacts", "_test_scripts"
+    ".git", ".venv", "venv", "__pycache__", "node_modules",
+    ".agent", ".claude", ".gemini", "auth_keys",
+    "_artifacts", "_claude_artifacts", "_opencode_artifacts",
+    "_test_scripts", ".pytest_cache",
 }
 
 def generate_ast_summary(filepath):

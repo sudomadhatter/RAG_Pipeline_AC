@@ -11,7 +11,7 @@ description: >
 
 > **Owner:** Woz (Agent) — pipeline-side verification.
 > **Trigger:** After any RKP creation batch, after any Vertex AI ingestion, or on-demand.
-> **Companion:** `_01_My/instruction_docs/bridge_key_guide.md` — the standing contract from the app team.
+> **Companion:** `_docs/instruction_docs/bridge_key_guide.md` — the standing contract from the app team.
 
 ---
 
@@ -107,7 +107,7 @@ AC 91-73B   AC 91-74B    AC 120-12A   AC 120-71B
 ## 5. Execution Procedure
 
 ### After RKP Creation
-1. Load new/modified manifests from `specialist_curriculum/rkp_manifests/`.
+1. Load new/modified manifests from `curriculum_components/rkp_manifests/`.
 2. Run Layer 1 checks. Flag empty/malformed keys.
 3. Report findings to Daniel.
 
@@ -151,7 +151,7 @@ Summary: {passed}/{total} passed, {failed} failed, {warnings} warnings
 |---|---|
 | `src/utils/schema.py` | `CurriculumStructData` — `reg_keys`/`doc_keys` validation |
 | `src/utils/generate_metadata.py` | LLM metadata extractor |
-| `_01_My/instruction_docs/bridge_key_guide.md` | Standing contract |
+| `_docs/instruction_docs/bridge_key_guide.md` | Standing contract |
 
 ---
 

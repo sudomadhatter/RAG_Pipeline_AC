@@ -11,7 +11,7 @@ description: >
 
 > **Owner:** Woz (Agent) — pipeline-side verification.
 > **Trigger:** After any RKP creation batch, after any Vertex AI ingestion, or on-demand.
-> **Companion:** [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/bridge_key_guide.md) — the standing contract from the app team.
+> **Companion:** [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_docs/instruction_docs/bridge_key_guide.md) — the standing contract from the app team.
 
 ---
 
@@ -169,7 +169,7 @@ AC 91-73B        AC 91-74B       AC 120-12A       AC 120-71B
 
 ### When Triggered After RKP Creation
 
-1. **Load all new/modified RKP manifests** from `specialist_curriculum/rkp_manifests/`.
+1. **Load all new/modified RKP manifests** from `curriculum_components/rkp_manifests/`.
 2. **Run Layer 1 checks** on each manifest:
    - Flag any RKP with empty `bridge_keys`.
    - Flag any key that contains chapter/section granularity.
@@ -219,7 +219,7 @@ Summary: {passed}/{total} passed, {failed} failed, {warnings} warnings
 |---|---|
 | [schema.py](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/src/utils/schema.py) | `CurriculumStructData` — where `reg_keys`/`doc_keys` are validated (or not) |
 | [generate_metadata.py](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/src/utils/generate_metadata.py) | LLM metadata extractor — produces the structData from master module text |
-| [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/bridge_key_guide.md) | Standing contract from the app team — the authoritative reference |
+| [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_docs/instruction_docs/bridge_key_guide.md) | Standing contract from the app team — the authoritative reference |
 
 ---
 

@@ -24,9 +24,9 @@ from google.cloud import storage, discoveryengine_v1 as discoveryengine  # noqa:
 from google.protobuf.json_format import MessageToDict, ParseDict  # noqa: E402
 from google.protobuf import field_mask_pb2, struct_pb2  # noqa: E402
 
-FAA_DOCS_DIR = config.PROJECT_ROOT / "curriculum_components" / "faa_docs"
-CURRICULUM_JSONL = config.PROJECT_ROOT / "pipeline" / "curriculum" / "curriculum.jsonl"
-RKP_MANIFESTS = config.PROJECT_ROOT / "curriculum_components" / "rkp_manifests"
+FAA_DOCS_DIR = config.FAA_DOCS_DIR
+CURRICULUM_JSONL = config.CURRICULUM_JSONL
+RKP_MANIFESTS = config.RKP_MANIFESTS_DIR
 GCS_PREFIX = "v2"  # gs://aviationchat-library/v2/<filename>
 
 

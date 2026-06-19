@@ -18,7 +18,7 @@ import config  # noqa: E402
 import firebase_admin  # noqa: E402
 from firebase_admin import credentials, firestore  # noqa: E402
 
-QUIZ_DIR = config.PROJECT_ROOT / "curriculum_components" / "quiz_banks"
+QUIZ_DIR = config.QUIZ_BANKS_DIR
 DATABASE_ID = "aviationchat-database"
 COLLECTION = "quiz_banks"
 

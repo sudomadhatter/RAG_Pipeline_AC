@@ -17,7 +17,7 @@ import config  # noqa: E402  (sets GOOGLE_APPLICATION_CREDENTIALS)
 import firebase_admin  # noqa: E402
 from firebase_admin import credentials, firestore  # noqa: E402
 
-MANIFESTS_DIR = config.PROJECT_ROOT / "curriculum_components" / "rkp_manifests"
+MANIFESTS_DIR = config.RKP_MANIFESTS_DIR
 DATABASE_ID = "aviationchat-database"
 COLLECTION = "rkp_manifests"
 

@@ -4,6 +4,13 @@
 > **Maintained by:** Pipeline team (this repo)  
 > **Purpose:** Single source of truth for every curriculum asset — where it lives, what version it is, whether it's deployed, and what's missing.
 
+> [!NOTE]
+> **For *current* counts and live deployment state, run the generated map — don't trust the
+> hand-typed numbers below.** `python scripts/generate_state_map.py --live` writes
+> [STATE.md](STATE.md), which inventories both data folders and diffs the local files against
+> Firestore/DB1/DB2 automatically. This registry stays the narrative explanation of *what each asset
+> is and how it flows*; STATE.md is the always-fresh snapshot of *how many and whether deployed*.
+
 > [!IMPORTANT]
 > **Live state as of 2026-06-19 11:01 AM** (verified via Firestore query against `aviationchat-database`):
 > - **DB1:** 184 docs, keys cleaned, **0 corrupt**, **0 empty doc_keys**, bridge resolves **48/48 lessons**
@@ -31,7 +38,7 @@ flowchart LR
         RKP["rkp_manifests/\n48 JSON"]
         QB["quiz_banks/\n48 JSON"]
         POD["lesson_podcasts/\n34 .md"]
-        SPLIT["_v2_split/\n184 micro-lessons"]
+        SPLIT["curriculum/elements/\n184 micro-lessons"]
         FAA["faa_docs/\nFAA PDFs"]
     end
 
@@ -73,7 +80,8 @@ flowchart LR
 | **Local Quizzes (app)** | `AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks/{lesson_id}_quiz.json` | 48 files |
 | **Local Podcasts** | `curriculum_components/lesson_podcasts/{lesson_id}_podcast.md` | 34 files (Area I only) |
 | **Master Modules** | `curriculum_components/curriculum_modules/Area {N} Task {X} PPL.md` | 13 files |
-| **Split Lessons** | `pipeline/curriculum/_v2_split/lesson_pa_{area}_{task}_{element}.md` | ~184 files |
+| **Split Lessons** | `pipeline/curriculum/elements/lesson_pa_{area}_{task}_{element}.md` | 184 files |
+| **Area IX metadata sidecars** | `pipeline/curriculum/sidecars/lesson_pa_ix_*.json` | 12 files |
 
 ### Credentials Required
 
@@ -87,7 +95,7 @@ flowchart LR
 | Schema | Version | Status | Reference |
 |---|---|---|---|
 | Quiz Bank | **v2.1** | 🔒 LOCKED (Consultant approved 2026-04-05) | `curriculum_components/quiz_schema.md` |
-| RKP Manifest | Implicit (no version field) | Stable | `_01_My/instruction_docs/rkp_creation_guide.md` |
+| RKP Manifest | Implicit (no version field) | Stable | `docs/instruction_docs/rkp_creation_guide.md` |
 | DB1 structData | Hardened (Pydantic) | Enforced at ingest | `src/utils/schema.py` — `CurriculumStructData` |
 | DB2 structData | Pydantic | Enforced at ingest | `src/utils/schema.py` — `LibraryStructData` |
 
@@ -219,7 +227,7 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A["Master Module\nArea X Task Y PPL.md"] -->|"Split by heading"| B["184 micro-lessons\n_v2_split/lesson_pa_*.md"]
+    A["Master Module\nArea X Task Y PPL.md"] -->|"Split by heading"| B["184 micro-lessons\ncurriculum/elements/lesson_pa_*.md"]
     B -->|"Upload to GCS"| C["gs://aviationchat-curriculum-cms/\nv2/elements/doc_id.md"]
     C -->|"JSONL manifest import"| D["Vertex AI Search\naviation-curriculum-v2"]
     E["reimport_db1_keys.py"] -->|"Clean + augment keys"| D
@@ -272,12 +280,10 @@ flowchart TD
 
 | Script | Purpose | Entry Point |
 |---|---|---|
-| `src/gcp/reimport_db1_keys.py` | **[NEW]** Repair DB1 keys (clean + augment + validate + upsert via `update_document`) | `python src/gcp/reimport_db1_keys.py [--execute]` |
-| `src/gcp/upload_and_import_v2.py` | Upload + import (curriculum + library) | `python -m src.gcp.upload_and_import_v2 [curriculum|library|all]` |
+| `src/gcp/reimport_db1_keys.py` | **[Primary]** Rebuild DB1 keys (pull live → clean + augment + validate → upsert via `update_document`); writes `curriculum.jsonl` | `python src/gcp/reimport_db1_keys.py [--execute]` |
 | `src/gcp/import_db2_docs.py` | **[NEW]** Upload FAA PDFs → DB2 + patch `document_tags` | `python src/gcp/import_db2_docs.py [--execute]` |
 | `src/gcp/probe_bridge_hop.py` | **[NEW]** Live bridge probe (DB1→DB2 resolution test) | `python src/gcp/probe_bridge_hop.py [--limit N]` |
-| `src/pipeline/curriculum.py` | Full curriculum pipeline (6 phases) | Via `src/main.py` |
-| `src/utils/generate_metadata.py` | LLM-based metadata extraction | Standalone |
+| `src/utils/generate_metadata.py` | LLM-based metadata extraction (writes sidecars to `curriculum/new/`) | Standalone |
 | `src/utils/schema.py` | Pydantic schema + key normalization + coverage analysis | Imported by pipeline |
 | `src/utils/db2_tags.py` | **[NEW]** Shared DB2 tag extraction logic | Imported by import scripts |
 | `scripts/derive_db2_vocabulary.py` | **[NEW]** Derive `DB2_VOCABULARY` from live DB2 store | `python scripts/derive_db2_vocabulary.py` |
@@ -380,7 +386,6 @@ These are the **only** tokens that match `document_tags: ANY(...)` filters in th
 | Script | Purpose |
 |---|---|
 | `src/gcp/import_db2_docs.py` | **[Primary]** Upload FAA PDFs + patch `document_tags` (gated `--execute`) |
-| `src/pipeline/library.py` | Full library pipeline — discover PDFs, upload to GCS, generate JSONL, import to DB2 |
 | `scripts/derive_db2_vocabulary.py` | Re-derive vocabulary from live DB2 after any change |
 
 ### Local FAA Document Storage
@@ -669,7 +674,6 @@ lesson_id = "lesson_" + acs_code.lower().replace(".", "_")
 | Probe bridge hop (live test) | `python src/gcp/probe_bridge_hop.py [--limit N]` | `src/gcp/probe_bridge_hop.py` |
 | Derive DB2 vocabulary | `python scripts/derive_db2_vocabulary.py` | `scripts/derive_db2_vocabulary.py` |
 | Generate `knowledge_formatted` | `python curriculum_components/scripts/generate_knowledge_formatted.py` | `curriculum_components/scripts/generate_knowledge_formatted.py` |
-| Run full curriculum pipeline | `python -m src.main` | `src/main.py` |
 | Create V2 data stores | `python -m src.gcp.create_v2_stores` | `src/gcp/create_v2_stores.py` |
 | Run offline test suite | `python -m pytest src/tests/ -q` | `src/tests/` (33 tests) |
 

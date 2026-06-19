@@ -15,7 +15,7 @@ from utils.schema import to_document_level, is_garbage, normalize_key  # noqa: E
 
 from google.cloud import discoveryengine_v1 as discoveryengine  # noqa: E402
 
-MANIFESTS = config.PROJECT_ROOT / "curriculum_components" / "rkp_manifests"
+MANIFESTS = config.RKP_MANIFESTS_DIR
 
 
 def serving_config(client):

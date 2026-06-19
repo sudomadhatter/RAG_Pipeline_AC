@@ -11,14 +11,14 @@ description: >
 
 > **Owner:** Woz (Agent) — receives master modules from Daniel (CFI).
 > **Trigger:** Daniel provides a master module `.md` file and requests RKP creation.
-> **Output:** One or more `{lesson_id}_rkp.json` files in `specialist_curriculum/rkp_manifests/`.
+> **Output:** One or more `{lesson_id}_rkp.json` files in `curriculum_components/rkp_manifests/`.
 
 ---
 
 ## 1. What You Receive (Inputs)
 
 Daniel delivers a **master module** markdown file. These live in:
-`specialist_curriculum/curriculum_modules/`
+`curriculum_components/curriculum_modules/`
 
 Each master module covers **one ACS Task** (e.g., "Area I, Task A") and contains
 multiple ACS elements. Each element has 4 sections:
@@ -52,7 +52,7 @@ ACS elements group into logical lessons.
 
 ### 2.1 The Lesson Split
 
-Use the **ACS Element to Lesson ID Mapping** from `specialist_curriculum/quiz_schema.md`
+Use the **ACS Element to Lesson ID Mapping** from `curriculum_components/quiz_schema.md`
 (lines 118-155) as the definitive guide for which elements belong to which lesson.
 
 If a new Area/Task has no existing mapping, propose one to Daniel for approval
@@ -164,6 +164,13 @@ Getting these wrong means the RAG verification step returns nothing.
 
 When Daniel gives you a master module, execute these steps IN ORDER:
 
+### Step 0: Read these references FIRST (before building any JSON)
+- **`_docs/instruction_docs/rkp_creation_guide.md`** — the schema, field rules, and the reverse-contract
+  (every fact a quiz will test must live in a `knowledge` field, not only the `lesson_overview`).
+- **`_docs/instruction_docs/bridge_key_guide.md`** — the bridge-key contract (document-level tokens, DB2
+  vocabulary, how to verify). `bridge_keys` may never be empty.
+- **The source master module** in `curriculum_components/curriculum_modules/` (read it in full).
+
 ### Step 1: Analyze the Master Module
 - Read the entire master module.
 - List all ACS element codes found (PA.X.Y.Z).
@@ -186,7 +193,7 @@ When Daniel gives you a master module, execute these steps IN ORDER:
 
 ### Step 4: Run `generate_knowledge_formatted.py`
 ```bash
-cd specialist_curriculum/scripts
+cd curriculum_components/scripts
 python generate_knowledge_formatted.py --all --write
 ```
 This populates the `knowledge_formatted` fields using Gemini Pro.
@@ -223,10 +230,10 @@ Before creating any RKP, study these existing files:
 
 | File | Why |
 |---|---|
-| [PPL_PA_I_A_01_rkp.json](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/rkp_manifests/PPL_PA_I_A_01_rkp.json) | The original gold standard — 4 RKPs, full overview, complete bridge keys |
-| [Area 1 Task A PPL.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/curriculum_modules/Area%201%20Task%20A%20PPL.md) | Master module format — 4-section structure per element |
-| [rkp_creation_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/rkp_creation_guide.md) | Daniel's authoring guide — field definitions and delegation options |
-| [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/bridge_key_guide.md) | Bridge key contract — document-level tokens, DB2 vocab, verification |
+| [PPL_PA_I_A_01_rkp.json](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/curriculum_components/rkp_manifests/PPL_PA_I_A_01_rkp.json) | The original gold standard — 4 RKPs, full overview, complete bridge keys |
+| [Area 1 Task A PPL.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/curriculum_components/curriculum_modules/Area%201%20Task%20A%20PPL.md) | Master module format — 4-section structure per element |
+| [rkp_creation_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_docs/instruction_docs/rkp_creation_guide.md) | Daniel's authoring guide — field definitions and delegation options |
+| [bridge_key_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_docs/instruction_docs/bridge_key_guide.md) | Bridge key contract — document-level tokens, DB2 vocab, verification |
 
 ---
 

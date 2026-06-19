@@ -6,7 +6,7 @@ date: 2026-06-19
 status: "Living document — source of truth for the ingestion/curriculum pipeline"
 audience: "Daniel (CFI/product), the Ingestion Pipeline team (Woz), and any app-team engineer consuming our artifacts"
 owner_split: "Pipeline/tooling/layout/schema = engineering (Woz). Which regs/citations are correct + media = Daniel (CFI). App rendering/serving = app team."
-companion_docs: "instruction_docs/{get_back_on_track, bridge_key_guide (v2.8), quiz_authoring_guide, rkp_creation_guide, flashcard_creation_guide, curriculum_lifecycle}.md"
+companion_docs: "../instruction_docs/{get_back_on_track, bridge_key_guide (v2.8), quiz_authoring_guide, rkp_creation_guide, flashcard_creation_guide, curriculum_lifecycle}.md"
 ---
 
 # Master Curriculum & Ingestion Pipeline — PRD
@@ -382,7 +382,7 @@ When a citation is ambiguous, engineering **stops and asks Daniel** — never gu
 ## 13. Current state (verified live 2026-06-19) — WIRED
 
 The RAG layer is wired end to end and proven against the live stores. Session record:
-`_01_My/_artifacts/2026-06-18_bridge-ground-truth-fix/`.
+`_claude_artifacts/2026-06-18_bridge-ground-truth-fix/`.
 
 | Layer | State |
 |---|---|
@@ -436,7 +436,7 @@ tooling) is the lever to push past 171.
 - `curriculum_components/scripts/generate_knowledge_formatted.py` — flashcard formatter
 - `scripts/derive_db2_vocabulary.py` · `src/utils/db2_tags.py` · `src/utils/schema.py` · `src/utils/generate_metadata.py`
 - `src/gcp/`: `import_db2_docs.py` · `reimport_db1_keys.py` · `upload_manifests.py` · `ingest_quiz_banks.py` · `probe_bridge_hop.py`
-- `src/tests/` — offline gate (33 tests) · `_01_My/instruction_docs/` — the six guides
+- `src/tests/` — offline gate (33 tests) · `docs/instruction_docs/` — the six guides
 
 **App repo (`AGY_AVIATIONCHAT`) — consumer:**
 - `backend/schemas/quiz.py` — real quiz schema · `backend/services/quiz_bank_service.py` · `backend/routers/quiz.py` — reads `quiz_banks/{lesson}/questions/*`

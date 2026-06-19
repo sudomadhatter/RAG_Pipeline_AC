@@ -6,6 +6,7 @@ import os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 from utils.schema import CurriculumLessonSchema
+import config
 
 def fallback_generator(markdown_path: Path):
     content = markdown_path.read_text(encoding='utf-8')
@@ -78,4 +79,4 @@ def fallback_generator(markdown_path: Path):
             print(f"  -> Failed to validate {md_file.name}: {e}")
 
 if __name__ == "__main__":
-    fallback_generator(Path("curriculum_components/curriculum_modules/Area 9 Tasks B,C PPL.md"))
+    fallback_generator(config.MODULES_DIR / "Area 9 Tasks B,C PPL.md")

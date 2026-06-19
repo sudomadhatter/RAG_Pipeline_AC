@@ -1,0 +1,18 @@
+# Ingestion_pipeline_AvCh — Python dependencies
+#
+# Direct third-party packages used by src/ (derived from imports).
+# NOTE: versions are intentionally UNPINNED here. There is no committed .venv to
+# pip-freeze against, and inventing version numbers is worse than none. Pin these
+# from your working environment with:  pip freeze > requirements.lock.txt
+# (and copy the resolved == versions back here once verified).
+
+firebase-admin              # Firestore writes (rkp_manifests, quiz_banks)
+google-cloud-discoveryengine  # Vertex AI Search (DB1 / DB2)
+google-cloud-storage        # GCS uploads (curriculum + library)
+google-genai                # Gemini (metadata extraction, flashcard formatting)
+protobuf                    # struct/field-mask helpers for Vertex document writes
+pydantic                    # schema validation (src/utils/schema.py)
+python-dotenv               # loads auth_keys/.env (src/config.py)
+
+# --- dev / test ---
+pytest                      # offline gate (src/tests/)

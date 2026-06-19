@@ -8,15 +8,15 @@
 
 ## File Structure & Naming Convention
 
-All curriculum assets live under one parent folder: **`specialist_curriculum/`**
+All curriculum assets live under one parent folder: **`curriculum_components/`**
 
 | Subfolder | Contents | Naming Pattern | Example |
 |---|---|---|---|
-| `specialist_curriculum/curriculum_modules/` | Task-level lesson plan modules (1 per ACS Task) + curriculum key | Original names — do not rename | `Area 1 Task A PPL.md` |
-| `specialist_curriculum/rkp_manifests/` | RKP manifests (1 per lesson) | `{lesson_id}_rkp.json` | `PPL_PA_I_A_01_rkp.json` |
-| `specialist_curriculum/lesson_podcasts/` | Podcast briefings (1 per lesson) | `{lesson_id}_podcast.md` | `PPL_PA_I_A_01_podcast.md` |
-| `specialist_curriculum/quiz_banks/` | Quiz banks (1 per lesson) | `{lesson_id}_quiz.json` | `PPL_PA_I_A_01_quiz.json` |
-| `specialist_curriculum/quiz_schema.md` | Locked JSON schema reference | — | — |
+| `curriculum_components/curriculum_modules/` | Task-level lesson plan modules (1 per ACS Task) + curriculum key | Original names — do not rename | `Area 1 Task A PPL.md` |
+| `curriculum_components/rkp_manifests/` | RKP manifests (1 per lesson) | `{lesson_id}_rkp.json` | `PPL_PA_I_A_01_rkp.json` |
+| `curriculum_components/lesson_podcasts/` | Podcast briefings (1 per lesson) | `{lesson_id}_podcast.md` | `PPL_PA_I_A_01_podcast.md` |
+| `curriculum_components/quiz_banks/` | Quiz banks (1 per lesson) | `{lesson_id}_quiz.json` | `PPL_PA_I_A_01_quiz.json` |
+| `curriculum_components/quiz_schema.md` | Locked JSON schema reference | — | — |
 
 ### Reference Docs
 | File | Purpose |

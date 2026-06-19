@@ -4,18 +4,16 @@
 
 ```text
 Ingestion_pipeline_AvCh
+├── .env.example
 ├── .gitignore
-├── .pytest_cache
-│   ├── .gitignore
-│   ├── CACHEDIR.TAG
-│   ├── README.md
-│   └── v
-│       └── cache
-│           ├── lastfailed
-│           └── nodeids
 ├── AGENTS.md
 ├── CLAUDE.md
-├── _01_My
+├── README.md
+├── _docs
+│   ├── docs_prds
+│   │   ├── Master_Curriculum_Pipeline.md
+│   │   ├── asset_registry.md
+│   │   └── repo-map.md
 │   ├── instruction_docs
 │   │   ├── bridge_key_guide.md
 │   │   ├── curriculum_lifecycle.md
@@ -45,34 +43,6 @@ Ingestion_pipeline_AvCh
 │       ├── socratic_quiz_tutor_architecture.md
 │       ├── socratic_teacher_architecture.md
 │       └── talker_architecture.md
-├── _claude_artifacts
-│   ├── 2026-06-16_add-artifact-rules
-│   │   ├── implementation_plan.md
-│   │   ├── task.md
-│   │   └── walkthrough.md
-│   ├── 2026-06-16_quiz-and-bridge-key-pipeline-fix
-│   │   ├── dev-story_curriculum-pipeline-fix.md
-│   │   ├── implementation_plan.md
-│   │   ├── task-list.md
-│   │   └── walkthrough.md
-│   ├── 2026-06-16_quiz-and-bridge-key-pipeline-fix__from-01My
-│   │   ├── implementation_plan.md
-│   │   ├── task.md
-│   │   ├── walkthrough.md
-│   │   └── your-action-required.md
-│   ├── 2026-06-17_pipeline-fix-revision
-│   │   └── implementation_plan.md
-│   ├── 2026-06-17_pipeline-qa-code-review
-│   │   └── code-review.md
-│   ├── 2026-06-18_bridge-ground-truth-fix
-│   │   ├── implementation_plan.md
-│   │   ├── task-list.md
-│   │   └── walkthrough.md
-│   ├── 2026-06-19_artifact-path-scheme
-│   │   └── implementation_plan.md
-│   └── README.md
-├── _opencode_artifacts
-│   └── README.md
 ├── curriculum_components
 │   ├── curriculum_modules
 │   │   ├── Area 1 Task A PPL.md
@@ -241,27 +211,11 @@ Ingestion_pipeline_AvCh
 │               def format_knowledge(client, knowledge_text, title, why)
 │               def process_manifest(client, filepath, dry_run)
 │               def main()
-├── docs
-│   ├── Master_Curriculum_Pipeline.md
-│   ├── asset_registry.md
-│   └── repo-map.md
 ├── pipeline
 │   └── curriculum
-│       ├── _v2_split
-│       ├── active
-│       │   ├── Area 1 Task A PPL.md
-│       │   ├── Area 1 Task B PPL.md
-│       │   ├── Area 1 Task C PPL.md
-│       │   ├── Area 1 Task D PPL.md
-│       │   ├── Area 1 Task E PPL.md
-│       │   ├── Area 1 Task F PPL.md
-│       │   ├── Area 1 Task G PPL.md
-│       │   ├── Area 1 Task H PPL.md
-│       │   ├── Area 11 Task A PPL.md
-│       │   ├── Area 3 Tasks A,B PPL.md
-│       │   ├── Area 6 Task B PPL.md
-│       │   ├── Area 7 A,B,D PPL.md
-│       │   ├── Area 9 Tasks B,C PPL.md
+│       ├── README.md
+│       ├── curriculum.jsonl
+│       ├── elements
 │       │   ├── lesson_pa_i_a_k1.md
 │       │   ├── lesson_pa_i_a_k2.md
 │       │   ├── lesson_pa_i_a_k3.md
@@ -394,6 +348,18 @@ Ingestion_pipeline_AvCh
 │       │   ├── lesson_pa_iii_b_r3.md
 │       │   ├── lesson_pa_iii_b_s1.md
 │       │   ├── lesson_pa_iii_b_s2.md
+│       │   ├── lesson_pa_ix_b_k1.md
+│       │   ├── lesson_pa_ix_b_k2.md
+│       │   ├── lesson_pa_ix_b_k3.md
+│       │   ├── lesson_pa_ix_b_k4.md
+│       │   ├── lesson_pa_ix_b_r1.md
+│       │   ├── lesson_pa_ix_b_s1.md
+│       │   ├── lesson_pa_ix_c_k1.md
+│       │   ├── lesson_pa_ix_c_k2c.md
+│       │   ├── lesson_pa_ix_c_k3.md
+│       │   ├── lesson_pa_ix_c_r1.md
+│       │   ├── lesson_pa_ix_c_r4.md
+│       │   ├── lesson_pa_ix_c_s1.md
 │       │   ├── lesson_pa_vi_b_k1.md
 │       │   ├── lesson_pa_vi_b_k2.md
 │       │   ├── lesson_pa_vi_b_k3.md
@@ -433,34 +399,23 @@ Ingestion_pipeline_AvCh
 │       │   ├── lesson_pa_xi_a_r4.md
 │       │   ├── lesson_pa_xi_a_r5.md
 │       │   ├── lesson_pa_xi_a_r6.md
-│       │   ├── lesson_pa_xi_a_r7.md
-│       │   └── library_v2_import.jsonl
-│       ├── curriculum.jsonl
-│       └── new
+│       │   └── lesson_pa_xi_a_r7.md
+│       ├── new
+│       │   └── README.md
+│       └── sidecars
 │           ├── lesson_pa_ix_b_k1.json
-│           ├── lesson_pa_ix_b_k1.md
 │           ├── lesson_pa_ix_b_k2.json
-│           ├── lesson_pa_ix_b_k2.md
 │           ├── lesson_pa_ix_b_k3.json
-│           ├── lesson_pa_ix_b_k3.md
 │           ├── lesson_pa_ix_b_k4.json
-│           ├── lesson_pa_ix_b_k4.md
 │           ├── lesson_pa_ix_b_r1.json
-│           ├── lesson_pa_ix_b_r1.md
 │           ├── lesson_pa_ix_b_s1.json
-│           ├── lesson_pa_ix_b_s1.md
 │           ├── lesson_pa_ix_c_k1.json
-│           ├── lesson_pa_ix_c_k1.md
 │           ├── lesson_pa_ix_c_k2c.json
-│           ├── lesson_pa_ix_c_k2c.md
 │           ├── lesson_pa_ix_c_k3.json
-│           ├── lesson_pa_ix_c_k3.md
 │           ├── lesson_pa_ix_c_r1.json
-│           ├── lesson_pa_ix_c_r1.md
 │           ├── lesson_pa_ix_c_r4.json
-│           ├── lesson_pa_ix_c_r4.md
-│           ├── lesson_pa_ix_c_s1.json
-│           └── lesson_pa_ix_c_s1.md
+│           └── lesson_pa_ix_c_s1.json
+├── requirements.txt
 ├── scripts
 │   ├── audit_sidecars.py
 │   │       def audit_and_clean_sidecars()
@@ -508,50 +463,12 @@ Ingestion_pipeline_AvCh
     │   │       def execute()
     │   ├── storage.py
     │   │       def upload_to_gcs(local_path, bucket_name, destination_blob_name, project_id)
-    │   ├── upload_and_import_v2.py
-    │   │       def upload_curriculum_to_gcs()
-    │   │       def upload_library_to_gcs()
-    │   │       def import_documents(data_store_id, gcs_uri)
     │   ├── upload_manifests.py
     │   │       def load_all()
     │   │       def dry_run()
     │   │       def execute()
     │   └── vertex.py
     │           def import_documents_to_vertex(project_id, location, data_store_id, gcs_uri)
-    ├── main.py
-    │       def print_status()
-    │       def main()
-    ├── pipeline
-    │   ├── base.py
-    │   │       class BasePipeline:
-    │   │           def __init__(self, name)
-    │   │           def run_phase_1_discovery_validation(self)
-    │   │           def run_phase_2_bridge_keys(self, new_metadata_files)
-    │   │           def run_phase_3_gcs_upload(self, valid_files)
-    │   │           def run_phase_4_manifest_gen(self, new_uploaded)
-    │   │           def run_phase_5_vertex_import(self, manifest_gcs_uri)
-    │   │           def run_phase_6_lifecycle_commit(self, successful_files)
-    │   │           def execute(self, is_dry_run)
-    │   ├── curriculum.py
-    │   │       class CurriculumPipeline:
-    │   │           def __init__(self)
-    │   │           def run_phase_1_discovery_validation(self)
-    │   │           def run_phase_2_bridge_keys(self, new_metadata_files)
-    │   │           def run_phase_3_gcs_upload(self, valid_files)
-    │   │           def run_phase_4_manifest_gen(self, new_uploaded)
-    │   │           def run_phase_5_vertex_import(self, manifest_gcs_uri)
-    │   │           def run_phase_6_lifecycle_commit(self, successful_files)
-    │   └── library.py
-    │           class LibraryPipeline:
-    │               def __init__(self)
-    │               def _get_category(self, subfolder_name)
-    │               def _generate_id(self, category, filename)
-    │               def run_phase_1_discovery_validation(self)
-    │               def run_phase_2_bridge_keys(self, new_metadata_files)
-    │               def run_phase_3_gcs_upload(self, valid_files)
-    │               def run_phase_4_manifest_gen(self, new_uploaded)
-    │               def run_phase_5_vertex_import(self, manifest_gcs_uri)
-    │               def run_phase_6_lifecycle_commit(self, successful_files)
     ├── tests
     │   ├── __init__.py
     │   ├── conftest.py
@@ -578,10 +495,6 @@ Ingestion_pipeline_AvCh
         │       def split_task_file(content, filename)
         │       def generate_curriculum_metadata(content, offline, existing_sidecar)
         │       def process_master_module(markdown_path, offline)
-        ├── lifecycle.py
-        │       def get_timestamp()
-        │       def supersede_file(active_path, superseded_dir)
-        │       def activate_file(new_path, active_dir, superseded_dir)
         └── schema.py
                 def normalize_key(raw)
                 def is_garbage(k)

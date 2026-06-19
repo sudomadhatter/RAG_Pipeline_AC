@@ -5,16 +5,15 @@ description: >
   4-perspective structure (Legal/Safety/Application/Risk Management), SJT authoring
   rules, difficulty levers, explanation standards, and Firebase deployment.
   Activates when an RKP manifest is ready and Daniel requests quiz generation.
-  Gold standard: Area I quiz banks (PPL_PA_I_*). The 13 non-Area-I quiz files
-  (III/VI/VII/IX/XI) are sub-par and being rewritten — do NOT model on them.
+  Area I (PPL_PA_I_*) is the style reference; all 48 banks are verified to standard (2026-06-19).
 ---
 
 # Quiz Bank Generation Skill
 
 > **Owner:** Woz (Agent) — generates quiz banks from completed RKP manifests.
 > **Trigger:** An RKP manifest exists and Daniel requests quiz creation.
-> **Output:** `{lesson_id}_quiz.json` in `specialist_curriculum/quiz_banks/` + pushed to Firebase.
-> **Gold Standard:** Area I quiz banks (`PPL_PA_I_*`) ONLY.
+> **Output:** `{lesson_id}_quiz.json` in `curriculum_components/quiz_banks/` + pushed to Firebase.
+> **Gold Standard (style reference):** Area I quiz banks (`PPL_PA_I_*`). All 48 banks verified to standard (2026-06-19).
 
 ---
 
@@ -113,19 +112,24 @@ Every `explanation` must: (1) teach the principle, (2) cite the authority (FAR +
 
 ## 7. Execution Pipeline
 
+0. **Read references FIRST** — before authoring, read `_docs/instruction_docs/quiz_authoring_guide.md` §0
+   ("Author from the RKP first") and the target lesson's RKP `knowledge` fields in
+   `curriculum_components/rkp_manifests/{lesson_id}_rkp.json`. Every question must trace to a fact taught
+   in an RKP; if it can't, flag the RKP for enrichment instead of inventing the test.
 1. **Load RKP Manifest** — read `{lesson_id}_rkp.json`
 2. **Plan Coverage** — map 8 questions to RKPs, ensure every RKP tested
 3. **Author Questions** — scenario stem → correct answer → 3 distractors → explanation
 4. **Pre-Ship Self-Check** (§9)
 5. **Daniel CFI Review** — no question enters without explicit approval
-6. **Write Quiz JSON** — save to `specialist_curriculum/quiz_banks/`
-7. **Push to Firebase** — run `src/gcp/upload_quiz_banks.py`
-8. **Push RKP Manifests** (if needed) — run `src/gcp/upload_manifests.py`
+6. **Write Quiz JSON** — save to `curriculum_components/quiz_banks/`
+7. **Push to Firebase** — `python src/gcp/ingest_quiz_banks.py` (dry run), then `--execute`. Writes the
+   `quiz_banks/{lesson_id}/questions/{q}` subcollection the app reads (never the old `upload_quiz_banks.py`).
+8. **Push RKP Manifests** (if needed) — `python src/gcp/upload_manifests.py --execute`
 
 > [!IMPORTANT]
 > **Claude-specific tooling note:** If `write_to_file` stalls on JSON, use Bash:
 > ```bash
-> cat > specialist_curriculum/quiz_banks/PPL_PA_II_A_01_quiz.json << 'EOF'
+> cat > curriculum_components/quiz_banks/PPL_PA_II_A_01_quiz.json << 'EOF'
 > { ... your JSON ... }
 > EOF
 > ```
@@ -136,18 +140,19 @@ Every `explanation` must: (1) teach the principle, (2) cite the authority (FAR +
 
 ### Quiz Banks → Firestore
 ```bash
-cd src/gcp && python upload_quiz_banks.py
+python src/gcp/ingest_quiz_banks.py            # dry run (validates, mutates nothing)
+python src/gcp/ingest_quiz_banks.py --execute  # writes to Firestore
 ```
 - Database: `aviationchat-database`
-- Collection: `quiz_banks`
-- Doc ID: `{lesson_id}`
-- Auth: `auth_keys/librarian-service-account.json`
+- Target: `quiz_banks/{lesson_id}/questions/{q}` **subcollection** (8 docs/lesson — the path the app reads)
+- Write: validate → merge-upsert by question id + `seen_by`/`last_seen_at`; gated behind `--execute`
+- Auth: `auth_keys/service-account.json` (resolved via `config.py`)
 
 ### RKP Manifests → Firestore
 ```bash
-cd src/gcp && python upload_manifests.py
+python src/gcp/upload_manifests.py --execute
 ```
-- Collection: `rkp_manifests`
+- Collection: `rkp_manifests` (flat docs, one per lesson)
 
 ### Pre-Push Checklist
 - [ ] Quiz passes pre-ship self-check
@@ -172,17 +177,10 @@ cd src/gcp && python upload_manifests.py
 
 ---
 
-## 10. Quiz Banks Needing Rewrite
+## 10. Bank Status
 
-Area I (`PPL_PA_I_*`) = gold standard, do NOT touch.
-
-These 13 are sub-par and must be rewritten (never pushed to Firebase):
-
-`PPL_PA_III_A_01`, `PPL_PA_III_A_02`, `PPL_PA_III_B_01`,
-`PPL_PA_VI_B_01`, `PPL_PA_VI_B_02`, `PPL_PA_VI_B_03`,
-`PPL_PA_VII_A_01`, `PPL_PA_VII_D_01`,
-`PPL_PA_IX_B_01`, `PPL_PA_IX_C_01`,
-`PPL_PA_XI_A_01`, `PPL_PA_XI_A_02`, `PPL_PA_XI_A_03`
+All **48** quiz banks (Area I plus Areas III/VI/VII/IX/XI) are **verified to standard** (2026-06-19) and
+deployed. No rewrite backlog. Use the Area I banks (`PPL_PA_I_*`) as the **style reference** for new lessons.
 
 ---
 
@@ -202,7 +200,7 @@ These 13 are sub-par and must be rewritten (never pushed to Firebase):
 
 ## 12. Gold Standards
 
-- `specialist_curriculum/quiz_banks/PPL_PA_I_A_01_quiz.json` — original gold
-- `specialist_curriculum/quiz_schema.md` — locked JSON schema
-- `_01_My/instruction_docs/quiz_authoring_guide.md` — Daniel's quality bar
-- `_01_My/project_context_prps/quiz_generator_prompt.md` — system prompt + 12 Lessons Learned
+- `curriculum_components/quiz_banks/PPL_PA_I_A_01_quiz.json` — original gold
+- `curriculum_components/quiz_schema.md` — locked JSON schema
+- `_docs/instruction_docs/quiz_authoring_guide.md` — Daniel's quality bar
+- `_docs/project_context_prps/quiz_generator_prompt.md` — system prompt + 12 Lessons Learned

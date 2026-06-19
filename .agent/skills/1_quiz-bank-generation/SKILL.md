@@ -5,16 +5,15 @@ description: >
   4-perspective structure (Legal/Safety/Application/Risk Management), SJT authoring
   rules, difficulty levers, explanation standards, and Firebase deployment.
   Activates when an RKP manifest is ready and Daniel requests quiz generation.
-  Gold standard: Area I quiz banks (PPL_PA_I_*). The 13 non-Area-I quiz files
-  (III/VI/VII/IX/XI) are sub-par and being rewritten — do NOT model on them.
+  Area I (PPL_PA_I_*) is the style reference; all 48 banks are verified to standard (2026-06-19).
 ---
 
 # Quiz Bank Generation Skill
 
 > **Owner:** Woz (Agent) — generates quiz banks from completed RKP manifests.
 > **Trigger:** An RKP manifest exists and Daniel requests quiz creation.
-> **Output:** `{lesson_id}_quiz.json` in `specialist_curriculum/quiz_banks/` + pushed to Firebase.
-> **Gold Standard:** Area I quiz banks (`PPL_PA_I_*`) ONLY. The 13 non-Area-I files are being rewritten.
+> **Output:** `{lesson_id}_quiz.json` in `curriculum_components/quiz_banks/` + pushed to Firebase.
+> **Gold Standard (style reference):** Area I quiz banks (`PPL_PA_I_*`). All 48 banks are verified to standard (2026-06-19).
 
 ---
 
@@ -226,8 +225,17 @@ Legal interpretations, NTSB numbers, and enforcement data go in the `explanation
 
 ## 8. Execution Pipeline
 
+### Step 0: Read these references FIRST (before writing a single question)
+Do not author until you have read:
+- **`_docs/instruction_docs/quiz_authoring_guide.md` §0 ("Author from the RKP first")** — the quality bar
+  and the two-way contract. A question is only fair if its answer is taught in the RKP it points to.
+- **The target lesson's RKP `knowledge` fields** in `curriculum_components/rkp_manifests/{lesson_id}_rkp.json`
+  — build a fact inventory from these; every question must trace to one. If a question you want has no
+  supporting fact, flag the RKP for enrichment (don't invent the test).
+- `curriculum_components/quiz_schema.md` — the locked schema.
+
 ### Step 1: Load the RKP Manifest
-- Read the `{lesson_id}_rkp.json` from `specialist_curriculum/rkp_manifests/`.
+- Read the `{lesson_id}_rkp.json` from `curriculum_components/rkp_manifests/`.
 - List all RKPs and their `knowledge`, `acs_elements`, `far_references`.
 
 ### Step 2: Plan the Coverage
@@ -252,34 +260,34 @@ See §10 below. Every checkbox must pass.
 - Show all 8 questions with RKP mapping and coverage summary.
 
 ### Step 6: Write the Quiz JSON
-- Save to `specialist_curriculum/quiz_banks/{lesson_id}_quiz.json`.
+- Save to `curriculum_components/quiz_banks/{lesson_id}_quiz.json`.
 
 ### Step 7: Push to Firebase
-After Daniel approves, push to the live Firestore database:
+After Daniel approves, push to the live Firestore database. Gated — dry run first, then `--execute`:
 
 ```bash
-cd src/gcp
-python upload_quiz_banks.py
+python src/gcp/ingest_quiz_banks.py            # dry run: validates structure, mutates nothing
+python src/gcp/ingest_quiz_banks.py --execute  # writes to Firestore
 ```
 
 This script:
-- Reads all `*_quiz.json` files from `specialist_curriculum/quiz_banks/`
+- Reads all `*_quiz.json` files from `curriculum_components/quiz_banks/` and validates structure
 - Connects to Firestore database `aviationchat-database`
-- Writes each quiz to the `quiz_banks` collection using `lesson_id` as the document ID
-- Uses `set()` which creates or overwrites the existing document
-- Requires `auth_keys/librarian-service-account.json`
+- Writes each question to the **`quiz_banks/{lesson_id}/questions/{q}` subcollection** (8 docs per lesson —
+  the path the app reads), adding `seen_by`/`last_seen_at` rotation fields; merge-upsert by question id
+- Requires `auth_keys/service-account.json` (resolved via `config.py`)
 
-> [!IMPORTANT]
-> The upload script path in `upload_quiz_banks.py` line 10 currently points to
-> `c:\AGY-Projects\ingestion-Pipeline-AC`. This may need to be updated to match
-> the current workspace path. Verify before running.
+> [!NOTE]
+> Use **`ingest_quiz_banks.py`**, never the old `upload_quiz_banks.py` (deleted — it wrote an embedded
+> array on the parent doc, not the subcollection the app reads). Paths resolve from `config.py`; there is
+> no hardcoded path to edit.
 
 ### Step 8: Also Push RKP Manifests (if not already done)
-If the corresponding RKP manifest hasn't been pushed to Firebase yet:
+If the corresponding RKP manifest hasn't been pushed to Firebase yet (gated — dry run, then `--execute`):
 
 ```bash
-cd src/gcp
-python upload_manifests.py
+python src/gcp/upload_manifests.py            # dry run
+python src/gcp/upload_manifests.py --execute  # writes to Firestore
 ```
 
 This pushes `*_rkp.json` files to the `rkp_manifests` Firestore collection.
@@ -334,37 +342,18 @@ This pushes `*_rkp.json` files to the `rkp_manifests` Firestore collection.
 
 | File | Why |
 |---|---|
-| [PPL_PA_I_A_01_quiz.json](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/quiz_banks/PPL_PA_I_A_01_quiz.json) | The original gold standard — all 4 perspectives, real SJTs |
-| [quiz_schema.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/specialist_curriculum/quiz_schema.md) | Locked JSON schema + field reference |
-| [quiz_authoring_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/instruction_docs/quiz_authoring_guide.md) | Daniel's quality bar — difficulty levers + SJT rules |
-| [quiz_generator_prompt.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_01_My/project_context_prps/quiz_generator_prompt.md) | System prompt + 12 Lessons Learned |
+| [PPL_PA_I_A_01_quiz.json](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/curriculum_components/quiz_banks/PPL_PA_I_A_01_quiz.json) | The original gold standard — all 4 perspectives, real SJTs |
+| [quiz_schema.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/curriculum_components/quiz_schema.md) | Locked JSON schema + field reference |
+| [quiz_authoring_guide.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_docs/instruction_docs/quiz_authoring_guide.md) | Daniel's quality bar — difficulty levers + SJT rules |
+| [quiz_generator_prompt.md](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/_docs/project_context_prps/quiz_generator_prompt.md) | System prompt + 12 Lessons Learned |
 
 ---
 
-## 13. Which Quiz Banks Need Rewriting
+## 13. Bank Status
 
-The **Area I** banks (`PPL_PA_I_A_*` through `PPL_PA_I_H_*`) are the gold standard — **do NOT rewrite these**.
-
-The following 13 quiz banks from the last 5 master modules are **sub-par and must be rewritten**:
-
-| lesson_id | File | Status |
-|---|---|---|
-| `PPL_PA_III_A_01` | `PPL_PA_III_A_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_III_A_02` | `PPL_PA_III_A_02_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_III_B_01` | `PPL_PA_III_B_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_VI_B_01` | `PPL_PA_VI_B_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_VI_B_02` | `PPL_PA_VI_B_02_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_VI_B_03` | `PPL_PA_VI_B_03_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_VII_A_01` | `PPL_PA_VII_A_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_VII_D_01` | `PPL_PA_VII_D_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_IX_B_01` | `PPL_PA_IX_B_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_IX_C_01` | `PPL_PA_IX_C_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_XI_A_01` | `PPL_PA_XI_A_01_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_XI_A_02` | `PPL_PA_XI_A_02_quiz.json` | ❌ Rewrite needed |
-| `PPL_PA_XI_A_03` | `PPL_PA_XI_A_03_quiz.json` | ❌ Rewrite needed |
-
-**These were never pushed to Firebase** — so no live data needs to be rolled back.
-After rewriting, they go through Daniel's CFI review, then get pushed via `upload_quiz_banks.py`.
+All **48** quiz banks (Area I plus Areas III/VI/VII/IX/XI) are **verified to standard** as of 2026-06-19
+and deployed to Firestore. There is no outstanding rewrite backlog. Use the **Area I** banks
+(`PPL_PA_I_*`) as the **style reference** when authoring banks for new lessons.
 
 ---
 
@@ -372,41 +361,40 @@ After rewriting, they go through Daniel's CFI review, then get pushed via `uploa
 
 ### Quiz Banks → Firestore
 
-**Script:** [upload_quiz_banks.py](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/src/gcp/upload_quiz_banks.py)
+**Script:** [ingest_quiz_banks.py](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/src/gcp/ingest_quiz_banks.py)
 
 ```bash
-cd src/gcp
-python upload_quiz_banks.py
+python src/gcp/ingest_quiz_banks.py            # dry run
+python src/gcp/ingest_quiz_banks.py --execute  # writes to Firestore
 ```
 
 | Detail | Value |
 |---|---|
 | Firestore database | `aviationchat-database` |
-| Collection | `quiz_banks` |
-| Document ID | `{lesson_id}` (e.g., `PPL_PA_I_A_01`) |
-| Write mode | `set()` — creates or overwrites |
-| Auth | `auth_keys/librarian-service-account.json` |
-| Source | `specialist_curriculum/quiz_banks/*_quiz.json` |
+| Target | `quiz_banks/{lesson_id}/questions/{q}` **subcollection** (8 docs/lesson — the path the app reads) |
+| Write mode | Validate → merge-upsert by question id + `seen_by`/`last_seen_at`; gated behind `--execute` |
+| Auth | `auth_keys/service-account.json` (resolved via `config.py`) |
+| Source | `curriculum_components/quiz_banks/*_quiz.json` |
 
 ### RKP Manifests → Firestore
 
 **Script:** [upload_manifests.py](file:///c:/Users/dlohn/.gemini/antigravity/scratch/Ingestion_pipeline_AvCh/src/gcp/upload_manifests.py)
 
 ```bash
-cd src/gcp
-python upload_manifests.py
+python src/gcp/upload_manifests.py            # dry run
+python src/gcp/upload_manifests.py --execute  # writes to Firestore
 ```
 
 | Detail | Value |
 |---|---|
-| Collection | `rkp_manifests` |
+| Collection | `rkp_manifests` (flat docs, one per lesson — not a subcollection) |
 | Document ID | `{lesson_id}` |
-| Everything else | Same as quiz banks |
+| Auth / source | `auth_keys/service-account.json`; `curriculum_components/rkp_manifests/*_rkp.json` |
 
 ### Pre-Push Checklist
 - [ ] Quiz JSON passes the pre-ship self-check (§10)
 - [ ] Daniel has explicitly approved the quiz bank
 - [ ] `lesson_id` field is present and matches the filename
 - [ ] The corresponding RKP manifest is also pushed (or was previously)
-- [ ] `auth_keys/librarian-service-account.json` exists and is valid
-- [ ] Script path in `upload_quiz_banks.py` line 10 matches the workspace
+- [ ] `auth_keys/service-account.json` exists and is valid
+- [ ] Ran the dry run and reviewed it before `--execute`

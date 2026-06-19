@@ -12,8 +12,8 @@ def audit_and_clean_sidecars():
     print(f"Auditing JSON sidecars against hardened DB2_VOCABULARY...")
     print(f"Vocabulary size: {len(DB2_VOCABULARY)}")
     
-    # We check both new and active
-    target_dirs = [config.CURRICULUM_NEW, config.CURRICULUM_ACTIVE]
+    # Check the authoring inbox (new/) and the committed metadata sidecars (sidecars/)
+    target_dirs = [config.CURRICULUM_NEW, config.CURRICULUM_SIDECARS]
     
     total_files = 0
     fixed_files = 0

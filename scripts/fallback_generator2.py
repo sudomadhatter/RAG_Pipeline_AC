@@ -89,4 +89,4 @@ def split_and_generate_regex(markdown_path: Path):
             print(f"Failed to validate {doc_id}: {e}")
 
 if __name__ == "__main__":
-    split_and_generate_regex(Path("curriculum_components/curriculum_modules/Area 9 Tasks B,C PPL.md"))
+    split_and_generate_regex(config.MODULES_DIR / "Area 9 Tasks B,C PPL.md")

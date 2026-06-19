@@ -2,15 +2,20 @@
 Create V2 Data Stores with Layout-Aware Chunking
 Replaces the v1 stores that use basic digitalParsingConfig.
 """
-import os
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'c:\AGY-Projects\ingestion-Pipeline-AC\auth_keys\librarian-service-account.json'
+import sys
+from pathlib import Path
+
+# Resolve GCP credentials the same way every other pipeline script does — via auth_keys/.env +
+# service-account.json — instead of a machine-specific hardcoded path (credential-resolution rule).
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+import config  # noqa: E402 — importing config sets GOOGLE_APPLICATION_CREDENTIALS
 
 from google.cloud import discoveryengine_v1 as discoveryengine
 from google.protobuf.json_format import MessageToDict
 import json, sys
 
-PROJECT_ID = 'aviationchat'
-LOCATION = 'global'
+PROJECT_ID = config.GCP_PROJECT_ID
+LOCATION = config.CURRICULUM_LOCATION
 
 def create_data_store(store_id: str, display_name: str, chunk_size: int):
     """Create a new data store with layout parsing and chunking enabled."""

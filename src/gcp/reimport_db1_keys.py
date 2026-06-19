@@ -4,7 +4,7 @@ The live store is the source of truth for lesson CONTENT (its 184 docs already p
 GCS element .md files). This tool only repairs the metadata: it pulls every doc, runs the
 `schema.clean_keys` normalizer over reg_keys/doc_keys/keywords (stripping `**`, `[cite:]`,
 parenthetical/chapter junk while KEEPING every real reference), fills the 12 empty Area IX
-docs from their authored sidecars in pipeline/curriculum/new/, validates each entry through
+docs from their authored sidecars in pipeline/curriculum/sidecars/, validates each entry through
 CurriculumLessonSchema, and re-imports with INCREMENTAL reconciliation (upsert by id — same
 ids + same content URIs = update, never a wipe).
 
@@ -26,8 +26,8 @@ from google.cloud import discoveryengine_v1 as discoveryengine  # noqa: E402
 from google.protobuf.json_format import MessageToDict  # noqa: E402
 from google.protobuf import field_mask_pb2  # noqa: E402
 
-AREA_IX_SIDECARS = config.PROJECT_ROOT / "pipeline" / "curriculum" / "new"
-OUT_JSONL = config.PROJECT_ROOT / "pipeline" / "curriculum" / "curriculum.jsonl"
+AREA_IX_SIDECARS = config.CURRICULUM_SIDECARS
+OUT_JSONL = config.CURRICULUM_JSONL
 GCS_URI = f"gs://{config.CURRICULUM_BUCKET}/v2/curriculum_v2_import.jsonl"
 
 
