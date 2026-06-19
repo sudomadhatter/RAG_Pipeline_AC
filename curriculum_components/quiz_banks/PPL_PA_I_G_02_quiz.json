@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_G_02",
+  "title": "The Powerplant and Propeller — How They Work and How They Fail",
+  "questions": [
+    {
+      "id": "PPL_PA_I_G_02_Q001",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "In an aircraft with a constant-speed propeller, the pilot advances the throttle at cruise from 22 in. Hg to full throttle (28 in. Hg) without touching the propeller (RPM) control. What does the propeller governor do?",
+      "options": [
+        {"label": "A", "text": "The RPM increases proportionally — in a constant-speed prop, advancing the throttle increases RPM just like a fixed-pitch prop; the propeller control only maintains RPM at its currently selected setting, not at the RPM that was set before the throttle change"},
+        {"label": "B", "text": "The governor increases propeller blade pitch (coarser) to absorb the additional engine power and maintain the pilot-selected RPM; as the throttle advances and engine torque increases, the governor responds by steepening the blade angle until the RPM returns to the selected value; manifold pressure increases but RPM stays constant"},
+        {"label": "C", "text": "The governor reduces propeller blade pitch (finer) to dissipate the additional engine power; reducing pitch decreases the load on the engine, allowing RPM to stay constant as power increases"},
+        {"label": "D", "text": "Nothing — the governor only operates when the propeller control lever is moved by the pilot; with the propeller lever stationary, the governor is in a passive monitoring mode and does not adjust blade angle; RPM increases freely when the throttle is advanced with the prop lever stationary"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The constant-speed propeller governor maintains selected RPM through continuous blade angle adjustment. The operating principle: the governor is set to a target RPM by the propeller control lever. When throttle is advanced, the engine generates more torque which would normally speed the propeller up. The governor senses the RPM increase and responds by increasing blade pitch (moving the blades to a coarser angle). Coarser pitch means each blade takes a bigger 'bite' of air per revolution — absorbing more engine power at the same RPM. The result: manifold pressure increases (more power from the engine), but RPM remains constant at the governor's set point. This is why in a CS-prop aircraft, manifold pressure and RPM are independent variables — you can have high MP with low RPM (the detonation zone) or low MP with high RPM. Option C inverts the direction of pitch change — reducing pitch (finer) would make the prop spin FASTER (less air resistance per revolution), not maintain constant RPM under increased power. Option A describes fixed-pitch prop behavior.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1b"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q002",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "During a climb at high power, the engine begins running rough and the cylinder head temperature (CHT) shows a rapid increase well above the green arc. The pilot has been leaning aggressively to reduce fuel consumption. What is the most likely cause and immediate action?",
+      "options": [
+        {"label": "A", "text": "Magneto failure — one magneto has likely failed, causing the remaining magneto to fire all plugs; the asymmetric ignition produces rough running and higher CHT because incomplete combustion generates heat; the magneto check should be performed by briefly cycling the key to LEFT and RIGHT to identify the failed magneto"},
+        {"label": "B", "text": "Detonation from excessively lean mixture at high power — at high power settings, lean mixture reduces the fuel cooling effect and raises combustion temperatures into the detonation zone; the rapid CHT rise and rough operation are classic detonation signatures; immediate action: (1) reduce manifold pressure (throttle back), (2) enrich the mixture significantly (move mixture forward to full rich or near-full rich), (3) increase airspeed if possible for cylinder cooling, (4) monitor CHT for return to normal range"},
+        {"label": "C", "text": "Carburetor ice — the rough running and CHT increase indicate ice formation in the carburetor venturi; apply carburetor heat immediately; the CHT will increase further initially as hot air enters the engine, then subside as the ice melts; the lean mixture setting is coincidental"},
+        {"label": "D", "text": "Oil starvation — the high CHT without corresponding oil pressure warning indicates the oil cooler is blocked; reduce power to idle to protect the engine until normal CHT returns; the lean mixture is protective in this scenario as it reduces combustion heat"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The combination of high power + aggressive lean mixture + rough running + rising CHT is the textbook detonation scenario. The mechanism: at high power, the engine requires a near-stoichiometric or slightly rich fuel-air mixture for proper combustion temperatures. Aggressive leaning removes the 'cooling' effect of excess fuel (unburned fuel carries heat out of the cylinder). With insufficient fuel in the mixture at high compression ratios, the fuel/air charge can auto-ignite from compression heating before the flame front completes its sweep — multiple simultaneous ignition fronts create explosive pressure spikes (detonation). The rapid CHT rise is the key diagnostic: detonation directly transfers excessive heat to cylinder walls. Normal CHT for most piston aircraft: 380-400°F maximum. Detonation can spike CHTs 50-100°F above normal in seconds. Immediate action sequence: reduce power (lower compression pressure), enrich mixture (restore cooling effect), increase airspeed (cool cylinders with airflow). Option A (magneto failure) produces rough running but normally does NOT cause rapid CHT increase — magneto failure causes RPM drop and rough running, but combustion quality is reduced, not explosive. Option C is incorrect — carburetor ice at high-power climbs is less likely, and the lean mixture is causally relevant.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1b"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q003",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "During the runup, a pilot switches from BOTH to LEFT magneto and observes a 75 RPM drop. Then switches to RIGHT magneto and observes a 210 RPM drop with rough engine operation. What does this indicate and what is the correct action?",
+      "options": [
+        {"label": "A", "text": "Both magneto drops are within normal range — an RPM drop on each individual magneto of up to 250 RPM is acceptable; the 210 RPM drop on the right is within the upper limit and the flight may continue; rough operation during the single-magneto test is expected because half the ignition system is disabled"},
+        {"label": "B", "text": "The 75 RPM drop on the left is normal. The 210 RPM drop with rough engine on the right magneto exceeds the typical 125 RPM limit and indicates a problem with the left magneto system (which is the one disabled when operating on right only); likely cause: fouled spark plug(s) on the left magneto circuit, or a failing left magneto; this requires maintenance inspection before the flight may proceed"},
+        {"label": "C", "text": "The large RPM drop on the right magneto indicates the right magneto itself is malfunctioning; the ignition switch should be cycled to RIGHT repeatedly to clear the right magneto of debris; if the drop reduces on the second check, the right magneto is serviceable and the flight may proceed"},
+        {"label": "D", "text": "The different RPM drops between magnetos (75 vs. 210) indicate the magnetos are out of time with each other; the 210 RPM drop on the right is the normal drop for a retarded magneto; the A&P should check timing but the flight may proceed with the larger-than-normal RPM understanding"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Understanding the magneto check requires knowing WHICH magneto is tested when: When key is on LEFT magneto: the RIGHT magneto is disconnected. The engine runs only on the LEFT plugs. The RPM drop indicates how much performance is lost with only left ignition. When key is on RIGHT magneto: the LEFT magneto is disconnected. The engine runs only on the RIGHT plugs. The large RPM drop (210) with rough running during the RIGHT magneto check indicates a fault in the LEFT magneto circuit — because the right-only check disables the left side. The fault is most likely: a fouled spark plug on one or more left-side plugs, a failed left magneto, or a broken/shorted P-lead on the left magneto. POH limits for RPM drop are typically: maximum 125 RPM per magneto from BOTH, and maximum 50 RPM difference between magnetos. Here: 75 (normal) vs. 210 (well above limit with rough running) = clear maintenance item. The flight must NOT proceed. Option A invents a 250 RPM acceptable limit — typical limits are 125-150 RPM maximum. Option C invents a 'cycle to clear' procedure for magneto drops — no such procedure exists in standard runup checklists.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1b"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A pilot has just departed and is climbing through 400 feet AGL when the engine loses all power. The departure airport runway is directly behind — approximately 2,000 feet away. What is the SAFEST immediate action?",
+      "options": [
+        {"label": "A", "text": "Begin an immediate 180-degree turn back to the runway — the runway is 2,000 feet behind, which is close enough to attempt the return; begin the turn immediately to maximize distance available for the turnaround; the airport offers a known, safe landing surface unlike unknown terrain ahead"},
+        {"label": "B", "text": "Lower the nose IMMEDIATELY to best glide speed, identify a landing area ahead or within a slight angle, and land in that area; at 400 feet AGL, a 180-degree turn to the runway is geometrically and aerodynamically impossible for most light aircraft without stalling — the aircraft will lose 200-400 feet during the turn and arrives at the runway threshold too low; the certain ground ahead is the only safe option"},
+        {"label": "C", "text": "Climb as aggressively as possible using the remaining engine momentum — the propeller may windmill enough to generate partial thrust; gaining additional altitude buys more time to troubleshoot and restart; maintain Vy until altitude provides enough margin for the 180-degree turn"},
+        {"label": "D", "text": "Call ATC immediately on 121.5, declare Mayday, and report position; ATC can coordinate emergency services and confirm that the airport behind is clear for an emergency return; waiting for ATC clearance before turning back prevents traffic conflicts on the departure runway"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The engine failure at 400 feet AGL is the 'impossible turn' scenario. NTSB data unambiguously shows that attempting to return to the departure runway from below 800-1,000 feet AGL kills pilots at a rate far exceeding any other response to this emergency. Here is the physics: At 400 feet AGL, at Vy (approximately 73 knots for a C172), a 180-degree turn at bank angle of 30-45 degrees requires: approximately 1,000-1,500 feet of altitude at minimum bank angles, plus the aircraft arrives aligned with the runway at some distance from the threshold, having lost most of the 400 feet. At 30-degree bank, best glide speed, with zero thrust: the aircraft will stall or arrive at the runway threshold at less than obstacle clearance height — striking objects short of the runway. The safe alternative: straight ahead. Most airports have significant open area off the departure end or to the sides. A landing in a field or road at best glide speed is survivable. A stall/spin at 200 feet AGL from an impossible turn is not. Option A represents the Get-There-Itis pattern that kills pilots — the runway looks close 'just over my shoulder.' Option C (climb on momentum) is the second-most deadly instinct — maintaining Vy after engine failure causes rapid airspeed decay toward stall.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1c"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q005",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "After engine shutdown following a flight, the pilot notes the propeller is 'hot mag' — it continues to slowly rotate even with the ignition key removed and in the off position. A line crew member approaches to add fuel. What is the hazard?",
+      "options": [
+        {"label": "A", "text": "No hazard — once the ignition key is removed, the magneto P-lead is grounded and no spark can be produced; a spinning propeller is moved only by residual compression from the engine, not by ignition; the line crew can safely approach a slowly rotating prop as long as the throttle is at idle"},
+        {"label": "B", "text": "The propeller should not rotate after shutdown with the key removed — unless the P-lead to one or both magnetos has failed (broken or disconnected); a 'hot magneto' with a failed P-lead can produce ignition even with the key in OFF position; a propeller that can fire unexpectedly is a fatal hazard to anyone near it; the aircraft must be placarded and the magneto system inspected by an A&P immediately; all personnel must stay clear of the propeller arc"},
+        {"label": "C", "text": "The rotating propeller indicates excessive compression hold-down — the engine has not fully vented combustion pressure; this is normal for high-compression engines immediately after shutdown; the propeller will stop within 30-60 seconds as pressure dissipates; no ignition hazard exists with key removed"},
+        {"label": "D", "text": "The spinning propeller indicates the fuel shut-off valve was not fully closed — residual fuel is continuing the engine cycle; closing the fuel selector fully will stop the rotation; no ignition hazard exists since the throttle is at idle"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A 'hot magneto' — a magneto that continues to produce spark even with the ignition key in the OFF position — is one of the most dangerous ground hazards in general aviation. The P-lead (primary lead) is the wire that GROUNDS the magneto when the key is off. If the P-lead breaks, frays, or disconnects, the magneto is permanently in an 'ON' state — it will produce a spark on any compression stroke when the propeller is rotated. What this means: any person who handprops, pulls through, or walks through the propeller arc of a hot-mag aircraft can be struck if the engine fires. The maintenance runup dead-cut test (briefly keying to OFF during runup and noting whether the engine briefly stops) is specifically designed to verify P-lead continuity. A failed P-lead is often discovered only by accident — during the runup check — and is an immediate grounding item. Option A is dangerously incorrect — a hot magneto with a broken P-lead can fire the engine even with the key on the table. The 'slowly rotating propeller' in this scenario may indicate wind movement, but any uncertainty about P-lead status requires treating the prop as live.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1b"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q006",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "In a constant-speed prop aircraft, the sequence for adding power is: FIRST increase RPM (prop control), THEN increase manifold pressure (throttle). Why is this sequence critical?",
+      "options": [
+        {"label": "A", "text": "The sequence prevents overspeeding the propeller — advancing the throttle first would cause the propeller to overspeed briefly while the governor responds; by setting RPM first, the governor is pre-positioned to absorb the additional power without an RPM spike"},
+        {"label": "B", "text": "The sequence prevents detonation from high manifold pressure at low RPM — advancing throttle first increases manifold pressure while the RPM is still low; high MP at low RPM forces more compressive force on the fuel/air charge per rotation cycle, creating conditions for detonation; by setting RPM high first, the engine can absorb the additional power safely as throttle is advanced"},
+        {"label": "C", "text": "The sequence is for pilot workload management only — the order does not affect engine safety; the governor automatically prevents any harmful operating condition regardless of the sequence; the RPM-first sequence is traditional but not required for modern engines"},
+        {"label": "D", "text": "FAA regulations specify the power-addition sequence in 14 CFR 91.9(b); violation of the sequence constitutes an unsafe operating condition; the regulatory penalty for incorrect power sequence is revocation of pilot certificate on first offense"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The power sequence (RPM first, then throttle) protects the engine from detonation in a specific operating zone. Here is the mechanism that makes the sequence critical: Manifold Pressure (MP) represents the power input to the engine. RPM represents the speed at which the engine processes that power. If MP is high while RPM is low: the fuel/air charge sees high compression pressure (from the throttle-induced high MP) but the piston moves relatively slowly (low RPM). This extended compression dwell time at high pressure and temperature creates the detonation zone — the fuel auto-ignites before the spark plug fires. By setting the RPM high FIRST: the engine is spinning fast enough to process the additional fuel/air charge efficiently before the manifold pressure is increased. The rule of thumb: manifold pressure in inches should never numerically exceed RPM in hundreds (e.g., 25 in. Hg should not be used at less than 2,500 RPM). Option A describes prop overspeed prevention, which is a real concern but is secondary to detonation. Option C is incorrect — the governor does not prevent detonation; it only controls RPM within its design range. Option D invents a regulatory citation for power sequence — no such regulation exists; this is POH/engine OEM guidance.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1b"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "A pilot pre-plans: 'If the engine fails below 500 feet AGL after departure, I will land straight ahead in the fields north of the runway end.' During departure, the engine fails at 650 feet AGL. The pilot re-evaluates: 'I'm 150 feet above my pre-planned cutoff — I can probably make the runway.' The pilot initiates a 180-degree turn. What is wrong with this decision?",
+      "options": [
+        {"label": "A", "text": "Nothing — the pilot correctly applied a data-based decision (pre-planned cutoff at 500 feet); being 150 feet above the cutoff at 650 AGL provides adequate margin; the turn-back at 650 feet is within normal safe operating parameters for the impossible turn in most light aircraft", "hazardous_attitude": "invulnerability"},
+        {"label": "B", "text": "The pre-planned cutoff of 500 feet was likely already aggressive — most aviation safety experts set the turn-back altitude at 1,000-1,500 feet AGL for light aircraft; being only 150 feet above an already-conservative cutoff is not adequate margin; additionally, mid-emergency re-evaluation of a pre-computed go/no-go altitude introduces cognitive pressure that degrades decision quality; the pre-computed decision should be followed without renegotiation; at 650 feet, land ahead as planned", "hazardous_attitude": null},
+        {"label": "C", "text": "The pilot should first complete 3 engine restart attempts before making the turn-back decision; a 180-degree turn is only appropriate after confirming the engine cannot be restarted; at 650 feet, there is time for at least 2 restart attempts before committing to the landing direction", "hazardous_attitude": null},
+        {"label": "D", "text": "The pilot should broadcast Mayday on 121.5 before beginning the turn — ATC needs to know the aircraft is returning to the airport before the pilot reverses course; turning without broadcasting first creates risk of ATC-uncoordinated traffic conflicts", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "This scenario isolates the most dangerous aspect of the impossible-turn decision: in-emergency renegotiation of a pre-computed altitude cutoff. The pilot made a rational pre-flight decision (land ahead below 500 feet) based on calm analysis. Then, in the actual emergency — at 650 feet, with full stress, activation of fight-or-flight instinct, and the runway visually beckoning behind — the pilot is renegotiating. This is precisely the moment when cognitive function is most degraded. The '150 feet above my cutoff' reasoning sounds rational but ignores: (1) The 500-foot cutoff was already likely conservative-low — most research suggests 1,000+ feet for most light aircraft. (2) Turn altitude + bank angle + airspeed loss + ground track during the turn will consume altitude rapidly — 650 feet is probably less than what most aircraft need to complete a 200-degree-plus turn and align with the runway threshold. (3) Emergency re-evaluation in the aircraft is not the same cognitive process as calm pre-flight calculation. The pre-computed decision exists precisely to remove in-emergency re-evaluation. Follow it without modification. Option C (restart attempts first at 650 feet) is partially reasonable but restarting takes 5-15 seconds — during which the aircraft is descending unsupported toward terrain; pitch to best glide FIRST, then troubleshoot.",
+      "sjt_rationale": "Get-There-Itis and a sense of Invulnerability ('I have enough margin') drive the re-evaluation of a perfectly sound pre-planned decision. Emergency ADM works on pre-committed thresholds — renegotiating them in the emergency is the exact failure mode the pre-plan was designed to prevent.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1c"
+    },
+    {
+      "id": "PPL_PA_I_G_02_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot is cruising at 9,500 feet, has leaned the mixture for economy, and is operating at 75% power. The engine begins producing a slight intermittent knock sound. The pilot thinks: 'It's probably just a bit of lead fouling in the plugs — I'll fly another hour and then do a mag check on the ground.' What is the most dangerous element of this decision?",
+      "options": [
+        {"label": "A", "text": "The pilot is correct to defer the diagnosis — lead fouling is common at high altitude and manifests as an intermittent knock; the in-flight resolution is to momentarily enrichen the mixture to flush the lead deposits; the knock will resolve without landing and the mag check on the ground is appropriate follow-up", "hazardous_attitude": "complacency"},
+        {"label": "B", "text": "Intermittent engine knock at 75% power with aggressive leaning may indicate detonation — a destructive combustion failure that can destroy pistons, rings, and cylinders within minutes of onset; deferring diagnosis for an hour while continuing at 75% power allows catastrophic detonation damage to progress; correct action: reduce power immediately, enrich mixture significantly, reduce airspeed for cooling, monitor CHT; if the knock persists, declare precautionary emergency and divert to the nearest airport", "hazardous_attitude": null},
+        {"label": "C", "text": "The pilot is correct about the cause but wrong about timing — lead fouling should be resolved with a 30-second enrichment-lean cycle immediately; completing the cycle in flight and monitoring for recurrence is the correct in-flight response; continuing for an hour is acceptable if the knock stops after the cycle", "hazardous_attitude": null},
+        {"label": "D", "text": "The engine knock indicates a loose exhaust component — the knock comes from exhaust pulses rather than combustion; reducing power by 5% will reduce exhaust velocity and quiet the knock; no further action is required as loose exhaust components are self-limiting and resolve with reduced power", "hazardous_attitude": "complacency"}
+      ],
+      "correct_answer": "B",
+      "explanation": "An intermittent 'knock' from an aircraft piston engine at high power and aggressive lean setting is a detonation alarm — not a manageable fuel fouling nuisance. Detonation creates: explosive pressure spikes 2-3x normal combustion pressure → physical hammering of piston crowns → cracking of piston rings → hot gases entering the crankcase → potential connecting rod damage → cylinder wall scoring. Sustained detonation at 75% power for one hour can result in catastrophic engine failure — possibly with internal structural failure requiring immediate landing. The aggressive lean + high power combination is the classic detonation setup. The pilot's rationalization ('lead fouling') is Complacency — selecting the benign diagnosis that requires no immediate action over the dangerous diagnosis that requires urgent action. Immediate response sequence: (1) Reduce manifold pressure (throttle back to 65% or less). (2) Enrich mixture to full rich or near. (3) Reduce airspeed if possible for additional cylinder cooling. (4) Monitor CHT. (5) If knock persists or CHT remains high: divert. (6) If knock resolves with reduced power and rich mixture: document, report to A&P, reduce flight length. The 'mag check on the ground' is irrelevant if the engine fails in the air.",
+      "sjt_rationale": "This is Complacency + Resignation: selecting the comfortable diagnosis and deferring action for an hour. The correct ADM: when the facts fit a dangerous diagnosis (detonation: high power + lean + knock), treat it as the dangerous diagnosis until proven otherwise.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.G.K1b"
+    }
+  ]
+}

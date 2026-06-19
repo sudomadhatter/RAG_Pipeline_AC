@@ -16,13 +16,16 @@ ArtifactMetadata:
 - [x] WS-D: `upload_manifests.py` fixed (config paths)
 - [x] WS-E: `ingest_quiz_banks.py`
 - [x] WS-F: `src/tests/` offline gate — 33 passing; `probe_bridge_hop.py` live probe
-- [x] WS-G: `bridge_key_guide.md` v3.0; `curriculum_lifecycle.md` corrected
+- [x] WS-G: `bridge_key_guide.md` v2.8; `curriculum_lifecycle.md` corrected
 - [x] Deleted dead `src/gcp/import_db1_v2.py` (per Daniel OK)
-- [x] LIVE: manifests 47/47 + quizzes 376 → Firestore
+- [x] LIVE: manifests 48/48 + quizzes 384 → Firestore (incl. `PPL_PA_I_H_04`, the 48th lesson)
+- [x] LIVE: repaired `PPL_PA_I_H_04` — was a Firestore-only skeleton (questions lived only in the
+      parent's embedded array, invisible to the app); copied quiz+RKP from app repo, ingested → 8 in
+      subcollection; stripped legacy embedded `questions` array from all 48 parent docs (0 remain)
 - [x] LIVE: DB1 184/184 keys repaired (0 corrupt, 0 empty)
 - [x] LIVE: DB2 → 27 docs, all tagged (16 patched + 7 + 4 AFH split parts)
 - [x] LIVE: AFH split via pypdf into 4 parts (<200 MB each) to clear Vertex's 200 MB cap
-- [x] LIVE probe: **47/47 lessons return ≥1 DB2 bridge hit** (was 0); structural coverage 171/184
+- [x] LIVE probe: **48/48 lessons return ≥1 DB2 bridge hit** (was 0); structural coverage 171/184
 
 ## Follow-ups
 - [ ] Track `pypdf==6.13.3` as a dependency (no requirements.txt in repo yet)

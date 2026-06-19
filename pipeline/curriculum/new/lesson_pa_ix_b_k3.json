@@ -1,0 +1,21 @@
+{
+  "id": "lesson_pa_ix_b_k3",
+  "structData": {
+    "acs_code": "PA.IX.B.K3",
+    "title": "Effects of atmospheric conditions on emergency approach and landing.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [],
+    "doc_keys": [
+      "FAA-H-8083-25C"
+    ],
+    "keywords": [
+      "Wind Gradient",
+      "Density Altitude",
+      "True Airspeed",
+      "Kinetic Energy",
+      "Groundspeed",
+      "Vertical Wind Shear"
+    ]
+  }
+}

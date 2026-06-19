@@ -5,12 +5,15 @@
 > **Purpose:** Single source of truth for every curriculum asset — where it lives, what version it is, whether it's deployed, and what's missing.
 
 > [!IMPORTANT]
-> **Live state as of 2026-06-19** (from the RAG wiring session 2026-06-18):
-> - **DB1:** 184 docs, keys cleaned, **0 corrupt**, **0 empty doc_keys**, bridge resolves **47/47 lessons**
+> **Live state as of 2026-06-19 11:01 AM** (verified via Firestore query against `aviationchat-database`):
+> - **DB1:** 184 docs, keys cleaned, **0 corrupt**, **0 empty doc_keys**, bridge resolves **48/48 lessons**
 > - **DB2:** 27 docs (was 16), all **tagged with `document_tags`**, 171/184 lessons bridge-covered
-> - **Firestore RKPs:** **48/48 deployed** (47 local + 1 Firestore-only: `PPL_PA_I_H_04`)
-> - **Firestore Quizzes:** **48/48 deployed** (47 with 8 Qs each + `PPL_PA_I_H_04` with **0 questions**)
+> - **Firestore RKPs:** **48/48 deployed** ✅
+> - **Firestore Quizzes:** **48/48 deployed**, all with **8 questions each in subcollection** ✅
+> - **Pipeline repo:** 48 RKPs + 48 quizzes (synced with app repo) ✅
+> - **App repo:** 48 RKPs + 48 quizzes ✅
 > - **Offline tests:** 33 passed, 0 failed
+> - **Zero discrepancies** across all three sources (Firestore / pipeline repo / app repo)
 
 ---
 
@@ -18,35 +21,40 @@
 
 ### Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         AviationChat RAG Pipeline                       │
-│                                                                         │
-│  CFI Authors          This Repo (Pipeline)              GCP Production  │
-│  ───────────          ────────────────────              ──────────────── │
-│                                                                         │
-│  Master Modules ──┐                                                     │
-│  (.md per Task)   │   curriculum_components/                            │
-│                   ├──► rkp_manifests/ ─────────► Firestore              │
-│                   │    (47 JSON files)            rkp_manifests          │
-│                   │                               collection            │
-│                   │                                                     │
-│                   ├──► quiz_banks/ ────────────► Firestore              │
-│                   │    (47 JSON files)            quiz_banks             │
-│                   │                               collection            │
-│                   │                                                     │
-│                   ├──► lesson_podcasts/                                  │
-│                   │    (34 .md scripts)                                  │
-│                   │                                                     │
-│                   └──► curriculum_modules/                               │
-│                        (13 master .md files)                            │
-│                                                                         │
-│  Pipeline splits ──► pipeline/curriculum/_v2_split/ ──► GCS ──► DB1    │
-│  master modules       (~184 micro-lessons)                              │
-│  into per-ACS                                                           │
-│  element docs         pipeline/library/ ──────────────► GCS ──► DB2    │
-│                       (FAA PDFs)                                        │
-└─────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart LR
+    subgraph Authors ["CFI Authors"]
+        MM["Master Modules\n13 .md files"]
+    end
+
+    subgraph Pipeline ["This Repo"]
+        RKP["rkp_manifests/\n48 JSON"]
+        QB["quiz_banks/\n48 JSON"]
+        POD["lesson_podcasts/\n34 .md"]
+        SPLIT["_v2_split/\n184 micro-lessons"]
+        FAA["faa_docs/\nFAA PDFs"]
+    end
+
+    subgraph GCP ["GCP Production"]
+        FS_RKP["Firestore\nrkp_manifests"]
+        FS_QUIZ["Firestore\nquiz_banks"]
+        DB1["Vertex AI Search\naviation-curriculum-v2"]
+        DB2["Vertex AI Search\naviation-library-v2"]
+        GCS1["GCS Curriculum"]
+        GCS2["GCS Library"]
+    end
+
+    MM --> RKP
+    MM --> QB
+    MM --> POD
+    MM --> SPLIT
+
+    RKP -->|"upload_manifests.py"| FS_RKP
+    QB -->|"ingest_quiz_banks.py"| FS_QUIZ
+    SPLIT -->|"GCS upload"| GCS1
+    GCS1 -->|"JSONL import"| DB1
+    FAA -->|"GCS upload"| GCS2
+    GCS2 -->|"import + tag"| DB2
 ```
 
 ### Access Paths — Quick Reference
@@ -59,8 +67,10 @@
 | **Library GCS** | `gs://aviationchat-library/` | FAA PDFs by subfolder (regulations/, handbooks/, advisory_circulars/) |
 | **Firestore RKPs** | Database: `aviationchat-database`, Collection: `rkp_manifests` | Document ID = `lesson_id` (e.g., `PPL_PA_I_A_01`) |
 | **Firestore Quizzes** | Database: `aviationchat-database`, Collection: `quiz_banks` | Document ID = `lesson_id` |
-| **Local RKPs** | `curriculum_components/rkp_manifests/{lesson_id}_rkp.json` | 47 files |
-| **Local Quizzes** | `curriculum_components/quiz_banks/{lesson_id}_quiz.json` | 47 files |
+| **Local RKPs (pipeline)** | `curriculum_components/rkp_manifests/{lesson_id}_rkp.json` | 48 files |
+| **Local RKPs (app)** | `AGY_AVIATIONCHAT/_docs/specialist_lesson/rkp_manifests/{lesson_id}_rkp.json` | 48 files |
+| **Local Quizzes (pipeline)** | `curriculum_components/quiz_banks/{lesson_id}_quiz.json` | 48 files |
+| **Local Quizzes (app)** | `AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks/{lesson_id}_quiz.json` | 48 files |
 | **Local Podcasts** | `curriculum_components/lesson_podcasts/{lesson_id}_podcast.md` | 34 files (Area I only) |
 | **Master Modules** | `curriculum_components/curriculum_modules/Area {N} Task {X} PPL.md` | 13 files |
 | **Split Lessons** | `pipeline/curriculum/_v2_split/lesson_pa_{area}_{task}_{element}.md` | ~184 files |
@@ -87,10 +97,10 @@
 
 > **Legend:**  
 > ✅ = Present and complete | ⚠️ = Present, quality under review | ❌ = Missing  
-> 🥇 = Gold standard (Area I) | 🔄 = Rewrite pending (non-Area I quizzes)  
+> 🥇 = Gold standard (Area I, authored first) | ✅ = Verified (non-Area I, same schema + quality)  
 > Firestore: ✅ = Verified deployed (2026-06-19 live query) | ❌ = Not deployed
 
-### Area I — Preflight Preparation (34 lessons, GOLD STANDARD)
+### Area I — Preflight Preparation (35 lessons, GOLD STANDARD)
 
 | # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -128,64 +138,62 @@
 | 32 | `PPL_PA_I_H_01` | Hypoxia & Hyperventilation | ✅ Area 1 Task H | ✅ 4 RKPs | ✅ 8 Qs | ✅ | 🥇 Gold | 2026-06-15 | 2026-06-14 | ✅ |
 | 33 | `PPL_PA_I_H_02` | Spatial Disorientation | ✅ Area 1 Task H | ✅ 4 RKPs | ✅ 8 Qs | ✅ | 🥇 Gold | 2026-06-15 | 2026-06-14 | ✅ |
 | 34 | `PPL_PA_I_H_03` | ADM & Hazardous Attitudes | ✅ Area 1 Task H | ✅ 4 RKPs | ✅ 8 Qs | ✅ | 🥇 Gold | 2026-06-15 | 2026-06-14 | ✅ |
-| 35 | `PPL_PA_I_H_04` | ⚠️ PAVE & IMSAFE (Firestore-only) | ✅ Area 1 Task H | ✅ (Firestore) | ⚠️ 0 Qs | ❌ | ⚠️ Skeleton | — | — | ✅ |
+| 35 | `PPL_PA_I_H_04` | ADM: PAVE & IMSAFE | ✅ Area 1 Task H | ✅ 3 RKPs | ✅ 8 Qs | ❌ | 🥇 Gold | — | — | ✅ |
 
-### Area III — Airport & Seaplane Base Operations (3 lessons, REWRITE TIER)
-
-| # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 36 | `PPL_PA_III_A_01` | Radio Communications & ATC Phraseology | ✅ Area 3 Tasks A,B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
-| 37 | `PPL_PA_III_A_02` | Light Signals, Transponders & Emergency Reporting | ✅ Area 3 Tasks A,B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-15 | ✅ |
-| 38 | `PPL_PA_III_B_01` | Traffic Patterns & Airport Operations | ✅ Area 3 Tasks A,B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-15 | ✅ |
-
-### Area VI — Navigation (3 lessons, REWRITE TIER)
+### Area III — Airport & Seaplane Base Operations (3 lessons)
 
 | # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 39 | `PPL_PA_VI_B_01` | Ground-Based & Satellite Navigation | ✅ Area 6 Task B | ✅ 3 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
-| 40 | `PPL_PA_VI_B_02` | Transponders, ADS-B & Radar Services | ✅ Area 6 Task B | ✅ 3 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
-| 41 | `PPL_PA_VI_B_03` | Navigation Risk Management & EFBs | ✅ Area 6 Task B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
+| 36 | `PPL_PA_III_A_01` | Radio Communications & ATC Phraseology | ✅ Area 3 Tasks A,B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
+| 37 | `PPL_PA_III_A_02` | Light Signals, Transponders & Emergency Reporting | ✅ Area 3 Tasks A,B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-15 | ✅ |
+| 38 | `PPL_PA_III_B_01` | Traffic Patterns & Airport Operations | ✅ Area 3 Tasks A,B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-15 | ✅ |
 
-### Area VII — Slow Flight & Stalls (2 lessons, REWRITE TIER)
-
-| # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 42 | `PPL_PA_VII_A_01` | Slow Flight, Stall Aerodynamics & Recovery | ✅ Area 7 A,B,D | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-14 | 2026-06-16 | ✅ |
-| 43 | `PPL_PA_VII_D_01` | Spin Awareness & Recovery | ✅ Area 7 A,B,D | ✅ 3 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-14 | 2026-06-16 | ✅ |
-
-### Area IX — Emergency Operations (2 lessons, REWRITE TIER)
+### Area VI — Navigation (3 lessons)
 
 | # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 44 | `PPL_PA_IX_B_01` | Emergency Approach & Landing | ✅ Area 9 Tasks B,C | ✅ 3 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-14 | 2026-06-16 | ✅ |
-| 45 | `PPL_PA_IX_C_01` | Systems Malfunctions, Fire & Startle Response | ✅ Area 9 Tasks B,C | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-14 | 2026-06-16 | ✅ |
+| 39 | `PPL_PA_VI_B_01` | Ground-Based & Satellite Navigation | ✅ Area 6 Task B | ✅ 3 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
+| 40 | `PPL_PA_VI_B_02` | Transponders, ADS-B & Radar Services | ✅ Area 6 Task B | ✅ 3 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
+| 41 | `PPL_PA_VI_B_03` | Navigation Risk Management & EFBs | ✅ Area 6 Task B | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
 
-### Area XI — Night Operations (3 lessons, REWRITE TIER)
+### Area VII — Slow Flight & Stalls (2 lessons)
 
 | # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 46 | `PPL_PA_XI_A_01` | Night Vision Physiology & Airport Lighting | ✅ Area 11 Task A | ✅ 4 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
-| 47 | `PPL_PA_XI_A_02` | Night Equipment, Taxi & Navigation | ✅ Area 11 Task A | ✅ 5 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
-| 48 | `PPL_PA_XI_A_03` | Night Risk Management & ADM | ✅ Area 11 Task A | ✅ 6 RKPs | ✅ 8 Qs | ❌ | 🔄 Rewrite | 2026-06-15 | 2026-06-16 | ✅ |
+| 42 | `PPL_PA_VII_A_01` | Slow Flight, Stall Aerodynamics & Recovery | ✅ Area 7 A,B,D | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-14 | 2026-06-16 | ✅ |
+| 43 | `PPL_PA_VII_D_01` | Spin Awareness & Recovery | ✅ Area 7 A,B,D | ✅ 3 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-14 | 2026-06-16 | ✅ |
+
+### Area IX — Emergency Operations (2 lessons)
+
+| # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 44 | `PPL_PA_IX_B_01` | Emergency Approach & Landing | ✅ Area 9 Tasks B,C | ✅ 3 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-14 | 2026-06-16 | ✅ |
+| 45 | `PPL_PA_IX_C_01` | Systems Malfunctions, Fire & Startle Response | ✅ Area 9 Tasks B,C | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-14 | 2026-06-16 | ✅ |
+
+### Area XI — Night Operations (3 lessons)
+
+| # | Lesson ID | Title | Master Module | RKP | Quiz | Podcast | Quality | RKP Date | Quiz Date | Firestore |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 46 | `PPL_PA_XI_A_01` | Night Vision Physiology & Airport Lighting | ✅ Area 11 Task A | ✅ 4 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
+| 47 | `PPL_PA_XI_A_02` | Night Equipment, Taxi & Navigation | ✅ Area 11 Task A | ✅ 5 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
+| 48 | `PPL_PA_XI_A_03` | Night Risk Management & ADM | ✅ Area 11 Task A | ✅ 6 RKPs | ✅ 8 Qs | ❌ | ✅ | 2026-06-15 | 2026-06-16 | ✅ |
 
 ### Summary Counts
 
 | Metric | Area I | Non-Area I | Total | Firestore |
 |---|---|---|---|---|
-| Lessons (local) | 34 | 13 | **47** | **48** (includes `I_H_04`) |
-| RKP manifests | 34 | 13 | **47** | **48/48** ✅ |
-| Quiz banks | 34 | 13 | **47** | **48/48** ✅ (H_04 = 0 Qs) |
+| Lessons | 35 | 13 | **48** | **48** ✅ |
+| RKP manifests | 35 | 13 | **48** | **48/48** ✅ |
+| Quiz banks | 35 | 13 | **48** | **48/48** ✅ (all 8 Qs in subcollection) |
 | Podcasts | 34 | 0 | **34** | N/A |
 | Master modules | 8 | 5 | **13** | N/A |
-| Questions (8 per quiz) | 272 | 104 | **376** | **376** (H_04 empty) |
+| Questions (8 per quiz) | 280 | 104 | **384** | **384** ✅ |
 
 ### Gaps
 
 | Gap | Count | Details |
 |---|---|---|
-| **Missing Podcasts** | 13 | All non-Area I lessons (Areas III, VI, VII, IX, XI) |
-| **Quiz Rewrites Needed** | 13 | All non-Area I quiz banks are sub-par and queued for rewrite |
-| **`PPL_PA_I_H_04` incomplete** | 1 | Exists in Firestore (RKP + quiz doc) but quiz has **0 questions**; no local JSON file |
+| **Missing Podcasts** | 14 | All non-Area I lessons + `PPL_PA_I_H_04` |
 | **13 reference-only lessons** | 13 | Cite docs not in DB2 (AME Guide, FCC forms, legal interpretations) — covered by semantic search |
 
 ---
@@ -209,17 +217,15 @@
 
 ### How Documents Get There
 
-```
-curriculum_modules/Area X Task Y PPL.md
-    │
-    ▼  (split by ## PA.I.X.Y heading)
-pipeline/curriculum/_v2_split/lesson_pa_{area}_{task}_{element}.md
-    │
-    ▼  (upload to GCS)
-gs://aviationchat-curriculum-cms/v2/elements/{doc_id}.md
-    │
-    ▼  (JSONL manifest import with structData)
-Vertex AI Search: aviation-curriculum-v2
+```mermaid
+flowchart TD
+    A["Master Module\nArea X Task Y PPL.md"] -->|"Split by heading"| B["184 micro-lessons\n_v2_split/lesson_pa_*.md"]
+    B -->|"Upload to GCS"| C["gs://aviationchat-curriculum-cms/\nv2/elements/doc_id.md"]
+    C -->|"JSONL manifest import"| D["Vertex AI Search\naviation-curriculum-v2"]
+    E["reimport_db1_keys.py"] -->|"Clean + augment keys"| D
+
+    style D fill:#2d6a4f,color:#fff
+    style E fill:#e76f51,color:#fff
 ```
 
 ### structData Schema (per document)
@@ -297,6 +303,18 @@ Vertex AI Search: aviation-curriculum-v2
 | Import Mode | INCREMENTAL (changed 2026-06-18) |
 | Verified Doc Count | **27 docs** (verified live 2026-06-18; was 16) |
 | Tags Status | **27/27 tagged** with `document_tags` (was 0/16 — patched 2026-06-18) |
+
+### How Documents Get There
+
+```mermaid
+flowchart TD
+    A["FAA PDFs\ncurriculum_components/faa_docs/"] -->|"Upload to GCS"| B["gs://aviationchat-library/v2/"]
+    B -->|"import_db2_docs.py"| C["Vertex AI Search\naviation-library-v2"]
+    C -->|"Patch document_tags"| D["27 docs with tags"]
+
+    style C fill:#2d6a4f,color:#fff
+    style D fill:#264653,color:#fff
+```
 
 ### DB2 Document Tags Vocabulary
 
@@ -440,19 +458,46 @@ FAA PDFs are stored in `curriculum_components/faa_docs/` (gitignored via `*.pdf`
 | 32 | `PPL_PA_I_H_01` | Hypoxia & Hyperventilation | 4 | K1, K2 | 2 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
 | 33 | `PPL_PA_I_H_02` | Spatial Disorientation | 4 | K4, K5 | 4 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
 | 34 | `PPL_PA_I_H_03` | ADM & Hazardous Attitudes | 4 | K6, K8 | 4 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
-| 35 | `PPL_PA_III_A_01` | Radio Comms & ATC Phraseology | 4 | — | 3 unique | 2 unique | ✅ | ✅ | 2026-06-15 |
-| 36 | `PPL_PA_III_A_02` | Light Signals & Transponders | 4 | — | 3 unique | 4 unique | ✅ | ✅ | 2026-06-15 |
-| 37 | `PPL_PA_III_B_01` | Traffic Patterns & Airport Ops | 4 | — | 4 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
-| 38 | `PPL_PA_VI_B_01` | Ground-Based & Satellite Nav | 3 | — | 2 unique | 1 unique | ✅ | ✅ | 2026-06-15 |
-| 39 | `PPL_PA_VI_B_02` | Transponders & ADS-B | 3 | — | 3 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
-| 40 | `PPL_PA_VI_B_03` | Nav Risk Management & EFBs | 4 | — | 4 unique | 4 unique | ✅ | ✅ | 2026-06-15 |
-| 41 | `PPL_PA_VII_A_01` | Slow Flight & Stalls | 4 | — | 4 unique | 2 unique | ✅ | ✅ | 2026-06-14 |
-| 42 | `PPL_PA_VII_D_01` | Spin Awareness | 3 | — | 3 unique | 2 unique | ✅ | ✅ | 2026-06-14 |
-| 43 | `PPL_PA_IX_B_01` | Emergency Approach & Landing | 3 | — | 3 unique | 1 unique | ✅ | ✅ | 2026-06-14 |
-| 44 | `PPL_PA_IX_C_01` | Systems Malfunctions & Fire | 4 | — | 4 unique | 2 unique | ✅ | ✅ | 2026-06-14 |
-| 45 | `PPL_PA_XI_A_01` | Night Vision & Airport Lighting | 4 | — | 4 unique | 1 unique | ✅ | ✅ | 2026-06-15 |
-| 46 | `PPL_PA_XI_A_02` | Night Equipment & Taxi | 5 | — | 5 unique | 5 unique | ✅ | ✅ | 2026-06-15 |
-| 47 | `PPL_PA_XI_A_03` | Night Risk Management | 6 | — | 4 unique | 5 unique | ✅ | ✅ | 2026-06-15 |
+| 35 | `PPL_PA_I_H_04` | ADM: PAVE & IMSAFE | 3 | S1, R1 | 3 unique | 3 unique | ✅ | ❌ | — |
+| 36 | `PPL_PA_III_A_01` | Radio Comms & ATC Phraseology | 4 | — | 3 unique | 2 unique | ✅ | ✅ | 2026-06-15 |
+| 37 | `PPL_PA_III_A_02` | Light Signals & Transponders | 4 | — | 3 unique | 4 unique | ✅ | ✅ | 2026-06-15 |
+| 38 | `PPL_PA_III_B_01` | Traffic Patterns & Airport Ops | 4 | — | 4 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
+| 39 | `PPL_PA_VI_B_01` | Ground-Based & Satellite Nav | 3 | — | 2 unique | 1 unique | ✅ | ✅ | 2026-06-15 |
+| 40 | `PPL_PA_VI_B_02` | Transponders & ADS-B | 3 | — | 3 unique | 3 unique | ✅ | ✅ | 2026-06-15 |
+| 41 | `PPL_PA_VI_B_03` | Nav Risk Management & EFBs | 4 | — | 4 unique | 4 unique | ✅ | ✅ | 2026-06-15 |
+| 42 | `PPL_PA_VII_A_01` | Slow Flight & Stalls | 4 | — | 4 unique | 2 unique | ✅ | ✅ | 2026-06-14 |
+| 43 | `PPL_PA_VII_D_01` | Spin Awareness | 3 | — | 3 unique | 2 unique | ✅ | ✅ | 2026-06-14 |
+| 44 | `PPL_PA_IX_B_01` | Emergency Approach & Landing | 3 | — | 3 unique | 1 unique | ✅ | ✅ | 2026-06-14 |
+| 45 | `PPL_PA_IX_C_01` | Systems Malfunctions & Fire | 4 | — | 4 unique | 2 unique | ✅ | ✅ | 2026-06-14 |
+| 46 | `PPL_PA_XI_A_01` | Night Vision & Airport Lighting | 4 | — | 4 unique | 1 unique | ✅ | ✅ | 2026-06-15 |
+| 47 | `PPL_PA_XI_A_02` | Night Equipment & Taxi | 5 | — | 5 unique | 5 unique | ✅ | ✅ | 2026-06-15 |
+| 48 | `PPL_PA_XI_A_03` | Night Risk Management | 6 | — | 4 unique | 5 unique | ✅ | ✅ | 2026-06-15 |
+
+### Firestore Ingestion Flow
+
+```mermaid
+flowchart TD
+    subgraph Local ["Pipeline Repo"]
+        RKP_F["rkp_manifests/\n48 x *_rkp.json"]
+        QUIZ_F["quiz_banks/\n48 x *_quiz.json"]
+    end
+
+    subgraph FS ["Firestore: aviationchat-database"]
+        RKP_COL["rkp_manifests/\n48 docs by lesson_id"]
+        QUIZ_COL["quiz_banks/\n48 docs by lesson_id"]
+        QUIZ_SUB["questions/ subcollection\n8 docs per lesson = 384"]
+    end
+
+    RKP_F -->|"upload_manifests.py --execute"| RKP_COL
+    QUIZ_F -->|"ingest_quiz_banks.py --execute"| QUIZ_COL
+    QUIZ_COL --> QUIZ_SUB
+
+    style RKP_COL fill:#2d6a4f,color:#fff
+    style QUIZ_SUB fill:#e76f51,color:#fff
+```
+
+> [!NOTE]
+> The app reads quizzes from the **subcollection** path (`quiz_banks/{lesson_id}/questions/*`), not the embedded array.
 
 ### Upload Script
 
@@ -461,7 +506,7 @@ FAA PDFs are stored in `curriculum_components/faa_docs/` (gitignored via `*.pdf`
 | `src/gcp/upload_manifests.py` | `aviationchat-database` | `rkp_manifests` | Gated (`--execute`) |
 
 **Status:** Updated 2026-06-18 — now uses `config.py` paths (no more hardcoded `c:\AGY-Projects\...`).
-**Last upload:** 2026-06-18 — 47/47 manifests uploaded. Firestore has 48 (includes legacy `PPL_PA_I_H_04`).
+**Last upload:** 2026-06-18 — 47/47 manifests uploaded. Firestore has 48 (includes legacy `PPL_PA_I_H_04`, whose quiz subcollection was repaired 2026-06-19).
 
 ---
 
@@ -477,7 +522,7 @@ FAA PDFs are stored in `curriculum_components/faa_docs/` (gitignored via `*.pdf`
 | Perspectives | legal (2), safety (2), application (2), risk_management (2) |
 | Question types | `mcq` (legal/safety/application) + `sjt` preferred for risk_management |
 | Correct answer format | Single letter: `"A"`, `"B"`, `"C"`, or `"D"` |
-| `tested_rkp_id` | Mandatory on all 376 questions |
+| `tested_rkp_id` | Mandatory on all 384 questions |
 | SJT correct answer | Always `"D"` — the safest PIC decision |
 
 ### Full Quiz Inventory
@@ -518,19 +563,20 @@ FAA PDFs are stored in `curriculum_components/faa_docs/` (gitignored via `*.pdf`
 | 32 | `PPL_PA_I_H_01` | Hypoxia | 8 | 2 | 2 | 2 | 2 | 🥇 | 2026-06-14 |
 | 33 | `PPL_PA_I_H_02` | Spatial Disorientation | 8 | 0 | 3 | 3 | 2 | 🥇 | 2026-06-14 |
 | 34 | `PPL_PA_I_H_03` | ADM | 8 | 1 | 0 | 4 | 3 | 🥇 | 2026-06-14 |
-| 35 | `PPL_PA_III_A_01` | Radio Comms | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 36 | `PPL_PA_III_A_02` | Light Signals | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-15 |
-| 37 | `PPL_PA_III_B_01` | Traffic Patterns | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-15 |
-| 38 | `PPL_PA_VI_B_01` | Nav Systems | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 39 | `PPL_PA_VI_B_02` | Transponders/ADS-B | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 40 | `PPL_PA_VI_B_03` | Nav Risk/EFBs | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 41 | `PPL_PA_VII_A_01` | Stalls & Recovery | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 42 | `PPL_PA_VII_D_01` | Spin Awareness | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 43 | `PPL_PA_IX_B_01` | Emergency Approach | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 44 | `PPL_PA_IX_C_01` | Malfunctions & Fire | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 45 | `PPL_PA_XI_A_01` | Night Vision/Lighting | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 46 | `PPL_PA_XI_A_02` | Night Equipment | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
-| 47 | `PPL_PA_XI_A_03` | Night Risk/ADM | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 35 | `PPL_PA_I_H_04` | ADM: PAVE & IMSAFE | 8 | 1 | 2 | 2 | 3 | 🥇 | — |
+| 36 | `PPL_PA_III_A_01` | Radio Comms | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 37 | `PPL_PA_III_A_02` | Light Signals | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-15 |
+| 38 | `PPL_PA_III_B_01` | Traffic Patterns | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-15 |
+| 39 | `PPL_PA_VI_B_01` | Nav Systems | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 40 | `PPL_PA_VI_B_02` | Transponders/ADS-B | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 41 | `PPL_PA_VI_B_03` | Nav Risk/EFBs | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 42 | `PPL_PA_VII_A_01` | Stalls & Recovery | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 43 | `PPL_PA_VII_D_01` | Spin Awareness | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 44 | `PPL_PA_IX_B_01` | Emergency Approach | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 45 | `PPL_PA_IX_C_01` | Malfunctions & Fire | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 46 | `PPL_PA_XI_A_01` | Night Vision/Lighting | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 47 | `PPL_PA_XI_A_02` | Night Equipment | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
+| 48 | `PPL_PA_XI_A_03` | Night Risk/ADM | 8 | 2 | 2 | 2 | 2 | 🔄 | 2026-06-16 |
 
 ### Perspective Distribution Notes
 
@@ -539,10 +585,40 @@ Most quizzes follow the standard 2-2-2-2 distribution. Notable deviations (all A
 - `PPL_PA_I_G_05`: 4 application, 1 legal, 1 risk (instruments are application-heavy)
 - `PPL_PA_I_H_02`: 0 legal, 3 safety, 3 application (spatial disorientation isn't a regulatory topic)
 - `PPL_PA_I_H_03`: 0 safety, 4 application, 3 risk, 1 legal (ADM is decision-focused)
+- `PPL_PA_I_H_04`: 1 legal, 2 safety, 2 application, 3 risk (PAVE/IMSAFE is risk-decision-focused)
 
 ---
 
 ## 7. Naming Conventions & Access Patterns
+
+### Bridge Hop: DB1 to DB2 Resolution
+
+```mermaid
+flowchart LR
+    A["User asks about\na lesson topic"] --> B["App queries DB1\nwith lesson context"]
+    B --> C["DB1 returns\nreg_keys + doc_keys"]
+    C --> D{"to_family match\nvs DB2_VOCABULARY"}
+    D -->|"Match found"| E["Filter DB2:\ndocument_tags: ANY"]
+    D -->|"No match"| F["Semantic search\nfallback"]
+    E --> G["Return FAA\nsource docs"]
+
+    style D fill:#e9c46a,color:#000
+    style E fill:#2d6a4f,color:#fff
+    style G fill:#264653,color:#fff
+```
+
+### Naming Convention Flow
+
+```mermaid
+flowchart TD
+    LID["lesson_id\nPPL_PA_I_A_01"] --> RKP_N["RKP: PPL_PA_I_A_01_rkp.json"]
+    LID --> QUIZ_N["Quiz: PPL_PA_I_A_01_quiz.json"]
+    LID --> POD_N["Podcast: PPL_PA_I_A_01_podcast.md"]
+    LID --> FS_N["Firestore doc ID:\nPPL_PA_I_A_01"]
+
+    ACS["ACS code\nPA.I.A.K1"] --> SPLIT_N["Split lesson:\nlesson_pa_i_a_k1"]
+    SPLIT_N --> GCS_N["GCS URI:\ngs://.../elements/lesson_pa_i_a_k1.md"]
+```
 
 ### Derive Any Filename from lesson_id
 
@@ -601,16 +677,16 @@ lesson_id = "lesson_" + acs_code.lower().replace(".", "_")
 
 ## 8. ACS Coverage Map
 
-### Current Coverage (47 lessons across 6 Areas)
+### Current Coverage (48 lessons across 6 Areas)
 
 | ACS Area | Description | Tasks Covered | Lessons | Status |
 |---|---|---|---|---|
-| **I** | Preflight Preparation | A, B, C, D, E, F, G, H | 34 | 🥇 Gold |
-| **III** | Airport & Seaplane Operations | A, B | 3 | 🔄 Rewrite |
-| **VI** | Navigation | B | 3 | 🔄 Rewrite |
-| **VII** | Slow Flight & Stalls | A, D | 2 | 🔄 Rewrite |
-| **IX** | Emergency Operations | B, C | 2 | 🔄 Rewrite |
-| **XI** | Night Operations | A | 3 | 🔄 Rewrite |
+| **I** | Preflight Preparation | A, B, C, D, E, F, G, H | 35 | ✅ |
+| **III** | Airport & Seaplane Operations | A, B | 3 | ✅ |
+| **VI** | Navigation | B | 3 | ✅ |
+| **VII** | Slow Flight & Stalls | A, D | 2 | ✅ |
+| **IX** | Emergency Operations | B, C | 2 | ✅ |
+| **XI** | Night Operations | A | 3 | ✅ |
 
 ### Missing ACS Areas (not yet authored)
 
@@ -627,7 +703,7 @@ lesson_id = "lesson_" + acs_code.lower().replace(".", "_")
 
 > **How to update this document:**
 > 1. After shipping new RKPs/quizzes, add rows to Sections 2, 5, and 6
-> 2. After verifying Firestore uploads, change ❓ → ✅ in the Firestore column
-> 3. After quiz rewrites, change 🔄 → 🥇 in the Quality column
-> 4. After adding new DB2 documents, add tags to Section 4
-> 5. Update the "Last updated" date at the top
+> 2. After verifying Firestore uploads, run the verification script and update the Firestore column
+> 3. After adding new DB2 documents, re-run `scripts/derive_db2_vocabulary.py` and update Section 4
+> 4. Update the "Last updated" date and the live-state banner at the top
+

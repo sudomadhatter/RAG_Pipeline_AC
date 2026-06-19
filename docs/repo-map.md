@@ -5,12 +5,21 @@
 ```text
 Ingestion_pipeline_AvCh
 ├── .gitignore
+├── .pytest_cache
+│   ├── .gitignore
+│   ├── CACHEDIR.TAG
+│   ├── README.md
+│   └── v
+│       └── cache
+│           ├── lastfailed
+│           └── nodeids
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── _01_My
 │   ├── instruction_docs
 │   │   ├── bridge_key_guide.md
-│   │   ├── curriculum_fix_audit_and_plan.md
+│   │   ├── curriculum_lifecycle.md
+│   │   ├── flashcard_creation_guide.md
 │   │   ├── get_back_on_track.md
 │   │   ├── quiz_authoring_guide.md
 │   │   └── rkp_creation_guide.md
@@ -21,7 +30,6 @@ Ingestion_pipeline_AvCh
 │       ├── admin_agent_dag_prp.md
 │       ├── admin_agent_telemetry_research.md
 │       ├── admin_dashboard_prp.md
-│       ├── bridge_key_guide.md
 │       ├── curriculum_mapping_analysis.md
 │       ├── dag_prebunking_vision.md
 │       ├── graph_rag_architecture_prp.md
@@ -37,6 +45,34 @@ Ingestion_pipeline_AvCh
 │       ├── socratic_quiz_tutor_architecture.md
 │       ├── socratic_teacher_architecture.md
 │       └── talker_architecture.md
+├── _claude_artifacts
+│   ├── 2026-06-16_add-artifact-rules
+│   │   ├── implementation_plan.md
+│   │   ├── task.md
+│   │   └── walkthrough.md
+│   ├── 2026-06-16_quiz-and-bridge-key-pipeline-fix
+│   │   ├── dev-story_curriculum-pipeline-fix.md
+│   │   ├── implementation_plan.md
+│   │   ├── task-list.md
+│   │   └── walkthrough.md
+│   ├── 2026-06-16_quiz-and-bridge-key-pipeline-fix__from-01My
+│   │   ├── implementation_plan.md
+│   │   ├── task.md
+│   │   ├── walkthrough.md
+│   │   └── your-action-required.md
+│   ├── 2026-06-17_pipeline-fix-revision
+│   │   └── implementation_plan.md
+│   ├── 2026-06-17_pipeline-qa-code-review
+│   │   └── code-review.md
+│   ├── 2026-06-18_bridge-ground-truth-fix
+│   │   ├── implementation_plan.md
+│   │   ├── task-list.md
+│   │   └── walkthrough.md
+│   ├── 2026-06-19_artifact-path-scheme
+│   │   └── implementation_plan.md
+│   └── README.md
+├── _opencode_artifacts
+│   └── README.md
 ├── curriculum_components
 │   ├── curriculum_modules
 │   │   ├── Area 1 Task A PPL.md
@@ -52,6 +88,20 @@ Ingestion_pipeline_AvCh
 │   │   ├── Area 6 Task B PPL.md
 │   │   ├── Area 7 A,B,D PPL.md
 │   │   └── Area 9 Tasks B,C PPL.md
+│   ├── faa_docs
+│   │   ├── AC 00-45H.pdf
+│   │   ├── AC 61-67C.pdf
+│   │   ├── AC 90-48E.pdf
+│   │   ├── AC 91-67.pdf
+│   │   ├── FAA-H-8083-15B (IFH).pdf
+│   │   ├── FAA-H-8083-1B (W&B).pdf
+│   │   ├── FAA-H-8083-3C (AFH part 1a).pdf
+│   │   ├── FAA-H-8083-3C (AFH part 1b).pdf
+│   │   ├── FAA-H-8083-3C (AFH part 2).pdf
+│   │   ├── FAA-H-8083-3C (AFH part 3).pdf
+│   │   ├── FAA-H-8083-3C.pdf
+│   │   ├── FAA-S-ACS-6C (Private Pilot ACS).pdf
+│   │   └── _db2_import.jsonl
 │   ├── lesson_podcasts
 │   │   ├── PPL_PA_I_A_01_podcast.md
 │   │   ├── PPL_PA_I_A_02_podcast.md
@@ -127,6 +177,7 @@ Ingestion_pipeline_AvCh
 │   │   ├── PPL_PA_I_H_01_quiz.json
 │   │   ├── PPL_PA_I_H_02_quiz.json
 │   │   ├── PPL_PA_I_H_03_quiz.json
+│   │   ├── PPL_PA_I_H_04_quiz.json
 │   │   ├── PPL_PA_VII_A_01_quiz.json
 │   │   ├── PPL_PA_VII_D_01_quiz.json
 │   │   ├── PPL_PA_VI_B_01_quiz.json
@@ -176,6 +227,7 @@ Ingestion_pipeline_AvCh
 │   │   ├── PPL_PA_I_H_01_rkp.json
 │   │   ├── PPL_PA_I_H_02_rkp.json
 │   │   ├── PPL_PA_I_H_03_rkp.json
+│   │   ├── PPL_PA_I_H_04_rkp.json
 │   │   ├── PPL_PA_VII_A_01_rkp.json
 │   │   ├── PPL_PA_VII_D_01_rkp.json
 │   │   ├── PPL_PA_VI_B_01_rkp.json
@@ -190,11 +242,26 @@ Ingestion_pipeline_AvCh
 │               def process_manifest(client, filepath, dry_run)
 │               def main()
 ├── docs
+│   ├── Master_Curriculum_Pipeline.md
+│   ├── asset_registry.md
 │   └── repo-map.md
 ├── pipeline
 │   └── curriculum
 │       ├── _v2_split
-│       │   ├── curriculum_v2_import.jsonl
+│       ├── active
+│       │   ├── Area 1 Task A PPL.md
+│       │   ├── Area 1 Task B PPL.md
+│       │   ├── Area 1 Task C PPL.md
+│       │   ├── Area 1 Task D PPL.md
+│       │   ├── Area 1 Task E PPL.md
+│       │   ├── Area 1 Task F PPL.md
+│       │   ├── Area 1 Task G PPL.md
+│       │   ├── Area 1 Task H PPL.md
+│       │   ├── Area 11 Task A PPL.md
+│       │   ├── Area 3 Tasks A,B PPL.md
+│       │   ├── Area 6 Task B PPL.md
+│       │   ├── Area 7 A,B,D PPL.md
+│       │   ├── Area 9 Tasks B,C PPL.md
 │       │   ├── lesson_pa_i_a_k1.md
 │       │   ├── lesson_pa_i_a_k2.md
 │       │   ├── lesson_pa_i_a_k3.md
@@ -327,18 +394,6 @@ Ingestion_pipeline_AvCh
 │       │   ├── lesson_pa_iii_b_r3.md
 │       │   ├── lesson_pa_iii_b_s1.md
 │       │   ├── lesson_pa_iii_b_s2.md
-│       │   ├── lesson_pa_ix_b_k1.md
-│       │   ├── lesson_pa_ix_b_k2.md
-│       │   ├── lesson_pa_ix_b_k3.md
-│       │   ├── lesson_pa_ix_b_k4.md
-│       │   ├── lesson_pa_ix_b_r1.md
-│       │   ├── lesson_pa_ix_b_s1.md
-│       │   ├── lesson_pa_ix_c_k1.md
-│       │   ├── lesson_pa_ix_c_k2c.md
-│       │   ├── lesson_pa_ix_c_k3.md
-│       │   ├── lesson_pa_ix_c_r1.md
-│       │   ├── lesson_pa_ix_c_r4.md
-│       │   ├── lesson_pa_ix_c_s1.md
 │       │   ├── lesson_pa_vi_b_k1.md
 │       │   ├── lesson_pa_vi_b_k2.md
 │       │   ├── lesson_pa_vi_b_k3.md
@@ -380,21 +435,43 @@ Ingestion_pipeline_AvCh
 │       │   ├── lesson_pa_xi_a_r6.md
 │       │   ├── lesson_pa_xi_a_r7.md
 │       │   └── library_v2_import.jsonl
+│       ├── curriculum.jsonl
 │       └── new
-│           ├── Area 1 Task A PPL.md
-│           ├── Area 1 Task B PPL.md
-│           ├── Area 1 Task C PPL.md
-│           ├── Area 1 Task D PPL.md
-│           ├── Area 1 Task E PPL.md
-│           ├── Area 1 Task F PPL.md
-│           ├── Area 1 Task G PPL.md
-│           ├── Area 1 Task H PPL.md
-│           ├── Area 11 Task A PPL.md
-│           ├── Area 3 Tasks A,B PPL.md
-│           ├── Area 6 Task B PPL.md
-│           ├── Area 7 A,B,D PPL.md
-│           └── Area 9 Tasks B,C PPL.md
+│           ├── lesson_pa_ix_b_k1.json
+│           ├── lesson_pa_ix_b_k1.md
+│           ├── lesson_pa_ix_b_k2.json
+│           ├── lesson_pa_ix_b_k2.md
+│           ├── lesson_pa_ix_b_k3.json
+│           ├── lesson_pa_ix_b_k3.md
+│           ├── lesson_pa_ix_b_k4.json
+│           ├── lesson_pa_ix_b_k4.md
+│           ├── lesson_pa_ix_b_r1.json
+│           ├── lesson_pa_ix_b_r1.md
+│           ├── lesson_pa_ix_b_s1.json
+│           ├── lesson_pa_ix_b_s1.md
+│           ├── lesson_pa_ix_c_k1.json
+│           ├── lesson_pa_ix_c_k1.md
+│           ├── lesson_pa_ix_c_k2c.json
+│           ├── lesson_pa_ix_c_k2c.md
+│           ├── lesson_pa_ix_c_k3.json
+│           ├── lesson_pa_ix_c_k3.md
+│           ├── lesson_pa_ix_c_r1.json
+│           ├── lesson_pa_ix_c_r1.md
+│           ├── lesson_pa_ix_c_r4.json
+│           ├── lesson_pa_ix_c_r4.md
+│           ├── lesson_pa_ix_c_s1.json
+│           └── lesson_pa_ix_c_s1.md
 ├── scripts
+│   ├── audit_sidecars.py
+│   │       def audit_and_clean_sidecars()
+│   ├── derive_db2_vocabulary.py
+│   │       def derive()
+│   ├── expand_vocabulary.py
+│   │       def query_live_db2_tags()
+│   ├── fallback_generator.py
+│   │       def fallback_generator(markdown_path)
+│   ├── fallback_generator2.py
+│   │       def split_and_generate_regex(markdown_path)
 │   └── generate_repo_map.py
 │           def generate_ast_summary(filepath)
 │           def walk_directory(directory, prefix)
@@ -404,15 +481,31 @@ Ingestion_pipeline_AvCh
     ├── gcp
     │   ├── create_v2_stores.py
     │   │       def create_data_store(store_id, display_name, chunk_size)
-    │   ├── import_db1_v2.py
-    │   │       def parse_bridge_keys(text)
-    │   │       def split_file(filepath)
-    │   │       def main()
-    │   ├── reimport_with_metadata.py
-    │   │       def split_task_file(filepath)
-    │   │       def process_all_tasks()
-    │   │       def reimport_curriculum()
-    │   │       def reimport_library()
+    │   ├── import_db2_docs.py
+    │   │       def build_family_variants()
+    │   │       def rich_tags(filename, fam_variants)
+    │   │       def _poll(op, budget, interval)
+    │   │       def slug(filename)
+    │   │       def build_new_entries(fam_variants)
+    │   │       def list_existing(client)
+    │   │       def dry_run()
+    │   │       def execute()
+    │   ├── ingest_quiz_banks.py
+    │   │       def validate(data, fname)
+    │   │       def load_all()
+    │   │       def dry_run()
+    │   │       def execute()
+    │   ├── probe_bridge_hop.py
+    │   │       def serving_config(client)
+    │   │       def manifest_keys(data)
+    │   │       def main(limit)
+    │   ├── reimport_db1_keys.py
+    │   │       def clean_list(v)
+    │   │       def augment_doc_keys(doc)
+    │   │       def build_entries()
+    │   │       def summarize(entries, report, problems)
+    │   │       def dry_run()
+    │   │       def execute()
     │   ├── storage.py
     │   │       def upload_to_gcs(local_path, bucket_name, destination_blob_name, project_id)
     │   ├── upload_and_import_v2.py
@@ -420,10 +513,9 @@ Ingestion_pipeline_AvCh
     │   │       def upload_library_to_gcs()
     │   │       def import_documents(data_store_id, gcs_uri)
     │   ├── upload_manifests.py
-    │   │       def main()
-    │   ├── upload_quiz_banks.py
-    │   │       def validate_quiz(data, filename)
-    │   │       def main()
+    │   │       def load_all()
+    │   │       def dry_run()
+    │   │       def execute()
     │   └── vertex.py
     │           def import_documents_to_vertex(project_id, location, data_store_id, gcs_uri)
     ├── main.py
@@ -460,19 +552,46 @@ Ingestion_pipeline_AvCh
     │               def run_phase_4_manifest_gen(self, new_uploaded)
     │               def run_phase_5_vertex_import(self, manifest_gcs_uri)
     │               def run_phase_6_lifecycle_commit(self, successful_files)
+    ├── tests
+    │   ├── __init__.py
+    │   ├── conftest.py
+    │   ├── test_bridge_key_offline_gate.py
+    │   │       def _entries()
+    │   │       def test_all_entries_validate()
+    │   │       def test_expected_count()
+    │   │       def test_no_empty_doc_keys()
+    │   │       def test_no_residual_corruption()
+    │   │       def test_every_lesson_has_a_document_level_key()
+    │   └── test_schema_keys.py
+    │           def test_normalize_strips_corruption_keeps_reference(raw, expected)
+    │           def test_garbage_detected(raw)
+    │           def test_real_references_not_garbage(raw)
+    │           def test_document_level_filter(raw, doc_level)
+    │           def test_family_match_across_editions(curriculum, library)
+    │           def test_coverage_splits_covered_and_reference_only()
+    │           def test_structdata_cleans_on_construction()
+    │           def test_structdata_rejects_empty_doc_keys()
     └── utils
+        ├── db2_tags.py
+        │       def extract_tags(filename)
         ├── generate_metadata.py
-        │       def generate_curriculum_metadata(markdown_path)
+        │       def split_task_file(content, filename)
+        │       def generate_curriculum_metadata(content, offline, existing_sidecar)
+        │       def process_master_module(markdown_path, offline)
         ├── lifecycle.py
         │       def get_timestamp()
         │       def supersede_file(active_path, superseded_dir)
         │       def activate_file(new_path, active_dir, superseded_dir)
         └── schema.py
+                def normalize_key(raw)
+                def is_garbage(k)
+                def to_family(k)
+                def is_document_level(k)
+                def to_document_level(k)
+                def coverage(doc_keys)
                 class ContentSource:
                 class CurriculumStructData:
-                    def strip_invalid_keys(cls, v)
-                    def validate_doc_keys_non_empty(cls, v)
-                    def warn_chapter_level_keys(cls, v)
+                    def clean_keys(cls, v)
                 class CurriculumLessonSchema:
                 class LibraryStructData:
                     def validate_category(cls, v)

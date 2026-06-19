@@ -14,7 +14,7 @@ companion: "Sits above the four authoring guides in this folder — it is the in
 > forces a re-build. Read `get_back_on_track.md` for the current recovery work; read this when you
 > need to know "where does X fit, and is it covered?"
 
-> ### ⚠️ Verified & corrected (2026-06-18, measured against the LIVE stores — aligns with bridge_key_guide v3.0)
+> ### ⚠️ Verified & corrected (2026-06-18, measured against the LIVE stores — aligns with bridge_key_guide v2.8)
 > Earlier notes here described tools and a mechanism that don't match reality. Corrections:
 >
 > 1. **The DB1→DB2 bridge filters on the RKP MANIFEST `bridge_keys`, not DB1 `structData.doc_keys`**
@@ -22,7 +22,7 @@ companion: "Sits above the four authoring guides in this folder — it is the in
 >    `document_tags` — which had to be created (no DB2 doc had it before 2026-06-18). The phantom
 >    `src/gcp/reimport_with_metadata.py` referenced in older drafts **does not exist**. The real DB1 writer
 >    is `src/gcp/reimport_db1_keys.py` (pull-clean-augment-upsert); the live store was built by the LLM
->    extractor, not a regex. See `bridge_key_guide.md` v3.0 for the verified mechanism.
+>    extractor, not a regex. See `bridge_key_guide.md` v2.8 for the verified mechanism.
 > 2. **Quiz ingest is `src/gcp/ingest_quiz_banks.py`** (this repo) → Firestore `quiz_banks/{lesson}/questions/{q}`.
 >    The old `src/gcp/upload_quiz_banks.py` (wrong layout) is superseded.
 
@@ -82,7 +82,7 @@ This is the heart of the map. Seven artifacts per lesson:
 | 2 | **RKP manifest** (RKPs, `lesson_overview`, `far_references`, `bridge_keys`, `knowledge`) | `curriculum_components/rkp_manifests/PPL_PA_*_rkp.json` | Ingestion team | Specialist tutor + flashcard UI | `rkp_creation_guide.md` | Any knowledge/ACS change |
 | 3 | **Flashcards** (`knowledge_formatted`) | a field inside the RKP manifest; written by `curriculum_components/scripts/generate_knowledge_formatted.py` (Gemini 2.5 Pro) | Ingestion team (run the script) | **App** — `FlashcardDeck` / `FlashcardCard` UI | **`flashcard_creation_guide.md`** | Whenever `knowledge` changes |
 | 4 | **Quiz bank** (8 questions) | `curriculum_components/quiz_banks/PPL_PA_*_quiz.json` | Ingestion team | App quiz router + tutor | `quiz_authoring_guide.md` | RKP facts change |
-| 5 | **Bridge keys** — DB1 `structData.doc_keys` (display refs) + DB2 `document_tags` (the match target) + RKP manifest `bridge_keys` (what the app filters on) | DB1 via `src/gcp/reimport_db1_keys.py`; DB2 tags via `src/gcp/import_db2_docs.py`; manifests via `src/gcp/upload_manifests.py` | Ingestion team (pipeline) | The DB1→DB2 RAG verification hop | `bridge_key_guide.md` (v3.0) | Sources/regs change |
+| 5 | **Bridge keys** — DB1 `structData.doc_keys` (display refs) + DB2 `document_tags` (the match target) + RKP manifest `bridge_keys` (what the app filters on) | DB1 via `src/gcp/reimport_db1_keys.py`; DB2 tags via `src/gcp/import_db2_docs.py`; manifests via `src/gcp/upload_manifests.py` | Ingestion team (pipeline) | The DB1→DB2 RAG verification hop | `bridge_key_guide.md` (v2.8) | Sources/regs change |
 | 6 | **Media assets** (`audio_file`, `video_file`, `notes_file`) | referenced in the RKP manifest | **Separate process / Daniel** (NOT the team) | App lesson player | none (out of team scope) | Overview re-recorded |
 | 7 | **Curriculum Key** (ACS entries) | the curriculum key (Step 3, "Manual" in `rkp_creation_guide.md`) | Ingestion team / Woz | Lesson planner / mastery map | none (manual step) | New lesson added |
 
@@ -93,9 +93,10 @@ This is the heart of the map. Seven artifacts per lesson:
 - **Firestore** (`aviationchat-database`): the per-lesson quiz subcollection the app *reads*
   (`quiz_banks/{lesson_id}/questions/{q}` — written with `seen_by`/`last_seen_at` rotation fields), plus
   RKP manifests / lesson cache. **Flashcards are served from here**, via the app's flashcard-decks endpoint.
-  Ingest with the **right** tool — `scripts/ingest_quiz_banks.py` (app repo; validates against
-  `backend/schemas/quiz.py`, idempotent by question id). `src/gcp/upload_quiz_banks.py` is **deleted**
-  (wrong layout, inert — see `get_back_on_track.md` §3).
+  Ingest with the pipeline tool — `src/gcp/ingest_quiz_banks.py --execute` (validates structure, writes the
+  subcollection + `seen_by`/`last_seen_at`, merge-upsert by question id). Note: questions must land in the
+  **subcollection** the app reads, not only an embedded array on the parent doc — that exact gap left
+  `I_H_04` dark until 2026-06-19. The old `src/gcp/upload_quiz_banks.py` is **deleted**.
 - **Vertex AI Search**: **DB1** `aviation-curriculum-v2` (the teaching store — carries the structData
   `reg_keys`/`doc_keys`) and **DB2** `aviation-library-v2` (the FAA PDF library used to verify
   answers). The bridge keys are what connect a DB1 lesson to its DB2 source — empty keys = a silent
@@ -115,14 +116,12 @@ This is the heart of the map. Seven artifacts per lesson:
 | Media assets (audio/video/notes) | ⛔ **No guide — and not the team's job.** Owned by a separate process / Daniel. |
 | Curriculum Key | ⛔ **No guide.** A manual step today. Low risk, but undocumented. |
 
-> **Historical note (corrected v2.8):** an earlier draft blamed Area IX on a markdown heading mismatch
-> (`####`/`**Regs**:` vs `###`/`**Regs:**`) and a later draft over-corrected to "it's all an LLM now, so
-> formatting never matters." **Both are partly wrong.** There are two extractors: the LLM
-> `generate_metadata.py` (formatting-agnostic) and the **regex** inside the production DB1 writer
-> `reimport_with_metadata.py` (formatting-sensitive — it parses the `Bridge Keys` block). Until we unify on
-> the LLM + guard (the v2.8 decision), keep the master-doc `Bridge Keys` block clean **and** name the
-> sources explicitly in the prose. The durable rule is: *name the regs/documents at document granularity in
-> the source* — that survives whichever extractor is running.
+> **Note (corrected v2.8, 2026-06-19):** Area IX was empty in DB1 because the keys never reached the live
+> store — not a heading/regex mismatch (the live DB1 was LLM-extracted, with `type`/`ancestral_context`).
+> It was fixed by cleaning + filling keys from the authored Area IX sidecars and writing them with
+> `reimport_db1_keys.py` (`update_document`). The durable rule still holds: **name the regs/documents at
+> document granularity in the source** (`FAA-H-8083-25C`, not a chapter), and let
+> `derive_db2_vocabulary.py` keep the vocabulary honest against the live DB2.
 
 ---
 
@@ -131,9 +130,9 @@ This is the heart of the map. Seven artifacts per lesson:
 - **Edit an RKP `knowledge` field** ⇒ re-run `generate_knowledge_formatted.py` (card back) **and**
   re-check that RKP's quiz questions (the quiz author reads `knowledge` — the two-way contract).
 - **Edit the master markdown's sources** (regs/documents named in the prose / `Bridge Keys` block) ⇒
-  regenerate the metadata so the bridge keys match, then re-import to DB1 via
-  `src/gcp/reimport_with_metadata.py` (FULL reconciliation, idempotent) — and prove the DB1→DB2 hit (see
-  `bridge_key_guide.md` §5).
+  regenerate the metadata so the bridge keys match, then repair DB1 in place via
+  `src/gcp/reimport_db1_keys.py --execute` (`update_document`, queue-free) — and prove the DB1→DB2 hit with
+  `src/gcp/probe_bridge_hop.py` (see `bridge_key_guide.md` §5/§7).
 - **Add or change a quiz bank** ⇒ re-ingest with `scripts/ingest_quiz_banks.py` (never the wrong tool).
 - **Add a brand-new lesson** ⇒ all of the above **plus** the Curriculum Key entry (artifact #7).
 

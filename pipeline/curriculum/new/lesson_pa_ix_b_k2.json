@@ -1,0 +1,24 @@
+{
+  "id": "lesson_pa_ix_b_k2",
+  "structData": {
+    "acs_code": "PA.IX.B.K2",
+    "title": "Airspeed, including best glide speed vs. minimum sink speed.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [
+      "14 CFR 91.103"
+    ],
+    "doc_keys": [
+      "FAA-H-8083-25C",
+      "FAA-H-8083-3C"
+    ],
+    "keywords": [
+      "L/D Max",
+      "Induced Drag",
+      "Parasite Drag",
+      "Power Required Curve",
+      "Endurance vs Range",
+      "Minimum Sink"
+    ]
+  }
+}

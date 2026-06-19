@@ -1,0 +1,84 @@
+{
+  "lesson_id": "PPL_PA_I_F_02",
+  "title": "Weight and Balance — Loading, CG Limits, and the Moment Method",
+  "acs_task_reference": "Area I, Task F",
+  "acs_element_keys": [
+    "PA.I.F.K2",
+    "PA.I.F.S1"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "The Legal Framework — When an Overweight or Out-of-CG Flight is a Violation",
+      "why": "The DPE asks: 'Can you legally depart 50 pounds overweight if the flight is short and you'll burn fuel to reach the limit?' No. The aircraft must be within limits at ALL times: before, during, and after every flight. Exceeding max gross weight or operating outside the CG envelope at any point is a violation of 14 CFR 91.9 — not a judgment call.",
+      "knowledge": "14 CFR 91.9 prohibits operating an aircraft in excess of the maximum certificated weight or outside the CG limits established in the aircraft's Type Certificate Data Sheet (TCDS) and Pilot's Operating Handbook (POH). The limits are: (1) Maximum Gross Weight: the maximum certificated takeoff weight for the aircraft. This limit must not be exceeded at ANY point — before fuel burn, not after a planned burn-down. Taking off overweight with the plan to 'burn into limits' is illegal and dangerous: the aircraft is overloaded during the most critical phase of flight. (2) CG Limits: the center of gravity must remain within the forward and aft CG limits throughout the entire flight. Forward CG limit: associated with longitudinal stability and pitch control authority. Aft CG limit: associated with static stability — an aft-of-limits CG can make the aircraft dynamically unstable, requiring constant forward stick pressure to maintain level flight; loss of control risk is highest aft of limits. (3) Useful Load: the difference between gross weight and basic empty weight. Includes: fuel, oil, pilot, passengers, cargo, and baggage. Pilots must know where each item's moment arm is located to calculate CG. Legal authority: the TCDS is the legally binding weight and CG limit document; the POH repeats these limits for operational reference.",
+      "acs_elements": [
+        "PA.I.F.K2"
+      ],
+      "far_references": [
+        "14 CFR 91.9"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-1B",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### Legal Framework\n- **14 CFR 91.9** prohibits operating an aircraft in excess of the **maximum certificated weight** or outside the **CG limits**"
+    },
+    {
+      "id": "RKP_02",
+      "title": "The Moment Method — Weight × Arm = Moment; Sum of Moments ÷ Total Weight = CG",
+      "why": "The DPE provides a loading table and asks the applicant to calculate weight and balance. Speed and accuracy here demonstrates airmanship. The most common arithmetic trap: forgetting to include the weight of the fuel or the empty weight of the aircraft itself in the total weight column, producing a CG that appears within limits when it is actually out of limits.",
+      "knowledge": "Weight and balance calculation — the moment method: (1) WEIGHT (pounds): the actual weight of each component (BEW, pilot, passengers, baggage, fuel). (2) ARM (inches, from datum): the horizontal distance from the aircraft's datum (typically the firewall or another reference point) to the CG of each component. Arms are provided in the POH loading tables for each station. (3) MOMENT (pound-inches): Weight × Arm = Moment. (4) TOTAL WEIGHT and TOTAL MOMENT: sum all weight items to get TOTAL WEIGHT; sum all moments to get TOTAL MOMENT. (5) CG LOCATION: Total Moment ÷ Total Weight = CG in inches from datum. (6) VERIFY: Check CG location against forward and aft CG limits from the POH limits table or CG envelope chart at the calculated gross weight. Common trap: fuel weight is 6 pounds per gallon for avgas (100LL). Many students use 5 or 7 — the correct standard is 6 lb/gal. Forgetting basic empty weight in the calculation produces a total weight that is too low and a CG that may appear within limits when it is not.",
+      "acs_elements": [
+        "PA.I.F.K2",
+        "PA.I.F.S1"
+      ],
+      "far_references": [
+        "14 CFR 91.9"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-1B",
+        "POH Section 6"
+      ],
+      "knowledge_formatted": "- **WEIGHT (pounds)**: The actual weight of each component (**BEW**, pilot, passengers, baggage, fuel)\n- **ARM (inches, from datum)**: The horizontal distance from the"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Forward vs. Aft CG — The Stability and Control Trade-Off",
+      "why": "The DPE asks: 'What happens to handling if you load the aircraft with a very forward CG?' Most applicants know 'it requires more back pressure' but can't explain WHY. And 'what about very aft CG?' — the answer is fundamentally different: aft CG can make the aircraft statically unstable, which is a qualitatively different and more dangerous condition than a heavy nose.",
+      "knowledge": "Forward CG conditions (CG at or near forward limit): (1) STABILITY: greater positive longitudinal stability — the aircraft more aggressively returns to trimmed flight after disturbance (nose-heavy tendency). (2) PITCH CONTROL: requires more elevator back pressure (or up elevator trim) to maintain level flight and to rotate for takeoff. (3) STALL SPEED: slightly higher (nose-heavy increases required angle of attack for a given stall). (4) HANDLING: heavier on controls; in extreme cases, limited pitch-up authority for flare; may increase landing distance. Aft CG conditions (CG at or near aft limit): (1) STABILITY: reduced positive longitudinal stability. At CG behind the neutral point, the aircraft becomes UNSTABLE — a pitch disturbance does not self-correct; pilot must actively counter each disturbance manually. (2) SPIN RECOVERY: aft CG dramatically worsens spin recovery characteristics; many aircraft become unrecoverable from spins when CG is aft of the forward spin recovery limit. (3) STALL SPEED: slightly lower (tail-heavy reduces load on wings for a given pitch attitude), but the stall characteristics become more abrupt and less predictable. (4) HANDLING: lighter feel on controls but with reduced safety margins. FAA guidance: aft CG is more dangerous than forward CG in terms of control authority and recovery from unusual attitudes.",
+      "acs_elements": [
+        "PA.I.F.K2"
+      ],
+      "far_references": [
+        "14 CFR 91.9"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-1B",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### Forward CG (At or near forward limit)\n- **Stability:** Greater **positive longitudinal stability** (aggressively returns to trimmed flight after disturbance due to **nose-heavy** tendency)"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Shifting CG During Flight — Fuel Burn and Passenger Movement",
+      "why": "The DPE asks: 'You calculate CG within limits at takeoff. As fuel burns, does the CG shift?' Yes — and the direction depends on where the fuel tanks are relative to the CG. A wing-tank aircraft burning fuel from tanks located near the CG will have minimal CG shift. An aircraft that burns from a forward-mounted auxiliary tank will experience an aft CG shift as fuel depletes. Failing to account for CG at minimum fuel (or zero fuel) can result in an out-of-limits condition mid-flight.",
+      "knowledge": "CG shift during flight: (1) Fuel burn: as fuel burns, total weight decreases and the CG shifts in the direction away from the fuel tank location. If fuel tanks are AFT of CG: burning fuel moves CG FORWARD. If fuel tanks are FORWARD of CG: burning fuel moves CG AFT. If tanks are at or near CG: minimal shift. (2) For multi-tank aircraft: the sequence in which tanks are burned determines CG shift trajectory. The pilot must compute CG at zero fuel weight (ZFW) and at minimum fuel to verify the CG remains within limits throughout the entire flight envelope. (3) Passenger movement: a passenger moving aft (to a rear seat or lavatory on larger aircraft) shifts the CG aft. Pilots of light aircraft should brief passengers not to move around during critical flight phases. Zero Fuel Weight (ZFW) check: many POH loading charts require the pilot to verify CG falls within limits both at takeoff weight AND at zero fuel weight. If either check fails, the flight is out of limits at some point during the planned operation.",
+      "acs_elements": [
+        "PA.I.F.K2",
+        "PA.I.F.S1"
+      ],
+      "far_references": [
+        "14 CFR 91.9"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-1B",
+        "POH Section 6"
+      ],
+      "knowledge_formatted": "### Fuel Burn\n- As fuel burns, **total weight decreases** and the **CG shifts away** from the fuel tank location\n- Fuel tanks **AFT of CG**:"
+    }
+  ],
+  "lesson_overview": "## Weight and Balance — The Math That Keeps You Legal and Alive\n\nWeight and balance isn't a bureaucratic requirement. An out-of-CG aircraft can become uncontrollable. An overweight aircraft may not climb out of ground effect on a hot day. The DPE will hand you a loading table and ask you to calculate it — live, on paper, in front of them. This lesson teaches you the framework, the common traps, and why being 50 pounds light doesn't always mean you're CG-safe.\n\n**The legal baseline: 91.9.** The regulation is simple: no aircraft may be operated above its maximum certificated gross weight or outside its CG envelope. These limits are not guidelines — they are airworthiness boundaries established in the TCDS and POH. The PIC is responsible for compliance before every flight. 'I'll burn into limits after takeoff' is not a valid strategy — the aircraft must be within limits at every phase of flight, including during the critical takeoff roll.\n\n**The moment method — the only calculation the DPE cares about.**\n\n1. **Weight × Arm = Moment.** Every item in the aircraft has a weight and an arm (horizontal distance from the aircraft datum). Multiply them to get moment.\n2. **Sum all weights.** This is total gross weight. Compare to max gross weight.\n3. **Sum all moments.** This is total moment.\n4. **Total Moment ÷ Total Weight = CG location** (in inches from datum).\n5. **Compare CG to the envelope.** Is it within the forward and aft limits at your total weight? Plot it on the CG envelope chart.\n\nCommon arithmetic trap: forgetting to include the basic empty weight of the aircraft itself. Students sometimes add up fuel, pilot, and passengers — and omit the aircraft. The BEW (with the baggage area, oil, and unusable fuel already included) must be the first line item. Fuel trap: avgas is 6 pounds per gallon. Not 5, not 7 — 6 lb/gal for 100LL.\n\n**Forward vs. aft CG: two very different problems.** A forward CG makes the aircraft stable and nose-heavy. You'll need more back pressure to rotate and more pitch authority to flare. Stall speed is slightly higher. At the extreme forward limit, you may not have enough elevator authority to rotate at Vr or flare for landing. An aft CG is qualitatively more dangerous: as the CG moves aft of the neutral point, the aircraft becomes statically unstable. A pitch disturbance doesn't self-correct — it amplifies. Spin recovery becomes progressively more difficult and eventually impossible as CG moves aft of the forward spin recovery limit (which is often FORWARD of the aft CG limit). The aircraft can feel deceptively nice with an aft CG — light on the controls, responsive. That pleasantness is a trap.\n\n**CG moves during flight.** Fuel burns. The direction CG shifts depends on where the tanks are relative to the CG datum. If fuel tanks are AFT of the CG, burning fuel moves CG FORWARD. If forward of CG, burning moves CG AFT. For multi-tank aircraft, the burn sequence determines the CG shift trajectory. The correct check: calculate CG at TAKEOFF weight AND at ZERO FUEL WEIGHT (or minimum fuel) to verify it stays in limits throughout the flight. A CG that's within limits at takeoff may drift out of limits at light fuel.\n\n**The checkride trap:** The DPE hands you a loading table and says: 'I want the takeoff weight, CG location, and whether we can legally fly.' You get 5 minutes. The most common failures: (1) forgetting the aircraft BEW, (2) using the wrong fuel weight (5 or 7 instead of 6), (3) computing CG correctly but forgetting to verify against the LIMITS TABLE — just finding a CG number isn't enough; you must confirm it falls within the forward and aft limits at that gross weight on the envelope chart. The plotted point must be inside the envelope. Edges don't count.",
+  "audio_file": "PPL_PA_I_F_audio.m4a",
+  "video_file": "PPL_PA_I_F_video.mp4"
+}

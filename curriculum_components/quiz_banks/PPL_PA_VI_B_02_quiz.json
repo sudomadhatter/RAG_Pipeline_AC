@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_VI_B_02",
+  "title": "Transponders, ADS-B & Radar Services",
+  "questions": [
+    {
+      "id": "PPL_PA_VI_B_02_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A Cessna 172 equipped with a 978 UAT ADS-B Out transponder is flying at 7,500 feet MSL over mountainous terrain where the ground elevation is 6,000 feet MSL. The aircraft is 20 NM inside the 30-NM Mode C veil of a primary Class B airport. Under 14 CFR 91.215 and 91.225, is ADS-B Out required in this position?",
+      "options": [
+        {"label": "A", "text": "Yes — the aircraft is inside the 30-NM Mode C veil, which requires ADS-B Out regardless of altitude or terrain; there are no exclusions within the veil"},
+        {"label": "B", "text": "No — at 1,500 feet AGL (below 2,500 feet AGL), the aircraft is within the altitude exclusion that exempts operations at or below 2,500 feet AGL from the transponder and ADS-B requirement"},
+        {"label": "C", "text": "Yes — but only because the aircraft is equipped with 978 UAT; if it had 1090ES equipment, the Mode C veil requirement would not apply below 10,000 feet MSL"},
+        {"label": "D", "text": "No — the 2,500-foot AGL exclusion only applies to the Class E requirement at and above 10,000 feet MSL, not to the Mode C veil requirement, but the aircraft is below the Class B floor and therefore exempt"}
+      ],
+      "correct_answer": "A",
+      "explanation": "Inside the 30-NM Mode C veil surrounding a primary Class B airport, ADS-B Out and Mode C transponder are required for ALL aircraft from the surface to 10,000 feet MSL, with no altitude AGL exclusion. The 2,500-foot AGL exclusion in 14 CFR 91.215(b)(5)(ii) applies ONLY to the Class E above 10,000 feet MSL requirement — it does NOT apply within the Mode C veil. Option B incorrectly applies the 2,500 AGL exclusion to the Mode C veil. Option D correctly identifies the exclusion scope but incorrectly cites being below the Class B floor as an exemption — the Mode C veil extends from the surface regardless of the Class B shelf structure. The only exemptions within the Mode C veil are for aircraft without engine-driven electrical systems (gliders, balloons) operating outside actual Class B airspace.",
+      "far_reference": "14 CFR 91.215(b); 14 CFR 91.225(d)",
+      "acs_element": "PA.VI.B.K4"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A VFR pilot receiving Flight Following from Atlanta Center is approaching the Atlanta Class B outer boundary. The controller has been providing traffic advisories and has assigned a discrete squawk code. As the pilot approaches the Class B boundary, what must happen before the pilot enters?",
+      "options": [
+        {"label": "A", "text": "Nothing additional — receiving Flight Following with a discrete squawk code from Atlanta Center constitutes implicit authorization to operate within the Atlanta Class B airspace"},
+        {"label": "B", "text": "The pilot must hear the explicit phrase 'Cleared into the Class Bravo airspace' from ATC before penetrating the boundary — Flight Following alone does not authorize Class B entry"},
+        {"label": "C", "text": "The pilot must request and receive a Mode C VFR clearance from Atlanta Approach, separate from the Flight Following service, with a specific altitude assignment for Class B transit"},
+        {"label": "D", "text": "The pilot must contact Atlanta Tower directly on the published tower frequency and request Class B entry — Center controllers cannot authorize Class B penetration for VFR aircraft"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Under 14 CFR 91.131, no person may operate an aircraft in Class B airspace without receiving an ATC clearance. Flight Following provides traffic advisories and a discrete squawk code, but it does NOT constitute a Class B clearance. The pilot must hear the specific phrase 'Cleared into the Class Bravo airspace' (or equivalent explicit language) before entering. Many pilots have inadvertently penetrated Class B boundaries while on Flight Following, assuming the radar service implied clearance — it does not. Option A is the most common and dangerous misunderstanding. Option C invents a separate clearance type that doesn't exist. Option D incorrectly states Center cannot issue the clearance — ARTCC controllers CAN authorize Class B entry when the facility has a letter of agreement. AIM 3-2-3 details VFR Class B requirements.",
+      "far_reference": "14 CFR 91.131",
+      "acs_element": "PA.VI.B.K3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot receiving VFR Flight Following from a TRACON controller hears: 'Cessna 3AB, traffic 12 o'clock, 5 miles, opposite direction, altitude indicates 4,500.' The pilot has been maintaining a 10-degree crab angle to correct for a crosswind from the left. The pilot scans directly ahead through the windscreen but sees no traffic. Beyond the limitations of visual scanning, what systemic issue may explain why the traffic is not where the pilot expects?",
+      "options": [
+        {"label": "A", "text": "The controller's radar has a 12-second sweep delay, so the traffic may have already passed by the time the advisory was issued, placing it behind the aircraft rather than ahead"},
+        {"label": "B", "text": "ATC traffic calls reference the aircraft's radar ground track, not its heading — with a 10-degree crab angle, traffic at '12 o'clock' by ground track could appear at 11 o'clock through the windscreen"},
+        {"label": "C", "text": "The opposite-direction traffic is likely below the radar floor in the TRACON's coverage area, and the altitude readout is an extrapolation from the last known Mode C return rather than a current reading"},
+        {"label": "D", "text": "TRACON radar antennas have a 6-degree beam width that can place targets up to 2 NM off their actual position at 5 miles range, making the 12 o'clock callout unreliable at this distance"}
+      ],
+      "correct_answer": "B",
+      "explanation": "ATC traffic advisories use clock positions based on the aircraft's radar ground track — the path the aircraft is actually traveling over the ground. In a crosswind requiring a crab angle, the aircraft's heading (where the nose points) differs from the ground track (where the aircraft is actually going). A 10-degree left crab means the nose is pointed 10 degrees left of the ground track. Traffic called at '12 o'clock' relative to the ground track will appear shifted approximately one clock position (to 11 o'clock) when the pilot looks through the windscreen. This mismatch is the reason pilots should scan WIDER than the reported clock position — always check at least one position on either side of the called traffic. The AIM specifies that traffic advisories are based on aircraft ground track, and pilots should adjust their visual scan accordingly.",
+      "far_reference": "14 CFR 91.113(b)",
+      "acs_element": "PA.VI.B.K3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A Cessna 172 is flying at 10,500 feet MSL in Class E airspace. The terrain below is 8,500 feet MSL (2,000 feet AGL). The pilot's transponder has failed, and the pilot continues the flight knowing ADS-B Out is required above 10,000 feet MSL. Beyond the regulatory violation, what secondary safety consequence results from flying without a transponder at this altitude?",
+      "options": [
+        {"label": "A", "text": "The aircraft disappears from all ATC radar — without a transponder reply, neither primary nor secondary radar can detect the aircraft, creating a complete surveillance gap"},
+        {"label": "B", "text": "TCAS-equipped aircraft (airliners, turboprops) operating in the area cannot generate Resolution Advisories against the non-transponder aircraft, eliminating the last-resort collision avoidance layer"},
+        {"label": "C", "text": "The aircraft's ADS-B In receiver will also stop functioning without the transponder, eliminating the pilot's own ability to see traffic on cockpit displays and reducing situational awareness"},
+        {"label": "D", "text": "ATC will issue a Notice to Air Missions closing the airspace within 5 NM of the aircraft's last known position until the transponder is restored, disrupting traffic flow for other aircraft"}
+      ],
+      "correct_answer": "B",
+      "explanation": "TCAS (Traffic Collision Avoidance System) operates by interrogating nearby transponders and tracking their replies to build a threat picture. Without a transponder, the Cessna is invisible to TCAS on every airline and turboprop in the area. TCAS cannot generate a Traffic Advisory or Resolution Advisory (the evasive commands that direct pilots to climb or descend) against a target with no transponder reply. This eliminates the automated last-resort collision avoidance layer at altitudes where high-performance traffic is likely. Note: the scenario also has a regulatory nuance — at 10,500 MSL but only 2,000 AGL, the aircraft is actually EXEMPT from the transponder/ADS-B requirement under the 2,500-ft AGL exclusion (14 CFR 91.215(b)(5)(ii)). However, the TCAS vulnerability exists regardless of regulatory status. Option A is partially wrong — primary radar can still detect the aircraft via skin paint. AIM 4-5-7 describes TCAS operation and transponder dependency.",
+      "far_reference": "14 CFR 91.215(b); 14 CFR 91.225",
+      "acs_element": "PA.VI.B.K4"
+    },
+    {
+      "id": "PPL_PA_VI_B_01_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are tracking an inbound VOR course to your destination. You have the CDI source set to GPS and have programmed a Direct-To for the airport. The CDI shows you are on course with the needle centered. However, you notice the OBS on your analog VOR indicator shows a 40-degree difference from your GPS course. What is the most likely explanation?",
+      "options": [
+        {"label": "A", "text": "The VOR station is in maintenance mode and transmitting on a test frequency, causing the analog CDI to display an erroneous radial that differs from the GPS course by 40 degrees"},
+        {"label": "B", "text": "Your CDI source is correctly set to GPS, so the centered needle reflects the GPS course — the analog VOR display is responding to a different signal source (the VOR) and showing your current VOR radial, which naturally differs from the GPS track"},
+        {"label": "C", "text": "The 40-degree discrepancy indicates magnetic variation error in the GPS database — the GPS is computing true course while the VOR displays magnetic, and the difference equals the local magnetic variation"},
+        {"label": "D", "text": "Both displays should always agree within 5 degrees when tracking to the same destination — a 40-degree difference indicates a malfunctioning GPS receiver that should be turned off and replaced with VOR-only navigation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "When the CDI source is set to GPS, the primary CDI needle responds to the GPS course. However, the separate analog VOR indicator (if present) continues to receive and display the VOR signal independently. The VOR radial and the GPS course to the airport are fundamentally different measurements — the VOR shows your angular position relative to the station, while the GPS shows the direct-to track from your current position to the waypoint. Unless you happen to be on the radial that points directly at the airport AND the VOR is co-located with the airport, these numbers will differ. This is normal dual-system operation, not a malfunction. Understanding CDI source management — knowing which needle responds to which system — is the critical skill tested in PA.VI.B.S1. FAA-H-8083-3C describes VOR and GPS display interaction in the navigation systems chapter.",
+      "far_reference": "14 CFR 91.205",
+      "acs_element": "PA.VI.B.S1"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are 15 NM from a VORTAC at 6,000 feet AGL. The DME reads 15.1 NM. You then fly directly over the station at the same altitude. What should the DME read when you are directly overhead?",
+      "options": [
+        {"label": "A", "text": "0.0 NM — DME measures the direct ground distance to the station, and directly overhead that distance is zero regardless of altitude"},
+        {"label": "B", "text": "Approximately 1.0 NM — DME measures slant range (the hypotenuse), so at 6,000 feet AGL directly over the station, it reads the altitude converted to nautical miles"},
+        {"label": "C", "text": "The DME will display a flag or dash — DME cannot compute distance inside the cone of confusion, and the indicator blanks until you exit the other side"},
+        {"label": "D", "text": "Approximately 6.0 NM — DME adds the aircraft's altitude in feet to the ground distance, producing a combined reading that is always higher than actual ground distance"}
+      ],
+      "correct_answer": "B",
+      "explanation": "DME measures slant range — the straight-line (hypotenuse) distance between the aircraft and the ground station, not the horizontal ground distance. Directly overhead at 6,000 feet AGL, the slant range equals the altitude: 6,000 feet ÷ 6,076 feet/NM ≈ 1.0 NM. At distance, the slant range error is negligible (at 15 NM and 6,000 ft AGL, slant range is 15.1 NM vs. 15.0 NM ground distance — only 0.1 NM difference). Close to the station at high altitude, the error becomes significant. This is the same trigonometric relationship as the Pythagorean theorem: slant range² = ground distance² + altitude². DME is a separate system from VOR — it continues to provide distance even in the VOR cone of confusion. FAA-H-8083-25C Chapter 16 describes DME slant range geometry.",
+      "far_reference": "14 CFR 91.205",
+      "acs_element": "PA.VI.B.S3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are on a VFR cross-country receiving Flight Following from Center. The controller says: 'Cessna 3AB, radar services terminated, squawk 1200, frequency change approved.' You are 40 NM from your destination, passing 10 NM south of a Class B airport's 30-NM Mode C veil boundary. Traffic is moderate. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue on your current heading — you were already sequenced past the Class B area, and the remaining 40 NM is straight-line visual navigation that doesn't require radar assistance", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Continue without concern — you have ADS-B In on your iPad and can see all the traffic yourself; Flight Following was redundant with your own cockpit traffic display", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Divert immediately to the nearest airport and land — without Flight Following, you are unprotected in a high-traffic area and should not continue until you can re-establish radar services", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Squawk 1200 as instructed, increase your visual scan rate and sector discipline, verify your position relative to the Class B boundary on the sectional, and attempt to re-request Flight Following from a different frequency if traffic density warrants it"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A dismisses the loss of traffic advisories as irrelevant near a busy Class B (get-there-itis) — the area south of a Class B airport is often dense with VFR traffic avoiding the Bravo, making traffic advisories most valuable here. Option B over-relies on ADS-B In (macho) — ADS-B traffic displays miss non-equipped aircraft and do not replace the see-and-avoid obligation or the value of controller-issued alerts. Option C abandons the flight due to loss of an advisory service (resignation) — Flight Following is a workload-permitting supplement, not a safety requirement for VFR flight. Option D is the active professional middle path: comply with the termination, compensate with increased visual scan discipline, verify Class B boundary clearance, and proactively seek to re-establish the service if available.",
+      "explanation": "VFR Flight Following is an advisory service provided on a workload-permitting basis (AIM 4-1-15). ATC can terminate at any time, and the pilot must be prepared to continue safely without it. The correct ADM response is to compensate for the lost advisory layer by increasing the primary collision avoidance method — visual scanning — and to independently verify airspace boundaries. Near Class B airports, VFR traffic often concentrates in corridors and altitudes just outside the Bravo shelves, creating elevated traffic density. Attempting to re-establish the service with a different facility shows proactive risk management. FAA-H-8083-2A Chapter 2 describes the decision-making framework for managing degraded resources.",
+      "far_reference": "14 CFR 91.113(b)",
+      "acs_element": "PA.VI.B.K3"
+    },
+    {
+      "id": "PPL_PA_VI_B_02_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "You are filing a VFR flight plan for a route that passes through Class E airspace at 11,500 feet MSL. The terrain along the route averages 4,000 feet MSL (7,500 feet AGL). Your aircraft's transponder was recently repaired, but the ADS-B Out compliance test paperwork has not been completed — the system is functional but not yet formally certified compliant under 14 CFR 91.227. All four actions below are legal options to resolve this. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Fly the route at 11,500 MSL as planned — the transponder is physically working and broadcasting, and the formal paperwork is an administrative detail that can be completed after the flight", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Fly the route at 11,500 MSL — you have flown with uncertified ADS-B before and never had an issue; the FAA has bigger enforcement priorities than missing compliance paperwork", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the cross-country entirely until the ADS-B compliance certification is complete — any flight without fully certified ADS-B is too risky to attempt regardless of altitude alternatives", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Plan the route at 9,500 feet MSL (below 10,000 MSL in Class E), where ADS-B Out is not required, allowing you to fly legally while the compliance documentation is completed before the next flight requiring Class E above 10,000"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A dismisses a regulatory compliance gap as administrative (get-there-itis) — 14 CFR 91.225 requires ADS-B Out compliance in Class E at and above 10,000 MSL, and the compliance test under 91.227 verifies the system meets performance standards, not just that it broadcasts. Option B normalizes deviance based on past non-enforcement (macho) — 'I got away with it before' does not equal legal or safe. Option C cancels entirely when a simple altitude change resolves the issue (resignation). Option D is the active professional middle path: adjust the route altitude to remain below the regulatory trigger (below 10,000 MSL in Class E) while maintaining a safe, legal flight, and complete the certification before flying routes that require it.",
+      "explanation": "14 CFR 91.225 requires ADS-B Out in Class E airspace at and above 10,000 feet MSL, with the 2,500-foot AGL exclusion. At 11,500 MSL over 4,000-foot terrain (7,500 AGL), the aircraft is well above the AGL exclusion threshold and in mandatory ADS-B airspace. 14 CFR 91.227 specifies the performance requirements for ADS-B Out equipment and requires a compliance verification test. Flying at 9,500 MSL places the aircraft below the 10,000-foot trigger while maintaining adequate terrain clearance (5,500 AGL) and a legal VFR cruising altitude. This demonstrates the ADM principle of modifying the plan to stay within capabilities rather than accepting a known compliance gap. FAA-H-8083-2A Chapter 3 describes plan modification as a core risk mitigation strategy.",
+      "far_reference": "14 CFR 91.225; 14 CFR 91.227",
+      "acs_element": "PA.VI.B.K4"
+    }
+  ]
+}

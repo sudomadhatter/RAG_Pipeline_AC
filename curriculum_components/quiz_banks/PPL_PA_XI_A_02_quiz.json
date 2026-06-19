@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_XI_A_02",
+  "title": "Night Equipment, Taxi & Navigation",
+  "questions": [
+    {
+      "id": "PPL_PA_XI_A_02_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot discovers that the rotating beacon on the aircraft is inoperative before a night flight. The aircraft is certificated after March 11, 1996, and has functioning wing-mounted white strobes. The pilot plans to placard the beacon 'INOP' under 14 CFR 91.213(d) and fly with strobes only. According to the FAA Chief Counsel's Letts interpretation (2017), is this legal?",
+      "options": [
+        {"label": "A", "text": "Yes — the rotating beacon and wing strobes are independent anti-collision light systems; either one alone satisfies the 91.205(c) requirement for an 'approved anti-collision light system'"},
+        {"label": "B", "text": "No — the rotating beacon and wing-mounted strobes constitute a single, unified anti-collision light system; if any component is inoperative, the entire system fails the 91.205(c) requirement and the aircraft is unairworthy for night flight"},
+        {"label": "C", "text": "Yes — but only if the pilot obtains a one-time ferry permit from the FSDO to fly the aircraft to a maintenance facility with the beacon inoperative"},
+        {"label": "D", "text": "No — but only for IFR flight; VFR night flight does not require the anti-collision system to be fully functional because the position lights alone provide adequate traffic visibility"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The FAA Chief Counsel's Letts (2017) and Murphy (2011) interpretations explicitly state that for aircraft certificated after March 11, 1996, the rotating beacon and wing-mounted strobes are components of a SINGLE anti-collision light system. If any component is inoperative, the entire system fails the 91.205(c) requirement for night VFR equipment. The pilot cannot use 91.213(d) to placard the beacon INOP because the anti-collision system is required equipment under 91.205(c) — and 91.213(d) cannot override a 91.205 requirement. The aircraft is grounded for night operations until the beacon is repaired. Option A reflects the common pilot misconception that the Letts interpretation specifically addresses. Option D incorrectly limits the anti-collision requirement to IFR.",
+      "far_reference": "14 CFR 91.205(c); 14 CFR 91.213(d)",
+      "acs_element": "PA.XI.A.K3"
+    },
+    {
+      "id": "PPL_PA_XI_A_02_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_05",
+      "text": "During a night flight, you observe a steady red light at your 2 o'clock position that is not moving across the windshield but is growing progressively brighter. What does this specific light combination tell you about the other aircraft's trajectory, and what action is required?",
+      "options": [
+        {"label": "A", "text": "The aircraft is crossing from your left to your right and will pass safely in front of you — no action required because it has the right-of-way and is clearing your flight path"},
+        {"label": "B", "text": "The aircraft is showing its left wing (moving from your right to your left) and is on a constant-bearing, decreasing-range collision course — the aircraft is to your right, has the right-of-way, and you must yield by turning right or descending to pass behind"},
+        {"label": "C", "text": "The aircraft is moving away from you — the red light is the tail-mounted anti-collision beacon, and the increasing brightness indicates you are overtaking it; maintain your course and pass above"},
+        {"label": "D", "text": "The aircraft is approaching head-on — a single red light indicates the aircraft's left wing is pointed directly at you, meaning a 90-degree impact angle; turn 90 degrees in either direction to avoid"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A steady red light visible from your aircraft means you are seeing the other aircraft's LEFT (port) wing. This means the other aircraft is crossing from YOUR RIGHT to YOUR LEFT. The fact that the light is not moving across the windshield (constant bearing) but growing brighter (decreasing range) means the aircraft is on a direct collision course. Under 14 CFR 91.113, when two aircraft converge, the aircraft on the RIGHT has the right-of-way. Since the red light is at your 2 o'clock (right side), the other aircraft is to your right and has the right-of-way. You must yield by turning right and/or descending to pass behind the traffic. AIM Section 8-1-8 describes position light identification and the constant-bearing, decreasing-range collision geometry.",
+      "far_reference": "14 CFR 91.113; 14 CFR 91.209",
+      "acs_element": "PA.XI.A.K7"
+    },
+    {
+      "id": "PPL_PA_XI_A_01_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot needs to read a VFR Sectional chart during a night cross-country flight. The pilot switches from a red flashlight to a white flashlight to better see the chart details. Beyond the improved readability, what immediate negative consequence occurs?",
+      "options": [
+        {"label": "A", "text": "The white light overloads the cone cells in the fovea, causing a temporary 'afterimage' blind spot that persists for 2-3 minutes and blocks the pilot's ability to read the instruments"},
+        {"label": "B", "text": "The white light instantly bleaches rhodopsin in the rod photoreceptors, destroying up to 30 minutes of dark adaptation and severely degrading the pilot's ability to detect dim traffic lights and terrain features through peripheral vision"},
+        {"label": "C", "text": "The white light causes the pupils to constrict rapidly, reducing the amount of light entering the eye; however, the pupils dilate back to full size within 5 seconds of returning to the red flashlight"},
+        {"label": "D", "text": "The white light has no significant effect on night vision if the exposure is brief (under 10 seconds) — rhodopsin bleaching requires sustained exposure of at least 60 seconds"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Rhodopsin photo-bleaching is nearly instantaneous — it occurs within a fraction of a second of bright white light exposure. Even a brief flash of white light can bleach a significant percentage of the rhodopsin accumulated during 30 minutes of dark adaptation. Recovery requires the full re-synthesis cycle, which takes approximately 30 minutes. During this recovery period, the pilot's peripheral night vision (rod-mediated scotopic vision) is severely degraded. The pilot may be unable to detect dim position lights of other aircraft, faint terrain features, or the gradual disappearance of stars that signals approaching IMC. Red light is the solution because rod cells are virtually insensitive to long-wavelength red light — it allows foveal (cone-based) reading without bleaching peripheral rod rhodopsin. FAA-H-8083-25C Chapter 17 describes the biochemistry of rhodopsin and the vulnerability to white light.",
+      "far_reference": "FAA-H-8083-25C Ch 17",
+      "acs_element": "PA.XI.A.K4"
+    },
+    {
+      "id": "PPL_PA_XI_A_02_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "After landing at night at an unfamiliar towered airport, a pilot taxis toward the ramp with landing lights and strobes still on. Beyond the general courtesy issue, what specific safety hazard do the landing lights and strobes create for OTHER people at the airport?",
+      "options": [
+        {"label": "A", "text": "The strobe reflections off metallic surfaces (other aircraft, hangars, ground vehicles) produce intense flashes that destroy the dark adaptation of line crew, other pilots, and ground vehicle operators — leaving them functionally blind for up to 30 minutes"},
+        {"label": "B", "text": "The landing lights illuminate the taxiway surface so brightly that they create a 'white-out' effect that makes the blue taxiway edge lights invisible to the pilot and other aircraft taxiing in the same area"},
+        {"label": "C", "text": "The strobes can trigger photosensitive seizures in ground personnel who have epilepsy, creating a liability hazard that the pilot is personally responsible for under Part 91"},
+        {"label": "D", "text": "The landing lights drain the aircraft's battery at a higher rate than the alternator can sustain during taxi, potentially causing an electrical system failure that affects the aircraft's position lights"}
+      ],
+      "correct_answer": "A",
+      "explanation": "High-intensity strobe lights reflecting off the metallic surfaces of parked aircraft, hangar walls, and ground vehicles produce bright, random flashes in all directions. These flashes instantly bleach rhodopsin in the rod cells of everyone in the vicinity — line crew, other pilots preparing for departure, ground vehicle operators. The affected individuals lose their dark adaptation and are functionally blind in the peripheral visual field for up to 30 minutes while rhodopsin re-synthesizes. A line crew member who loses peripheral vision while marshaling another aircraft near a propeller or wingtip is in immediate physical danger. Landing lights aimed directly at oncoming taxi traffic similarly blind the approaching pilot. FAA-H-8083-3C and AIM guidance recommend turning off landing lights and strobes before entering ramp areas at night.",
+      "far_reference": "AIM; FAA-H-8083-3C",
+      "acs_element": "PA.XI.A.K6"
+    },
+    {
+      "id": "PPL_PA_XI_A_02_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "During a night cross-country over dense forest with no ground lights visible, you realize you have been maintaining altitude and heading purely by 'feel' for the last several minutes because you became absorbed in programming the GPS. You have not looked at the attitude indicator or altimeter during this time. What is the most likely flight condition you are in?",
+      "options": [
+        {"label": "A", "text": "Straight-and-level flight — the vestibular system is reliable for maintaining wings-level in calm air for short periods, and the aircraft's inherent stability helps maintain the last-set flight condition"},
+        {"label": "B", "text": "A gradual, unperceived bank and descent — without visual horizon or instrument cross-check, the vestibular system feeds false level-flight signals during a slow spiral, and the aircraft has likely entered an accelerating spiral dive"},
+        {"label": "C", "text": "A climbing turn — the GPS programming required head-down posture that shifted the vestibular reference, causing unconscious back-pressure that pitched the aircraft into a climb while the bank developed from inadvertent yoke pressure"},
+        {"label": "D", "text": "Exactly the same heading and altitude — modern aircraft with wing leveler autopilots maintain stable flight even without active pilot input, and the trim setting from cruise prevents any significant deviation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Over featureless dark terrain (the 'Black Void'), the pilot has no visual horizon. When the instrument scan is abandoned for GPS programming, the only remaining attitude input is the vestibular system — which is profoundly unreliable in three-dimensional flight. The vestibular system adapts to constant-rate turns within 20 seconds, meaning a slow entry into a bank feels like level flight. The aircraft enters a descending turn that accelerates as the bank steepens. The pilot perceives wings-level because the semicircular canals have adapted. This is the classic LOC-I (Loss of Control In-flight) sequence from distraction at night. FAA-H-8083-25C Chapter 17 describes how night flying over dark terrain creates pseudo-IMC conditions that demand an instrument scan even under VFR.",
+      "far_reference": "FAA-H-8083-25C Ch 17; 14 CFR 91.119",
+      "acs_element": "PA.XI.A.K5"
+    },
+    {
+      "id": "PPL_PA_XI_A_02_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "Before a night VFR flight, you review the equipment list. The aircraft has: all day VFR instruments operational, spare fuses accessible, position lights operational, functioning strobes and rotating beacon, a working alternator, but NO landing light (the bulb burned out). You are flying Part 91 personal (not for hire). Can you legally depart?",
+      "options": [
+        {"label": "A", "text": "No — a landing light is required for all night VFR operations under 14 CFR 91.205(c), regardless of whether the flight is for hire or personal"},
+        {"label": "B", "text": "Yes — 14 CFR 91.205(c) requires a landing light only for aircraft operated for hire; for personal Part 91 flights, a landing light is strongly recommended but not legally required"},
+        {"label": "C", "text": "No — while the FAR does not require a landing light for Part 91 personal flights, the aircraft's KOEL in the POH lists the landing light as required equipment for all operations"},
+        {"label": "D", "text": "Yes — but only if the flight is conducted at airports with pilot-controlled lighting, since the PCL provides sufficient illumination to substitute for the aircraft's landing light during the approach and landing"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.205(c) — the FLAPS mnemonic — requires a landing light only for aircraft 'operated for hire.' This includes Part 135 charter, compensated flight instruction, and any operation where the pilot is receiving compensation. For personal Part 91 operations (flying yourself, friends, or family without compensation), no landing light is legally required. However, this is a regulatory minimum, not a safety recommendation — operating without a landing light at night eliminates the ability to illuminate the runway during landing flare, spot wildlife or obstacles on the runway, and conduct a meaningful exterior preflight inspection. Most flight schools and safety publications recommend treating the landing light as required regardless of regulatory status.",
+      "far_reference": "14 CFR 91.205(c)",
+      "acs_element": "PA.XI.A.K3"
+    },
+    {
+      "id": "PPL_PA_XI_A_02_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "You are taxiing at night at a large, unfamiliar towered airport after landing. ATC issued taxi instructions: 'Taxi to the ramp via Alpha, turn right on Bravo, cross Runway 28.' You are now approaching an intersection and are unsure whether it is the turn onto Bravo or the hold-short line for Runway 28. All four actions below are possible. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue taxiing slowly — the signs will become clearer as you get closer, and if you accidentally enter the runway, the tower controller will issue an immediate alert to stop you", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Make the turn — you have been taxiing for about the right distance, and this intersection looks like it could be Bravo based on the general layout; if it's wrong, you can correct after the turn", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Stop the aircraft completely and shut down the engine — taxiing when lost at night is too dangerous, and a marshaller will eventually come out to guide you to the ramp", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Stop the aircraft, check the airport diagram to correlate your position with the taxiway signs visible, and if still uncertain, call ground control: 'Ground, [callsign], unfamiliar, unsure of my position near Bravo and Runway 28, request progressive taxi'"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A continues moving toward a potential runway crossing without positional certainty (get-there-itis) — relying on the tower controller as the last line of defense assumes they are watching your specific aircraft among potentially many targets. Option B makes a turn based on estimation rather than positive identification (macho) — at night, taxiway geometry is compressed and deceptive; the 'turn' could be the hold-short line for Runway 28. Option C shuts down the engine in a potentially active movement area (resignation) — this creates a new hazard (immobile aircraft blocking taxiway) without solving the positional uncertainty. Option D is the active professional middle path: stop (preserve safety), correlate (verify position against the diagram), and communicate if uncertain (progressive taxi request). There is zero stigma in requesting progressive taxi — it exists specifically for this situation.",
+      "explanation": "Runway incursions peak during night operations because hold-short lines are nearly invisible in low light and complex airport geometry compresses into a confusing grid of colored lights. AC 91-73B identifies positional uncertainty as the primary precursor to runway incursions. The defense is procedural: when uncertain, STOP. Then verify using the airport diagram. If still uncertain, ask for help — progressive taxi instructions provide turn-by-turn guidance from a controller who can see your position on surface radar. The FAA specifically encourages pilots to request progressive taxi at unfamiliar airports.",
+      "far_reference": "14 CFR 91.129; AC 91-73B",
+      "acs_element": "PA.XI.A.K6"
+    },
+    {
+      "id": "PPL_PA_XI_A_02_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are planning a night VFR cross-country over mountainous terrain. The route passes over a stretch of 40 NM with no roads, no towns, and maximum terrain elevation of 6,800 feet MSL. You plan to cruise at 7,500 feet MSL (700 feet above the highest terrain). All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Fly the planned route at 7,500 feet — 700 feet of terrain clearance exceeds the minimum safe altitude requirements of 14 CFR 91.119, and the terrain is charted, so you know exactly where the peaks are", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Fly the planned route at 7,500 feet but faster than normal to reduce your exposure time over the mountainous section — the less time spent over the terrain, the lower the risk", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the flight entirely — night VFR over mountainous terrain is inherently too dangerous for any private pilot, regardless of altitude or planning", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Cruise at 8,800 feet MSL (2,000 feet above the highest terrain) to expand your safety buffer and glide cone — at night, terrain is invisible, and 700 feet provides zero visual or glide margin for navigation errors or unexpected downdrafts"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A flies 700 feet above terrain at night (get-there-itis) — while this may satisfy 91.119 minimums, terrain is completely invisible at night, charted elevations may not include all obstacles (towers, antennas), and mountain wave turbulence can produce downdrafts of 1,000+ fpm that would push the aircraft into terrain before the pilot could react. Option B adds speed over the mountains (macho) — speed doesn't reduce the risk of CFIT from insufficient terrain clearance. Option C cancels based on a blanket rule (resignation) — night VFR over mountains is manageable with adequate altitude and planning. Option D adds a meaningful safety buffer (2,000 feet) that provides glide range to reach lower terrain if the engine fails, protects against navigation errors and charting inaccuracies, and gives time to react to unexpected downdrafts.",
+      "explanation": "At night, terrain is completely invisible. The pilot's only protection is the altitude they planned before departure. The Maximum Elevation Figure (MEF) on sectional charts represents the highest known obstacle plus a safety buffer — but MEFs can be inaccurate, especially in mountainous terrain where the 200-foot buffer may not account for all uncharged obstacles. The OROCA (Off Route Obstruction Clearance Altitude) provides a more conservative reference. A personal minimum of 2,000 feet above the highest terrain for night mountainous flight provides: glide range in case of engine failure, protection against mountain wave downdrafts, and margin for navigation errors. AC 90-48D describes altitude planning for mountainous terrain operations.",
+      "far_reference": "14 CFR 91.119; AC 90-48D",
+      "acs_element": "PA.XI.A.K5"
+    }
+  ]
+}

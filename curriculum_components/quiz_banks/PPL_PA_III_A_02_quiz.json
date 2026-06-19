@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_III_A_02",
+  "title": "Light Signals, Transponders & Emergency Reporting",
+  "questions": [
+    {
+      "id": "PPL_PA_III_A_02_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "You are taxiing a Cessna 172 equipped with a Mode C transponder at a towered airport with an operational ASDE-X surface surveillance system. Your transponder is currently on Standby because your CFI taught you to leave it there until cleared for takeoff. Under 14 CFR 91.215, what is the regulatory status of this practice?",
+      "options": [
+        {"label": "A", "text": "It is correct — the transponder should remain on Standby during ground operations and be switched to ALT only when cleared for takeoff to conserve electrical load"},
+        {"label": "B", "text": "It is correct only at airports without ASDE-X — at ASDE-X airports, a local NOTAM requires Mode C during taxi, but the federal regulation does not"},
+        {"label": "C", "text": "It violates 14 CFR 91.215, which requires that if the aircraft has an operable transponder, it must be on and transmitting altitude at all times, including during taxi"},
+        {"label": "D", "text": "It is correct for VFR operations — 14 CFR 91.215 only requires Mode C during IFR operations or when operating inside Mode C Veil airspace above 10,000 feet MSL"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 91.215(c) requires that all aircraft equipped with an operable ATC transponder must operate that transponder on Mode C (ALT) at all times, including ground operations. The old practice of leaving the transponder on Standby until takeoff clearance is outdated and potentially dangerous — modern ASDE-X and ASSC surface surveillance systems rely on transponder returns to track ground movements and generate conflict alerts. Without the transponder replying, the aircraft is invisible to the surface safety logic, increasing runway incursion risk. The FAA reinforced this requirement through SAFO 06012, emphasizing that transponders should be on with altitude reporting during all surface operations. NTSB runway incursion investigations have identified surface surveillance gaps when aircraft operated with transponders on Standby (NTSB Safety Recommendation A-07-060).",
+      "far_reference": "14 CFR 91.215(c)",
+      "acs_element": "PA.III.A.K4"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "After a hard landing, your Cessna 172 has a collapsed nose gear strut, cracked firewall, and the propeller struck the ground. No one is injured. Under 49 CFR Part 830, who must you notify, and how soon?",
+      "options": [
+        {"label": "A", "text": "Notify the local FSDO within 10 business days and file a NASA ASRS report within 10 calendar days for enforcement protection"},
+        {"label": "B", "text": "Notify the NTSB immediately because the cracked firewall constitutes substantial damage, meeting the regulatory definition of an accident"},
+        {"label": "C", "text": "Notify your aircraft insurance carrier immediately, who will coordinate the NTSB and FAA filings on your behalf as the policy holder"},
+        {"label": "D", "text": "No notification is required because a hard landing with nose gear collapse falls under the explicit exclusion for landing gear damage in the definition of substantial damage"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Under 49 CFR Part 830.2, 'substantial damage' means damage that adversely affects structural strength, performance, or flight characteristics. A cracked firewall is structural damage that affects the aircraft's flight characteristics and structural integrity — this IS substantial damage. While 830.2 excludes damage to landing gear, wheels, tires, flaps, engine accessories, brakes, or wingtips from the substantial damage definition, the cracked firewall is NOT in that exclusion list. Therefore, this is an accident (substantial damage without injury), and 830.5 requires IMMEDIATE notification to the NTSB — not the FAA, not NASA ASRS, not the insurance carrier. The NASA ASRS report (A) provides enforcement protection but does NOT satisfy the NTSB notification requirement. Option D correctly identifies the gear exclusion but ignores the firewall damage.",
+      "far_reference": "49 CFR 830.2; 49 CFR 830.5",
+      "acs_element": "PA.III.A.K8"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A NORDO Cessna 150 is approaching a towered airport after a radio failure. The pilot sees a Flashing Green light gun signal from the tower while on a 2-mile final. The pilot interprets this as 'cleared to land' and continues to touchdown. Beyond the incorrect interpretation, what specific collision risk did this create?",
+      "options": [
+        {"label": "A", "text": "The pilot landed without confirming the active runway, risking a landing on the wrong runway while other traffic is using the correct one"},
+        {"label": "B", "text": "Flashing Green in flight means 'return for landing' — the tower may have intended the pilot to extend or re-sequence, and another aircraft may have already received the actual landing clearance (Steady Green)"},
+        {"label": "C", "text": "The Flashing Green signal temporarily blinds other pilots on final approach, creating a visual distraction that degrades their ability to see and avoid the NORDO aircraft"},
+        {"label": "D", "text": "The light gun signal automatically activates the Runway Status Lights, which would have turned red and confused other aircraft on the taxiway about whether to hold or cross"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Flashing Green in flight means 'return for landing' — it directs the pilot to come back to the airport and enter the traffic pattern, but it is NOT a clearance to land. The pilot must wait for a subsequent Steady Green signal before actually touching down. By interpreting Flashing Green as a landing clearance, the pilot may have landed while the tower had already issued landing clearance (Steady Green) to another aircraft, creating a dual-occupancy runway conflict. AIM 4-3-13 specifies the complete light signal table and emphasizes that Flashing Green and Steady Green have critically different meanings. The distinction follows the kinetic logic of the signal system: Flashing = directional instruction (return, taxi, clear runway), Steady = authorization to complete the action (land, take off). NTSB runway incursion data shows that NORDO operations at towered airports carry significantly elevated conflict risk (NTSB Safety Alert SA-017).",
+      "far_reference": "14 CFR 91.125",
+      "acs_element": "PA.III.A.K3"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A private pilot experiences an engine running rough with oil pressure dropping toward the yellow arc during cruise flight. The pilot considers declaring an emergency but decides against it because 'the engine is still running and I don't want the paperwork hassle.' Beyond the delay in receiving priority handling, what is the deepest safety consequence of this hesitation?",
+      "options": [
+        {"label": "A", "text": "The pilot's insurance premium will increase if an emergency is declared, so delaying the declaration is financially prudent until the situation worsens"},
+        {"label": "B", "text": "The pilot loses options geometrically — every minute of hesitation reduces the radius of airports reachable at the current altitude, and an engine failure converts 'inconvenient diversion' into 'off-airport landing'"},
+        {"label": "C", "text": "ATC cannot track the aircraft without an emergency squawk code, so the pilot becomes invisible to radar surveillance until 7700 is entered"},
+        {"label": "D", "text": "The FAA automatically suspends the pilot's certificate for 90 days if an emergency is declared but the engine does not actually fail, creating a strong disincentive to declare"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The core safety consequence of hesitating to declare is the loss of options. Aviation emergencies are time-sensitive: engine performance degrades, altitude decreases, fuel depletes, and the circle of reachable airports shrinks with every passing minute. Once the engine quits, the pilot loses the ability to choose a suitable airport and must accept whatever terrain is within gliding range. By declaring immediately, the pilot activates ATC's full resource matrix — cleared airspace, priority vectors to the nearest suitable airport, and CFR alerting — while still having the altitude and engine power to reach it. 14 CFR 91.3(c) only requires a written report IF the Administrator requests one, and for legitimate mechanical emergencies, that request rarely comes. The 'paperwork myth' has been cited as a contributing factor in fatal accidents where pilots delayed declaring until their situation became unrecoverable (FAA Safety Team guidance, 'Declare Early, Declare Often').",
+      "far_reference": "14 CFR 91.3(b); 14 CFR 91.3(c)",
+      "acs_element": "PA.III.A.R2"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "You need to change your transponder squawk code from 1200 to 4521 on an older Cessna 172 with mechanical (knob-style) transponder dials. As you rotate the thousands digit from 1 to 4, you realize the display will momentarily pass through 2200, 3200 — and then 4200, 4300, 4400, 4500, 4521. What is the correct procedure to prevent a false emergency alert?",
+      "options": [
+        {"label": "A", "text": "Turn the dials quickly to minimize the time the emergency codes are displayed — the ATC system requires a sustained signal before triggering an alarm"},
+        {"label": "B", "text": "Switch the transponder to Standby before changing the code, dial in 4521, then switch back to ALT — this prevents any intermediate codes from being transmitted"},
+        {"label": "C", "text": "Advise ATC that you are changing codes before rotating the dials so they can suppress any false alarm that appears on their radar scope"},
+        {"label": "D", "text": "Change only one digit at a time, pausing between each rotation to allow ATC's system to recognize that each intermediate code is intentional and not an emergency"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The correct procedure for changing squawk codes on mechanical transponders is to switch to Standby before changing the code. In Standby mode, the transponder is powered but not replying to radar interrogations — no codes are transmitted. This prevents 'code rolling' through emergency squawk codes (7500 hijack, 7600 lost comm, 7700 emergency) that would trigger immediate alarm responses at the ATC facility. ATC facilities have automated alert systems that flag any emergency squawk within seconds. Option A is dangerous — even a momentary flash of 7500 can trigger a security response. Option C is preferable to nothing but doesn't prevent the alarm from triggering while the controller is being notified. The AIM section on transponder operations specifies the Standby procedure for code changes to prevent false alerts.",
+      "far_reference": "14 CFR 91.215",
+      "acs_element": "PA.III.A.K4"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "While taxiing to Runway 28R at a busy airport, you notice bright red lights embedded in the pavement at the taxiway-runway intersection suddenly illuminate. You have already received taxi clearance from Ground that includes 'cross Runway 28R.' What action is required?",
+      "options": [
+        {"label": "A", "text": "Continue across Runway 28R as cleared — the Runway Entrance Lights are advisory only and do not override an active ATC clearance"},
+        {"label": "B", "text": "Stop immediately — illuminated Runway Entrance Lights indicate a conflict on the runway and override any prior ATC clearance; wait for the lights to extinguish AND receive a new clearance"},
+        {"label": "C", "text": "Stop and contact Ground to request a new clearance, then proceed across once the red lights extinguish, since the extinguished lights serve as the updated clearance to cross"},
+        {"label": "D", "text": "Flash your taxi light three times toward the tower to acknowledge the Runway Entrance Lights, then proceed across at the controller's discretion as indicated by a green light gun signal"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Runway Status Lights (RWSL) are fully automated, and illuminated red Runway Entrance Lights (REL) mean STOP — regardless of any prior ATC clearance. The system uses surface surveillance radar to detect conflicts (an aircraft on the runway, departing, or on approach) and activates faster than any human controller can react. The lights override the prior taxi clearance because the situation has changed since the clearance was issued. However, once the lights extinguish, that does NOT constitute a new clearance — the pilot must still receive verbal ATC authorization before proceeding. Option C correctly stops but incorrectly treats extinguished lights as clearance. Per AIM 2-1-6, RWSL is a safety supplement to ATC clearances, not a replacement for them.",
+      "far_reference": "14 CFR 91.129",
+      "acs_element": "PA.III.A.K9"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "You are 15 minutes into a VFR cross-country when your engine begins running rough and the oil pressure gauge drops to the bottom of the green arc. The engine is still producing power, you are at 4,500 feet MSL, and there are two airports within 12 miles — one with a 5,000-foot paved runway, one with a 2,400-foot grass strip. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue to your planned destination 30 minutes ahead — the engine is still running, oil pressure is in the green, and you'll have it checked after landing as planned", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Continue flying and troubleshoot — you know Lycoming engines, and this is probably just a fouled plug or bad gauge reading that will clear itself in a few minutes", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Immediately shut down the engine, declare an emergency, and make a power-off glide to the closest airport — the 2,400-foot grass strip — to eliminate any risk of engine seizure during flight", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Declare an emergency now, squawk 7700, turn toward the 5,000-foot paved runway while you still have power, and set up for a precautionary landing with crash-fire-rescue alerting"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A dismisses deteriorating engine indications to reach the planned destination (get-there-itis) — oil pressure at the bottom of the green with rough running is an active failure progression, not a stable condition. Option B self-diagnoses the problem as minor based on personal experience (macho) — but oil pressure trends toward failure are not gauge anomalies, and continuing to troubleshoot burns altitude and options. Option C overreacts by shutting down a still-running engine and committing to the shorter, less-suitable runway (resignation) — an unnecessary power-off landing on a short grass strip is MORE dangerous than a precautionary landing with power on a long paved runway. Option D is the active professional middle path: declare immediately (activating ATC resources while the situation is manageable), choose the better runway while engine power is still available, and set up for a controlled precautionary landing with emergency services standing by.",
+      "explanation": "14 CFR 91.3(b) grants PIC authority to deviate from any Part 91 rule during an in-flight emergency. Declaring immediately while the engine is still producing power preserves maximum options — the pilot can reach the longer, better-equipped airport while maintaining altitude and engine authority. Waiting 'to see if it gets worse' transforms a controlled diversion into an uncontrolled forced landing. The NTSB Accident Database contains numerous fatal accidents where pilots with engine anomalies delayed diversion until total power loss, converting manageable situations into terrain impacts (NTSB case studies: engine oil starvation → seizure → fatal impact, multiple GA fleet entries).",
+      "far_reference": "14 CFR 91.3(b)",
+      "acs_element": "PA.III.A.R2"
+    },
+    {
+      "id": "PPL_PA_III_A_02_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are a NORDO aircraft (radio failure) approaching your home towered airport. You have squawked 7600 and can see the tower. You are above traffic pattern altitude and observe a steady stream of traffic in the pattern. The tower gives you a Steady Red light gun signal (give way, continue circling). After orbiting twice, you still receive Steady Red. Your fuel gauges show approximately 30 minutes remaining. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue circling and waiting — the tower will eventually give you Steady Green, and you need to land at your home airport because your car is parked there", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Override the light signal and land anyway — you are PIC with emergency authority under 91.3(b), and the tower is being unreasonable by making you orbit with low fuel", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Depart the traffic area immediately and land at any airport within range, even a remote grass strip with no services, to avoid the complexity of the towered NORDO situation entirely", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Continue orbiting while monitoring fuel, but set a personal fuel minimum — if fuel drops to 20 minutes and you still have Steady Red, divert to the nearest non-towered airport where you can land without a clearance"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A burns fuel indefinitely waiting for a Steady Green, fixated on the home airport for non-safety reasons (get-there-itis). With 30 minutes of fuel, continued orbiting without a decision point risks fuel exhaustion. Option B overrides a legitimate tower instruction (macho) — the Steady Red may mean there is traffic or an obstruction on the runway that the pilot cannot see. Landing against a Steady Red creates a direct collision risk. Option C abandons the situation immediately for the least-suitable option (resignation) — a remote grass strip with no services and potentially short runway is less safe than a planned diversion to a suitable non-towered airport. Option D is the active professional middle path: comply with the tower's instruction while it is safe to do so, but set a concrete decision point (fuel at 20 minutes) that triggers a planned diversion before the situation becomes an emergency. This preserves options — the tower may clear the pilot before the fuel gate, but if not, the pilot transitions to a backup plan while fuel and altitude still allow a safe diversion.",
+      "explanation": "Light gun signals under 14 CFR 91.125 must be complied with, but the PIC retains ultimate authority under 91.3(a) for the safe operation of the aircraft. The critical ADM skill here is establishing a decision gate — a predetermined trigger point that converts passive waiting into active decision-making. The FAA Risk Management Handbook (FAA-H-8083-2A Chapter 3) emphasizes that setting personal minimums and decision points before the situation becomes critical is the hallmark of effective aeronautical decision making. Fuel exhaustion remains one of the top causes of fatal GA accidents — waiting indefinitely without a fuel gate is the mechanism by which fuel exhaustion occurs (NTSB Annual Review of GA Accident Data, fuel management category).",
+      "far_reference": "14 CFR 91.125; 14 CFR 91.3(a)",
+      "acs_element": "PA.III.A.K3"
+    }
+  ]
+}

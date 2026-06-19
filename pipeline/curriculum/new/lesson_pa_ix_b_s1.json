@@ -1,0 +1,22 @@
+{
+  "id": "lesson_pa_ix_b_s1",
+  "structData": {
+    "acs_code": "PA.IX.B.S1",
+    "title": "Establish and maintain the recommended best glide airspeed, ±10 knots.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [],
+    "doc_keys": [
+      "FAA-S-ACS-6C",
+      "FAA-H-8083-3C"
+    ],
+    "keywords": [
+      "Elevator Trim",
+      "Pitch Attitude",
+      "Aerodynamic Damping",
+      "Workload Management",
+      "Phugoid Oscillation",
+      "Region of Reversed Command"
+    ]
+  }
+}

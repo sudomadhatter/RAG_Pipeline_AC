@@ -1,0 +1,87 @@
+{
+  "lesson_id": "PPL_PA_I_C_01",
+  "title": "Weather Sources & Preflight Briefing Requirements",
+  "acs_task_reference": "Area I, Task C",
+  "acs_element_keys": [
+    "PA.I.C.K1",
+    "PA.I.C.S1"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "14 CFR 91.103 — The Preflight Action Mandate",
+      "why": "DPEs open every weather discussion with '91.103.' An applicant who cannot cite the specific regulatory source of the preflight weather obligation fails immediately.",
+      "knowledge": "14 CFR 91.103 (Preflight Action) is the regulatory foundation for all weather briefing requirements. It mandates that the PIC must, before beginning a flight, become familiar with all available information concerning that flight. For flights not in the vicinity of an airport, 91.103 specifically requires reviewing weather reports and forecasts, fuel requirements, alternatives if planned flight cannot be completed, and any known traffic delays. 'All available information' is the operative phrase — a cursory glance at a consumer weather app does not satisfy 91.103.",
+      "acs_elements": [
+        "PA.I.C.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "AC 91-92",
+        "AIM"
+      ],
+      "knowledge_formatted": "### 14 CFR 91.103 — Preflight Action (The Legal Mandate)\n- The **PIC must** become familiar with **all available information** concerning the flight before departure\n- For flights **not in the vicinity of an airport**, the regulation explicitly requires:\n  - Weather **reports and forecasts**\n  - **Fuel requirements** for the flight\n  - **Alternatives** if the planned flight cannot be completed\n  - Any known **ATC traffic delays**\n\n### What \"All Available Information\" Requires\n- Official aviation weather briefing from an **authorized source**\n- A consumer weather app (e.g., iPhone Weather) does **not** satisfy 91.103\n- Launching into IMC without an official briefing is a **91.103 violation** regardless of outcome"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Official Weather Sources — FSS, AviationWeather.gov, and EFBs",
+      "why": "Saying 'I checked the weather on my phone' during a checkride is an instant fail. The applicant must name specific official sources and explain why each is authoritative.",
+      "knowledge": "Three primary approved sources for preflight weather: (1) Flight Service Station (FSS) via 1-800-WX-BRIEF — operated by Leidos Flight Service under FAA contract; provides Standard, Abbreviated, and Outlook briefings. DUATS was discontinued in 2018. (2) AviationWeather.gov — the National Weather Service Aviation Weather Center's direct public portal. (3) Approved EFB applications (ForeFlight, FlyQ, Garmin Pilot) sourcing data directly from FAA/NWS feeds per AC 91-78.",
+      "acs_elements": [
+        "PA.I.C.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "AC 91-92",
+        "AC 91-78"
+      ],
+      "bridge_keys": [
+        "AC 91-92",
+        "AIM"
+      ],
+      "knowledge_formatted": "### Official Preflight Weather Sources\n\n**1. Flight Service Station (FSS)**\n- Accessed via **1-800-WX-BRIEF** or 1800wxbrief.com\n- Operated by **Leidos Flight Service** under FAA contract\n- Provides human-briefer (Standard, Abbreviated, Outlook) and self-briefing tools\n- **DUATS was discontinued in 2018** — stating \"DUATS\" on a checkride is an error\n\n**2. AviationWeather.gov (AWC)**\n- Direct portal to **NWS Aviation Weather Center** data — no commercial repackaging\n- Primary source for METARs, TAFs, GFA, SIGMETs, PIREPs\n\n**3. Approved EFB Applications**\n- ForeFlight, FlyQ, Garmin Pilot — approved under **AC 91-78** when sourcing directly from FAA/NWS data feeds\n- The source chain matters: **NWS data → AWC → EFB**"
+    },
+    {
+      "id": "RKP_03",
+      "title": "The Three Briefing Types — Standard, Abbreviated, and Outlook",
+      "why": "The DPE will ask which type of briefing you obtained before the practical test. 'I checked ForeFlight' is not an answer — the applicant must name and describe the specific briefing type and when each is appropriate.",
+      "knowledge": "Three briefing types per AC 91-92: (1) Standard Briefing — the baseline comprehensive briefing. Used before any flight where no prior briefing exists. (2) Abbreviated Briefing — supplements previously obtained information or targets specific items. Not a substitute for a standard briefing. (3) Outlook Briefing — used when departure is 6 or more hours in the future; focuses on broad frontal trends. Standard Briefing sequence: Adverse Conditions → Synopsis → Current Conditions → En Route Forecasts → Destination Forecast → Winds Aloft → NOTAMs.",
+      "acs_elements": [
+        "PA.I.C.K1",
+        "PA.I.C.S1"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "AC 91-92"
+      ],
+      "bridge_keys": [
+        "AC 91-92",
+        "AIM"
+      ],
+      "knowledge_formatted": "### Three Briefing Types (AC 91-92)\n\n**Standard Briefing**\n- The complete, comprehensive aviation weather briefing\n- Use when **no prior briefing exists** for the flight\n- Covers: Adverse Conditions, Synopsis, Current Conditions, En Route Forecasts, Destination Forecast, Winds Aloft, NOTAMs\n\n**Abbreviated Briefing**\n- Used to **update a prior Standard Briefing** or request specific missing elements\n- **Not a substitute** for a Standard Briefing on a new flight\n\n**Outlook Briefing**\n- Used when departure is **6 or more hours** in the future\n- Strategic planning only — **not a legal weather brief** for a flight about to depart\n\n### Standard Briefing — Correct Sequence\n> Adverse Conditions → Synopsis → Current Conditions → En Route Forecasts → Destination Forecast → Winds Aloft → NOTAMs\n- NOTAMs **last** — checking them before adverse conditions reverses the safety-critical order"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Consumer Apps Are NOT Adequate — The 'Phone Weather' Trap",
+      "why": "More than 60% of fatal VFR-into-IMC accidents involve pilots who checked weather on a consumer source rather than an authoritative aviation briefing. This is the most teachable and most predictable fatal error in the curriculum.",
+      "knowledge": "Consumer weather applications do not provide aviation-specific data. They lack: cloud bases reported in AGL, prevailing visibility in statute miles, ceiling categorization, dewpoint spread analysis, freezing levels, winds aloft at aviation altitudes, PIREPs, AIRMETs, SIGMETs, or NOTAMs. A pilot who substitutes a consumer app for an official 91.103 briefing and subsequently encounters instrument conditions is in a double violation: 91.103 and potentially 91.155.",
+      "acs_elements": [
+        "PA.I.C.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "14 CFR 91.155"
+      ],
+      "bridge_keys": [
+        "AC 91-92",
+        "FAA-H-8083-2A"
+      ],
+      "knowledge_formatted": "### What Consumer Weather Apps Are Missing\n- Cloud bases in **AGL** (consumer apps use MSL elevation)\n- Prevailing visibility in **statute miles** with fractions\n- **Ceiling categorization** (VFR/MVFR/IFR/LIFR)\n- **Dewpoint spread** analysis and fog risk\n- **Freezing levels**\n- **Winds aloft** at aviation cruise altitudes\n- **PIREPs** (Pilot Reports)\n- **AIRMETs / SIGMETs** (hazardous weather advisories)\n- **NOTAMs** (Notices to Air Missions)\n\n### Regulatory Consequence\n- Departing without an official briefing into deteriorating weather = **14 CFR 91.103 violation**\n- Encountering IMC conditions as a VFR pilot adds a **14 CFR 91.155 violation**\n- NTSB investigation into fatal VFR-into-IMC accidents frequently cites **inadequate preflight weather checks** as a causal factor"
+    }
+  ],
+  "lesson_overview": "## Weather Information Sources — Where to Look and What It Costs You Not To\n\nEvery aviation accident report involving weather starts the same way: the pilot took off with incomplete information. Not wrong information — incomplete. There's a layered weather briefing system built specifically to prevent this, and the checkride will test whether you know how to use every layer.\n\n**Why 91.103 connects weather to law.** The regulation is short and unambiguous: before every flight, the pilot in command must become *familiar with all available information concerning that flight*. For a cross-country, this explicitly includes weather reports, forecasts, known ATC delays, and runway lengths at alternates. This isn't procedural guidance — it's a federal requirement. A pilot who skips the brief and launches into deteriorating weather hasn't just made a bad decision; they've violated 14 CFR 91.103.\n\n**The standard weather briefing from Leidos Flight Service.** The 1-800-WX-BRIEF call — or its digital equivalent via 1800wxbrief.com, ForeFlight, or Garmin Pilot — delivers three products the pilot can request explicitly:\n\n- **Standard Briefing:** The complete picture. Adverse conditions, weather synopsis, current conditions (METARs), en-route and destination forecasts (TAFs/GFA), winds aloft, NOTAMs, ATC delays. This is the gold-standard briefing for any flight you plan to actually conduct.\n- **Abbreviated Briefing:** Designed to update an existing briefing or fill in specific gaps. Not a substitute for a standard briefing — the pilot must have already received a full brief and is just getting the deltas.\n- **Outlook Briefing:** More than 6 hours before departure. Strategic only — not a legal weather brief for a flight. Sets up the go/no-go framework for tomorrow morning.\n\n**Digital sources: the first stop for many pilots.** Aviation Weather Center (aviationweather.gov) provides direct access to every government weather product: METARs, TAFs, Prog Charts, SIGMETs, AIRMETs, Convective Outlooks, and pilot-accessible radar imagery. Most advanced EFB applications aggregate these products directly from AWC into a flight-planning interface — but the source is the same NWS/AWC data feed. Know the source chain: NWS data — served via AWC — displayed in ForeFlight.\n\n**The checkride trap:** The DPE asks whether a ForeFlight pre-flight weather check constitutes a proper 91.103 briefing. The correct answer: it depends. If the pilot used AWC, Flight Service, or an EFB that documents the official NWS sources, it is likely sufficient. A quick glance at a local TV app weather radar is NOT a standard briefing. When in doubt: call 1-800-WX-BRIEF and document the briefer's name, time, and ID number in your navlog.",
+  "audio_file": "PPL_PA_I_C_audio.m4a",
+  "video_file": "PPL_PA_I_C_video.mp4"
+}

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_VII_A_01",
+  "title": "Slow Flight, Stall Aerodynamics & Recovery",
+  "questions": [
+    {
+      "id": "PPL_PA_VII_A_01_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot performs a steep turn at 60 degrees of bank in a Cessna 172 with a published Vs (clean stall speed) of 48 knots. The POH states the aircraft is certified in the Normal category with a positive limit load factor of 3.8G. At what approximate indicated airspeed will the aircraft stall in this 60-degree bank?",
+      "options": [
+        {"label": "A", "text": "48 knots — the published stall speed does not change with bank angle because the wing's critical angle of attack remains constant regardless of load factor"},
+        {"label": "B", "text": "68 knots — in a 60-degree bank, the load factor is 2.0G, and the stall speed increases by a factor of √2 (1.41), so 48 × 1.41 ≈ 68 knots"},
+        {"label": "C", "text": "96 knots — in a 60-degree bank, the load factor doubles and the stall speed doubles proportionally, so 48 × 2.0 = 96 knots"},
+        {"label": "D", "text": "57 knots — the stall speed increase is proportional to the bank angle divided by 90, so at 60 degrees the stall speed increases by approximately 67% of the difference to Vne"}
+      ],
+      "correct_answer": "B",
+      "explanation": "In a coordinated banked turn, the load factor increases because the vertical component of lift must equal the aircraft's weight. At 60° bank, the load factor is 1/cos(60°) = 2.0G. The stall speed increases by the square root of the load factor: Vs(acc) = Vs × √n = 48 × √2.0 = 48 × 1.41 ≈ 68 knots. The critical AOA does not change — but the airspeed at which that AOA is reached increases because the wing must generate more lift per unit of airspeed. Option A incorrectly states stall speed doesn't change with bank — the critical AOA is constant, but the stall SPEED changes. Option C incorrectly applies a linear relationship instead of the square root. FAA-H-8083-25C Chapter 5 derives the accelerated stall formula and the load factor table by bank angle.",
+      "far_reference": "14 CFR 23.2150; FAA-H-8083-25C Ch 5",
+      "acs_element": "PA.VII.B.K2"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During a steep turn practice session, a private pilot's aircraft reaches 65 degrees of bank. Neither the pilot nor the passenger is wearing a parachute. Under 14 CFR 91.307, when are parachutes required for intentional maneuvers?",
+      "options": [
+        {"label": "A", "text": "Parachutes are required for any bank exceeding 45 degrees or any pitch exceeding 20 degrees nose up or nose down during intentional flight maneuvers"},
+        {"label": "B", "text": "Parachutes are required whenever any occupant is not a required crewmember and the aircraft intentionally exceeds 60 degrees of bank or 30 degrees nose up or nose down"},
+        {"label": "C", "text": "Parachutes are never required for private pilots — 14 CFR 91.307 applies only to commercial operations and aerobatic training conducted for hire"},
+        {"label": "D", "text": "Parachutes are required for any maneuver performed below 3,000 feet AGL, regardless of bank or pitch angle, because there is insufficient altitude for safe recovery"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.307(c) requires approved parachutes for each occupant when the pilot intentionally exceeds 60 degrees of bank or 30 degrees of pitch (nose up or nose down), UNLESS the occupant is a required crewmember receiving spin training. The 65-degree bank exceeds the 60-degree threshold, making parachutes legally required. The exception for spin training given by an authorized instructor (CFI) for flight crew training is the only exception for Part 91 operations. Option A incorrectly states 45° bank and 20° pitch thresholds. Option C incorrectly limits the rule to commercial operations. Option D fabricates an altitude-based parachute requirement.",
+      "far_reference": "14 CFR 91.307(c)",
+      "acs_element": "PA.VII.A.K1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A pilot on base leg has a strong tailwind, causing the aircraft to overshoot the runway centerline on the turn to final. Instead of increasing bank angle, the pilot applies inside (bottom) rudder to tighten the turn, then adds opposite (top) aileron to keep the wings level, then pulls back on the yoke because the nose drops. Beyond the immediate cross-control condition, what aerodynamic chain has the pilot initiated?",
+      "options": [
+        {"label": "A", "text": "The cross-controls create an aerodynamic slip that actually increases the aircraft's descent rate, allowing the pilot to steepen the approach angle without changing airspeed — this is a recognized technique for high-altitude approaches"},
+        {"label": "B", "text": "The inside rudder skids the aircraft, the opposite aileron raises the AOA on the inside wing, and pulling back exceeds the critical AOA — creating an asymmetric stall that produces autorotation (spin entry) at an altitude where recovery is impossible"},
+        {"label": "C", "text": "The cross-controls cause the aircraft's center of gravity to shift laterally, creating a Dutch roll oscillation that the pilot must damp out with coordinated aileron and rudder inputs before stabilizing on the final approach course"},
+        {"label": "D", "text": "The rudder input creates adverse yaw that slows the aircraft below Vs, but the opposite aileron prevents the wing from stalling by maintaining aerodynamic flow over the wing surfaces, creating a stable but very slow flight condition"}
+      ],
+      "correct_answer": "B",
+      "explanation": "This is the base-to-final turn stall/spin sequence — the deadliest scenario in general aviation traffic pattern operations. The inside rudder creates a skid (the aircraft's nose yaws into the turn faster than the aircraft is actually turning). The opposite aileron, intended to keep wings level, deflects the inside wing's aileron DOWN — increasing the local AOA on the wing that is already at a high angle due to the skid. When the pilot pulls back to arrest the nose drop, the critical AOA is exceeded asymmetrically — the inside wing stalls first and much more deeply than the outside wing. This asymmetric stall creates the conditions for autorotation (spin entry). At 500-800 feet AGL in the traffic pattern, there is insufficient altitude for spin recovery. AC 61-67C identifies this scenario specifically. The prevention is simple: if overshooting final, GO AROUND. FAA-H-8083-3C Chapter 4 describes the cross-control stall mechanism.",
+      "far_reference": "14 CFR 91.103; AC 61-67C",
+      "acs_element": "PA.VII.B.R1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "During stall recovery practice at 5,000 feet AGL, a pilot successfully breaks the stall and the nose drops. The pilot immediately pulls back aggressively to level off and minimize altitude loss. The aircraft shudders and stalls again — more violently than the first time. Beyond the immediate loss of additional altitude, what makes this secondary stall MORE dangerous than the initial stall?",
+      "options": [
+        {"label": "A", "text": "The secondary stall occurs at a higher airspeed because the aggressive pull-up increases the load factor, creating an accelerated stall with higher energy and a more abrupt break than the initial 1G stall"},
+        {"label": "B", "text": "The aircraft's engine has lost significant power during the nose-down recovery, so the secondary stall occurs in a lower-energy state with less margin for a second recovery attempt"},
+        {"label": "C", "text": "The secondary stall causes the aircraft's stall warning system to malfunction due to rapid AOA cycling, removing the audible warning that the pilot depends on for stall recognition"},
+        {"label": "D", "text": "The pilot's vestibular system has been disoriented by the rapid pitch changes, making it physically impossible to detect the secondary stall through the normal kinesthetic cues of buffet and G-loading"}
+      ],
+      "correct_answer": "A",
+      "explanation": "A secondary stall during the pull-out is an accelerated stall — the aggressive back pressure increases the load factor above 1G, raising the stall speed above the published Vs. This means the aircraft stalls at a higher airspeed with more kinetic energy, producing a more abrupt aerodynamic break and greater altitude loss. Additionally, if the pull-out introduced any yaw (from torque or P-factor at high power), the secondary stall can transition into a spin — compounding the altitude loss. FAA-H-8083-25C Chapter 5 describes the relationship between load factor and stall speed, and AC 61-67C emphasizes smooth, gradual back pressure during the pull-out phase specifically to prevent secondary stalls. The prevention is simple: smooth, gradual back pressure — never an abrupt pull.",
+      "far_reference": "14 CFR 91.3; AC 61-67C",
+      "acs_element": "PA.VII.B.K4"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During slow flight practice at minimum controllable airspeed, you are maintaining altitude at 3,500 feet with full flaps and 2,200 RPM. You notice the aircraft slowly sinking despite the nose being above the horizon. You pull back slightly on the yoke to arrest the descent. What will happen?",
+      "options": [
+        {"label": "A", "text": "The aircraft will climb because the increased pitch angle increases the vertical component of lift, and the current power setting is sufficient to overcome the additional induced drag"},
+        {"label": "B", "text": "The aircraft will maintain altitude momentarily as the increased AOA generates more lift, then stabilize at the new pitch attitude with the same descent rate once drag and thrust equalize"},
+        {"label": "C", "text": "The aircraft will descend faster — in the region of reversed command, increasing pitch without adding power increases induced drag more than lift, accelerating the sink rate and decelerating toward a stall"},
+        {"label": "D", "text": "The aircraft will oscillate between climbing and descending in a phugoid cycle — the pitch change creates a long-period oscillation that self-corrects over 30-60 seconds without pilot input"}
+      ],
+      "correct_answer": "C",
+      "explanation": "In the region of reversed command (below L/D max speed), the normal relationship between pitch and altitude is inverted. Pulling back increases AOA, which causes induced drag to spike dramatically (induced drag varies with the inverse square of airspeed). At the current power setting, the engine cannot overcome the increased total drag. The aircraft decelerates AND descends — the exact opposite of what the pilot intended. Continued back pressure accelerates the sink rate AND brings the airspeed closer to the stall. The correct action to maintain altitude in slow flight is to ADD POWER, not pull back. FAA-H-8083-25C Chapter 5 describes the region of reversed command and the inverted power-pitch relationship that defines the 'back side of the power curve.'",
+      "far_reference": "14 CFR 61.107",
+      "acs_element": "PA.VII.A.K1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "During a power-off stall recovery, the left wing drops sharply at the break. Your instinct is to use right aileron to level the wings. According to the stall recovery procedure, why is this instinct wrong, and what should you use instead?",
+      "options": [
+        {"label": "A", "text": "Right aileron is wrong because it creates adverse yaw that deepens the stall — use right rudder instead, which creates an anti-yaw force that levels the wings without changing the AOA on either wing"},
+        {"label": "B", "text": "Right aileron is correct for wing-drop recovery — the prohibition against ailerons applies only during developed spins, not during the initial stall break, so standard roll technique is appropriate"},
+        {"label": "C", "text": "Right aileron deflects the left aileron DOWN, increasing the AOA on the already-stalled left wing and deepening its stall — this creates the asymmetric conditions for spin entry; use opposite rudder to control the roll"},
+        {"label": "D", "text": "Both aileron and rudder are acceptable for wing-drop recovery — the pilot should use whichever input achieves wings-level fastest, since minimizing altitude loss during recovery is the highest priority"}
+      ],
+      "correct_answer": "C",
+      "explanation": "When the left wing drops during a stall, applying right aileron deflects the LEFT aileron DOWN. On a stalled wing, the downward-deflected aileron INCREASES the local AOA — pushing that section of the wing deeper into the stall. This deepens the stall asymmetrically, creating more drag on the left wing and more lift on the right — the exact conditions for autorotation (spin entry). Instead, the pilot should use opposite (right) rudder to create a yawing moment that levels the wings aerodynamically without changing wing AOA. Once the stall is broken (AOA reduced below critical), normal aileron control is restored. AC 61-67C and FAA-H-8083-25C Chapter 5 both specify rudder, not ailerons, for wing-drop control during stalled flight. This is the aerodynamic basis for the 'A = Ailerons Neutral' step in the PARE spin recovery procedure.",
+      "far_reference": "14 CFR 91.3; AC 61-67C",
+      "acs_element": "PA.VII.B.K4"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are flying a VFR approach to an unfamiliar airport. On final approach at 500 feet AGL, you realize you are significantly high and fast. The runway has trees at the departure end, and there is no parallel taxiway — a go-around will require a full traffic pattern. Your passenger has a connecting flight in 45 minutes. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue the approach and attempt to 'dive' at the runway threshold, then use heavy braking to stop — you have landed at shorter runways before, and the trees at the departure end give you motivation to stop", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Sideslip aggressively to dump altitude and airspeed on short final, aiming to touch down in the first quarter of the runway — you can make this work if you cross-control enough to lose the excess energy", "hazardous_attitude": "get_there_itis"},
+        {"label": "C", "text": "Go around, fly the full pattern, and land on the next attempt — your passenger will miss their connection, but a stabilized approach is the only safe option at an unfamiliar airport", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Go around immediately, fly a tighter but safe pattern with normal approach speed, land on the next attempt, and help your passenger rebook their connection after landing safely"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A attempts to salvage an unstabilized approach with aggressive technique (macho) — diving at a runway with obstacle departure end creates a high-speed, high-energy landing that may exceed braking capacity, resulting in a runway overrun into trees. Option B uses extreme cross-control technique at 500 AGL (get-there-itis) — an aggressive sideslip near the ground at excess airspeed creates a high-risk dynamic where misjudgment produces a hard landing, ballooned flare, or cross-control stall. Option C goes around but adds unnecessary delay by flying a full, leisurely pattern (resignation) — the passenger's schedule becomes the justification for slow execution rather than efficient, safe maneuvering. Option D is the active professional middle path: execute the go-around (test — can you set up a stable approach on the next attempt?), fly a normal but efficient pattern, and manage the passenger expectation after landing safely. The passenger's connection is not a factor in the aeronautical decision.",
+      "explanation": "An unstabilized approach is the precursor to most approach-and-landing accidents in general aviation. FAA-H-8083-3C Chapter 9 defines a stabilized approach as being on speed, on glidepath, and in a landing configuration by 500 feet AGL. Any approach not meeting these criteria at 500 AGL requires a go-around — this is not optional judgment, it is a trained response. The go-around itself is one of the safest maneuvers in aviation when executed promptly. AC 61-67C identifies the 'stretching the approach' and 'salvaging the landing' as leading precursors to approach-phase LOC-I accidents. NTSB data shows that approach-and-landing accounts for the highest percentage of fatal GA accidents, with unstabilized approaches as the primary contributing factor (NTSB Annual Review of Aircraft Accident Data, approach/landing phase).",
+      "far_reference": "14 CFR 91.103",
+      "acs_element": "PA.VII.B.R1"
+    },
+    {
+      "id": "PPL_PA_VII_A_01_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "During slow flight practice with your CFI in the right seat, you are maintaining minimum controllable airspeed at 3,500 feet AGL. Your CFI asks you to perform a 30-degree bank turn in slow flight. As you enter the turn, you notice the stall horn chirps briefly, the nose starts to drop despite your back pressure, and the aircraft requires noticeably more right rudder. All four actions below are possible. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Pull back harder to stop the nose from dropping — you are losing altitude, and the turn requires more lift to maintain level flight, which means more back pressure is needed", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Increase bank to 45 degrees to complete the turn faster — the sooner you roll out, the sooner you can recover airspeed; minimizing time in the turn reduces exposure to the stall regime", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Immediately level the wings, reduce pitch to increase airspeed, and abandon the maneuver entirely — slow flight turns are too dangerous to practice and should be avoided", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Reduce the bank angle to 20 degrees, simultaneously add power to arrest the sink rate and maintain airspeed, then reassess — if the stall horn stops and airspeed stabilizes, continue the turn at the shallower bank with the higher power setting"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A pulls back harder in the region of reversed command (get-there-itis) — this INCREASES induced drag, decelerates the aircraft toward a stall, and can trigger a full stall in a banked turn (accelerated stall). Option B deepens the bank angle (macho) — at 45° bank, the stall speed increases by 19%, narrowing the margin to zero when the aircraft is already at minimum controllable airspeed. Option C abandons the maneuver entirely (resignation) — slow flight turns are a required ACS skill and are safe when performed with proper power management. Option D is the active professional middle path: reduce the bank angle to lower the load factor and reduce stall speed, add power to counter the increased induced drag at the higher AOA (test — does the stall horn stop and airspeed stabilize?), then continue at a sustainable configuration (mitigation). This demonstrates understanding of the reversed command relationship: altitude = throttle, not pitch.",
+      "explanation": "In the region of reversed command, the correct response to a decaying airspeed is ADD POWER, not increase pitch. The 30-degree banked turn in slow flight increases the load factor to 1.15G, raising the effective stall speed by 7%. When the aircraft is already at minimum controllable airspeed, this 7% increase may be enough to reach the stall. FAA-H-8083-25C Chapter 5 describes the power-pitch relationship in the region of reversed command, and AC 61-67C describes the risk factors of maneuvering near the stall in banked flight. The key concept is that bank angle increases stall speed, and in slow flight, even small increases in stall speed can eliminate the margin entirely.",
+      "far_reference": "14 CFR 61.107",
+      "acs_element": "PA.VII.A.S3"
+    }
+  ]
+}

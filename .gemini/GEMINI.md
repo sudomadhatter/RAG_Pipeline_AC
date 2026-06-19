@@ -26,9 +26,7 @@ Explain what you're doing and why. I am actively learning the technical stack. D
 Never place ad-hoc test scripts, debug outputs, or temp files in the project root. Use `_test_scripts/`.
 
 ### Rule 6: Artifact Creation Protocol
-Any guide, report, analysis, or documentation **MUST** use `IsArtifact: true` with valid `ArtifactMetadata` so it appears in the IDE Artifacts panel. Non-code docs saved without the artifact flag are considered failed.
-
-Additionally, to maintain a persistent record in the repository, all plans, checklists, walkthroughs, and code review artifacts MUST be saved in the directory `_01_My/_artifacts/<YYYY-MM-DD>_<summary>/` (where `<YYYY-MM-DD>` is the current date and `<summary>` is a brief, lowercase, hyphen-separated summary/slug of the task, e.g., `_01_My/_artifacts/2026-06-16_add-artifact-rules/`).
+Any guide, report, analysis, or documentation **MUST** use `IsArtifact: true` with valid `ArtifactMetadata` so it appears in the IDE Artifacts panel. Non-code docs saved without the artifact flag are considered failed. The IDE Artifacts panel is Gemini/Antigravity's artifact store — do NOT write artifacts to a repository folder (Claude Code uses `_claude_artifacts/`; opencode uses `_opencode_artifacts/`).
 
 
 ### Rule 7: Accuracy Over Speed

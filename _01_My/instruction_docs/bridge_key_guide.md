@@ -1,15 +1,15 @@
 ---
 title: "Bridge Key Guide — How the DB1→DB2 Bridge Actually Works"
 type: reference
-revision: "v3.0 (2026-06-18) — rewritten against the LIVE stores + the real code in both repos. Supersedes v2.8, which described a phantom tool, a fictional vocabulary, and the wrong filter field."
+revision: "v2.8 (rewritten 2026-06-18/19 against the LIVE stores + the real code in both repos). Corrects the earlier 2026-06-16 v2.8 draft, which described a phantom tool, a fictional vocabulary, and the wrong filter field."
 audience: "Ingestion Pipeline team (this repo, owns the whole RAG layer) + any CFI authoring sources"
 companion: "rkp_creation_guide.md (RKP/quiz authoring). This is the bridge-key / DB2-verification contract."
 ---
 
-# Bridge Key Guide (v3.0 — verified)
+# Bridge Key Guide (v2.8 — verified rewrite)
 
-> **Why this was rewritten.** Earlier versions were measured against config files and assumptions,
-> both of which lied. v3.0 was measured on 2026-06-18 by querying the **live** Vertex AI Search stores
+> **Why this was rewritten.** The earlier v2.8 draft was measured against config files and assumptions,
+> both of which lied. This rewrite was measured on 2026-06-18/19 by querying the **live** Vertex AI Search stores
 > and reading the **real** `librarian.py` in the app repo. Where this doc states a fact, it was observed
 > in the live data or the running code — not inferred.
 
@@ -34,7 +34,7 @@ The strict hop is in the app at `backend/tools/librarian.py` → `_search_db2_br
 filter_spec = f'document_tags: ANY({quoted_keys})'   # quoted_keys = manifest.bridge_keys
 ```
 
-Three facts that follow from the real code, each of which broke the bridge before v3.0:
+Three facts that follow from the real code, each of which broke the bridge before this rewrite:
 
 1. **The filter matches `document_tags` on the DB2 documents.** If a DB2 doc has no `document_tags`
    field, it can never match. *(Until 2026-06-18 NO DB2 doc had this field — the bridge matched nothing.)*
@@ -78,8 +78,8 @@ and are covered by the semantic lanes.
 | Derive vocabulary | `scripts/derive_db2_vocabulary.py` | live DB2 → token set (paste into schema.py) |
 | Build out DB2 | `src/gcp/import_db2_docs.py` | stage `curriculum_components/faa_docs/*.pdf` → GCS → INCREMENTAL import → patch `document_tags` (rich) |
 | Repair DB1 keys | `src/gcp/reimport_db1_keys.py` | pull 184 live, clean + augment keys in place, INCREMENTAL upsert |
-| RKP manifests | `src/gcp/upload_manifests.py` | 47 manifests → Firestore `rkp_manifests` |
-| Quiz banks | `src/gcp/ingest_quiz_banks.py` | 47 banks → Firestore `quiz_banks/{lesson}/questions/{q}` |
+| RKP manifests | `src/gcp/upload_manifests.py` | 48 manifests → Firestore `rkp_manifests` |
+| Quiz banks | `src/gcp/ingest_quiz_banks.py` | 48 banks (384 questions) → Firestore `quiz_banks/{lesson}/questions/{q}` |
 
 > `src/gcp/import_db1_v2.py` is the OLD regex splitter (hardcoded foreign paths, writes the wrong
 > `element_type` shape). It did **not** build the live store and is superseded by `reimport_db1_keys.py`.
@@ -90,7 +90,8 @@ and are covered by the semantic lanes.
    non-empty, document-level, corruption-free `doc_keys`. This is the test that would have caught the
    original silent Area IX empties.
 2. **Live round-trip:** for a fixed key set, fire the real `document_tags: ANY(...)` filter against DB2 and
-   assert `len(hits) >= 1`. An empty hit list is not `None` — assert on the count.
+   assert `len(hits) >= 1`. An empty hit list is not `None` — assert on the count. Last run 2026-06-19:
+   `probe_bridge_hop.py` → **48/48 lesson manifests return ≥1 DB2 hit** (was 0/48 before DB2 was tagged).
 
 ## 8. Coverage reality (measured 2026-06-18, post-fix)
 

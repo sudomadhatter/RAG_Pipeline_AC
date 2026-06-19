@@ -1,0 +1,23 @@
+{
+  "id": "lesson_pa_ix_b_r1",
+  "structData": {
+    "acs_code": "PA.IX.B.R1",
+    "title": "Failure to consider altitude, wind, terrain, obstructions, gliding distance, and available landing distance.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [],
+    "doc_keys": [
+      "FAA-H-8083-2A",
+      "AC 61-98D"
+    ],
+    "keywords": [
+      "Cone of Safety",
+      "CFIT",
+      "Target Fixation",
+      "Wire Strike",
+      "The Impossible Turn",
+      "PAVE Checklist",
+      "Glide Radius"
+    ]
+  }
+}

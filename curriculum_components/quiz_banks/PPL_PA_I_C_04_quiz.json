@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_C_04",
+  "title": "PIREPs, AIRMETs, SIGMETs, and Convective SIGMETs",
+  "questions": [
+    {
+      "id": "PPL_PA_I_C_04_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "An AIRMET Sierra is issued for a pilot's planned route. What specific weather conditions does AIRMET Sierra describe, and which aircraft category is it primarily intended to warn?",
+      "options": [
+        {"label": "A", "text": "Severe icing not associated with thunderstorms — AIRMET Sierra is issued for all aircraft categories when structural ice accumulation exceeds 1/2 inch per hour at cruise altitude along the route"},
+        {"label": "B", "text": "Moderate turbulence and sustained surface winds exceeding 30 knots — AIRMET Sierra (S for Speed) is intended for light aircraft susceptible to wind shear near terrain and in mountain valleys"},
+        {"label": "C", "text": "IFR conditions — ceilings below 1,000 AGL and/or visibilities below 3SM affecting over half the area, or extensive mountain obscuration — primarily intended to warn pilots of small aircraft susceptible to inadvertent IMC"},
+        {"label": "D", "text": "Severe thunderstorm activity — AIRMET Sierra is issued when cells with tops above 35,000 feet are embedded within stratiform clouds, making visual avoidance impossible for VFR aircraft at low altitudes"}
+      ],
+      "correct_answer": "C",
+      "explanation": "AIRMET Sierra (S mnemonic: Sierra = IFR) is issued for IFR conditions defined as ceilings below 1,000 feet AGL and/or visibility below 3 statute miles affecting 50% or more of the forecast area, AND/OR extensive mountain obscuration. Its primary audience is light aircraft pilots — because small, non-instrument-equipped aircraft are the most vulnerable to inadvertent instrument flight conditions. Option A describes SIGMET-level icing, not AIRMET Sierra. Option B describes AIRMET Tango (T = turbulence), not Sierra. Option D describes conditions warranting a Convective SIGMET, not an AIRMET.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2g"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A Convective SIGMET (WST) is issued at 1755Z valid until 1955Z for a line of thunderstorms 80 nautical miles in length along a pilot's planned route. What is the accurate interpretation of this advisory?",
+      "options": [
+        {"label": "A", "text": "The WST is advisory only for IFR aircraft; VFR pilots may continue as planned since VFR flight into known thunderstorm areas is legally permissible provided visibility remains above 3 statute miles"},
+        {"label": "B", "text": "The WST is valid for 2 hours and applies to ALL aircraft; a line of thunderstorms 60 nautical miles or longer automatically qualifies for Convective SIGMET issuance, and all aircraft must avoid the affected airspace"},
+        {"label": "C", "text": "The WST is valid for 4 hours from issuance and applies only to turbine-powered commercial aircraft; piston-powered light aircraft may continue to operate within the advisory area at pilot discretion"},
+        {"label": "D", "text": "The WST indicates that thunderstorm cell tops are above FL250; pilots cruising below FL250 are not within the advisory's sphere of influence and may cross the line at lower altitudes without risk"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Convective SIGMETs are issued for ALL aircraft operating in the National Airspace System and are valid for 2 hours. One of the qualifying criteria for Convective SIGMET issuance is a line of thunderstorms 60 nautical miles or longer — an 80-nautical-mile line clearly meets this threshold. There is no altitude, certification, or aircraft category exception to Convective SIGMET applicability. A VFR pilot who attempts to penetrate a Convective SIGMET area risks airframe structural failure, loss of control, and near-zero visibility — all consistent with NTSB fatal accident findings in VFR-into-convective-IMC scenarios. Option A is a dangerous mischaracterization. Options C and D invent altitude and aircraft category exemptions that do not exist.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2g"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A private pilot encounters severe turbulence and severe icing simultaneously during a VFR cross-country flight. After landing safely, which PIREP reporting category applies, what must the report include, and is filing legally required?",
+      "options": [
+        {"label": "A", "text": "A routine PIREP (UA) is appropriate — severe conditions are categorized by intensity, and the standard UA format is used for all turbulence encounters; filing is legally required under 14 CFR 91.103 for any turbulence event"},
+        {"label": "B", "text": "An urgent PIREP (UUA) is appropriate because severe turbulence AND severe icing were encountered simultaneously — the report must include location, time, altitude, aircraft type, and intensities; filing is strongly encouraged but not legally mandated under current FARs"},
+        {"label": "C", "text": "A routine PIREP (UA) is appropriate for icing but an urgent PIREP (UUA) is only required for the turbulence element — the two conditions should be filed as separate PIREPs on different FSS broadcast frequencies"},
+        {"label": "D", "text": "No PIREP is required or recommended after landing — PIREPs are only useful when filed while in flight so ATC can immediately broadcast the information; post-landing reports have no operational value and may not be submitted through FSS"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A UUA (Urgent PIREP) is required when reporting any of the following: tornadoes, funnel clouds, waterspouts, severe or extreme turbulence, severe icing, or hail at the surface. Both severe turbulence and severe icing independently qualify for UUA status — their simultaneous occurrence certainly does. The UUA report must include: /OV (location), /TM (Zulu time), /FL (altitude), /TP (aircraft type), and the relevant intensity codes for /TB and /IC fields. Critically: while PIREPs in general are not legally mandated by the FARs, failure to file a UUA after a severe atmospheric encounter is professionally unacceptable and creates liability exposure if subsequent aircraft experience the same conditions unreported. Option A incorrectly identifies severe conditions as routine UA reports. Option C invents separate-frequency filing requirements that do not exist.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2d"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "What distinguishes a SIGMET (WS) from an AIRMET in terms of hazard severity and aircraft target group?",
+      "options": [
+        {"label": "A", "text": "SIGMETs are issued for moderate-level hazards affecting smaller piston aircraft, while AIRMETs represent severe or extreme conditions applicable to all aircraft — the distinction is based on aircraft weight class, not hazard intensity"},
+        {"label": "B", "text": "SIGMETs are issued for severe or extreme hazardous weather phenomena (non-convective) applicable to ALL aircraft, while AIRMETs are issued for potentially hazardous conditions primarily affecting light aircraft at moderate intensity levels"},
+        {"label": "C", "text": "SIGMETs and AIRMETs are issued for identical hazard intensities; the difference is frequency of update — SIGMETs refresh every 2 hours while AIRMETs update every 6 hours to reflect slower-moving weather systems"},
+        {"label": "D", "text": "AIRMETs are issued for non-convective weather hazards while SIGMETs are issued only for thunderstorm-related convective activity; all convective weather warnings are categorized under SIGMET regardless of intensity"}
+      ],
+      "correct_answer": "B",
+      "explanation": "This is the fundamental severity-and-audience distinction that the DPE will probe: AIRMETs address MODERATE intensity hazards primarily affecting LIGHT aircraft. SIGMETs address SEVERE or EXTREME hazards affecting ALL aircraft. Qualification conditions for SIGMET (WS) include: severe or extreme turbulence/CAT not from thunderstorms, severe icing not from thunderstorms, widespread dust/sandstorm below 3SM visibility, and volcanic ash. Both products are issued under 14 CFR 91.103's 'all available information' requirement. Option A inverts the severity hierarchy. Option C incorrectly states identical hazard intensities. Option D confuses convective-vs-non-convective boundaries — Convective SIGMETs (WST) handle thunderstorm hazards; SIGMETs (WS) specifically address non-convective severe phenomena.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2g"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "The Storm Prediction Center issues a Day-1 Convective Outlook showing 'Moderate Risk' for severe thunderstorms over a pilot's planned 300-mile cross-country route. No SIGMETs have been issued yet. What is the operational significance of this advisory?",
+      "options": [
+        {"label": "A", "text": "Moderate Risk is a minimal advisory — the SPC's risk categories are designed for severe storm spotters, not aviation, and a Moderate Risk area does not have regulatory significance under 14 CFR 91.103 until an associated SIGMET is issued"},
+        {"label": "B", "text": "Moderate Risk indicates a high probability of organized severe thunderstorm activity across the route — this is a strategic go/no-go signal requiring route re-evaluation and alternate planning even before SIGMETs are issued, under the 91.103 all-available-information standard"},
+        {"label": "C", "text": "Moderate Risk is a historical benchmark based on climatology, not an active forecast — Moderate Risk day-1 outlooks represent the median expected activity for the season and do not indicate an elevated hazard for the specific upcoming flight day"},
+        {"label": "D", "text": "Moderate Risk only applies to flight levels above FL250 where jet stream activity generates the most organized severe weather; VFR pilots operating below 10,000 feet MSL are outside the Convective Outlook's advisory scope"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A Day-1 Convective Outlook with Moderate Risk from the Storm Prediction Center indicates significant probability of widespread severe thunderstorm activity across the risk area. While the SPC product is designed for strategic planning rather than tactical avoidance, a Moderate or High Risk rating over a planned VFR route should trigger immediate route re-evaluation and alternate planning — it is directly relevant to the '91.103 all available information' standard. The absence of a SIGMET at the time of briefing does not negate the Convective Outlook's relevance — SIGMETs are issued reactively as activity develops; the Convective Outlook is proactive. Option A mischaracterizes the SPC's regulatory relevance. Option C invents a 'climatological' definition that does not apply to risk-rated outlooks. Option D fabricates an altitude restriction that has no basis in the product's operational guidance.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2f"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "An AIRMET Zulu is active along a pilot's route. During the oral exam, the DPE asks what AIRMET Zulu specifically forecasts. Which answer is correct?",
+      "options": [
+        {"label": "A", "text": "AIRMET Zulu forecasts zero-visibility conditions associated with blowing dust or sand along a route — the Z designation stands for Zero Visibility, and it is issued whenever horizontal visibility is operationally zero for any weather-related cause"},
+        {"label": "B", "text": "AIRMET Zulu forecasts moderate icing and the freezing level — it is issued when moderate structural icing is expected along the route, and it always includes the altitude of the relevant freezing level to help pilots avoid icing layers"},
+        {"label": "C", "text": "AIRMET Zulu forecasts high-altitude turbulence associated with the jet stream at flight levels above FL180 — the Z designation refers to the zenith level of the atmosphere where upper-level wind shear creates clear air turbulence"},
+        {"label": "D", "text": "AIRMET Zulu forecasts severe thunderstorm wind gusts at the zero degree Celsius isotherm — it is activated when convective outflow boundaries interact with the freezing level, creating severe downdrafts in cumulonimbus formations"}
+      ],
+      "correct_answer": "B",
+      "explanation": "AIRMET Zulu (Z mnemonic: Zulu = freezing/icing) is issued for moderate icing, not severe icing. Severe icing is a SIGMET-level phenomenon. AIRMET Zulu always includes information about the freezing level because the freezing level altitude is operationally critical — pilots must know the altitude at which structural ice will begin to accumulate so they can fly above or below the icing layer. A VFR piston aircraft without de-icing equipment encountering moderate icing conditions (AIRMET Zulu territory) can experience rapid lift degradation and control difficulty. Option A invents a 'zero visibility' interpretation with no basis in AIRMET classification. Options C and D describe phenomena unrelated to AIRMET Zulu criteria.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2g"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are flying VFR at 5,500 feet and encounter moderate turbulence that knocks items loose in the cockpit. You land safely 20 minutes later. A pilot friend says 'that's just bumpy air, don't bother filing anything.' What is the SAFEST action?",
+      "options": [
+        {"label": "A", "text": "Agree with your friend — moderate turbulence is a routine encounter that does not meet the UUA threshold; the FAA only requires PIREP filing for severe or extreme turbulence, so no action is required for a moderate encounter", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "File a routine PIREP (UA) with FSS as soon as practicable including your location, altitude, aircraft type, time, and turbulence intensity coded as MOD — this gives real-time hazard correlation to other aircraft operating in the same airspace", "hazardous_attitude": null},
+        {"label": "C", "text": "Wait until your next flight to see if the turbulence is still occurring — PIREP data is only valuable for active conditions; past encounters are outside the 2-hour AIRMET validity window and will not be broadcast to current traffic", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "File a UUA — any level of turbulence that disturbs cockpit items constitutes an urgent aircraft structural event, and failing to file an urgent PIREP for any equipment movement in the cockpit exposes the pilot to certificate action", "hazardous_attitude": "invulnerability"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Moderate turbulence that knocks cockpit items loose falls squarely in the 'moderate' PIREP category (code: MOD), which qualifies for a routine PIREP (UA), not a UUA. UUA (urgent) is reserved for: severe or extreme turbulence, severe icing, tornadoes, funnel clouds, or hail at the surface. The correct answer is to file the UA PIREP with FSS as soon as practicable — the information helps other pilots in the area make informed decisions. PIREPs can be filed after landing via the Leidos system or by phone. Option A is Macho — dismissing the responsibility to report because 'it wasn't that bad.' Option C is Resignation — treating post-landing PIREP filing as having zero value; PIREPs are stored and broadcast to pilots planning routes through the same area. Option D applies UUA criteria incorrectly — equipment movement alone does not meet the UUA threshold.",
+      "sjt_rationale": "Option A is Macho — minimizing a real hazard to avoid a minor administrative task. Option C is Resignation — surrendering the responsibility to report based on a false premise about timing. Option D over-applies the UUA threshold, reflecting invulnerability-adjacent thinking that categorizes every negative experience as extreme. Option B is correct: classify accurately (MOD = UA), file promptly, protect other pilots.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2d"
+    },
+    {
+      "id": "PPL_PA_I_C_04_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "During preflight, you discover an active Convective SIGMET for your route valid for the next hour. Current conditions outside appear sunny with developing cumulus. Your passengers expect to depart now. What is the SAFEST action?",
+      "options": [
+        {"label": "A", "text": "Depart — you can see the cumulus are still small and harmless from the ramp; you know your aircraft better than any forecast, and Convective SIGMETs are often issued conservatively when actual conditions are much less severe than forecast", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Delay departure until the Convective SIGMET expires, monitor radar and PIREPs for confirmation that convective activity has not continued past the advisory window, and brief passengers on the reason for the delay", "hazardous_attitude": null},
+        {"label": "C", "text": "Depart and divert around any visible storm cells — your onboard FIS-B radar will show developing cells in real time and you can tactically thread between any active convection using cockpit weather data", "hazardous_attitude": "invulnerability"},
+        {"label": "D", "text": "Cancel the trip entirely — any active Convective SIGMET automatically makes the flight illegal under 14 CFR 91.103, and VFR operations cannot resume until the SIGMET is canceled by the issuing meteorological authority", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "An active Convective SIGMET with developing cumulus visible on the ramp is the operational definition of a no-departure scenario. Convective cells can build from benign-looking cumulus to cumulonimbus with tops at FL400 in under 20 minutes. Delaying until the SIGMET expires and confirming via radar/PIREPs that the threat has passed is the correct professional response. Option A is Macho — dismissing an official advisory based on personal visual assessment and rationalizing that forecasters are overly conservative. This exact thinking precedes many fatal thunderstorm penetration accidents. Option C is Invulnerability — 'tactical threading' of convective cells using FIS-B radar that has up to 15-minute latency. A gap that appears open on the radar may have already closed in reality. Option D misstates the law — a Convective SIGMET is an advisory, not a legal prohibition on flight; however, a reasonable pilot will treat it as operationally disqualifying.",
+      "sjt_rationale": "Option A is Macho — countering official forecast data with optimistic ramp-level visual assessment. Option C is Invulnerability — trusting delayed radar data to execute tactics against fast-moving convective threats. Option D is Resignation — incorrectly framing a delay/evaluate decision as a mandatory cancellation. Option B is correct ADM: delay, verify expiration confirmed by updated data, then proceed.",
+      "far_reference": "14 CFR 91.103; AC 00-45H",
+      "acs_element": "PA.I.C.K2g"
+    }
+  ]
+}

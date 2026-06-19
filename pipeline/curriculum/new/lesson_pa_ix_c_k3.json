@@ -1,0 +1,24 @@
+{
+  "id": "lesson_pa_ix_c_k3",
+  "structData": {
+    "acs_code": "PA.IX.C.K3",
+    "title": "Causes and remedies for smoke or fire onboard the aircraft.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [
+      "14 CFR 91.3"
+    ],
+    "doc_keys": [
+      "FAA-H-8083-3C",
+      "AC 120-80"
+    ],
+    "keywords": [
+      "Fire Triangle",
+      "Load Shedding",
+      "Master Switch",
+      "Emergency Descent",
+      "Slipstream",
+      "Asphyxiation"
+    ]
+  }
+}

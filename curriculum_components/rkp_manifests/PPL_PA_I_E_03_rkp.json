@@ -1,0 +1,82 @@
+{
+  "lesson_id": "PPL_PA_I_E_03",
+  "title": "VFR Weather Minimums — 14 CFR 91.155 and Special VFR",
+  "acs_task_reference": "Area I, Task E",
+  "acs_element_keys": [
+    "PA.I.E.K2"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "The Full 91.155 Table — No Shortcuts",
+      "why": "The DPE will pick a random airspace class, altitude, and time of day and ask for the minimums. Applicants who memorize only 'three and a half' fail every trap — that applies only to Class C/D/E below 10,000. There are six distinct minimum sets that must be known cold.",
+      "knowledge": "14 CFR 91.155 VFR weather minimums: CONTROLLED (Class C, D, E below 10,000 MSL): 3 SM; 500 below, 1,000 above, 2,000 horizontal. EXCEPTION — Class B: 3 SM; CLEAR OF CLOUDS (no cloud separation required inside Class B). CONTROLLED (Class E at/above 10,000 MSL): 5 SM; 1,000 below, 1,000 above, 1 SM horizontal. UNCONTROLLED Class G at/below 1,200 AGL: Day — 1 SM, clear of clouds. Night — 3 SM, clear of clouds. UNCONTROLLED Class G above 1,200 AGL (below 10,000): Day — 1 SM, 500/1,000/2,000. Night — 3 SM, 500/1,000/2,000. Class B clear-of-clouds rationale: ATC is actively separating VFR from IFR traffic — the cloud buffer is not needed. Above 10,000 rationale: higher aircraft speeds at cruise altitude require greater visual buffer.",
+      "acs_elements": [
+        "PA.I.E.K2"
+      ],
+      "far_references": [
+        "14 CFR 91.155"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### Complete 14 CFR 91.155 Weather Minimums Table\n\n| Airspace | Time | Visibility | Cloud Separation |\n|---|---|---|---|\n| **Class B** | Any | **3 SM** | **Clear of clouds** |\n| Class C, D, E *(below 10,000 MSL)* | Any | **3 SM** | **500 below / 1,000 above / 2,000 horiz** |\n| Class E *(at/above 10,000 MSL)* | Any | **5 SM** | **1,000 below / 1,000 above / 1 SM horiz** |\n| Class G *(at/below 1,200 AGL)* | **Day** | **1 SM** | **Clear of clouds** |\n| Class G *(at/below 1,200 AGL)* | **Night** | **3 SM** | Clear of clouds |\n| Class G *(above 1,200 AGL, below 10,000)* | **Day** | 1 SM | 500 below / 1,000 above / 2,000 horiz |\n| Class G *(above 1,200 AGL, below 10,000)* | **Night** | 3 SM | 500 below / 1,000 above / 2,000 horiz |\n\n### Why the Non-Obvious Entries Exist\n- **Class B — Clear of clouds:** ATC actively separates VFR from all IFR traffic inside Class B — the pilot does not need the cloud buffer\n- **Class E above 10,000 — 5 SM:** Higher aircraft speeds at cruise altitude require a greater visual buffer for effective see-and-avoid\n- **Class G night — 3 SM:** Nighttime physiological limits eliminate the see-and-avoid capability that makes 1 SM daytime viable"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Special VFR — When and How to Request It",
+      "why": "Special VFR is widely misunderstood: many pilots don't know it exists, and those who do often don't know it is only valid within controlled surface areas, or that night SVFR requires an instrument rating. The DPE presents 2 SM visibility at a Class D airport and asks: 'Can you legally depart?'",
+      "knowledge": "Special VFR (14 CFR 91.157): allows a VFR aircraft to operate in a controlled airport surface area in conditions below standard VFR minimums. Requirements: (1) Pilot must request it — ATC cannot offer SVFR. (2) Minimums: 1 SM flight visibility, clear of clouds. (3) Geographic scope: only valid within the lateral limits of a controlled surface area (Class B, C, D, or Class E surface extensions). Outside the surface area: standard VFR minimums immediately resume. (4) Night SVFR: pilot must be instrument-rated and aircraft must be IFR-equipped. Night SVFR without instrument rating is illegal. (5) Available at all surface areas except those where NOTAM'd prohibited (typically major Class B airports — listed in Chart Supplement 'special notices' as 'SVFR operations prohibited').",
+      "acs_elements": [
+        "PA.I.E.K2"
+      ],
+      "far_references": [
+        "14 CFR 91.157"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### Special VFR — 14 CFR 91.157\n- Allows VFR aircraft to operate in a **controlled surface area** in conditions **below standard VFR minimums**\n\n### Key Rules\n| Rule | Detail |\n|---|---|\n| **Who requests it** | **Pilot only** — ATC cannot offer or suggest it |\n| **Minimums** | **1 SM flight visibility** and **clear of clouds** |\n| **Where it applies** | Only within the **lateral limits of the surface area** (Class B, C, D, or E surface) |\n| **Outside the surface area** | Standard VFR minimums **immediately resume** |\n| **Night SVFR** | Requires **instrument rating** + **IFR-equipped** aircraft |\n| **Prohibited airports** | Some major Class B airports: **'SVFR operations prohibited'** — check Chart Supplement |\n\n### Operational Use\n- VFR pilot is blocked from departing in 1.5 SM and 500-foot ceiling at a Class D airport\n- Pilot **requests SVFR** clearance from the tower\n- Tower provides SVFR clearance → pilot maintains 1 SM and clear of clouds\n- Upon exiting the Class D surface area: must be at or above **standard VFR minimums** to continue\n\n> **Checkride Trap:** Night SVFR without instrument rating = **illegal**, regardless of the ceiling or visibility"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Controlled vs. Uncontrolled Airport Operations Without a Tower",
+      "why": "The DPE scenario: 'You arrive at an untowered airport with a dashed magenta line around it. The ceiling is 800 feet. Can you land VFR?' The answer requires knowing if the dashed magenta makes it Class E from the surface — if so, standard minimums apply. A pilot who assumes all untowered airports are Class G operates below legal minimums in Class E.",
+      "knowledge": "The fundamental trap: an airport can be untowered (no radio communication required) and still be in controlled airspace (Class E from the surface). How to determine: (1) Dashed magenta boundary = Class E from the surface (controlled) — standard minimums apply: 3 SM, 500/1,000/2,000, regardless of whether a tower operates. (2) No dashed magenta, no tower = Class G below the E floor — looser G minimums apply. Practical impact: an airport with a dashed magenta boundary shows a ceiling of 800 feet and visibility of 2 SM. Class E minimum is 3 SM and 1,000 above clouds. With a visibility of 2 SM: VFR minimums not met — cannot land legally even though no ATC exists and no communication is required.",
+      "acs_elements": [
+        "PA.I.E.K2"
+      ],
+      "far_references": [
+        "14 CFR 91.155",
+        "14 CFR 91.127"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25C",
+        "Aeronautical Chart User's Guide"
+      ],
+      "knowledge_formatted": "### The Controlled vs. Uncontrolled Trap\n\n> An airport can be **untowered** (no radio requirement) but still be in **controlled airspace** (Class E from the surface)\n\n### How to Determine Airspace Type at an Untowered Airport\n| Chart Symbol | Airspace | Weather Minimums |\n|---|---|---|\n| **Dashed magenta** boundary around airport | **Class E from the surface** (controlled) | **3 SM, 500/1,000/2,000** |\n| **No dashed magenta** boundary, no tower | **Class G** (uncontrolled) | Day: **1 SM, clear of clouds** (below 1,200 AGL) |\n\n### Practical Scenario\n- Airport has **dashed magenta** boundary (Class E surface)\n- Current conditions: visibility **2 SM**, ceiling **800 feet**\n- Class E minimum = **3 SM** visibility\n- Result: **Cannot land VFR** — minimums not met even though no ATC exists and no radio call is required\n\n> **Checkride Trap:** 'There's no tower there, so I can apply Class G minimums.' WRONG. The **dashed magenta line** overrides the absence of a tower — it is Class E from the surface and Class E minimums apply"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Visibility Measurement — Statute Miles vs. RVR and the Legal Standard",
+      "why": "The DPE asks: 'The METAR says RVR 4000 — is that 4,000 feet or 4 statute miles?' Answer: 4,000 FEET of runway visual range — approximately 0.75 statute miles. This is below VFR minimums. The unit confusion leads directly to launches into IMC.",
+      "knowledge": "VFR weather minimums are expressed in statute miles (SM). Two visibility measurements: (1) Prevailing Visibility (METARs): visibility in statute miles — 'SM' suffix. Example: '5SM' = 5 statute miles. Standard reference for VFR operations. (2) Runway Visual Range (RVR): measured by transmissometers along runways, reported in hundreds of FEET. Example: 'R18/4000FT' = 4,000 feet RVR on Runway 18 = approximately 0.66-0.75 SM. RVR appears in METARs when visibility falls below 5,000 RVR. Conversion: 1 SM = 5,280 feet. Legal standard: VFR minimums reference prevailing visibility in SM. RVR 4,000 feet = ~0.75 SM — well below the standard 3 SM VFR minimum.",
+      "acs_elements": [
+        "PA.I.E.K2"
+      ],
+      "far_references": [
+        "14 CFR 91.155"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA-H-8083-15B"
+      ],
+      "knowledge_formatted": "### Two Visibility Measurement Systems\n\n| Type | Units | Where Used | Example |\n|---|---|---|---|\n| **Prevailing Visibility** | **Statute Miles (SM)** | METARs — standard preflight planning | `5SM` = 5 statute miles |\n| **Runway Visual Range (RVR)** | **Hundreds of FEET** | METARs (when vis < 5,000 RVR), IFR approaches | `R18/4000FT` = 4,000 **feet** |\n\n### RVR to Statute Miles Conversion\n- 1 SM = **5,280 feet**\n- RVR **4,000 feet** ≈ **0.75 SM** — well below the 3 SM VFR minimum\n- RVR **6,000 feet** ≈ **1.1 SM** — still below 3 SM standard VFR\n\n### Legal Standard for VFR Operations\n- VFR minimums always reference **prevailing visibility in statute miles**\n- RVR is a supplemental IFR precision approach measurement\n- RVR does **not** substitute for SM visibility in VFR legality determination\n\n> **Checkride Trap:** 'The METAR shows RVR 4000.' That is **4,000 feet**, approximately 0.75 SM — NOT 4 miles. Launching with the mistaken belief that '4000 = 4 miles' is a departure into IMC"
+    }
+  ],
+  "lesson_overview": "## VFR Weather Minimums — The Full 91.155 Table, No Shortcuts\n\nEvery pilot knows 'three and a half' — 3 SM visibility, 500 below, 1,000 above, 2,000 horizontal from clouds. Except that's only one of six different weather minimum sets in 14 CFR 91.155. The DPE will pick the one you haven't memorized.\n\n**Why weather minimums exist by airspace class.** In Class B, ATC is actively separating VFR from IFR — the see-and-avoid buffer isn't needed in the same way, so minimums are relaxed: just 3 SM and clear of clouds. In Class G at low altitude during the day, traffic density is low — so the minimum can be as low as 1 SM clear of clouds. The minimums make sense once you understand the rationale.\n\n**The full 91.155 table.** Commit this to memory: Class B = 3 SM clear of clouds. Class C/D/E below 10,000 = 3 SM, 500/1,000/2,000. Class E at/above 10,000 = 5 SM, 1,000/1,000/1 SM. Class G day below 1,200 = 1 SM clear. Class G night below 1,200 = 3 SM clear. Class G above 1,200 day = 1 SM, 500/1,000/2,000. Class G above 1,200 night = 3 SM, 500/1,000/2,000.\n\n**Special VFR: the exception in the surface area.** When conditions at a controlled airport surface area fall below standard VFR minimums, a VFR pilot has one option: request Special VFR. The pilot MUST ask for it — ATC cannot offer it. The minimums during SVFR: 1 SM flight visibility and clear of clouds. Geographic scope: only within the lateral boundaries of the surface area. Night SVFR requires instrument rating AND IFR-equipped aircraft.\n\n**The Class E surface trap.** If an airport has a dashed magenta boundary (Class E from the surface), standard Class E minimums apply — 3 SM, 500/1,000/2,000 — even though no tower operates and no communications are required. A pilot arriving at 2 SM visibility at this airport is below minimums, period.\n\n**RVR vs. statute miles — the unit trap.** METAR visibility is in statute miles. RVR is in hundreds of feet. 'RVR 4000' = 4,000 FEET = approximately 0.75 SM — well below VFR minimums. The checkride trap delivers RVR values and waits for the pilot to confuse units.\n\n**The checkride trap:** Two-part question: (1) 'Surface visibility 2 SM at a Class D. Can you depart VFR?' Not legally — 3 SM minimum. But you COULD request SVFR for 1 SM minimum. (2) 'Can you fly SVFR at night without an instrument rating?' No — night SVFR requires instrument rating and IFR equipment.",
+  "audio_file": "PPL_PA_I_E_audio.m4a",
+  "video_file": "PPL_PA_I_E_video.mp4"
+}

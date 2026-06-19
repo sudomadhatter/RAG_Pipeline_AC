@@ -33,7 +33,7 @@ Keep it minimal — only these per session:
 
 "Project file" means EVERYTHING in the working tree: source code, story files,
 `sprint-status.yaml`, configs, YAML, `.env`, `package.json`. The ONLY exception is the
-`_01_My/_artifacts/` folder itself.
+`_claude_artifacts/` folder itself.
 
 ## The Gate
 
@@ -49,7 +49,7 @@ A plan from a prior session is NOT pre-approved. Re-present it and get fresh sig
 Read, grep, run non-mutating commands. Understand the problem. Write to NO project file.
 
 ### 2. Create the artifact folder + plan
-Folder: `_01_My/_artifacts/<YYYY-MM-DD>_<slug>/` — date FIRST, slug LAST so they sort
+Folder: `_claude_artifacts/<YYYY-MM-DD>_<slug>/` — date FIRST, slug LAST so they sort
 chronologically (e.g. `2026-05-29_epic-9-ios-shell-meta`). Slug: lowercase, hyphen-separated,
 max 6 words, from Daniel's first concrete request.
 
@@ -97,7 +97,7 @@ terse — it is the list, not a second walkthrough.
 
 ### 6. Write `code-review.md` (whenever a code review runs)
 **Any code review — `/code-review`, `bmad-code-review`, or an ad-hoc review — MUST be saved as
-a `code-review.md` artifact in the current session's `_01_My/_artifacts/<YYYY-MM-DD>_<slug>/` folder**
+a `code-review.md` artifact in the current session's `_claude_artifacts/<YYYY-MM-DD>_<slug>/` folder**
 (use `code-review-N.md` if a session runs more than one). Presenting findings only inline in the
 chat is NOT sufficient. The artifact captures: scope (files/diff reviewed), method/effort, every
 finding (file:line, severity, failure scenario, suggested fix), and a disposition checklist

@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_III_B_01",
+  "title": "Traffic Patterns & Airport Operations",
+  "questions": [
+    {
+      "id": "PPL_PA_III_B_01_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are a student pilot on a solo cross-country. At your destination towered airport, the controller issues the following clearance: 'Cessna 3AB, Runway 28 Left, cleared to land, hold short of Runway 32.' Under 14 CFR 91.126 and the LAHSO program rules, what is your required response?",
+      "options": [
+        {"label": "A", "text": "Accept the LAHSO clearance, calculate the Available Landing Distance against your aircraft's landing performance, and comply if the numbers work"},
+        {"label": "B", "text": "Read back the LAHSO clearance and comply — LAHSO clearances are mandatory ATC instructions under 14 CFR 91.123, and pilots may not decline mandatory clearances"},
+        {"label": "C", "text": "Respond 'Unable, request full-length Runway 28 Left' — student pilots are prohibited from accepting LAHSO clearances under any conditions"},
+        {"label": "D", "text": "Accept the clearance only if the ceiling is at or above 1,000 feet, visibility is 3 statute miles, and the runway is dry, since these are the weather minimums for any LAHSO acceptance"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Student pilots are categorically prohibited from accepting LAHSO (Land and Hold Short Operations) clearances — this is a non-negotiable restriction, regardless of weather conditions, runway length, or aircraft performance. The correct response is 'Unable,' followed by a request for full-length runway. While Option D correctly identifies the LAHSO weather minimums (ceiling >= 1,000 ft, visibility >= 3 SM, dry runway), those minimums only apply to pilots who ARE eligible to accept LAHSO. Option B incorrectly states LAHSO is mandatory — any pilot may decline a LAHSO clearance by saying 'Unable.' AIM 4-3-11 specifies that pilots should decline LAHSO when safety is in question, and the student pilot prohibition ensures that less-experienced pilots are not placed in a scenario requiring precision landing distance management under pressure.",
+      "far_reference": "14 CFR 91.126; 14 CFR 91.129",
+      "acs_element": "PA.III.B.K1"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A Cessna 172 and a Piper Cherokee are converging at 3,500 feet MSL in Class E airspace. The Cessna pilot sees the Cherokee at the 2 o'clock position, at approximately the same altitude. Under 14 CFR 91.113, which aircraft has the right-of-way?",
+      "options": [
+        {"label": "A", "text": "The Cessna 172, because high-wing aircraft have visual priority over low-wing aircraft due to their superior downward visibility from the cockpit"},
+        {"label": "B", "text": "The Cherokee, because it is to the Cessna's right — when two aircraft of the same category converge, the aircraft to the other's right has the right-of-way"},
+        {"label": "C", "text": "Neither aircraft has priority — when two powered aircraft of the same category converge, both must alter course to the right until the conflict is resolved"},
+        {"label": "D", "text": "The aircraft at the lower altitude has priority under the landing right-of-way rule, which applies whenever two aircraft are at approximately the same altitude"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Under 14 CFR 91.113(e), when two aircraft of the same category are converging at approximately the same altitude, the aircraft to the other's RIGHT has the right-of-way. The Cessna sees the Cherokee at 2 o'clock (to the Cessna's right), so the Cherokee has right-of-way, and the Cessna pilot must give way — typically by altering course to the right and/or descending. Option A is fabricated — wing configuration has no bearing on right-of-way priority. Option C describes the head-on rule (91.113(d)), not the converging rule. Option D's landing priority only applies to aircraft on final approach or landing (91.113(g)), not general en route convergence. The key principle: the right-of-way rules are based on maneuverability (91.113(c)) and geometry (91.113(d-g)), never aircraft type within the same category.",
+      "far_reference": "14 CFR 91.113(e)",
+      "acs_element": "PA.III.B.K3"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A private pilot departing Runway 28 at a non-towered airport sees a Boeing 737 touch down on the same runway 90 seconds before the pilot's planned takeoff. The wind is a direct crosswind from the right at 3 knots. Beyond the basic wake turbulence avoidance of rotating before the 737's rotation point, what specific wind-related hazard makes this departure unusually dangerous?",
+      "options": [
+        {"label": "A", "text": "The 3-knot crosswind will accelerate the 737's wake vortices to dissipate faster than normal, creating a brief but extremely intense turbulence burst within 30 seconds of touchdown"},
+        {"label": "B", "text": "The 3-knot right crosswind will arrest the upwind (right) vortex directly over the runway centerline, concentrating the most powerful vortex exactly where the departing aircraft will roll and rotate"},
+        {"label": "C", "text": "A 3-knot crosswind will push both vortices to the left side of the runway, clearing the centerline and making departure safer from the right side of the runway only"},
+        {"label": "D", "text": "The crosswind will lift the 737's vortices above pattern altitude within 60 seconds, creating a hazard for aircraft in the traffic pattern but not for aircraft on the runway surface"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Wake vortices normally drift laterally away from the runway centerline at 2-3 knots. However, a light crosswind of approximately 3-5 knots can arrest the upwind vortex and park it directly on the runway centerline — the exact path the departing light aircraft will use for takeoff roll and rotation. This is the single most dangerous wake turbulence condition because the strongest vortex is concentrated precisely where the light aircraft is most vulnerable (low altitude, low airspeed, limited control authority during rotation). AIM 7-4-6 describes vortex behavior and emphasizes that a light quartering tailwind can cause vortices to remain in the touchdown/rotation zone. The NTSB database contains multiple fatal accidents where light aircraft encountered wake vortices during departure behind heavy aircraft in light crosswind conditions (NTSB accident data: wake vortex encounters, departure phase).",
+      "far_reference": "14 CFR 91.113",
+      "acs_element": "PA.III.B.R3"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A pilot is scanning for traffic while flying straight and level at 4,500 feet in hazy conditions. The pilot uses a slow, sweeping gaze across the windscreen without pausing. After 5 minutes, the pilot has not detected any traffic. Beyond the general difficulty of spotting aircraft, what specific physiological mechanism makes this scanning technique dangerously ineffective?",
+      "options": [
+        {"label": "A", "text": "A continuous sweep triggers motion-induced blindness, where the brain suppresses all visual input during eye movement, making the pilot functionally blind during the entire scan"},
+        {"label": "B", "text": "Without pausing, the fovea (sharp central vision) never focuses on any sector — only the peripheral vision is engaged, and peripheral vision detects motion, not stationary objects like a converging aircraft"},
+        {"label": "C", "text": "Hazy conditions cause the pupil to constrict to its minimum aperture, reducing the total light entering the eye and making it physically impossible to detect contrast differences at range"},
+        {"label": "D", "text": "A sweeping gaze in haze triggers vestibular-ocular reflex suppression, which disconnects the eye from the inner ear balance system and causes the pilot to lose spatial orientation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The critical physiological issue is foveal focus. The fovea — the small central area of the retina responsible for sharp, detail-resolving vision — requires a brief pause (approximately 1 second) to focus on a specific sector. A continuous sweep engages only peripheral vision, which is excellent at detecting relative motion but cannot resolve the shape or identify a stationary object at distance. An aircraft on a direct collision course appears STATIONARY in the windscreen — no relative motion to trigger peripheral detection. Only a deliberate sector-by-sector scan with foveal pauses can detect a converging target. Additionally, in featureless conditions (haze, overcast), 'empty-field myopia' causes the eye to focus at approximately 10-30 feet when no focal target is available. The AC 90-48D (Pilots' Role in Collision Avoidance) describes the correct 10-degree sector scan technique specifically to overcome these biological limitations.",
+      "far_reference": "14 CFR 91.113(b)",
+      "acs_element": "PA.III.B.R1"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "You are approaching an unfamiliar non-towered airport and tune the AWOS frequency. The broadcast reports: 'Wind 270 at 8, visibility 10, ceiling 3,500 broken, temperature 28, dewpoint 18, altimeter 30.12.' The airport has Runways 9 and 27. You see a segmented circle with L-shaped traffic pattern indicators extending from the Runway 27 end pointing south. What runway, pattern direction, and TPA do you plan?",
+      "options": [
+        {"label": "A", "text": "Runway 27, right traffic pattern, 1,000 feet AGL — landing into the wind with the pattern direction indicated by the L-shaped extensions pointing to the right of Runway 27"},
+        {"label": "B", "text": "Runway 27, left traffic pattern, 1,000 feet AGL — landing into the wind with standard left turns since the segmented circle L-shapes indicate the downwind leg is south of the runway"},
+        {"label": "C", "text": "Runway 9, left traffic pattern, 1,000 feet AGL — landing with a tailwind is safer at an unfamiliar airport because it provides a longer final approach for visual reference"},
+        {"label": "D", "text": "Runway 27, left traffic pattern, 500 feet AGL — the AWOS temperature and dewpoint indicate high density altitude, requiring a lower pattern altitude to maintain adequate engine performance"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The wind is from 270 degrees (west), so Runway 27 is the preferred runway for landing into the wind. The segmented circle's L-shaped traffic pattern indicators extending from the Runway 27 end pointing south show that the downwind leg is south of the runway — this indicates LEFT traffic (standard pattern). The standard TPA is 1,000 feet AGL unless published otherwise in the Chart Supplement. Option A incorrectly interprets the L-shapes as indicating right traffic. Option C selects the tailwind runway — always land into the wind when possible. Option D fabricates a density altitude reason to fly at a dangerously low 500-foot pattern. Per 14 CFR 91.126, all turns in the traffic pattern are to the left unless the airport indicates otherwise through the segmented circle or Chart Supplement entry.",
+      "far_reference": "14 CFR 91.126",
+      "acs_element": "PA.III.B.K4"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are flying to a non-towered airport you have never visited. You are 15 miles out at 4,500 feet MSL. The Chart Supplement shows TPA as 1,800 feet MSL (airport elevation 800 feet). What is the correct arrival procedure per AC 90-66C?",
+      "options": [
+        {"label": "A", "text": "Descend to TPA (1,800 MSL) immediately, fly directly to the upwind end of the expected runway, and enter the traffic pattern on a crosswind entry"},
+        {"label": "B", "text": "Descend to TPA (1,800 MSL), make position reports on CTAF, fly a straight-in approach to the expected runway to minimize time in the traffic pattern"},
+        {"label": "C", "text": "Overfly the airport at 2,300 feet MSL (500 feet above TPA), observe the segmented circle and windsock, note traffic flow, descend clear of the pattern, then enter at 45 degrees to the midpoint of the downwind leg"},
+        {"label": "D", "text": "Descend to 1,300 feet MSL (500 feet below TPA), fly under the traffic pattern to identify the active runway visually, then climb to TPA and enter from the base leg"}
+      ],
+      "correct_answer": "C",
+      "explanation": "AC 90-66C establishes the recommended procedure for arriving at an unfamiliar non-towered airport: overfly at 500 feet above TPA to observe the segmented circle (pattern direction), windsock (active runway), and any existing traffic flow. This overflight provides situational awareness without interfering with pattern traffic. After observation, descend clear of the pattern area, then enter at a 45-degree angle to the midpoint of the downwind leg. This 45-degree entry provides the maximum viewing angle to scan the entire pattern before merging with traffic. Option A enters on crosswind — less standard and provides poor scan angle. Option B's straight-in approach eliminates the ability to observe traffic in the pattern. Option D flies BELOW pattern altitude, creating a conflict with aircraft on downwind, base, and final.",
+      "far_reference": "14 CFR 91.126",
+      "acs_element": "PA.III.B.K1"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are number two for departure at a non-towered airport behind a Beechcraft King Air (turboprop, approximately 12,000 lbs). The King Air departs and lifts off approximately 2,000 feet down the 4,000-foot runway. The wind is calm. You are in a Cessna 172. All four actions below are legal at a non-towered airport. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Depart immediately behind the King Air to maintain your sequence — the 90-second gap and your lighter weight mean the wake vortices will have moved off the runway by the time you rotate", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Depart immediately — you fly behind turboprops regularly and have never experienced wake turbulence, so the published avoidance procedures are overly conservative for this weight class", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the departure entirely and taxi back to the ramp — wake turbulence from a King Air is too dangerous for a Cessna 172 to handle, and no departure is worth the risk", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Wait a full 3 minutes for vortex dissipation, then taxi into position, plan to rotate BEFORE the King Air's rotation point (before the 2,000-foot mark), and climb above the King Air's climbout path"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A rushes the departure to maintain sequence priority (get-there-itis) — in calm winds, wake vortices from a 12,000-lb turboprop can persist for several minutes with no lateral drift to move them off the runway. Option B dismisses the hazard based on personal past experience (macho) — survivorship bias does not equal safety; wake encounters at low altitude in light aircraft can be unrecoverable. Option C abandons the mission entirely (resignation) — while wake turbulence is serious, a King Air is not a heavy jet, and standard avoidance procedures effectively mitigate the risk. Option D is the active professional middle path: wait for vortex dissipation time (3 minutes per AIM 7-4-6 recommendation), rotate before the King Air's rotation point so the Cessna's flight path stays ahead of the vortex generation point, and climb above the King Air's flight path to avoid the sinking vortices.",
+      "explanation": "Wake vortices are generated by all aircraft producing lift, with intensity proportional to weight and inversely proportional to speed and wing configuration. A King Air at 12,000 lbs generates significant vortices — less than a heavy jet but enough to roll a Cessna 172 at low altitude. In calm wind conditions, vortices persist near the runway surface with minimal lateral drift. AIM 7-4-6 recommends 3-minute separation behind large aircraft at non-towered airports. The avoidance technique — rotate before the preceding aircraft's rotation point, climb above their flight path — ensures the departing aircraft stays above and ahead of the vortex field. The NTSB has investigated multiple fatal wake turbulence encounters during departure behind turboprop aircraft in calm wind conditions (NTSB accident database: wake turbulence + departure phase + turboprop).",
+      "far_reference": "14 CFR 91.113",
+      "acs_element": "PA.III.B.R3"
+    },
+    {
+      "id": "PPL_PA_III_B_01_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are on a 45-degree entry to the downwind leg at a busy non-towered airport. You have been making position reports on CTAF, but you hear no other traffic on frequency. You enter the downwind and suddenly see an aircraft on short final that you did not hear on the radio — they appear to be NORDO or on the wrong frequency. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue your downwind, base, and final as planned — you were in the pattern first, broadcasting on CTAF, and have established right-of-way over the NORDO aircraft through standard procedure", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Flash your landing lights and rock your wings aggressively to signal the NORDO aircraft that you are in the pattern — they need to see you and adjust their approach, not the other way around", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Depart the traffic pattern immediately and fly to an alternate airport — you cannot safely operate at an airport where other aircraft are not communicating, and continuing is too risky", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Extend your downwind to increase spacing behind the NORDO aircraft, make a clear position report on CTAF including the NORDO traffic, and visually sequence yourself to land after them with adequate separation"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A assumes right-of-way based on having broadcast first (get-there-itis) — but 14 CFR 91.113(g) gives priority to the lower aircraft on final, and right-of-way rules apply regardless of radio communication. Pressing into a conflict with a NORDO aircraft is the mechanism that produces midair collisions. Option B attempts to force the other pilot to react through visual signals (macho) — but the NORDO pilot may not see the signals, and aggressive maneuvering near the pattern increases collision risk. Option C abandons the airport entirely (resignation) — NORDO aircraft at non-towered airports are uncommon but not exceptional, and standard see-and-avoid procedures handle this scenario. Option D is the active professional middle path: extend downwind to create spacing (test — can you safely sequence behind them?), broadcast the NORDO traffic on CTAF to alert other pattern traffic (mitigation), and visually self-sequence with adequate separation. This is exactly how the non-towered airport system is designed to work — see-and-avoid is the primary collision avoidance method, with radio as a supplement.",
+      "explanation": "At non-towered airports, radio communication is advisory — not required for pattern operations in Class G or E airspace. The collision avoidance system at non-towered airports is built on see-and-avoid (14 CFR 91.113(b)), with CTAF as a supplemental awareness tool. When a NORDO aircraft appears, the see-and-avoid system must function independently. Extending downwind to create spacing is the standard technique for self-sequencing behind unexpected traffic. AC 90-66C describes non-towered airport procedures and emphasizes that pilots must maintain vigilance for aircraft that may not be communicating on CTAF. NTSB midair collision data at non-towered airports shows that the majority of fatal midair collisions occur when one or both aircraft were not monitoring CTAF — the surviving system is always visual separation (NTSB Safety Study: Midair Collisions in U.S. Civil Aviation).",
+      "far_reference": "14 CFR 91.113(b); 14 CFR 91.113(g)",
+      "acs_element": "PA.III.B.R1"
+    }
+  ]
+}

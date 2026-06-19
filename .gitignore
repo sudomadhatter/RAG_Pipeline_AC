@@ -12,8 +12,12 @@ auth_keys/
 *.json
 !curriculum_*.jsonl
 !library_*.jsonl
-!specialist_curriculum/rkp_manifests/*.json
-!specialist_curriculum/quiz_banks/*.json
+# Canonical curriculum sources MUST be tracked (the dir moved from specialist_curriculum/)
+!curriculum_components/rkp_manifests/*.json
+!curriculum_components/quiz_banks/*.json
+!curriculum_components/curriculum_modules/*.json
+# Curriculum metadata sidecars (Area IX etc.)
+!pipeline/curriculum/**/*.json
 
 # Python
 __pycache__/

@@ -1,0 +1,90 @@
+{
+  "lesson_id": "PPL_PA_I_C_05",
+  "title": "Weather Hazards — Thunderstorms, Icing, and Cockpit Weather Limitations",
+  "acs_task_reference": "Area I, Task C",
+  "acs_element_keys": [
+    "PA.I.C.K3",
+    "PA.I.C.R1",
+    "PA.I.C.R2"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "Thunderstorm Anatomy — Three Ingredients, Three Stages, Microburst",
+      "why": "The DPE will draw a scenario where a pilot is approaching a thunderstorm. The correct response requires naming the three ingredients AND correctly describing microburst behavior — specifically the inverted performance signature that kills pilots who try to 'push through.'",
+      "knowledge": "Thunderstorm formation requires three simultaneous ingredients: (1) Sufficient moisture, (2) A lifting force (front, orographic, surface heating), (3) An unstable lapse rate. Three lifecycle stages: Cumulus (updrafts only, growing), Mature (most intense — both updrafts and violent downdrafts, hail, lightning, turbulence, windshear, virga), Dissipating (predominantly downdrafts, anvil dispersing). Microburst: highly localized severe downdraft less than 2.5 NM diameter and less than 1,000 feet deep. Performance signature: INCREASING headwind (false climb improvement) → MASSIVE central downdraft (up to 6,000 fpm) → INCREASING tailwind (sudden loss of lift). Recovery: maintain airspeed, accept altitude loss, do not pitch aggressively.",
+      "acs_elements": [
+        "PA.I.C.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "AC 00-54"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-28",
+        "AC 00-54",
+        "AIM"
+      ],
+      "knowledge_formatted": "### Three Ingredients for Thunderstorm Formation\n- **Sufficient moisture**\n- **Lifting force** (frontal, orographic, surface heating/convective)\n- **Unstable lapse rate** (atmosphere that amplifies rising air motion)\n\n### Three Thunderstorm Lifecycle Stages\n| Stage | Characteristics | Hazard Level |\n|---|---|---|\n| **Cumulus** | Updrafts only — storm building | Developing |\n| **Mature** | Updrafts + violent downdrafts, rain, hail, lightning, turbulence | **Maximum** |\n| **Dissipating** | Predominantly downdrafts, anvil dispersing | Decreasing |\n\n### Microburst — The Performance Inversion Trap\n- Highly localized downdraft: **< 2.5 NM diameter**, **< 1,000 feet deep**\n- Downdraft speed: can exceed **6,000 fpm**\n\n**Three-phase Performance Signature:**\n1. Aircraft enters zone of **increasing headwind** → false airspeed gain, engine seems to perform better\n2. Aircraft reaches **central column** → massive sudden downdraft, aircraft cannot climb\n3. Aircraft exits into **increasing tailwind** → sudden, catastrophic **loss of lift**\n\n**Recovery:** Maintain airspeed at Vx/Vy, accept altitude loss, do NOT pitch aggressively into a stall\n\n> FAA recommendation: **Do not attempt takeoff or landing** when microburst conditions are reported or suspected — **divert**"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Structural and Carburetor Icing — Different Conditions, Different Dangers",
+      "why": "The exam distinguishes structural icing (requires visible moisture below freezing) from carburetor icing (can form at +90°F / +32°C air with high humidity — no visible moisture needed). Applicants who conflate the two demonstrate a dangerous knowledge gap.",
+      "knowledge": "Structural icing forms when an aircraft flies through visible moisture (clouds, precipitation, drizzle) with temperatures at or below 0°C at the collecting surface. Types: (1) Clear ice — large supercooled drops spread and freeze slowly, heavy and clear, extends rearward — most aerodynamically dangerous. (2) Rime ice — small drops freeze instantly on impact, rough white opaque deposit on leading edge — less dense but disruptive. All structural ice increases weight, increases induced drag, degrades lift, raises stall speed. FROST is entirely prohibited on lifting surfaces before takeoff — disrupts boundary layer comparably to rime ice. Carburetor ice: forms inside the venturi due to fuel vaporization and pressure drop cooling — can form at temperatures up to 90°F (32°C) with humidity above 60%. Does NOT require visible moisture or sub-freezing OAT. Remedy: FULL carb heat.",
+      "acs_elements": [
+        "PA.I.C.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "AC 00-45H"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-28",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### Structural Icing\n- Forms in **visible moisture** (clouds, precipitation, drizzle) at OAT **at or below 0°C** at the airframe surface\n\n| Ice Type | Formation | Appearance | Danger Level |\n|---|---|---|---|\n| **Clear Ice** (Glaze) | Large supercooled drops — freeze slowly | Heavy, clear, extends rearward | **Most dangerous** |\n| **Rime Ice** | Small drops — freeze instantly on impact | Rough, white, opaque on leading edge | Aerodynamically disruptive |\n| **Mixed Ice** | Combination of both | Variable | Severe |\n\n**Effects of ANY structural ice:**\n- Increases **weight**\n- Increases **induced drag**\n- Reduces **lift**, disrupts boundary layer\n- Raises **stall speed**\n\n> **Frost:** Not structural ice, but **prohibited on lifting surfaces before takeoff** — disrupts boundary layer like rime ice\n\n### Carburetor Icing — No Visible Moisture Required\n- Forms inside the carburetor venturi due to **fuel vaporization** and **pressure drop cooling**\n- Can form at temperatures up to **+32°C (90°F)** with relative humidity above **60%**\n- **Does NOT require** below-freezing outside air or visible moisture\n- **Symptoms:** Unexplained RPM drop, rough running, loss of power\n- **Remedy:** Full carburetor heat (hot position) — accept temporary rough running as ice melts"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Fog Types — Radiation, Advection, Upslope, Steam",
+      "why": "The fog question is the single most reliable pop-up on PPL checkrides. The DPE describes conditions and asks the applicant to name the fog type. Radiation fog requires calm winds — advection fog requires wind. These are mutually exclusive on that characteristic.",
+      "knowledge": "Four fog types tested at PPL level: (1) Radiation Fog — forms on clear, calm nights when the surface cools via terrestrial radiation. Requires: calm or very light winds (<3 knots), cloudless sky, high relative humidity. Burns off rapidly after sunrise. (2) Advection Fog — forms when moist warm air moves horizontally over a cooler surface. Requires: WIND (horizontal transport). Can form in any amount of wind, any time of day. Common coast, winter. (3) Upslope Fog — moist stable air forced up terrain, cools adiabatically to dewpoint. Common on windward sides of mountain ranges. (4) Steam Fog (Sea Smoke) — cold air moves over warm water, vapor evaporates and immediately condenses. Common on rivers/lakes in autumn mornings.",
+      "acs_elements": [
+        "PA.I.C.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "AC 00-45H"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-28",
+        "FAA-H-8083-25C",
+        "AIM"
+      ],
+      "knowledge_formatted": "### Four Fog Types — Quick Reference\n\n| Type | Key Requirement | Time of Day | Notes |\n|---|---|---|---|\n| **Radiation** | **Calm winds** (< 3 kts), clear sky, high humidity | Overnight — clear night | Burns off rapidly after sunrise |\n| **Advection** | **Wind required** (horizontal transport over cold surface) | Any time | Common coastal/winter — no nighttime requirement |\n| **Upslope** | Terrain gradient + moist stable air | Variable | Windward sides of mountain ranges |\n| **Steam** | Warm water + cold air flowing over it | Typically mornings | Rivers, lakes in autumn |\n\n### Memory Tool\n- **Radiation = CALM** (no wind)\n- **Advection = WIND** (horizontal movement)\n- **Upslope = TERRAIN**\n- **Steam = WARM WATER + COLD AIR**\n\n> **Critical distinction for the DPE:** Radiation fog requires calm winds. Advection fog requires wind. Stating one condition for the other is an immediate correction."
+    },
+    {
+      "id": "RKP_04",
+      "title": "Cockpit Weather Limitations — Datalink Latency and the Tactical vs. Strategic Distinction",
+      "why": "AC 00-63B defines the most dangerous operational behavior: using FIS-B radar to 'thread' between thunderstorms. This is exactly the behavior the NTSB attributes to several fatal convective accidents.",
+      "knowledge": "Cockpit weather displays (FIS-B via ADS-B, SiriusXM) carry a critical limitation: inherent data latency. NEXRAD cycle: one 360° volumetric scan in 5-6 minutes, then NWS processes the national mosaic, then FIS-B broadcasts the update. Total latency: 15-20 minutes typically. AC 00-63B defines two uses: (1) Strategic — long-range (50+ miles) routing around convective areas. APPROPRIATE use. (2) Tactical — short-range maneuvering (<10 miles) to thread between storm cells. EXPLICITLY PROHIBITED by AC 00-63B because a clear gap on the display may already be filled with a growing cell. FIS-B has altitude limitations: the 978 MHz UAT signal is line-of-sight; near terrain at low altitude, the aircraft may lose FIS-B reception entirely.",
+      "acs_elements": [
+        "PA.I.C.R2"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "AC 00-63B"
+      ],
+      "bridge_keys": [
+        "AC 00-63B",
+        "AIM",
+        "FAA-H-8083-28"
+      ],
+      "knowledge_formatted": "### FIS-B / Datalink Weather — The Latency Problem\n- **FIS-B (via ADS-B)** and **SiriusXM** weather displays have **inherent data latency**\n- NEXRAD radar cycle timeline:\n  - Ground station completes one 360° scan: **5–6 minutes**\n  - NWS assembles national mosaic: **additional time**\n  - FIS-B broadcasts update: **additional time**\n  - **Total latency from atmosphere to cockpit: 15–20 minutes**\n\n### Two Authorized Uses (AC 00-63B)\n| Use | Range | Status |\n|---|---|---|\n| **Strategic** | 50+ miles — long-range routing decisions | ✅ **Appropriate** |\n| **Tactical** | < 10 miles — threading between active cells | ❌ **PROHIBITED** |\n\n> A gap on the radar display that looks clear may already be **filled with a growing storm** that built in the 15 minutes since the radar frame was captured\n\n### Additional Limitation\n- FIS-B uses **978 MHz UAT** — line-of-sight signal\n- At low altitudes near terrain, the aircraft may **lose FIS-B reception entirely**, eliminating all cockpit weather data at exactly the highest-risk moment"
+    }
+  ],
+  "lesson_overview": "## Aviation Weather Hazards — The Killers You Can See Coming\n\nEvery hazardous weather condition that has ever killed a VFR pilot gave warning signs. The problem isn't that the hazards are invisible — the problem is that pilots didn't know what they were looking at, underestimated what they saw, or committed to the flight despite the signals. This lesson is about pattern recognition and decision architecture for the primary VFR weather killers.\n\n**Thunderstorms: the biggest hazard machine in the sky.** A thunderstorm isn't one hazard — it's six simultaneous hazards packaged in a cell: severe turbulence (updrafts to 6,000+ fpm inside the cell), extreme icing (supercooled water above the freezing level), hail (up to 3+ inches in diameter, falling outside the visible cell boundary), lightning (100 million volts), windshear (low-level outflow from downdrafts), and microbursts (intense localized downdrafts that can exceed aircraft climb performance). Three ingredients that must all be present simultaneously for a thunderstorm to form: sufficient moisture, a lifting mechanism, and atmospheric instability. The mature stage is the most lethal — updrafts and violent downdrafts coexist, hail is possible at any altitude from the surface to above 40,000 feet, and icing is present above the freezing level. The FAA-recommended minimum deviation from a visible thunderstorm cell: 20 NM lateral.\n\n**Microbursts: the invisible performance inversion.** The microburst is the most reliably lethal form of low-level wind shear because its performance signature is inverted from what the pilot expects. The aircraft enters a headwind zone and appears to perform better than expected — airspeed increases, climb rate improves. The pilot reduces power to compensate. Then the central downdraft column arrives (up to 6,000 fpm downward), and the aircraft cannot maintain altitude or obstacle clearance. The pilot who aggressively pitched up in the headwind phase has already degraded energy state and will stall on the downdraft exit. FAA recommendation: do not attempt landing or takeoff when microburst conditions exist; divert.\n\n**Structural icing: the VFR pilot's invisible IMC hazard.** Structural ice forms when supercooled water droplets (below 0°C but still liquid) contact the airframe and freeze. VFR pilots don't have deice equipment. Structural ice on a light aircraft adds weight, increases stall speed, and destroys clean-wing aerodynamics. The most dangerous type is clear ice — it spreads across the wing surface and builds rearward, changing the wing section in a way that can't be detected by feel alone. Key: if visible moisture exists AND OAT is at or below 0°C, icing is possible. Frost on lifting surfaces — even without structural ice accumulation — is prohibited before takeoff because it disrupts the boundary layer just as effectively as rime ice.\n\n**Carburetor icing: the fair-weather surprise.** Unlike structural icing, carburetor icing can form at temperatures up to 90°F (32°C) with high relative humidity and no visible moisture. The fuel vaporization and pressure drop inside the carburetor venturi cools the air by as much as 70°F. A VFR pilot on a warm, humid spring day cruising at 3,500 feet can develop carburetor ice and lose engine power — not because of any visible weather, but because of invisible humidity. Symptom: unexplained RPM loss in a fixed-pitch system. Remedy: full carb heat immediately.\n\n**Cockpit weather — a strategic, not tactical tool.** FIS-B weather on ADS-B or SiriusXM carries 15-20 minutes of inherent latency between what the atmosphere is doing and what appears on the cockpit display. AC 00-63B defines the correct use: strategic routing decisions from 50+ miles out. Tactical maneuvering between storm cells using cockpit radar is explicitly prohibited — a gap that appears on the display may already be a growing 50,000-foot storm that built during the latency window.\n\n**The checkride trap:** The DPE calls a scenario: you're in VFR conditions, the FIS-B shows a gap between two cells that appears passable. Can you navigate through? The correct answer: no. The display may be 15-20 minutes old. The appropriate use of FIS-B is strategic routing a significant distance from cells, not threading between them. The gap you see may not exist anymore.",
+  "audio_file": "PPL_PA_I_C_audio.m4a",
+  "video_file": "PPL_PA_I_C_video.mp4"
+}

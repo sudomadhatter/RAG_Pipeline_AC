@@ -80,10 +80,20 @@ def execute():
     db = firestore.client(database_id=DATABASE_ID)
 
     total = 0
+    cleaned_parents = 0
     for b in banks:
         lesson_id = b["lesson_id"]
         parent = db.collection(COLLECTION).document(lesson_id)
-        parent.set({"lesson_id": lesson_id, "title": b.get("title", "")}, merge=True)
+        # The app reads ONLY the questions SUBCOLLECTION (quiz_bank_service._fetch_all_questions).
+        # The parent doc must carry just lesson_id/title — strip any legacy embedded `questions`
+        # array (cruft from the old ingester) so there is one source of truth.
+        snap = parent.get()
+        if snap.exists and isinstance((snap.to_dict() or {}).get("questions"), list):
+            cleaned_parents += 1
+        parent.set(
+            {"lesson_id": lesson_id, "title": b.get("title", ""), "questions": firestore.DELETE_FIELD},
+            merge=True,
+        )
         qcol = parent.collection("questions")
         for q in b["questions"]:
             payload = dict(q)
@@ -93,6 +103,7 @@ def execute():
             total += 1
         print(f"  [OK] {lesson_id}: {len(b['questions'])} questions")
     print(f"\nIngested {total} questions across {len(banks)} lessons.")
+    print(f"Stripped legacy embedded `questions` array from {cleaned_parents} parent docs.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,64 @@
+{
+  "lesson_id": "PPL_PA_I_H_04",
+  "title": "Aeronautical Decision Making (PAVE & IMSAFE)",
+  "acs_task_reference": "Area I, Task H",
+  "acs_element_keys": [
+    "PA.I.H.S1",
+    "PA.I.H.R1"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "Associating Symptoms with Their Root Cause and Corrective Action",
+      "why": "The DPE presents a scenario — 'Your passenger has a severe headache and nausea, and you feel sluggish at 4,500 feet on a cold day' — and expects the applicant to instantly correlate the symptoms with the correct physiological cause and the precise corrective action. This skill (PA.I.H.S1) bridges theoretical aeromedical knowledge into real cockpit execution; the applicant who can name the cause AND the fix is operating at the correct ACS level.",
+      "knowledge": "PA.I.H.S1 is the practical skill of rapidly correlating physiological symptoms (headache, cyanosis/blue fingernails, ear pain, tingling, euphoria) with their exact root cause (carbon monoxide, hypoxia, trapped gas/barotrauma, hyperventilation) and immediately articulating the life-saving corrective action. Symptoms overlap heavily — dizziness is common to hypoxia, hyperventilation, and CO poisoning — so the pilot must read secondary environmental cues (Is the heater on? What is my altitude? Am I highly stressed?) to diagnose correctly. The FAA standard for ambiguity at altitude is unambiguous: if in doubt, treat for hypoxia FIRST by donning supplemental oxygen, then deliberately slow the breathing rate to address possible hyperventilation. The corrective action must match the cause — e.g., suspected CO: heater OFF, fresh-air vents open, oxygen if available, divert; suspected sinus/ear block on descent: arrest the descent, climb slightly, then a gradual descent with the Valsalva maneuver (oxygen does NOT fix expanding trapped gas).",
+      "acs_elements": [
+        "PA.I.H.S1"
+      ],
+      "far_references": [
+        "14 CFR 91.211",
+        "14 CFR 61.53"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25 (PHAK Ch 17)",
+        "AIM 8-1-2"
+      ],
+      "knowledge_formatted": "- **Correlate** symptom → cause → corrective action\n- Symptoms **overlap** (dizziness = hypoxia / hyperventilation / CO)\n- Read **secondary cues**: heater on? altitude? stress?\n- **In doubt at altitude:** treat **hypoxia first** (don oxygen), then slow breathing\n- Trapped gas on descent: **arrest descent + Valsalva**, not oxygen"
+    },
+    {
+      "id": "RKP_02",
+      "title": "IMSAFE Self-Assessment and the No-Go Decision",
+      "why": "Every checkride oral probes whether the applicant will honestly ground themselves. The applicant must show they evaluate their own fitness with IMSAFE before every flight and possess the professional discipline to make a conservative 'No-Go' when any deficiency is detected — an examiner respects a well-reasoned No-Go far more than a pilot who 'pushes through.'",
+      "knowledge": "PA.I.H.R1 requires identifying, assessing, and mitigating risks to physical and physiological readiness for flight. The primary tool is the IMSAFE checklist, which forces a systematic, honest evaluation of six areas: Illness, Medication, Stress, Alcohol, Fatigue, and Emotion. 14 CFR 61.53 prohibits acting as PIC with a known medical deficiency or while taking medication that makes operation unsafe (BasicMed limitations live in 14 CFR Part 68). In aeromedical scenarios the correct mitigation is almost universally the conservative No-Go: the mitigation must match the level of risk, and most physiological hazards (a head cold guaranteeing ear-block pain on descent, unmanaged fatigue, chronic stress) carry risk that cannot be safely bought down in flight.",
+      "acs_elements": [
+        "PA.I.H.R1"
+      ],
+      "far_references": [
+        "14 CFR 61.53",
+        "14 CFR Part 68"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-2 (Risk Management Handbook)",
+        "FAA-H-8083-25 (PHAK)"
+      ],
+      "knowledge_formatted": "- **IMSAFE:** Illness, Medication, Stress, Alcohol, Fatigue, Emotion\n- **14 CFR 61.53:** no PIC with a known medical deficiency\n- Aeromedical mitigation is almost always a **conservative No-Go**\n- The examiner **respects** a reasoned No-Go over 'pushing through'"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Aeromedical Risk Management: Hazard, Risk, Mitigation (and the DPE Trap)",
+      "why": "DPEs deliberately bait the risk-management assessment: 'You are mildly fatigued but you NEED to get home for a critical event.' The applicant who 'mitigates' fatigue with coffee instead of delaying the flight fails on the spot. The applicant must show the formal hazard → risk → mitigation process and resist external pressure.",
+      "knowledge": "Risk management for aeromedical issues is the formal process of identifying a hazard (e.g., a sinus cold), assessing the resulting risk (e.g., a ruptured eardrum on descent), and implementing a mitigation that matches the risk. Two classic failure modes the DPE watches for: (1) the 'minor illness' rationalization — concluding a 'simple' head cold won't matter, ignoring that Boyle's Law guarantees incapacitating pressure pain on descent; and (2) self-medicating or caffeinating to mask fatigue rather than delaying or canceling. Because most aeromedical risks cannot be bought down in the air, the disciplined outcome is the conservative No-Go, made before external pressures (get-there-itis) can corrupt the decision.",
+      "acs_elements": [
+        "PA.I.H.R1"
+      ],
+      "far_references": [
+        "14 CFR 61.53"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-2 (Risk Management Handbook)",
+        "FAA-H-8083-25 (PHAK)"
+      ],
+      "knowledge_formatted": "- Process: **identify hazard → assess risk → mitigate**\n- Mitigation must **match** the risk level\n- DPE traps: the **'minor illness'** rationalization; **masking fatigue** with caffeine\n- Aeromedical risk rarely buys down in flight → **conservative No-Go**"
+    }
+  ]
+}

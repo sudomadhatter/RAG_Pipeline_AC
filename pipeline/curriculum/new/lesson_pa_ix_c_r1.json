@@ -1,0 +1,22 @@
+{
+  "id": "lesson_pa_ix_c_r1",
+  "structData": {
+    "acs_code": "PA.IX.C.R1",
+    "title": "Failure to use the proper checklist for a system or equipment malfunction.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [],
+    "doc_keys": [
+      "AC 120-71B",
+      "FAA-H-8083-2A"
+    ],
+    "keywords": [
+      "Working Memory",
+      "Cognitive Degradation",
+      "Do-Verify",
+      "Read-Do",
+      "Prefrontal Cortex",
+      "Flow"
+    ]
+  }
+}

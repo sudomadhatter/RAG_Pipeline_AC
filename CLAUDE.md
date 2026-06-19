@@ -19,7 +19,7 @@ At the start of every non-trivial session, in this order:
 
 ## Artifacts Protocol — MANDATORY FIRST ACTION
 
-Before touching any project file: create `_01_My/_artifacts/<YYYY-MM-DD>_<slug>/`, start the live **TodoWrite task list**, write `implementation_plan.md`, present the plan inline, and **STOP** until Daniel says **"approved"**. After completion: one `walkthrough.md` that includes a **"Your Actions"** section (manual steps + git command) AND a `task-list.md` snapshot of the finished TodoWrite list. Add `bug-list.md` only for debugging sessions.
+Before touching any project file: create `_claude_artifacts/<YYYY-MM-DD>_<slug>/`, start the live **TodoWrite task list**, write `implementation_plan.md`, present the plan inline, and **STOP** until Daniel says **"approved"**. After completion: one `walkthrough.md` that includes a **"Your Actions"** section (manual steps + git command) AND a `task-list.md` snapshot of the finished TodoWrite list. Add `bug-list.md` only for debugging sessions.
 
 > **Full protocol — folder/slug rules, frontmatter, the sequence, skip cases, hard stops — lives in `.claude/rules/artifacts-always-first.md`. That file is the single source of truth; this is just the pointer.**
 

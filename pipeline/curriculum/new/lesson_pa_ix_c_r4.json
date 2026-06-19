@@ -1,0 +1,22 @@
+{
+  "id": "lesson_pa_ix_c_r4",
+  "structData": {
+    "acs_code": "PA.IX.C.R4",
+    "title": "Startle response.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [],
+    "doc_keys": [
+      "AC 120-111",
+      "FAA Safety Briefing \"Startle Response\""
+    ],
+    "keywords": [
+      "Amygdala Hijack",
+      "Sympathetic Nervous System",
+      "Fight or Flight",
+      "Cognitive Impairment",
+      "PPLA",
+      "Scenario-Based Training"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "lesson_id": "PPL_PA_I_B_01",
+  "title": "Required Aircraft Documents (ARROW)",
+  "acs_task_reference": "Area I, Task B",
+  "acs_element_keys": [
+    "PA.I.B.K1",
+    "PA.I.B.S1"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "ARROW — The Five Required Aircraft Documents",
+      "why": "DPEs open almost every airworthiness oral with 'walk me through ARROW' — a student who cannot name all five with their display/location requirements fails before the conversation starts.",
+      "knowledge": "Five documents must be on board any civil aircraft in the United States: (A) Airworthiness Certificate — the Standard Airworthiness Certificate (FAA Form 8100-2) must be displayed at the cabin or cockpit entrance so it is legible to passengers and crew per 14 CFR 91.203(b). It does not expire as long as the aircraft is maintained in accordance with Parts 43 and 91 and remains registered in the US. (R) Registration Certificate — issued under 14 CFR 47.40, expires 7 years after the last day of the month of issuance. Must be on board. (R) Radio Station License — only required for international flights; for domestic VFR operations, aircraft are 'licensed by rule' under 47 CFR Part 87. (O) Operating Limitations — the serialized, FAA-approved Airplane Flight Manual (AFM) tied to the aircraft's specific tail number and serial number. A generic commercially-purchased POH is NOT a legal substitute. (W) Weight & Balance — the current, updated weight and balance data that reflects the specific configuration of the aircraft, including all installed equipment.",
+      "acs_elements": [
+        "PA.I.B.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.203",
+        "14 CFR 47.40",
+        "14 CFR 91.9"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25C",
+        "FAA Form 8100-2",
+        "AC Form 8050-3"
+      ],
+      "knowledge_formatted": "### (A) Airworthiness Certificate (14 CFR 91.203)\n- **FAA Form 8100-2** — must be **displayed** at the cabin or cockpit entrance, legible to passengers and crew\n- **No expiration date** — but remains valid only while the aircraft stays U.S.-registered and is maintained per Parts 43 & 91\n\n### (R) Registration Certificate (14 CFR 47.40)\n- **AC Form 8050-3** — must be **on board** during flight\n- Expires **7 years** after the last day of the month of issuance\n\n### (R) Radio Station License\n- Required **only for international flights** (47 CFR Part 87)\n- **Not required** for domestic VFR operations — aircraft are \"licensed by rule\"\n\n### (O) Operating Limitations (14 CFR 91.9)\n- The **FAA-approved Airplane Flight Manual (AFM)** — serialized to the specific N-number and serial number\n- A generic commercially purchased **POH is NOT a legal substitute** — must have FAA approval stamp in Section 2\n\n### (W) Weight & Balance\n- Must reflect the **current, actual configuration** of this specific aircraft\n- Must be updated whenever equipment is added or removed"
+    },
+    {
+      "id": "RKP_02",
+      "title": "Airworthiness Certificate — Display and Verification",
+      "why": "The most common ramp check finding is the Airworthiness Certificate stored in a binder rather than displayed at the entrance — a direct 91.203(b) violation that grounds the aircraft.",
+      "knowledge": "The Airworthiness Certificate (FAA Form 8100-2) must be physically displayed at the cabin or cockpit entrance in a location visible and legible to passengers and crew — not in a binder, not in the glovebox, not in the flight bag. 14 CFR 91.203(b) is unambiguous on this point. During a practical test, the DPE will ask the applicant to locate and read the certificate. The applicant must note: it was issued indefinitely — there is no expiration date on the face of the certificate. However, the legal authority of the certificate is contingent on two conditions being continuously met: (1) the aircraft remains registered in the United States, and (2) all maintenance is performed in accordance with 14 CFR Parts 43 and 91. If either condition fails — for example, an AD is overdue — the certificate's authority is suspended even if the physical document still says 'no expiration date.'",
+      "acs_elements": [
+        "PA.I.B.K1",
+        "PA.I.B.S1"
+      ],
+      "far_references": [
+        "14 CFR 91.203(b)",
+        "14 CFR 21.181(a)(1)"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25C",
+        "FAA Form 8100-2"
+      ],
+      "knowledge_formatted": "### Display Requirements (14 CFR 91.203(b))\n- Must be **physically displayed** at the **cabin or cockpit entrance**\n- Must be **visible and legible** to passengers and crew from the entrance\n- Storing in a binder, glovebox, or flight bag does **NOT** satisfy this requirement\n\n### What the Certificate Shows\n- Aircraft N-number, make, model, serial number, and category (Normal/Utility)\n- **No expiration date** appears on the certificate face\n\n### Conditional Validity — Both Must Be Continuously Met\n- Aircraft must remain **registered in the United States**\n- All maintenance must be performed per **14 CFR Parts 43 and 91**\n- An overdue AD or expired Annual **suspends** the certificate's authority — even though the physical document is unchanged\n\n### DPE Checkride Requirement\n- Applicant must locate the certificate **and** state the conditional validity rule unprompted"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Registration Certificate — Seven-Year Expiration and the Pink Slip",
+      "why": "The FAA extended registration from 3 years to 7 years in 2022. Applicants trained on older materials will state '3 years' to a DPE — an automatic correction that signals weak preparation.",
+      "knowledge": "Under 14 CFR 47.40 (updated via Direct Final Rule 2022-25289), an aircraft Registration Certificate (AC Form 8050-3) expires 7 years after the last day of the month in which it was issued. Example: a certificate issued March 4, 2024 expires March 31, 2031. When an aircraft is sold, the existing registration is immediately suspended. The new owner must submit an Aircraft Registration Application (AC Form 8050-1). The pink copy of this application serves as temporary authority for domestic flights for up to 90 days while the permanent certificate is processed. A standard photocopy of the registration is NOT legal for flight (with the sole exception of the pink temporary slip for newly purchased aircraft).",
+      "acs_elements": [
+        "PA.I.B.K1",
+        "PA.I.B.S1"
+      ],
+      "far_references": [
+        "14 CFR 47.40",
+        "14 CFR 47.31"
+      ],
+      "bridge_keys": [
+        "FAA Direct Final Rule 2022-25289",
+        "AC Form 8050-3",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### Registration Certificate (14 CFR 47.40)\n- **AC Form 8050-3** — must be on board during flight\n- Valid for **7 years** after the last day of the month of issuance *(updated from 3 years — FAA Rule 2022-25289)*\n- Example: issued March 4, 2024 → expires **March 31, 2031**\n\n### When an Aircraft is Sold\n- Existing registration is **immediately suspended** upon sale\n- New owner submits **AC Form 8050-1** (Aircraft Registration Application)\n- **Pink copy** (buyer's copy) serves as **temporary authority** for **up to 90 days** for domestic flights only\n\n### Critical Rules\n- A standard **photocopy** of the registration is **not legal** for flight\n- Pink temporary slip is the **only** exception to the original-document rule\n- Registration is **not required for international flights** beyond the standard domestic requirement — separate FCC rules apply"
+    },
+    {
+      "id": "RKP_04",
+      "title": "Operating Limitations — The Serialized AFM vs. the Generic POH",
+      "why": "Applicants routinely mistake a commercially-purchased generic POH for the legal AFM — a subtle but critical distinction the DPE will specifically probe during the practical test.",
+      "knowledge": "Under 14 CFR 91.9, no person may operate a civil aircraft without complying with the operating limitations specified in the approved Airplane Flight Manual (AFM). The AFM is a serialized document — it contains the specific serial number and N-number of the aircraft it was approved for, and it carries an FAA approval stamp in the Limitations section (Section 2). A commercially purchased 'Information Manual' or generic Pilot's Operating Handbook (POH) from the manufacturer does not carry this approval and cannot substitute for the AFM during flight. Similarly, the Weight and Balance data must reflect the current, actual configuration of the specific aircraft — it must be updated whenever equipment is installed or removed per FAA Form 337 (Major Repair and Alteration) if applicable. A W&B calculation from a different aircraft of the same model is not legally valid.",
+      "acs_elements": [
+        "PA.I.B.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.9",
+        "14 CFR 91.203"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25C",
+        "FAA Form 337"
+      ],
+      "knowledge_formatted": "### The Legal AFM (14 CFR 91.9)\n- **FAA-approved Airplane Flight Manual (AFM)** — serialized to the aircraft's **specific N-number and serial number**\n- Contains an **FAA approval stamp** in **Section 2 (Limitations)**\n- Must physically reflect the actual aircraft being flown\n\n### What Does NOT Qualify\n- A commercially purchased **Information Manual** (generic reference) — no FAA approval stamp\n- A **Pilot's Operating Handbook (POH)** purchased from the manufacturer without aircraft-specific approval\n- A POH or AFM from a **different aircraft** of the same model\n\n### Weight & Balance\n- Must represent the **current configuration** of this specific aircraft\n- Must be **updated** whenever equipment is installed or removed (per **FAA Form 337** for major alterations)\n- A W&B from a different aircraft of the same model is **not legally valid**"
+    }
+  ],
+  "lesson_overview": "## Required Aircraft Documents (ARROW)\n\nYou can be fully current, medically qualified, and ready to fly — and still be standing next to an aircraft that isn't legal to operate. The airworthiness of the machine is a completely separate checklist from the airworthiness of the pilot. This lesson is about what the aircraft needs to have on board, where it needs to be, and — critically — what can quietly expire on you if you're not watching.\n\n**ARROW: the five required documents.** Under 14 CFR 91.203, five documents must be on board any U.S.-registered civil aircraft for every flight. The acronym ARROW is how pilots remember them.\n\n- **A — Airworthiness Certificate.** The FAA Form 8100-2. Unlike almost everything else in aviation, this one has no expiration date on its face. But here's the catch: it remains valid only as long as two conditions are continuously met — the aircraft stays registered in the United States, and all maintenance is performed in accordance with 14 CFR Parts 43 and 91. Miss an annual inspection, and the certificate's authority is suspended even though the physical card says nothing about it. Also, and this matters on checkrides: it must be **displayed** at the cabin or cockpit entrance, legible to passengers and crew. Not stored in a binder in the back seat. *Displayed.*\n\n- **R — Registration Certificate.** The AC Form 8050-3. Here's the detail that catches applicants trained on older study materials: registration certificates now expire **7 years** after the last day of the month of issuance. The FAA updated this from 3 years in 2022. If you say \"three years\" to a DPE, you'll get a correction on the spot. When an aircraft is sold, the existing registration is immediately suspended — the new owner flies on the *pink temporary slip* (the buyer's copy of the registration application) for up to 90 days while the permanent certificate is processed. A photocopy of the standard registration is not legal.\n\n- **R — Radio Station License.** Required only for **international flights**. For domestic VFR operations within the United States, aircraft are \"licensed by rule\" under 47 CFR Part 87. Flying to the Bahamas changes everything: the aircraft needs a Radio Station License, and the pilot needs a Restricted Radiotelephone Operator Permit. Flying Atlanta to Jacksonville? Neither is required.\n\n- **O — Operating Limitations.** This is the serialized, FAA-approved **Airplane Flight Manual (AFM)** — the document tied to the specific tail number and serial number of the aircraft. A commercially purchased Information Manual or generic POH from the manufacturer does not have the FAA approval stamp in the Limitations section (Section 2) and is not a legal substitute. This is one DPEs specifically probe.\n\n- **W — Weight & Balance.** The current weight and balance data for *this specific aircraft* in *its current configuration*. This is a living document that must be updated whenever equipment is removed or installed.\n\n**Why the display rule matters.** A common misread of 91.203(b) is that \"readily accessible\" satisfies the requirement. It doesn't — not for the Airworthiness Certificate. The regulation uses the word *displayed*. A maintenance binder on the rear seat doesn't qualify. The certificate must be legibly mounted where anyone boarding the aircraft can see it from the entrance. In a ramp check, this is often the first thing an inspector checks, and an improperly stored Airworthiness Certificate grounds the flight.\n\n**What the Airworthiness Certificate actually tells you.** On a checkride practical test, the DPE will ask you to locate and read the certificate. Know what to point to: the N-number, the manufacturer's serial number, the aircraft make and model, the category (Normal/Utility), and the date of issuance. Most importantly, you must point out that there is *no expiration date* — and immediately explain the caveat. The certificate is valid indefinitely, *provided* Parts 43 and 91 compliance is continuous. That conditional is mandatory to state.\n\n**The checkride trap:** Applicants hand the DPE a commercially purchased POH and call it the Operating Limitations. If the document doesn't have the specific serial number of the aircraft and the FAA approval stamp in Section 2, it doesn't satisfy the \"O\" in ARROW. Know the difference between a legal AFM and a reference manual.",
+  "audio_file": "PPL_PA_I_B_audio.m4a",
+  "video_file": "PPL_PA_I_B_video.mp4"
+}

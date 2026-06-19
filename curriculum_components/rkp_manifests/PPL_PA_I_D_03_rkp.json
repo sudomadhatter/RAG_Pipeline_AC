@@ -1,0 +1,86 @@
+{
+  "lesson_id": "PPL_PA_I_D_03",
+  "title": "VFR Flight Plans — Elements, Filing, Activating, and Closing",
+  "acs_task_reference": "Area I, Task D",
+  "acs_element_keys": [
+    "PA.I.D.K4",
+    "PA.I.D.K5"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "The Nine Required Elements of a VFR Flight Plan (14 CFR 91.153)",
+      "why": "The DPE will ask the applicant to complete a flight plan form or recite the required elements. Top two exam traps: (1) confusing 'fuel on board in hours and minutes' with ETE — swapping them tells SAR the pilot ran out of fuel mid-route; (2) not knowing the ICAO Form 7233-4 replaced the old domestic form.",
+      "knowledge": "14 CFR 91.153 defines required VFR flight plan elements: (1) Aircraft identification, (2) Type of flight plan (VFR), (3) Aircraft type/special equipment/wake turbulence category, (4) True airspeed in knots, (5) Departure point (4-letter ICAO), (6) Proposed departure time UTC, (7) Cruising altitude, (8) Route of flight, (9) Destination + ETE + alternate if desired, (10) Fuel on board in HH:MM (defines SAR search radius — NOT ETE), (11) Persons on board, (12) Pilot name, address, aircraft color/description. Form: ICAO Form 7233-4. Item 19 = fuel endurance (total fuel on board in hours and minutes). Item 16 = ETE (total flight time). Swapping these fields tells SAR an incorrect search window.",
+      "acs_elements": [
+        "PA.I.D.K4"
+      ],
+      "far_references": [
+        "14 CFR 91.153"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA Form 7233-4"
+      ],
+      "knowledge_formatted": "### VFR Flight Plan — Required Elements (14 CFR 91.153)\n\n| # | Element | Common Trap |\n|---|---|---|\n| 1 | Aircraft identification (tail/callsign) | — |\n| 2 | Type of flight plan: **VFR** | — |\n| 3 | Aircraft type, special equipment, wake turbulence | — |\n| 4 | **True airspeed (knots)** | Not IAS |\n| 5 | Departure point (ICAO identifier) | — |\n| 6 | Proposed departure time in **UTC** | Not local time |\n| 7 | Cruising altitude | — |\n| 8 | Route of flight | — |\n| 9 | Destination + ETE + alternate (optional) | — |\n| 10 | **Fuel on board in HH:MM** | ⚠️ Endurance, NOT ETE |\n| 11 | Persons on board (souls) | — |\n| 12 | Pilot name, address, aircraft color/description | — |\n\n### ICAO Form 7233-4 — Key Fields\n- **Item 16:** Total ETE (estimated time en route — actual flight time)\n- **Item 19:** Endurance = **total fuel on board in hours and minutes** (HH:MM)\n- These two fields are the **most commonly swapped** on checkrides\n\n> Writing ETE in Item 19 (fuel field) tells SAR the aircraft **ran out of fuel mid-route** — search begins in the wrong area"
+    },
+    {
+      "id": "RKP_02",
+      "title": "File → Activate → Amend → Close — The Four-Step Flight Plan Lifecycle",
+      "why": "The most dangerous misconception in VFR flight planning: 'The tower closed my VFR flight plan.' No. Towers close IFR plans, not VFR plans. A pilot who lands at a towered airport assuming the tower closed their VFR plan may trigger a massive SAR operation 30 minutes later while sitting in the FBO.",
+      "knowledge": "VFR Flight Plan lifecycle: (1) FILING: submit to Leidos Flight Service via EFB, 1800wxbrief.com, phone (1-800-WX-BRIEF), or radio. SAR clock does NOT start. Unactivated plans expire 2 hours after proposed departure. (2) ACTIVATING: pilot must manually activate after departure by contacting FSS via 122.2 MHz, remote FSS frequency, or EFB. Standard call: '[Station] Radio, [callsign], request activation of VFR flight plan from [departure] to [destination] at [time] Zulu.' (3) AMENDING: if airborne time will exceed ETA by 30+ minutes, pilot must call FSS. Failure to amend → SAR initiated. (4) CLOSING: upon landing, immediately close by calling FSS: 1-800-WX-BRIEF or radio. If not closed within 30 minutes of ETA, FSS initiates QALQ → INREQ → ALNOT → SAR activation. VFR towers do NOT close VFR flight plans.",
+      "acs_elements": [
+        "PA.I.D.K5"
+      ],
+      "far_references": [
+        "14 CFR 91.153",
+        "14 CFR 91.13"
+      ],
+      "bridge_keys": [
+        "AIM"
+      ],
+      "knowledge_formatted": "### VFR Flight Plan Lifecycle — Four Mandatory Steps\n\n**1. FILE**\n- Submit to **Leidos Flight Service** (EFB, 1800wxbrief.com, 1-800-WX-BRIEF, or radio)\n- SAR clock **does NOT start** at filing\n- Unactivated plans **auto-expire 2 hours** after proposed departure time\n\n**2. ACTIVATE**\n- Pilot must **manually activate** after departure\n- Contact FSS via **122.2 MHz** (or remote FSS frequency for area) or EFB activation\n- SAR clock **starts at activation**\n\n**3. AMEND**\n- If actual ETE will **exceed filed ETA by 30+ minutes** → call FSS to update\n- Failure to amend = SAR initiated while you are still safely airborne\n\n**4. CLOSE**\n- Upon landing: **immediately close** by calling 1-800-WX-BRIEF or FSS radio\n- If not closed within **30 minutes of ETA**: FSS initiates escalating SAR sequence\n  - QALQ (comm search) → INREQ → ALNOT → **Full SAR activation**\n\n> **Checkride Trap:** 'The tower closed my VFR flight plan.' **WRONG.** VFR control towers do **not** close VFR flight plans. Only **FSS** or the pilot closes it"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Route Planning and Chart-Reading — NOTAMs, Chart Supplement, and SUA",
+      "why": "A pilot may plan a legally perfect route that is operationally unusable because a major NAVAID is NOTAM'd out of service, the destination runway is closed, or the route clips an active Restricted Area. The DPE presents these scenarios to confirm the applicant reads ALL publications.",
+      "knowledge": "Three-layer route verification: (1) Sectional Chart — static geographic reference: terrain, airspace, obstacles, NAVAIDs, MEFs. Published every 6 months — individual elements may change before chart revision. (2) Chart Supplement (formerly A/FD) — detailed airport operational data: runway lengths, traffic pattern altitude and direction, lighting, fuel availability, noise abatement. Updated every 56 days. (3) NOTAMs — real-time dynamic updates: closed runways, unlit towers, out-of-service NAVAIDs, active TFRs, GPS anomalies. Checked as close to departure as possible. Priority: NOTAMs supersede Chart Supplement which supersedes sectional for dynamic operational data. SUA: for MOAs, verify active/inactive status by calling the controlling authority (phone number in Chart Supplement).",
+      "acs_elements": [
+        "PA.I.D.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.103",
+        "14 CFR 91.137"
+      ],
+      "bridge_keys": [
+        "FAA-H-8083-25C",
+        "Aeronautical Chart User's Guide",
+        "AIM"
+      ],
+      "knowledge_formatted": "### Three-Layer Route Verification System\n\n| Source | Update Cycle | Covers | Priority |\n|---|---|---|---|\n| **Sectional Chart** | Every 6 months | Terrain, airspace, NAVAIDs, MEFs, obstacles | Lowest (static) |\n| **Chart Supplement** (formerly A/FD) | Every **56 days** | Runway data, pattern direction, fuel, lighting, noise abatement | Middle |\n| **NOTAMs** | Real-time | Closed runways, unlit towers, out-of-service NAVAIDs, TFRs, GPS anomalies | **Highest (dynamic)** |\n\n### Priority Rule\n- NOTAMs **supersede** Chart Supplement which **supersedes** Sectional for dynamic operational data\n\n### SUA (Special Use Airspace) — MOA Verification\n- For **Military Operation Areas (MOAs)**: check Chart Supplement for the **controlling agency**\n- Call the controlling authority directly (number in Chart Supplement) to verify **active/inactive status**\n- Sectional chart depiction shows boundaries — NOT whether it is currently active"
+    },
+    {
+      "id": "RKP_04",
+      "title": "EFB Risk Management Under AC 91-78A",
+      "why": "The DPE will ask the applicant what they would do if the EFB died mid-flight. Applicants who cannot name their backup plan have demonstrated over-reliance on technology — one of the most flagged behavioral patterns by DPEs.",
+      "knowledge": "AC 91-78A (Use of Electronic Flight Bags) governs Part 91 EFB use. Key provisions: (1) No FAA approval required for Part 91 VFR operations. (2) The EFB must be the functional equivalent of the paper material it replaces (current charts, current databases). (3) The pilot must have a reliable backup strategy. Four common EFB failure modes: (a) Thermal shutdown from direct sunlight — position near air vent, away from sun. (b) Battery failure — preflight at 100%, carry portable power bank. (c) GPS signal loss — maintain pilotage and dead reckoning proficiency. (d) Expired database — update databases before departure as a checklist item. The DPE simulation: 'Your iPad just died. Where are we?' — requires identification of position from a visible landmark on a paper sectional.",
+      "acs_elements": [
+        "PA.I.D.K1a"
+      ],
+      "far_references": [
+        "14 CFR 91.21",
+        "AC 91-78A"
+      ],
+      "bridge_keys": [
+        "AC 91-78A",
+        "AC 120-76D",
+        "FAA-H-8083-2A"
+      ],
+      "knowledge_formatted": "### AC 91-78A — EFB Regulatory Framework\n- **No FAA approval required** for Part 91 VFR operations\n- EFB must be the **functional equivalent** of the paper charts it replaces — including **current databases**\n- Pilot must have a **reliable backup strategy**\n\n### Four Common EFB Failure Modes — Mitigations\n| Failure Mode | Mitigation |\n|---|---|\n| **Thermal shutdown** (direct sunlight) | Position near air vent; away from direct sun; carry secondary device |\n| **Battery failure** | Preflight at **100% charge**; carry portable power bank |\n| **GPS signal loss** | Maintain **pilotage and dead reckoning** proficiency — always know position independently |\n| **Expired database** | Update **before every cross-country departure** — checklist item |\n\n### The DPE Simulation\n> 'Your iPad just died. Where are we?'\n\n- Correct response: use **pilotage** (visible landmarks) to positively identify position on a **paper sectional**\n- Saying 'I'd use my phone' without a backup paper chart is an operational failure"
+    }
+  ],
+  "lesson_overview": "## VFR Flight Plans — The SAR System That Only Works If You Use It Correctly\n\nA VFR flight plan doesn't keep you safe in the air. It keeps SAR looking for you if you don't arrive. The system works because it has a precise lifecycle: file, activate, monitor, amend, close. Pilots who partially execute that lifecycle — who file but don't activate, or who activate but don't close — inject false signals into the SAR machinery. One of those errors triggers an expensive multi-agency search. Another leaves you missing with no one looking. This lesson makes the lifecycle automatic.\n\n**The required elements of 14 CFR 91.153 — and the two that kill you on the checkride.** Nine categories of information are required on a VFR flight plan. Most are intuitive: aircraft ID, type, departure point, destination, route, cruise altitude, true airspeed, proposed departure time, number of people aboard. The two that fail applicants: (1) Fuel on board — expressed in hours and minutes (HH:MM), representing total endurance, NOT ETE. This number tells SAR how long to search before expanding the radius. A pilot who writes their ETE in the fuel field tells search teams the aircraft ran out of fuel mid-route. (2) The form used today is ICAO Form 7233-4 — not the old domestic FAA form. Know it and know which field contains endurance (Item 19) vs. ETE (Item 16).\n\n**The four-step lifecycle: File, Activate, Amend, Close.** Filing places your plan in a dormant queue — the SAR clock does NOT start when you file. The clock starts when you ACTIVATE. You must call Leidos Flight Service (1-800-WX-BRIEF), contact FSS by radio (122.2 MHz), or use an EFB app that activates the plan. After activation, if your actual time en route will exceed your filed ETA by 30 minutes or more, you MUST amend the plan — or SAR procedures begin while you're still safely flying. Upon landing: CLOSE IMMEDIATELY. Call 1-800-WX-BRIEF or contact FSS. If not closed within 30 minutes of ETA, FSS initiates comm search → INREQ → ALNOT → full SAR. The most dangerous myth in VFR operations: 'The tower closed my flight plan.' VFR towers do not close VFR flight plans. Only FSS does, on the pilot's request.\n\n**Route planning: the three-layer verification system.** Your sectional is 6 months old at publication. NOTAMs update in real time. The Chart Supplement updates every 56 days. Use NOTAMs first (highest authority — dynamic), Chart Supplement second (airport-specific ops), sectional third (geographic reference). A route that looks clean on the sectional may cross an active Restricted Area, a NAVAID that's NOTAM'd out, or an airport with a closed runway.\n\n**The checkride trap:** The DPE asks you to fill out a flight plan form — on paper, by hand. (1) Do you put ETE in the fuel field (wrong) or compute and separately enter endurance? (2) When does the SAR clock actually start — at filing or activation? (3) Who closes a VFR flight plan at a towered airport — the tower or FSS? Answer: FSS only, by pilot action.",
+  "audio_file": "PPL_PA_I_D_audio.m4a",
+  "video_file": "PPL_PA_I_D_video.mp4"
+}

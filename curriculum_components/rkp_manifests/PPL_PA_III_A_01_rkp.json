@@ -1,0 +1,84 @@
+{
+  "lesson_id": "PPL_PA_III_A_01",
+  "title": "Radio Communications & ATC Phraseology",
+  "acs_task_reference": "Area III, Task A",
+  "acs_element_keys": [
+    "PA.III.A.K1",
+    "PA.III.A.K2",
+    "PA.III.A.K5",
+    "PA.III.A.K6",
+    "PA.III.A.R1",
+    "PA.III.A.S1"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "Finding the Right Frequency — Chart Supplement, Sectional, and GPS",
+      "why": "The DPE asks: 'How do you determine the correct frequency for this airport?' The pilot who says '122.8' has guessed. The correct answer demonstrates a hierarchy of sources: Chart Supplement is the legal authority, Sectional provides in-flight reference, and the GPS 'Nearest' page is the emergency fallback.",
+      "knowledge": "Correct radio frequencies are obtained through a defined hierarchy of sources during preflight and in-flight operations. PREFLIGHT — CHART SUPPLEMENT: the Chart Supplement U.S. (formerly Airport/Facility Directory) is the definitive legal source of truth. It lists primary tower, ground, ATIS, AWOS/ASOS, CTAF, UNICOM, and backup Remote Communications Outlet (RCO) frequencies for every airport. VFR SECTIONAL CHART: frequency boxes adjacent to airport symbols on the sectional chart provide quick in-flight reference for tower, ATIS, and CTAF. However, sectional charts have a 56-day publication cycle — verify currency. GPS/EFB 'NEAREST' PAGE: modern avionics and EFBs provide a database-driven frequency lookup. The GPS 'Nearest Airport' function displays CTAF, tower, and AWOS frequencies for the closest airports. This is the fastest in-flight fallback, especially during diversions. ATC HANDOFFS: when receiving radar services (Flight Following), ATC provides the next frequency during handoffs between sectors and facilities. STANDARD FREQUENCIES: Emergency = 121.5 MHz (monitored by ALL ATC facilities and most airliners). UNICOM default = 122.8 MHz at many airports, but NOT all — never assume. Multicom = 122.9 MHz (used at airports with no UNICOM operator). VHF radio operates on the 118.0 to 136.975 MHz band, with line-of-sight propagation. Terrain masking can block signals — if communication fails, altitude often restores it.",
+      "acs_elements": [
+        "PA.III.A.K1"
+      ],
+      "far_references": [
+        "14 CFR 91.103"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "Chart Supplement U.S."
+      ],
+      "knowledge_formatted": "### Frequency Source Hierarchy\n| Source | When Used | Authority Level |\n|---|---|---|\n| **Chart Supplement** | Preflight planning | ✅ **Legal source of truth** |\n| **VFR Sectional** | In-flight reference | Good — but 56-day cycle, verify currency |\n| **GPS/EFB 'Nearest'** | In-flight fallback / diversions | Database-driven — fast but verify |\n| **ATC Handoffs** | During Flight Following | Controller provides next frequency |\n\n### Standard Frequencies to Memorize\n| Frequency | Purpose |\n|---|---|\n| **121.5 MHz** | Emergency — monitored by ALL ATC and most airliners |\n| **122.8 MHz** | Common UNICOM — but NOT universal, always verify |\n| **122.9 MHz** | Multicom — airports with no UNICOM operator |\n| **122.0 MHz** | Flight Service enroute |\n\n### VHF Radio Physics\n- **Range:** 118.0 to 136.975 MHz\n- **Propagation:** Line-of-sight — signal travels in straight line\n- **Terrain masking:** Mountains/hills can block signals → climb for better reception\n\n> ⚠️ **Checkride Trap:** Never assume 122.8 is the CTAF — verify in the Chart Supplement. Some airports use 122.7, 123.0, or other frequencies."
+    },
+    {
+      "id": "RKP_02",
+      "title": "Standard Radio Phraseology and the Closed-Loop Communication Chain",
+      "why": "The DPE asks: 'What is the proper format for an initial call to approach control?' The pilot who uses conversational English ties up the frequency and strips away critical data. The standard format — Who you're calling, Who you are, Where you are, What you want — delivers maximum information in minimum time.",
+      "knowledge": "Standard radio communication follows the format: WHO you are calling, WHO you are, WHERE you are, and WHAT you want. This format eliminates ambiguity and minimizes frequency congestion. KEY PHRASEOLOGY: 'Roger' = I have received ALL of your last transmission. 'Wilco' = I have received your message and WILL COMPLY. 'Affirmative' = Yes. 'Negative' = No. 'Unable' = I cannot comply with that instruction. 'Say Again' = Please repeat. These are NOT interchangeable — each has a precise, distinct meaning. READBACK REQUIREMENTS: pilots MUST read back ALL hold-short instructions, runway assignments, and clearances. This creates a closed-loop communication chain — the controller hears the readback and can immediately correct errors. Failure to read back hold-short instructions is a primary cause of runway incursions. ICAO PHONETIC ALPHABET: all letters are spoken using the ICAO alphabet (Alpha, Bravo, Charlie...) to prevent phonetic confusion. Numbers are spoken individually except for altitudes and flight levels. TRANSMISSION DISCIPLINE: listen before transmitting — monitor the frequency rhythm to avoid 'stepping on' another pilot's transmission or a controller's clearance. Formulate the entire message mentally BEFORE keying the microphone. Dead-air time should be minimized but not at the cost of clarity. EXPECTATION BIAS: the brain is wired to hear what it expects. A pilot accustomed to 'Cleared to land Runway 27' may hear that even when the controller said 'Hold short of Runway 27.' Active readback is the defense against this cognitive trap.",
+      "acs_elements": [
+        "PA.III.A.K2",
+        "PA.III.A.R1"
+      ],
+      "far_references": [
+        "14 CFR 91.123"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "Pilot/Controller Glossary"
+      ],
+      "knowledge_formatted": "### Standard Radio Format\n**WHO you're calling → WHO you are → WHERE you are → WHAT you want**\n\nExample: *\"Daytona Approach, Cessna One Two Three Alpha Bravo, ten miles south, two thousand five hundred, with Kilo, inbound to land.\"*\n\n### Critical Phraseology\n| Term | Precise Meaning |\n|---|---|\n| **Roger** | I received ALL of your last transmission |\n| **Wilco** | I received AND **will comply** |\n| **Affirmative / Negative** | Yes / No |\n| **Unable** | I cannot comply with that instruction |\n| **Say Again** | Please repeat |\n\n### Mandatory Readbacks\n- ✅ Hold-short instructions\n- ✅ Runway assignments\n- ✅ All clearances (takeoff, landing, taxi)\n\n### Expectation Bias\n- Brain hears what it **expects** to hear\n- \"Cleared to land 27\" vs. \"Hold short of 27\" — sound similar under stress\n- **Readback is the defense** — controller catches your error before it becomes an incursion\n\n> ⚠️ **Checkride Trap:** 'Roger' does NOT mean 'I will comply.' Only 'Wilco' means that. Using them interchangeably on the checkride signals sloppy radio discipline."
+    },
+    {
+      "id": "RKP_03",
+      "title": "Lost Communications — Squawk 7600 and the VFR Recovery Procedure",
+      "why": "The DPE asks: 'Your radio goes dead on a VFR cross-country. Walk me through what you do.' The pilot who panics or attempts an off-airport landing has failed. Lost comm in VFR is an inconvenience, not an emergency. The correct sequence: troubleshoot, squawk 7600, continue VFR, land as soon as practicable, watch for light signals.",
+      "knowledge": "If two-way radio communication is lost under VFR conditions, the pilot follows a systematic procedure. STEP 1 — TROUBLESHOOT: before assuming total failure, check the obvious: volume/squelch settings, headset jack connection (partially pulled out?), audio panel configuration (correct COM selected for TX and RX?), try the other COM radio, try the handheld backup radio, check circuit breakers. STEP 2 — SQUAWK 7600: set the transponder to squawk code 7600. This causes the aircraft's data tag on the ATC radar scope to flash 'RDOF' (Radio Failure), instantly alerting controllers. STEP 3 — CONTINUE VFR: 14 CFR 91.185(b) dictates that if the failure occurs in VFR conditions, or if VFR conditions are encountered after failure, the pilot shall continue the flight under VFR and land as soon as practicable. 'As soon as practicable' does NOT mean immediately land in a field — it means land at the nearest suitable airport within reasonable time. STEP 4 — ENTER THE PATTERN: at the destination (or diversion) airport, remain at or above the traffic pattern altitude to observe the active runway and traffic flow. Sequence into the pattern visually. STEP 5 — LIGHT SIGNALS: look toward the control tower for light gun signals. Acknowledge by rocking wings (day) or flashing lights (night). Steady green = cleared to land. MODERN BACKUP: if within cell coverage, call ATC on a smartphone. Tower phone numbers are published in the Chart Supplement. This is legal and effective.",
+      "acs_elements": [
+        "PA.III.A.K5",
+        "PA.III.A.K6"
+      ],
+      "far_references": [
+        "14 CFR 91.185"
+      ],
+      "bridge_keys": [
+        "AIM"
+      ],
+      "knowledge_formatted": "### Lost Comm Procedure (VFR)\n```\n1. TROUBLESHOOT → volume, squelch, headset jack, audio panel, other COM, breakers\n2. SQUAWK 7600 → ATC sees 'RDOF' flash on radar scope\n3. CONTINUE VFR → 91.185(b): fly VFR, land as soon as practicable\n4. ENTER PATTERN → observe traffic flow from above TPA\n5. LIGHT SIGNALS → watch tower for light gun, acknowledge with wing rock\n```\n\n### Common Equipment Failures That Cause Lost Comm\n| Failure | How to Detect | Fix |\n|---|---|---|\n| **Headset jack loose** | No audio in/out | Push plug firmly into jack |\n| **Audio panel wrong COM** | TX on COM 1, listening COM 2 | Check MIC/speaker selector |\n| **Stuck mic** | Receiver muted while transmitting | Release PTT, check handheld mic |\n| **Volume/squelch turned down** | Silence on all frequencies | Check knob positions |\n| **Alternator failure** | Voltage dropping, radios fading | Shed electrical load, land promptly |\n\n### Emergency Transponder Codes\n| Code | Meaning |\n|---|---|\n| **1200** | VFR (normal) |\n| **7500** | Hijack |\n| **7600** | Lost Communications |\n| **7700** | Emergency |\n\n> ⚠️ **Checkride Trap:** Lost comm in VFR is NOT an emergency. Don't land in a field. Troubleshoot, squawk 7600, continue VFR, land at a real airport."
+    },
+    {
+      "id": "RKP_04",
+      "title": "Frequency Management Skills — Flip-Flop, Audio Panel, and Transition Discipline",
+      "why": "The DPE expects the pilot to physically demonstrate seamless frequency management during the flight. The pilot who fumbles with the radio, misses a handoff, or broadcasts on the wrong COM shows they cannot manage the communication chain under workload.",
+      "knowledge": "Frequency management is the physical execution of communication knowledge. STANDBY/ACTIVE MANAGEMENT: modern COM radios have an active frequency (currently transmitting/receiving) and a standby frequency (pre-loaded for the next expected contact). The pilot loads the anticipated frequency into standby BEFORE it is needed, then presses the transfer ('flip-flop') button to swap standby into active at the exact moment of handoff. This eliminates heads-down time spent dialing frequencies during critical phases. AUDIO PANEL MANAGEMENT: the audio panel controls which radios the pilot transmits on (MIC selector) and which radios the pilot hears (speaker/headphone selectors). Common error: MIC selector on COM 2 while the desired frequency is tuned on COM 1 — the pilot broadcasts on the wrong channel. TRANSITION SEQUENCE: Before departure: ATIS on COM 2, Ground on COM 1 active, Tower in COM 1 standby. After taxi clearance, approaching the runway: flip-flop to Tower. After takeoff: when handed off to Departure, load Departure frequency in standby, flip-flop when instructed. This pre-loading discipline keeps the pilot's eyes outside during critical phases. MONITORING: after switching frequencies, LISTEN before transmitting. Monitor the rhythm of the frequency for 2-3 seconds to avoid stepping on another transmission.",
+      "acs_elements": [
+        "PA.III.A.S1"
+      ],
+      "far_references": [],
+      "bridge_keys": [
+        "AIM"
+      ],
+      "knowledge_formatted": "### Frequency Management Workflow\n| Phase | COM 1 Active | COM 1 Standby | COM 2 |\n|---|---|---|---|\n| **Preflight** | Ground | Tower | ATIS |\n| **Taxi** | Ground | Tower | ATIS (monitoring) |\n| **At runway** | → Flip-flop → **Tower** | Departure | — |\n| **After takeoff** | Tower | Departure | — |\n| **Handoff** | → Flip-flop → **Departure** | Next sector | — |\n\n### Audio Panel Discipline\n- **MIC selector** → controls which COM you **transmit** on\n- **Speaker/headphone buttons** → control which COM you **hear**\n- ⚠️ If MIC is on COM 2 but your frequency is on COM 1 → you're broadcasting on the **wrong channel**\n\n### Rules\n1. **Pre-load** the next expected frequency in standby BEFORE you need it\n2. **Flip-flop** at the moment of handoff — no heads-down dialing\n3. **Listen 2-3 seconds** after switching before transmitting\n4. **Verify** MIC selector matches the COM with your active frequency\n\n> ⚠️ **Checkride Trap:** The DPE watches your radio management during the flight. Fumbling with frequencies during critical phases (takeoff, approach) = task saturation = safety concern."
+    }
+  ],
+  "lesson_overview": "## Radio Communications — The Language of the Sky\n\nThis lesson teaches the foundational communication skills that connect a pilot to the National Airspace System: finding the right frequency, speaking the right language, managing equipment failures, and executing seamless frequency transitions under workload.\n\n**Every radio transmission in aviation follows a rigid structure because ambiguity kills.** The standard format — Who you are calling, Who you are, Where you are, What you want — delivers maximum situational awareness to controllers and other pilots in minimum airtime. Standard phraseology exists because conversational English introduces dangerous ambiguity. 'Roger' means precisely 'I received your transmission' — nothing more. 'Wilco' means 'I will comply.' Using them interchangeably signals undisciplined radio work. The most critical communication discipline is the mandatory readback of hold-short instructions and runway assignments. This creates a closed-loop verification chain that catches the deadliest cognitive trap in aviation: expectation bias, where the brain hears what it expects rather than what was actually said.\n\n**Finding the correct frequency requires a defined hierarchy of sources.** The Chart Supplement is the legal authority, published and maintained by the FAA with every VHF frequency for every airport in the system. VFR Sectional Charts provide quick in-flight reference but operate on a 56-day publication cycle. The GPS or EFB 'Nearest' function serves as the fastest in-flight fallback during diversions. No pilot should ever assume a frequency — the most common CTAF is 122.8, but scores of airports use 122.7, 123.0, or other assignments. Transmitting on the wrong frequency isolates the pilot from the traffic environment and can cause interference that disrupts other operations.\n\n**Lost communications in VFR conditions is an inconvenience, not a catastrophe.** The recovery procedure is systematic: troubleshoot the equipment (check volume, headset jack, audio panel, try the other COM), squawk 7600 to alert ATC, continue the flight under VFR, and land as soon as practicable at a suitable airport. At the destination, observe the traffic flow from above pattern altitude, enter the pattern visually, and watch the control tower for light gun signals. In the modern era, a cell phone call to the tower — using the number published in the Chart Supplement — is an entirely legal and highly effective backup. The most common causes of apparent radio failure are embarrassingly simple: a headset plug partially pulled from the jack, the wrong COM selected on the audio panel, or a stuck microphone button that mutes the receiver while broadcasting a carrier wave that jams the entire frequency.\n\n**Frequency management under workload separates competent pilots from overwhelmed ones.** The technique is pre-loading: before the next frequency is needed, load it into the standby slot. When the handoff comes, press the transfer button — no heads-down dialing during critical phases. The audio panel must be configured so the MIC selector matches the COM with the active frequency. The entire communication chain — ATIS to Ground to Tower to Departure — should flow as a seamless sequence of pre-loaded transitions, with the pilot's eyes outside the cockpit during takeoff and landing.",
+  "audio_file": "PPL_PA_III_A_01_audio.m4a",
+  "video_file": "PPL_PA_III_A_01_video.mp4"
+}

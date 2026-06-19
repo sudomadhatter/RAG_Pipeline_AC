@@ -1,0 +1,91 @@
+{
+  "lesson_id": "PPL_PA_I_E_04",
+  "title": "Special Use Airspace — Prohibited, Restricted, Warning, MOA, Alert, and TFRs",
+  "acs_task_reference": "Area I, Task E",
+  "acs_element_keys": [
+    "PA.I.E.K3"
+  ],
+  "required_knowledge_points": [
+    {
+      "id": "RKP_01",
+      "title": "The Six SUA Categories — Absolute No-Go vs. Conditional Entry",
+      "why": "The DPE asks: 'You see a Restricted Area on your route. Can you fly through it?' The correct answer depends entirely on which type of SUA it is. A Prohibited Area is never legal. A Restricted Area requires ATC authorization. An MOA is legal VFR entry at all times (but tactically dangerous when active). Getting these confused inverts the legal framework and could result in an intercept.",
+      "knowledge": "SUA categories and entry rules: (1) PROHIBITED AREAS (P-xxx): Entry NEVER PERMITTED for civil aircraft — absolute prohibition. Examples: P-56A/B (Washington D.C.). Depicted: blue hatching with 'P-[number].' (2) RESTRICTED AREAS (R-xxx): Entry requires ATC authorization from controlling authority. When hot: entry without authorization prohibited. When cold: ATC can clear aircraft through. Depicted: blue hatching with 'R-[number].' (3) WARNING AREAS (W-xxx): Offshore, over international waters. Hazardous but not legally prohibitable by FAA. Extreme caution advised. (4) MOAs: VFR may enter legally at any time without clearance. When active: statistically hazardous — military aircraft at high speeds. IFR: ATC will not assign routes through an active MOA without coordination. (5) ALERT AREAS (A-xxx): High volume of pilot training or unusual aerial activity. VFR entry legal — extreme vigilance required. (6) CONTROLLED FIRING AREAS: Not depicted on charts — activity immediately ceases when aircraft approach.",
+      "acs_elements": [
+        "PA.I.E.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.133",
+        "14 CFR 91.137",
+        "49 U.S.C. 40103"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA-H-8083-25C"
+      ],
+      "knowledge_formatted": "### SUA Entry Rules — Decision Table\n\n| SUA Type | Symbol | VFR Entry Legal? | Requirement |\n|---|---|---|---|\n| **Prohibited Area (P-xxx)** | Blue hatching | ❌ **NEVER** | Absolute prohibition — no clearance exists |\n| **Restricted Area (R-xxx)** | Blue hatching | ⚠️ **Only when cold** | ATC authorization from controlling authority |\n| **Warning Area (W-xxx)** | Blue hatching | ✅ Legal | Over international waters — not FAA prohibitable; extreme caution |\n| **MOA** | Magenta hatching | ✅ **Legal at all times** (VFR) | No clearance required; contact controlling authority for status |\n| **Alert Area (A-xxx)** | Magenta hatching | ✅ Legal | Maximum vigilance — high density training activity |\n| **Controlled Firing Area** | Not depicted | ✅ Legal | Activity **ceases automatically** when aircraft approach |\n\n### Key Distinctions\n- **Prohibited** = absolute no-go. No clearance, no exception — ever\n- **Restricted** = conditional. Call ATC/controlling authority to determine if active ('hot') or inactive ('cold')\n- **MOA** = legally open to VFR. But 'legal' ≠ 'safe' when active military operations are underway\n\n> **Checkride Trap:** 'Can I fly through this Restricted Area?' The correct answer is: 'Only if confirmed inactive by ATC or the controlling authority — not by visual inspection of the area'"
+    },
+    {
+      "id": "RKP_02",
+      "title": "TFRs — Types, Triggers, and the NOTAM-Only Publication Trap",
+      "why": "The most enforcement-heavy SUA in Part 91 general aviation: TFRs are published exclusively via NOTAM and are not shown on sectional charts. A pilot who only checks the sectional will fly through an active TFR. The DPE asks: 'Where do you check for TFRs?'",
+      "knowledge": "Temporary Flight Restrictions (TFRs) established under 14 CFR 91.137, 91.138, 91.141, 91.143, and 91.145. TFR types: (1) Disaster/Hazard (91.137): protect disaster sites (wildfires, floods). Typically prohibit flight below 2,000 AGL within defined radius. (2) Space Operations (91.143): SpaceX launches, NASA operations. (3) Presidential/VIP Security (91.141): POTUS TFRs typically have a 10 NM no-fly zone and a 30 NM Mode C/ADS-B zone. (4) National Security (91.141): high-security events (Super Bowl, major political conventions). (5) Aerial Demonstrations (91.145): airshows. NOTAM-ONLY: TFRs appear only as NOTAMs and on tfr.faa.gov — they DO NOT appear on sectional charts. Penalty: Presidential TFR violation = military intercept + certificate suspension or revocation.",
+      "acs_elements": [
+        "PA.I.E.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.137",
+        "14 CFR 91.141",
+        "14 CFR 91.143",
+        "14 CFR 91.145"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA TFR website tfr.faa.gov",
+        "NOTAM system"
+      ],
+      "knowledge_formatted": "### TFR Types and Regulatory Authority\n\n| TFR Type | FAR | Typical Footprint | Consequence |\n|---|---|---|---|\n| **Disaster / Hazard** | 91.137 | 3–5 NM radius, below 2,000 AGL | Fines, certificate action |\n| **Space Operations** | 91.143 | Varies by launch corridor | Fines, certificate action |\n| **Presidential / VIP Security** | 91.141 | 10 NM (no-fly) / 30 NM (Mode C zone) | **Military intercept + certificate revocation** |\n| **National Security** | 91.141 | Varies | Intercept + certificate action |\n| **Aerial Demonstrations** | 91.145 | Published in NOTAM | Fines |\n\n### The NOTAM-Only Trap\n- TFRs are published **exclusively via NOTAMs** and at **tfr.faa.gov**\n- TFRs **do NOT appear on sectional charts** — charts are published every 6 months; TFRs are dynamic\n- A pilot who only checks the sectional will fly through an active TFR\n\n### Required Preflight Check\nEvery standard weather briefing (FSS, EFB, 1800wxbrief.com) must include **NOTAM review** specifically for TFRs on the planned route — as a required line item, not an afterthought"
+    },
+    {
+      "id": "RKP_03",
+      "title": "Contacting the Controlling Authority — When and How",
+      "why": "For Restricted Areas and MOAs, the legal entry procedure requires knowing WHO controls the airspace and HOW to contact them. The DPE presents a scenario where the route crosses an MOA and asks: 'What are your options?' The answer involves the Chart Supplement, the controlling agency phone number, and a real-time call.",
+      "knowledge": "Controlling authorities and contact procedure. Published resources: (1) Sectional Chart — labels the SUA type and designation (R-2910A, MOA Eglin 1, etc.). (2) Chart Supplement — contains the SUA listing with: floor, ceiling, time of use, controlling agency, and contact phone number. (3) NOTAM system — real-time activation status. Contact procedure: (1) Look up the controlling authority in the Chart Supplement for the SUA designation. (2) Call the scheduling number: 'Will [SUA] be active on [date] from [time] to [time] at [altitudes]?' (3) If inactive: transit legally. (4) If active or uncertain: route around. (5) When airborne: contact the controlling agency frequency (in Chart Supplement) or ask ATC for real-time status.",
+      "acs_elements": [
+        "PA.I.E.K3"
+      ],
+      "far_references": [
+        "14 CFR 91.133",
+        "14 CFR 91.137"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "Chart Supplement SUA listing"
+      ],
+      "knowledge_formatted": "### Three-Source SUA Verification System\n\n| Source | What It Provides | Update Frequency |\n|---|---|---|\n| **Sectional Chart** | SUA type and designation (R-###, MOA name, etc.) | Every 6 months (static) |\n| **Chart Supplement** | Floor, ceiling, active times, controlling agency, **phone number** | Every 56 days |\n| **NOTAM system** | Real-time activation status | Continuous |\n\n### Contact Procedure for Restricted Areas and MOAs\n1. Find the SUA designation on the **sectional chart**\n2. Look up the **Chart Supplement** SUA listing for controlling agency and phone number\n3. Call the scheduling number: _'Will [SUA name] be active on [date] at [time] at [altitude]?'_\n4. **If inactive (cold):** transit legally\n5. **If active (hot) or uncertain:** route around the SUA\n\n### Airborne SUA Status Check\n- Contact the **controlling agency frequency** (published in Chart Supplement)\n- Or request status from **ATC Center or Approach** — they can often advise real-time\n\n> Pilots who attempt to transit a Restricted Area or Prohibited Area without authorization may be intercepted by military aircraft per ICAO intercept procedures"
+    },
+    {
+      "id": "RKP_04",
+      "title": "The ADIZ and SFRA — Washington D.C. Special Rules",
+      "why": "The DPE presents a scenario with a pilot departing from near the Washington D.C. SFRA. Every pilot must know: the D.C. SFRA requires a specific online course, registration, and a discrete transponder code before any departure — and non-compliance results in immediate military intercept. This is the single most enforced airspace restriction in the U.S.",
+      "knowledge": "Washington D.C. area unique airspace designations: (1) ADIZ (Air Defense Identification Zone): extends around the capital region. VFR aircraft must file a DVFR (Defense VFR) flight plan, maintain two-way radio contact with ATC, squawk an assigned transponder code. (2) D.C. SFRA (Special Flight Rules Area) — 30 NM radius of the DCA VOR/DME: all VFR aircraft must: complete the free FAA Safety Team SFRA online course, obtain a discrete transponder code, file a flight plan, receive a clearance before departure, maintain two-way radio contact throughout. (3) FRZ (Flight Restricted Zone) — 15 NM radius: VFR operations prohibited for most civil aircraft without a specific security clearance. SFRA violations result in military intercept. Multiple GA aircraft are intercepted per year in the D.C. SFRA.",
+      "acs_elements": [
+        "PA.I.E.K3"
+      ],
+      "far_references": [
+        "14 CFR 93.335",
+        "14 CFR 93.341",
+        "14 CFR 93.345"
+      ],
+      "bridge_keys": [
+        "AIM",
+        "FAA SFRA online course",
+        "FAA Notice N 7110.82"
+      ],
+      "knowledge_formatted": "### Washington D.C. Special Airspace — Three Concentric Zones\n\n| Zone | Radius | What It Is | VFR Entry |\n|---|---|---|---|\n| **FRZ** (Flight Restricted Zone) | **15 NM** from DCA VOR | Most restricted — security clearance required | ❌ Prohibited without specific authorization |\n| **SFRA** (Special Flight Rules Area) | **30 NM** from DCA VOR | Controlled VFR operations zone | ⚠️ Legal — **specific requirements must be met** |\n| **ADIZ** (Air Defense ID Zone) | Surrounds capital region | Defense identification perimeter | ⚠️ DVFR flight plan + ATC contact required |\n\n### D.C. SFRA — Required Steps Before Departure\n1. Complete the **free FAA SFRA online course** (FAA Safety Team website)\n2. **File a flight plan** with SFRA notation\n3. Obtain a **discrete transponder code** from ATC before departure\n4. Receive an **ATC clearance** before entering or departing\n5. Maintain **two-way radio contact** with ATC throughout\n\n### Consequences of SFRA Violation\n- **Military intercept** — occurs multiple times per year\n- Certificate suspension or revocation\n- Potential criminal charges for willful violations\n\n> The SFRA is the **most strictly enforced airspace restriction** in U.S. civil aviation. Checking NOTAMs is insufficient — SFRA requirements are permanent and documented in **14 CFR Part 93**"
+    }
+  ],
+  "lesson_overview": "## Special Use Airspace and TFRs — Where the Rules Are Absolute\n\nSpecial Use Airspace is where the FAA draws hard lines on the chart. Some of those lines represent absolute prohibition — cross them and you trigger a military intercept. Others require coordination, and a few allow free entry with appropriate vigilance. Knowing which type of SUA you're facing determines whether you file a flight plan, call an agency, route around, or simply maintain awareness.\n\n**The six SUA categories: a decision tree.** Prohibited Area (P-xxx): absolute no-go for civil aircraft — no clearance exists, ever. Restricted Area (R-xxx): conditional entry — ATC authorization required when active ('hot'); transit legally when inactive ('cold'). Warning Area (W-xxx): over international waters, not legally prohibitable, but treat like Restricted for self-preservation. Military Operation Area (MOA): VFR can enter legally at any time — but 'legal' doesn't mean 'safe' when military aircraft are operating at high speeds. Alert Area (A-xxx): legal VFR entry, maximum vigilance required. Controlled Firing Area: not depicted on charts; activity ceases automatically when aircraft approach.\n\n**TFRs: the NOTAM-only hazard.** Temporary Flight Restrictions do not appear on sectional charts. They appear only in NOTAMs and on tfr.faa.gov. Types include Presidential/VIP Security (91.141) — the most strictly enforced, with a 10 NM no-fly zone and 30 NM Mode C zone; Disaster/Hazard (91.137); Space Operations (91.143); and Aerial Demonstrations (91.145). Flying through a Presidential TFR triggers immediate military intercept and likely certificate revocation.\n\n**The Washington D.C. special case.** The D.C. area has the most complex airspace regulatory structure in the U.S. The FRZ (15 NM radius): VFR operations prohibited without security clearance. The SFRA (30 NM radius): all VFR aircraft must complete the free FAA online SFRA course, obtain a discrete transponder code, file a flight plan, and receive a clearance. Multiple GA pilots are intercepted per year.\n\n**Contacting the controlling authority.** For Restricted Areas and MOAs: status is published in the Chart Supplement, which lists the controlling agency and phone number. Call the number, ask if the SUA will be active during your flight window. If inactive: transit. If active: route around. Airborne: ATC can often provide real-time SUA status.\n\n**The checkride trap:** The DPE presents your route crossing an MOA. 'Is it legal to fly through?' The correct answer is conditional: 'VFR, I can legally enter the MOA. But I would confirm active status with the controlling authority first — and if confirmed hot, I'd evaluate traffic density and have an escape route planned.'",
+  "audio_file": "PPL_PA_I_E_audio.m4a",
+  "video_file": "PPL_PA_I_E_video.mp4"
+}

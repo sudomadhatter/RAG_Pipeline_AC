@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_III_A_01",
+  "title": "Radio Communications & ATC Phraseology",
+  "questions": [
+    {
+      "id": "PPL_PA_III_A_01_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During preflight planning for a flight to an unfamiliar airport, you need to determine the correct CTAF frequency. Which source is the definitive legal authority for obtaining VHF radio frequencies for a specific airport?",
+      "options": [
+        {"label": "A", "text": "The GPS or EFB 'Nearest Airport' database page, which provides CTAF and tower frequencies from a continuously updated avionics database"},
+        {"label": "B", "text": "The VFR Sectional Chart frequency box adjacent to the airport symbol, which is published by the FAA on a 56-day cycle"},
+        {"label": "C", "text": "The Chart Supplement U.S. (formerly Airport/Facility Directory), which is the FAA's official published listing of all airport frequencies"},
+        {"label": "D", "text": "The ATIS broadcast for that airport, which announces the current active frequencies during airport operating hours"}
+      ],
+      "correct_answer": "C",
+      "explanation": "The Chart Supplement U.S. is the FAA's definitive legal authority for airport frequencies. It lists every VHF frequency assigned to an airport — tower, ground, ATIS, CTAF, UNICOM, AWOS/ASOS, and Remote Communications Outlets. The VFR Sectional (B) is a useful in-flight reference but operates on a 56-day publication cycle and only shows a subset of available frequencies. The GPS/EFB database (A) is a fast fallback during diversions but is a database derivative, not the primary source. ATIS (D) announces the current active runway and weather, not a directory of frequencies. Per 14 CFR 91.103, pilots must become familiar with all available information concerning a flight — the Chart Supplement is where that frequency information lives. FAA Order 2150.3C enforcement actions frequently cite 91.103 preflight planning failures.",
+      "far_reference": "14 CFR 91.103",
+      "acs_element": "PA.III.A.K1"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "You are receiving radar services from Atlanta Approach and the controller instructs: 'Cessna 3AB, contact Peachtree Tower on 120.9.' You switch frequencies and hear the new controller say: 'Cessna 3AB, runway 20 Left, cleared to land.' What is your required response?",
+      "options": [
+        {"label": "A", "text": "Reply 'Roger' to acknowledge that you received the controller's entire transmission, then set up for the approach to runway 20 Left"},
+        {"label": "B", "text": "Reply 'Wilco, Cessna 3AB' to confirm that you have received the landing clearance and intend to comply with the instruction"},
+        {"label": "C", "text": "Read back 'Cleared to land runway 20 Left, Cessna 3AB' to complete the closed-loop communication chain and allow the controller to verify accuracy"},
+        {"label": "D", "text": "Reply 'Affirmative, Cessna 3AB, we have the field in sight' to confirm visual contact with the landing environment and acceptance of the clearance"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Per AIM 4-2-3, pilots MUST read back all clearances, including landing clearances and especially runway assignments. The readback creates a closed-loop communication chain: the controller issues the clearance, the pilot reads it back verbatim, and the controller can immediately catch and correct any errors. 'Roger' (A) only means 'I received your transmission' — it does NOT confirm compliance or accuracy. 'Wilco' (B) means 'I will comply' but does not allow the controller to verify the pilot heard the correct runway. The readback is the primary defense against expectation bias — the cognitive trap where the brain hears what it expects, not what was actually said. Runway incursions are one of the FAA's top safety priorities, and failure to read back hold-short and runway instructions is a leading contributing factor (NTSB Safety Alert SA-017, 'Runway Incursions: A Call to Action').",
+      "far_reference": "14 CFR 91.123(a)",
+      "acs_element": "PA.III.A.K2"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A student pilot has memorized the correct radio phraseology and can recite the difference between 'Roger' and 'Wilco.' However, on a solo cross-country, ATC says 'Hold short of Runway 27' and the student reads back 'Cleared to land Runway 27.' Beyond the immediate procedural error, what deeper safety mechanism has failed?",
+      "options": [
+        {"label": "A", "text": "The student's VHF radio likely had a squelch or frequency mismatch that garbled the controller's actual words during the transmission"},
+        {"label": "B", "text": "The student fell victim to expectation bias — a cognitive phenomenon where the brain substitutes expected information for actual input, overriding what was truly heard"},
+        {"label": "C", "text": "The student was not monitoring the correct frequency and heard a clearance intended for a different aircraft with a similar call sign on the same channel"},
+        {"label": "D", "text": "The student was using incorrect ICAO phonetic alphabet pronunciation, which caused the controller to issue a non-standard clearance that the student misinterpreted"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Expectation bias is the cognitive mechanism that causes pilots to hear what they expect to hear, not what was actually transmitted. On approach to land, the brain anticipates 'Cleared to land' — so when the controller says 'Hold short,' the brain overwrites the actual audio with the expected phrase. This is why rote memorization of phraseology is necessary but NOT sufficient for safe radio communication — the pilot must actively engage in conscious readback verification, not autopilot-level response. The closed-loop readback exists precisely to catch this failure mode: when the controller hears the wrong readback, they issue an immediate correction. The FAA's Pilot/Controller Glossary and AIM 4-2-3 emphasize readback as the primary defense. NTSB investigations of runway incursions consistently identify expectation bias as a root cause, particularly in high-workload environments (NTSB Safety Study SS-86/01, 'Runway Incursions at Controlled Airports').",
+      "far_reference": "14 CFR 91.123",
+      "acs_element": "PA.III.A.R1"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot departing an unfamiliar Class D airport tunes 122.8 MHz for CTAF without verifying the Chart Supplement. The airport's actual CTAF is 123.0 MHz. Beyond missing traffic advisories at the destination, what systemic safety risk does transmitting on the wrong frequency create?",
+      "options": [
+        {"label": "A", "text": "The pilot's transmissions on 122.8 create radio interference for pilots at OTHER airports that legitimately use 122.8 as their CTAF, disrupting their traffic awareness"},
+        {"label": "B", "text": "The pilot's transponder will automatically switch to standby mode when the COM radio is set to an unassigned frequency, removing the aircraft from radar surveillance"},
+        {"label": "C", "text": "The pilot will be unable to contact Flight Service for weather updates because 122.8 is exclusively reserved for UNICOM ground operations at towered airports"},
+        {"label": "D", "text": "The pilot's ADSB-Out signal will conflict with the frequency assignment, causing the FAA's ADSB ground network to generate a false traffic alert for the area"}
+      ],
+      "correct_answer": "A",
+      "explanation": "Transmitting on the wrong CTAF creates a cascading safety problem: the pilot is invisible on the correct frequency at their own airport (missing traffic calls from aircraft actually there), AND their transmissions interfere with pilots at other airports that legitimately use 122.8 as their CTAF. A position report like 'Cessna 3AB, 10 miles east, inbound for landing' on 122.8 can cause pilots at a completely different airport to unnecessarily alter their traffic patterns, creating confusion and potential conflicts. This is why the Chart Supplement — not assumption — is the authority. 122.8 is the most common CTAF, but scores of airports use 122.7, 123.0, 122.725, or other assignments. The FAA's SAFO 17003 emphasizes the importance of correct CTAF usage to prevent midair collision risk in non-towered environments.",
+      "far_reference": "14 CFR 91.103; 14 CFR 91.126",
+      "acs_element": "PA.III.A.K1"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are 45 miles from your destination at 5,500 feet MSL on a VFR cross-country when both COM radios suddenly go silent — no transmit, no receive. You have already checked volume, squelch, headset connections, audio panel, and circuit breakers. All checks negative. What is the correct sequence of actions?",
+      "options": [
+        {"label": "A", "text": "Declare an emergency on 121.5 MHz, squawk 7700, and divert immediately to the nearest airport regardless of runway length or services available"},
+        {"label": "B", "text": "Squawk 7600, continue the flight under VFR conditions, and land as soon as practicable at a suitable airport, watching for light gun signals if the airport has a tower"},
+        {"label": "C", "text": "Squawk 7600, maintain your current altitude and heading, and orbit your present position until ATC dispatches an aircraft to intercept and escort you to the nearest airport"},
+        {"label": "D", "text": "Squawk 7700, reverse course back to your departure airport where you know the runway layout, and enter the traffic pattern from a straight-in approach to minimize time airborne"}
+      ],
+      "correct_answer": "B",
+      "explanation": "When two-way radio communication fails during a VFR flight, standard procedure is to squawk 7600 (alerting ATC — the radar data tag flashes 'RDOF'), continue the flight under VFR, and land as soon as practicable at a suitable airport. Note: 14 CFR 91.185 governs IFR lost-comm procedures specifically; for VFR operations, the applicable regulations are 14 CFR 91.126-91.129 (traffic pattern and communication requirements) and AIM 4-3-13 (light gun signals). Squawk 7600 is AIM guidance applicable to all flights. 'Land as soon as practicable' means a suitable airport within reasonable time, NOT an emergency field landing. Option A incorrectly treats lost comm as a full emergency (7700) — lost comm in VFR is an inconvenience, not an emergency. Option C describes an IFR lost comm hold procedure, not VFR. Option D uses the wrong squawk code and an unnecessarily risky diversion. At a towered destination, the pilot should remain above traffic pattern altitude to observe the active runway, sequence visually, and watch for light gun signals (AIM 4-3-13).",
+      "far_reference": "14 CFR 91.126; AIM 4-3-13",
+      "acs_element": "PA.III.A.K5"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "You are cleared for takeoff from Runway 27 at a Class D airport. Before departure, you loaded the Departure frequency (124.0) into COM 1 standby, with Tower (120.9) active. ATIS is monitoring on COM 2. After liftoff, Tower instructs: 'Cessna 3AB, contact Departure on 124.0.' What is the correct physical action sequence?",
+      "options": [
+        {"label": "A", "text": "Manually dial 124.0 into the COM 1 active window, verify the frequency display reads 124.0, then transmit your initial call to Departure with your callsign and altitude"},
+        {"label": "B", "text": "Press the COM 1 flip-flop button to swap 124.0 from standby to active, verify the display, then transmit: 'Departure, Cessna 3AB, 1,500 climbing 3,000'"},
+        {"label": "C", "text": "Switch the audio panel MIC selector from COM 1 to COM 2, dial 124.0 into COM 2, then transmit your initial call to Departure on the new COM radio"},
+        {"label": "D", "text": "Acknowledge Tower with 'Wilco,' continue climbing to pattern altitude, then load and switch to 124.0 once you have stabilized at your assigned altitude"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The pre-loaded standby technique is the professional frequency management method: before takeoff, the pilot loads the anticipated next frequency (Departure 124.0) into COM 1 standby. When the handoff comes, a single button press (flip-flop) swaps standby to active — no heads-down dialing during the critical departure climb phase. Option A manually dials the frequency, requiring eyes inside during climb — a task saturation risk. Option C unnecessarily changes COM radios and MIC selectors, adding complexity. Option D delays the handoff, leaving both Tower and Departure unable to communicate with the aircraft during a critical phase. The AIM emphasizes that frequency management discipline — pre-loading, verifying, and executing clean handoffs — is essential to maintaining situational awareness during high-workload phases of flight.",
+      "far_reference": "14 CFR 91.123",
+      "acs_element": "PA.III.A.S1"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are on a VFR cross-country, 30 minutes from your destination, when your primary COM radio fails. Your backup handheld radio has a weak battery — maybe 20 minutes of use left. You are in Class E airspace with no ATC communication requirement, and you can see the destination airport's beacon. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue directly to the destination at max cruise speed to arrive before the handheld battery dies, saving it only for a position report entering the traffic pattern", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Continue to destination with no radio communication since you are in Class E with no radio requirement — you have done this at non-towered airports before and it worked fine", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Divert immediately to the nearest airport — any airport — and land without using the radio at all, since attempting radio communication with a failing battery is unreliable", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Squawk 7600, use the handheld to make one call to Flight Service to relay your intentions, then conserve the battery for a single CTAF position report on short final at the destination"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A chases the destination under time pressure (get-there-itis) — rushing increases error probability and sacrifices the battery resource without a conservation strategy. Option B dismisses the communication failure as irrelevant because 'it worked before' (macho) — but NORDO operations, even when legal, eliminate collision avoidance communication with other traffic. Option C abandons the mission entirely and lands without ANY communication (resignation) — a less safe outcome than the methodical approach. Option D is the active professional middle path: it addresses the emergency (squawk 7600 alerts ATC), uses the limited resource strategically (one Flight Service relay to establish intent, one CTAF call at the most critical moment — short final), and continues the flight to a known destination. This is test + mitigation: assess the resource, allocate it to maximum safety effect, and execute the plan.",
+      "explanation": "VFR lost-comm procedure: squawk 7600 to alert ATC, continue under VFR, and land as soon as practicable (AIM 4-3-13; 14 CFR 91.126/91.129 govern communication at non-towered and towered airports respectively). Using a degraded backup radio strategically — concentrating its limited battery life on the highest-value transmissions — demonstrates Aeronautical Decision Making (ADM) as described in FAA-H-8083-2A Chapter 2. The NTSB has investigated multiple midair collisions at non-towered airports where one aircraft was operating without radio communication, including the 2004 Marion, IN midair (NTSB report ERA04FA068) — NORDO operations, even when legal, eliminate the traffic awareness layer that prevents convergence conflicts.",
+      "far_reference": "14 CFR 91.126; AIM 4-3-13",
+      "acs_element": "PA.III.A.K5"
+    },
+    {
+      "id": "PPL_PA_III_A_01_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "You are a newly certificated private pilot flying your first solo cross-country to a busy Class D airport with a high-performance traffic mix (turboprops, jets). You know the phraseology and have practiced with your CFI, but your hands are shaking and you realize you are speaking too fast, clipping your transmissions, and missing parts of ATC instructions. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Push through to the Class D airport as planned — you need to log this cross-country for your requirements, and you will get more comfortable with each transmission as the flight progresses", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Tell ATC 'student pilot' and continue — you have the same certificate rights as a 10,000-hour ATP, and asking for special treatment signals weakness to the controllers", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the cross-country entirely, turn around, and fly back to your home airport where you are comfortable with the tower and the traffic pattern", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Divert to a quieter Class D or non-towered airport nearby, practice 3-4 full-stop landings with radio calls to rebuild your confidence, then honestly assess whether you are ready to continue to the busy airport"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A chases the planned destination despite recognized performance degradation (get-there-itis) — pushing through when you are already task-saturated increases the risk of a critical readback error at a high-traffic airport. Option B mistakes bravado for competence (macho) — while 'student pilot' is a useful callout, the core problem is that the pilot is already missing ATC instructions, and pride will not fix a cognitive overload issue. Option C abandons the training objective entirely (resignation) — going home without any remediation means the pilot returns to the same problem next time with no improvement. Option D is the active professional middle path: divert to a lower-pressure environment to self-assess and rebuild proficiency under manageable workload, then make an honest go/no-go decision. This is test (fly the pattern at the quieter airport) + mitigation (if still shaky, stay; if confident, continue).",
+      "explanation": "The IMSAFE checklist — specifically the 'S' (Stress) and 'E' (Emotion/Experience) factors — applies here. Task saturation in the radio environment is a recognized precursor to breakdown in pilot performance (FAA-H-8083-2A Chapter 2, Aeronautical Decision Making). The pilot recognizes the degradation (a critical first step), but the safe response is to reduce workload to a manageable level and rebuild performance, not to either push through or retreat entirely. NTSB accident investigations in the general aviation fleet consistently show that pilots who recognize degraded performance but continue into high-workload environments account for a disproportionate share of approach-phase accidents (NTSB Annual Review of Aircraft Accident Data, GA fleet).",
+      "far_reference": "14 CFR 91.123",
+      "acs_element": "PA.III.A.R1"
+    }
+  ]
+}

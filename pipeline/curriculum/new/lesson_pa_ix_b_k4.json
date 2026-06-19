@@ -1,0 +1,23 @@
+{
+  "id": "lesson_pa_ix_b_k4",
+  "structData": {
+    "acs_code": "PA.IX.B.K4",
+    "title": "A stabilized approach, including energy management concepts.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [],
+    "doc_keys": [
+      "FAA-H-8083-3C",
+      "AC 61-98D"
+    ],
+    "keywords": [
+      "Potential Energy",
+      "Kinetic Energy",
+      "High Key",
+      "Low Key",
+      "Forward Slip",
+      "Drag Coefficient",
+      "Stabilized Approach"
+    ]
+  }
+}

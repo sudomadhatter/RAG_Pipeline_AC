@@ -4,7 +4,7 @@ type: reference
 date: 2026-06-15
 audience: "The agent (and team) that authors RKP manifests + quiz banks"
 companion: "rkp_creation_guide.md (the schema/mechanics). This guide is the QUALITY bar — how to make the questions actually hard and worth taking."
-gold_standard: "The Area I bank (PPL_PA_I_*). The 13 new-lesson questions (III/VI/VII/IX/XI) are being rewritten and are NOT a reference."
+gold_standard: "The Area I bank (PPL_PA_I_*) was authored first and is the reference for style. All 48 banks (including Areas III/VI/VII/IX/XI) are verified to the same structural quality (2026-06-19)."
 ---
 
 # Quiz & RKP Authoring Guide — Writing Questions That Are Actually Hard
@@ -12,8 +12,8 @@ gold_standard: "The Area I bank (PPL_PA_I_*). The 13 new-lesson questions (III/V
 > **Why this exists.** The original design-session notes for our quiz system were lost, so this guide
 > **reconstructs the standard from the gold-standard bank itself** — the Area I questions
 > (`PPL_PA_I_*`). It tells the authoring agent how to write questions that *separate a pilot who
-> understands from one who memorized*. **Do not model new questions on the 13 new-lesson questions —
-> those are sub-par and being rewritten. The reference is Area I.**
+> understands from one who memorized*. **All 48 banks (including non-Area I) now meet this standard
+> (verified 2026-06-19). Use Area I as the style reference for new banks.**
 
 > ### Note (2026-06-16): canonical bank location + citation verification
 > Quiz banks are authored and maintained in **this pipeline repo** (`curriculum_components/quiz_banks/`),

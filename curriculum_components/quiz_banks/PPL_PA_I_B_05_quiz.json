@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_I_B_05",
+  "title": "Flying with Inoperative Equipment — 91.213(d) Flowchart",
+  "questions": [
+    {
+      "id": "PPL_PA_I_B_05_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During preflight on a Cessna 172 without an MEL, you discover the clock is inoperative. The flight is Day VFR. At which step of the 91.213(d) flowchart does the analysis stop if the KOEL does not list the clock as required?",
+      "options": [
+        {"label": "A", "text": "Step 1 — the clock is required by the VFR-Day type certification design as a standard navigation instrument, making this an automatic grounding regardless of the KOEL or 91.205"},
+        {"label": "B", "text": "Step 3 — 14 CFR 91.205(b)(9) requires a clock with a sweep-second hand or digital equivalent displaying hours, minutes, and seconds for Day VFR operations, grounding the aircraft at Step 3"},
+        {"label": "C", "text": "Step 4 — the clock passes Steps 1 through 3, and the analysis only ends if an AD specifically requires the clock to be operational for VFR Day flight"},
+        {"label": "D", "text": "The flowchart completes all four steps with NO answers — the clock is not required by TCDS, KOEL, 91.205 for Day VFR, or any active AD, so it may be deactivated, placarded, and the final safety determination made"}
+      ],
+      "correct_answer": "D",
+      "explanation": "14 CFR 91.205(b) lists the required instruments for Day VFR operations — ATOMATOFLAMES. A clock with a sweep-second hand IS required for IFR flight under 91.205(d)(6), but it is NOT listed as a required instrument for Day VFR operations in 91.205(b). If the KOEL does not require it and no AD mandates operation, the clock passes all four steps. The pilot may deactivate, placard it 'Inoperative,' and make the final 91.213(d)(4) safety determination. Option B is the most common wrong answer — applicants confuse the IFR clock requirement with Day VFR. This distinction is a frequent DPE oral exam trap.",
+      "far_reference": "14 CFR 91.205(b); 14 CFR 91.205(d)(6); 14 CFR 91.213(d)",
+      "acs_element": "PA.I.B.K3a"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "The anti-collision light (beacon) on a Cessna 172 is inoperative. 14 CFR 91.205 does not list a beacon as required for Day VFR. The pilot checks the KOEL in AFM Section 2 and finds the anti-collision light listed as REQUIRED for Day VFR (marked '1'). What is the correct determination?",
+      "options": [
+        {"label": "A", "text": "The flight is legal — 14 CFR 91.205 is the federal standard for VFR equipment requirements and the KOEL represents the manufacturer's preferences rather than a legally binding operational limitation"},
+        {"label": "B", "text": "The flight is legal for Day VFR only — the KOEL restriction applies to Night VFR and IFR operations but cannot add requirements to the more permissive Day VFR category defined by federal regulation"},
+        {"label": "C", "text": "The aircraft is grounded — the KOEL is located in Section 2 (Limitations) of the approved AFM, making it a legally binding operating limitation under 14 CFR 91.9 that is more restrictive than 91.205"},
+        {"label": "D", "text": "The aircraft is grounded — 14 CFR 91.205(b)(11) requires all installed lighting systems to be operational for Day VFR, which includes beacon systems installed by the manufacturer"}
+      ],
+      "correct_answer": "C",
+      "explanation": "The KOEL is located in Section 2 (Limitations) of the FAA-approved Airplane Flight Manual. Under 14 CFR 91.9, no person may operate a civil aircraft without complying with the operating limitations in the approved AFM. Because the KOEL is a binding AFM limitation, it can impose requirements that 91.205 does not — and the pilot must comply with the more restrictive requirement. The anti-collision light's presence as required ('1') in the Day VFR column of the KOEL grounds the aircraft for Day VFR regardless of 91.205's silence on the subject. This is the scenario where applicants most often fail the 91.213(d) oral exam. Option D cites a non-existent provision of 91.205.",
+      "far_reference": "14 CFR 91.9; 14 CFR 91.213(d)(2)(ii); 14 CFR 91.205",
+      "acs_element": "PA.I.B.K3a"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot discovers a broken landing light during preflight for a Day VFR personal cross-country in a Piper Arrow. The 91.213(d) flowchart confirms the landing light is not required. Deactivating it requires pulling an identified circuit breaker and securing it with a locking collar stored inside a panel. Who must perform this deactivation?",
+      "options": [
+        {"label": "A", "text": "The pilot — pulling a circuit breaker is considered pilot preventive maintenance under Part 43 Appendix A and does not require an A&P mechanic regardless of whether a collar is installed"},
+        {"label": "B", "text": "The pilot — 14 CFR 91.213(d) grants the pilot authority to deactivate any equipment that passes the flowchart without limitation on the method of deactivation used"},
+        {"label": "C", "text": "A certificated A&P mechanic — installing a locking collar on a circuit breaker constitutes a maintenance action under 14 CFR 43.9 and must be performed and logged by a certificated mechanic"},
+        {"label": "D", "text": "A certificated A&P mechanic — all circuit breaker operations are classified as major electrical system alterations under 14 CFR Part 43 and cannot be performed by a pilot under any circumstances"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 91.213(d)(3)(ii) specifies that if deactivating inoperative equipment involves maintenance, it must be accomplished and recorded in accordance with Part 43. Installing a locking collar on a circuit breaker — securing it in an open position — crosses the threshold from a simple operator action into maintenance territory. This action must be performed by a certificated A&P mechanic and entered in the logbook under 14 CFR 43.9. A pilot can turn a switch OFF and placard it — that is not maintenance. Physically modifying the state of a circuit breaker panel with a securing device is maintenance. Option A correctly identifies that pulling a breaker alone might be within pilot scope, but the collar installation takes it into mechanic territory. Option D is overbroad and incorrect — not all circuit breaker operations are major alterations.",
+      "far_reference": "14 CFR 91.213(d)(3)(ii); 14 CFR 43.9; 14 CFR 43.3",
+      "acs_element": "PA.I.B.K3a"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A Piper Archer's attitude indicator has been placarded 'Inoperative' under 91.213(d) for 14 months. The aircraft has had three Annual inspections during this period. The mechanic signed off each Annual without addressing the deferred attitude indicator. Which legal interpretation determines the proper handling of this deferred item?",
+      "options": [
+        {"label": "A", "text": "An inoperative item placarded under 91.213(d) may remain deferred indefinitely as long as it continues to pass the four-step flowchart at each required inspection interval"},
+        {"label": "B", "text": "De Joseph (2017) and Peri (2018) FAA legal interpretations establish that at each required inspection, the mechanic must address the deferred item: repair it, remove it, or specifically re-evaluate and document its continued deferral status"},
+        {"label": "C", "text": "An inoperative item must be repaired within 90 calendar days under 14 CFR 91.405(c), which prohibits deferral beyond a single inspection cycle regardless of the De Joseph and Peri interpretations"},
+        {"label": "D", "text": "The mechanic is responsible for tracking deferred items and no additional pilot or owner documentation is required once the original placard is in place and the 91.213(d) analysis is recorded"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The FAA Chief Counsel's De Joseph (2017) and Peri (2018) legal interpretations established that the regulatory framework does not permit indefinite deferral of inoperative equipment under 91.213(d). Under 14 CFR 91.405(c), at or before each required inspection, the inoperative item must be either repaired, replaced, removed, or explicitly re-inspected and documented by the mechanic as still safely deferrable. Three Annual inspections without addressing the deferred attitude indicator means the mechanic signed off on incomplete compliance — a regulatory failure. The aircraft is technically not in proper compliance with the deferred-equipment maintenance rules. Option A directly contradicts the De Joseph and Peri interpretations. Option C invents a specific 90-day absolute limit that does not appear in 91.405(c) as stated.",
+      "far_reference": "14 CFR 91.405(c); AC 91-67A",
+      "acs_element": "PA.I.B.K3a"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During a checkride practical test, the DPE presents a scenario: the aircraft's airspeed indicator is inoperative. The flight is Day VFR. Walk through the 91.213(d) flowchart correctly. What is the answer at Step 3?",
+      "options": [
+        {"label": "A", "text": "Step 3 passes — 14 CFR 91.205 does not list an airspeed indicator as required for Day VFR because pilots can estimate airspeed through visual angle-of-attack cues and engine sound in VFR conditions"},
+        {"label": "B", "text": "Step 3 fails — 14 CFR 91.205(b)(1) explicitly requires an airspeed indicator for all powered aircraft for Day VFR operations, grounding the aircraft at Step 3"},
+        {"label": "C", "text": "Step 3 passes — the airspeed indicator is required only for IFR operations under 14 CFR 91.205(d)(1); Day VFR operations do not require a functioning airspeed indicator under federal regulations"},
+        {"label": "D", "text": "Step 3 passes — the airspeed indicator is covered under the Altimeter check (AV1ATES), and since the Altimeter is required for IFR only, the airspeed indicator also only applies to IFR conditions"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.205(b) lists the required instruments and equipment for Day VFR operations. ATOMATOFLAMES begins with 'A' — Airspeed indicator. An airspeed indicator is explicitly required for ALL powered aircraft operating under Day VFR per 91.205(b)(1). The flowchart fails at Step 3 — the aircraft cannot fly Day VFR with an inoperative airspeed indicator. There is no exception. Option A fabricates a visual estimation exception that does not exist in FAA regulations. Options C and D incorrectly categorize the airspeed indicator as an IFR-only requirement.",
+      "far_reference": "14 CFR 91.205(b)(1); 14 CFR 91.213(d)",
+      "acs_element": "PA.I.B.S3"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A student pilot's vacuum pump has failed. The aircraft's attitude indicator and directional gyro are both inoperative. The flight is Day VFR and no KOEL or AD requires either instrument. The flowchart returns a PASS. What additional requirement must be met before departure?",
+      "options": [
+        {"label": "A", "text": "The student must obtain a special endorsement from their CFI confirming competence to fly without gyroscopic instruments before the 91.213(d) process is complete"},
+        {"label": "B", "text": "A certificated pilot or mechanic must determine under 14 CFR 91.213(d)(4) that the inoperative gyroscopic instruments do not constitute a hazard under the anticipated VFR conditions for this specific flight"},
+        {"label": "C", "text": "No additional requirement exists — once the 91.213(d) flowchart returns a PASS, the pilot is legally authorized to depart and the safety decision is at the pilot's full discretion without further documentation"},
+        {"label": "D", "text": "The student must file an IFR flight plan to ensure ATC radar identification in the event of accidental IMC entry while operating with degraded gyroscopic instrument capability"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 91.213(d)(4) imposes a mandatory final safety determination that must be made by a certificated pilot or mechanic BEFORE flight — even after the flowchart passes. This determination asks: under the specific anticipated conditions of THIS flight, does the inoperative equipment constitute a hazard? For a student pilot with two inoperative gyroscopic instruments planning any flight that could encounter marginal VFR, the answer may well be YES — making the flight unsafe regardless of legal status. The CFI should evaluate this scenario with the student explicitly. Option C is the most dangerous wrong answer — it treats the flowchart pass as a complete authorization for departure. Option A invents a special gyroscopic endorsement that does not exist.",
+      "far_reference": "14 CFR 91.213(d)(4); AC 91-67A",
+      "acs_element": "PA.I.B.R1"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "During preflight, you discover the aircraft's right fuel gauge is stuck on empty but the left reads full. 91.213(d) analysis: the KOEL requires both fuel gauges to be operative for flight. You are scheduled for a training flight with your student. What is the SAFEST action?",
+      "options": [
+        {"label": "A", "text": "Placard the right gauge inoperative and make careful time-in-tank calculations for the flight — fuel gauges are unreliable anyway and an experienced pilot does not rely on them exclusively", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Ground the aircraft — the KOEL lists both fuel gauges as required, which means the flowchart fails at Step 2 and the aircraft is unairworthy regardless of whether the flight could be safely managed with one gauge", "hazardous_attitude": null},
+        {"label": "C", "text": "Limit the flight to 30 minutes to stay well within the fuel from the functioning left tank, then address the gauge repair afterward — practical risk management allows reasonable operational adjustments within legal ambiguity", "hazardous_attitude": "get_there_itis"},
+        {"label": "D", "text": "Call the FSDO for a verbal clarification on whether a single fuel gauge satisfies the KOEL requirement when one gauge is confirmed stuck rather than actually failed electrically", "hazardous_attitude": "resignation"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The KOEL lists both fuel gauges as required for flight. Under Step 2 of the 91.213(d) flowchart, the aircraft fails immediately — the item is required by the KOEL, so no further analysis is needed and the aircraft is unairworthy. The correct action is to ground the aircraft and contact a mechanic for repair before the training flight. Option A is Macho — dismissing a required instrument as 'unreliable anyway' to justify departure. This attitude directly contributed to NTSB accident ERA15LA190, where a pilot flew with a known inoperative fuel gauge, performed inadequate time-in-tank calculations, and experienced fuel exhaustion. Option C is Get-There-Itis — using operational creativity to rationalize around a clear legal grounding. Option D is Resignation combined with delay — there is no ambiguity requiring FSDO clarification; the KOEL determination is unambiguous.",
+      "sjt_rationale": "Option A is Macho — rationalizing a regulatory grounding as a minor risk management choice. Option C is Get-There-Itis — adjusting the plan to bypass a clear safety stop. Option D delays a clear decision with unnecessary escalation. Option B is the only correct and safe response.",
+      "far_reference": "14 CFR 91.213(d); 14 CFR 91.9",
+      "acs_element": "PA.I.B.S3"
+    },
+    {
+      "id": "PPL_PA_I_B_05_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are preparing for a solo Day VFR cross-country. During preflight, you discover the aircraft's magnetic compass has a broken bowl — the fluid is leaking out. The 91.213(d) flowchart is assessed. The compass passes all four steps for Day VFR flight. What is the SAFEST next action?",
+      "options": [
+        {"label": "A", "text": "Depart immediately — the 91.213(d) flowchart is a complete legal authorization and the DI can be used for heading reference on the cross-country in the absence of the compass", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Apply the 91.213(d)(4) final determination: a magnetic compass is the primary backup for a failed DI, and solo cross-country without either a functional compass or a functioning DI means no backup heading reference — ground the aircraft and seek repair", "hazardous_attitude": null},
+        {"label": "C", "text": "Placard the compass inoperative and accept the solo cross-country with navigation using GPS alone — modern GPS provides heading information making the magnetic compass redundant for VFR navigation", "hazardous_attitude": "invulnerability"},
+        {"label": "D", "text": "Delay the cross-country and fly a local area pattern flight only — a broken compass is legal for any VFR flight but imposes the common-sense restriction of avoiding cross-country navigation due to safety concerns"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Even though the magnetic compass passes the 91.213(d) legal flowchart for Day VFR, 91.213(d)(4) still requires a determination that the inoperative item does not constitute a hazard under the anticipated conditions. On a solo cross-country, the magnetic compass is the primary backup heading reference if the DI precesses or fails. Losing the compass removes this critical redundancy layer. Combined with the solo nature of the flight and the cross-country environment, the 91.213(d)(4) safety determination should conclude: yes, this constitutes a hazard for this specific operation. Ground the aircraft. Option A is Macho — treating the flowchart pass as complete authorization and ignoring the final determination requirement. Option C is Invulnerability — 'GPS makes it redundant.' GPS systems fail; FAA requires a functioning compass or equivalent as a backup. Reference: NTSB reports multiple cases where solo pilots with failed or inoperative magnetic compasses entered spatial disorientation in marginal VFR conditions.",
+      "sjt_rationale": "Option A is Macho — skipping the mandatory 91.213(d)(4) safety determination. Option C is Invulnerability — 'nothing bad will happen to me with just GPS.' Option D correctly limits the operation but for inexact reasons (it should be grounded, not limited to patterns). Option B applies the correct regulatory framework and the correct conservative safety outcome.",
+      "far_reference": "14 CFR 91.213(d)(4); 14 CFR 91.205",
+      "acs_element": "PA.I.B.R1"
+    }
+  ]
+}

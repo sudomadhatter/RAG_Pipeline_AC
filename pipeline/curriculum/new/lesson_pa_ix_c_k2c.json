@@ -1,0 +1,23 @@
+{
+  "id": "lesson_pa_ix_c_k2c",
+  "structData": {
+    "acs_code": "PA.IX.C.K2c",
+    "title": "Pitot-static system malfunction.",
+    "type": "lesson_chunk",
+    "ancestral_context": "Private Pilot > Emergency Operations",
+    "reg_keys": [
+      "14 CFR 91.411"
+    ],
+    "doc_keys": [
+      "FAA-H-8083-25C"
+    ],
+    "keywords": [
+      "Total Pressure",
+      "Dynamic Pressure",
+      "Static Pressure",
+      "Alternate Static Source",
+      "VSI",
+      "Bernoulli's Principle"
+    ]
+  }
+}

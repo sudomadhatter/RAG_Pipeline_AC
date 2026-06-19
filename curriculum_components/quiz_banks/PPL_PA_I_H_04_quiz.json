@@ -1,0 +1,142 @@
+{
+  "lesson_id": "PPL_PA_I_H_04",
+  "title": "Aeronautical Decision Making (PAVE & IMSAFE)",
+  "questions": [
+    {
+      "id": "PPL_PA_I_H_04_Q001",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "You are flying a Piper Archer at 4,500 feet MSL on a cold winter day with the cabin heater on. Your passenger develops a severe headache and nausea, and you notice you feel unusually sluggish and slow to think. Which cause best fits these symptoms and this context, and what is the immediate corrective action?",
+      "options": [
+        {"label": "A", "text": "Hypoxic hypoxia — initiate an immediate emergency descent below 10,000 feet"},
+        {"label": "B", "text": "Carbon monoxide poisoning — turn the cabin heater OFF, open fresh-air vents, use oxygen if available, and divert"},
+        {"label": "C", "text": "Hyperventilation — breathe into a paper bag and continue to the destination"},
+        {"label": "D", "text": "Motion sickness — have the passenger focus on the horizon and open the air vents"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The combination of a cabin heater running, a dull headache, nausea, and sluggish cognition at a low altitude (where hypoxic hypoxia is unlikely) points to carbon monoxide poisoning from a cracked exhaust-shroud heater (hypemic hypoxia). The corrective action is to shut the heater OFF, flood the cabin with fresh air via the vents, don supplemental oxygen if available, and land/divert as soon as practical. Hypoxic hypoxia (A) is unlikely at 4,500 ft. Hyperventilation (C) is not associated with the heater context and is treated by slowing breathing, not continuing the flight. Motion sickness (D) does not produce this symptom set in this context.",
+      "far_reference": "14 CFR 91.7",
+      "acs_element": "PA.I.H.S1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q002",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "At 12,000 feet MSL you begin to feel dizzy and lightheaded but cannot tell whether you are experiencing hypoxia or hyperventilation, since the symptoms are nearly identical. What does the FAA standard direct you to do first?",
+      "options": [
+        {"label": "A", "text": "Slow your breathing rate first, since hyperventilation is more common than hypoxia"},
+        {"label": "B", "text": "Descend immediately and take no other action until below 10,000 feet"},
+        {"label": "C", "text": "Don supplemental oxygen first to treat possible hypoxia, then deliberately slow your breathing rate"},
+        {"label": "D", "text": "Wait two minutes to see which set of symptoms becomes dominant before acting"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Because hypoxia and hyperventilation present with virtually identical symptoms and hypoxia is potentially fatal within minutes at altitude, the FAA standard is: when in doubt at altitude, treat for hypoxia FIRST by donning supplemental oxygen, then deliberately slow the breathing rate to address possible hyperventilation. Slowing breathing first (A) leaves untreated hypoxia in play. Waiting (D) wastes Time of Useful Consciousness. Descending alone (B) omits the immediate oxygen step.",
+      "far_reference": "14 CFR 91.211",
+      "acs_element": "PA.I.H.S1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q003",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During descent into your destination you develop excruciating pain in your ears and sinuses, having flown with a head cold. Why is supplemental oxygen NOT the correct fix, and what is?",
+      "options": [
+        {"label": "A", "text": "Oxygen is correct — apply 100% oxygen to relieve the trapped-gas pain"},
+        {"label": "B", "text": "Oxygen does not relieve expanding trapped gas; arrest the descent, climb slightly, then descend gradually using the Valsalva maneuver"},
+        {"label": "C", "text": "Oxygen is unnecessary; simply increase the descent rate to equalize faster"},
+        {"label": "D", "text": "Oxygen is correct only above 10,000 feet; below that, ignore the pain"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Ear/sinus block is a barotrauma problem governed by Boyle's Law, not an oxygenation problem, so supplemental oxygen does nothing for it. The mechanical fix is to arrest the descent, climb slightly to relieve the pressure differential, then resume a slow, gradual descent while using the Valsalva maneuver (pinch the nose, close the mouth, gently exhale) to force air into the middle ear. Increasing the descent rate (C) worsens the differential. Oxygen (A, D) does not address trapped gas.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.H.S1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q004",
+      "perspective": "risk_management",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "Which checklist is specifically designed to evaluate the PILOT's own physiological and psychological fitness for flight, and what do its letters represent?",
+      "options": [
+        {"label": "A", "text": "PAVE — Pilot, Aircraft, enVironment, External pressures"},
+        {"label": "B", "text": "IMSAFE — Illness, Medication, Stress, Alcohol, Fatigue, Emotion"},
+        {"label": "C", "text": "DECIDE — Detect, Estimate, Choose, Identify, Do, Evaluate"},
+        {"label": "D", "text": "5 Ps — Plan, Plane, Pilot, Passengers, Programming"}
+      ],
+      "correct_answer": "B",
+      "explanation": "IMSAFE is the personal-fitness self-assessment for the pilot: Illness, Medication, Stress, Alcohol, Fatigue, Emotion. PAVE (A) is the macro-level risk tool for the entire flight system (Pilot, Aircraft, enVironment, External pressures). DECIDE (C) is an in-flight decision loop. The 5 Ps (D) is an SRM framework. Conflating IMSAFE (pilot) with PAVE (whole flight) is a classic checkride error.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.H.R1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q005",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "Under 14 CFR 61.53, a pilot who has a known medical deficiency — for example, a head cold that would impair them in flight — must:",
+      "options": [
+        {"label": "A", "text": "Fly only if they hold a current medical certificate, since the certificate overrides any temporary condition"},
+        {"label": "B", "text": "Not act as pilot in command (or required crewmember) while that deficiency makes them unable to operate safely"},
+        {"label": "C", "text": "Fly only with a safety pilot in the right seat"},
+        {"label": "D", "text": "Fly only below 3,000 feet AGL until the condition resolves"}
+      ],
+      "correct_answer": "B",
+      "explanation": "14 CFR 61.53 prohibits acting as pilot in command or as a required crewmember while a known medical deficiency (or disqualifying medication) would make the person unable to operate safely. A valid medical certificate (A) does not override a temporary disqualifying condition. Neither a safety pilot (C) nor an altitude limit (D) cures the regulatory prohibition.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.H.R1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q006",
+      "perspective": "risk_management",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "On the morning of your checkride you slept poorly, skipped breakfast from nerves, and have minor stomach cramps. Applying IMSAFE, what is the professionally correct course of action and why?",
+      "options": [
+        {"label": "A", "text": "Push through — minor discomfort is normal checkride nerves and not a real risk"},
+        {"label": "B", "text": "Drink coffee and eat a candy bar to mask the symptoms, then fly"},
+        {"label": "C", "text": "Make a conservative No-Go and reschedule; the examiner respects sound risk management over 'pushing through'"},
+        {"label": "D", "text": "Fly only the oral portion and skip the flight portion"}
+      ],
+      "correct_answer": "C",
+      "explanation": "IMSAFE flags Fatigue and possible Illness/nutrition deficits, which create a high probability of cognitive degradation and motion sickness during maneuvers. Because aeromedical risk usually cannot be bought down in flight, the correct mitigation is a conservative No-Go. A DPE respects a well-reasoned No-Go far more than a pilot who tries to push through (A) or mask symptoms with caffeine/sugar (B). Splitting the test (D) does not address the underlying impairment.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.H.R1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q007",
+      "perspective": "risk_management",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "A DPE tells you: 'You are mildly fatigued, but you really need to get home tonight for an important event.' Which response demonstrates correct aeromedical risk management?",
+      "options": [
+        {"label": "A", "text": "Drink an energy drink to counter the fatigue and depart as planned"},
+        {"label": "B", "text": "Recognize fatigue as a hazard that cannot be reliably mitigated in the cockpit, and delay or cancel the flight rather than let external pressure drive the decision"},
+        {"label": "C", "text": "Depart but plan to land early if the fatigue worsens"},
+        {"label": "D", "text": "Depart at a lower altitude to reduce physiological stress"}
+      ],
+      "correct_answer": "B",
+      "explanation": "This is a classic DPE trap testing whether external pressure ('get-there-itis') corrupts the risk decision. Caffeine merely masks fatigue without restoring cognitive function and cannot prevent microsleeps, so 'mitigating' with an energy drink (A) fails the assessment. The correct answer matches the mitigation to the risk: fatigue is not reliably manageable in flight, so the disciplined outcome is to delay or cancel. Departing and hoping to adjust (C, D) still launches an impaired pilot.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.H.R1"
+    },
+    {
+      "id": "PPL_PA_I_H_04_Q008",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "Why is the 'it's only a minor head cold' rationalization a dangerous risk-management failure rather than an acceptable mitigation?",
+      "options": [
+        {"label": "A", "text": "It isn't dangerous — a minor cold has no effect on flight if you take a decongestant"},
+        {"label": "B", "text": "Because Boyle's Law guarantees that pressure changes can cause incapacitating ear/sinus pain (or a ruptured eardrum) on descent, so the hazard is not actually 'minor'"},
+        {"label": "C", "text": "Because the FAA requires a special endorsement to fly with any cold"},
+        {"label": "D", "text": "Because a head cold automatically invalidates your medical certificate"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Labeling a head cold 'minor' understates the real hazard: Boyle's Law dictates that as ambient pressure rises on descent, a blocked Eustachian tube cannot equalize, producing incapacitating pain or a ruptured eardrum. Proper risk management identifies that hazard, assesses the descent-phase risk, and mitigates conservatively (often a No-Go). A decongestant (A) does not make it safe and may itself be disqualifying. There is no 'fly-with-a-cold' endorsement (C), and a cold does not by itself invalidate the medical certificate (D) — 14 CFR 61.53 simply prohibits operating while impaired.",
+      "far_reference": "14 CFR 61.53",
+      "acs_element": "PA.I.H.R1"
+    }
+  ]
+}

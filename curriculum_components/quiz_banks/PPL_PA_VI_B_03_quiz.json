@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_VI_B_03",
+  "title": "Navigation Risk Management & Electronic Flight Bags",
+  "questions": [
+    {
+      "id": "PPL_PA_VI_B_03_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A private pilot plans a VFR cross-country using only an iPad with ForeFlight — no paper charts in the cockpit. The iPad has a current database and is fully charged. Under current FAA guidance, is this legal for Part 91 VFR operations?",
+      "options": [
+        {"label": "A", "text": "No — 14 CFR 91.503 requires all pilots to carry current paper charts as the primary navigation reference; electronic devices may only supplement, not replace, paper charts"},
+        {"label": "B", "text": "Yes — AC 91-78A authorizes Part 91 operators to use EFBs as a complete replacement for paper charts, provided the device displays functionally equivalent information with a current database"},
+        {"label": "C", "text": "Yes — but only if the pilot has completed an FAA-approved EFB training course and carries a letter of authorization from the local FSDO permitting paperless cockpit operations"},
+        {"label": "D", "text": "No — while the FAA permits EFBs for situational awareness, at least one printed sectional chart covering the route of flight must be physically in the cockpit as a regulatory backup"}
+      ],
+      "correct_answer": "B",
+      "explanation": "AC 91-78A explicitly authorizes Part 91 operators to use portable electronic devices (Class 1 EFBs) as a complete replacement for all paper aeronautical charts and publications. The requirements are straightforward: the EFB must display functionally equivalent information (charts, diagrams, airport data) and the database must be current. No special training course, FSDO letter, or paper backup is legally mandated for Part 91. However, the AC strongly recommends carrying a backup (second device or paper) as good risk management practice. Options A and D fabricate paper chart requirements that do not exist for Part 91. Option C invents an approval process. Note: Part 121/135 operations have different, stricter EFB requirements.",
+      "far_reference": "AC 91-78A; 14 CFR 91.21",
+      "acs_element": "PA.VI.B.R5"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "During a VFR flight, the autopilot begins a slow, uncommanded left turn that the pilot does not notice for 30 seconds. When the pilot finally recognizes the deviation, the aircraft has turned 15 degrees off course. Under 14 CFR 91.3, what is the pilot's legal authority and responsibility regarding autopilot malfunctions?",
+      "options": [
+        {"label": "A", "text": "The pilot must continue using the autopilot and troubleshoot the malfunction in flight — 14 CFR 91.3 requires the PIC to use all available systems to maintain control, and disconnecting a functioning autopilot violates this obligation"},
+        {"label": "B", "text": "The pilot may disconnect the autopilot only if the deviation exceeds 30 degrees from the assigned heading — minor deviations do not meet the threshold for manual override under Part 91"},
+        {"label": "C", "text": "The PIC has final authority and responsibility for the operation of the aircraft under 14 CFR 91.3(a) — this includes the authority to disconnect the autopilot and hand-fly whenever the PIC determines it is necessary for safe operation"},
+        {"label": "D", "text": "The pilot must record the autopilot malfunction in the aircraft maintenance logbook before disconnecting, as autopilot anomalies are classified as required maintenance discrepancy items under 14 CFR 43.11"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 91.3(a) states: 'The pilot in command of an aircraft is directly responsible for, and is the final authority as to, the operation of that aircraft.' This authority is absolute and includes the decision to disconnect the autopilot at any time. There is no deviation threshold, no troubleshooting requirement, and no pre-disconnect paperwork obligation. The PIC determines when hand-flying is necessary for safe operation. The Disconnect Doctrine (AC 61-134) reinforces this: if the autopilot does anything unexpected, disconnect first, stabilize the aircraft, then troubleshoot. Never fight the autopilot through the controls — overriding servos without disconnecting can create extreme out-of-trim conditions.",
+      "far_reference": "14 CFR 91.3(a)",
+      "acs_element": "PA.VI.B.R1"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot notices the autopilot is pitching the nose up aggressively during a climb. The pilot grabs the yoke and physically pushes against the autopilot servos to force the nose down, without pressing the autopilot disconnect button. Beyond the immediate control difficulty, what dangerous condition is the pilot creating?",
+      "options": [
+        {"label": "A", "text": "The autopilot's servo motors will overheat from the opposing force, potentially causing an electrical fire in the servo housing behind the instrument panel"},
+        {"label": "B", "text": "The autopilot is trimming against the pilot's input — when the pilot eventually releases the yoke or disconnects, the extreme out-of-trim condition may cause a violent, unexpected pitch excursion"},
+        {"label": "C", "text": "The pilot's opposing force will reset the autopilot's internal gyro reference, causing it to lose its attitude reference and enter an unrecoverable oscillation mode after release"},
+        {"label": "D", "text": "The physical resistance against the servos will damage the yoke's internal cable linkage, potentially causing a partial flight control failure that persists after autopilot disconnect"}
+      ],
+      "correct_answer": "B",
+      "explanation": "When a pilot physically fights the autopilot through the controls without disconnecting, the autopilot's trim system continues to operate. The autopilot senses the control surface not responding as commanded (because the pilot is opposing it) and commands more trim to overcome the 'resistance.' This creates an extreme out-of-trim condition. When the pilot eventually releases the yoke or disconnects the autopilot, the accumulated trim forces are suddenly unopposed — the aircraft can pitch violently, potentially exceeding structural limits or inducing loss of control. This is why the Disconnect Doctrine is absolute: PRESS DISCONNECT FIRST, then hand-fly. AC 61-134 describes this trim runaway mechanism and the correct disconnect-first procedure. The NTSB has investigated multiple accidents where pilots fought autopilots through the controls rather than disconnecting, resulting in loss of control when trim forces overpowered the pilot (NTSB accident report AAR-04/04, Colgan Air 9446).",
+      "far_reference": "14 CFR 91.3(a)",
+      "acs_element": "PA.VI.B.R1"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "A pilot drops a pen under the seat during cruise flight at 5,500 feet MSL. The pilot unbuckles the lap belt slightly, leans down to reach the pen, and spends 45 seconds searching under the seat. Beyond the physical distraction, what specific cognitive mechanism makes this minor event dangerous?",
+      "options": [
+        {"label": "A", "text": "The pilot's inner ear loses its gravitational reference when the head is below the instrument panel, causing vestibular disorientation that may persist for several minutes after looking up"},
+        {"label": "B", "text": "Cognitive tunneling — all mental bandwidth is consumed by the search task, the instrument scan collapses entirely, and bank or pitch excursions develop unnoticed during the 45 seconds the pilot's eyes are inside the cockpit"},
+        {"label": "C", "text": "The partially unbuckled lap belt reduces the pilot's tactile feedback from the aircraft's motion, making it impossible to sense altitude or attitude changes through the seat-of-the-pants method"},
+        {"label": "D", "text": "Leaning forward shifts the aircraft's center of gravity aft by approximately 2 inches, which can cause the aircraft to pitch up and enter a stall if the pilot does not apply compensating forward pressure"}
+      ],
+      "correct_answer": "B",
+      "explanation": "Cognitive tunneling occurs when a minor distraction consumes all available cognitive bandwidth, causing the pilot's instrument scan and outside visual scan to collapse completely. During the 45 seconds spent reaching for a pen, the pilot is not monitoring heading, altitude, bank angle, or airspeed. In an aircraft with no autopilot, even a slight bank can develop into a spiral if uncorrected for 45 seconds. With an autopilot engaged, the aircraft may maintain attitude — but the pilot has lost situational awareness of traffic, position, and system status. FAA-H-8083-2A Chapter 2 identifies cognitive tunneling as a primary mechanism of situational awareness degradation. The defense is strict task prioritization: Aviate (stabilize the aircraft) → Navigate → Communicate → Program. Retrieving a pen is below all four priorities. The NTSB has documented multiple LOC-I accidents triggered by cockpit distractions as minor as dropped charts, unlatched doors, and passenger conversations (NTSB Special Investigation Report on GA In-Flight LOC-I).",
+      "far_reference": "14 CFR 91.3(a)",
+      "acs_element": "PA.VI.B.R2"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "During a VFR cross-country, your panel-mounted GPS displays a 'Red X' over the HSI navigation display. The CDI needle disappears. The moving map continues to show your position. What is the correct troubleshooting sequence?",
+      "options": [
+        {"label": "A", "text": "The Red X indicates the GPS position is unreliable — immediately transition to VOR navigation, tune and identify the nearest VOR, and navigate exclusively by VOR for the remainder of the flight"},
+        {"label": "B", "text": "Cycle the GPS power switch off and on to clear the fault — Red X indications on Garmin systems are typically caused by temporary software glitches that resolve after a power cycle"},
+        {"label": "C", "text": "Maintain heading and altitude first (Aviate), then check the avionics circuit breaker — if popped, reset once; if it pops again, leave it and transition to VOR and pilotage as backup navigation"},
+        {"label": "D", "text": "The Red X only affects the CDI course display, not the GPS position — continue using the moving map for navigation since the GPS receiver is still computing an accurate position fix"}
+      ],
+      "correct_answer": "C",
+      "explanation": "The correct troubleshooting flow starts with Aviate — maintain heading and altitude before touching any avionics. Then troubleshoot systematically: check the circuit breaker (the most common cause of avionics failures). If the breaker has popped, reset it ONCE. If it pops again, there is an electrical fault — leave the breaker out and DO NOT reset again (a repeatedly popping breaker indicates a short circuit that could cause an electrical fire). Then transition to backup navigation: tune and identify a VOR, correlate with pilotage. Option A skips the troubleshooting step entirely. Option B power-cycles without checking the breaker — inappropriate for a potential electrical fault. Option D ignores the integrity warning and continues with degraded navigation. FAA-H-8083-25C Chapter 16 and the aircraft POH specify circuit breaker procedures.",
+      "far_reference": "14 CFR 91.3(a); 14 CFR 91.103",
+      "acs_element": "PA.VI.B.R3"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "You are using an iPad mounted on the yoke as your sole EFB during a summer VFR flight. Thirty minutes after departure, the iPad displays a temperature warning and shuts down. You have no paper charts and no second device. You can see the ground clearly, your panel-mounted VOR and GPS are functioning. What immediate action should you take regarding your EFB failure?",
+      "options": [
+        {"label": "A", "text": "Move the iPad to the shade, wait for it to cool (10-15 minutes), then restart it — in the meantime, use the panel GPS moving map and maintain visual contact with the ground"},
+        {"label": "B", "text": "Declare an emergency — without your EFB, you have lost access to charts, airport diagrams, and frequency information, which constitutes a navigation emergency requiring immediate ATC assistance"},
+        {"label": "C", "text": "Continue the flight using only the panel-mounted GPS and pilotage — the EFB was supplemental to your panel avionics, and you can complete the flight safely without chart reference since you briefed the route preflight"},
+        {"label": "D", "text": "Turn off all cockpit heating vents and open the window to create airflow that will cool the iPad faster — thermal shutdown is caused by ambient cockpit temperature, and reducing cabin temperature resolves the root cause"}
+      ],
+      "correct_answer": "A",
+      "explanation": "Consumer tablets experience thermal shutdown when internal temperatures exceed their operating limits, typically caused by direct sunlight on the glare shield (greenhouse effect through the canopy). The correct immediate response is to move the device to shade, allow it to cool (10-15 minutes is typical recovery time), and rely on panel-mounted avionics in the interim. The panel GPS moving map provides navigation capability, and visual contact with the ground enables pilotage. Option B is disproportionate — with functioning panel avionics and visual conditions, this is an inconvenience, not an emergency. Option C dismisses the EFB entirely when it can likely be recovered. Option D misdiagnoses the cause (it's direct sunlight, not ambient temperature) and opening the window creates noise and potential loose item hazards. AC 91-78A describes EFB hardware vulnerabilities, specifically noting thermal management as a primary failure mode for portable devices.",
+      "far_reference": "AC 91-78A; 14 CFR 91.21",
+      "acs_element": "PA.VI.B.R5"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_02",
+      "text": "You are hand-flying a VFR cross-country at 6,500 feet MSL in marginal VFR conditions (ceiling 2,500 AGL, visibility 5 miles). Your passenger, an anxious first-time flyer, starts asking rapid questions about every bump of turbulence, every sound, and every instrument movement. You notice your instrument scan has degraded — you have been answering questions for 3 minutes without checking the heading indicator or altimeter. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue answering the passenger's questions — keeping them calm is your responsibility as PIC, and a relaxed passenger reduces the overall stress level in the cockpit for both of you", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Tell the passenger to stop talking entirely — you are the pilot, this is your cockpit, and you cannot tolerate any distractions during flight regardless of how they feel about it", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Land immediately at the nearest airport — if passenger management is degrading your flying, you cannot safely continue the flight, and the only safe option is to stop flying entirely", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Briefly tell the passenger 'I need a few minutes of quiet to focus on flying, then I will answer your questions,' re-establish your instrument scan and verify heading and altitude, then resume conversation at a pace that maintains your scan discipline"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A prioritizes passenger comfort over aircraft control (get-there-itis) — 3 minutes without checking heading or altitude in MVFR conditions is a real situational awareness gap that could lead to altitude deviation or heading drift toward terrain. Option B shuts down communication aggressively (macho) — this creates an adversarial cockpit environment, increases passenger anxiety, and may provoke worse distraction. Option C abandons the flight due to a manageable human factors issue (resignation) — passenger management is a learnable skill, not an unresolvable emergency. Option D is the active professional middle path: establish a sterile cockpit briefly (test — can you recover your scan while reducing conversation?), verify aircraft state (heading, altitude), then manage communication at a sustainable pace (mitigation). This applies the sterile cockpit principle without destroying the relationship.",
+      "explanation": "The sterile cockpit concept, though codified only for Part 121 operations (14 CFR 121.542), is a fundamental ADM principle for all pilots. FAA-H-8083-2A Chapter 2 describes how non-essential cockpit activity degrades situational awareness through cognitive tunneling. The key insight is that SA degradation from distraction follows the three-phase model: the pilot first fails to perceive (misses the heading indicator), then fails to comprehend (doesn't realize they've been off-scan for 3 minutes), then fails to project (doesn't anticipate the consequences of continued distraction). The PIC's authority under 14 CFR 91.3(a) includes managing the cockpit environment. NTSB investigations of GA accidents consistently identify cockpit distraction as a contributing factor in LOC-I events (NTSB Annual Review, GA fleet distraction-related accidents).",
+      "far_reference": "14 CFR 91.3(a)",
+      "acs_element": "PA.VI.B.R2"
+    },
+    {
+      "id": "PPL_PA_VI_B_03_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are 25 NM from your destination when you notice the GPS moving map has been showing your position as 'stationary' for the last 2 minutes — the aircraft symbol hasn't moved, but the airspeed indicator shows 110 knots and the VOR CDI is tracking normally. You suspect GPS spoofing or a receiver fault. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue using the GPS — the display will likely unfreeze in a minute or two as satellite geometry improves; frozen displays are a known GPS glitch that self-corrects", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Trust the GPS position over the VOR — GPS is more accurate than VOR by an order of magnitude, and if there is a conflict between the two, the GPS is almost certainly correct", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Shut down all electronic navigation immediately — if the GPS may be spoofed, the VOR could also be compromised, and the only safe option is to navigate purely by visual references and dead reckoning", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Distrust the GPS — an aircraft showing 110 knots but 'stationary' on the map indicates the GPS solution is clearly wrong; transition to VOR navigation with pilotage cross-reference to verify your position independently, and monitor for GPS recovery"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A normalizes an obvious system anomaly (get-there-itis) — a stationary position at 110 knots is physically impossible and indicates a corrupted navigation solution. Option B elevates GPS accuracy dogma over direct evidence of malfunction (macho) — GPS is normally more accurate than VOR, but a frozen display is not a 'normal' GPS output. Option C abandons all electronic navigation including the functioning VOR (resignation) — the VOR is showing a normal, tracking CDI, providing reliable backup. Option D is the active professional middle path: correctly identify the GPS as compromised using correlation logic (airspeed vs. map position disagree), transition to the independent backup system (VOR), cross-reference with visual landmarks (pilotage), and monitor for GPS recovery. This is correlation navigation — verifying one system against independent sources.",
+      "explanation": "Correlation navigation — continuously verifying the primary system against independent sources — is the defense against silent navigation failures. GPS spoofing can gradually shift the displayed position without triggering RAIM alerts (spoofing attacks manipulate the signals rather than eliminating them). The pilot's defense is comparing the GPS picture with independent data: airspeed, VOR, visual landmarks. An aircraft showing groundspeed=0 at indicated airspeed=110 is a clear disagreement that the pilot must resolve in favor of the multiple agreeing sources (airspeed indicator, VOR, visual landmarks). FAA-H-8083-25C Chapter 16 emphasizes cross-checking navigation sources. FAA InFO 16012 warns of GPS interference and recommends pilots maintain proficiency in VOR and pilotage as backup navigation methods.",
+      "far_reference": "14 CFR 91.3(a); 14 CFR 91.103",
+      "acs_element": "PA.VI.B.R3"
+    }
+  ]
+}

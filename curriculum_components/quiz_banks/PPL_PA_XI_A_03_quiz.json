@@ -1,0 +1,144 @@
+{
+  "lesson_id": "PPL_PA_XI_A_03",
+  "title": "Night Risk Management & ADM",
+  "questions": [
+    {
+      "id": "PPL_PA_XI_A_03_Q001",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_04",
+      "text": "A private pilot wants to take a friend on a night flight. The pilot's last night currency landings were 95 days ago — three full-stop landings performed at 8:30 PM, which was 1 hour and 15 minutes after sunset on that date. Tonight's sunset is at 7:45 PM. At what time tonight does the pilot's night passenger currency requirement become effective?",
+      "options": [
+        {"label": "A", "text": "At sunset (7:45 PM) — 14 CFR 61.57(b) night currency begins at sunset because that is when position lights are required, making it a 'night' flight"},
+        {"label": "B", "text": "At evening civil twilight (approximately 8:10 PM) — the currency window matches the definition of 'night' used for logging flight time under 14 CFR 1.1"},
+        {"label": "C", "text": "At 8:45 PM (1 hour after sunset) — 14 CFR 61.57(b) defines the night passenger currency window as 1 hour after sunset to 1 hour before sunrise, and the pilot is NOT current because the 90-day window has expired (95 days ago)"},
+        {"label": "D", "text": "At 8:45 PM (1 hour after sunset) — but the pilot IS current because the 90-day window is calculated from the date of the landings, not the exact time, and 95 days rounds to within the 90-day quarter"}
+      ],
+      "correct_answer": "C",
+      "explanation": "14 CFR 61.57(b) defines the night passenger currency window as '1 hour after sunset to 1 hour before sunrise.' Tonight's sunset is 7:45 PM, so the currency requirement activates at 8:45 PM. The pilot's last qualifying landings were 95 days ago — exceeding the 90-day requirement. Therefore, the pilot is NOT current for carrying passengers during the night window. The pilot may fly SOLO at night (no passenger currency required for solo) or carry passengers before 8:45 PM (before the night currency window opens). Note the three distinct definitions: sunset (position lights), civil twilight (logging), and 1 hour after sunset (passenger currency). The pilot's landings at 8:30 PM, 1 hour 15 minutes after sunset, did qualify as 'night' landings — but they are now stale at 95 days.",
+      "far_reference": "14 CFR 61.57(b); 14 CFR 91.209",
+      "acs_element": "PA.XI.A.R5"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q002",
+      "perspective": "legal",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_06",
+      "text": "Before a night VFR flight, a pilot discovers the green right-wing position light is burned out. The pilot considers applying 14 CFR 91.213(d) to placard it 'INOP' and fly. Is this legal?",
+      "options": [
+        {"label": "A", "text": "Yes — 91.213(d) allows any non-safety-critical equipment to be placarded INOP and deferred to the next annual inspection, and position lights are supplementary visual aids, not primary flight instruments"},
+        {"label": "B", "text": "No — position lights are required for night VFR under 14 CFR 91.205(c); 91.213(d) cannot be used to override equipment specifically required by 91.205, and the aircraft is grounded for night operations until the light is repaired"},
+        {"label": "C", "text": "Yes — but only if the pilot illuminates the anti-collision strobe system as a substitute, since the white strobes provide equivalent visibility to other aircraft at night"},
+        {"label": "D", "text": "No — but the pilot can fly during daylight hours with the position light placarded INOP, as position lights are only required from sunset to sunrise under 91.209"}
+      ],
+      "correct_answer": "B",
+      "explanation": "The 91.213(d) inoperative equipment decision tree has a critical gate: step 4 asks 'Is the equipment required by 14 CFR 91.205?' Position lights are explicitly listed in 91.205(c) as required equipment for night VFR. When equipment is required by 91.205, 91.213(d) cannot be used to defer it — the aircraft does not meet the regulatory equipment requirements and is unairworthy for that type of operation. The aircraft is grounded for night flight until the green position light is repaired. Note: Option D contains a true statement — during daytime, position lights are not required by 91.205(b), so the aircraft can legally fly during the day. But at night, the position light is mandatory and non-deferrable.",
+      "far_reference": "14 CFR 91.205(c); 14 CFR 91.213(d)",
+      "acs_element": "PA.XI.A.R7"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q003",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_01",
+      "text": "A pilot plans a night VFR route that passes 3 NM from a 1,200-foot AGL communication tower with a charted obstruction light. The pilot plans to fly at 2,500 feet MSL — 1,300 feet above the tower. On the night of the flight, a layer of clouds sits at 2,000 feet AGL. The tower's obstruction light is above the cloud layer and invisible from below. What is the primary collision threat?",
+      "options": [
+        {"label": "A", "text": "The cloud layer itself — the pilot should be more concerned about inadvertent entry into IMC than the tower, which is 3 NM from the route and poses no direct collision threat at that distance"},
+        {"label": "B", "text": "The tower's guy-wires — while the tower itself may be 3 NM away, communication towers have guy-wire anchors that can extend up to 2/3 of the tower height outward from the base, potentially into the flight path"},
+        {"label": "C", "text": "The tower's obstruction light is invisible below the cloud layer — the pilot cannot see the tower or its light, and the 3 NM lateral clearance assumes the pilot can visually avoid it; at night with the light obscured, positional errors could bring the aircraft much closer than planned"},
+        {"label": "D", "text": "Other aircraft orbiting the tower for navigation purposes — communication towers are frequently used as visual checkpoints at night, and multiple aircraft may be converging on the tower from different altitudes"}
+      ],
+      "correct_answer": "C",
+      "explanation": "Obstruction lights are the tower's primary means of being visible to pilots at night. When clouds sit between the aircraft and the tower's light, the obstruction light becomes invisible — the tower is now a completely undetectable hazard. The pilot's 3 NM lateral clearance was calculated assuming visual avoidance as a backup to positional accuracy. At night, without the obstruction light visible, the pilot has no visual warning of the tower. Any navigational error (GPS inaccuracy, wind drift, heading error) that reduces the 3 NM buffer could bring the aircraft close to or into the tower or its guy-wires. AC 90-48D identifies obscured obstruction lights as a specific night collision hazard and emphasizes that altitude (flying above the obstacle) is a more reliable defense than lateral avoidance at night.",
+      "far_reference": "14 CFR 91.119; AC 90-48D",
+      "acs_element": "PA.XI.A.R1"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q004",
+      "perspective": "safety",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_05",
+      "text": "During a night cross-country, the current METAR at your destination reports temperature 12°C and dewpoint 10°C with calm winds and clear skies. Your ETA is 45 minutes. After sunset, the temperature/dewpoint spread typically narrows at approximately 1°C per hour. What weather hazard should you anticipate?",
+      "options": [
+        {"label": "A", "text": "Thunderstorms — the temperature/dewpoint convergence indicates atmospheric instability that could produce convective activity along your route within the next hour"},
+        {"label": "B", "text": "Radiation fog at the destination — the 2°C spread is already within the caution zone, and with clear skies and calm winds cooling the surface, the spread will likely close to zero before your arrival, producing fog that may reduce visibility below VFR minimums"},
+        {"label": "C", "text": "Wind shear — the temperature inversion forming at the surface will trap cold air below warmer air, creating a boundary layer with significant wind speed and direction changes"},
+        {"label": "D", "text": "No significant weather hazard — a 2°C temperature/dewpoint spread at a VFR airport with clear skies and calm winds indicates excellent conditions that will remain stable throughout the night"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A temperature/dewpoint spread of 2°C with clear skies and calm winds is a strong radiation fog indicator. After sunset, the ground cools by terrestrial radiation (heat radiating from the surface into space). Clear skies allow maximum radiative cooling (clouds would trap heat). Calm winds prevent mixing that would slow the cooling process. The surface air temperature drops toward the dewpoint at approximately 1°C per hour under these conditions. With a 2°C spread and 45 minutes to arrival, the spread may close completely before or shortly after the pilot arrives — producing radiation fog that can reduce visibility to zero within minutes. The invisible nature of fog formation at night means the pilot may not detect the deterioration until they are committed to the approach. AC 00-6B describes radiation fog formation mechanics and the temperature/dewpoint spread as the primary predictor.",
+      "far_reference": "14 CFR 91.155; AC 00-6B",
+      "acs_element": "PA.XI.A.R6"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q005",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_02",
+      "text": "During a night cross-country at 5,500 feet MSL, you drop your pencil while copying an ATIS broadcast. Your instinct is to lean down and search under the seat. According to night ADM principles, why is this action significantly more dangerous at night than during the day?",
+      "options": [
+        {"label": "A", "text": "The physical act of leaning shifts the pilot's center of gravity, which at night creates a vestibular illusion of turning that does not occur during daytime because the visual horizon compensates for the vestibular input"},
+        {"label": "B", "text": "The red cockpit lighting makes it impossible to see a pencil under the seat, so the search will take much longer than during the day, prolonging the distraction period significantly"},
+        {"label": "C", "text": "At night without a visual horizon, abandoning the instrument scan for even seconds allows the vestibular system to become the sole attitude reference — the vestibular system feeds false 'wings-level' data during a slowly developing bank, and the aircraft can enter an accelerating spiral dive before the pilot looks up"},
+        {"label": "D", "text": "The pencil may have rolled onto the rudder pedals, creating a physical obstruction that affects flight controls — this risk exists day and night but is amplified at night because the pilot cannot see the obstruction"}
+      ],
+      "correct_answer": "C",
+      "explanation": "At night, the outside visual horizon is absent or severely degraded. During the day, even when a pilot looks away from the instruments, the peripheral visual system passively detects the horizon and provides continuous attitude feedback. At night, this passive backup disappears. When the pilot leans down to search for a pencil, the instrument scan is completely abandoned. The vestibular system becomes the sole attitude reference — but it adapts to constant-rate changes in approximately 20 seconds. A slow entry into a bank is perceived as level flight. Within seconds, the aircraft enters a descending turn that accelerates as the bank steepens. By the time the pilot looks up, the aircraft may be in a 30+ degree bank with an increasing descent rate. FAA-H-8083-2A Chapter 2 identifies cognitive tunneling from cockpit distractions as a primary mechanism of LOC-I at night.",
+      "far_reference": "FAA-H-8083-2A Ch 2",
+      "acs_element": "PA.XI.A.R2"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q006",
+      "perspective": "application",
+      "question_type": "mcq",
+      "tested_rkp_id": "RKP_03",
+      "text": "You are taxiing at night at an unfamiliar non-towered airport. You approach an intersection where you see a red holding position sign with the marking '22' on your left, and a blue taxiway edge light pattern continuing straight ahead. What does this sign indicate, and what must you do before proceeding?",
+      "options": [
+        {"label": "A", "text": "The sign indicates you are approaching Taxiway 22 — continue straight ahead along the blue lights, as the red sign marks a cross-taxiway, not a runway"},
+        {"label": "B", "text": "The sign indicates you are at the hold-short line for Runway 22 — stop completely, visually verify the runway is clear in both directions, and at a non-towered airport, announce on CTAF that you are crossing Runway 22 before proceeding"},
+        {"label": "C", "text": "The sign indicates you are approaching a restricted area designated as Zone 22 — a maintenance or construction zone that is closed to aircraft taxi operations"},
+        {"label": "D", "text": "The sign indicates a taxiway intersection boundary with a maximum taxi speed of 22 knots — slow to this speed before proceeding through the intersection"}
+      ],
+      "correct_answer": "B",
+      "explanation": "A red holding position sign with a runway designator (e.g., '22') marks the boundary of the runway safety area. The pilot must STOP before crossing this line. At a non-towered airport, there is no ATC to provide crossing clearance — the pilot must visually verify the runway is clear in both directions (look for landing lights, position lights, and aircraft on approach). Best practice is to announce on the CTAF: '[Airport name] traffic, [callsign], crossing Runway 22.' At night, the hold-short line paint is nearly invisible — the red sign and any embedded runway guard lights (flashing yellow pairs) are the primary visual cues. AIM Section 2-3-8 describes runway holding position signs and markings. AC 91-73B emphasizes the elevated incursion risk at night at non-towered airports.",
+      "far_reference": "AIM 2-3-8; AC 91-73B",
+      "acs_element": "PA.XI.A.R4"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q007",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_05",
+      "text": "You are 30 minutes into a night VFR cross-country. The weather at your departure airport was clear with 10 SM visibility. You notice the stars directly ahead are starting to disappear — the sky ahead appears darker than the sky behind and to the sides. Your destination AWOS, checked 20 minutes ago, reported VFR conditions. All four actions below are possible. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Continue toward the destination — the AWOS reported VFR 20 minutes ago, and the star disappearance may just be a thin cloud layer that will clear before you arrive", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Climb to get above whatever is ahead — if it's a cloud layer, climbing above it will keep you in VFR conditions and you can descend on the other side to land", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Immediately reverse course 180 degrees and return to the departure airport — any loss of stars ahead means IMC is ahead, and you cannot safely continue under any circumstances", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Immediately turn 180 degrees to maintain VFR conditions behind you, check the current AWOS at the destination and any en-route airports, assess whether a safe VFR route exists — if not, return to the departure airport or divert to an alternate with confirmed VFR conditions"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A continues toward disappearing stars (get-there-itis) — disappearing stars at night is the ONLY visual warning of approaching IMC. A 20-minute-old AWOS report may no longer be accurate, especially with rapidly forming radiation fog or advancing cloud layers. Option B attempts to climb above weather (macho) — climbing into unknown weather as a VFR-only pilot risks cloud entry during the climb, and descending through the other side may not be possible without entering IMC. Option C executes a 180 but commits to returning to departure without gathering information (resignation) — the departure airport may also be deteriorating; the pilot needs current conditions at multiple airports. Option D is the active professional middle path: immediately turn away from the deteriorating conditions (preserve VFR), then gather current information to make an informed diversion decision.",
+      "explanation": "Disappearing stars at night is the primary visual precursor to inadvertent VFR-into-IMC. Unlike daytime, where a pilot can see a distinct cloud wall or haze layer, night weather deterioration manifests only as a gradual darkening of the sky. By the time all stars have disappeared in one direction, the pilot may have only seconds before entering a cloud. Inadvertent VFR-into-IMC at night is nearly 100% fatal for non-instrument-rated pilots, with LOC-I typically occurring within 60-90 seconds. The FAA Safety Team (FAASTeam) identifies the immediate 180-degree turn as the critical survival action, and AC 00-6B emphasizes continuous monitoring of temperature/dewpoint trends along the route.",
+      "far_reference": "14 CFR 91.155; AC 00-6B",
+      "acs_element": "PA.XI.A.R6"
+    },
+    {
+      "id": "PPL_PA_XI_A_03_Q008",
+      "perspective": "risk_management",
+      "question_type": "sjt",
+      "tested_rkp_id": "RKP_04",
+      "text": "A private pilot completed three night full-stop landings 88 days ago on a calm, clear night at a familiar airport. Tonight, the pilot wants to carry a passenger on a night cross-country to an unfamiliar airport with a gusty 15-knot direct crosswind, scattered clouds at 2,500 AGL, and no VASI/PAPI. The pilot is legally night current. All four actions below are legal. Which is the SAFEST aeronautical decision?",
+      "options": [
+        {"label": "A", "text": "Proceed — you are legally current (88 days is within 90 days), the weather is VFR, and the crosswind is within the aircraft's demonstrated crosswind component; legal currency equals readiness to fly", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Proceed — you have handled stronger crosswinds during daytime flights, and night landing technique is the same as day technique; if anything, the reduced traffic at night makes it safer", "hazardous_attitude": "macho"},
+        {"label": "C", "text": "Cancel the flight entirely — night cross-country to an unfamiliar airport with a crosswind is beyond any private pilot's capability, regardless of currency or proficiency", "hazardous_attitude": "resignation"},
+        {"label": "D", "text": "Fly a few solo night landings at your familiar home airport first to verify your crosswind proficiency is current, then reassess — if you feel sharp after the practice, proceed; if not, postpone the cross-country until conditions improve or you build additional proficiency"}
+      ],
+      "correct_answer": "D",
+      "sjt_rationale": "Option A equates legal currency with proficiency (get-there-itis) — three calm-night landings 88 days ago provide zero data about the pilot's ability to handle a 15-knot crosswind at an unfamiliar airport without VASI/PAPI guidance. The gap between currency and proficiency is where accidents happen. Option B extrapolates daytime crosswind ability to night conditions (macho) — night crosswind landings are significantly harder due to degraded depth perception, lack of peripheral visual cues during the flare, and the absence of VASI/PAPI for glidepath guidance. Option C blanket-rejects a manageable challenge (resignation) — with adequate proficiency, this flight is within private pilot capability. Option D is the active professional middle path: test proficiency in a controlled environment (home airport, familiar conditions), honestly assess readiness, then make an informed go/no-go decision based on actual recent performance rather than legal minimum currency.",
+      "explanation": "Currency is a binary legal check — three landings in 90 days. Proficiency is the pilot's actual ability to safely handle the specific conditions of tonight's flight. Three calm-night landings 88 days ago say nothing about the pilot's current ability to manage a 15-knot crosswind, judge the landing flare without VASI/PAPI, or navigate an unfamiliar airport at night. FAA-H-8083-2A Chapter 1 distinguishes currency from proficiency and emphasizes that personal minimums should be set above legal minimums. The pilot who flies a practice session first is applying the test-before-commit principle — verifying capability in a controlled environment before attempting a higher-risk operation.",
+      "far_reference": "14 CFR 61.57(b); FAA-H-8083-2A Ch 1",
+      "acs_element": "PA.XI.A.R5"
+    }
+  ]
+}

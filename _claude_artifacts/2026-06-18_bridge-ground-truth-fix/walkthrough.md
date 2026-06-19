@@ -38,9 +38,10 @@ trigger.
 - **WS-D — RKP manifests.** Fixed `src/gcp/upload_manifests.py` (config paths, gated) → Firestore
   `rkp_manifests`. Manifests were already clean.
 - **WS-E — quiz banks.** `src/gcp/ingest_quiz_banks.py` (gated) → Firestore `quiz_banks/{lesson}/questions/{q}`
-  with rotation fields; all 47 banks / 376 questions validate.
+  with rotation fields; all 48 banks / 384 questions validate (47 in the first run + `PPL_PA_I_H_04`
+  added as a follow-up — see "Follow-up correction" below).
 - **WS-F — verification.** `src/tests/` offline gate (33 tests) + `src/gcp/probe_bridge_hop.py` live probe.
-- **WS-G — docs.** Rewrote `bridge_key_guide.md` (v3.0, verified) and corrected `curriculum_lifecycle.md`.
+- **WS-G — docs.** Rewrote `bridge_key_guide.md` (v2.8, verified) and corrected `curriculum_lifecycle.md`.
 
 ## Actual output (pasted)
 
@@ -101,17 +102,35 @@ All writes executed. What actually happened (and what fought back):
 ```
 DB1: 184 docs | corrupt keys=0 | empty doc_keys=0 | resolve >=1 DB2 doc: 171/184
 DB2: 27 docs  | tagged=27/27
+Firestore: 48 RKP manifests + 384 quiz questions (48 banks)
 Offline tests: 33 passed
 ```
-Live bridge probe — **47/47 lessons return >=1 DB2 hit** (was 0/47):
+Live bridge probe — **48/48 lessons return >=1 DB2 hit** (was 0/48), re-run 2026-06-19 after `I_H_04`:
 ```
 $ python src/gcp/probe_bridge_hop.py
-  [HIT 5] PPL_PA_I_A_01 ...
+  [HIT 3] PPL_PA_I_H_04      keys=['FAA-H-8083-25', 'AIM', 'FAA-H-8083-2']
   ...
-47/47 lessons returned >=1 DB2 bridge hit.
+48/48 lessons returned >=1 DB2 bridge hit.
 ```
 The 13 lessons still reference-only cite documents genuinely not in the library (AME Guide, FCC forms,
 legal interpretations, FAA Orders) — kept as citations, covered by the semantic lanes.
+
+### Follow-up correction (`PPL_PA_I_H_04`, 2026-06-19)
+
+After the main run (which covered 47 lessons), `PPL_PA_I_H_04` surfaced as a **Firestore-only skeleton**:
+its 8 questions lived ONLY in the parent doc's embedded `questions` array, never in the
+`quiz_banks/{lesson_id}/questions/*` subcollection the app actually reads (`quiz_bank_service._fetch_all_questions`)
+— so the app saw zero questions for it. Fix:
+
+- Copied the canonical `PPL_PA_I_H_04` quiz + RKP from the app repo into the pipeline (now 48 lessons).
+- Hardened `ingest_quiz_banks.py` to also **strip the legacy embedded `questions` array** from every
+  parent doc (`firestore.DELETE_FIELD`), so the subcollection is the single source of truth.
+- Re-ran `--execute`: `Ingested 384 questions across 48 lessons. Stripped legacy embedded questions
+  array from 48 parent docs.` Verified: parents still carrying the array = **0**; `I_H_04` subcollection = **8**.
+- Re-ran the bridge probe → **48/48** (the `I_H_04` HIT shown above).
+
+> Note: `I_H_04`'s RKP manifest has 3 RKPs but **no `lesson_overview`** field, and the lesson has no podcast
+> — both tracked as gaps in `docs/asset_registry.md` (§2 row 35, §5 inventory).
 
 ## Your Actions
 
@@ -125,8 +144,16 @@ un-split full AFH) sits unused in the bucket — safe to delete to reclaim space
 
 ```bash
 git checkout -b fix/curriculum-rag-wiring
-git add src/ scripts/ _01_My/instruction_docs/bridge_key_guide.md _01_My/instruction_docs/curriculum_lifecycle.md _01_My/_artifacts/2026-06-18_bridge-ground-truth-fix
-git commit -m "Wire curriculum RAG: live-derived vocab, DB2 buildout (incl. split AFH) + document_tags, DB1 key repair, Firestore ingest, verified bridge 47/47"
+git add .gitignore src/ scripts/ \
+  _01_My/Master_Curriculum_Pipeline.md _01_My/instruction_docs/ docs/asset_registry.md \
+  _01_My/_artifacts/2026-06-18_bridge-ground-truth-fix \
+  curriculum_components/quiz_banks/ curriculum_components/rkp_manifests/ pipeline/curriculum/new/
+git rm --cached --ignore-unmatch src/gcp/import_db1_v2.py
+git commit -m "Wire curriculum RAG: live-derived vocab, DB2 buildout (incl. split AFH) + document_tags, DB1 key repair, Firestore ingest (48 lessons incl. I_H_04 subcollection fix), docs→v2.8, verified bridge 48/48"
 ```
+
+**Why these paths:** the `.gitignore` fix now tracks the canonical curriculum sources
+(`curriculum_components/{quiz_banks,rkp_manifests}` + `pipeline/curriculum/new` Area IX sidecars) that
+were previously ignored by the broad `*.json` rule — including the I_H_04 files brought in this session.
 
 (Note: the dead `src/gcp/import_db1_v2.py` was deleted this session per your OK.)

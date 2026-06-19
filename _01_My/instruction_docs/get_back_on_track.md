@@ -31,7 +31,7 @@ companion: "bridge_key_guide.md (RAG/metadata) · quiz_authoring_guide.md (quiz 
 > 1. **The citations already exist — this is verify-and-sync, not author-from-scratch.** The "12 failing
 >    banks" were measured on the **app repo** copy (`AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks/`),
 >    which has `null` citations. **This pipeline repo's copy** (`curriculum_components/quiz_banks/`) has a
->    citation on **every question of all 47 files — zero nulls.** Verified on `IX_B_01`: six `null`s in the
+>    citation on **every question of all 48 files — zero nulls.** Verified on `IX_B_01`: six `null`s in the
 >    app copy, all six already filled here. So the fix is: Daniel **verifies** the pipeline citations are
 >    in-scope → sync **pipeline → app** → re-ingest. (Three to eyeball per `quiz_authoring_guide.md` §5.4:
 >    `VII_A_01 Q001` & `VII_D_01 Q001` cite `14 CFR 23.2150` (Part 23 cert, not an operating rule);
@@ -132,7 +132,7 @@ patch its validator.** (The two SJT archetypes are now documented in `quiz_autho
      if the five collapse cleanly to four, or split into two questions if it tests two facts — in the
      canonical (pipeline) copy, then sync. (`I_F_01` carries the 5th option in **both** copies' disk JSON.)
 4. **Reconcile drift** *(canonical source decided: this pipeline repo; sync pipeline → app):* (a) `I_F_01`
-   disk vs DB; (b) the **pipeline repo** `curriculum_components/quiz_banks/` (47 banks, all citations
+   disk vs DB; (b) the **pipeline repo** `curriculum_components/quiz_banks/` (48 banks, all citations
    filled) is canonical vs the **app repo** `_docs/specialist_lesson/quiz_banks/` (48 — app has `I_H_04`,
    pipeline doesn't, and the app has the `null`-citation drift). Sync the pipeline copies into the app's
    ingest input dir. Keep this repo as the single upstream all app branches pull from.
@@ -171,7 +171,7 @@ patch its validator.** (The two SJT archetypes are now documented in `quiz_autho
 
 **The bank JSON sources (reconcile — they drifted):**
 - app: `_docs/specialist_lesson/quiz_banks/*.json` (48 banks)
-- pipeline: `Ingestion_pipeline_AvCh/curriculum_components/quiz_banks/*.json` (47 banks)
+- pipeline: `Ingestion_pipeline_AvCh/curriculum_components/quiz_banks/*.json` (48 banks)
 
 **Authoring guides (this folder — ingestion team owns content):**
 - `quiz_authoring_guide.md` (quiz quality bar), `rkp_creation_guide.md` (RKP mechanics),
