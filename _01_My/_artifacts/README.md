@@ -1,1 +1,0 @@
-All the artifacts from the chat session are stored in this folder.
