@@ -136,12 +136,12 @@ gcloud run services logs read aviationchat-backend --region=us-east1 --project=a
 ### 5d. Firebase App Hosting Frontend Deployment
 Firebase App Hosting automatically triggers on pushing to `main`. Verify the deployment status on the live site:
 - Live URL: [https://aviationchat.org](https://aviationchat.org)
-- Status checks can be verified on the Firebase Console or by checking [apphosting.yaml](file:///c:/AGY-Projects/aviationChat-AGY/frontend/apphosting.yaml) parameters.
+- Status checks can be verified on the Firebase Console or by checking [apphosting.yaml](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/frontend/apphosting.yaml) parameters.
 
 ---
 
 ## Step 6: Post-Deployment Sync
 
 Finally, update the project status tracking documents to keep active context clean:
-- Update [active-context.md](file:///c:/AGY-Projects/aviationChat-AGY/_bmad-output/active-context/active-context.md).
-- Reference the deploy skill details in the main [SKILL.md](file:///c:/AGY-Projects/aviationChat-AGY/.agent/skills/deploy-backend/SKILL.md) if needed.
+- Update [active-context.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad-output/active-context/active-context.md).
+- Reference the deploy skill details in the main [SKILL.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/.agent/skills/deploy-backend/SKILL.md) if needed.

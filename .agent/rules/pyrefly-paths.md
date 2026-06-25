@@ -12,10 +12,10 @@ On Windows, Pyrefly requires native path separators. Forward slashes cause silen
 
 ```toml
 # ✅ Correct
-python-interpreter-path = "c:\\AGY-Projects\\aviationChat-AGY\\.venv\\Scripts\\python.exe"
+python-interpreter-path = "c:\\Sudo_Hatter_Command\\aviationChat-AGY\\.venv\\Scripts\\python.exe"
 search_path = [
-    "c:\\AGY-Projects\\aviationChat-AGY",
-    "c:\\AGY-Projects\\aviationChat-AGY\\.venv\\Lib\\site-packages"
+    "c:\\Sudo_Hatter_Command\\aviationChat-AGY",
+    "c:\\Sudo_Hatter_Command\\aviationChat-AGY\\.venv\\Lib\\site-packages"
 ]
 ```
 

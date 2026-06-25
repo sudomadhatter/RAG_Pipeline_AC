@@ -33,7 +33,7 @@ fictional scaffolding is gone, and the docs describe the real structure.
   `audit_sidecars.py` use `config.CURRICULUM_NEW`/`CURRICULUM_ACTIVE`).
 - **Fictional / dead:** `superseded/`, `manifest.json`, the entire `pipeline/library/` tree, the 6-phase
   `src/pipeline/{base,curriculum,library}.py` + `src/main.py` + `src/utils/lifecycle.py` (a closed island
-  imported only by each other), and `src/gcp/upload_and_import_v2.py` (hardcodes `c:\AGY-Projects\...`
+  imported only by each other), and `src/gcp/upload_and_import_v2.py` (hardcodes `c:\Sudo_Hatter_Command\...`
   machine paths — can't run in this repo). The live stores were built by the `src/gcp/*` scripts, not this pipeline.
 
 ## Target structure

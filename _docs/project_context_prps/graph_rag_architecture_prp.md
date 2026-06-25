@@ -401,14 +401,14 @@ flowchart TD
 
 | File | Status | Role in Graph RAG |
 |---|---|---|
-| [curriculum_resolver.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/utils/curriculum_resolver.py) | ✅ Built | Loads `PREREQ_MAP` from `curriculum_key.json` at import time |
-| [prebunk_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/prebunk_service.py) | ✅ Built (8.3) | Runtime pre-bunk check — reads both edge sources |
-| [dag_discovery_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/evolution/dag_discovery_service.py) | ✅ Built (8.3) | Auto edge discovery — RR analysis + Pearce-Kelly incremental cycle detection (8.18; `try_add_edge` returns `False` on cycle, bootstraps from `PREREQ_MAP`) |
-| [reward_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/evolution/reward_service.py) | ✅ Built (8.1) | Bipartite reward scoring — feeds affinity updates |
-| [affinity_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/evolution/affinity_service.py) | ✅ Built (8.2) | Per-student tool weight updates with velocity constraints |
-| [cognitive_dossier.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py) | ✅ Built | `ACSKnowledgeNode` with 16-tool weights, migration validators |
-| [lesson_plan.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/lesson_plan.py) | ✅ Built | `prebunk_node` field on `LessonPlan` |
-| [lesson_planner/agent.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/specialist/sub_agents/lesson_planner/agent.py) | ✅ Built | Reads `top_3_global_traps` at plan generation |
+| [curriculum_resolver.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/utils/curriculum_resolver.py) | ✅ Built | Loads `PREREQ_MAP` from `curriculum_key.json` at import time |
+| [prebunk_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/prebunk_service.py) | ✅ Built (8.3) | Runtime pre-bunk check — reads both edge sources |
+| [dag_discovery_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/evolution/dag_discovery_service.py) | ✅ Built (8.3) | Auto edge discovery — RR analysis + Pearce-Kelly incremental cycle detection (8.18; `try_add_edge` returns `False` on cycle, bootstraps from `PREREQ_MAP`) |
+| [reward_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/evolution/reward_service.py) | ✅ Built (8.1) | Bipartite reward scoring — feeds affinity updates |
+| [affinity_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/evolution/affinity_service.py) | ✅ Built (8.2) | Per-student tool weight updates with velocity constraints |
+| [cognitive_dossier.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py) | ✅ Built | `ACSKnowledgeNode` with 16-tool weights, migration validators |
+| [lesson_plan.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/lesson_plan.py) | ✅ Built | `prebunk_node` field on `LessonPlan` |
+| [lesson_planner/agent.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/specialist/sub_agents/lesson_planner/agent.py) | ✅ Built | Reads `top_3_global_traps` at plan generation |
 | `backend/services/evolution/nightly_overseer.py` | 🔜 Story 8.4 | Batch aggregation — the macro-evolution brain |
 | `backend/schemas/evolution.py` | 🔜 Story 8.4 | `OverseerReport`, `GoldenCandidate`, `StudentRisk` schemas |
 | `backend/routers/admin_evolution.py` | 🔜 Story 8.4 | Admin API for manual trigger + Golden Transcript review |

@@ -12,11 +12,11 @@
 During our audit of the **Mission Control Admin Dashboard**, we observed that the 3D Curriculum Graph rendered exactly **33 connections (edges)** for the active lesson set. This analysis was used to design and execute a topology refactor that expanded the graph to a rich, multi-parent Directed Acyclic Graph (DAG) and modernized the dashboard UX.
 
 This document summarizes:
-1. **The Root Cause:** Why only 33 connections existed (a 1:1 parent-child structure in [curriculum_key.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/curriculum_key.json)).
+1. **The Root Cause:** Why only 33 connections existed (a 1:1 parent-child structure in [curriculum_key.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/curriculum_key.json)).
 2. **The Completed Solution:** 
    - Static mapping enriched with CFI-approved multi-parent connections (expanding the graph to **40 connections**).
-   - [curriculum_graph_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/curriculum_graph_service.py) updated to dynamically merge statistical correlation edges from `discovered_edges.json` with a deduplication filter.
-   - [CurriculumBrainGraph.tsx](file:///c:/AGY-Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumBrainGraph.tsx) modified to style static edges as solid neon cyan and discovered edges as dashed amber (`#FF9900`).
+   - [curriculum_graph_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/curriculum_graph_service.py) updated to dynamically merge statistical correlation edges from `discovered_edges.json` with a deduplication filter.
+   - [CurriculumBrainGraph.tsx](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumBrainGraph.tsx) modified to style static edges as solid neon cyan and discovered edges as dashed amber (`#FF9900`).
    - A floating glassmorphic lesson selector dropdown embedded inside the graph container, with real-time search, sorting, and mobile longitudinal height scaling.
    - A build-time cycle validation test added to prevent topological loops.
 
@@ -96,7 +96,7 @@ The separate left sidebar and mobile dropdown were removed. We built a floating,
 ## 🧪 Cycle Prevention & Verification
 
 To verify cycle acyclicity for pre-bunking safety, we wrote a test:
-- **Test File:** [test_curriculum_acyclic.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/tests/services/evolution/test_curriculum_acyclic.py)
+- **Test File:** [test_curriculum_acyclic.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/tests/services/evolution/test_curriculum_acyclic.py)
 - **Method:** Runs Kahn's topological sort on `curriculum_key.json`.
 - **Result:** **PASSED** (0 cycles found across the manual mappings).
 - **Frontend Check:** `npx tsc --noEmit` compiled successfully with zero type errors.

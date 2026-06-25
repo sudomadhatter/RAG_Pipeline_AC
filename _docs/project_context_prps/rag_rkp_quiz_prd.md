@@ -249,8 +249,8 @@ Once you've authored a batch, hand the files to the agent. The agent will:
 $json = @'
 { ... your JSON here ... }
 '@
-New-Item -ItemType Directory -Force -Path "c:\AGY-Projects\ingestion-Pipeline-AC\docs\lesson_rkps" | Out-Null
-[System.IO.File]::WriteAllText("c:\AGY-Projects\ingestion-Pipeline-AC\docs\lesson_rkps\PPL_PA_I_A_01_rkp.json", $json)
+New-Item -ItemType Directory -Force -Path "c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\docs\lesson_rkps" | Out-Null
+[System.IO.File]::WriteAllText("c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\docs\lesson_rkps\PPL_PA_I_A_01_rkp.json", $json)
 Write-Host "SUCCESS: File written."
 ```
 

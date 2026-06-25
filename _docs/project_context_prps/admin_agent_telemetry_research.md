@@ -42,7 +42,7 @@ The **Admin Agent** is the async, fire-and-forget meta-grader. It runs after eve
 
 ### 3.1 Socratic Text Sessions — SAR Telemetry
 
-**Source:** [agent.py `_write_sar_telemetry()`](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/specialist/agent.py#L2621-L2678)
+**Source:** [agent.py `_write_sar_telemetry()`](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/specialist/agent.py#L2621-L2678)
 
 Every Socratic turn writes a document to `sar_interactions/` with:
 
@@ -68,7 +68,7 @@ Every Socratic turn writes a document to `sar_interactions/` with:
 
 ### 3.2 Sully Voice Sessions — Full Telemetry
 
-**Source:** [sully_spike_websocket.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/routers/sully_spike_websocket.py#L1113-L1222)
+**Source:** [sully_spike_websocket.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/routers/sully_spike_websocket.py#L1113-L1222)
 
 At session close, a `SullySessionTelemetry` document is written with:
 
@@ -85,7 +85,7 @@ At session close, a `SullySessionTelemetry` document is written with:
 | `max_consequence_depth` | int | Deepest consequence chain reached |
 | `override_count` | int | Native barge-in interruptions |
 
-**Admin Agent grading output** ([SullyGradingResult](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/sully_grading.py#L95-L130)):
+**Admin Agent grading output** ([SullyGradingResult](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/sully_grading.py#L95-L130)):
 
 | Field | Type | Description |
 |---|---|---|
@@ -100,7 +100,7 @@ At session close, a `SullySessionTelemetry` document is written with:
 
 ### 3.3 Specialist Q&A Conversations
 
-**Source:** [chat_history_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/chat_history_service.py)
+**Source:** [chat_history_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/chat_history_service.py)
 
 Each Specialist session stores up to **50 messages** in `specialist_chats/{session_id}` with:
 
@@ -119,7 +119,7 @@ Each Specialist session stores up to **50 messages** in `specialist_chats/{sessi
 
 ### 3.4 Quiz Results & Quiz Tutor Remediation
 
-**Source:** [quiz_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/quiz_service.py), [quiz_tutor_result.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/quiz_tutor_result.py)
+**Source:** [quiz_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/quiz_service.py), [quiz_tutor_result.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/quiz_tutor_result.py)
 
 | Collection | Key Fields | Purpose |
 |---|---|---|
@@ -128,7 +128,7 @@ Each Specialist session stores up to **50 messages** in `specialist_chats/{sessi
 
 ### 3.5 ACS Knowledge Ledger — The Existing A/B Framework
 
-**Source:** [cognitive_dossier.py `ACSKnowledgeNode`](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py#L156-L273)
+**Source:** [cognitive_dossier.py `ACSKnowledgeNode`](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py#L156-L273)
 
 This is the **existing but dormant A/B testing infrastructure** for Strategy Roulette:
 
@@ -148,7 +148,7 @@ tool_affinity_weights: Dict[str, float] = {
 These weights are described as **"Epsilon-greedy exploration weights for Strategy Roulette"** — but `StrategyRoulette.roll()` currently uses `random.choice()` and **completely ignores these weights**. The weights exist in the schema, are validated (must sum to 1.0), but are never read during tool selection.
 
 > [!CAUTION]
-> **Critical Gap:** The Strategy Roulette currently selects tools **uniformly at random** ([strategy_roulette.py L42](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/strategy_roulette.py#L42)). The per-student, per-ACS `tool_affinity_weights` exist in the schema but are never consulted. This is the core mechanism the Evolution Engine needs to close.
+> **Critical Gap:** The Strategy Roulette currently selects tools **uniformly at random** ([strategy_roulette.py L42](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/strategy_roulette.py#L42)). The per-student, per-ACS `tool_affinity_weights` exist in the schema but are never consulted. This is the core mechanism the Evolution Engine needs to close.
 
 ---
 
@@ -281,7 +281,7 @@ The `SullyGradingResult.technique_effectiveness` already classifies each techniq
 
 ### 9.1 What Exists Today
 
-The **Prerequisite DAG** is already partially built into the curriculum. Every lesson in [curriculum_key.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/curriculum_key.json) has a `prerequisite_acs_nodes` array:
+The **Prerequisite DAG** is already partially built into the curriculum. Every lesson in [curriculum_key.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/curriculum_key.json) has a `prerequisite_acs_nodes` array:
 
 ```json
 {
@@ -293,7 +293,7 @@ The **Prerequisite DAG** is already partially built into the curriculum. Every l
 
 This data was hand-curated — 34 lessons each have manually-mapped prerequisite ACS codes. The idea: before teaching Cloud Clearances, the system should check if the student has a misconception about AGL/MSL altitude (PA.I.B.K2). If they do, the tutor clears it first.
 
-**Story 4.20** ([story-4.20-prerequisite-dag-prebunking.md](file:///c:/AGY-Projects/aviationChat-AGY/_bmad/bmm/stories/story-4.20-prerequisite-dag-prebunking.md)) is fully specified but **has never been implemented**. Status: "Ready for Dev."
+**Story 4.20** ([story-4.20-prerequisite-dag-prebunking.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad/bmm/stories/story-4.20-prerequisite-dag-prebunking.md)) is fully specified but **has never been implemented**. Status: "Ready for Dev."
 
 ### 9.2 How Pre-Bunking Would Work
 
@@ -369,18 +369,18 @@ Once Pre-Bunking is live, we should A/B test:
 
 | Component | File |
 |---|---|
-| Admin Agent (grading logic) | [agent.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/agent.py) |
-| Admin Agent (prompts) | [prompts.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/prompts.py) |
-| Strategy Roulette (tool selection) | [strategy_roulette.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/strategy_roulette.py) |
-| SAR Telemetry (schema) | [telemetry.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/telemetry.py) |
-| Cognitive Dossier (ACS weights) | [cognitive_dossier.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py) |
-| Sully Grading (voice eval) | [sully_grading.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/sully_grading.py) |
-| Sully WebSocket (telemetry write) | [sully_spike_websocket.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/routers/sully_spike_websocket.py) |
-| Quiz Service (scoring + persistence) | [quiz_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/quiz_service.py) |
-| Quiz Result (permanent record) | [quiz_result_record.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/quiz_result_record.py) |
-| Quiz Tutor Result (remediation) | [quiz_tutor_result.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/quiz_tutor_result.py) |
-| Chat History (Specialist Q&A) | [chat_history_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/chat_history_service.py) |
-| Learning Context Cache (LCC) | [learning_context.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/learning_context.py) |
-| Session Logs (compliance) | [session_log.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/session_log.py) |
-| Curriculum Key (DAG data) | [curriculum_key.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/curriculum_key.json) |
-| Story 4.20 (Pre-Bunking spec) | [story-4.20](file:///c:/AGY-Projects/aviationChat-AGY/_bmad/bmm/stories/story-4.20-prerequisite-dag-prebunking.md) |
+| Admin Agent (grading logic) | [agent.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/agent.py) |
+| Admin Agent (prompts) | [prompts.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/prompts.py) |
+| Strategy Roulette (tool selection) | [strategy_roulette.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/strategy_roulette.py) |
+| SAR Telemetry (schema) | [telemetry.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/telemetry.py) |
+| Cognitive Dossier (ACS weights) | [cognitive_dossier.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py) |
+| Sully Grading (voice eval) | [sully_grading.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/sully_grading.py) |
+| Sully WebSocket (telemetry write) | [sully_spike_websocket.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/routers/sully_spike_websocket.py) |
+| Quiz Service (scoring + persistence) | [quiz_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/quiz_service.py) |
+| Quiz Result (permanent record) | [quiz_result_record.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/quiz_result_record.py) |
+| Quiz Tutor Result (remediation) | [quiz_tutor_result.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/quiz_tutor_result.py) |
+| Chat History (Specialist Q&A) | [chat_history_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/chat_history_service.py) |
+| Learning Context Cache (LCC) | [learning_context.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/learning_context.py) |
+| Session Logs (compliance) | [session_log.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/session_log.py) |
+| Curriculum Key (DAG data) | [curriculum_key.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/curriculum_key.json) |
+| Story 4.20 (Pre-Bunking spec) | [story-4.20](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad/bmm/stories/story-4.20-prerequisite-dag-prebunking.md) |

@@ -154,7 +154,7 @@ direction is always pipeline → app, never reverse.**
     (`reimport_with_metadata.py:155-170`) → **the guard never runs on the path that writes DB1**;
   - extracts keys with a **regex** over the master-doc `Bridge Keys` block (`:77-91`) — NOT the LLM;
   - has **hardcoded foreign paths**: SA path `:10` and repo root `:20` point at
-    `c:\AGY-Projects\ingestion-Pipeline-AC\...`, and it reads `pipeline/curriculum/new/Area *.md`, which
+    `c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\...`, and it reads `pipeline/curriculum/new/Area *.md`, which
     does not exist in this repo (our modules are in `curriculum_components/curriculum_modules/`). It cannot
     run here as-is.
 - **App-side reference (read-only, for understanding):** the bridge hop is
@@ -168,7 +168,7 @@ direction is always pipeline → app, never reverse.**
 | ID | Task | Files | Done when |
 |---|---|---|---|
 | **B1** | **Wire the guard into the production write path.** Validate every entry through `CurriculumLessonSchema`/`CurriculumStructData` before writing the JSONL, so empty/invalid `doc_keys` fail loud at ingest. | `src/gcp/reimport_with_metadata.py` (+ import from `src/utils/schema.py`) | unit test: an entry with empty `doc_keys` raises before any write |
-| **B2** | **Fix the hardcoded/stale paths.** Replace the `c:\AGY-Projects\...` root and SA path with `Path(__file__).parent` resolution + the `GOOGLE_APPLICATION_CREDENTIALS` pattern from `.claude/rules/credential-resolution.md`; point the module reader at `curriculum_components/curriculum_modules/`. | `src/gcp/reimport_with_metadata.py` | runs end-to-end on a clean clone, no hardcoded user paths |
+| **B2** | **Fix the hardcoded/stale paths.** Replace the `c:\Sudo_Hatter_Command\...` root and SA path with `Path(__file__).parent` resolution + the `GOOGLE_APPLICATION_CREDENTIALS` pattern from `.claude/rules/credential-resolution.md`; point the module reader at `curriculum_components/curriculum_modules/`. | `src/gcp/reimport_with_metadata.py` | runs end-to-end on a clean clone, no hardcoded user paths |
 | **B3** | **Unify on one extractor (retire the regex).** Route key extraction through the LLM path (`generate_metadata.py`) feeding the schema guard; remove the divergent `split_task_file` regex extraction from the production path. | `src/gcp/reimport_with_metadata.py`, `src/utils/generate_metadata.py` | one extractor; the guard always runs; tests cover it |
 | **B4** | **Add the hard DB2-vocabulary membership check.** Upgrade `warn_chapter_level_keys` (or add a validator) so a `doc_key` not in `DB2_VOCABULARY` FAILS, not warns. | `src/utils/schema.py` | unit test: an off-vocabulary `doc_key` raises |
 | **B5** | **Build the offline schema gate (CI, permanent).** Iterate all 184 DB1 docs; assert every `doc_keys` is non-empty, document-level, and in-vocabulary. | new test/script under `src/tests/` or `scripts/` | green over 184; wired into CI |

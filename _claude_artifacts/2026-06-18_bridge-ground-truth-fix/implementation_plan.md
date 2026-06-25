@@ -97,7 +97,7 @@ JO 7110.65 (controller-facing), plus all forms / websites / legal interpretation
 ### WS-C — Clean DB1 keys + fill the gaps, re-import
 - Normalizer strips `**`/parentheticals/`[cite:]`/orphaned-`Ch` garbage while **preserving the real
   reference**. Regenerate the **12 empty Area IX** via the LLM extractor (temp 0.0). Validate all 184
-  through the cleanliness schema. Fix `import_db1_v2.py`'s hardcoded `c:\AGY-Projects\...` paths to
+  through the cleanliness schema. Fix `import_db1_v2.py`'s hardcoded `c:\Sudo_Hatter_Command\...` paths to
   `config.py` resolution + schema-validate before writing. **FULL re-import is gated — your trigger.**
 
 ### WS-D — RKP manifests → clean + ingest

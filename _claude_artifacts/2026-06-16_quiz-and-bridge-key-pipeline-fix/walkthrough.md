@@ -43,7 +43,7 @@ The docs read as authoritative, but four things did not survive contact with the
   `discoveryengine`, `pathlib` — and nothing from the schema).
 - **"Extractor is an LLM, not a regex" is half true.** The production import tool uses a regex over the
   master-doc `Bridge Keys` block. There are two extractors; the one that writes DB1 is the regex.
-- **`reimport_with_metadata.py` can't run on this machine** — hardcoded `c:\AGY-Projects\...` repo root and
+- **`reimport_with_metadata.py` can't run on this machine** — hardcoded `c:\Sudo_Hatter_Command\...` repo root and
   SA path, reading a `pipeline/curriculum/new/` dir that doesn't exist here.
 
 It went clean otherwise — no dead ends, just measurement correcting documentation.

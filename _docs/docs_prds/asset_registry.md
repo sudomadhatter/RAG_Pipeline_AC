@@ -510,7 +510,7 @@ flowchart TD
 |---|---|---|---|
 | `src/gcp/upload_manifests.py` | `aviationchat-database` | `rkp_manifests` | Gated (`--execute`) |
 
-**Status:** Updated 2026-06-18 — now uses `config.py` paths (no more hardcoded `c:\AGY-Projects\...`).
+**Status:** Updated 2026-06-18 — now uses `config.py` paths (no more hardcoded `c:\Sudo_Hatter_Command\...`).
 **Last upload:** 2026-06-18 — 47/47 manifests uploaded. Firestore has 48 (includes legacy `PPL_PA_I_H_04`, whose quiz subcollection was repaired 2026-06-19).
 
 ---

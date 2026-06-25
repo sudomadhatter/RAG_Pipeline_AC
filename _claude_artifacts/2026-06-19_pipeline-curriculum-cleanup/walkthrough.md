@@ -60,7 +60,7 @@ used by `import_db2_docs.py`/`probe_bridge_hop.py`/`derive_db2_vocabulary.py`). 
 **Phase 3 — retired the dead scaffolding.** Confirmed it was a closed island (only `main.py` +
 `pipeline/curriculum.py` + `pipeline/library.py` referenced it) and deleted `src/main.py`,
 `src/pipeline/{base,curriculum,library}.py`, `src/utils/lifecycle.py`, and the broken
-`src/gcp/upload_and_import_v2.py` (it hardcoded `c:\AGY-Projects\…` machine paths — couldn't run here).
+`src/gcp/upload_and_import_v2.py` (it hardcoded `c:\Sudo_Hatter_Command\…` machine paths — couldn't run here).
 Re-grepped: **zero dangling references** to any removed config constant.
 
 **Phase 4 — docs.** Fixed the three `_v2_split` references in `asset_registry.md` (→ `elements/`),
