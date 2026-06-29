@@ -61,7 +61,7 @@ Keep `IsArtifact: true` frontmatter for Antigravity compatibility.
 | `/1_clean-test-scripts` | Tidy `_test_scripts/` |
 | `/1_live_testing_team` | Live debug co-pilot: start servers, watch backend logs, log root causes, build a fix plan |
 | `/1_make-workflow-from-chat` | Distill current chat into a reusable workflow file |
-| `/1_self-audit-stress-test` | Adversarial self-review of your last output |
+| `/sudo-self-audit` | Adversarial self-review of your last output |
 | `/1_firebase-user-cleanup` | Interactive Firestore user data cleanup — list, wipe, or delete users |
 
 ---

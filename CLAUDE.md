@@ -96,7 +96,7 @@ AI Models:
 | `/1_clean-test-scripts` | Tidy `_test_scripts/` |
 | `/1_live_testing_team` | Live debug co-pilot: start servers, watch backend logs, log root causes, build a fix plan |
 | `/1_make-workflow-from-chat` | Distill current chat into a reusable workflow file |
-| `/1_self-audit-stress-test` | Adversarial self-review of last output |
+| `/sudo-self-audit` | Adversarial self-review of last output |
 
 ---
 
