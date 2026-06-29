@@ -35,7 +35,7 @@ Launch the FastAPI backend using the project venv.
 
 ```powershell
 // turbo
-cd c:\AGY-Projects\aviationChat-AGY
+cd c:\Sudo_Hatter_Command\Projects\aviationChat-AGY
 backend\.venv\Scripts\uvicorn backend.main:app --host 0.0.0.0 --port 8000
 ```
 
@@ -45,7 +45,7 @@ Launch the Next.js development server. We introduce a small sleep to ensure port
 
 ```powershell
 // turbo
-cd c:\AGY-Projects\aviationChat-AGY\frontend
+cd c:\Sudo_Hatter_Command\Projects\aviationChat-AGY\frontend
 Start-Sleep -Seconds 5
 npm run dev
 ```

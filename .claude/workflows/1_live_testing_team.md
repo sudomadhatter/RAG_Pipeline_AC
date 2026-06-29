@@ -47,10 +47,10 @@ Start each server as a **background process** so its log stream stays readable a
 
 1. Clear zombies:
    `taskkill /F /IM uvicorn.exe; taskkill /F /IM python.exe; taskkill /F /IM node.exe` (per-kill prompt is expected).
-2. Backend (background, hot-reload ON), from `c:\AGY-Projects\aviationChat-AGY`:
+2. Backend (background, hot-reload ON), from `c:\Sudo_Hatter_Command\Projects\aviationChat-AGY`:
    `backend\.venv\Scripts\uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload`
    Wait for `Application startup complete`. (Reload = a debug log I add applies without a restart.)
-3. Frontend (background), from `c:\AGY-Projects\aviationChat-AGY\frontend` (sleep ~5s first so ports leave TIME_WAIT):
+3. Frontend (background), from `c:\Sudo_Hatter_Command\Projects\aviationChat-AGY\frontend` (sleep ~5s first so ports leave TIME_WAIT):
    `npm run dev` — wait for `Local: http://localhost:3000/`.
 4. Read the captured backend output once to confirm a clean startup (no import errors / stack traces).
 

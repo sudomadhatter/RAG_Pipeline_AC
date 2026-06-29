@@ -63,7 +63,7 @@ Found via grep; all are docs/skill text, **zero are code**:
 | `docs/docs_prds/Master_Curriculum_Pipeline.md` | L9 (frontmatter) | `companion_docs: "instruction_docs/…"` → `"../instruction_docs/…"` (corrects relative path from `docs_prds/`) |
 
 **Left intentionally untouched:** `docs/project_context_prps/prd.md` L13/L733/L800 — those point to
-`c:/AGY-Projects/aviationChat-AGY/_01_My/…`, a **different (app) repo's** `_01_My`, not ours.
+`c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_01_My/…`, a **different (app) repo's** `_01_My`, not ours.
 
 > A fresh repo-wide grep for `_01_My` will be run after edits to confirm zero stragglers (excluding
 > the app-repo cross-links above and `_claude_artifacts/` history).
@@ -157,7 +157,7 @@ verified pipeline still works.
 
 - **Hardcoded credential bug** (recommend fixing next, own gate): `src/gcp/create_v2_stores.py:6`
   and `src/gcp/upload_and_import_v2.py:6` hardcode
-  `c:\AGY-Projects\ingestion-Pipeline-AC\auth_keys\librarian-service-account.json` — violates
+  `c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\auth_keys\librarian-service-account.json` — violates
   `credential-resolution.md` and breaks on any other machine. Directly relevant to "other devs can
   run this," but it's a behavioral code change, so it gets its own approval rather than riding along.
 - **Pruning stale PRDs** in `docs/project_context_prps/` (e.g. "V2.1 Master PRD" vs the live v2.8) —

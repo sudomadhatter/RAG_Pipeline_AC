@@ -78,7 +78,7 @@ one **is** regex-based. For that path, clean markdown *is* a lever. We must pick
 
 ### [CORRECTION 2d] `reimport_with_metadata.py` cannot run on this machine as-is
 It hardcodes a different repo root and a service-account path from another machine
-(`c:\AGY-Projects\ingestion-Pipeline-AC\...`, reimport_with_metadata.py:10, 20) and reads
+(`c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\...`, reimport_with_metadata.py:10, 20) and reads
 `pipeline/curriculum/new/Area *.md`, which does not exist here (our modules live in
 [curriculum_components/curriculum_modules/](curriculum_components/curriculum_modules/)). This violates
 the repo's own `credential-resolution.md` and `code-standards.md` (use `Path(__file__).parent`). It
@@ -128,7 +128,7 @@ build the proofs the contract demands, then fix Area IX.
 | # | Task | Files | Gate |
 |---|---|---|---|
 | 2.1 | **Wire the guard into the production path.** Make [src/gcp/reimport_with_metadata.py](src/gcp/reimport_with_metadata.py) validate every entry through `CurriculumLessonSchema`/`CurriculumStructData` before writing the JSONL, so an empty `doc_keys` fails loud at ingest instead of shipping silently. | `src/gcp/reimport_with_metadata.py`, `src/utils/schema.py` | unit test: empty `doc_keys` raises |
-| 2.2 | **Fix the stale/hardcoded paths.** Replace the `c:\AGY-Projects\...` root and SA path with `Path(__file__).parent` + the `GOOGLE_APPLICATION_CREDENTIALS` resolution pattern from `credential-resolution.md`; point the module reader at `curriculum_components/curriculum_modules/`. | `src/gcp/reimport_with_metadata.py` | runs on this machine |
+| 2.2 | **Fix the stale/hardcoded paths.** Replace the `c:\Sudo_Hatter_Command\...` root and SA path with `Path(__file__).parent` + the `GOOGLE_APPLICATION_CREDENTIALS` resolution pattern from `credential-resolution.md`; point the module reader at `curriculum_components/curriculum_modules/`. | `src/gcp/reimport_with_metadata.py` | runs on this machine |
 | 2.3 | **Resolve the extractor contradiction (§2c).** Pick ONE source of truth — route the import through the LLM `generate_metadata.py`, **or** keep the regex but pass output through the schema guard and treat the master-doc `Bridge Keys` block as the contract. | `reimport_with_metadata.py`, `generate_metadata.py` | §9 Q5 |
 | 2.4 | **Build the offline schema gate (CI, permanent).** Iterate all 184 DB1 docs and assert non-empty, well-formed, document-level `doc_keys`. This is the guard that stops the next silent batch. | new `src/tests/` (or `scripts/`) gate | green over 184 |
 | 2.5 | **Build the live DB1→DB2 round-trip probe.** Assert `len(db2_hits) ≥ 1` **and** top score ≥ floor **and** returned doc maps back to the queried Area (no IX→VII cross-wire). The `bridge-key-verification` skill covers this. | new probe script | numbers captured |

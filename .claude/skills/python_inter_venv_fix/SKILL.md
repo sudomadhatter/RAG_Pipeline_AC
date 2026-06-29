@@ -13,7 +13,7 @@ The user reports any of:
 
 ## The #1 root cause (check this FIRST)
 **Config files contain absolute paths to an OLD project location.** This repo has been moved
-between folders (e.g. `c:\AGY-Projects\aviationChat-AGY\` → the current
+between folders (e.g. `c:\Sudo_Hatter_Command\Projects\aviationChat-AGY\` → the current
 `c:\Users\dlohn\.gemini\antigravity\scratch\AGY_AVIATIONCHAT\`). Hard-coded absolute paths in
 the tooling configs die the moment the project folder changes, so VS Code is pointed at a venv
 that no longer exists.
@@ -34,7 +34,7 @@ that no longer exists.
 
 2. Find every stale absolute path (proves the diagnosis):
    ```
-   Grep pattern: AGY-Projects   (or whatever the OLD base folder was)
+   Grep pattern: Sudo_Hatter_Command   (or whatever the OLD base folder was)
    ```
    The four files that actually matter for interpreter/type-checking are below. (Many doc/skill/
    workflow/artifact hits will also appear — those are cosmetic and OUT of scope.)

@@ -730,7 +730,7 @@ Legacy unstructured chat logs **cannot** be converted into SAR telemetry. They l
 | 16 | 6-Search RAG Architecture (V2.1) | **Dual-database, 6-search topology.** DB1: 2 searches (RKP Lesson + RM Module, 5 chunks each). DB2: 4 searches (Legal, Safety, Application, RM Bridge Hop — fetch 5, keep top 3 via hybrid re-rank). Total max 22 chunks to Agent 1. |
 | 17 | Agent Data Injection Split (V2.1) | **Agent 1 builds the map, Agent 2 drives the car.** Agent 1 (batch) receives RKP + RAG only. Agent 2 (real-time) receives cached plan + student struggle data (Tier 1/2, Pre-Bunk, Global Traps). Clean separation — Agent 1 doesn't need student data. |
 
-For deep-dive rationale on each decision, see the [V2 Master PRD & Architecture Blueprint](file:///c:/AGY-Projects/aviationChat-AGY/_01_My/Docs/Specialist/V2%20Master%20PRD%20%26%20Architecture) and the [V2.1 Addendum](file:///C:/Users/dlohn/.gemini/antigravity/brain/5681ffcf-dd74-402a-aa96-aa0e69c0d149/prd_addendum_v2.1.md).
+For deep-dive rationale on each decision, see the [V2 Master PRD & Architecture Blueprint](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_01_My/Docs/Specialist/V2%20Master%20PRD%20%26%20Architecture) and the [V2.1 Addendum](file:///C:/Users/dlohn/.gemini/antigravity/brain/5681ffcf-dd74-402a-aa96-aa0e69c0d149/prd_addendum_v2.1.md).
 
 ---
 

@@ -73,16 +73,16 @@ flowchart TD
 
 The Admin Agent operates asynchronously in a fire-and-forget cycle. When a student completes a learning session, the backend calls the Admin Agent via `asyncio.create_task()`, immediately returning control to the frontend.
 
-The grading pipeline is implemented in `[agent.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/agent.py)`:
+The grading pipeline is implemented in `[agent.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/agent.py)`:
 - `analyze_socratic_session()`: Evaluates text-based Socratic transcripts using `SOCRATIC_EVALUATION_PROMPT`.
 - `analyze_sully_session()`: Evaluates voice coaching sessions using `VOICE_EVALUATION_PROMPT`, assessing pause telemetry, hesitation, and filler word density.
 
 ### 2.1 Socratic Grading Model
 The Admin Agent reads the Evidence Dossier (the ground truth answer key) and the conversation transcript. It passes these to Gemini 3.5 Flash, generating a structured JSON response containing:
 1. **Evaluations:** Assigns `correct`, `partial`, or `incorrect` to each student response.
-2. **Weak Points:** Logs precise knowledge gaps with ACS element keys to `[learning_context](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/learning_context.py)`.
-3. **Cognitive Dossier Entry:** Appends a struggle/pass directive to `[cognitive_dossier.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)`.
-4. **Mastery Transition:** Attempts to transition the ACS code from `seen` to `rote_level` via the `[mastery_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/mastery_service.py)`.
+2. **Weak Points:** Logs precise knowledge gaps with ACS element keys to `[learning_context](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/learning_context.py)`.
+3. **Cognitive Dossier Entry:** Appends a struggle/pass directive to `[cognitive_dossier.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)`.
+4. **Mastery Transition:** Attempts to transition the ACS code from `seen` to `rote_level` via the `[mastery_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/mastery_service.py)`.
 
 ### 2.2 Voice (Sully) Grading Model
 Voice grading incorporates physical audio metrics along with transcript analysis:
@@ -108,7 +108,7 @@ graph TD
 ```
 
 ### 3.1 Mapping Prerequisites
-Dependencies are defined in `[curriculum_key.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/curriculum_key.json)`. Each lesson contains a `prerequisite_acs_nodes` array:
+Dependencies are defined in `[curriculum_key.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/curriculum_key.json)`. Each lesson contains a `prerequisite_acs_nodes` array:
 
 ```json
 {
@@ -122,7 +122,7 @@ Dependencies are defined in `[curriculum_key.json](file:///c:/AGY-Projects/aviat
 The Pre-Bunking Service operates at lesson initialization:
 1. **Initialize Lesson:** A student starts Socratic dialogue on `lesson_id` (e.g., `PPL_PA_I_C_01`).
 2. **Read Prerequisites:** The backend reads the `prerequisite_acs_nodes` for that lesson.
-3. **Query Knowledge Ledger:** The system queries `[cognitive_dossier_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/cognitive_dossier_service.py)` to check the student's `ACSKnowledgeNode` for active misconceptions on the prerequisite ACS codes.
+3. **Query Knowledge Ledger:** The system queries `[cognitive_dossier_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/cognitive_dossier_service.py)` to check the student's `ACSKnowledgeNode` for active misconceptions on the prerequisite ACS codes.
 4. **Inject Directive:** If active misconceptions are found, the backend generates a `[PRE-BUNK DIRECTIVE]` and injects it into Agent 1 (Lesson Planner).
 5. **Conversational Scaffold:** Agent 1 inserts a clearing question before the lesson's RKP content. The student experiences a natural review callback:
    > *"Before we get into Cloud Clearances, let's review altitudes. Explain the practical difference between AGL and MSL when planning your cruise altitude."*
@@ -143,7 +143,7 @@ The Admin Agent correlates the Socratic tool deployed during a session with the 
 | 🔴 Socratic Pass + Quiz Fail | `-0.3` | **Illusion of Competence.** The tool was dangerously easy or misleading. |
 | ⚫ Socratic Fail + Quiz Fail | `-1.0` | **Complete Miss.** The tool completely failed to teach the concept. |
 
-The reward score updates the student's `tool_affinity_weights` for the active ACS code within their `[cognitive_dossier.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)` ledger:
+The reward score updates the student's `tool_affinity_weights` for the active ACS code within their `[cognitive_dossier.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)` ledger:
 
 ```python
 tool_affinity_weights: Dict[str, float] = {
@@ -159,7 +159,7 @@ tool_affinity_weights: Dict[str, float] = {
 ```
 
 ### 4.2 Exploit vs. Explore (Epsilon-Greedy)
-During a Socratic session, the `[strategy_roulette.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/strategy_roulette.py)` reads the student's ledger:
+During a Socratic session, the `[strategy_roulette.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/strategy_roulette.py)` reads the student's ledger:
 - **Exploitation (80→90% of turns):** Deploys the tool with the highest affinity weight for the student. Two-stage epsilon: 80% exploit below 50 scored interactions, 90% at ≥50.
 - **Exploration (15% of turns):** Selects a random alternative tool to refine the model's weights and prevent local minima.
 
@@ -217,7 +217,7 @@ Every Socratic interaction is captured as a complete atomic unit — a **Pedagog
 > **Implementation status (2026-06-01): DESIGNED, NOT YET CAPTURED.** This Pedagogical
 > Fingerprint is the *intended* schema. The running code does **not** persist it: `tutor_question`
 > appears in **zero** Python files, and the SAR write at
-> [`agent.py:2769`](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/specialist/agent.py)
+> [`agent.py:2769`](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/specialist/agent.py)
 > stores `deployed_tool` + `evaluation` + `reward_score` but **not** the question text, and only
 > `response_length` (an integer) rather than the student's words. The system therefore knows
 > *which tool* worked but never recorded *the actual question that worked*. **Closing in Story 8.11
@@ -282,7 +282,7 @@ flowchart TD
 
 > [!WARNING]
 > **Implementation status (2026-06-01): PARTIAL.** The shipped `GoldenCandidate`
-> ([`backend/schemas/evolution.py`](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/evolution.py))
+> ([`backend/schemas/evolution.py`](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/evolution.py))
 > stores `tool` + `acs_code` + `flawless_count` + `sample_transcripts` (SAR **IDs**) — it does
 > **not** carry `tutor_question`, `tutor_question_mode`, `knowledge_type`, or `breakthrough_rate`.
 > The Nightly Overseer's golden discovery groups by `(deployed_tool, acs_element_key)` **only** —
@@ -337,12 +337,12 @@ sequenceDiagram
 
 All Admin, DAG, and Teaching Ledger development must align with the following specifications:
 
-- **Curriculum Config:** `[curriculum_key.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/curriculum_key.json)`
-- **Admin Agent Grading Engine:** `[agent.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/agent.py)`
-- **Admin Agent Prompts:** `[prompts.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/prompts.py)`
-- **Cognitive Dossier Schema:** `[cognitive_dossier.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)`
-- **Strategy Roulette:** `[strategy_roulette.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/strategy_roulette.py)`
-- **BipartiteRewardService:** `[reward_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/evolution/reward_service.py)`
-- **Nightly Overseer Story:** `[story-8.4-nightly-overseer-golden-transcripts.md](file:///c:/AGY-Projects/aviationChat-AGY/_bmad/bmm/stories/story-8.4-nightly-overseer-golden-transcripts.md)`
-- **Pre-Bunking Story Spec:** `[story-4.20-prerequisite-dag-prebunking.md](file:///c:/AGY-Projects/aviationChat-AGY/_bmad/bmm/stories/story-4.20-prerequisite-dag-prebunking.md)`
+- **Curriculum Config:** `[curriculum_key.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/curriculum_key.json)`
+- **Admin Agent Grading Engine:** `[agent.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/agent.py)`
+- **Admin Agent Prompts:** `[prompts.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/prompts.py)`
+- **Cognitive Dossier Schema:** `[cognitive_dossier.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)`
+- **Strategy Roulette:** `[strategy_roulette.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/strategy_roulette.py)`
+- **BipartiteRewardService:** `[reward_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/evolution/reward_service.py)`
+- **Nightly Overseer Story:** `[story-8.4-nightly-overseer-golden-transcripts.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad/bmm/stories/story-8.4-nightly-overseer-golden-transcripts.md)`
+- **Pre-Bunking Story Spec:** `[story-4.20-prerequisite-dag-prebunking.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad/bmm/stories/story-4.20-prerequisite-dag-prebunking.md)`
 - **Aviation V2 Ingestion Architecture:** `[dual_store_bridge_pattern.md](file:///C:/Users/dlohn/.gemini/antigravity/knowledge/aviation_v2_ingestion_and_search/artifacts/architecture/dual_store_bridge_pattern.md)`

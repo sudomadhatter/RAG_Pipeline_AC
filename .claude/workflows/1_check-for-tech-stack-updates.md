@@ -11,7 +11,7 @@ Run a `git pull` on the BMAD method repository to ensure we have the latest work
 
 // turbo
 ```powershell
-cd c:\AGY-Projects\aviationChat-AGY\.agent && git status
+cd c:\Sudo_Hatter_Command\Projects\aviationChat-AGY\.agent && git status
 ```
 
 Check if the `.agent/` folder is tracking a git remote. If yes, pull. If not, note it so the user can manually sync.
@@ -21,7 +21,7 @@ Check the currently installed ADK version and compare against the latest publish
 
 // turbo
 ```powershell
-cd c:\AGY-Projects\aviationChat-AGY && .\.venv\Scripts\pip show google-adk
+cd c:\Sudo_Hatter_Command\Projects\aviationChat-AGY && .\.venv\Scripts\pip show google-adk
 ```
 
 Then search for the latest version:
@@ -51,8 +51,8 @@ Check if there are newer versions available via `npm` or the relevant package so
 
 ## Step 6: Check Frontend (JetChat / AviationChat Next.js)
 ```powershell
-cd c:\AGY-Projects\aviationChat-AGY\frontend && npm outdated
-cd c:\AGY-Projects\jetChat-AGY\frontend && npm outdated
+cd c:\Sudo_Hatter_Command\Projects\aviationChat-AGY\frontend && npm outdated
+cd c:\Sudo_Hatter_Command\Projects\jetChat-AGY\frontend && npm outdated
 ```
 
 ## Step 7: Report

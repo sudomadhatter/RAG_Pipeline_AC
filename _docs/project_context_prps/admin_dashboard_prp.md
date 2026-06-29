@@ -22,7 +22,7 @@ The **Mission Control Admin Dashboard** is the command center for the self-evolv
 
 ### Design Mandate
 - **NASA Mission Control Ethos:** A shift from the student app's "cockpit flying" feeling to an "operator surveying the fleet from above" look.
-- **Glassmorphism Theme:** Inherits the premium visual style from [ux-design-specification.md](file:///c:/AGY-Projects/aviationChat-AGY/_bmad-output/planning-artifacts/ux-design-specification.md) (radial glows, high backdrop blur, HUD colors).
+- **Glassmorphism Theme:** Inherits the premium visual style from [ux-design-specification.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad-output/planning-artifacts/ux-design-specification.md) (radial glows, high backdrop blur, HUD colors).
 - **Expert Density:** Focuses on power, telemetry precision, and data-dense dashboards, avoiding simplified consumer-grade layouts.
 - **Desktop-Primary:** Built strictly for viewports $\ge 1024\text{px}$; mobile is out of scope for V1.
 
@@ -360,7 +360,7 @@ To support the institutional B2B portal, the Dashboard integrates the Epic 8 Ten
 - **Read-Only School Portal**: Flight School CFIs view a stripped-down version of the Fleet Risk Board isolated strictly to their own student cohort, with write-actions (like Golden RAG approvals) disabled via the Tenancy Gate Choke middleware.
 
 ### 5.5 Admin Design System Tokens
-Extends [ux-design-specification.md](file:///c:/AGY-Projects/aviationChat-AGY/_bmad-output/planning-artifacts/ux-design-specification.md):
+Extends [ux-design-specification.md](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_bmad-output/planning-artifacts/ux-design-specification.md):
 
 ```css
 :root {
@@ -418,24 +418,24 @@ flowchart TD
 ## 7. Source-of-Truth References & Key Files
 
 ### Configuration and Data Structures
-- **Curriculum Prerequisite Mapping:** [curriculum_key.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/curriculum_key.json)
-- **Auto-Discovered Prerequisites:** [discovered_edges.json](file:///c:/AGY-Projects/aviationChat-AGY/backend/data/discovered_edges.json)
-- **Master Evolution Schemas:** [evolution.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/evolution.py)
-- **Cognitive Dossier Models:** [cognitive_dossier.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)
+- **Curriculum Prerequisite Mapping:** [curriculum_key.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/curriculum_key.json)
+- **Auto-Discovered Prerequisites:** [discovered_edges.json](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/data/discovered_edges.json)
+- **Master Evolution Schemas:** [evolution.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/evolution.py)
+- **Cognitive Dossier Models:** [cognitive_dossier.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/schemas/cognitive_dossier.py)
 
 ### Backend Logic & Services
-- **Telemetry Extraction & Evaluator:** [agent.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/agent.py)
-- **Telemetry Prompts:** [prompts.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/agents/admin/prompts.py)
-- **Pre-Bunking Engine:** [prebunk_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/prebunk_service.py)
-- **Bipartite Scoring:** [reward_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/evolution/reward_service.py)
-- **Epsilon-Greedy Weights Service:** [affinity_service.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/services/evolution/affinity_service.py)
+- **Telemetry Extraction & Evaluator:** [agent.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/agent.py)
+- **Telemetry Prompts:** [prompts.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/agents/admin/prompts.py)
+- **Pre-Bunking Engine:** [prebunk_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/prebunk_service.py)
+- **Bipartite Scoring:** [reward_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/evolution/reward_service.py)
+- **Epsilon-Greedy Weights Service:** [affinity_service.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/services/evolution/affinity_service.py)
 - **Nightly Aggregation Batch:** `backend/services/evolution/nightly_overseer.py`
-- **Admin Evolution API Router:** [admin_evolution.py](file:///c:/AGY-Projects/aviationChat-AGY/backend/routers/admin_evolution.py)
+- **Admin Evolution API Router:** [admin_evolution.py](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/backend/routers/admin_evolution.py)
 - **Graph Telemetry Service:** `backend/services/curriculum_graph_service.py`
 - **Graph API Router:** `backend/routers/admin_dashboard.py`
 
 ### Frontend Components
 - **Dashboard Overview Entry:** `frontend/src/app/admin/page.tsx`
-- **3D Curriculum Canvas wrapper:** [CurriculumBrainGraph.tsx](file:///c:/AGY-Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumBrainGraph.tsx)
-- **Curriculum Dashboard container:** [CurriculumMap.tsx](file:///c:/AGY-Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumMap.tsx)
-- **Drill-down Panel:** [CurriculumNodeDetail.tsx](file:///c:/AGY-Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumNodeDetail.tsx)
+- **3D Curriculum Canvas wrapper:** [CurriculumBrainGraph.tsx](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumBrainGraph.tsx)
+- **Curriculum Dashboard container:** [CurriculumMap.tsx](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumMap.tsx)
+- **Drill-down Panel:** [CurriculumNodeDetail.tsx](file:///c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/frontend/src/components/admin/CurriculumNodeDetail.tsx)

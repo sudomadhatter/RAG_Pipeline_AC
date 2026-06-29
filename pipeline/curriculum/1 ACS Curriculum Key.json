@@ -1,0 +1,525 @@
+[
+  {
+    "lesson_id": "PA_I_A_01",
+    "acs_task_reference": "Area I, Task A",
+    "title": "Privileges & Limitations",
+    "acs_element_keys": [
+      "PA.I.A.K1",
+      "PA.I.A.K2",
+      "PA.I.A.R1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_A_02",
+    "acs_task_reference": "Area I, Task A",
+    "title": "Medical Certificates (Classes & BasicMed)",
+    "acs_element_keys": [
+      "PA.I.A.K3",
+      "PA.I.A.K4"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_A_03",
+    "acs_task_reference": "Area I, Task A",
+    "title": "Currency vs. Proficiency",
+    "acs_element_keys": [
+      "PA.I.A.K5",
+      "PA.I.A.R2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_A_04",
+    "acs_task_reference": "Area I, Task A",
+    "title": "Required Pilot Documents",
+    "acs_element_keys": [
+      "PA.I.A.K6",
+      "PA.I.A.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_B_01",
+    "acs_task_reference": "Area I, Task B",
+    "title": "Required Aircraft Documents (ARROW)",
+    "acs_element_keys": [
+      "PA.I.B.K1",
+      "PA.I.B.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_B_02",
+    "acs_task_reference": "Area I, Task B",
+    "title": "Required Inspections (AVIATES)",
+    "acs_element_keys": [
+      "PA.I.B.K2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_B_03",
+    "acs_task_reference": "Area I, Task B",
+    "title": "Airworthiness Directives (ADs)",
+    "acs_element_keys": [
+      "PA.I.B.K3",
+      "PA.I.B.K3a",
+      "PA.I.B.K3b"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_B_04",
+    "acs_task_reference": "Area I, Task B",
+    "title": "Flying with Inoperative Equipment (91.213)",
+    "acs_element_keys": [
+      "PA.I.B.K4",
+      "PA.I.B.R1",
+      "PA.I.B.S2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_C_01",
+    "acs_task_reference": "Area I, Task C",
+    "title": "Reading & Decoding METARs",
+    "acs_element_keys": [
+      "PA.I.C.K2",
+      "PA.I.C.K2a"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_C_02",
+    "acs_task_reference": "Area I, Task C",
+    "title": "Reading & Decoding TAFs",
+    "acs_element_keys": [
+      "PA.I.C.K2",
+      "PA.I.C.K2b"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_C_03",
+    "acs_task_reference": "Area I, Task C",
+    "title": "PIREPs & Winds Aloft",
+    "acs_element_keys": [
+      "PA.I.C.K2c",
+      "PA.I.C.K2d"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_C_04",
+    "acs_task_reference": "Area I, Task C",
+    "title": "AIRMETs, SIGMETs & Convective SIGMETs",
+    "acs_element_keys": [
+      "PA.I.C.K2e",
+      "PA.I.C.K2f"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_C_05",
+    "acs_task_reference": "Area I, Task C",
+    "title": "Weather Hazards (Thunderstorms & Icing)",
+    "acs_element_keys": [
+      "PA.I.C.K3",
+      "PA.I.C.R1",
+      "PA.I.C.R2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_D_01",
+    "acs_task_reference": "Area I, Task D",
+    "title": "Selecting VFR Cruising Altitudes",
+    "acs_element_keys": [
+      "PA.I.D.K2",
+      "PA.I.D.S2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_D_02",
+    "acs_task_reference": "Area I, Task D",
+    "title": "Calculating Time, Speed, Distance & Fuel",
+    "acs_element_keys": [
+      "PA.I.D.K3",
+      "PA.I.D.S3",
+      "PA.I.D.S4"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_D_03",
+    "acs_task_reference": "Area I, Task D",
+    "title": "Choosing an Alternate Airport",
+    "acs_element_keys": [
+      "PA.I.D.K4",
+      "PA.I.D.R2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_D_04",
+    "acs_task_reference": "Area I, Task D",
+    "title": "Filing a VFR Flight Plan",
+    "acs_element_keys": [
+      "PA.I.D.K5",
+      "PA.I.D.S8"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_E_01",
+    "acs_task_reference": "Area I, Task E",
+    "title": "Class A, B, and C Airspace",
+    "acs_element_keys": [
+      "PA.I.E.K1",
+      "PA.I.E.K1a",
+      "PA.I.E.K1b",
+      "PA.I.E.K1c"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_E_02",
+    "acs_task_reference": "Area I, Task E",
+    "title": "Class D, E, and G Airspace",
+    "acs_element_keys": [
+      "PA.I.E.K1d",
+      "PA.I.E.K1e",
+      "PA.I.E.K1f"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_E_03",
+    "acs_task_reference": "Area I, Task E",
+    "title": "VFR Weather Minimums (91.155)",
+    "acs_element_keys": [
+      "PA.I.E.K2",
+      "PA.I.E.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_E_04",
+    "acs_task_reference": "Area I, Task E",
+    "title": "Special Use Airspace",
+    "acs_element_keys": [
+      "PA.I.E.K3",
+      "PA.I.E.S2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_F_01",
+    "acs_task_reference": "Area I, Task F",
+    "title": "Atmospheric Pressure & Density Altitude",
+    "acs_element_keys": [
+      "PA.I.F.K1",
+      "PA.I.F.K1a",
+      "PA.I.F.K1b"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_F_02",
+    "acs_task_reference": "Area I, Task F",
+    "title": "Calculating Weight & Balance",
+    "acs_element_keys": [
+      "PA.I.F.K2",
+      "PA.I.F.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_F_03",
+    "acs_task_reference": "Area I, Task F",
+    "title": "Takeoff & Landing Distances",
+    "acs_element_keys": [
+      "PA.I.F.K3",
+      "PA.I.F.S2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_F_04",
+    "acs_task_reference": "Area I, Task F",
+    "title": "Effects of Forward vs. Aft CG",
+    "acs_element_keys": [
+      "PA.I.F.K2",
+      "PA.I.F.R1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_G_01",
+    "acs_task_reference": "Area I, Task G",
+    "title": "Primary Flight Controls & Trim",
+    "acs_element_keys": [
+      "PA.I.G.K1",
+      "PA.I.G.K1a"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_G_02",
+    "acs_task_reference": "Area I, Task G",
+    "title": "The Powerplant & Propeller",
+    "acs_element_keys": [
+      "PA.I.G.K1b",
+      "PA.I.G.K1c"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_G_03",
+    "acs_task_reference": "Area I, Task G",
+    "title": "Fuel & Oil Systems",
+    "acs_element_keys": [
+      "PA.I.G.K1d",
+      "PA.I.G.K1e"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_G_04",
+    "acs_task_reference": "Area I, Task G",
+    "title": "The Electrical System",
+    "acs_element_keys": [
+      "PA.I.G.K1f",
+      "PA.I.G.K1g"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_G_05",
+    "acs_task_reference": "Area I, Task G",
+    "title": "Pitot-Static & Vacuum Systems",
+    "acs_element_keys": [
+      "PA.I.G.K1h",
+      "PA.I.G.K1i"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_H_01",
+    "acs_task_reference": "Area I, Task H",
+    "title": "Hypoxia & Hyperventilation",
+    "acs_element_keys": [
+      "PA.I.H.K1",
+      "PA.I.H.K2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_H_02",
+    "acs_task_reference": "Area I, Task H",
+    "title": "Spatial Disorientation & Motion Sickness",
+    "acs_element_keys": [
+      "PA.I.H.K4",
+      "PA.I.H.K5"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_H_03",
+    "acs_task_reference": "Area I, Task H",
+    "title": "Carbon Monoxide & Scuba Rules",
+    "acs_element_keys": [
+      "PA.I.H.K6",
+      "PA.I.H.K8"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PA_I_H_04",
+    "acs_task_reference": "Area I, Task H",
+    "title": "Aeronautical Decision Making (PAVE & IMSAFE)",
+    "acs_element_keys": [
+      "PA.I.H.S1",
+      "PA.I.H.R1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_III_A_01",
+    "acs_task_reference": "Area III, Task A",
+    "title": "Radio Communications & ATC Phraseology",
+    "acs_element_keys": [
+      "PA.III.A.K1",
+      "PA.III.A.K2",
+      "PA.III.A.K5",
+      "PA.III.A.K6",
+      "PA.III.A.R1",
+      "PA.III.A.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_III_A_02",
+    "acs_task_reference": "Area III, Task A",
+    "title": "Light Signals, Transponders & Emergency Reporting",
+    "acs_element_keys": [
+      "PA.III.A.K3",
+      "PA.III.A.K4",
+      "PA.III.A.K7",
+      "PA.III.A.K8",
+      "PA.III.A.K9",
+      "PA.III.A.R2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_III_B_01",
+    "acs_task_reference": "Area III, Task B",
+    "title": "Traffic Patterns & Airport Operations",
+    "acs_element_keys": [
+      "PA.III.B.K1",
+      "PA.III.B.K3",
+      "PA.III.B.K4",
+      "PA.III.B.R1",
+      "PA.III.B.R3",
+      "PA.III.B.S1",
+      "PA.III.B.S2"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_VI_B_01",
+    "acs_task_reference": "Area VI, Task B",
+    "title": "Ground-Based & Satellite Navigation",
+    "acs_element_keys": [
+      "PA.VI.B.K1",
+      "PA.VI.B.K2",
+      "PA.VI.B.S2",
+      "PA.VI.B.S4"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_VI_B_02",
+    "acs_task_reference": "Area VI, Task B",
+    "title": "Transponders, ADS-B & Radar Services",
+    "acs_element_keys": [
+      "PA.VI.B.K3",
+      "PA.VI.B.K4",
+      "PA.VI.B.S1",
+      "PA.VI.B.S3"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_VI_B_03",
+    "acs_task_reference": "Area VI, Task B",
+    "title": "Navigation Risk Management & Electronic Flight Bags",
+    "acs_element_keys": [
+      "PA.VI.B.R1",
+      "PA.VI.B.R2",
+      "PA.VI.B.R3",
+      "PA.VI.B.R4",
+      "PA.VI.B.R5",
+      "PA.VI.B.S5"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_VII_A_01",
+    "acs_task_reference": "Area VII, Tasks A & B",
+    "title": "Slow Flight, Stall Aerodynamics & Recovery",
+    "acs_element_keys": [
+      "PA.VII.A.K1",
+      "PA.VII.A.R1",
+      "PA.VII.A.S3",
+      "PA.VII.B.K1",
+      "PA.VII.B.K2",
+      "PA.VII.B.K3",
+      "PA.VII.B.K4",
+      "PA.VII.B.R1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_VII_D_01",
+    "acs_task_reference": "Area VII, Task D",
+    "title": "Spin Awareness & Recovery",
+    "acs_element_keys": [
+      "PA.VII.D.K1",
+      "PA.VII.D.K2",
+      "PA.VII.D.K3"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_IX_B_01",
+    "acs_task_reference": "Area IX, Task B",
+    "title": "Emergency Approach & Landing",
+    "acs_element_keys": [
+      "PA.IX.B.K1",
+      "PA.IX.B.K2",
+      "PA.IX.B.K3",
+      "PA.IX.B.K4",
+      "PA.IX.B.R1",
+      "PA.IX.B.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_IX_C_01",
+    "acs_task_reference": "Area IX, Task C",
+    "title": "Systems Malfunctions, Fire & Startle Response",
+    "acs_element_keys": [
+      "PA.IX.C.K1",
+      "PA.IX.C.K2c",
+      "PA.IX.C.K3",
+      "PA.IX.C.R1",
+      "PA.IX.C.R4",
+      "PA.IX.C.S1"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_XI_A_01",
+    "acs_task_reference": "Area XI, Task A",
+    "title": "Night Vision Physiology & Airport Lighting",
+    "acs_element_keys": [
+      "PA.XI.A.K1",
+      "PA.XI.A.K2",
+      "PA.XI.A.K8",
+      "PA.XI.A.R3"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_XI_A_02",
+    "acs_task_reference": "Area XI, Task A",
+    "title": "Night Equipment, Taxi & Navigation",
+    "acs_element_keys": [
+      "PA.XI.A.K3",
+      "PA.XI.A.K4",
+      "PA.XI.A.K5",
+      "PA.XI.A.K6",
+      "PA.XI.A.K7"
+    ],
+    "prerequisites": []
+  },
+  {
+    "lesson_id": "PPL_PA_XI_A_03",
+    "acs_task_reference": "Area XI, Task A",
+    "title": "Night Risk Management & ADM",
+    "acs_element_keys": [
+      "PA.XI.A.R1",
+      "PA.XI.A.R2",
+      "PA.XI.A.R4",
+      "PA.XI.A.R5",
+      "PA.XI.A.R6",
+      "PA.XI.A.R7"
+    ],
+    "prerequisites": []
+  }
+]

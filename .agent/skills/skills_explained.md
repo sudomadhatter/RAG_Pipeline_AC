@@ -10,7 +10,7 @@ Skills are **markdown files** that teach your AI agent how to perform specific, 
 
 ## 📂 Where do they live?
 All skills reside in your `.agent/skills/` directory.
-- **Path**: `C:\AGY-Projects\aviationChat-AGY\.agent\skills\`
+- **Path**: `C:\Sudo_Hatter_Command\Projects\aviationChat-AGY\.agent\skills\`
 - **Extension**: `.md` (Markdown)
 
 ## 🛠️ How to Use a Skill

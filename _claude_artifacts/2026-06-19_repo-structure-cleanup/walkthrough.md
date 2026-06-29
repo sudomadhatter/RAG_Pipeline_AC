@@ -40,7 +40,7 @@ substring replace), plus `docs/docs_prds/asset_registry.md` and
 (`instruction_docs/…` → `../instruction_docs/…`, since it now sits in `docs_prds/`) and a
 **double-stale** reference (`_01_My/_artifacts/2026-06-18…` → `_claude_artifacts/2026-06-18…` — that
 path had moved in the prior session). The three `_01_My` hits left in `prd.md` are **app-repo
-cross-links** (`c:/AGY-Projects/aviationChat-AGY/_01_My/…`) — a different repo, intentionally left.
+cross-links** (`c:/Sudo_Hatter_Command/Projects/aviationChat-AGY/_01_My/…`) — a different repo, intentionally left.
 
 **3. Added `README.md`** — the front door this repo never had: what it is, a structure map, a
 quickstart (venv → deps → `auth_keys/.env` → run → test), a common-operations table, a docs index,
@@ -140,6 +140,6 @@ to kill the name collision, and hoist `src/tests/` → `tests/`. Each step gated
 suite + a dry-run `probe_bridge_hop.py`. Say the word and I'll write the Phase 2 plan.
 
 **4. Flagged, not done — hardcoded credential bug:** `src/gcp/create_v2_stores.py:6` and
-`src/gcp/upload_and_import_v2.py:6` hardcode `c:\AGY-Projects\ingestion-Pipeline-AC\auth_keys\…json`,
+`src/gcp/upload_and_import_v2.py:6` hardcode `c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\auth_keys\…json`,
 which breaks on any other machine and violates `credential-resolution.md`. Worth fixing next (its own
 small gate) since it directly blocks "other devs can run this."

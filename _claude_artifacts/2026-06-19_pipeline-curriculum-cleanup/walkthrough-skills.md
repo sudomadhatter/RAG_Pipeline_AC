@@ -11,10 +11,10 @@ ArtifactMetadata:
 ## Two small fixes (the items flagged in the first walkthrough)
 
 1. **`src/gcp/create_v2_stores.py`** hardcoded `os.environ['GOOGLE_APPLICATION_CREDENTIALS'] =
-   r'c:\AGY-Projects\ingestion-Pipeline-AC\auth_keys\librarian-service-account.json'` → replaced with the
+   r'c:\Sudo_Hatter_Command\Projects\ingestion-Pipeline-AC\auth_keys\librarian-service-account.json'` → replaced with the
    standard `import config` credential resolution (auth_keys/.env + service-account.json), matching every
    other `src/gcp/*` script. Also sourced `PROJECT_ID`/`LOCATION` from `config` (removes duplication and
-   makes the import "used"). Compiles clean. This was the **last** hardcoded `c:\AGY-Projects\…` path in the repo.
+   makes the import "used"). Compiles clean. This was the **last** hardcoded `c:\Sudo_Hatter_Command\…` path in the repo.
 2. **`curriculum.jsonl`** was gitignored yet tracked → `git rm --cached` (staged; file stays on disk). It's a
    generated artifact, so it's now properly untracked.
 
@@ -91,7 +91,7 @@ git commit -m "Correct quiz/RKP authoring skills + small fixes
 - Skills: fix stale paths (specialist_curriculum->curriculum_components, docs->_docs),
   deleted tool (upload_quiz_banks->ingest_quiz_banks + subcollection reality),
   add 'Step 0 read references first' gate, drop stale '13 banks need rewrite' claim
-- create_v2_stores.py: hardcoded cred path -> config resolution (last AGY-Projects path)
+- create_v2_stores.py: hardcoded cred path -> config resolution (last Sudo_Hatter_Command path)
 - Untrack generated curriculum.jsonl (git rm --cached)
 
 Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
