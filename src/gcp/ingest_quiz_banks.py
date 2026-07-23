@@ -4,6 +4,11 @@ The app's quiz router reads questions from this subcollection and rotates them v
 `seen_by` / `last_seen_at` fields, which we initialize here. Idempotent: re-running upserts
 each question by its id (set with merge=True so rotation state isn't clobbered on re-ingest).
 
+Fossil hygiene: merge=True never deletes, so a field removed from repo JSON survives live
+forever (the 2026-07-23 audit found 206 empty-string `sjt_rationale` fossils). Every question
+without `sjt_rationale` in the repo therefore sends an explicit DELETE_FIELD for it — a no-op
+where the field is already absent live.
+
 GATED: dry run by default (validates + reports, writes nothing). --execute performs the writes.
 """
 import argparse
@@ -61,6 +66,9 @@ def dry_run():
             print(f"    {e}")
     else:
         print("\n  Validation: all banks structurally valid.")
+    no_sjt = sum(1 for b in banks for q in b.get("questions", []) if "sjt_rationale" not in q)
+    print(f"\n  Fossil hygiene: --execute will send `sjt_rationale` DELETE_FIELD on {no_sjt} "
+          f"questions where the repo has none (clears stale empty-string fossils; no-op elsewhere).")
     print("\nRe-run with --execute to write to Firestore.")
 
 
@@ -81,6 +89,7 @@ def execute():
 
     total = 0
     cleaned_parents = 0
+    fossil_clears = 0
     for b in banks:
         lesson_id = b["lesson_id"]
         parent = db.collection(COLLECTION).document(lesson_id)
@@ -99,11 +108,15 @@ def execute():
             payload = dict(q)
             payload.setdefault("seen_by", [])
             payload.setdefault("last_seen_at", None)
+            if "sjt_rationale" not in q:
+                payload["sjt_rationale"] = firestore.DELETE_FIELD
+                fossil_clears += 1
             qcol.document(q["id"]).set(payload, merge=True)
             total += 1
         print(f"  [OK] {lesson_id}: {len(b['questions'])} questions")
     print(f"\nIngested {total} questions across {len(banks)} lessons.")
     print(f"Stripped legacy embedded `questions` array from {cleaned_parents} parent docs.")
+    print(f"Sent `sjt_rationale` DELETE_FIELD on {fossil_clears} questions (fossil hygiene).")
 
 
 if __name__ == "__main__":

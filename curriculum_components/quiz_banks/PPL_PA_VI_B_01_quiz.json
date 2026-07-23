@@ -9,12 +9,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "Before an IFR flight, a pilot checks the VOR receiver using a VOT (VOR Test Signal). The CDI centers with the OBS set to 360° and a FROM flag displayed. The bearing reads 003°. Under 14 CFR 91.171, is this VOR receiver legal for IFR navigation?",
       "options": [
-        {"label": "A", "text": "No — the 3° error requires the VOR to be removed from service by a certified avionics shop before the next IFR flight, and logged as an inoperative instrument"},
+        {"label": "A", "text": "Yes — the VOT tolerance is ±4°, and a 3° error is within limits, so the receiver is legal if the check is logged with date, place, bearing error, and signature"},
         {"label": "B", "text": "Yes — the VOT tolerance is ±6°, and a 3° error is well within limits, so the receiver meets the 30-day check requirement for IFR use"},
-        {"label": "C", "text": "Yes — the VOT tolerance is ±4°, and a 3° error is within limits, so the receiver is legal if the check is logged with date, place, bearing error, and signature"},
-        {"label": "D", "text": "No — the VOT should produce exactly 000° with no error; any deviation indicates the receiver needs calibration before it can be used for IFR navigation"}
+        {"label": "C", "text": "No — the VOT should produce exactly 000° with no error; any deviation indicates the receiver needs calibration before it can be used for IFR navigation"},
+        {"label": "D", "text": "No — the 3° error requires the VOR to be removed from service by a certified avionics shop before the next IFR flight, and logged as an inoperative instrument"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "A",
       "explanation": "Under 14 CFR 91.171, a VOR check using a VOT must produce a bearing within ±4° of 000° (with TO) or 360° (with FROM). The 3° error (reading 003° instead of 360°) is within the ±4° tolerance, making the receiver legal. The check must be logged with date, location, bearing error, and signature. Option B incorrectly states the tolerance as ±6° — that is the airborne checkpoint tolerance, not the VOT tolerance. Option D demands zero error, which is not the regulatory standard. Option A fabricates a maintenance requirement that doesn't exist for a within-tolerance reading. The distinction between ±4° (VOT and dual VOR) and ±6° (airborne) is a frequently tested DPE question.",
       "far_reference": "14 CFR 91.171(b)",
       "acs_element": "PA.VI.B.K1"
@@ -27,11 +27,11 @@
       "text": "A pilot planning a VFR cross-country discovers the GPS database expired 3 days ago. The pilot does not have time to update before the flight. Under current FAA guidance, can the pilot legally use the GPS for VFR navigation with the expired database?",
       "options": [
         {"label": "A", "text": "No — 14 CFR 91.205 requires all installed navigation equipment to have current databases, and operating with an expired database is an equipment airworthiness violation"},
-        {"label": "B", "text": "Yes — AIM 1-1-17 permits VFR operations with an expired database provided the pilot verifies all waypoints and airspace boundaries against current aeronautical charts"},
-        {"label": "C", "text": "No — AC 90-100A prohibits all GPS operations, both IFR and VFR, when the database has expired, and the pilot must use VOR-only navigation until the update is installed"},
+        {"label": "B", "text": "No — AC 90-100A prohibits all GPS operations, both IFR and VFR, when the database has expired, and the pilot must use VOR-only navigation until the update is installed"},
+        {"label": "C", "text": "Yes — AIM 1-1-17 permits VFR operations with an expired database provided the pilot verifies all waypoints and airspace boundaries against current aeronautical charts"},
         {"label": "D", "text": "Yes — GPS databases are updated every 56 days as a convenience; the underlying satellite constellation accuracy is unaffected by database currency and requires no pilot verification"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "C",
       "explanation": "For VFR operations, there is no FAR requiring a current GPS database. AIM 1-1-17 and AC 90-100A permit VFR GPS use with an expired database provided the pilot verifies all waypoints, frequencies, and airspace boundaries against current aeronautical charts. The database contains airport coordinates, waypoint locations, and airspace geometry — all of which can change between cycles. A newly established restricted area or relocated waypoint would not appear in the expired database, creating a potential hazard if the pilot relies on it blindly. IFR operations DO require a current database. Option D correctly identifies the satellite constellation is unaffected but incorrectly dismisses the need for pilot verification — the database, not the satellite signal, contains the airspace and waypoint data the pilot depends on.",
       "far_reference": "14 CFR 91.205; AIM 1-1-17",
       "acs_element": "PA.VI.B.K2"
@@ -60,12 +60,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "A pilot tracking the 270 radial inbound to a VOR notices the CDI suddenly begins swinging left and right and the TO/FROM flag disappears. The pilot suspects a VOR malfunction and begins troubleshooting the receiver. Beyond the immediate distraction, what deeper safety consequence results from misdiagnosing this as a malfunction?",
       "options": [
-        {"label": "A", "text": "The pilot may attempt a radio frequency change to a different VOR, potentially losing track of their position relative to the original navigation plan and entering unfamiliar airspace"},
-        {"label": "B", "text": "The pilot wastes critical cognitive bandwidth troubleshooting a functioning system — the wild CDI swings are the cone of confusion, and the correct action is simply to hold heading and wait for the TO/FROM flip"},
-        {"label": "C", "text": "The VOR receiver may be transmitting an erroneous signal that corrupts the aircraft's transponder code, causing ATC to lose radar identification and requiring the pilot to recycle the transponder"},
+        {"label": "A", "text": "The pilot wastes critical cognitive bandwidth troubleshooting a functioning system — the wild CDI swings are the cone of confusion, and the correct action is simply to hold heading and wait for the TO/FROM flip"},
+        {"label": "B", "text": "The VOR receiver may be transmitting an erroneous signal that corrupts the aircraft's transponder code, causing ATC to lose radar identification and requiring the pilot to recycle the transponder"},
+        {"label": "C", "text": "The pilot may attempt a radio frequency change to a different VOR, potentially losing track of their position relative to the original navigation plan and entering unfamiliar airspace"},
         {"label": "D", "text": "The pilot may reduce altitude to try to improve VOR reception, descending below the minimum obstruction clearance altitude and creating a CFIT risk in mountainous terrain"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "The wild CDI swings and disappearing TO/FROM flag are the signature of the cone of confusion — the inverted cone directly above a VOR station where the phase difference between the reference and variable signals cannot be resolved. This is normal VOR behavior, not a malfunction. A pilot who misdiagnoses this as a receiver failure will waste cognitive bandwidth troubleshooting a system that is working correctly, potentially entering task saturation during a phase where the simple correct action is: hold heading through the cone and wait for the TO/FROM flag to firmly flip. Station passage is confirmed only by the TO→FROM transition. The FAA Pilot's Handbook of Aeronautical Knowledge (FAA-H-8083-25C Chapter 16) describes the cone of confusion as a predictable, expected phenomenon. The safety consequence of the misdiagnosis is cognitive resource misallocation — the pilot shifts from navigating to troubleshooting, degrading situational awareness.",
       "far_reference": "14 CFR 91.171",
       "acs_element": "PA.VI.B.K1"
@@ -77,12 +77,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "You need to determine your position using two VOR stations. You tune VOR #1, center the CDI, and read 090° at the top index with a FROM flag. You then tune VOR #2, center the CDI, and read 180° at the top index — but with a TO flag. Where should you plot the VOR #2 line on your chart?",
       "options": [
-        {"label": "A", "text": "Draw a line from VOR #2 on the 180° radial (south) — the TO flag confirms you are south of the station heading toward it, which is the 180° radial"},
-        {"label": "B", "text": "Draw a line from VOR #2 on the 000° radial (north) — the TO flag means you must take the reciprocal, so you are on the 360°/000° radial emanating from the station"},
-        {"label": "C", "text": "Draw a line from VOR #2 on the 180° radial but label it as 'unreliable' — a TO flag indicates you may be in the cone of confusion, and the position fix should not be trusted"},
-        {"label": "D", "text": "The TO flag indicates VOR #2 is unreliable for position fixing — only FROM indications can be used to determine radials, so you should tune a third VOR instead"}
+        {"label": "A", "text": "The TO flag indicates VOR #2 is unreliable for position fixing — only FROM indications can be used to determine radials, so you should tune a third VOR instead"},
+        {"label": "B", "text": "Draw a line from VOR #2 on the 180° radial but label it as 'unreliable' — a TO flag indicates you may be in the cone of confusion, and the position fix should not be trusted"},
+        {"label": "C", "text": "Draw a line from VOR #2 on the 180° radial (south) — the TO flag confirms you are south of the station heading toward it, which is the 180° radial"},
+        {"label": "D", "text": "Draw a line from VOR #2 on the 000° radial (north) — the TO flag means you must take the reciprocal, so you are on the 360°/000° radial emanating from the station"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "The TO/FROM flag determines how to interpret the OBS reading for position plotting. A FROM flag means the OBS reading IS the radial you are ON — plot it directly from the station. A TO flag means the OBS reading is the course TO the station, which is the RECIPROCAL of your current radial. With a TO flag showing 180°, you take the reciprocal: you are on the 360°/000° radial FROM VOR #2 (north of the station). Plot the line from VOR #2 on the 000° radial. Option A makes the classic error of plotting the TO reading directly, which places the position 180° opposite of the actual location. Option C incorrectly links the TO flag to the cone of confusion. Option D incorrectly claims TO readings can't be used at all — they can, with the reciprocal. FAA-H-8083-25C Chapter 16 emphasizes using FROM indications for direct plotting, but a TO indication provides the same information after taking the reciprocal.",
       "far_reference": "14 CFR 91.171",
       "acs_element": "PA.VI.B.S2"
@@ -94,12 +94,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "Your GPS receiver shows 'RAIM NOT AVAILABLE' during a VFR cross-country. You currently have a 3D position fix displayed on the moving map. What does the RAIM warning mean about your current navigation solution, and what action is appropriate?",
       "options": [
-        {"label": "A", "text": "The position fix is invalid — fewer than 4 satellites are available, so the GPS cannot compute a 3D solution and the displayed position is an extrapolation from the last known fix"},
-        {"label": "B", "text": "The position fix may be accurate, but the receiver cannot verify its integrity — with fewer than 5 satellites in suitable geometry, it cannot detect if one satellite is sending corrupted data"},
+        {"label": "A", "text": "The position fix is accurate but the GPS receiver has detected a specific satellite error and has automatically excluded the faulty signal, reducing the constellation to 4 satellites"},
+        {"label": "B", "text": "The position fix is invalid — fewer than 4 satellites are available, so the GPS cannot compute a 3D solution and the displayed position is an extrapolation from the last known fix"},
         {"label": "C", "text": "The RAIM warning is relevant only for IFR operations — for VFR, the 3D position fix remains fully valid and no pilot action is required since RAIM is an IFR certification feature"},
-        {"label": "D", "text": "The position fix is accurate but the GPS receiver has detected a specific satellite error and has automatically excluded the faulty signal, reducing the constellation to 4 satellites"}
+        {"label": "D", "text": "The position fix may be accurate, but the receiver cannot verify its integrity — with fewer than 5 satellites in suitable geometry, it cannot detect if one satellite is sending corrupted data"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "RAIM (Receiver Autonomous Integrity Monitoring) requires 5 satellites with adequate geometry to detect a corrupted signal (Fault Detection), and 6 satellites to isolate and remove it (Fault Exclusion). 'RAIM NOT AVAILABLE' means the receiver has a position fix from at least 4 satellites, but cannot verify that all satellites are providing accurate data. The fix MAY be correct, but the pilot has no assurance. For VFR, this is a degraded but usable condition — the pilot should cross-reference the GPS position with VOR, pilotage, or dead reckoning to independently validate it. Option A confuses RAIM loss with position loss — 4 satellites still provide a 3D fix. Option C incorrectly dismisses the warning for VFR — RAIM integrity affects position accuracy regardless of flight rules. Option D describes Fault Exclusion (6 satellites), not the 'NOT AVAILABLE' condition. AIM 1-1-17 describes RAIM requirements and the distinction between detection and exclusion.",
       "far_reference": "14 CFR 91.205",
       "acs_element": "PA.VI.B.K2"
@@ -111,12 +111,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "You are 60 NM from your destination on a VFR cross-country when your panel-mounted GPS displays 'LOI — RAIM UNAVAILABLE' and the moving map freezes. Your only other navigation source is the VOR receiver, but you have not used VOR navigation since your checkride 14 months ago. The terrain below is flat, visibility is unlimited, and you can see a small town that matches your sectional chart. All four actions below are legal. Which is the SAFEST aeronautical decision?",
       "options": [
-        {"label": "A", "text": "Continue direct to the destination using pilotage alone — you can see the ground clearly, and 60 NM in clear weather is an easy visual navigation task without any electronic aids", "hazardous_attitude": "macho"},
-        {"label": "B", "text": "Continue on your current heading and hope the GPS recovers — RAIM outages are usually temporary, lasting only a few minutes as satellite geometry shifts, and you will likely regain the fix before reaching the destination", "hazardous_attitude": "get_there_itis"},
-        {"label": "C", "text": "Land immediately at the nearest airport and wait for a mechanic to inspect the GPS before continuing — you cannot safely navigate without a functioning GPS in today's aviation environment", "hazardous_attitude": "resignation"},
-        {"label": "D", "text": "Fix your position using the town below and the sectional chart (pilotage), tune and identify a VOR to establish a backup navigation track, and then continue to the destination using the VOR with visual cross-reference"}
+        {"label": "A", "text": "Continue on your current heading and hope the GPS recovers — RAIM outages are usually temporary, lasting only a few minutes as satellite geometry shifts, and you will likely regain the fix before reaching the destination", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Fix your position using the town below and the sectional chart (pilotage), tune and identify a VOR to establish a backup navigation track, and then continue to the destination using the VOR with visual cross-reference"},
+        {"label": "C", "text": "Continue direct to the destination using pilotage alone — you can see the ground clearly, and 60 NM in clear weather is an easy visual navigation task without any electronic aids", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Land immediately at the nearest airport and wait for a mechanic to inspect the GPS before continuing — you cannot safely navigate without a functioning GPS in today's aviation environment", "hazardous_attitude": "resignation"}
       ],
-      "correct_answer": "D",
+      "correct_answer": "B",
       "sjt_rationale": "Option A relies exclusively on pilotage for 60 NM without any electronic backup (macho) — while legal and possible in unlimited visibility, it provides no heading reference or distance tracking, increasing the chance of drifting off course over the remaining distance. Option B continues blindly hoping for system recovery (get-there-itis) — if the GPS doesn't recover, the pilot is 60 NM further with no navigation solution. Option C abandons the flight entirely due to GPS loss (resignation) — VFR pilots navigated successfully for decades before GPS existed; a functioning VOR and unlimited visibility provide adequate navigation capability. Option D is the active professional middle path: establish your current position through pilotage (test — do you know where you are?), activate the backup navigation system (VOR), and continue with independent cross-verification. This is test + mitigation: confirm position, activate backup, verify through correlation.",
       "explanation": "The GPS was never meant to be a pilot's only navigation tool. VFR pilots are expected to maintain proficiency in VOR navigation and pilotage as backup systems. The FAA's VOR Minimum Operational Network (VOR MON) was specifically preserved as a GPS-failure safety net, ensuring VOR coverage at 5,000 ft AGL across CONUS. FAA-H-8083-25C Chapter 16 describes VOR navigation as a foundational skill. The correct ADM response to a navigation system failure is to transition to backup systems while maintaining situational awareness — not to continue without verification or to abandon the flight when adequate alternatives exist. NTSB investigations of VFR-into-terrain accidents frequently cite over-reliance on GPS and degraded backup navigation proficiency as contributing factors (NTSB Safety Recommendation A-11-66).",
       "far_reference": "14 CFR 91.103",
@@ -129,12 +129,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "During flight planning, you notice a NOTAM announcing military GPS jamming exercises within a 200-NM radius of a military base — your planned route passes through the edge of the affected area. Your aircraft has VOR, GPS, and an iPad with ForeFlight. All four actions below are legal. Which is the SAFEST aeronautical decision?",
       "options": [
-        {"label": "A", "text": "File the flight plan as originally planned — the NOTAM says 200-NM 'radius' but actual interference is concentrated near the base; at the edge, your GPS will maintain lock without issues", "hazardous_attitude": "get_there_itis"},
-        {"label": "B", "text": "File the flight plan as originally planned and rely on your iPad if the panel GPS fails — ForeFlight has a separate GPS receiver that operates on a different frequency immune to military jamming", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Cancel the cross-country entirely — GPS jamming makes VFR navigation impossible in the modern airspace system, and no alternative route can compensate for the loss of GPS within 200 NM", "hazardous_attitude": "resignation"},
-        {"label": "D", "text": "Plan the route using VOR-to-VOR navigation as primary, pre-identify VOR frequencies and radials, brief the GPS jamming NOTAM, and plan to use GPS as supplemental only if it remains available through the affected area"}
+        {"label": "A", "text": "File the flight plan as originally planned and rely on your iPad if the panel GPS fails — ForeFlight has a separate GPS receiver that operates on a different frequency immune to military jamming", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "File the flight plan as originally planned — the NOTAM says 200-NM 'radius' but actual interference is concentrated near the base; at the edge, your GPS will maintain lock without issues", "hazardous_attitude": "get_there_itis"},
+        {"label": "C", "text": "Plan the route using VOR-to-VOR navigation as primary, pre-identify VOR frequencies and radials, brief the GPS jamming NOTAM, and plan to use GPS as supplemental only if it remains available through the affected area"},
+        {"label": "D", "text": "Cancel the cross-country entirely — GPS jamming makes VFR navigation impossible in the modern airspace system, and no alternative route can compensate for the loss of GPS within 200 NM", "hazardous_attitude": "resignation"}
       ],
-      "correct_answer": "D",
+      "correct_answer": "C",
       "sjt_rationale": "Option A dismisses the NOTAM based on an assumption about signal strength at the edge (get-there-itis) — military GPS jamming exercises can produce unpredictable signal degradation well beyond the calculated edge, and RAIM may fail without warning. Option B relies on the iPad as a backup (macho) — ALL consumer GPS receivers use the same L1 frequency susceptible to the same military jamming; the iPad's receiver has no immunity. Option C cancels because GPS is unavailable (resignation) — VFR navigation existed for decades without GPS, and VOR + pilotage provides adequate capability. Option D is the active professional middle path: pre-plan the entire route on VOR, brief the threat, and use GPS only if it remains functional. Test (can I navigate this route on VOR alone?) + mitigation (yes — pre-identified frequencies, radials, and checkpoints).",
       "explanation": "Military GPS jamming NOTAMs (published per 14 CFR 93.75 and FAA InFO 16012) alert pilots to authorized interference exercises that can degrade or eliminate GPS signal reception within the published radius. All consumer and aviation GPS receivers use the same L1 C/A signal (1575.42 MHz), making portable devices equally vulnerable. The FAA's VOR Minimum Operational Network was preserved specifically to provide navigation continuity during GPS outages. Pre-planning a VOR-based route demonstrates effective risk management: identify the hazard (GPS jamming), assess the risk (navigation loss on a GPS-primary route), and mitigate (switch primary to VOR with GPS as supplemental). FAA-H-8083-2A Chapter 3 covers the risk management process applied to flight planning.",
       "far_reference": "14 CFR 91.103",

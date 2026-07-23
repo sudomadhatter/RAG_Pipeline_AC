@@ -119,6 +119,7 @@ Every live-write tool is **gated**: dry-run by default, `--execute` to write.
 
 | Doc | What it is |
 |---|---|
+| [_docs/SOP_curriculum_operations.md](_docs/SOP_curriculum_operations.md) | **The two-team SOP** — stations & ownership, Drive intake, per-lesson lifecycle, live-store discipline |
 | [_docs/docs_prds/Master_Curriculum_Pipeline.md](_docs/docs_prds/Master_Curriculum_Pipeline.md) | The PRD — full end-to-end walkthrough with diagrams |
 | [_docs/docs_prds/STATE.md](_docs/docs_prds/STATE.md) | **Generated** live inventory + repo-vs-Firestore drift (run `generate_state_map.py`) |
 | [_docs/docs_prds/asset_registry.md](_docs/docs_prds/asset_registry.md) | Narrative inventory of every asset + how it flows |
@@ -130,8 +131,17 @@ Every live-write tool is **gated**: dry-run by default, `--execute` to write.
 
 ## Agent-tool governance
 
-This repo is worked on by multiple AI coding tools, each with its own config and artifact home:
+**[AGENTS.md](AGENTS.md) is the single source of truth** — the workspace map every AI tool reads.
+[CLAUDE.md](CLAUDE.md) and [GEMINI.md](GEMINI.md) are one-line pointers to it (one front door per
+LLM, one brain). Codex reads `AGENTS.md` natively.
 
-- **Claude Code** → [CLAUDE.md](CLAUDE.md) + `.claude/`; artifacts in `_claude_artifacts/`
-- **opencode** → [AGENTS.md](AGENTS.md); artifacts in `_opencode_artifacts/`
-- **Gemini / Antigravity** → [.gemini/GEMINI.md](.gemini/GEMINI.md) + `.agent/`; artifacts in the IDE panel
+- **Rules** → `.agents/rules/` — the shared house set plus this repo's own
+  `constitution.project.md` (the data-side hard stops: dry-run before `--execute`, never commit
+  generated import manifests, no PDFs in git, no invented FAA facts).
+- **Skills** → `.agents/skills/` (mirrored to `.claude/skills/`) — deliberately **lean**: curriculum
+  authoring (`rkp-manifest-creation`, `quiz-bank-generation`, `bridge-key-verification`,
+  `faa-grounding-gate`) plus a few hygiene skills. The full house library and the whole `sudo-*`
+  dev flow live at the command center and are driven from there.
+- **Artifacts** → `_artifacts/` (session plans + walkthroughs; the retired `_claude_artifacts/` and
+  `_opencode_artifacts/` were consolidated here on 2026-07-22).
+- **Board / continuity** → `_bmad-output/` (BMAD-lite: state files only, no `_bmad/` module).

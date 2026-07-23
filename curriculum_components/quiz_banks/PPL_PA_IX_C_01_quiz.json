@@ -9,10 +9,10 @@
       "tested_rkp_id": "RKP_01",
       "text": "A pilot suspects carburetor icing during cruise flight — the RPM is slowly decreasing with no changes to power or mixture settings. The outside air temperature is 65°F with visible moisture. Under the POH emergency procedures, what is the correct application of carburetor heat?",
       "options": [
-        {"label": "A", "text": "Apply carb heat incrementally in 25% steps over 30 seconds, monitoring RPM after each step — sudden full carb heat can shock the engine and cause a complete power loss"},
+        {"label": "A", "text": "Apply carb heat only during descent and approach — using carb heat during cruise reduces engine power by approximately 15%, which is inefficient and unnecessary unless ice has actually formed"},
         {"label": "B", "text": "Apply carb heat fully ON, accept the initial RPM drop as warm, less-dense air enters, and leave it ON until the RPM stabilizes and rises — then check if further monitoring is needed"},
-        {"label": "C", "text": "Do not apply carb heat — at 65°F, the air temperature is too warm for carburetor icing, and the RPM decrease is more likely caused by a magneto timing issue that requires a ground check"},
-        {"label": "D", "text": "Apply carb heat only during descent and approach — using carb heat during cruise reduces engine power by approximately 15%, which is inefficient and unnecessary unless ice has actually formed"}
+        {"label": "C", "text": "Apply carb heat incrementally in 25% steps over 30 seconds, monitoring RPM after each step — sudden full carb heat can shock the engine and cause a complete power loss"},
+        {"label": "D", "text": "Do not apply carb heat — at 65°F, the air temperature is too warm for carburetor icing, and the RPM decrease is more likely caused by a magneto timing issue that requires a ground check"}
       ],
       "correct_answer": "B",
       "explanation": "The correct response to suspected carburetor icing is FULL carb heat, applied all at once. The initial RPM drop is expected and normal — warm, less-dense air produces less power. As the heated air melts the ice in the carburetor throat, the RPM will rise back to or above the original setting, confirming ice was present. Option A's incremental approach is incorrect — partial carb heat can actually WORSEN icing by warming the air just enough to melt existing ice into liquid water, which then refreezes downstream. Option C incorrectly claims 65°F is too warm for carb ice — carburetor icing can occur at ambient temperatures up to 70°F (21°C) with high humidity because the venturi and fuel vaporization effects can drop internal temperatures by up to 70°F. FAA-H-8083-25C Chapter 7 describes carburetor icing conditions and the icing probability chart.",
@@ -26,12 +26,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "A pilot smells burning plastic behind the instrument panel and suspects an electrical fire. The pilot's first action is to pull individual circuit breakers to isolate the fault. According to standard emergency procedures, why is this the WRONG first action?",
       "options": [
-        {"label": "A", "text": "Pulling circuit breakers one at a time is too slow — by the time the faulty circuit is isolated, the fire may have spread to adjacent wiring harnesses and become uncontrollable"},
-        {"label": "B", "text": "The Master Switch must be turned OFF first — this immediately kills the power source to ALL electrical circuits simultaneously, stopping the short circuit and eliminating the heat source that sustains the fire"},
-        {"label": "C", "text": "The pilot should use the cabin fire extinguisher first to suppress visible flames, then troubleshoot the electrical system — fire suppression always takes priority over power management"},
-        {"label": "D", "text": "Circuit breakers should never be pulled manually — they are designed to trip automatically when a fault occurs, and manually pulling them can cause electrical arcing that worsens the fire"}
+        {"label": "A", "text": "The Master Switch must be turned OFF first — this immediately kills the power source to ALL electrical circuits simultaneously, stopping the short circuit and eliminating the heat source that sustains the fire"},
+        {"label": "B", "text": "Circuit breakers should never be pulled manually — they are designed to trip automatically when a fault occurs, and manually pulling them can cause electrical arcing that worsens the fire"},
+        {"label": "C", "text": "Pulling circuit breakers one at a time is too slow — by the time the faulty circuit is isolated, the fire may have spread to adjacent wiring harnesses and become uncontrollable"},
+        {"label": "D", "text": "The pilot should use the cabin fire extinguisher first to suppress visible flames, then troubleshoot the electrical system — fire suppression always takes priority over power management"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "The first action for an electrical fire is Master Switch OFF. This immediately disconnects BOTH the alternator and battery from the bus, cutting all electrical power and eliminating the heat source for any short circuit. The engine continues running because the magneto ignition system is mechanically driven and independent of the electrical bus. After confirming the fire is out (no more smoke), the pilot then performs systematic load shedding: battery ON, then individual circuits ON one at a time to isolate the faulty circuit. If smoke reappears on any circuit, that circuit is turned OFF and left OFF. Option A identifies a valid concern (speed) but the solution is wrong — the Master Switch kills everything instantly. Option C prioritizes extinguisher use, which may not be necessary if the power source is cut immediately. FAA-H-8083-3C Chapter 18 prescribes the Master Switch OFF as the immediate action.",
       "far_reference": "14 CFR 91.3",
       "acs_element": "PA.IX.C.K3"
@@ -45,8 +45,8 @@
       "options": [
         {"label": "A", "text": "The pilot may reduce power to prevent exceeding Vne, which at climb power would cause the aircraft to descend and eventually contact terrain during an extended climb clearance"},
         {"label": "B", "text": "The pilot may pull back on the yoke to 'slow down,' increasing the angle of attack toward stall — while the ASI continues to show increasing speed, confirming the pilot's false belief that they need to slow down even more"},
-        {"label": "C", "text": "The increasing ASI reading will trigger the overspeed warning system, which produces a loud horn that distracts the pilot from monitoring the actual flight parameters and causes cognitive tunneling"},
-        {"label": "D", "text": "The false high airspeed indication will cause the autopilot to automatically trim the aircraft nose-up to reduce speed, creating an out-of-trim condition that the pilot cannot override manually"}
+        {"label": "C", "text": "The false high airspeed indication will cause the autopilot to automatically trim the aircraft nose-up to reduce speed, creating an out-of-trim condition that the pilot cannot override manually"},
+        {"label": "D", "text": "The increasing ASI reading will trigger the overspeed warning system, which produces a loud horn that distracts the pilot from monitoring the actual flight parameters and causes cognitive tunneling"}
       ],
       "correct_answer": "B",
       "explanation": "When both the pitot ram inlet and drain hole are blocked, the total pressure in the pitot line is TRAPPED at the blockage altitude value. As the aircraft climbs, actual static pressure decreases — but the trapped total pressure stays constant. The ASI computes dynamic pressure as: q = PT(trapped) - PS(actual decreasing) = increasing value. The ASI shows the aircraft 'speeding up' with each increase in altitude — it is acting like an altimeter. A pilot who trusts this indication will pull back to 'slow down,' which INCREASES the angle of attack toward stall while the ASI continues to show increasing speed. This creates a positive feedback loop toward a stall that the pilot cannot detect via the ASI. The defense is cross-checking attitude indicator and vertical speed indicator (both use static only and are unaffected by pitot blockage). FAA-H-8083-25C Chapter 8 describes the blocked pitot 'altimeter trap' as one of the most dangerous instrument malfunctions.",
@@ -60,12 +60,12 @@
       "tested_rkp_id": "RKP_04",
       "text": "During a practice engine failure, a CFI pulls the throttle to idle. The student pilot freezes for 15 seconds, staring at the engine instruments, before making any control input. The aircraft descends 250 feet during the freeze. Beyond the immediate altitude loss, what neurological mechanism caused the student's freeze, and what pre-flight action could have mitigated it?",
       "options": [
-        {"label": "A", "text": "The freeze was caused by inner ear disorientation from the sudden pitch change — a pre-flight vestibular desensitization exercise (rapid head turns) would have reduced the freeze duration"},
-        {"label": "B", "text": "The freeze was the amygdala hijacking the prefrontal cortex — the fight-flight-freeze response overwhelmed logical processing; a verbal pre-takeoff emergency briefing would have pre-loaded a decision script that short-circuits the freeze"},
-        {"label": "C", "text": "The freeze was caused by the student's unfamiliarity with the engine instruments — more ground school time reviewing instrument scan patterns would have given the student the knowledge to respond immediately"},
-        {"label": "D", "text": "The freeze was a normal response that cannot be mitigated — all pilots freeze for 10-15 seconds during unexpected emergencies, and training teaches them to recover faster after the freeze, not prevent it"}
+        {"label": "A", "text": "The freeze was a normal response that cannot be mitigated — all pilots freeze for 10-15 seconds during unexpected emergencies, and training teaches them to recover faster after the freeze, not prevent it"},
+        {"label": "B", "text": "The freeze was caused by the student's unfamiliarity with the engine instruments — more ground school time reviewing instrument scan patterns would have given the student the knowledge to respond immediately"},
+        {"label": "C", "text": "The freeze was the amygdala hijacking the prefrontal cortex — the fight-flight-freeze response overwhelmed logical processing; a verbal pre-takeoff emergency briefing would have pre-loaded a decision script that short-circuits the freeze"},
+        {"label": "D", "text": "The freeze was caused by inner ear disorientation from the sudden pitch change — a pre-flight vestibular desensitization exercise (rapid head turns) would have reduced the freeze duration"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "C",
       "explanation": "The startle response is an involuntary physiological reaction triggered by the amygdala — the brain's threat-detection center. When a sudden, unexpected event occurs, the amygdala bypasses the prefrontal cortex (logical reasoning) and triggers the sympathetic nervous system (fight/flight/FREEZE). Cognitive paralysis can last up to 30 seconds. At 1,000 fpm descent, 30 seconds = 500 feet of uncontrolled descent. The mitigation is a pre-takeoff verbal briefing: 'If the engine fails below X feet, I push the nose down and land straight ahead.' This pre-loads a motor script in the brain that short-circuits the freeze — the amygdala still fires, but the pre-loaded script executes before the logical brain fully freezes. FAA-H-8083-2A Chapter 2 and AC 120-111 describe the startle response physiology and the verbal briefing as the primary countermeasure.",
       "far_reference": "14 CFR 91.3; AC 120-111",
       "acs_element": "PA.IX.C.R1"
@@ -77,12 +77,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "You smell burning plastic and see wisps of white smoke from behind the instrument panel. You turn the Master Switch OFF. The smoke stops. You need to navigate to the nearest airport 15 NM away but have no radio or GPS without electrical power. Your VOR is also inoperative. What is the correct load-shedding procedure to restore minimum navigation?",
       "options": [
-        {"label": "A", "text": "Turn the Master Switch back ON to restore all avionics — the fire is out, so the short circuit has likely cleared itself and the electrical system can be used normally"},
-        {"label": "B", "text": "Turn the battery ON only, then individually switch ON one circuit at a time — starting with the GPS/NAV radio — monitoring for smoke after each circuit; if smoke appears, turn that circuit OFF immediately and leave it OFF"},
-        {"label": "C", "text": "Turn the alternator field switch ON without the battery — this provides running electrical power without drawing on the battery, reducing the risk of reigniting the short circuit"},
+        {"label": "A", "text": "Turn the battery ON only, then individually switch ON one circuit at a time — starting with the GPS/NAV radio — monitoring for smoke after each circuit; if smoke appears, turn that circuit OFF immediately and leave it OFF"},
+        {"label": "B", "text": "Turn the alternator field switch ON without the battery — this provides running electrical power without drawing on the battery, reducing the risk of reigniting the short circuit"},
+        {"label": "C", "text": "Turn the Master Switch back ON to restore all avionics — the fire is out, so the short circuit has likely cleared itself and the electrical system can be used normally"},
         {"label": "D", "text": "Do not restore any electrical power — navigate by pilotage and dead reckoning to the nearest airport; any attempt to restore electrical power risks reigniting the fire"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "The load-shedding procedure after an electrical fire confirmation is systematic isolation. Turn the battery ON (this provides bus power without the alternator's higher voltage). Then turn individual circuits ON one at a time, waiting and monitoring for smoke after each. If smoke reappears on any circuit, that circuit contains the fault — turn it OFF immediately and leave it OFF permanently. Retrieve only the minimum avionics needed to navigate and communicate (typically COM radio and GPS/NAV). Option A risks reigniting the fire by powering all circuits including the faulty one. Option C's alternator-without-battery concept isn't how the system works in most GA aircraft (the battery provides excitation for the alternator field). Option D is overly conservative — while pilotage works, restoring a COM radio for safety communication is worth the systematic risk if done correctly. FAA-H-8083-3C Chapter 18 describes the load-shedding procedure.",
       "far_reference": "14 CFR 91.3",
       "acs_element": "PA.IX.C.S1"
@@ -96,10 +96,10 @@
       "options": [
         {"label": "A", "text": "Magneto timing drift — the increased temperature from carb heat expanded the engine case and realigned the magneto timing, temporarily clearing the roughness"},
         {"label": "B", "text": "Fuel contamination (water) — the carb heat raised the fuel temperature above the freezing point of the water droplets, allowing them to pass through the carburetor without forming ice crystals"},
-        {"label": "C", "text": "Carburetor icing — ice had formed on the throttle valve, restricting airflow; full carb heat melted the ice, restoring normal air flow and RPM, confirming the roughness was caused by partial throttle valve obstruction"},
-        {"label": "D", "text": "Spark plug fouling — the enriched mixture from carb heat burned off the carbon deposits on the spark plugs, restoring normal combustion; this is the standard procedure for clearing fouled plugs in flight"}
+        {"label": "C", "text": "Spark plug fouling — the enriched mixture from carb heat burned off the carbon deposits on the spark plugs, restoring normal combustion; this is the standard procedure for clearing fouled plugs in flight"},
+        {"label": "D", "text": "Carburetor icing — ice had formed on the throttle valve, restricting airflow; full carb heat melted the ice, restoring normal air flow and RPM, confirming the roughness was caused by partial throttle valve obstruction"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "D",
       "explanation": "The symptom pattern — gradual roughness, normal oil and fuel pressures, roughness cleared by carb heat application — is the textbook carburetor icing presentation. Ice forms on the throttle valve, progressively restricting airflow and causing uneven fuel-air mixture to the cylinders. When full carb heat is applied, the heated air melts the ice (the initial RPM drop during carb heat application is expected as warm, less-dense air enters). After the ice melts, RPM increases above the pre-icing level, confirming ice was present. The fact that switching tanks didn't help eliminates fuel supply issues. Normal oil readings eliminate mechanical problems. FAA-H-8083-25C Chapter 7 describes this exact diagnostic sequence for identifying carburetor icing in flight.",
       "far_reference": "14 CFR 91.103",
       "acs_element": "PA.IX.C.K1"
@@ -111,12 +111,12 @@
       "tested_rkp_id": "RKP_04",
       "text": "You are on a solo VFR cross-country at 4,500 feet AGL when the engine begins running very rough. RPM fluctuates between 1,800 and 2,200. Oil pressure is dropping slowly. You have an airport 8 NM ahead and a suitable grass field 2 NM to your right. All four actions below are possible. Which is the SAFEST aeronautical decision?",
       "options": [
-        {"label": "A", "text": "Continue to the airport 8 NM ahead — a paved runway with emergency services is always safer than a grass field, and the engine is still producing some power; you can likely make it", "hazardous_attitude": "get_there_itis"},
-        {"label": "B", "text": "Continue to the airport — you have handled rough engines before in training and this one is still running; an engine can run rough for a long time before it actually fails completely", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Shut the engine down immediately and glide to the grass field — any engine roughness with oil pressure loss is a catastrophic failure in progress, and continuing to run the engine will cause it to seize and catch fire", "hazardous_attitude": "resignation"},
-        {"label": "D", "text": "Head toward the grass field while maintaining altitude with available power, run the engine failure checklist (fuel, mixture, carb heat, mags), and if the roughness doesn't clear, commit to the grass field — if it clears, reassess and divert to the airport"}
+        {"label": "A", "text": "Continue to the airport — you have handled rough engines before in training and this one is still running; an engine can run rough for a long time before it actually fails completely", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Continue to the airport 8 NM ahead — a paved runway with emergency services is always safer than a grass field, and the engine is still producing some power; you can likely make it", "hazardous_attitude": "get_there_itis"},
+        {"label": "C", "text": "Head toward the grass field while maintaining altitude with available power, run the engine failure checklist (fuel, mixture, carb heat, mags), and if the roughness doesn't clear, commit to the grass field — if it clears, reassess and divert to the airport"},
+        {"label": "D", "text": "Shut the engine down immediately and glide to the grass field — any engine roughness with oil pressure loss is a catastrophic failure in progress, and continuing to run the engine will cause it to seize and catch fire", "hazardous_attitude": "resignation"}
       ],
-      "correct_answer": "D",
+      "correct_answer": "C",
       "sjt_rationale": "Option A gambles 8 NM of flight on a failing engine with oil pressure loss (get-there-itis) — declining oil pressure indicates progressive mechanical failure; the engine could seize at any time, leaving the pilot without power and potentially short of the airport. Option B normalizes a dangerous indication (macho) — fluctuating RPM with declining oil pressure is not 'rough running,' it's an impending failure. Option C immediately shuts down a running engine before troubleshooting (resignation) — the engine is still producing power, which may be needed to reach the closer field; premature shutdown eliminates options. Option D is the active professional middle path: turn toward the closest safe landing site (ensuring it's reachable powerless), troubleshoot while the engine still runs (test — does carb heat, mixture, or mag check clear the roughness?), and commit to the field if the problem doesn't resolve (mitigation).",
       "explanation": "The combination of engine roughness with declining oil pressure is a red flag for progressive mechanical failure. Oil starvation leads to metal-on-metal contact, which can result in engine seizure within minutes. The correct ADM response is to immediately improve your energy position (turn toward the closer field, ensuring it's within powerless glide range) while troubleshooting. If the checklist items (fuel, mixture, carb heat, mags) don't clear the roughness, the engine is mechanically compromised and the pilot should land at the closest suitable location. FAA-H-8083-2A Chapter 3 describes the DECIDE model applied to in-flight engine anomalies. The principle: never fly past a suitable landing site when the engine is telling you it's failing.",
       "far_reference": "14 CFR 91.3",
@@ -129,9 +129,9 @@
       "tested_rkp_id": "RKP_03",
       "text": "You are at 3,000 feet AGL when you notice smoke coming from under the engine cowling. The smoke is dark gray and has a strong oil smell. Engine gauges show oil temperature climbing rapidly and oil pressure dropping. All four actions below are possible. Which is the SAFEST aeronautical decision?",
       "options": [
-        {"label": "A", "text": "Continue flying to the airport 12 NM ahead — the smoke may be just an oil leak dripping onto the exhaust manifold, which is unpleasant but not dangerous; engine fires in GA are extremely rare", "hazardous_attitude": "get_there_itis"},
-        {"label": "B", "text": "Increase speed to Vne to blow the fire out with the slipstream — high-speed air over the engine compartment will extinguish any flames, and you can then divert to the nearest airport at normal cruise", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Immediately shut down the engine, glide to the nearest field, and prepare for a forced landing — do not attempt to reach any airport because the engine could catch fire at any moment", "hazardous_attitude": "resignation"},
+        {"label": "A", "text": "Increase speed to Vne to blow the fire out with the slipstream — high-speed air over the engine compartment will extinguish any flames, and you can then divert to the nearest airport at normal cruise", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Immediately shut down the engine, glide to the nearest field, and prepare for a forced landing — do not attempt to reach any airport because the engine could catch fire at any moment", "hazardous_attitude": "resignation"},
+        {"label": "C", "text": "Continue flying to the airport 12 NM ahead — the smoke may be just an oil leak dripping onto the exhaust manifold, which is unpleasant but not dangerous; engine fires in GA are extremely rare", "hazardous_attitude": "get_there_itis"},
         {"label": "D", "text": "Execute the engine fire checklist: mixture to idle cut-off, fuel selector OFF, fuel pump OFF; establish Vg toward the nearest suitable landing site, unlatch the cabin door, and prepare for an emergency landing using the remaining altitude to reach the best field available"}
       ],
       "correct_answer": "D",

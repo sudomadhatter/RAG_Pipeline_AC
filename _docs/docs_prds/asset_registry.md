@@ -528,7 +528,7 @@ flowchart TD
 | Question types | `mcq` (legal/safety/application) + `sjt` preferred for risk_management |
 | Correct answer format | Single letter: `"A"`, `"B"`, `"C"`, or `"D"` |
 | `tested_rkp_id` | Mandatory on all 384 questions |
-| SJT correct answer | Always `"D"` — the safest PIC decision |
+| SJT correct answer | ⚠️ **CONTESTED — do not treat as a rule.** The old "always `D`" convention is retired by the PRD (§7.1/§11), and the live corpus does not follow it: measured 2026-07-22 across all 48 banks / 384 questions, `correct_answer` is **B 67% overall** and, for `risk_management` questions, **B 61% / D 33%**. Options are NOT shuffled at render (`quiz_bank_service.py` shuffles question order only), so any positional skew is a real tell. **Open decision for Daniel:** adopt "no positional meaning, distribute evenly" and re-balance the corpus. |
 
 ### Full Quiz Inventory
 

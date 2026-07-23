@@ -9,12 +9,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "A Cessna 172 owner receives a Manufacturer Service Bulletin marked 'MANDATORY' from Cessna requiring replacement of a fuel gasket. No Airworthiness Directive referencing this Service Bulletin has been issued by the FAA. Is compliance legally required for Part 91 operations?",
       "options": [
-        {"label": "A", "text": "Yes — any Service Bulletin marked 'Mandatory' by the manufacturer carries full legal force equal to a federal Airworthiness Directive and must be complied with to maintain airworthiness"},
+        {"label": "A", "text": "No — under Part 91 operations, a manufacturer's Service Bulletin is an engineering recommendation regardless of how it is labeled; only the FAA can impose mandatory maintenance requirements through an Airworthiness Directive"},
         {"label": "B", "text": "Yes — the FAA automatically incorporates all manufacturer Service Bulletins marked 'Mandatory' into 14 CFR Part 39 within 30 days, making compliance legally required"},
-        {"label": "C", "text": "No — under Part 91 operations, a manufacturer's Service Bulletin is an engineering recommendation regardless of how it is labeled; only the FAA can impose mandatory maintenance requirements through an Airworthiness Directive"},
-        {"label": "D", "text": "No — Service Bulletins are optional in all circumstances and can never be incorporated into federal airworthiness requirements regardless of subsequent FAA action"}
+        {"label": "C", "text": "No — Service Bulletins are optional in all circumstances and can never be incorporated into federal airworthiness requirements regardless of subsequent FAA action"},
+        {"label": "D", "text": "Yes — any Service Bulletin marked 'Mandatory' by the manufacturer carries full legal force equal to a federal Airworthiness Directive and must be complied with to maintain airworthiness"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "A",
       "explanation": "Under 14 CFR Part 39 and FAA legal interpretations, only the FAA can mandate maintenance through an Airworthiness Directive. A manufacturer's 'Mandatory Service Bulletin' carries no legal authority under Part 91 general aviation operations — it is an engineering recommendation. The manufacturer's use of the word 'mandatory' reflects their safety assessment, not a legal designation. If the FAA subsequently issues an AD that references or incorporates this SB, compliance immediately becomes legally required. Until that happens, Part 91 operators may choose not to comply. Option D is overbroad — SBs CAN be incorporated into ADs and become mandatory at that point.",
       "far_reference": "14 CFR Part 39; 14 CFR 91.403",
       "acs_element": "PA.I.B.K1c"
@@ -26,10 +26,10 @@
       "tested_rkp_id": "RKP_02",
       "text": "A private pilot rents a Piper Archer from a flight school. During a preflight logbook audit, the pilot discovers a recurring AD requiring aileron cable inspection every 200 hours. The last compliance entry was at 1,800 hours and the current Hobbs reads 2,015 hours. What should the pilot do?",
       "options": [
-        {"label": "A", "text": "Proceed with the flight — tracking recurring Airworthiness Directives is the flight school's legal obligation under 91.403, and a renter pilot bears no responsibility for the owner's maintenance failures"},
+        {"label": "A", "text": "Apply for an AMOC exemption from the FSDO by phone before departure, which suspends the AD compliance requirement pending FAA review of the maintenance records"},
         {"label": "B", "text": "Ground the aircraft and contact the flight school management — as the acting PIC, the pilot is responsible under 14 CFR 91.7 for ensuring the aircraft is airworthy, and an overdue recurring AD makes the aircraft unairworthy"},
-        {"label": "C", "text": "Proceed with the flight today and report the overdue AD to the flight school after landing — the 10-hour grace period concept applies to AD intervals just as it does to 100-hour inspections"},
-        {"label": "D", "text": "Apply for an AMOC exemption from the FSDO by phone before departure, which suspends the AD compliance requirement pending FAA review of the maintenance records"}
+        {"label": "C", "text": "Proceed with the flight — tracking recurring Airworthiness Directives is the flight school's legal obligation under 91.403, and a renter pilot bears no responsibility for the owner's maintenance failures"},
+        {"label": "D", "text": "Proceed with the flight today and report the overdue AD to the flight school after landing — the 10-hour grace period concept applies to AD intervals just as it does to 100-hour inspections"}
       ],
       "correct_answer": "B",
       "explanation": "While 14 CFR 91.403(a) places primary responsibility for AD compliance on the registered owner (the flight school), 14 CFR 91.7(b) imposes a separate, parallel obligation on the PIC: the PIC is responsible for determining whether the aircraft is in condition for safe flight. Operating an aircraft with an overdue recurring AD violates 91.7, regardless of who is at fault for allowing the AD to go overdue. The renter pilot who discovers the discrepancy and proceeds anyway is personally in violation. Option A incorrectly suggests renters bear no responsibility. Option C incorrectly imports the 100-hour grace period concept into AD intervals — no such grace period exists for ADs. Reference: NTSB accident files contain multiple cases of mid-flight structural failures in aircraft with overdue recurring ADs, including aileron and flight control component failures.",
@@ -43,12 +43,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "What is the key regulatory difference between an Emergency Airworthiness Directive and a Standard Airworthiness Directive?",
       "options": [
-        {"label": "A", "text": "An Emergency AD applies only to aircraft registered in the United States, while a Standard AD applies to all aircraft of the affected type design worldwide regardless of registry"},
-        {"label": "B", "text": "An Emergency AD requires immediate action prior to further flight and bypasses the standard Notice of Proposed Rulemaking public comment period for urgent issuance"},
+        {"label": "A", "text": "An Emergency AD requires immediate action prior to further flight and bypasses the standard Notice of Proposed Rulemaking public comment period for urgent issuance"},
+        {"label": "B", "text": "An Emergency AD has a 30-day compliance window while a Standard AD has a 90-day compliance window, reflecting the difference in urgency between the two categories"},
         {"label": "C", "text": "An Emergency AD can be issued by any FSDO, while a Standard AD can only be issued by the FAA Aircraft Certification Office in Washington"},
-        {"label": "D", "text": "An Emergency AD has a 30-day compliance window while a Standard AD has a 90-day compliance window, reflecting the difference in urgency between the two categories"}
+        {"label": "D", "text": "An Emergency AD applies only to aircraft registered in the United States, while a Standard AD applies to all aircraft of the affected type design worldwide regardless of registry"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "The distinguishing characteristic of an Emergency Airworthiness Directive is its immediacy and the bypass of the standard rulemaking comment period. When an unsafe condition requires immediate action to prevent accident or incident — such as a fuel system defect causing in-flight fires — the FAA issues an Emergency AD with an immediate effective date and distributes it directly to all registered owners and operators. A Standard AD goes through the Notice of Proposed Rulemaking (NPRM) process published in the Federal Register, allowing industry stakeholders, manufacturers, and owners to submit comments before the Final Rule is published. This process typically takes months. The compliance window for any AD (Emergency or Standard) is specified in the AD itself — Options C and D fabricate administrative structures that do not reflect FAA AD issuance procedures.",
       "far_reference": "14 CFR Part 39; AC 39-7D",
       "acs_element": "PA.I.B.K1c"
@@ -61,9 +61,9 @@
       "text": "An owner receives an FAA Special Airworthiness Information Bulletin recommending inspection of an elevator trim tab bracket on their aircraft model. No AD has been issued. The owner decides not to perform the inspection because compliance is voluntary. What is the primary safety risk of this decision?",
       "options": [
         {"label": "A", "text": "The aircraft's hull insurance will be voided by the insurer if an SAIB recommendation is not acted upon within 60 days, eliminating liability protection for the owner in the event of an accident"},
-        {"label": "B", "text": "The FAA will automatically revoke the aircraft's Airworthiness Certificate after 90 days if an SAIB is not complied with, since SAIBs represent an initial unfitness finding by the FAA certification authority"},
+        {"label": "B", "text": "There is no safety risk — SAIBs are administrative documents issued for liability protection and do not reflect any actual engineering safety data about the affected aircraft type"},
         {"label": "C", "text": "The SAIB reflects a confirmed safety concern backed by field data — ignoring it means the owner is operating with known structural risk and forfeiting any future legal defense that they had no notice of the condition"},
-        {"label": "D", "text": "There is no safety risk — SAIBs are administrative documents issued for liability protection and do not reflect any actual engineering safety data about the affected aircraft type"}
+        {"label": "D", "text": "The FAA will automatically revoke the aircraft's Airworthiness Certificate after 90 days if an SAIB is not complied with, since SAIBs represent an initial unfitness finding by the FAA certification authority"}
       ],
       "correct_answer": "C",
       "explanation": "SAIBs are issued when the FAA identifies a safety concern backed by field data or engineering analysis — even if the condition has not yet reached the 'unsafe condition' threshold required for a mandatory AD. An owner who receives an SAIB and elects not to act is making a documented risk acceptance decision with full knowledge of the concern. From a safety and legal perspective, this is significant: in a subsequent accident investigation, the NTSB will note whether the owner received and acted on safety communications such as SAIBs. FAA Order 8110.100 governs SAIBs as a precursor safety tool specifically meant to prevent conditions from escalating to mandatory AD status. Option A invents an insurance timeline. Option B invents an automatic certificate revocation that does not exist. Option D dismisses SAIBs as purely administrative, which contradicts their documented safety purpose.",
@@ -77,12 +77,12 @@
       "tested_rkp_id": "RKP_04",
       "text": "During a logbook audit, you find a recurring AD requiring magneto inspection every 500 hours. The AD compliance record shows the last inspection at 2,700 total time. The engine logbook shows current total time of 3,260 hours. Is the aircraft in compliance with the AD?",
       "options": [
-        {"label": "A", "text": "Yes — the aircraft is in compliance because 3,260 minus 2,700 is 560 hours, which is within the 10-hour grace period allowed for AD intervals just as it is for 100-hour inspections"},
-        {"label": "B", "text": "Yes — the aircraft is in compliance because the AD interval begins from the date of the logbook entry, not from the total time, and no calendar date information is provided to evaluate compliance"},
-        {"label": "C", "text": "No — the AD was due at 3,200 hours (2,700 + 500) and the current time of 3,260 hours means the aircraft is 60 hours overdue, making it unairworthy for flight"},
+        {"label": "A", "text": "Yes — the aircraft is in compliance because the AD interval begins from the date of the logbook entry, not from the total time, and no calendar date information is provided to evaluate compliance"},
+        {"label": "B", "text": "No — the AD was due at 3,200 hours (2,700 + 500) and the current time of 3,260 hours means the aircraft is 60 hours overdue, making it unairworthy for flight"},
+        {"label": "C", "text": "Yes — the aircraft is in compliance because 3,260 minus 2,700 is 560 hours, which is within the 10-hour grace period allowed for AD intervals just as it is for 100-hour inspections"},
         {"label": "D", "text": "No — the aircraft's compliance with this AD can only be verified by the FAA CAROL database, and logbook entries alone are not sufficient to establish AD compliance for audit purposes"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "B",
       "explanation": "The calculation is straightforward: last compliance at 2,700 hours + 500-hour recurring interval = next inspection due at 3,200 hours. Current total time is 3,260 hours — 60 hours past the due date. The aircraft is unairworthy. There is no grace period for AD intervals. Option A imports the 100-hour inspection grace period concept to ADs — no such provision exists in 14 CFR Part 39. Option B invents a calendar-based trigger that contradicts the AD's explicit hour-interval specification. Option D is incorrect — logbook AD compliance records are the primary documentation of AD compliance; the CAROL database is a reference tool, not a replacement for logbook documentation.",
       "far_reference": "14 CFR Part 39; 14 CFR 91.403(a); 14 CFR 91.7",
       "acs_element": "PA.I.B.K1c"
@@ -95,11 +95,11 @@
       "text": "An owner discovers that the specific part required by a one-time AD has been discontinued by the manufacturer and is no longer available anywhere. What is the legally permissible path to maintain airworthiness?",
       "options": [
         {"label": "A", "text": "The owner may use the closest equivalent part available from an approved supplier; the FAA allows substitution of similar parts as long as the safety intent of the AD is maintained without formal approval"},
-        {"label": "B", "text": "The owner must apply for an Alternative Method of Compliance (AMOC) through the FAA, proposing an alternative repair or inspection that provides equivalent safety to the original AD requirement"},
-        {"label": "C", "text": "The owner may apply to the FSDO for a one-time Part 91 operational exemption, allowing continued flight until a compliant part becomes available through secondary market sources"},
-        {"label": "D", "text": "The aircraft is permanently grounded — if a part required by an AD is unavailable, federal regulations prohibit any further flight under any authorization including Special Flight Permits"}
+        {"label": "B", "text": "The owner may apply to the FSDO for a one-time Part 91 operational exemption, allowing continued flight until a compliant part becomes available through secondary market sources"},
+        {"label": "C", "text": "The aircraft is permanently grounded — if a part required by an AD is unavailable, federal regulations prohibit any further flight under any authorization including Special Flight Permits"},
+        {"label": "D", "text": "The owner must apply for an Alternative Method of Compliance (AMOC) through the FAA, proposing an alternative repair or inspection that provides equivalent safety to the original AD requirement"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "When the specific repair method prescribed by an Airworthiness Directive is unavailable — most commonly when required parts are discontinued — the regulatory path is to apply for an Alternative Method of Compliance (AMOC) under 14 CFR Part 39. The owner or operator proposes an alternative repair, inspection, or part to the FAA that provides an equivalent level of safety to the original AD requirement. The AMOC must be formally reviewed and approved by the FAA before it can be used — it is not a self-declared solution. Option A describes an unpermitted self-substitution that constitutes an additional regulatory violation. Option C invents an operational exemption authority that the FSDO does not possess for AD compliance waivers. Option D overstates the outcome — a Special Flight Permit could permit movement to a facility capable of performing the AMOC-approved repair.",
       "far_reference": "14 CFR Part 39; AC 39-7D",
       "acs_element": "PA.I.B.K1c"
@@ -112,11 +112,11 @@
       "text": "You rent an aircraft from a flight school for a long cross-country. During preflight, you find the maintenance binder has no AD compliance record section — just annual inspection sign-offs. Your passengers are waiting. Weather is perfect. What is the SAFEST action?",
       "options": [
         {"label": "A", "text": "Depart and review the AD records next time — the school's mechanics stay current on these things and a flight school aircraft is almost certainly compliant with all ADs", "hazardous_attitude": "macho"},
-        {"label": "B", "text": "Call the flight school dispatcher, explain you cannot locate the AD compliance records, and request they locate a maintenance supervisor to confirm AD compliance before you depart", "hazardous_attitude": null},
-        {"label": "C", "text": "Search the FAA CAROL database on your phone and cross-reference all open ADs for the aircraft model yourself before departure — if they all appear compliant, proceed with the flight", "hazardous_attitude": "get_there_itis"},
-        {"label": "D", "text": "Write a safety concern in the aircraft squawk sheet and depart anyway — the maintenance crew will address it during the next 100-hour inspection", "hazardous_attitude": "macho"}
+        {"label": "B", "text": "Search the FAA CAROL database on your phone and cross-reference all open ADs for the aircraft model yourself before departure — if they all appear compliant, proceed with the flight", "hazardous_attitude": "get_there_itis"},
+        {"label": "C", "text": "Write a safety concern in the aircraft squawk sheet and depart anyway — the maintenance crew will address it during the next 100-hour inspection", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Call the flight school dispatcher, explain you cannot locate the AD compliance records, and request they locate a maintenance supervisor to confirm AD compliance before you depart", "hazardous_attitude": null}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "As the PIC, you bear legal responsibility under 14 CFR 91.7 for verifying the aircraft is airworthy before departure. A logbook without AD compliance records provides no basis for that determination. Option A is Macho rationalization — trusting that 'the school handles this' while waiving your independent verification duty. Option D is also Macho, combined with passive delegation of a safety obligation to maintenance. Option C represents proactive effort but falls short — checking the CAROL database alone does not tell you whether the specific aircraft has actually complied with applicable ADs; the database lists the ADs, not the individual aircraft's compliance status. Only a maintenance supervisor with access to the aircraft's own compliance records can make that determination. Reference: NTSB ARB19LA155 documents an accident attributed in part to undocumented AD non-compliance on a rental aircraft — the PIC was cited for failing to verify airworthiness through the available maintenance documentation.",
       "sjt_rationale": "Option A and D are both Macho — delegating or waiving a PIC safety responsibility. Option C is Get-There-Itis dressed up as diligence — using an inadequate verification method to justify departure readiness. Option B is the only response that correctly elevates the AD compliance gap to the maintenance authority who can actually resolve it.",
       "far_reference": "14 CFR 91.7; 14 CFR 91.403(a)",
@@ -129,12 +129,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "You receive a Special Airworthiness Information Bulletin for your aircraft model recommending inspection of the fuel selector valve assembly. The SAIB notes three unexplained in-flight fuel interruptions in the fleet. No AD has been issued yet. Your annual was just completed and the A&P mechanic did not mention it. What is the SAFEST course of action?",
       "options": [
-        {"label": "A", "text": "Contact your mechanic and ask them to review the SAIB and perform the inspection before your next flight — three documented in-flight fuel interruptions represent serious risk that warrants immediate voluntary compliance", "hazardous_attitude": null},
-        {"label": "B", "text": "Wait for an AD to be issued — SAIB compliance is voluntary and the FAA will issue an AD immediately if the condition is truly dangerous, so no action is needed until mandatory compliance is required", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Self-inspect the fuel selector valve during preflight and make a logbook note that you checked it — this satisfies the spirit of the SAIB without requiring a mechanic involvement or grounding the aircraft", "hazardous_attitude": "get_there_itis"},
-        {"label": "D", "text": "Ground the aircraft indefinitely — flying with a known SAIB on file makes the pilot personally liable for any fuel-related incident and effectively voids the Airworthiness Certificate"}
+        {"label": "A", "text": "Wait for an AD to be issued — SAIB compliance is voluntary and the FAA will issue an AD immediately if the condition is truly dangerous, so no action is needed until mandatory compliance is required", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Ground the aircraft indefinitely — flying with a known SAIB on file makes the pilot personally liable for any fuel-related incident and effectively voids the Airworthiness Certificate"},
+        {"label": "C", "text": "Contact your mechanic and ask them to review the SAIB and perform the inspection before your next flight — three documented in-flight fuel interruptions represent serious risk that warrants immediate voluntary compliance", "hazardous_attitude": null},
+        {"label": "D", "text": "Self-inspect the fuel selector valve during preflight and make a logbook note that you checked it — this satisfies the spirit of the SAIB without requiring a mechanic involvement or grounding the aircraft", "hazardous_attitude": "get_there_itis"}
       ],
-      "correct_answer": "A",
+      "correct_answer": "C",
       "explanation": "Three documented in-flight fuel interruptions in the fleet is a high-signal safety warning. While SAIB compliance is legally voluntary under Part 91, the FAA's risk management guidance in FAA-H-8083-2A is clear: risk decisions must be made on the basis of available information, not on the basis of what is legally minimum. The SAIB exists precisely because the FAA has field data suggesting a real hazard. Waiting for an AD (Option B) is a Macho defer-decision response — the AD process can take months, during which the hazard remains. Option C is Get-There-Itis — a cursory self-inspection by a non-mechanic on a system flagged for professional inspection is not an appropriate substitute. Option D is Resignation — SAIBs are precautionary communications, not automatic airworthiness certificate suspensions. Option A correctly treats the SAIB data as a safety signal warranting immediate voluntary professional inspection. Reference: FAA Safety Alert SA-FSAW-2022-02 documents systematic fuel system SAIBs that preceded mandatory AD actions after additional fleet incidents were reported.",
       "sjt_rationale": "Option B is Macho — 'it's not an AD yet so it's not my problem.' Option C is Get-There-Itis — finding the minimum action that allows departure. Option D is Resignation — treating a precautionary safety notice as a grounding order. Option A applies the legally non-required but risk-correct action.",
       "far_reference": "14 CFR Part 39",

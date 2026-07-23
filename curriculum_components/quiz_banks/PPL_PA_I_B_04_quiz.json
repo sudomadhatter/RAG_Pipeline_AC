@@ -10,11 +10,11 @@
       "text": "A pilot discovers their aircraft's Annual inspection expired 3 days ago while tied down at a remote airport 200 miles from their home base mechanic. Which is a permissible use of a Special Flight Permit under 14 CFR 21.197?",
       "options": [
         {"label": "A", "text": "Flying the aircraft home because the expiration was recent (within 30 days), since the FAA grants a 30-day grace period for Annual inspections to return to a home maintenance base"},
-        {"label": "B", "text": "Flying the aircraft to the mechanic's facility to have the Annual inspection performed, since ferrying the aircraft to a maintenance base is an explicitly permissible purpose under 14 CFR 21.197(a)(1)"},
+        {"label": "B", "text": "Flying the aircraft to any airport of the pilot's choosing, since the Special Flight Permit has no restrictions on destinations within the United States"},
         {"label": "C", "text": "Flying the aircraft home for personal recreational use, since the permit serves as a temporary reinstatement of the Airworthiness Certificate for all Part 91 operations for a period of 30 days"},
-        {"label": "D", "text": "Flying the aircraft to any airport of the pilot's choosing, since the Special Flight Permit has no restrictions on destinations within the United States"}
+        {"label": "D", "text": "Flying the aircraft to the mechanic's facility to have the Annual inspection performed, since ferrying the aircraft to a maintenance base is an explicitly permissible purpose under 14 CFR 21.197(a)(1)"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "14 CFR 21.197(a)(1) explicitly lists 'flying to a base of operations where repairs, alterations, or maintenance are to be performed' as a permissible purpose for a Special Flight Permit. Flying to reach the mechanic who will perform the overdue Annual is exactly the intended use of this provision. Option A fabricates a 30-day Annual inspection grace period that does not exist — there is NO grace period for overdue Annual inspections. Options C and D fundamentally mischaracterize the Special Flight Permit as a general authorization for flight; it is a narrowly restricted corridor with specific route, crew, and operational limitations stipulated in the permit itself.",
       "far_reference": "14 CFR 21.197(a)(1); 14 CFR 91.409(a)",
       "acs_element": "PA.I.B.K1d"
@@ -28,8 +28,8 @@
       "options": [
         {"label": "A", "text": "A written estimate for the cost of the Annual inspection, which the FSDO requires to budget appropriate oversight resources for the permit"},
         {"label": "B", "text": "A logbook entry stating that the aircraft was inspected and found to be in a condition for safe flight for the intended ferry operation, along with the mechanic's certificate number and signature"},
-        {"label": "C", "text": "A completed FAA Form 8130-3 Airworthiness Approval Tag, which temporarily restores airworthiness status for the ferry flight pending the Annual inspection"},
-        {"label": "D", "text": "A statement confirming that no Airworthiness Directives are overdue on the aircraft, which is required before the FAA can authorize any flight of an out-of-annual aircraft"}
+        {"label": "C", "text": "A statement confirming that no Airworthiness Directives are overdue on the aircraft, which is required before the FAA can authorize any flight of an out-of-annual aircraft"},
+        {"label": "D", "text": "A completed FAA Form 8130-3 Airworthiness Approval Tag, which temporarily restores airworthiness status for the ferry flight pending the Annual inspection"}
       ],
       "correct_answer": "B",
       "explanation": "Under 14 CFR 21.199, the Special Flight Permit application process includes a prerequisite mechanic's evaluation. A certificated A&P mechanic must physically inspect the aircraft and execute a logbook entry certifying that the aircraft is 'in a condition for safe flight' for the specific limited ferry operation. This entry, signed with the mechanic's name and certificate number, gives the FSDO the basis to issue the permit with appropriate restrictions. Without this entry, the FAA has no assurance the aircraft can even make the ferry flight safely. Option C invents the use of FAA Form 8130-3 in this context — that form is used for airworthiness approval of parts, not aircraft ferry operations. Option D misstates the AD requirement — the mechanic evaluates overall flight safety, which includes AD status, but the requirement is for the 'condition for safe flight' entry, not a standalone AD clearance document.",
@@ -44,11 +44,11 @@
       "text": "An aircraft has an expired Annual inspection AND an overdue recurring AD requiring replacement of a fuel pump diaphragm. The owner wants to ferry the aircraft to a maintenance facility. Can a Special Flight Permit override the overdue AD?",
       "options": [
         {"label": "A", "text": "Yes — a Special Flight Permit supersedes all outstanding maintenance requirements because it is issued by the FAA itself, which has the authority to temporarily suspend any regulatory requirement including ADs"},
-        {"label": "B", "text": "Yes — the permit overrides the AD for the specific ferry routing only, provided the owner self-certifies in the permit application that they accept liability for any fuel system incident during the ferry"},
-        {"label": "C", "text": "No — a Special Flight Permit does not automatically override Airworthiness Directives; if the fuel pump AD creates a condition that makes safe flight impossible, the FSDO may decline to issue the permit until the AD is addressed"},
-        {"label": "D", "text": "No — a Special Flight Permit can never be issued when any Airworthiness Directive is overdue; all outstanding ADs must be corrected before any ferry authorization will be considered"}
+        {"label": "B", "text": "No — a Special Flight Permit does not automatically override Airworthiness Directives; if the fuel pump AD creates a condition that makes safe flight impossible, the FSDO may decline to issue the permit until the AD is addressed"},
+        {"label": "C", "text": "No — a Special Flight Permit can never be issued when any Airworthiness Directive is overdue; all outstanding ADs must be corrected before any ferry authorization will be considered"},
+        {"label": "D", "text": "Yes — the permit overrides the AD for the specific ferry routing only, provided the owner self-certifies in the permit application that they accept liability for any fuel system incident during the ferry"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "B",
       "explanation": "This is the most important nuance of the Special Flight Permit: it does NOT automatically waive Airworthiness Directives. The FAA evaluates whether the specific outstanding unairworthy conditions permit a safe, restricted ferry flight. For ADs that create conditions threatening even a limited ferry operation — such as a fuel pump diaphragm AD related to in-flight fuel starvation — the FSDO may decline to issue the permit until the AD is corrected. For ADs that are less operationally critical (e.g., a placard replacement AD), the FAA may determine the ferry is still safe. Each AD is evaluated on its specific safety impact. Option A incorrectly describes the permit as a blanket regulatory suspension. Option D overstates the restriction — a ferry permit CAN be issued with some overdue ADs if the conditions still permit safe restricted flight as determined by the FSDO.",
       "far_reference": "14 CFR 21.197; 14 CFR Part 39",
       "acs_element": "PA.I.B.K1d"
@@ -60,10 +60,10 @@
       "tested_rkp_id": "RKP_03",
       "text": "A renter pilot dispatches a flight school aircraft without checking the maintenance logbooks. It is later discovered the aircraft had an overdue recurring AD at the time of the flight. The flight school (owner) knew about the overdue AD and failed to address it. Which statement best describes the FAA enforcement outcome?",
       "options": [
-        {"label": "A", "text": "Only the flight school faces enforcement action — under 14 CFR 91.403, the registered owner bears sole responsibility for AD compliance and no certificate action can be taken against the renter"},
-        {"label": "B", "text": "Only the renter pilot faces enforcement action — as the PIC, the renter had final authority and responsibility for the flight under 14 CFR 91.7 and cannot transfer that responsibility to the owner"},
+        {"label": "A", "text": "Only the renter pilot faces enforcement action — as the PIC, the renter had final authority and responsibility for the flight under 14 CFR 91.7 and cannot transfer that responsibility to the owner"},
+        {"label": "B", "text": "Neither party faces enforcement action if the overdue AD was a recurring inspection rather than a repair, since recurring inspection ADs are treated as administrative records requirements rather than operational safety mandates"},
         {"label": "C", "text": "Both the flight school and the renter pilot may face enforcement action — the owner violated 91.403(a) (failure to maintain airworthy condition) and the renter violated 91.7 (operating an unairworthy aircraft as PIC)"},
-        {"label": "D", "text": "Neither party faces enforcement action if the overdue AD was a recurring inspection rather than a repair, since recurring inspection ADs are treated as administrative records requirements rather than operational safety mandates"}
+        {"label": "D", "text": "Only the flight school faces enforcement action — under 14 CFR 91.403, the registered owner bears sole responsibility for AD compliance and no certificate action can be taken against the renter"}
       ],
       "correct_answer": "C",
       "explanation": "14 CFR 91.403(a) and 14 CFR 91.7 create two independent, parallel streams of legal responsibility. The owner's 91.403 obligation is to maintain the aircraft in an airworthy condition — an obligation that exists regardless of who flies it. The PIC's 91.7 obligation is to determine airworthiness at the moment of flight — an obligation that exists regardless of the owner's maintenance practices. Both violations are independently actionable by the FAA. FAA Order 2150.3C documents this dual enforcement pattern frequently in cases involving rental aircraft with overdue ADs. The renter's defense that 'the owner manages maintenance' has been consistently rejected in certificate action proceedings.",
@@ -77,10 +77,10 @@
       "tested_rkp_id": "RKP_01",
       "text": "A hurricane is forecast to make landfall near a small airport in 36 hours. An aircraft stored there has an expired Annual inspection. The owner wants to fly the aircraft to an inland airport for safety. Is this a permissible use of a Special Flight Permit?",
       "options": [
-        {"label": "A", "text": "No — hurricane evacuation is not listed among the permissible purposes in 14 CFR 21.197 and the permit can only be issued for maintenance relocation or aircraft delivery purposes"},
-        {"label": "B", "text": "No — the permit requires 30 days minimum lead time for FSDO processing, making it impractical for emergency weather evacuation scenarios where time is critical"},
+        {"label": "A", "text": "No — the permit requires 30 days minimum lead time for FSDO processing, making it impractical for emergency weather evacuation scenarios where time is critical"},
+        {"label": "B", "text": "Yes — weather emergencies supersede all airworthiness certificate requirements under 14 CFR 91.3(b), allowing PIC emergency authority to operate any aircraft in genuine emergency conditions without any permit"},
         {"label": "C", "text": "Yes — 14 CFR 21.197(a)(4) specifically lists evacuating aircraft from areas of impending danger as a permissible purpose for a Special Flight Permit"},
-        {"label": "D", "text": "Yes — weather emergencies supersede all airworthiness certificate requirements under 14 CFR 91.3(b), allowing PIC emergency authority to operate any aircraft in genuine emergency conditions without any permit"}
+        {"label": "D", "text": "No — hurricane evacuation is not listed among the permissible purposes in 14 CFR 21.197 and the permit can only be issued for maintenance relocation or aircraft delivery purposes"}
       ],
       "correct_answer": "C",
       "explanation": "14 CFR 21.197(a)(4) explicitly includes 'evacuating aircraft from areas of impending danger' among the five permissible purposes for a Special Flight Permit. Hurricane evacuation is the archetypal scenario for this provision. The FSDO can issue emergency permits expeditiously in disaster-related scenarios — the standard application timeline is often compressed for genuine emergency evacuations. Option D contains a partially correct legal concept (91.3(b) PIC emergency authority) but fundamentally misapplies it — 91.3(b) addresses in-flight emergencies, not pre-flight unairworthiness conditions. An A&P's 'condition for safe flight' assessment is still required for the permit, even in an emergency.",
@@ -94,12 +94,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "A pilot obtains a Special Flight Permit to ferry an out-of-annual aircraft to a maintenance base. A close friend offers to ride along for the return drive. The ferry permit authorizes 'essential crew only.' Can the friend ride as a passenger?",
       "options": [
-        {"label": "A", "text": "Yes — a Special Flight Permit authorizes flight under Part 91 rules, and private pilots may carry passengers under Part 91 without restriction unless they are accepting compensation"},
-        {"label": "B", "text": "Yes — the 'essential crew only' restriction means the cockpit crew must consist only of essential personnel, but passengers in the rear of the cabin are permitted since they are not crew"},
-        {"label": "C", "text": "No — the Special Flight Permit's operational limitations explicitly prohibit the carriage of non-essential persons; the friend does not constitute essential crew and may not be transported"},
-        {"label": "D", "text": "No — Part 91 requires all passengers to be covered by hull insurance, and an out-of-annual aircraft operating under a ferry permit is excluded from standard aviation insurance coverage"}
+        {"label": "A", "text": "Yes — the 'essential crew only' restriction means the cockpit crew must consist only of essential personnel, but passengers in the rear of the cabin are permitted since they are not crew"},
+        {"label": "B", "text": "Yes — a Special Flight Permit authorizes flight under Part 91 rules, and private pilots may carry passengers under Part 91 without restriction unless they are accepting compensation"},
+        {"label": "C", "text": "No — Part 91 requires all passengers to be covered by hull insurance, and an out-of-annual aircraft operating under a ferry permit is excluded from standard aviation insurance coverage"},
+        {"label": "D", "text": "No — the Special Flight Permit's operational limitations explicitly prohibit the carriage of non-essential persons; the friend does not constitute essential crew and may not be transported"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "D",
       "explanation": "The Special Flight Permit issued under 14 CFR 21.197 and 21.199 contains legally binding operational limitations that restrict the flight to essential crew only. A friend tagging along for a post-ferry return ride is unambiguously non-essential crew. Violating the permit's operational limitations while flying under that permit constitutes an additional regulatory violation beyond the original unairworthiness. The FAA specifically prohibits non-essential passengers on ferry flights because the aircraft is not in fully airworthy condition — passenger risk exposure is controlled by excluding anyone not required for the specific limited operation. Option B's crew-vs.-passenger distinction is a creative but legally incorrect interpretation of the 'essential crew only' limitation.",
       "far_reference": "14 CFR 21.199; 14 CFR 21.197",
       "acs_element": "PA.I.B.K1d"
@@ -113,8 +113,8 @@
       "options": [
         {"label": "A", "text": "Ground the aircraft immediately, notify all instructors that it is unairworthy, contact your A&P mechanic for an emergency AD inspection, and review whether the 12 recent flight hours create student and instructor exposure", "hazardous_attitude": null},
         {"label": "B", "text": "Schedule the AD inspection at the next convenient maintenance availability — the trim cable is a secondary control surface and the aircraft can safely continue flying until the next maintenance slot opens", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Conduct the trim cable inspection yourself as the flight school operator, log it in the aircraft records, and continue operations — you are responsible for the aircraft and have operational authority to perform the inspection", "hazardous_attitude": "macho"},
-        {"label": "D", "text": "Report the issue to the FAA before grounding the aircraft — FAR 91.403 requires owners to self-report AD overruns to the FSDO within 24 hours before taking any corrective action", "hazardity": "macho"}
+        {"label": "C", "text": "Report the issue to the FAA before grounding the aircraft — FAR 91.403 requires owners to self-report AD overruns to the FSDO within 24 hours before taking any corrective action", "hazardity": "macho"},
+        {"label": "D", "text": "Conduct the trim cable inspection yourself as the flight school operator, log it in the aircraft records, and continue operations — you are responsible for the aircraft and have operational authority to perform the inspection", "hazardous_attitude": "macho"}
       ],
       "correct_answer": "A",
       "explanation": "At 2,060 hours with the last inspection at 1,800 hours and a 250-hour recurring interval, the AD was due at 2,050 hours — 10 hours ago. The aircraft is unairworthy NOW. The correct actions are immediate: (1) ground the aircraft, (2) notify all PICs that it cannot be dispatched, (3) contact a qualified A&P mechanic for an emergency AD compliance inspection. The 12 hours of flight since discovery also trigger a safety review — NTSB filing may be appropriate if students or passengers were carried during that period with a known deficiency. Option B is Macho rationalization — dismissing a 10-hour AD overrun as manageable risk. Option C invents maintenance authority that a flight school operator does not possess under 14 CFR 43.3. Option D fabricates a 24-hour self-report obligation that is not in 91.403 — the obligation is to ground, not to report first. Reference: NTSB ASW18CA058 documents an in-flight elevator control issue traced to an overdue recurring AD on a flight training aircraft.",
@@ -129,12 +129,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "You are a private pilot who owns a Cessna 172. Your Annual expired 4 days ago while you were out of the country. You need the aircraft at your home airport for a trip in 3 days. The aircraft is at a remote field 180 miles away with a local A&P available. What is the SAFEST complete sequence of actions?",
       "options": [
-        {"label": "A", "text": "Fly the aircraft home immediately — the Annual expired only 4 days ago and the aircraft is otherwise maintained; the FAA rarely pursues enforcement action for Annual expirations shorter than 30 days", "hazardous_attitude": "macho"},
-        {"label": "B", "text": "Contact the local A&P to perform the Annual inspection at the remote airport, eliminating the need for a Special Flight Permit and restoring full airworthiness before moving the aircraft", "hazardous_attitude": null},
-        {"label": "C", "text": "Apply for a ferry permit through the FSDO to fly the aircraft home and perform the Annual there — this is the standard procedure for Annual expirations regardless of whether a local mechanic is available", "hazardous_attitude": "get_there_itis"},
+        {"label": "A", "text": "Contact the local A&P to perform the Annual inspection at the remote airport, eliminating the need for a Special Flight Permit and restoring full airworthiness before moving the aircraft", "hazardous_attitude": null},
+        {"label": "B", "text": "Apply for a ferry permit through the FSDO to fly the aircraft home and perform the Annual there — this is the standard procedure for Annual expirations regardless of whether a local mechanic is available", "hazardous_attitude": "get_there_itis"},
+        {"label": "C", "text": "Fly the aircraft home immediately — the Annual expired only 4 days ago and the aircraft is otherwise maintained; the FAA rarely pursues enforcement action for Annual expirations shorter than 30 days", "hazardous_attitude": "macho"},
         {"label": "D", "text": "Hire a truck to transport the aircraft disassembled — flying an out-of-annual aircraft under any circumstances including a ferry permit constitutes gross negligence under 49 U.S.C. 44709 and is never appropriate"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "The safest and most efficient solution is to have the local A&P perform the Annual inspection at the remote field. This eliminates the need for a Special Flight Permit entirely, restores full airworthiness, and removes all operational restrictions. The ferry permit (Option C) is a valid secondary option but should be used when no local mechanic is available — not as the default 'standard procedure' when a qualified mechanic is present. Option A is Macho — there is no 30-day tolerance for Annual expirations; 4 days overdue is 4 days unairworthy and the aircraft cannot legally fly. Option D is Resignation — transportation by truck is an extreme and unnecessary response when both Annual inspection and ferry permit pathways are available.",
       "sjt_rationale": "Option A is Macho — fabricating a non-existent grace period. Option C is Get-There-Itis — preferring a more complex permit route to 'get home' faster when a better solution exists where the aircraft is. Option D is Resignation. Option B is the cleanest, safest resolution: fix the aircraft where it is.",
       "far_reference": "14 CFR 91.409(a); 14 CFR 21.197; 14 CFR 21.199",

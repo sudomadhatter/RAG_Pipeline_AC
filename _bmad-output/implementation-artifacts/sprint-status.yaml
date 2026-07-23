@@ -1,0 +1,67 @@
+# generated: 2026-07-22
+# last_updated: 2026-07-23
+# project: RAG_Pipeline_AC
+# tracking_system: file-system
+# story_location: (none yet — stories are written by /sudo-create-epic-sprint from the command center)
+#
+# BMAD-LITE: this repo holds board STATE only. There is no _bmad/ module here; the sudo/BMAD
+# commands run from the command center (c:\Sudo_Hatter_Command) and read/write this file.
+#
+# STATUS DEFINITIONS
+# Epic:  backlog | in-progress | done
+# Story: backlog | ready-for-dev | in-progress | review | done
+#
+# DEFINITION OF DONE (curriculum work) — this project's own gates, NOT the app's test tiers:
+#   pytest src/tests/ green  ·  dry-run reviewed  ·  --execute run
+#   ·  probe_bridge_hop.py returns >=1 DB2 hit for every touched lesson
+#   ·  generate_state_map.py --live counts match intent
+#
+# EPIC MODEL: one epic per ACS Area (curriculum batches) + one infrastructure epic.
+# Area titles are intentionally BLANK: no in-repo source carries them (the Curriculum Key only
+# lists existing lessons), and the ACS PDFs are not machine-readable on this machine today
+# (no poppler, no pypdf — see the faa-grounding-gate skill). Fill each title from
+# docs/private_airplane_acs_6.pdf at epic kickoff rather than from memory.
+
+development_status:
+
+  # ═══════════════════════════════════════════════════
+  # Epic 1 — ACS Area II  (title TBD at kickoff)
+  # Stories are written at kickoff, one per ACS Task.
+  # ═══════════════════════════════════════════════════
+  epic-1-area-2: backlog
+
+  # ═══════════════════════════════════════════════════
+  # Epic 2 — ACS Area IV  (title TBD at kickoff)
+  # ═══════════════════════════════════════════════════
+  epic-2-area-4: backlog
+
+  # ═══════════════════════════════════════════════════
+  # Epic 3 — ACS Area V  (title TBD at kickoff)
+  # ═══════════════════════════════════════════════════
+  epic-3-area-5: backlog
+
+  # ═══════════════════════════════════════════════════
+  # Epic 4 — ACS Area VIII  (title TBD at kickoff)
+  # ═══════════════════════════════════════════════════
+  epic-4-area-8: backlog
+
+  # ═══════════════════════════════════════════════════
+  # Epic 5 — ACS Area XII  (title TBD at kickoff)
+  # ═══════════════════════════════════════════════════
+  epic-5-area-12: backlog
+
+  # ═══════════════════════════════════════════════════
+  # Epic 6 — Pipeline infrastructure & content debt
+  # These four ARE grounded (from the 2026-07-22 audit) — real, scoped work.
+  # ═══════════════════════════════════════════════════
+  epic-6-infrastructure: backlog
+  6-1-podcast-ingestion-tool: backlog        # 34 scripts authored (Area I only), NO ingest script exists
+  6-2-db2-source-gaps: backlog               # 13 lessons cite sources absent from DB2 (AME Guide, FCC forms, legal interps, FAA Orders)
+  6-3-quiz-answer-key-balance: ready-for-dev # 2026-07-23 live audit: skew CONFIRMED in Firestore (B 258/384 = 67%, safety has ZERO correct-D);
+                                             # repo↔live content drift NONE (only 206 empty sjt_rationale fossils live-side, merge=True artifact);
+                                             # manifests 48/48 identical. Plan awaiting approval:
+                                             # _artifacts/2026-07-23_quiz-rebalance-firestore-truth/implementation_plan.md
+                                             # (R1 legacy snapshot → R2 deterministic 2-per-letter re-letter → R3 prose re-anchor, 263 explanations
+                                             # + 92 SJT rationales are letter-anchored → R4 permanent distribution test → R5 fossil DELETE_FIELD
+                                             # → R6 dry-run/--execute/prove → R7 delete legacy)
+  6-4-data-root-merge: backlog               # Phase 2: unify pipeline/ + curriculum_components/ under one data/ root

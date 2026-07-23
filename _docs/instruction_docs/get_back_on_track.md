@@ -26,7 +26,7 @@ companion: "bridge_key_guide.md (RAG/metadata) · quiz_authoring_guide.md (quiz 
 > ### ⚠️ Update (2026-06-16, measured against BOTH repos + Daniel's decisions locked)
 > Three measured corrections that change the *order of attack* and shrink the content work, plus the
 > decisions Daniel signed off on. Full task breakdown:
-> `_claude_artifacts/2026-06-16_quiz-and-bridge-key-pipeline-fix/implementation_plan.md`.
+> `_artifacts/2026-06-16_quiz-and-bridge-key-pipeline-fix/implementation_plan.md`.
 >
 > 1. **The citations already exist — this is verify-and-sync, not author-from-scratch.** The "12 failing
 >    banks" were measured on the **app repo** copy (`AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks/`),

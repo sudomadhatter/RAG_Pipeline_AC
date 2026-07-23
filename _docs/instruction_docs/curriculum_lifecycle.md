@@ -112,7 +112,7 @@ This is the heart of the map. Seven artifacts per lesson:
 | Quiz bank | ✅ `quiz_authoring_guide.md` |
 | Bridge keys / metadata | ✅ `bridge_key_guide.md` |
 | Flashcards | ✅ `flashcard_creation_guide.md` (**new** — closes the prior gap) |
-| Master-module markdown | ⚠️ **Thin.** Covered only by `rkp_creation_guide.md` §4 ("follow the gold-standard example"). Either way the real requirement is *content completeness*: **the markdown must explicitly name its FAA regs and documents** (in a clean `Bridge Keys` block), or `doc_keys` comes back empty. Today the production extractor (`reimport_with_metadata.py`) is a **regex** that reads that block literally, so format matters now; post-v2.8 it moves to the LLM + guard. Note the schema gate only catches an empty `doc_keys` once it is **wired into the write path** (v2.8 task) — until then an empty one still ships silently. |
+| Master-module markdown | ⚠️ **Thin.** Covered only by `rkp_creation_guide.md` §4 ("follow the gold-standard example"). Either way the real requirement is *content completeness*: **the markdown must explicitly name its FAA regs and documents** (in a clean `Bridge Keys` block), or `doc_keys` comes back empty. (Corrected 2026-07-22 — this paragraph previously described a phantom regex extractor `reimport_with_metadata.py`, contradicting this doc's own v2.8 banner above. **That script does not exist.**) The real DB1 writer is `src/gcp/reimport_db1_keys.py`, and the live store was built by the LLM extractor — but format still matters: name regs/documents at document granularity in a clean `Bridge Keys` block or `doc_keys` comes back empty. Note the schema gate only catches an empty `doc_keys` once it is **wired into the write path** (v2.8 task) — until then an empty one still ships silently. |
 | Media assets (audio/video/notes) | ⛔ **No guide — and not the team's job.** Owned by a separate process / Daniel. |
 | Curriculum Key | ⛔ **No guide.** A manual step today. Low risk, but undocumented. |
 
@@ -133,7 +133,7 @@ This is the heart of the map. Seven artifacts per lesson:
   regenerate the metadata so the bridge keys match, then repair DB1 in place via
   `src/gcp/reimport_db1_keys.py --execute` (`update_document`, queue-free) — and prove the DB1→DB2 hit with
   `src/gcp/probe_bridge_hop.py` (see `bridge_key_guide.md` §5/§7).
-- **Add or change a quiz bank** ⇒ re-ingest with `scripts/ingest_quiz_banks.py` (never the wrong tool).
+- **Add or change a quiz bank** ⇒ re-ingest with `src/gcp/ingest_quiz_banks.py` (dry-run, then `--execute`; it writes the `quiz_banks/{lesson}/questions/{q}` subcollection the app reads — never the retired `scripts/`-level or app-repo variants).
 - **Add a brand-new lesson** ⇒ all of the above **plus** the Curriculum Key entry (artifact #7).
 
 ---

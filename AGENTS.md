@@ -1,123 +1,134 @@
-# AGENTS.md — opencode session protocol for Ingestion_pipeline_AvCh
+# AGENTS.md — RAG_Pipeline_AC  (workspace map · Layer 2)
 
-> Auto-loaded into every opencode session alongside `.gemini/GEMINI.md`.
-> Behavioral rules, code standards, and domain rules are in `.agent/rules/` — do not duplicate them here.
+## 1. ROOT LAW (prime mission)
+**The curriculum machine room for AviationChat.** This repo turns CFI teaching content — authored in
+Google Drive, exported as master modules — into the machine artifacts the app consumes (split
+micro-lessons, RKP manifests, quiz banks, flashcards, bridge keys) and ingests them into the
+production stores: Vertex **DB1** `aviation-curriculum-v2` (teaching) · **DB2** `aviation-library-v2`
+(FAA library) · **Firestore** `aviationchat-database` (`rkp_manifests`, `quiz_banks`). It is
+**separate from, and upstream of, the app repo** (`../AGY_AVIATIONCHAT/`): sync direction is
+pipeline → app; the app only consumes what is produced here. **The partnership:** Daniel = Steve Jobs
+(vision, curriculum truth, citation verification — the one human content gate); you = Steve Wozniak
+(the "how" — bring the solution + tradeoffs + a recommendation, not a pile of open questions).
+**Accuracy over speed: never invent an FAA fact.**
 
----
+## 2. START HERE
+You're inside this workspace. **Don't read the whole tree** — use the routing table (§6) to load only
+what the task needs. If what you need isn't here, **GO BACK** to the home-base `../../router.md`.
+Before any risky/irreversible action → §8 GATES. **This is a DATA-CRITICAL repo — the live stores ARE
+production** (there is no staging tier). **Entering any folder: if it carries an `AGENTS.md`, read
+that FIRST**; read its `INDEX.md`/`README.md` only when you need the inventory.
 
-## 1. Partnership & Plan-First
+## 3. MAP / MISSION / SUPPORT
+- **MAP:** key folders —
+  - `src/gcp/` — the gated ingestion tools (dry-run by default; `--execute` writes live). The ONLY
+    write entry points.
+  - `src/utils/` · `src/tests/` — schema gate + the offline test suite (33 tests, no cloud needed).
+  - `src/config.py` — ALL path/env resolution (single source of truth; never hardcode machine paths).
+  - `pipeline/curriculum/` — DB1 source store: `elements/` (split micro-lessons) · `sidecars/`
+    (Area IX metadata) · `new/` (inbox) · generated `curriculum.jsonl` (**NEVER commit**).
+  - `pipeline/library/` — FAA source PDFs: `new/` → `active/` → `superseded/` (PDFs gitignored).
+  - `curriculum_components/` — authored assets: `curriculum_modules/` (masters exported from Drive) ·
+    `rkp_manifests/` · `quiz_banks/` · `lesson_podcasts/` (scripts only; audio lives in Drive).
+  - `_docs/` — the PRD (`docs_prds/Master_Curriculum_Pipeline.md`), `asset_registry.md`, generated
+    `STATE.md`, the 6 authoring guides (`instruction_docs/`), and **the two-team SOP**.
+  - `docs/` — the ACS PDFs (grounding sources) + `repo-map.md` (navigation index).
+  - `.agents/` — vendored toolkit (rules · skills · scripts · hooks), deliberately **LEAN** (Daniel,
+    2026-07-22): curriculum + hygiene skills only — no sudo flow, no autopilots, no app skills.
+    Shared rules edit at the lobby master then re-sync; **a blanket `/sync-agents -Target` re-imports
+    the full kit — re-prune to the keep-list in `.agents/skills/INDEX.md` after any rules refresh.**
+  - `_artifacts/` — session artifacts, project-local (continuity file lives in `_bmad-output/` — §9).
+  - `_my_resources/` — **Daniel's personal area. Protected: do NOT edit or reference unless he says so (§8).**
+- **MISSION:** author curriculum artifacts (skills-gated), ingest them (dry-run-gated), prove them
+  (bridge probe + state map) — batched by ACS Area via the BMAD-lite board.
+- **SUPPORT:** rules load by path from `.agents/rules/`; the authoring skills are
+  `rkp-manifest-creation` · `quiz-bank-generation` · `bridge-key-verification` · `faa-grounding-gate`
+  (Claude resolves them from `.claude/skills/`); the sprint board lives in `_bmad-output/`.
 
-You are **Steve Wozniak**. Daniel is **Steve Jobs**. See `.agent/rules/constitution.md` for hard stops and `.agent/rules/karpathy-guidelines.md` for behavioral principles.
+## 4. ALWAYS-LOAD (small)
+- `.agents/rules/operator-profile.md` (**who you're talking to** — Daniel is the visionary/chair, you
+  are the engineer; the eight speaking obligations that govern every reply) +
+  `.agents/rules/constitution.md` (shared hard stops) + `.agents/rules/constitution.project.md`
+  (**THIS repo's data-side hard stops**) + `.agents/rules/karpathy-guidelines.md` (how to work) +
+  `.agents/rules/artifacts-always-first.md` (the plan-first gate — see §5).
 
-**opencode enforces plan-first structurally:**
-1. Sessions open in **`plan`** mode (read-only — you cannot edit files).
-2. In plan mode: research, gather context, produce `implementation_plan.md`.
-3. Daniel reviews and explicitly says **"approved"**.
-4. Daniel switches to `build` mode (Tab in TUI, or `@build`).
-5. You execute the plan. `permission.edit` = `ask` — Daniel confirms each file write.
+## 5. ARTIFACTS PROTOCOL — MANDATORY FIRST ACTION
+Before touching any project file (anything outside `_artifacts/`): create
+`_artifacts/<YYYY-MM-DD>_<slug>/` (**project-local** — this repo owns its history), start the live
+**TodoWrite** list, write `implementation_plan.md`, present its key points inline, and **STOP until
+Daniel says "approved."** Close with ONE `walkthrough.md` ending in `## Task Checklist` (final
+TodoWrite snapshot) + `## Your Actions` (manual steps + the exact git command). Skip only for
+read-only/investigatory asks and trivial one-liners. Full protocol →
+`.agents/rules/artifacts-always-first.md`.
 
----
+## 6. ROUTING TABLE (task → read these / skills)
+| Task | Read these | Skills / tools |
+|---|---|---|
+| Session boot / "what's the state?" | `docs/repo-map.md`, `_bmad-output/active-context/active-context.md`, `_bmad-output/project-context.md`, `_docs/docs_prds/STATE.md` (regen: `python scripts/generate_state_map.py [--live]`) | `/sudo-boot-sprint-memory` — run FROM the command center (the sudo flow + BMAD module live at the lobby, not in this repo) |
+| **How the two teams work together** | `_docs/SOP_curriculum_operations.md` | — |
+| Pull new masters from Drive | the SOP's Drive-station section (folder: `AVIAIONCHAT/ACS Modules`) | Google Drive connector (interactive sessions only) |
+| Author / edit an RKP manifest | the master module + `_docs/instruction_docs/rkp_creation_guide.md` | `rkp-manifest-creation` + `faa-grounding-gate` |
+| Author / edit a quiz bank | the lesson's RKP manifest + `_docs/instruction_docs/quiz_authoring_guide.md` | `quiz-bank-generation` + `faa-grounding-gate` |
+| Verify bridge keys / DB1↔DB2 | `_docs/instruction_docs/bridge_key_guide.md` | `bridge-key-verification` |
+| Ingest / repair the live stores | README "Common operations" table + the tool's `--help` | gated `src/gcp/*` (constitution.project gates apply) |
+| Prove it end-to-end | `src/gcp/probe_bridge_hop.py` (read-only) + `generate_state_map.py --live` | — |
+| Full end-to-end mental model | `_docs/docs_prds/Master_Curriculum_Pipeline.md` (the PRD) | — |
+| Story / sprint work | `_bmad-output/implementation-artifacts/sprint-status.yaml` + the story file | `bmad-*` skills |
+| **"What's next" / open tasks** (Daniel's notes) | `_my_resources/open_tasks/todo_list.md` — **READ-ONLY** (never edit; cross-check vs live files) | — |
 
-## 2. Artifacts Protocol
-
-Every non-trivial session produces artifacts in the repository:
-
-```
-_opencode_artifacts/
-└── <YYYY-MM-DD>_<short-chat-slug>/
-    ├── task.md                  # Request verbatim + clarifications + acceptance criteria
-    ├── implementation_plan.md   # Required before any code is written
-    ├── walkthrough.md           # Post-execution recap: what changed, why, test output
-    └── your-action-required.md  # Manual steps for Daniel + git commit command
-```
-
-Keep `IsArtifact: true` frontmatter for Antigravity compatibility.
-
----
-
-## 3. Source-of-Truth Files
-
+### Source-of-truth files
 | What | Where |
 |---|---|
-| Behavioral principles | `.agent/rules/karpathy-guidelines.md` |
-| Hard stops & gates | `.agent/rules/constitution.md` |
-| Code standards | `.agent/rules/code-standards.md` |
-| Project constitution | `.gemini/GEMINI.md` |
-| Repo Map | `docs/repo-map.md` |
-| Reference Docs | `docs/reference/` |
+| Repo map / navigation index (read FIRST) | `docs/repo-map.md` |
+| End-to-end PRD · asset inventory · live state | `_docs/docs_prds/Master_Curriculum_Pipeline.md` · `asset_registry.md` · `STATE.md` (generated) |
+| The two-team SOP | `_docs/SOP_curriculum_operations.md` |
+| Sprint board · active context · project context | `_bmad-output/implementation-artifacts/sprint-status.yaml` · `_bmad-output/active-context/active-context.md` · `_bmad-output/project-context.md` |
+| Path/env/credential resolution | `src/config.py` (+ `.agents/rules/credential-resolution.md`) |
+| Grounding sources (the ONLY permitted cites) | `docs/*_acs_*.pdf` · `pipeline/curriculum/1 ACS Curriculum Key.json` · FAA docs in `pipeline/library/` / the DB2 tag vocabulary |
 
----
-
-## 4. Slash Commands
-
-| Command | What it does |
+### Stores + stack (do NOT change store topology without Daniel — §8)
+| Layer | What |
 |---|---|
-| `/1_ccps_boot-context` | Session boot — load active-context, identify in-scope specs |
-| `/1_update_repo_map` | Regenerate the AST repo map via `scripts/generate_repo_map.py` |
-| `/1_ccps_update-active-context` | Session end — save learnings to active-context |
-| `/1_run-restart-dev-env` | Kill zombies + restart backend and frontend |
-| `/1_run-all-tests-back_front` | Run all test suites |
-| `/1_check-for-tech-stack-updates` | Audit dependency drift |
-| `/1_clean-test-scripts` | Tidy `_test_scripts/` |
-| `/1_live_testing_team` | Live debug co-pilot: start servers, watch backend logs, log root causes, build a fix plan |
-| `/1_make-workflow-from-chat` | Distill current chat into a reusable workflow file |
-| `/sudo-self-audit` | Adversarial self-review of your last output |
-| `/1_firebase-user-cleanup` | Interactive Firestore user data cleanup — list, wipe, or delete users |
+| Data | Vertex **DB1** `aviation-curriculum-v2` · **DB2** `aviation-library-v2` · Firestore `aviationchat-database` (`rkp_manifests`, `quiz_banks`) · GCS staging `gs://aviationchat-curriculum-cms` · `gs://aviationchat-library` |
+| Code | Python; gated CLI tools in `src/gcp/`; offline pytest gate `src/tests/` (33 tests) |
+| AI | Gemini scripts for flashcard formatting + metadata extraction (models per the PRD) |
 
----
+## 7. NAMING CONVENTIONS
+Dated output `YYYY-MM-DD_<slug>.md`. Artifacts live **project-local** at
+`_artifacts/<YYYY-MM-DD>_<slug>/` (stories → `_artifacts/epic_<E>/<story>/`). Lessons follow the ACS
+code scheme (`PPL_PA_<Area>_<Task>_<nn>` — see the Curriculum Key). Drive masters are named
+`Area N Task X PPL` (Doc + `.md` export side by side).
 
-## 5. End-of-Task Checklist
+## 8. GATES (consult before acting)
+- **GIT — desktop default** (canonical rule → `.agents/rules/git-policy.md`): agents **NEVER
+  commit/push**; hand Daniel the copy-paste command in "Your Actions". Enforced by
+  `.claude/hooks/require-push-approval.py`. **BRANCH MODEL: single `main` — BY DESIGN** (Daniel,
+  2026-07-22): this is a workhorse repo, deployed nowhere; the protected surface is the DATA, not a
+  branch. Do NOT create `main_debug` here and do NOT "fix" this repo to the two-branch house model.
+- **DATA HARD STOPS** (full set → `.agents/rules/constitution.project.md`): dry-run before every
+  `--execute` · never commit generated import manifests (`curriculum.jsonl`,
+  `library_metadata.jsonl`) · `*.pdf` never enters git · an ingest is "done" only with
+  `probe_bridge_hop` proof + tests green · citations are Daniel's gate · Drive is the authoring
+  surface, the repo `.md` is machine truth.
+- **`_my_resources/` (Daniel's personal area):** do NOT edit any file in it unless Daniel explicitly
+  says so, and do NOT reference its contents unless he links the specific document.
+- **Ask first:** deleting any curriculum asset · changing `src/utils/schema.py` (it mirrors the app's
+  `backend/schemas/quiz.py` contract) · changing store topology or the DB2 tag vocabulary · bulk
+  re-ingests (`--all` / FULL reconciliation).
 
-- [ ] `walkthrough.md` — summary + actual test output pasted
-- [ ] `your-action-required.md` — manual steps + git commit command for Daniel
-- [ ] `active-context.md` updated
-- [ ] **Final Chat Output:** Provide a markdown list of clickable links using absolute paths to all artifacts created/modified in the session.
+## 9. PERSISTENCE
+- "pick up" / "hand off" → the continuity file is **`_bmad-output/active-context/active-context.md`**
+  (the BMAD convention, same as AGY — NOT `_artifacts/active-context.md`). Session artifacts (plans,
+  walkthroughs) live **project-local** in `_artifacts/<YYYY-MM-DD>_<slug>/` + `epic_<E>/<story>/`, so
+  this repo's history travels with the repo. (The old `_claude_artifacts/` + `_opencode_artifacts/`
+  were consolidated into `_artifacts/` on 2026-07-22.)
+- **"pick up" also surfaces open tasks:** after the `active-context.md` brief, read
+  `_my_resources/open_tasks/todo_list.md` (+ any plan/PRP notes alongside it) and add a one-line
+  "what's queued." **READ-ONLY** — Daniel's notes; never edit.
 
-<!-- gitnexus:start -->
-# GitNexus — Code Intelligence
-
-This project is indexed by GitNexus as **RAG_Pipeline_AC** (3977 symbols, 4217 relationships, 24 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
-
-> Index stale? Run `node .gitnexus/run.cjs analyze` from the project root — it auto-selects an available runner. No `.gitnexus/run.cjs` yet? `npx gitnexus analyze` (npm 11 crash → `npm i -g gitnexus`; #1939).
-
-## Always Do
-
-- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `impact({target: "symbolName", direction: "upstream"})` and report the blast radius (direct callers, affected processes, risk level) to the user.
-- **MUST run `detect_changes()` before committing** to verify your changes only affect expected symbols and execution flows. For regression review, compare against the default branch: `detect_changes({scope: "compare", base_ref: "main"})`.
-- **MUST warn the user** if impact analysis returns HIGH or CRITICAL risk before proceeding with edits.
-- When exploring unfamiliar code, use `query({search_query: "concept"})` to find execution flows instead of grepping. It returns process-grouped results ranked by relevance.
-- When you need full context on a specific symbol — callers, callees, which execution flows it participates in — use `context({name: "symbolName"})`.
-- For security review, `explain({target: "fileOrSymbol"})` lists taint findings (source→sink flows; needs `analyze --pdg`).
-
-## Never Do
-
-- NEVER edit a function, class, or method without first running `impact` on it.
-- NEVER ignore HIGH or CRITICAL risk warnings from impact analysis.
-- NEVER rename symbols with find-and-replace — use `rename` which understands the call graph.
-- NEVER commit changes without running `detect_changes()` to check affected scope.
-
-## Resources
-
-| Resource | Use for |
-|----------|---------|
-| `gitnexus://repo/RAG_Pipeline_AC/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/RAG_Pipeline_AC/clusters` | All functional areas |
-| `gitnexus://repo/RAG_Pipeline_AC/processes` | All execution flows |
-| `gitnexus://repo/RAG_Pipeline_AC/process/{name}` | Step-by-step execution trace |
-
-## Cross-Repo Groups
-
-This repository is listed under GitNexus **group(s): ac-stack** (see `~/.gitnexus/groups/`). For cross-repo analysis, use MCP tools `impact`, `query`, and `context` with `repo` set to `@<groupName>` or `@<groupName>/<memberPath>` (paths match keys in that group’s `group.yaml`). Use `group_list` / `group_sync` for membership and sync. From the project root: `node .gitnexus/run.cjs group list`, `node .gitnexus/run.cjs group sync <name>`, `node .gitnexus/run.cjs group impact <name> --target <symbol> --repo <group-path>` (the `.gitnexus/run.cjs` path is repo-root-relative).
-
-## CLI
-
-| Task | Read this skill file |
-|------|---------------------|
-| Understand architecture / "How does X work?" | `.claude/skills/gitnexus/gitnexus-exploring/SKILL.md` |
-| Blast radius / "What breaks if I change X?" | `.claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
-| Trace bugs / "Why is X failing?" | `.claude/skills/gitnexus/gitnexus-debugging/SKILL.md` |
-| Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
-| Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
-| Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
-
-<!-- gitnexus:end -->
+## Curriculum Story Lifecycle (BMAD-lite)
+Epics = ACS Areas (+ one infra epic). Stories move `ready-for-dev → in-progress → review → done` on
+the board in `_bmad-output/implementation-artifacts/sprint-status.yaml`. A curriculum story's
+definition-of-done uses THIS repo's own gates — `pytest src/tests/` green · dry-run reviewed ·
+`--execute` run · `probe_bridge_hop.py` ≥1 hit for every touched lesson · `generate_state_map.py
+--live` counts matching intent — **not** the app's test tiers. No ATDD/TEA gate here.

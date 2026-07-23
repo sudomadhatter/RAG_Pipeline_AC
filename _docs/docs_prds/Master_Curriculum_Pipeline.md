@@ -382,7 +382,7 @@ When a citation is ambiguous, engineering **stops and asks Daniel** — never gu
 ## 13. Current state (verified live 2026-06-19) — WIRED
 
 The RAG layer is wired end to end and proven against the live stores. Session record:
-`_claude_artifacts/2026-06-18_bridge-ground-truth-fix/`.
+`_artifacts/2026-06-18_bridge-ground-truth-fix/`.
 
 | Layer | State |
 |---|---|

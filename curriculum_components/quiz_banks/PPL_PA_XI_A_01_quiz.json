@@ -9,10 +9,10 @@
       "tested_rkp_id": "RKP_01",
       "text": "14 CFR 91.211 requires supplemental oxygen for flight crew above 12,500 feet MSL cabin pressure altitude for more than 30 minutes, and at all times above 14,000 feet. However, night vision begins to degrade at a much lower altitude. At what approximate altitude does measurable night vision degradation begin, and why?",
       "options": [
-        {"label": "A", "text": "Night vision degrades at 10,000 feet MSL because the partial pressure of oxygen drops below the threshold needed for cone cell function in the fovea, reducing central visual acuity"},
+        {"label": "A", "text": "Night vision does not degrade until 14,000 feet MSL, matching the supplemental oxygen requirement — the FAA set the oxygen thresholds specifically to protect night vision capability"},
         {"label": "B", "text": "Night vision degrades as low as 5,000 feet MSL because rod photoreceptors have an extremely high metabolic demand for oxygen, and even mild hypoxia reduces rhodopsin synthesis and sensitivity"},
-        {"label": "C", "text": "Night vision does not degrade until 14,000 feet MSL, matching the supplemental oxygen requirement — the FAA set the oxygen thresholds specifically to protect night vision capability"},
-        {"label": "D", "text": "Night vision degrades at 8,000 feet MSL because atmospheric pressure changes cause the vitreous humor in the eye to expand, distorting the lens shape and reducing the rod cells' ability to focus dim light"}
+        {"label": "C", "text": "Night vision degrades at 8,000 feet MSL because atmospheric pressure changes cause the vitreous humor in the eye to expand, distorting the lens shape and reducing the rod cells' ability to focus dim light"},
+        {"label": "D", "text": "Night vision degrades at 10,000 feet MSL because the partial pressure of oxygen drops below the threshold needed for cone cell function in the fovea, reducing central visual acuity"}
       ],
       "correct_answer": "B",
       "explanation": "Rod photoreceptors are among the most metabolically active cells in the human body. Their rhodopsin regeneration cycle requires significant oxygen. Even the mild hypoxia experienced at 5,000 feet MSL measurably reduces rod sensitivity, degrading peripheral night vision before the pilot has any subjective awareness of impairment. This is well below the 12,500/14,000-foot thresholds for supplemental oxygen in 14 CFR 91.211. The FAA Advisory Circular and FAA-H-8083-25C recommend considering supplemental oxygen for night flight even at moderate altitudes. Option A incorrectly targets cone function (cones are less oxygen-sensitive). Option C incorrectly ties night vision to the oxygen regulation threshold. FAA-H-8083-25C Chapter 17 describes the altitude-dependent degradation of night vision.",
@@ -26,12 +26,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "A pilot activates pilot-controlled lighting (PCL) at a non-towered airport by clicking the CTAF microphone 7 times within 5 seconds. The lights turn on at high intensity. How long do the lights remain on before automatically extinguishing?",
       "options": [
-        {"label": "A", "text": "30 minutes — this provides ample time for a standard VFR traffic pattern entry, approach, and landing, plus taxi to the ramp"},
-        {"label": "B", "text": "15 minutes — the pilot must re-key the microphone to reset the timer if the approach takes longer than this automatic timeout period"},
-        {"label": "C", "text": "The lights remain on until manually turned off by clicking the microphone 1 time, or until sunrise, whichever comes first"},
+        {"label": "A", "text": "15 minutes — the pilot must re-key the microphone to reset the timer if the approach takes longer than this automatic timeout period"},
+        {"label": "B", "text": "The lights remain on until manually turned off by clicking the microphone 1 time, or until sunrise, whichever comes first"},
+        {"label": "C", "text": "30 minutes — this provides ample time for a standard VFR traffic pattern entry, approach, and landing, plus taxi to the ramp"},
         {"label": "D", "text": "60 minutes — the extended timer accounts for multiple aircraft in the pattern and prevents the lights from cycling off during a busy traffic period"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "Pilot-controlled lighting incorporates a mandatory 15-minute countdown timer. After the pilot keys the microphone to activate the lights, they automatically extinguish after 15 minutes. The pilot must re-key (7, 5, or 3 clicks) to reset the timer. This is a critical operational detail: if a pilot activates PCL during initial approach planning but the approach takes longer than 15 minutes (due to traffic, weather, or re-sequencing), the runway lights will go dark — potentially during the landing flare. The AIM Section 2-1-8 describes PCL operation and the 15-minute timer. The activation frequency is published in the Chart Supplement.",
       "far_reference": "AIM 2-1-8; Chart Supplement",
       "acs_element": "PA.XI.A.K2"
@@ -43,12 +43,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "On final approach over dark water at night, a pilot approaching a well-lit runway perceives that the aircraft is significantly higher than the glidepath. The PAPI shows two white and two red (on glidepath). The altimeter reads 300 feet AGL, consistent with a normal 3-degree approach at this distance. Despite these indications, the pilot's overwhelming sensation is that the aircraft is too high. What is happening?",
       "options": [
-        {"label": "A", "text": "The pilot is experiencing the somatogravic illusion — the deceleration during approach creates a false sensation of nose-high pitch, which the brain interprets as being too high on the glidepath"},
-        {"label": "B", "text": "The pilot is experiencing the Black Hole Approach illusion — the lack of peripheral texture cues over dark water eliminates the brain's height-judging references, creating a false perception of being too high"},
+        {"label": "A", "text": "The pilot is experiencing the Black Hole Approach illusion — the lack of peripheral texture cues over dark water eliminates the brain's height-judging references, creating a false perception of being too high"},
+        {"label": "B", "text": "The pilot is experiencing the somatogravic illusion — the deceleration during approach creates a false sensation of nose-high pitch, which the brain interprets as being too high on the glidepath"},
         {"label": "C", "text": "The PAPI and altimeter are both giving correct readings, confirming the pilot is too high — the subjective feeling is accurate and the instruments should be re-calibrated after landing"},
         {"label": "D", "text": "The pilot is experiencing autokinesis — the runway lights are appearing to move upward relative to the horizon, creating the perception that the aircraft is climbing above the glidepath"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "The Black Hole Approach illusion occurs when the approach path crosses featureless dark terrain — water, desert, or unlit fields. The brain normally uses peripheral texture gradients (buildings getting bigger, roads widening, trees gaining detail) to judge height above ground. Over dark water, these cues are absent. Without perspective references, the brain's height-estimation algorithm defaults to a systematically biased estimate — overwhelmingly, pilots perceive themselves as too high. The instinct to push the nose down and descend 'to correct' leads to CFIT short of the runway. The PAPI showing on-glidepath and the altimeter confirming a normal 300 feet AGL are the objective truth — the subjective sensation is wrong. The defense: trust instruments and VASI/PAPI over bodily sensation. FAA-H-8083-25C Chapter 17 describes the Black Hole Approach as the most dangerous visual illusion in night operations.",
       "far_reference": "FAA-H-8083-25C Ch 17",
       "acs_element": "PA.XI.A.K8"
@@ -62,8 +62,8 @@
       "options": [
         {"label": "A", "text": "The pilot will have normal visual capability because the transition from bright to dim light is instantaneous for the human eye — pupil dilation adjusts within seconds to provide adequate night vision"},
         {"label": "B", "text": "The pilot will have severely degraded peripheral night vision because the bright ramp lights bleached rhodopsin in the rod cells, and rod dark adaptation requires approximately 30 minutes to reach peak sensitivity"},
-        {"label": "C", "text": "The pilot will experience temporary color blindness because the cone cells were over-stimulated by the bright lights and require 5-10 minutes to reset their color sensitivity baseline"},
-        {"label": "D", "text": "The pilot's depth perception will be impaired because bright light causes temporary asymmetric pupil constriction between the two eyes, which takes 10-15 minutes to equalize"}
+        {"label": "C", "text": "The pilot's depth perception will be impaired because bright light causes temporary asymmetric pupil constriction between the two eyes, which takes 10-15 minutes to equalize"},
+        {"label": "D", "text": "The pilot will experience temporary color blindness because the cone cells were over-stimulated by the bright lights and require 5-10 minutes to reset their color sensitivity baseline"}
       ],
       "correct_answer": "B",
       "explanation": "Dark adaptation is a biochemical process, not a mechanical one. Rhodopsin — the light-sensitive protein in rod photoreceptors — is instantly bleached (photo-degraded) by bright white light. In darkness, the body gradually re-synthesizes rhodopsin, but this process takes approximately 30 minutes to reach peak scotopic sensitivity. Pupil dilation occurs in seconds, but it provides only a small fraction of the overall light-gathering improvement. The vast majority of dark adaptation comes from rhodopsin regeneration. The 15 minutes spent under bright ramp lights completely destroyed the pilot's rod adaptation, and they will depart with essentially zero scotopic (peripheral night) vision. The first 15-20 minutes of flight will be flown with significantly degraded ability to detect dim traffic lights, terrain features, and weather. FAA-H-8083-25C Chapter 17 describes the 30-minute dark adaptation timeline and the instant destruction by bright light.",
@@ -77,12 +77,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "On a night approach to a non-towered airport, you observe the PAPI showing three red lights and one white light. What does this indicate about your vertical glidepath position?",
       "options": [
-        {"label": "A", "text": "You are on the glidepath — three red and one white is the standard on-glidepath indication for a four-light PAPI system"},
-        {"label": "B", "text": "You are slightly below the glidepath — the correct on-glidepath indication is two white and two red; three red means you need to pitch up slightly to re-intercept the glidepath from below"},
-        {"label": "C", "text": "You are significantly above the glidepath — the three red lights indicate you are overshooting and need to increase your descent rate to capture the glidepath from above"},
-        {"label": "D", "text": "The PAPI is malfunctioning — a normal PAPI cannot display three red and one white simultaneously because the light units are calibrated to transition in pairs"}
+        {"label": "A", "text": "The PAPI is malfunctioning — a normal PAPI cannot display three red and one white simultaneously because the light units are calibrated to transition in pairs"},
+        {"label": "B", "text": "You are on the glidepath — three red and one white is the standard on-glidepath indication for a four-light PAPI system"},
+        {"label": "C", "text": "You are slightly below the glidepath — the correct on-glidepath indication is two white and two red; three red means you need to pitch up slightly to re-intercept the glidepath from below"},
+        {"label": "D", "text": "You are significantly above the glidepath — the three red lights indicate you are overshooting and need to increase your descent rate to capture the glidepath from above"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "C",
       "explanation": "The four-light PAPI system indicates glidepath position as follows: all white = too high; three white/one red = slightly high; two white/two red = ON glidepath (standard 3-degree approach); one white/three red = slightly low; all red = dangerously low. Three red and one white means the aircraft is slightly below the ideal glidepath. The pilot should make a small pitch-up correction to re-intercept the glidepath. Each PAPI light unit has a precise angular calibration — they transition from white to red as the aircraft drops below the unit's reference angle. AIM Section 2-1-2 describes PAPI indications and their meaning.",
       "far_reference": "AIM 2-1-2",
       "acs_element": "PA.XI.A.K2"
@@ -111,9 +111,9 @@
       "tested_rkp_id": "RKP_03",
       "text": "You are on final approach at night to a runway surrounded by dark agricultural fields. No VASI or PAPI is available at this airport. You feel like you are on a normal glidepath based on your visual impression of the runway shape. Your altimeter reads 150 feet AGL at 1 mile from the threshold — significantly lower than the normal 300 feet for a 3-degree glidepath. All four actions below are legal. Which is the SAFEST aeronautical decision?",
       "options": [
-        {"label": "A", "text": "Continue the approach — your visual impression of the glidepath feels normal, and the altimeter may have a small error from the temperature difference between the departure and destination airports", "hazardous_attitude": "get_there_itis"},
+        {"label": "A", "text": "Land immediately in the dark field below you — at 150 feet with potential illusions, any attempt to continue or go around risks a stall at low altitude", "hazardous_attitude": "resignation"},
         {"label": "B", "text": "Push the nose down slightly to increase your descent rate — you can see the runway clearly, so trust your eyes over the instruments; instruments are backup to visual flight in VFR conditions", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Land immediately in the dark field below you — at 150 feet with potential illusions, any attempt to continue or go around risks a stall at low altitude", "hazardous_attitude": "resignation"},
+        {"label": "C", "text": "Continue the approach — your visual impression of the glidepath feels normal, and the altimeter may have a small error from the temperature difference between the departure and destination airports", "hazardous_attitude": "get_there_itis"},
         {"label": "D", "text": "Go around immediately — the altimeter disagrees with your visual impression, which is a textbook indicator of a visual illusion; climb to pattern altitude using instruments, and fly a new approach using the altimeter and VSI as primary glidepath references"}
       ],
       "correct_answer": "D",
@@ -129,9 +129,9 @@
       "tested_rkp_id": "RKP_04",
       "text": "You are planning a night cross-country. During your preflight, you check a flashlight app on your smartphone and determine it will work for cockpit illumination. You do not carry a separate flashlight or headlamp. Your EFB (iPad) is fully charged but you have no external battery pack. All four actions below are possible. Which is the SAFEST aeronautical decision?",
       "options": [
-        {"label": "A", "text": "Proceed as planned — your smartphone flashlight is adequate for cockpit illumination, and the iPad battery will last the entire flight without needing a backup power source", "hazardous_attitude": "get_there_itis"},
-        {"label": "B", "text": "Proceed as planned — you have flown many night flights and have never needed a backup flashlight or power source; redundancy is for pilots who lack confidence in their primary equipment", "hazardous_attitude": "macho"},
-        {"label": "C", "text": "Cancel the flight — without professional aviation-grade flashlights and a full backup power system, night flight is too dangerous regardless of weather or route conditions", "hazardous_attitude": "resignation"},
+        {"label": "A", "text": "Proceed as planned — you have flown many night flights and have never needed a backup flashlight or power source; redundancy is for pilots who lack confidence in their primary equipment", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Cancel the flight — without professional aviation-grade flashlights and a full backup power system, night flight is too dangerous regardless of weather or route conditions", "hazardous_attitude": "resignation"},
+        {"label": "C", "text": "Proceed as planned — your smartphone flashlight is adequate for cockpit illumination, and the iPad battery will last the entire flight without needing a backup power source", "hazardous_attitude": "get_there_itis"},
         {"label": "D", "text": "Delay departure, obtain a dedicated flashlight with red LED mode and a backup headlamp, and bring an external battery pack for the EFB — redundant lighting and power are critical night safety equipment, not optional accessories"}
       ],
       "correct_answer": "D",

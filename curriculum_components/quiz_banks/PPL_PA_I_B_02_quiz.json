@@ -9,10 +9,10 @@
       "tested_rkp_id": "RKP_02",
       "text": "A Piper Cherokee is 87 hours into its 100-hour inspection interval. A private pilot wants to take friends on a personal cross-country flight for fun. No one is paying any fare. Which statement about the 100-hour inspection is correct?",
       "options": [
-        {"label": "A", "text": "The 100-hour inspection is overdue — 14 CFR 91.409(b) requires any aircraft carrying passengers to have a 100-hour inspection every 100 flight hours regardless of the purpose of the flight"},
-        {"label": "B", "text": "The pilot must obtain a 100-hour extension from the FSDO before the flight because the inspection interval is past 80 hours and approaching the legal limit"},
+        {"label": "A", "text": "The pilot must obtain a 100-hour extension from the FSDO before the flight because the inspection interval is past 80 hours and approaching the legal limit"},
+        {"label": "B", "text": "The 100-hour inspection applies because the aircraft is carrying non-crewmember passengers, but can be delayed up to 10 hours past 100 under the grace period provision"},
         {"label": "C", "text": "The 100-hour inspection does not apply — 14 CFR 91.409(b) only triggers this requirement when the aircraft carries a passenger for hire or is provided for dual flight instruction, neither of which applies here"},
-        {"label": "D", "text": "The 100-hour inspection applies because the aircraft is carrying non-crewmember passengers, but can be delayed up to 10 hours past 100 under the grace period provision"}
+        {"label": "D", "text": "The 100-hour inspection is overdue — 14 CFR 91.409(b) requires any aircraft carrying passengers to have a 100-hour inspection every 100 flight hours regardless of the purpose of the flight"}
       ],
       "correct_answer": "C",
       "explanation": "14 CFR 91.409(b) creates the 100-hour inspection obligation only under two specific conditions: (1) the aircraft carries any person other than a crewmember for hire, or (2) the aircraft is provided by a flight instructor for dual instruction. A private pilot taking friends on a personal flight for no compensation triggers neither condition. The Annual inspection (91.409(a)) is the only recurring airframe-level inspection required for personal flying. Option A incorrectly extends the 100-hour rule to all passenger flights. Option D is doubly incorrect — it invents a passenger-carrying trigger and misapplies the grace period logic.",
@@ -26,12 +26,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "A Cessna 172's Annual inspection was completed by a certificated A&P mechanic who does not hold an Inspection Authorization. The mechanic signed the logbook entry with their A&P certificate number. Is the aircraft airworthy?",
       "options": [
-        {"label": "A", "text": "Yes — any certificated A&P mechanic may conduct and sign off an Annual inspection; the Inspection Authorization is only required for 100-hour inspections and return-to-service work on major repairs"},
-        {"label": "B", "text": "Yes — the requirement for an Inspection Authorization holder only applies to turbine-powered aircraft and transport category aircraft, not to light piston aircraft under Part 91"},
-        {"label": "C", "text": "No — 14 CFR 91.409(a) and Part 65 Subpart E require an Annual inspection to be performed by an A&P mechanic holding an Inspection Authorization (IA); without an IA sign-off, the aircraft has not received a legal Annual and is unairworthy"},
-        {"label": "D", "text": "No — the Annual inspection can only be signed off by a certificated A&P mechanic employed by a Part 145 Repair Station, not by an individual mechanic holding an IA"}
+        {"label": "A", "text": "Yes — the requirement for an Inspection Authorization holder only applies to turbine-powered aircraft and transport category aircraft, not to light piston aircraft under Part 91"},
+        {"label": "B", "text": "Yes — any certificated A&P mechanic may conduct and sign off an Annual inspection; the Inspection Authorization is only required for 100-hour inspections and return-to-service work on major repairs"},
+        {"label": "C", "text": "No — the Annual inspection can only be signed off by a certificated A&P mechanic employed by a Part 145 Repair Station, not by an individual mechanic holding an IA"},
+        {"label": "D", "text": "No — 14 CFR 91.409(a) and Part 65 Subpart E require an Annual inspection to be performed by an A&P mechanic holding an Inspection Authorization (IA); without an IA sign-off, the aircraft has not received a legal Annual and is unairworthy"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "D",
       "explanation": "14 CFR 91.409(a) requires an Annual inspection performance and approval for return to service by an appropriately rated mechanic holding an Inspection Authorization under 14 CFR 65.91. An IA is an additional authorization granted to experienced, certificated A&P mechanics — not all A&P mechanics hold one. A logbook entry signed by an A&P without an IA does not constitute a legal Annual inspection sign-off. The aircraft is unairworthy. This is not a technicality the FAA will waive — the lack of proper IA authority is a core compliance failure. Option D incorrectly restricts Annual inspections to Part 145 repair stations.",
       "far_reference": "14 CFR 91.409(a); 14 CFR 65.91; 14 CFR Part 65 Subpart E",
       "acs_element": "PA.I.B.K1"
@@ -43,12 +43,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "A flight school aircraft's 100-hour inspection was due at Tach 2,000.0. The aircraft was flying dual instruction when the Tach reached 2,000.3 and the nearest A&P was 9 flight hours away. The instructor flew 9 hours to reach the mechanic, arriving at Tach 2,009.3. The 100-hour inspection was completed at Tach 2,009.3. At what Tach time is the NEXT 100-hour inspection due?",
       "options": [
-        {"label": "A", "text": "Tach 2,109.3 — the next 100-hour interval begins from the completion point of 2,009.3 with no penalty deduction for the 9.3-hour overage under the grace period provision"},
-        {"label": "B", "text": "Tach 2,100.0 — the next inspection is always due at the next round 100-hour interval from the original due date, regardless of when the inspection was actually performed"},
-        {"label": "C", "text": "Tach 2,099.3 — the 9.3-hour overage must be deducted from the next 100-hour interval: 2,009.3 + (100 - 9.3) = 2,009.3 + 90.7 = 2,100.0"},
-        {"label": "D", "text": "Tach 2,100.0 — the grace period adds exactly 9.3 hours to the original 2,100.0 due date, resulting in 2,100.0 whether calculated from the completion point or the original interval"}
+        {"label": "A", "text": "Tach 2,100.0 — the next inspection is always due at the next round 100-hour interval from the original due date, regardless of when the inspection was actually performed"},
+        {"label": "B", "text": "Tach 2,099.3 — the 9.3-hour overage must be deducted from the next 100-hour interval: 2,009.3 + (100 - 9.3) = 2,009.3 + 90.7 = 2,100.0"},
+        {"label": "C", "text": "Tach 2,100.0 — the grace period adds exactly 9.3 hours to the original 2,100.0 due date, resulting in 2,100.0 whether calculated from the completion point or the original interval"},
+        {"label": "D", "text": "Tach 2,109.3 — the next 100-hour interval begins from the completion point of 2,009.3 with no penalty deduction for the 9.3-hour overage under the grace period provision"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "B",
       "explanation": "Under 14 CFR 91.409(b), the 10-hour grace period permits flight to a maintenance facility, but the overage must be deducted from the next interval as a penalty. The aircraft completed the inspection at Tach 2,009.3, which is 9.3 hours past the original due date of 2,000.0. The next inspection is calculated as: 2,009.3 + (100 - 9.3) = 2,009.3 + 90.7 = 2,100.0. Option A incorrectly allows a full additional 100 hours from the completion point, as if the overage carried no penalty. Option B produces the same numeric answer (2,100.0) as C but via incorrect reasoning. The critical point is understanding WHY the answer is 2,100.0 — the penalty subtraction, not an arbitrary reset to a round number.",
       "far_reference": "14 CFR 91.409(b)",
       "acs_element": "PA.I.B.S2"
@@ -60,9 +60,9 @@
       "tested_rkp_id": "RKP_04",
       "text": "An A&P mechanic completes an oil change and filter replacement on a Cessna 172. The logbook entry contains a description of the work, the date, the mechanic's name, and their A&P certificate number. What critical element is still missing?",
       "options": [
-        {"label": "A", "text": "The aircraft's tachometer reading at the time of the service, which must be recorded alongside maintenance entries for hour-tracking purposes under 14 CFR 43.9"},
+        {"label": "A", "text": "The name and certificate number of the supervising IA who must approve all A&P maintenance entries before the aircraft can be returned to service"},
         {"label": "B", "text": "The mechanic's signature approving the work for return to service, which is a required element of every maintenance logbook entry under 14 CFR 43.9(a)(4)"},
-        {"label": "C", "text": "The name and certificate number of the supervising IA who must approve all A&P maintenance entries before the aircraft can be returned to service"},
+        {"label": "C", "text": "The aircraft's tachometer reading at the time of the service, which must be recorded alongside maintenance entries for hour-tracking purposes under 14 CFR 43.9"},
         {"label": "D", "text": "A cross-reference to the applicable maintenance manual section and part numbers for all materials used, required to establish traceability under 14 CFR 43.13"}
       ],
       "correct_answer": "B",
@@ -77,12 +77,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "A Part 91 VFR flight is planned in a Cessna 172 with a Mode C transponder. The transponder was last tested 26 months ago. The ELT was inspected 11 months ago. Which system requires attention before the flight can legally depart?",
       "options": [
-        {"label": "A", "text": "The ELT — it was last inspected 11 months ago and the 12-calendar-month inspection requirement under 91.207 has nearly expired, triggering an immediate inspection requirement"},
-        {"label": "B", "text": "The transponder — it was last tested 26 months ago, exceeding the 24-calendar-month test and inspection requirement under 14 CFR 91.413"},
-        {"label": "C", "text": "Both systems — the transponder at 26 months has exceeded the 24-month limit and the ELT at 11 months has exceeded the 10-month industry standard for early renewal"},
-        {"label": "D", "text": "Neither system — VFR flights in Class G airspace do not require an operational transponder, and ELT inspections are only required for IFR operations"}
+        {"label": "A", "text": "The transponder — it was last tested 26 months ago, exceeding the 24-calendar-month test and inspection requirement under 14 CFR 91.413"},
+        {"label": "B", "text": "Both systems — the transponder at 26 months has exceeded the 24-month limit and the ELT at 11 months has exceeded the 10-month industry standard for early renewal"},
+        {"label": "C", "text": "Neither system — VFR flights in Class G airspace do not require an operational transponder, and ELT inspections are only required for IFR operations"},
+        {"label": "D", "text": "The ELT — it was last inspected 11 months ago and the 12-calendar-month inspection requirement under 91.207 has nearly expired, triggering an immediate inspection requirement"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "14 CFR 91.413 requires every transponder used in operations requiring a transponder to be tested and inspected in compliance with Part 43 Appendix F within the preceding 24 CALENDAR MONTHS. At 26 months, the transponder is 2 months past its legal inspection limit and is currently out of compliance. The ELT at 11 months is compliant — 14 CFR 91.207(a)(1) requires inspection within the preceding 12 calendar months, and 11 months has not exceeded that limit. Option C incorrectly applies a non-existent 10-month ELT renewal standard. Option D contains a partial truth — VFR in Class G uncontrolled airspace may not require a transponder, but if a transponder is installed and will be used, it must be within its inspection interval.",
       "far_reference": "14 CFR 91.413; 14 CFR 91.207(a)(1)",
       "acs_element": "PA.I.B.S2"
@@ -94,12 +94,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "A flight school's Cessna 172 just had its Annual inspection completed. The aircraft will be used immediately for a dual flight instruction lesson. When is the NEXT 100-hour inspection due?",
       "options": [
-        {"label": "A", "text": "100 flight hours from the date of the Annual inspection sign-off, since the 100-hour clock resets independently of the Annual inspection"},
-        {"label": "B", "text": "100 flight hours from the current tachometer reading at the time the Annual was completed, since the Annual inspection satisfies the 100-hour requirement and resets the 100-hour clock"},
+        {"label": "A", "text": "100 flight hours from the current tachometer reading at the time the Annual was completed, since the Annual inspection satisfies the 100-hour requirement and resets the 100-hour clock"},
+        {"label": "B", "text": "100 flight hours from the date of the Annual inspection sign-off, since the 100-hour clock resets independently of the Annual inspection"},
         {"label": "C", "text": "100 flight hours from the last 100-hour inspection sign-off regardless of whether an Annual was done, since the two inspection types use separate clocks that cannot substitute for each other"},
         {"label": "D", "text": "200 flight hours from the Annual inspection, since the Annual inspection provides double credit — satisfying both the upcoming 100-hour and the one following it"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "14 CFR 91.409(b) explicitly states that a completed Annual inspection may serve as a 100-hour inspection. When an Annual is performed, it resets the 100-hour inspection clock from the date of the Annual sign-off. The next 100-hour inspection is due 100 flight hours from the tachometer reading at the time the Annual was completed. This is the 'reset' benefit of the Annual — for flight schools and charter operators, completing an Annual inspection shortly before the 100-hour is due can be economically efficient because both obligations are satisfied simultaneously by the single Annual event. Option C is the most common misconception — the two inspections do NOT use separate, non-interchangeable clocks.",
       "far_reference": "14 CFR 91.409(b)",
       "acs_element": "PA.I.B.K1"
@@ -111,12 +111,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "You are a CFI about to begin a dual instruction lesson. The aircraft's Annual inspection is current. You check the logbook and find the 100-hour inspection was due at Tach 1,500.0 and the current Tach reads 1,498.5. Your student's lesson is scheduled for 2.5 hours. What is the SAFEST action?",
       "options": [
-        {"label": "A", "text": "Depart for the full 2.5-hour lesson — the aircraft is still within the 100-hour limit and you will be 0.5 hours within the 10-hour grace period even after completing the lesson", "hazardous_attitude": "macho"},
-        {"label": "B", "text": "Shorten the lesson to 1 hour to stay under the 100-hour limit, then complete the remaining 1.5 hours after the 100-hour inspection is performed", "hazardous_attitude": null},
-        {"label": "C", "text": "Cancel the lesson entirely and ground the aircraft — no dual instruction may be conducted within 1.5 hours of a 100-hour inspection interval to allow adequate maintenance scheduling margin", "hazardous_attitude": "resignation"},
-        {"label": "D", "text": "Conduct the full 2.5-hour lesson — the 10-hour grace period is a blanket authorization that allows any commercial flight up to 10 hours beyond the 100-hour interval", "hazardous_attitude": "macho"}
+        {"label": "A", "text": "Conduct the full 2.5-hour lesson — the 10-hour grace period is a blanket authorization that allows any commercial flight up to 10 hours beyond the 100-hour interval", "hazardous_attitude": "macho"},
+        {"label": "B", "text": "Cancel the lesson entirely and ground the aircraft — no dual instruction may be conducted within 1.5 hours of a 100-hour inspection interval to allow adequate maintenance scheduling margin", "hazardous_attitude": "resignation"},
+        {"label": "C", "text": "Shorten the lesson to 1 hour to stay under the 100-hour limit, then complete the remaining 1.5 hours after the 100-hour inspection is performed", "hazardous_attitude": null},
+        {"label": "D", "text": "Depart for the full 2.5-hour lesson — the aircraft is still within the 100-hour limit and you will be 0.5 hours within the 10-hour grace period even after completing the lesson", "hazardous_attitude": "macho"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "C",
       "explanation": "The aircraft has 1.5 hours remaining in its current 100-hour interval (1,500.0 - 1,498.5 = 1.5). A 2.5-hour dual instruction flight would take the aircraft to Tach 1,501.0 — 1.0 hour past the 100-hour due time. The 10-hour grace period under 14 CFR 91.409(b) ONLY authorizes flight to reach a maintenance facility en route — it is NOT a blanket authorization to continue commercial operations past the 100-hour limit. Option A is a Macho rationalization that misapplies the grace period. Option D makes the same Macho error explicitly. Conducting a 1.0-hour lesson within the limit, then scheduling the 100-hour inspection before resuming dual instruction, is the safe and correct approach. Option C is Resignation — no regulatory requirement exists to cancel the lesson entirely; only the final 1.5 hours must be conducted post-inspection. Reference: NTSB ERA17CA109 documents a commercial flight conducted well past an overdue 100-hour inspection — a direct enforcement-action outcome when the grace period is misused for non-ferry purposes.",
       "sjt_rationale": "Options A and D both reflect Macho attitude — assuming the grace period permits continued commercial operations rather than ferry flight only. Option C is Resignation — treating a manageable scheduling problem as an insurmountable obstacle. Option B is precise, practical, and safe.",
       "far_reference": "14 CFR 91.409(b)",
@@ -129,12 +129,12 @@
       "tested_rkp_id": "RKP_04",
       "text": "After completing an oil change on your own aircraft as preventive maintenance, you write a logbook entry with the date, description of work, and sign your name. You forget to include your pilot certificate number. Your Annual is not for another 8 months. What is the SAFEST course of action?",
       "options": [
-        {"label": "A", "text": "Fly the aircraft — the logbook entry captures enough information to document the maintenance, and the missing certificate number is a minor administrative omission that does not affect airworthiness", "hazardous_attitude": "macho"},
-        {"label": "B", "text": "Add your pilot certificate number to the existing logbook entry before flying, completing the required 43.9 elements and legally returning the aircraft to service", "hazardous_attitude": null},
-        {"label": "C", "text": "Ground the aircraft permanently and schedule an A&P mechanic to perform a fresh oil change with a complete logbook entry, since a defective maintenance entry cannot be amended by the original signatory", "hazardous_attitude": "resignation"},
-        {"label": "D", "text": "Have your CFI cosign the entry — a flight instructor's signature on a maintenance entry can substitute for the missing certificate number requirement under preventive maintenance rules", "hazardous_attitude": "get_there_itis"}
+        {"label": "A", "text": "Have your CFI cosign the entry — a flight instructor's signature on a maintenance entry can substitute for the missing certificate number requirement under preventive maintenance rules", "hazardous_attitude": "get_there_itis"},
+        {"label": "B", "text": "Ground the aircraft permanently and schedule an A&P mechanic to perform a fresh oil change with a complete logbook entry, since a defective maintenance entry cannot be amended by the original signatory", "hazardous_attitude": "resignation"},
+        {"label": "C", "text": "Fly the aircraft — the logbook entry captures enough information to document the maintenance, and the missing certificate number is a minor administrative omission that does not affect airworthiness", "hazardous_attitude": "macho"},
+        {"label": "D", "text": "Add your pilot certificate number to the existing logbook entry before flying, completing the required 43.9 elements and legally returning the aircraft to service", "hazardous_attitude": null}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "Under 14 CFR 43.9, a maintenance logbook entry must include the signature AND the certificate number of the person approving the work for return to service. An entry missing the certificate number is legally incomplete and the aircraft has not been returned to service after maintenance. The correct action is to add the pilot certificate number to the entry before flying — this is an amendment to an existing entry, not a separate new entry, and it is permissible for the original signatory to correct their own logbook entry. Option A is Macho — treating a legally material omission as an administrative triviality. Option C is Resignation — a simple correction to the existing entry is all that is needed. Option D invents a CFI cosignature provision that does not exist under 43.9 for preventive maintenance.",
       "sjt_rationale": "Option A is Macho — flying on a legally defective maintenance record. Option C is Resignation — scrapping a correctable situation entirely. Option D is Get-There-Itis thinking applied to regulatory compliance workarounds. Option B is precise, correct, and safe.",
       "far_reference": "14 CFR 43.9; 14 CFR 43.3(g)",

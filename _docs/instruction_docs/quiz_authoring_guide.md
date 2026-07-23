@@ -120,12 +120,13 @@ that actually kills pilots.
 > ### ⚠️ Read this before you write a single SJT — the "always-D" trap
 > An earlier version of this guide told you the correct answer is **always option D** ("D = the active
 > middle path; D is never cancel"). **That is wrong, and it is the exact rule that made the old uploader
-> reject 31 valid Area I banks.** It was over-fit from the *first three* Area I banks (`A_01`–`A_03`) and
-> does not describe the rest of the gold standard. **Verified against the live Area I bank:** of ~68
-> SJTs, only **6 have correct = D**; the correct answer is **`B` in the overwhelming majority**, with
-> scattered `A` and `C`. There are **two legitimate SJT archetypes**, and the correct answer lands in
-> **whatever slot is natural** — never a fixed position. What makes an SJT *valid* is **structure**, not
-> the letter of the answer (§3.3).
+> reject 31 valid Area I banks.** It was over-fit from the *first three* Area I banks (`A_01`–`A_03`)
+> and does not describe the gold standard. The over-correction was just as wrong: by 2026-07-22 the
+> corpus had drifted to **67% correct = B** — a positional tell in the other direction. **The rule
+> since 2026-07-23 (SOP §6): the correct answer's letter carries NO meaning, and every bank's key is
+> balanced to exactly {A,A,B,B,C,C,D,D}** — enforced by `src/tests/test_answer_distribution.py`,
+> re-lettered mechanically by `scripts/rebalance_quiz_answers.py`, never by hand. What makes an SJT
+> *valid* is **structure**, not the letter of the answer (§3.3).
 
 ### 3.1 Archetype A — Go/No-Go ADM SJT (correct answer = the active middle path)
 
@@ -143,11 +144,10 @@ ONE correct option → hazardous_attitude: null  → an ACTIVE test + a mitigati
 sjt_rationale: Chain-of-Cues — name each distractor's attitude and why the active path is safest.
 ```
 
-> **Gold example (`PPL_PA_I_A_01` Q007, 80 days no-fly but current):** correct = **D** — "Fly a few solo
-> patterns this morning to shake off the rust, then honestly assess whether you're sharp enough." A
-> *test* + an honest *self-assessment* — not "go" (get-there-itis) and not "cancel outright"
-> (resignation). **`A_01`–`A_03` are the only Area I banks where the answer is D** — because they happen
-> to be pure go/no-go scenarios.
+> **Gold example (`PPL_PA_I_A_01` Q007, 80 days no-fly but current):** the correct option is "Fly a few
+> solo patterns this morning to shake off the rust, then honestly assess whether you're sharp enough."
+> A *test* + an honest *self-assessment* — not "go" (get-there-itis) and not "cancel outright"
+> (resignation). (Cited by content, not letter — the letter is arbitrary under the balanced key.)
 
 In this archetype, **"cancel the flight outright" is usually the *resignation* trap, not the answer** —
 the safe move is the active middle path (a self-assessment/objective test, *then* a mitigation). But that
@@ -158,14 +158,15 @@ is a fact about *this archetype's scenarios*, **not** a universal "D is always r
 Use this when the scenario asks **which course is legally/procedurally correct *and* safe** among four
 options that are each superficially plausible. The correct option is the **defensible synthesis**; the
 distractors are recognizable *rationalizations* (often `macho` "the rule doesn't really apply to me," or
-`resignation` "treat a manageable situation as hopeless"). **The correct answer is whatever slot the
-synthesis naturally falls in — Area I lands on `B` most of the time.**
+`resignation` "treat a manageable situation as hopeless"). **The correct answer's letter carries no
+meaning — the bank's key is balanced to {A,A,B,B,C,C,D,D} (SOP §6).**
 
-> **Gold example (`PPL_PA_I_A_04` Q007, $600 to fly a colleague):** correct = **B** — "Accept a pro-rata
-> fuel split only (not the $600), confirm a legitimate common purpose…". Here **D = "decline entirely" is
-> the *resignation* trap (wrong answer)**, and A/C are `macho` rationalizations (take the $600; call it a
-> "gift"). This is the proof that **"D is always the safe answer" is false** — in a legal-reasoning SJT, D
-> can be the trap and B is the judgment.
+> **Gold example (`PPL_PA_I_A_04` Q007, $600 to fly a colleague):** the correct option is "Accept a
+> pro-rata fuel split only (not the $600), confirm a legitimate common purpose…". Here **"decline
+> entirely" is the *resignation* trap (wrong answer)**, and the other two distractors are `macho`
+> rationalizations (take the $600; call it a "gift"). This is the proof that **"the safe-sounding
+> middle path always wins" is false** — in a legal-reasoning SJT, declining outright can be the trap
+> and the defensible synthesis is the judgment.
 
 ### 3.3 The structural rule (what actually makes an SJT valid — both archetypes)
 
@@ -176,9 +177,10 @@ This is the bar the ingest schema cares about, and the bar you must hold:
 - **The correct option is NOT `hazardous_attitude`-tagged;** each of the three distractors **is** tagged
   (when the error is an attitude). `sjt_rationale` is present and walks option-by-option.
 - **All four options are legal/possible** (if one is illegal, it's an MCQ in a costume).
-- **Vary the correct slot across the bank.** Options are served **unshuffled** (`backend/routers/quiz.py`),
-  so a bank where every SJT answers `D` is a giant answer-key tell. Match the gold standard's spread
-  (mostly `B`, with `A`/`C`/`D` as the scenario dictates). **Never force a position.**
+- **Balance the bank's answer key.** Options are served **unshuffled** (`backend/routers/quiz.py`),
+  so any positional pattern is a giant answer-key tell. The whole bank (all 8 questions) lands on
+  exactly **{A,A,B,B,C,C,D,D}** (SOP §6, enforced by `src/tests/test_answer_distribution.py`) — and
+  because feedback prose is **letter-free** (§5), the letter assignment is free to be arbitrary.
 
 ### The five hazardous attitudes (use the FAA's standard names)
 `get_there_itis` (a.k.a. "get-home-itis") · `macho` · `resignation` · `impulsivity` · `invulnerability`.
@@ -189,8 +191,8 @@ Pick the three that genuinely fit the scenario's distractors — don't force the
 - [ ] Is there **exactly one correct option, and is it the only one with no `hazardous_attitude` tag**?
 - [ ] Does **each distractor embody a recognizable, distinct error** (a hazardous attitude or a
       legal/procedural rationalization)?
-- [ ] Is the correct answer in its **natural slot** (not forced to D), and does the bank's set of correct
-      slots **vary** rather than always landing on one letter?
+- [ ] Does the bank's answer key land on **exactly {A,A,B,B,C,C,D,D}** with no positional pattern
+      (SOP §6 — the test suite enforces this)?
 - [ ] Could a **rote student who memorized the reg still pick wrong**? (They should be able to — the
       trap is psychological, not factual.)
 

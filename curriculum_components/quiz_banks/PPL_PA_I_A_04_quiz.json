@@ -9,8 +9,8 @@
       "tested_rkp_id": "RKP_02",
       "text": "A private pilot agrees to fly three friends to a college football game 200 miles away. The pilot has no other reason to travel to that city. The friends offer to split the fuel cost equally so the pilot pays nothing. Is this flight legal under 14 CFR 61.113(c)?",
       "options": [
-        {"label": "A", "text": "Yes — 61.113(c) allows any pro rata cost sharing among passengers, and four people splitting equally satisfies the equal-share requirement"},
-        {"label": "B", "text": "Yes — the pilot is not making a profit, and the FAA compensation restriction under 61.113 only prohibits flights generating income beyond actual expenses"},
+        {"label": "A", "text": "Yes — the pilot is not making a profit, and the FAA compensation restriction under 61.113 only prohibits flights generating income beyond actual expenses"},
+        {"label": "B", "text": "Yes — 61.113(c) allows any pro rata cost sharing among passengers, and four people splitting equally satisfies the equal-share requirement"},
         {"label": "C", "text": "No — the pilot has no independent reason to travel to the destination other than transporting the passengers, so no common purpose exists and the pro rata exception does not apply"},
         {"label": "D", "text": "No — 61.113(c) requires all persons aboard, including the pilot, to share costs equally, and a four-way equal split means the pilot pays nothing, violating the equal-share rule"}
       ],
@@ -26,12 +26,12 @@
       "tested_rkp_id": "RKP_03",
       "text": "A private pilot who is also a real estate agent plans to fly their own Cessna 182 to show a property to a client. The agent invites the client to ride along. The agent's company will reimburse the full fuel cost. Is this flight legal under 14 CFR 61.113(b)?",
       "options": [
-        {"label": "A", "text": "Yes — 61.113(b) explicitly permits compensation when the flight is incidental to a business, and a real estate property tour is clearly business-related"},
-        {"label": "B", "text": "Yes — the pilot is the aircraft owner and the reimbursement goes to the company's account, not directly to the pilot, so no personal compensation is received"},
-        {"label": "C", "text": "No — 61.113(b)(2) prohibits carrying any passenger for compensation or hire under the business incidental exception, making this a solo-pilot-only provision"},
-        {"label": "D", "text": "No — real estate sales flights require a commercial certificate regardless of whether the pilot owns the aircraft or the flight is incidental to business"}
+        {"label": "A", "text": "No — real estate sales flights require a commercial certificate regardless of whether the pilot owns the aircraft or the flight is incidental to business"},
+        {"label": "B", "text": "No — 61.113(b)(2) prohibits carrying any passenger for compensation or hire under the business incidental exception, making this a solo-pilot-only provision"},
+        {"label": "C", "text": "Yes — the pilot is the aircraft owner and the reimbursement goes to the company's account, not directly to the pilot, so no personal compensation is received"},
+        {"label": "D", "text": "Yes — 61.113(b) explicitly permits compensation when the flight is incidental to a business, and a real estate property tour is clearly business-related"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "B",
       "explanation": "14 CFR 61.113(b) allows a private pilot to accept reimbursement when a flight is incidental to any business. However, 61.113(b)(2) imposes a critical passenger restriction: the aircraft may NOT carry any person for compensation or hire under this exception. The business incidental exception is a solo-pilot provision — the agent can fly alone to the property and be reimbursed. The moment the agent carries the client aboard for a compensated flight, the exception collapses. Option A correctly identifies the business purpose but misses the passenger restriction that negates it. Option D fabricates a blanket commercial certificate requirement that does not exist in this context.",
       "far_reference": "14 CFR 61.113(b); 14 CFR 61.113(b)(2); AC 120-12A",
       "acs_element": "PA.I.A.K6"
@@ -43,12 +43,12 @@
       "tested_rkp_id": "RKP_01",
       "text": "A private pilot with 200 hours completes all four layers of the PIC decision algorithm and finds the flight is legal. Weather is marginal VFR, the pilot has not flown in 45 days, and passengers are aboard. Which final question must still be answered before departing?",
       "options": [
-        {"label": "A", "text": "Whether the aircraft's annual inspection was completed within the current calendar year rather than within the preceding 12 calendar months"},
-        {"label": "B", "text": "Whether the pilot's total flight time meets the 250-hour minimum the FAA recommends before carrying passengers in marginal weather conditions"},
-        {"label": "C", "text": "Whether the conditions of the flight meet the pilot's personal minimums, since legal compliance establishes the floor but not the safety ceiling for any given operation"},
+        {"label": "A", "text": "Whether the conditions of the flight meet the pilot's personal minimums, since legal compliance establishes the floor but not the safety ceiling for any given operation"},
+        {"label": "B", "text": "Whether the aircraft's annual inspection was completed within the current calendar year rather than within the preceding 12 calendar months"},
+        {"label": "C", "text": "Whether the pilot's total flight time meets the 250-hour minimum the FAA recommends before carrying passengers in marginal weather conditions"},
         {"label": "D", "text": "Whether a PIREP from another aircraft in the area confirms the reported weather, since METARs are only updated every 20 minutes and may not reflect current conditions"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "A",
       "explanation": "The four-layer PIC decision algorithm concludes with the Safety (Proficiency) Test — Layer 4 — which asks whether the specific conditions exceed the pilot's personal minimums. Legal compliance via layers 1 through 3 establishes only the regulatory minimum, not the safety threshold. A pilot who has not flown in 45 days, carrying passengers in marginal VFR conditions, may be legally current (three landings within 90 days) while being substantially below their own safe operating threshold. FAA-H-8083-2A Chapter 2 documents that personal minimums are the primary distinction between the legal standard and the safety standard. Option A contains a factual error about the Annual inspection requirement. Option B references a 250-hour recommendation that does not exist in FAA regulations.",
       "far_reference": "14 CFR 61.57",
       "acs_element": "PA.I.A.S1"
@@ -77,12 +77,12 @@
       "tested_rkp_id": "RKP_02",
       "text": "A private pilot plans a flight to a trade show in another city for their employer. A colleague asks to fly along and split the fuel cost. The employer reimburses the pilot for the flight. The pilot has a legitimate business reason to attend the show independent of the colleague. Is this flight legal?",
       "options": [
-        {"label": "A", "text": "No — any employer reimbursement for a flight converts the operation into commercial aviation requiring a Part 135 certificate regardless of purpose"},
-        {"label": "B", "text": "No — the colleague splitting fuel constitutes a second compensation transaction, and a private pilot can only receive payment from one source per flight"},
-        {"label": "C", "text": "Yes — the pilot has an independent business purpose to attend the trade show, satisfying the common purpose test, and pro rata cost sharing with the colleague is permitted under 61.113(c)"},
-        {"label": "D", "text": "Yes — employer reimbursement is always exempt from the compensation provisions of 61.113 when the flight is related to the pilot's employment duties"}
+        {"label": "A", "text": "No — the colleague splitting fuel constitutes a second compensation transaction, and a private pilot can only receive payment from one source per flight"},
+        {"label": "B", "text": "Yes — employer reimbursement is always exempt from the compensation provisions of 61.113 when the flight is related to the pilot's employment duties"},
+        {"label": "C", "text": "No — any employer reimbursement for a flight converts the operation into commercial aviation requiring a Part 135 certificate regardless of purpose"},
+        {"label": "D", "text": "Yes — the pilot has an independent business purpose to attend the trade show, satisfying the common purpose test, and pro rata cost sharing with the colleague is permitted under 61.113(c)"}
       ],
-      "correct_answer": "C",
+      "correct_answer": "D",
       "explanation": "The Chero and Hancock legal interpretations together confirm that this scenario is legal. The pilot has a pre-existing, genuine business reason to travel to the destination — they would make this trip regardless of whether the colleague came along. The common purpose test is satisfied. The colleague contributes a pro rata share of fuel under 14 CFR 61.113(c), which is the permitted exception. Note that the employer reimbursement is for the pilot's business expenses, not for the act of flying passengers, which preserves the incidental-to-business structure. However, if the employer reimbursement specifically covered the passenger's portion as well, caution is warranted. As structured here with separate pro rata sharing, the flight is legal.",
       "far_reference": "14 CFR 61.113(b) and (c); AC 120-12A",
       "acs_element": "PA.I.A.K6"
@@ -94,12 +94,12 @@
       "tested_rkp_id": "RKP_04",
       "text": "A student pilot whose solo endorsement is valid wants to fly solo for the first time at a new airport. Their CFI has not given them a solo endorsement for that specific airport. All other documents are current. Which layer of the PIC decision algorithm reveals the violation?",
       "options": [
-        {"label": "A", "text": "Layer 2 — Aircraft Legality, because a student pilot flying solo at an unfamiliar airport requires a specific aircraft endorsement from the CFI for that tail number"},
-        {"label": "B", "text": "Layer 1 — Pilot Legality, because 14 CFR 61.94 and 61.95 require a student pilot to have a solo endorsement specific to the airport or Class D airspace where the solo flight will be conducted"},
-        {"label": "C", "text": "Layer 4 — Safety, because the legality is clear but flying solo at an unfamiliar airport exceeds the personal minimums of a student pilot with limited hours"},
-        {"label": "D", "text": "Layer 3 — Operational Legality, because students may not fly solo except when specifically directed by their CFI in the context of a training flight"}
+        {"label": "A", "text": "Layer 3 — Operational Legality, because students may not fly solo except when specifically directed by their CFI in the context of a training flight"},
+        {"label": "B", "text": "Layer 4 — Safety, because the legality is clear but flying solo at an unfamiliar airport exceeds the personal minimums of a student pilot with limited hours"},
+        {"label": "C", "text": "Layer 2 — Aircraft Legality, because a student pilot flying solo at an unfamiliar airport requires a specific aircraft endorsement from the CFI for that tail number"},
+        {"label": "D", "text": "Layer 1 — Pilot Legality, because 14 CFR 61.94 and 61.95 require a student pilot to have a solo endorsement specific to the airport or Class D airspace where the solo flight will be conducted"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "explanation": "Under 14 CFR 61.94 and 61.95, a student pilot must be endorsed by their authorized instructor for the specific airport or Class D airspace where solo operations will be conducted. This is a Pilot Legality issue — Layer 1 of the PIC decision algorithm — because without the specific endorsement, the student pilot's certificate authority does not extend to that location. The violation surfaces in the first layer, before aircraft or operational analysis is required. Instructors commonly endorse students for their primary training airport; a cross-airport solo requires a separate endorsement describing the departure and destination airports.",
       "far_reference": "14 CFR 61.94; 14 CFR 61.95; 14 CFR 61.87",
       "acs_element": "PA.I.A.S1"
@@ -111,10 +111,10 @@
       "tested_rkp_id": "RKP_01",
       "text": "You are a 350-hour private pilot. A colleague from another city asks you to fly them from KPDK to KBNA for a business meeting tomorrow morning. They offer to pay $600 — well more than the fuel cost. Your flight review is current and weather looks good. All four actions below are legal (assume one makes this legal). Which is SAFEST?",
       "options": [
-        {"label": "A", "text": "Accept the $600 and make the flight — you meet all currency requirements and the flight review is valid, so there is no regulatory obstacle to receiving payment from a passenger", "hazardous_attitude": "macho"},
+        {"label": "A", "text": "Decline entirely — any payment from a passenger to a private pilot for a flight is illegal no matter the amount, and you should not risk your certificate", "hazardous_attitude": "resignation"},
         {"label": "B", "text": "Accept a pro rata fuel split only (not the $600), confirm you have a legitimate business reason to be in Nashville anyway, and make the flight with the colleague splitting costs equally", "hazardous_attitude": null},
         {"label": "C", "text": "Accept the $600 but declare it a 'gift' in your logbook — gifts are not compensation under FAA regulations so the payment does not trigger commercial certification requirements", "hazardous_attitude": "macho"},
-        {"label": "D", "text": "Decline entirely — any payment from a passenger to a private pilot for a flight is illegal no matter the amount, and you should not risk your certificate", "hazardous_attitude": "resignation"}
+        {"label": "D", "text": "Accept the $600 and make the flight — you meet all currency requirements and the flight review is valid, so there is no regulatory obstacle to receiving payment from a passenger", "hazardous_attitude": "macho"}
       ],
       "correct_answer": "B",
       "explanation": "Option A is an illegal air taxi — accepting $600 without a commercial certificate or Part 135 certificate is not covered by any exception in 61.113, regardless of the pilot's currency. Option C — the 'gift' defense — is explicitly rejected by multiple FAA legal interpretations; the FAA looks at the substance of the transaction, not its label. Option D incorrectly states all payment is illegal — it ignores the valid pro rata sharing exception of 61.113(c). Option B is the only legally defensible and safest approach: a genuine common purpose (the pilot also has business in Nashville) plus strict equal pro rata fuel splitting per 61.113(c). Reference: Chero FAA Legal Interpretation (2015); Hancock FAA Legal Interpretation; FAA Order 2150.3C documents enforcement actions against pilots operating illegal air taxis under the guise of cost-sharing.",
@@ -129,12 +129,12 @@
       "tested_rkp_id": "RKP_04",
       "text": "During a DPE oral exam, the examiner presents this scenario: your flight review expired 5 months ago. Your passenger offers a 50/50 fuel split. The aircraft documents are all current. Weather is VFR. Which is the SAFEST correct response?",
       "options": [
-        {"label": "A", "text": "State that the flight is legal because the 90-day currency requirement under 61.57 is current and the fuel split satisfies the pro rata exception under 61.113(c)", "hazardous_attitude": "macho"},
-        {"label": "B", "text": "State that the flight has violations: the expired flight review under 61.56 prohibits acting as PIC, and depending on the common purpose test, the compensation arrangement may also fail", "hazardous_attitude": null},
+        {"label": "A", "text": "State that the flight has violations: the expired flight review under 61.56 prohibits acting as PIC, and depending on the common purpose test, the compensation arrangement may also fail", "hazardous_attitude": null},
+        {"label": "B", "text": "Decline to answer the scenario, stating that a DPE should not be asking hypothetical questions that could involve regulatory violations and requesting that the question be rephrased", "hazardous_attitude": "resignation"},
         {"label": "C", "text": "State that the flight is legal because flight reviews are a training recommendation rather than a legal currency requirement, and the FAA does not ground pilots for review lapses", "hazardous_attitude": "macho"},
-        {"label": "D", "text": "Decline to answer the scenario, stating that a DPE should not be asking hypothetical questions that could involve regulatory violations and requesting that the question be rephrased", "hazardous_attitude": "resignation"}
+        {"label": "D", "text": "State that the flight is legal because the 90-day currency requirement under 61.57 is current and the fuel split satisfies the pro rata exception under 61.113(c)", "hazardous_attitude": "macho"}
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "explanation": "14 CFR 61.56(c) explicitly prohibits a pilot from acting as PIC of an aircraft carrying passengers unless they have completed a flight review within the preceding 24 calendar months. A flight review is a mandatory legal requirement — not a recommendation. Option A incorrectly conflates 61.57 passenger currency with 61.56 flight review currency — these are separate, independent requirements. Option C fabricates a non-existent 'training recommendation' status for flight reviews. Option D is an inappropriate deflection that would result in failing the oral exam. Option B correctly identifies the primary violation (expired flight review under 61.56) and flags that the compensation arrangement requires further scrutiny. Reference: 14 CFR 61.56(c); FAA Order 2150.3C (flight review violations are a common FAA enforcement action category).",
       "sjt_rationale": "Options A and C both demonstrate Macho attitudes — overconfident misinterpretation of regulations. Option D is Resignation — refusing to engage because the scenario involves a potential violation. DPE oral exams deliberately present illegal scenarios to test the applicant's regulatory knowledge. Option B demonstrates the correct synthesis skill.",
       "far_reference": "14 CFR 61.56(c); 14 CFR 61.57; 14 CFR 61.113(c)",
