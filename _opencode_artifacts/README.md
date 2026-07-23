@@ -1,1 +1,0 @@
-opencode's session artifacts (plans, walkthroughs, task-lists, code-reviews) live here — one folder per session, named `<YYYY-MM-DD>_<slug>/`. Claude Code uses `_claude_artifacts/`; Gemini/Antigravity uses its built-in IDE artifact panel.
