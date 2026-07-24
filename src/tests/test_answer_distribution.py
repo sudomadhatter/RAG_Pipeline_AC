@@ -1,6 +1,6 @@
 """Permanent gate for story 6-3: balanced answer keys + letter-free feedback prose.
 
-Two standing rules from _docs/SOP_curriculum_operations.md §6, enforced forever:
+Two standing rules from docs/SOP_curriculum_operations.md §6, enforced forever:
   1. Every bank's correct answers form the exact multiset {A,A,B,B,C,C,D,D} — no
      positional meaning (the 2026-07-22 audit found 67% "B"; the app does not shuffle
      options at render, so a skew is directly visible to students).
@@ -22,12 +22,13 @@ TARGET_MULTISET = ["A", "A", "B", "B", "C", "C", "D", "D"]
 
 # Option-letter references in prose. Deliberately context-anchored: bare letters are
 # everywhere in aviation prose ("Class B airspace", "A&P", "W&B", "HAVE A PLAN"), so
-# every pattern requires an option-reference cue word or a parenthetical capital.
+# every pattern requires an option-reference cue word or a parenthetical capital. The
+# parenthetical form also catches letter LISTS like "(A, D)" — always an option reference.
 LETTER_REF = re.compile(
     r"\b[Oo]ptions?\s+[A-D]\b"
     r"|\b[Cc]hoices?\s+[A-D]\b"
     r"|\b[Aa]nswers?\s+[A-D]\b"
-    r"|\(([A-D])\)"
+    r"|\([A-D](?:\s*,\s*[A-D])*\)"
 )
 
 

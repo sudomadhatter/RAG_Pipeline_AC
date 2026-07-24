@@ -27,7 +27,27 @@ RAG_Pipeline_AC/
         sprint-status.yaml
       README.md
       project-context.md
-  _docs/
+  curriculum_components/
+    curriculum_modules/
+        [14 files: .mdx14 | e.g. Area 1 Task A PPL.md]
+    faa_docs/
+        INDEX.md
+        _db2_import.jsonl
+    lesson_podcasts/
+        [35 files: .mdx35 | e.g. INDEX.md]
+    quiz_banks/
+        [49 files: .jsonx48, .mdx1 | e.g. INDEX.md]
+    rkp_manifests/
+        [49 files: .jsonx48, .mdx1 | e.g. INDEX.md]
+    scripts/
+        INDEX.md
+        generate_knowledge_formatted.py
+            def format_knowledge(client, knowledge_text, title, why)
+            def process_manifest(client, filepath, dry_run)
+            def main()
+      README.md
+      quiz_schema.md
+  docs/
     docs_prds/
         INDEX.md
         Master_Curriculum_Pipeline.md
@@ -45,29 +65,6 @@ RAG_Pipeline_AC/
     project_context_prps/
         [22 files: .mdx21, .txtx1 | e.g. INDEX.md]
       SOP_curriculum_operations.md
-  curriculum_components/
-    curriculum_modules/
-        [14 files: .mdx14 | e.g. Area 1 Task A PPL.md]
-    faa_docs/
-        INDEX.md
-        _db2_import.jsonl
-    lesson_podcasts/
-        [35 files: .mdx35 | e.g. INDEX.md]
-    quiz_banks/
-        [49 files: .jsonx48, .mdx1 | e.g. INDEX.md]
-    quiz_banks_legacy_2026-07-23/
-        [50 files: .jsonx48, .mdx2 | e.g. INDEX.md]
-    rkp_manifests/
-        [49 files: .jsonx48, .mdx1 | e.g. INDEX.md]
-    scripts/
-        INDEX.md
-        generate_knowledge_formatted.py
-            def format_knowledge(client, knowledge_text, title, why)
-            def process_manifest(client, filepath, dry_run)
-            def main()
-      README.md
-      quiz_schema.md
-  docs/
       commercial_airplane_acs_7.pdf
       instrument_rating_airplane_acs_8.pdf
       private_airplane_acs_6.pdf
@@ -123,6 +120,15 @@ RAG_Pipeline_AC/
           def _flag(ok)
           def render(offline, live)
           def main()
+      rebalance_quiz_answers.py
+          def load_banks()
+          def jdump(value)
+          def serialize_bank(bank)
+          def find_pins(question)
+          def assign_targets(bank, rng)
+          def permute_question(q, target, rng)
+          def verify_bank(original, rebalanced)
+          def main()
   specialist_curriculum/
     curriculum_modules/
         1 ACS Curriculum Key.json
@@ -134,6 +140,12 @@ RAG_Pipeline_AC/
         INDEX.md
         __init__.py
         conftest.py
+        test_answer_distribution.py
+            def _load(path)
+            def test_corpus_present()
+            def test_bank_has_two_correct_answers_per_letter(path)
+            def test_corpus_distribution_is_uniform()
+            def test_feedback_prose_is_letter_free(path)
         test_bridge_key_offline_gate.py
             def _entries()
             def test_all_entries_validate()

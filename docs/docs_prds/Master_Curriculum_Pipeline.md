@@ -240,7 +240,7 @@ flowchart TD
     SRC --> CLEAN["normalize_key: strip ** / [cite:] / parens<br/>KEEP every real reference<br/>augment sub-doc refs (AIM 5-1-4 → +AIM)"]
     CLEAN --> UPD["reimport_db1_keys.py<br/>update_document per doc (queue-free)"]
     UPD --> DB1[("DB1 doc_keys repaired")]
-    LIB["8 FAA PDFs in faa_docs/"] --> CREATE["import_db2_docs.py<br/>create_document + rich document_tags"]
+    LIB["8 FAA PDFs in faadocs/"] --> CREATE["import_db2_docs.py<br/>create_document + rich document_tags"]
     CREATE --> DB2[("DB2: 27 docs, all tagged")]
     VOCAB["derive_db2_vocabulary.py<br/>(live-derived, never hand-authored)"] --> CLEAN
 ```
@@ -432,7 +432,7 @@ tooling) is the lever to push past 171.
 - `curriculum_components/curriculum_modules/` — master modules
 - `curriculum_components/rkp_manifests/*_rkp.json` — RKP manifests (**48**)
 - `curriculum_components/quiz_banks/*_quiz.json` — quiz banks (**48**, canonical, citations filled)
-- `curriculum_components/faa_docs/*.pdf` — staged FAA source PDFs for DB2 (gitignored)
+- `curriculum_components/faadocs/*.pdf` — staged FAA source PDFs for DB2 (gitignored)
 - `curriculum_components/scripts/generate_knowledge_formatted.py` — flashcard formatter
 - `scripts/derive_db2_vocabulary.py` · `src/utils/db2_tags.py` · `src/utils/schema.py` · `src/utils/generate_metadata.py`
 - `src/gcp/`: `import_db2_docs.py` · `reimport_db1_keys.py` · `upload_manifests.py` · `ingest_quiz_banks.py` · `probe_bridge_hop.py`

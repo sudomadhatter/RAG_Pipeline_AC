@@ -76,7 +76,7 @@ and are covered by the semantic lanes.
 | Step | Tool | What it does |
 |---|---|---|
 | Derive vocabulary | `scripts/derive_db2_vocabulary.py` | live DB2 → token set (paste into schema.py) |
-| Build out DB2 | `src/gcp/import_db2_docs.py` | stage `curriculum_components/faa_docs/*.pdf` → GCS → INCREMENTAL import → patch `document_tags` (rich) |
+| Build out DB2 | `src/gcp/import_db2_docs.py` | stage `curriculum_components/faadocs/*.pdf` → GCS → INCREMENTAL import → patch `document_tags` (rich) |
 | Repair DB1 keys | `src/gcp/reimport_db1_keys.py` | pull 184 live, clean + augment keys in place, INCREMENTAL upsert |
 | RKP manifests | `src/gcp/upload_manifests.py` | 48 manifests → Firestore `rkp_manifests` |
 | Quiz banks | `src/gcp/ingest_quiz_banks.py` | 48 banks (384 questions) → Firestore `quiz_banks/{lesson}/questions/{q}` |

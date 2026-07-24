@@ -15,7 +15,7 @@
         {"label": "D", "text": "A printed copy of your most recent flight review endorsement"}
       ],
       "correct_answer": "B",
-      "explanation": "Under 14 CFR 61.3(a), a pilot must have in their personal possession or readily accessible in the aircraft: (1) a valid pilot certificate, (2) a current and appropriate medical certificate, and (3) a government-issued photo identification. The photo ID requirement is the most commonly forgotten item on ramp checks. The pilot logbook and flight review endorsement are NOT required to be carried during flight — they must be producible upon request within a reasonable time, but not in the cockpit. The aircraft registration (A) is an aircraft document (14 CFR 91.203), not a pilot document.",
+      "explanation": "Under 14 CFR 61.3(a), a pilot must have in their personal possession or readily accessible in the aircraft: (1) a valid pilot certificate, (2) a current and appropriate medical certificate, and (3) a government-issued photo identification. The photo ID requirement is the most commonly forgotten item on ramp checks. The pilot logbook and flight review endorsement are NOT required to be carried during flight — they must be producible upon request within a reasonable time, but not in the cockpit. The aircraft registration is an aircraft document (14 CFR 91.203), not a pilot document.",
       "far_reference": "14 CFR 61.3(a)",
       "acs_element": "PA.I.A.K1"
     },
@@ -32,7 +32,7 @@
         {"label": "D", "text": "June 30, 2029"}
       ],
       "correct_answer": "A",
-      "explanation": "Under 14 CFR 61.23(d), a Third-Class medical certificate for a pilot age 40 or older at the time of examination is valid for 24 calendar months after the month of the exam date. Issued June 15, 2024: 24 calendar months = June 2026, and the calendar month rule extends validity to the END of that month — June 30, 2026. Option A is the day-for-day trap. Option C (60 months) applies to pilots UNDER 40.",
+      "explanation": "Under 14 CFR 61.23(d), a Third-Class medical certificate for a pilot age 40 or older at the time of examination is valid for 24 calendar months after the month of the exam date. Issued June 15, 2024: 24 calendar months = June 2026, and the calendar month rule extends validity to the END of that month — June 30, 2026. The June 15, 2026 answer is the day-for-day trap. The June 30, 2029 answer reflects 60 months, which applies to pilots UNDER 40.",
       "far_reference": "14 CFR 61.23(d)",
       "acs_element": "PA.I.A.K1"
     },
@@ -66,7 +66,7 @@
         {"label": "D", "text": "You are legally current but may lack the proficiency to safely handle gusty crosswinds after a 5-month break — 3 calm-wind landings yesterday do not rebuild crosswind skills"}
       ],
       "correct_answer": "D",
-      "explanation": "This is the 'current but not proficient' trap documented in FAA-H-8083-2A. The pilot met the legal minimum of 14 CFR 61.57 yesterday — 3 takeoffs and landings. But those were in calm winds. The FAR does not require specific conditions for currency landings (Option C is wrong — the landings DO count legally). The danger is that legal currency is a minimum threshold, not a proficiency guarantee. Three calm-wind landings after a 5-month break do not restore crosswind handling skills. The NTSB has cited this exact proficiency gap in fatal crosswind accidents.",
+      "explanation": "This is the 'current but not proficient' trap documented in FAA-H-8083-2A. The pilot met the legal minimum of 14 CFR 61.57 yesterday — 3 takeoffs and landings. But those were in calm winds. The FAR does not require specific conditions for currency landings — the claim that calm-wind landings fail to count toward currency in gusty conditions is wrong, because the landings DO count legally. The danger is that legal currency is a minimum threshold, not a proficiency guarantee. Three calm-wind landings after a 5-month break do not restore crosswind handling skills. The NTSB has cited this exact proficiency gap in fatal crosswind accidents.",
       "far_reference": "14 CFR 61.57",
       "acs_element": "PA.I.A.R1"
     },
@@ -117,7 +117,7 @@
         {"label": "D", "text": "Depart this afternoon — you are current, weather is good, and the family is expecting you for dinner tonight", "hazardous_attitude": "get_there_itis"}
       ],
       "correct_answer": "C",
-      "sjt_rationale": "All four options are legal — the pilot is current. Option A focuses on the destination and external expectations (get-there-itis). Option B dismisses the proficiency gap through overconfidence (macho). Option C treats the situation as hopeless when a reasonable middle path exists (resignation). Option D is safest because it introduces a self-assessment step: fly solo first, evaluate your own proficiency honestly, then make the go/no-go decision based on how you actually perform.",
+      "sjt_rationale": "All four options are legal — the pilot is current. Departing because the family expects you focuses on the destination and external expectations (get-there-itis). Departing because 80 days seems short to a 300-hour pilot dismisses the proficiency gap through overconfidence (macho). Canceling the trip entirely treats the situation as hopeless when a reasonable middle path exists (resignation). Flying solo traffic patterns first is safest because it introduces a self-assessment step: fly solo first, evaluate your own proficiency honestly, then make the go/no-go decision based on how you actually perform.",
       "explanation": "FAA-H-8083-2A emphasizes that legal currency is the floor, not the ceiling. Personal minimums and honest self-assessment using PAVE bridge the gap between 'legal to fly' and 'safe to fly.' A pilot who has not flown in 80 days may be current, but their proficiency has likely degraded. The safest action is to test yourself before committing passengers to the flight. Reference: NTSB Safety Alert SA-019 ('Reduced Proficiency in General Aviation Pilots'); FAA-H-8083-2A Chapter 2 (Aeronautical Decision Making); NTSB CAROL search: 'proficiency' + 'currency' + 'fatal' documents repeated pattern of current-but-not-proficient pilots in LOC-I accidents.",
       "far_reference": "",
       "acs_element": "PA.I.A.R1"
@@ -135,7 +135,7 @@
         {"label": "D", "text": "Drive home to get it, then skip your planned en-route fuel stop to make up the lost 90 minutes", "hazardous_attitude": "get_there_itis"}
       ],
       "correct_answer": "A",
-      "sjt_rationale": "All four options acknowledge the legal requirement (you must go get the ID). The differentiation is in what happens AFTER. Option A skips the fuel stop to make up time — introducing physical risk by reducing fuel reserves (get-there-itis). Option B promises passengers the weather is beatable — a macho overconfidence trap when the weather is already described as marginal. Option C cancels entirely when a reasonable middle path exists — resignation. Option D is safest because it accepts the delay without compounding new risks: drive home, get the ID, then re-evaluate whether the trip is still safe given the new timeline and evolving weather.",
+      "sjt_rationale": "All four options acknowledge the legal requirement (you must go get the ID). The differentiation is in what happens AFTER. Skipping the planned en-route fuel stop to make up time introduces physical risk by reducing fuel reserves (get-there-itis). Promising passengers the weather is beatable is a macho overconfidence trap when the weather is already described as marginal. Canceling the trip entirely when a reasonable middle path exists is resignation. The safest path accepts the delay without compounding new risks: drive home, get the ID, then re-evaluate whether the trip is still safe given the new timeline and evolving weather.",
       "explanation": "14 CFR 61.3(a) requires a government-issued photo ID to act as PIC. The forgotten ID creates a 90-minute delay that pressures the pilot into poor risk management decisions. FAA-H-8083-2A identifies this exact pattern: an initial setback (the delay) triggers hazardous attitudes that compound risk. The safest response is to solve the original problem (get the ID) WITHOUT introducing new risks (skipping fuel, racing weather, or abandoning the trip unnecessarily). Reference: FAA-H-8083-2A Chapter 2 (Hazardous Attitudes: Get-There-Itis, Macho, Resignation); FAA Order 2150.3C (enforcement pattern for 61.3 violations confirms this is an active ramp-check enforcement priority, not a theoretical risk).",
       "far_reference": "14 CFR 61.3(a)",
       "acs_element": "PA.I.A.K1"

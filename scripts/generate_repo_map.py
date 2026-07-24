@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Configuration
 PROJECT_ROOT = Path(__file__).parent.parent
-OUTPUT_FILE = PROJECT_ROOT / "_docs" / "docs_prds" / "repo-map.md"
+OUTPUT_FILE = PROJECT_ROOT / "docs" / "docs_prds" / "repo-map.md"
 
 IGNORE_DIRS = {
     ".git", ".venv", "venv", "__pycache__", "node_modules",

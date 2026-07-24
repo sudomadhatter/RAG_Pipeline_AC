@@ -165,7 +165,7 @@ instead of a per-repo fork. Keep workspaces matching this table and the generic 
 | BMAD (if present) | — | `_bmad/` (owned, regenerated) · `_bmad-output/` (state) | `_bmad-output/active-context/active-context.md` **IS** the continuity brief above; `_bmad/` itself is never hand-edited |
 
 **Two modes, one rule.** Every workspace — lobby and project — uses a plain `docs/` folder (no underscore) for
-its navigation index and standard; the old `_docs/` lobby form is retired. The only legitimate
+its navigation index and standard; the old `docs/` lobby form is retired. The only legitimate
 home-base↔project differences left are: (1) the lobby's `_artifacts/` is split into **buckets** (`_main/`,
 `<project>/`) because work from the lobby is filed by *which workspace it changes*, whereas a project's
 `_artifacts/` is flat history; (2) the **continuity brief** that pickup reads and the prune trims lives at

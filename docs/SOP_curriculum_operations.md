@@ -1,9 +1,9 @@
 # SOP — Curriculum Operations Across the Two Teams
 
-**Canonical copy.** Lives in `Projects/RAG_Pipeline_AC/_docs/` — the pipeline owns the process, so it
+**Canonical copy.** Lives in `Projects/RAG_Pipeline_AC/docs/` — the pipeline owns the process, so it
 owns the document. The lobby `router.md` and the app's `AGENTS.md` point here; do not fork this file.
-Deep how-to detail stays in `_docs/instruction_docs/` (the six authoring guides) and the PRD
-(`_docs/docs_prds/Master_Curriculum_Pipeline.md`); this SOP is the **operating contract between the
+Deep how-to detail stays in `docs/instruction_docs/` (the six authoring guides) and the PRD
+(`docs/docs_prds/Master_Curriculum_Pipeline.md`); this SOP is the **operating contract between the
 stations** — who owns what, in what order, and where the hard gates sit.
 
 | | |
@@ -81,7 +81,7 @@ import flow.
 ## 5. Per-lesson lifecycle (the checklist)
 
 Run top to bottom for every lesson; each row names its owner. Deep detail lives in
-`_docs/instruction_docs/curriculum_lifecycle.md`.
+`docs/instruction_docs/curriculum_lifecycle.md`.
 
 | # | Step | Owner | Gate / proof |
 |---|---|---|---|
@@ -147,6 +147,7 @@ imbalance OR any option-letter reference in feedback prose. New banks pass it fr
 | DB2 `aviation-library-v2` | `librarian.py` bridge-hop (FAA citations shown to students) | `document_tags` vocabulary (24 tags) |
 | Firestore `rkp_manifests` | lesson planner / specialist (per-`lesson_id` manifest) | manifest schema; `bridge_keys` layer |
 | Firestore `quiz_banks` | quiz agent — serves options **in stored order** | `src/utils/schema.py` **mirrors** app `backend/schemas/quiz.py` — change together or not at all (ask-first) |
+| **App repo `backend/data/curriculum_key.json`** | `backend/data/curriculum.py` loads it at startup — it is the app's list of what lessons EXIST | **A lesson the pipeline authors is invisible to the app until it is registered here** (`lesson_id`, `title`, `acs_task_reference`, `acs_element_keys`, `certificate`, `status`). This file lives in the **app** repo, so shipping a new lesson is a two-repo action — see §10 |
 
 **Mirror policy:** the app repo's copy of 48 manifests + 48 quiz banks lives at
 `_my_resources/_docs/specialist_lesson/` — inside Daniel's **protected personal area**, so agents
@@ -158,7 +159,34 @@ source of truth is rung 2 of this repo. No app code reads it.
 The **live** register is the board — `_bmad-output/implementation-artifacts/sprint-status.yaml`
 (epic 6 = infrastructure). Standing items as of 2026-07-23: podcast ingestion tool (`6-1`) · DB2
 source gaps / 13 reference-only lessons (`6-2`) · quiz answer-key re-balance + Firestore truth
-reconciliation (`6-3`) · `data/` root merge of the two data trees (`6-4`) · `docs/` vs `_docs/`
-split · `specialist_curriculum/` fate · repo `.venv` missing · `pypdf` proposal (would unlock local
-PDF reading for the grounding gate — ask-first). Update the board, not this list; this paragraph is
-a pointer, not a second tracker.
+reconciliation (`6-3` — **done, shipped 2026-07-23**) · `data/` root merge of the two data trees
+(`6-4`) · re-ingest resets `seen_by` rotation state (`6-5`) · `specialist_curriculum/` fate · repo
+`.venv` missing · `pypdf` proposal (would unlock local PDF reading for the grounding gate —
+ask-first). The `docs/` vs `_docs/` split is **resolved** (merged into one `docs/`, 2026-07-23).
+Update the board, not this list; this paragraph is a pointer, not a second tracker.
+
+## 10. Starting a new rating (instrument is next)
+
+Nothing in the machinery is private-pilot-specific — this was verified 2026-07-23, not assumed.
+
+**Already rating-agnostic — no work needed:** every script in `src/` and `scripts/` (zero hardcoded
+`PPL_` anywhere) · the ingest + manifest tooling · the schemas · the stores · and the **app**, which
+already namespaces by certificate (`backend/data/curriculum.py`: `Lesson.certificate`,
+`get_certificate()`, `get_lessons_by_certificate()`). The Instrument ACS is already on disk at
+`docs/instrument_rating_airplane_acs_8.pdf` and already named in the `faa-grounding-gate` skill.
+
+**Decide once, at kickoff (Daniel's call):**
+
+| Decision | Constraint that binds it |
+|---|---|
+| The lesson-id prefix | The app derives the certificate by splitting the lesson id on the **first underscore** — `PPL_PA_I_A_01` → `PPL`. So `IRA_PA_I_A_01` → certificate `IRA`, while `IR_PA_I_A_01` → `IR`. Pick deliberately; it becomes the permanent namespace. |
+| Drive master naming | Today's convention is `Area N Task X PPL` in `ACS Modules` (§3). The new rating needs its own unambiguous suffix so the intake search can't cross-match. |
+| Board epics | One epic per Instrument ACS Area, same shape as the PPL epics (titles filled from the ACS PDF at kickoff, never from memory). |
+
+**The step people forget:** authoring a lesson in this repo does **not** make it exist for students.
+Every new lesson must also be registered in the app repo's `backend/data/curriculum_key.json` with
+its `certificate` set (§8). That is the one cross-repo write in the whole flow — a pipeline story
+that ships lessons is not done until the app's curriculum key lists them.
+
+Everything else is unchanged: Drive intake (§3), the per-lesson lifecycle (§5), the quiz answer +
+letter-free prose policy (§6), and live-store discipline (§7) apply to every rating identically.

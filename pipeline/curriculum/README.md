@@ -41,5 +41,5 @@ was removed 2026-06-19 — it never matched reality). The real path is:
 2. `python src/gcp/reimport_db1_keys.py --execute` → uploads + INCREMENTAL-imports into DB1.
 3. `python src/gcp/probe_bridge_hop.py` → live DB1→DB2 bridge verification.
 
-See `_docs/docs_prds/asset_registry.md` and `_docs/instruction_docs/curriculum_lifecycle.md` for the
+See `docs/docs_prds/asset_registry.md` and `docs/instruction_docs/curriculum_lifecycle.md` for the
 full picture.

@@ -9,9 +9,9 @@ ingests them into the production data stores.
 > is **pipeline → app**. The app only ever *consumes* what is produced here.
 
 For the full mental model — how a lesson is made, ingested, and consumed end to end — read
-[_docs/docs_prds/Master_Curriculum_Pipeline.md](_docs/docs_prds/Master_Curriculum_Pipeline.md) (the
+[docs/docs_prds/Master_Curriculum_Pipeline.md](docs/docs_prds/Master_Curriculum_Pipeline.md) (the
 PRD). For *current* counts and live deployment state, run the state map (below) and read the
-generated [_docs/docs_prds/STATE.md](_docs/docs_prds/STATE.md).
+generated [docs/docs_prds/STATE.md](docs/docs_prds/STATE.md).
 
 ---
 
@@ -35,14 +35,18 @@ generated [_docs/docs_prds/STATE.md](_docs/docs_prds/STATE.md).
 │                             #  master modules · RKP manifests · quiz banks · FAA PDFs · podcasts
 │
 ├── scripts/                  # standalone utilities (state map, repo map, vocab derivation, fallbacks)
-├── _docs/                    # all documentation
+├── docs/                     # ALL documentation, one folder (no _docs/ — merged 2026-07-23)
+│   ├── SOP_curriculum_operations.md  # ** the two-team operating guide **
 │   ├── docs_prds/            #  reference: PRD, asset_registry, STATE.md (generated), repo-map (generated)
 │   ├── instruction_docs/     #  the 6 authoring guides (rkp, quiz, bridge_key, flashcard, lifecycle, recovery)
-│   └── project_context_prps/ #  broader product / architecture context (what the downstream app is)
+│   ├── project_context_prps/ #  broader product / architecture context (what the downstream app is)
+│   ├── *.pdf                 #  the 3 ACS books (private · instrument · commercial) — grounding sources
+│   └── repo-map.md · workspace-standard.md
 │
 ├── auth_keys/                # credentials (GITIGNORED): .env + service-account.json
-├── _claude_artifacts/        # Claude Code session artifacts
-├── _opencode_artifacts/      # opencode session artifacts
+├── _artifacts/               # session artifacts (per-session folders + INDEX.md)
+├── _bmad-output/             # BMAD-lite board state + active-context
+├── _my_resources/            # Daniel's PROTECTED personal area — agents keep out
 │
 ├── README.md  ·  requirements.txt  ·  .env.example  ·  .gitignore
 └── CLAUDE.md  ·  AGENTS.md  ·  .gemini/GEMINI.md   # agent-tool governance (Claude / opencode / Gemini)
@@ -64,7 +68,7 @@ generated [_docs/docs_prds/STATE.md](_docs/docs_prds/STATE.md).
 | Master modules (`.md`) | `curriculum_components/curriculum_modules/` | split → `curriculum/elements/` | (feeds DB1) |
 | Split lessons (`.md`) | `pipeline/curriculum/elements/` | `reimport_db1_keys.py` | **DB1** (`aviation-curriculum-v2`) |
 | Area IX metadata (`.json`) | `pipeline/curriculum/sidecars/` | `reimport_db1_keys.py` | **DB1** (bridge keys) |
-| FAA PDFs | `curriculum_components/faa_docs/` | `import_db2_docs.py` | **DB2** (`aviation-library-v2`) |
+| FAA PDFs | `curriculum_components/faadocs/` | `import_db2_docs.py` | **DB2** (`aviation-library-v2`) |
 | RKP manifests (`.json`) | `curriculum_components/rkp_manifests/` | `upload_manifests.py` | **Firestore** `rkp_manifests` |
 | Quiz banks (`.json`) | `curriculum_components/quiz_banks/` | `ingest_quiz_banks.py` | **Firestore** `quiz_banks` |
 
@@ -119,13 +123,13 @@ Every live-write tool is **gated**: dry-run by default, `--execute` to write.
 
 | Doc | What it is |
 |---|---|
-| [_docs/SOP_curriculum_operations.md](_docs/SOP_curriculum_operations.md) | **The two-team SOP** — stations & ownership, Drive intake, per-lesson lifecycle, live-store discipline |
-| [_docs/docs_prds/Master_Curriculum_Pipeline.md](_docs/docs_prds/Master_Curriculum_Pipeline.md) | The PRD — full end-to-end walkthrough with diagrams |
-| [_docs/docs_prds/STATE.md](_docs/docs_prds/STATE.md) | **Generated** live inventory + repo-vs-Firestore drift (run `generate_state_map.py`) |
-| [_docs/docs_prds/asset_registry.md](_docs/docs_prds/asset_registry.md) | Narrative inventory of every asset + how it flows |
-| [_docs/docs_prds/repo-map.md](_docs/docs_prds/repo-map.md) | Auto-generated AST map of the codebase |
-| [_docs/instruction_docs/](_docs/instruction_docs/) | The 6 authoring guides (RKP, quiz, bridge key, flashcard, lifecycle, recovery) |
-| [_docs/project_context_prps/](_docs/project_context_prps/) | Broader product / architecture context |
+| [docs/SOP_curriculum_operations.md](docs/SOP_curriculum_operations.md) | **The two-team SOP** — stations & ownership, Drive intake, per-lesson lifecycle, live-store discipline |
+| [docs/docs_prds/Master_Curriculum_Pipeline.md](docs/docs_prds/Master_Curriculum_Pipeline.md) | The PRD — full end-to-end walkthrough with diagrams |
+| [docs/docs_prds/STATE.md](docs/docs_prds/STATE.md) | **Generated** live inventory + repo-vs-Firestore drift (run `generate_state_map.py`) |
+| [docs/docs_prds/asset_registry.md](docs/docs_prds/asset_registry.md) | Narrative inventory of every asset + how it flows |
+| [docs/docs_prds/repo-map.md](docs/docs_prds/repo-map.md) | Auto-generated AST map of the codebase |
+| [docs/instruction_docs/](docs/instruction_docs/) | The 6 authoring guides (RKP, quiz, bridge key, flashcard, lifecycle, recovery) |
+| [docs/project_context_prps/](docs/project_context_prps/) | Broader product / architecture context |
 
 ---
 

@@ -1,4 +1,4 @@
-"""Generate `_docs/docs_prds/STATE.md` — the live state map of the ingestion pipeline.
+"""Generate `docs/docs_prds/STATE.md` — the live state map of the ingestion pipeline.
 
 This turns "is the pipeline stale?" from a hand-maintained doc into a command.
 
@@ -27,7 +27,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent / "src"))
 import config  # noqa: E402  (resolves paths + creds)
 
-OUT_FILE = config.PROJECT_ROOT / "_docs" / "docs_prds" / "STATE.md"
+OUT_FILE = config.PROJECT_ROOT / "docs" / "docs_prds" / "STATE.md"
 FIRESTORE_DATABASE_ID = "aviationchat-database"
 
 

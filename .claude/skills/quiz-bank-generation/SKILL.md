@@ -125,7 +125,7 @@ letter-anchored prose lies to students the moment options move. (SOP §6; lint i
 0. **Run the `faa-grounding-gate` skill — MANDATORY.** Every stem, option, explanation, and
    `far_reference` must trace to an ACS/FAA source document on disk; NTSB/accident figures must be
    real. Never author a regulatory claim from memory — unverifiable ⇒ flag for Daniel.
-0b. **Read references** — before authoring, read `_docs/instruction_docs/quiz_authoring_guide.md` §0
+0b. **Read references** — before authoring, read `docs/instruction_docs/quiz_authoring_guide.md` §0
    ("Author from the RKP first") and the target lesson's RKP `knowledge` fields in
    `curriculum_components/rkp_manifests/{lesson_id}_rkp.json`. Every question must trace to a fact taught
    in an RKP; if it can't, flag the RKP for enrichment instead of inventing the test.
@@ -221,5 +221,5 @@ feedback prose re-anchored letter-free. Use the Area I banks (`PPL_PA_I_*`) as t
 
 - `curriculum_components/quiz_banks/PPL_PA_I_A_01_quiz.json` — original gold
 - `curriculum_components/quiz_schema.md` — locked JSON schema
-- `_docs/instruction_docs/quiz_authoring_guide.md` — Daniel's quality bar
-- `_docs/project_context_prps/quiz_generator_prompt.md` — system prompt + 12 Lessons Learned
+- `docs/instruction_docs/quiz_authoring_guide.md` — Daniel's quality bar
+- `docs/project_context_prps/quiz_generator_prompt.md` — system prompt + 12 Lessons Learned

@@ -37,7 +37,7 @@ CURRICULUM_JSONL = CURRICULUM_ROOT / CURRICULUM_JSONL_FILE
 #   curriculum_modules/ — CFI master modules (.md), split into curriculum/elements/
 #   rkp_manifests/      — RKP manifest JSON  → Firestore rkp_manifests (upload_manifests.py)
 #   quiz_banks/         — quiz bank JSON     → Firestore quiz_banks   (ingest_quiz_banks.py)
-#   faa_docs/           — FAA source PDFs    → DB2                    (import_db2_docs.py)
+#   faadocs/           — FAA source PDFs    → DB2                    (import_db2_docs.py)
 #   lesson_podcasts/    — authored podcast .md (not currently ingested by any script)
 COMPONENTS_ROOT = PROJECT_ROOT / "curriculum_components"
 MODULES_DIR = COMPONENTS_ROOT / "curriculum_modules"

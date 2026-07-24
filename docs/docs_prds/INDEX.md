@@ -1,4 +1,4 @@
-# _docs/docs_prds/ — INDEX  (reference shelf)
+# docs/docs_prds/ — INDEX  (reference shelf)
 
 | Doc | What it is |
 |---|---|
@@ -7,4 +7,4 @@
 | `STATE.md` | **Generated** — live inventory + repo-vs-store drift. Regenerate: `python scripts/generate_state_map.py [--live]`. Never hand-edit. |
 | `repo-map.md` (legacy home) | The current navigation index is `docs/repo-map.md` at the repo root |
 
-The two-team operating procedure lives one level up: `_docs/SOP_curriculum_operations.md`.
+The two-team operating procedure lives one level up: `docs/SOP_curriculum_operations.md`.

@@ -9,7 +9,7 @@ curriculum_components/
 ├── curriculum_modules/   # 13 CFI master modules (.md) — "Area N Task X PPL.md"
 ├── rkp_manifests/        # 48 RKP manifest JSON      → Firestore  rkp_manifests
 ├── quiz_banks/           # 48 quiz bank JSON         → Firestore  quiz_banks
-├── faa_docs/             # 12 FAA source PDFs        → DB2 (aviation-library-v2)
+├── faadocs/             # 12 FAA source PDFs        → DB2 (aviation-library-v2)
 ├── lesson_podcasts/      # 34 authored podcast .md   → (not ingested by any script — see below)
 ├── scripts/              # generate_knowledge_formatted.py (RKP knowledge_formatted helper)
 ├── quiz_schema.md        # the quiz-bank JSON schema reference
@@ -32,7 +32,7 @@ curriculum_components/
   `src/gcp/ingest_quiz_banks.py` explodes them into Firestore `quiz_banks/{lesson_id}/questions/{id}`.
   See [`quiz_schema.md`](quiz_schema.md) for the schema.
 
-- **`faa_docs/`** — the authoritative FAA source PDFs (ACs, handbooks, the ACS). `src/gcp/import_db2_docs.py`
+- **`faadocs/`** — the authoritative FAA source PDFs (ACs, handbooks, the ACS). `src/gcp/import_db2_docs.py`
   uploads them to the library bucket and INCREMENTAL-imports them into DB2. The `_db2_import.jsonl`
   here is a **generated** import manifest, not a source PDF.
 
@@ -53,5 +53,5 @@ python scripts/generate_state_map.py --live
 ```
 
 This inventories this folder, cross-references RKP↔quiz pairing, flags the orphaned podcasts, and
-diffs the local files against Firestore/DB1/DB2 — writing [_docs/docs_prds/STATE.md](../_docs/docs_prds/STATE.md).
+diffs the local files against Firestore/DB1/DB2 — writing [docs/docs_prds/STATE.md](../docs/docs_prds/STATE.md).
 It replaces hand-counting whether the repo and the live databases agree.

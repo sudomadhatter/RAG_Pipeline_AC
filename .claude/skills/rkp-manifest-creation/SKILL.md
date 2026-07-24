@@ -155,9 +155,9 @@ Every RKP file MUST follow this structure exactly:
 - **`faa-grounding-gate` skill — MANDATORY.** Every fact you write into a `knowledge`, `why`,
   `far_references`, or `lesson_overview` field must trace to an ACS/FAA source document on disk.
   Never write a regulation, number, or requirement from memory. Unverifiable ⇒ flag for Daniel.
-- **`_docs/instruction_docs/rkp_creation_guide.md`** — the schema, field rules, and the reverse-contract
+- **`docs/instruction_docs/rkp_creation_guide.md`** — the schema, field rules, and the reverse-contract
   (every fact a quiz will test must live in a `knowledge` field, not only the `lesson_overview`).
-- **`_docs/instruction_docs/bridge_key_guide.md`** — the bridge-key contract (document-level tokens, DB2
+- **`docs/instruction_docs/bridge_key_guide.md`** — the bridge-key contract (document-level tokens, DB2
   vocabulary, how to verify). `bridge_keys` may never be empty.
 - **The source master module** in `curriculum_components/curriculum_modules/` (read it in full).
 
@@ -215,8 +215,8 @@ python generate_knowledge_formatted.py --all --write
 |---|---|
 | `curriculum_components/rkp_manifests/PPL_PA_I_A_01_rkp.json` | Original gold standard |
 | `curriculum_components/curriculum_modules/Area 1 Task A PPL.md` | Master module format |
-| `_docs/instruction_docs/rkp_creation_guide.md` | Daniel's authoring guide |
-| `_docs/instruction_docs/bridge_key_guide.md` | Bridge key contract |
+| `docs/instruction_docs/rkp_creation_guide.md` | Daniel's authoring guide |
+| `docs/instruction_docs/bridge_key_guide.md` | Bridge key contract |
 
 ---
 

@@ -57,11 +57,46 @@ development_status:
   epic-6-infrastructure: backlog
   6-1-podcast-ingestion-tool: backlog        # 34 scripts authored (Area I only), NO ingest script exists
   6-2-db2-source-gaps: backlog               # 13 lessons cite sources absent from DB2 (AME Guide, FCC forms, legal interps, FAA Orders)
-  6-3-quiz-answer-key-balance: ready-for-dev # 2026-07-23 live audit: skew CONFIRMED in Firestore (B 258/384 = 67%, safety has ZERO correct-D);
-                                             # repo↔live content drift NONE (only 206 empty sjt_rationale fossils live-side, merge=True artifact);
-                                             # manifests 48/48 identical. Plan awaiting approval:
-                                             # _artifacts/2026-07-23_quiz-rebalance-firestore-truth/implementation_plan.md
-                                             # (R1 legacy snapshot → R2 deterministic 2-per-letter re-letter → R3 prose re-anchor, 263 explanations
-                                             # + 92 SJT rationales are letter-anchored → R4 permanent distribution test → R5 fossil DELETE_FIELD
-                                             # → R6 dry-run/--execute/prove → R7 delete legacy)
+  6-3-quiz-answer-key-balance: done          # 2026-07-23 Daniel approved (letter-free prose · legacy folder committed).
+                                             # R1 legacy snapshot (byte-identical, README+INDEX, gitignore carve-out) · R2 rebalance
+                                             # EXECUTED (scripts/rebalance_quiz_answers.py: 96/96/96/96, was A19/B258/C70/D37;
+                                             # 283 keys moved; pin held; texts intact) · R3 letter-free prose COMPLETE — 345 fields
+                                             # (282 explanations + 63 sjt_rationales) across all 48 banks, 0 refs remain · R4 gate
+                                             # src/tests/test_answer_distribution.py GREEN (suite 126 passed / 5 skipped) · R5 ingester
+                                             # sjt_rationale DELETE_FIELD · R6 dry-run reviewed (48 banks / 384 Qs valid, 292 fossil clears).
+                                             # R3 METHOD: multi-agent fleet abandoned after 3 session-limit failures (~5.6M tokens, 19 banks
+                                             # done); finished inline via surgical positional replacement (scratchpad r3_surgical_*.py) —
+                                             # only letter-referencing spans touched, all other bytes preserved.
+                                             # VERIFIED: 0 fabricated facts (every added number traces to the question), 0 lost citations,
+                                             # non-prose fields byte-identical to legacy.
+                                             # R6 EXECUTED 2026-07-23 on Daniel's approval (he also spot-checked the prose: "passes the
+                                             # in person test"). Ingested 384 questions / 48 lessons; 292 sjt_rationale DELETE_FIELDs sent.
+                                             # LIVE PROOF: correct_answer 96/96/96/96 (25% each) · repo<->live drift identical=48 differs=0
+                                             # (the 206 fossils are GONE) · manifests identical=48 · seen_by still empty on all 384 ·
+                                             # state map --live clean · probe_bridge_hop 48/48 lessons >=1 DB2 hit. Safety perspective now
+                                             # D:24 (was ZERO correct-D).
+                                             # R7 DONE on Daniel's word: legacy snapshot folder + its .gitignore carve-out deleted.
+                                             # Story CLOSED — DoD met (tests green, dry-run reviewed, --execute run, probe 48/48, state map clean).
+                                             # Plan: _artifacts/2026-07-23_quiz-rebalance-firestore-truth/implementation_plan.md
   6-4-data-root-merge: backlog               # Phase 2: unify pipeline/ + curriculum_components/ under one data/ root
+  6-5-reingest-rotation-reset: backlog       # found 2026-07-23 during 6-3: ingest_quiz_banks.py always puts seen_by=[] /
+                                             # last_seen_at=None in the merge payload, so any re-ingest RESETS live rotation
+                                             # state — contradicts its own docstring. Harmless today (audit: seen_by empty on
+                                             # all 384) but must be fixed before students accumulate rotation history.
+  6-6-curriculum-key-handoff: backlog        # 2026-07-23: authoring a lesson here does NOT make it exist for students — the app's
+                                             # backend/data/curriculum_key.json must also list it (certificate, acs_task_reference,
+                                             # acs_element_keys, status). Today that cross-repo step is manual and undocumented in
+                                             # any tool. Blocks the instrument track at scale. SOP §8 + §10 now describe it.
+
+  # ═══════════════════════════════════════════════════
+  # Epic 7 — INSTRUMENT RATING (next curriculum track)
+  # Machinery is already rating-agnostic (verified 2026-07-23): no PPL hardcoding in src/ or
+  # scripts/, and the app namespaces by certificate (backend/data/curriculum.py::get_certificate,
+  # which splits the lesson_id on the FIRST underscore). Grounding source already on disk:
+  # docs/instrument_rating_airplane_acs_8.pdf.
+  # KICKOFF DECISIONS (Daniel, before any authoring — see SOP §10):
+  #   1. lesson-id prefix -> becomes the app's permanent certificate namespace (IRA_… vs IR_…)
+  #   2. Drive master naming suffix so intake search can't cross-match the PPL masters
+  #   3. one epic per Instrument ACS Area, titles read from the ACS PDF (never from memory)
+  # ═══════════════════════════════════════════════════
+  epic-7-instrument-kickoff: backlog

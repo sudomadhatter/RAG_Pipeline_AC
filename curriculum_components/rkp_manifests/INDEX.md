@@ -7,5 +7,5 @@ Flashcards are the `knowledge_formatted` field inside each RKP — filled ONLY b
 authoring). `bridge_keys` must exist in the DB2 tag vocabulary — the app filters DB2 on them
 (`bridge-key-verification` skill proves the hop).
 
-Authoring: `rkp-manifest-creation` skill + `_docs/instruction_docs/rkp_creation_guide.md`.
+Authoring: `rkp-manifest-creation` skill + `docs/instruction_docs/rkp_creation_guide.md`.
 Ingest (gated): `python src/gcp/upload_manifests.py [--execute]` → Firestore `rkp_manifests/{lesson_id}`.

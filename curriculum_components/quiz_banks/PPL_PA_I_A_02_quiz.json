@@ -32,7 +32,7 @@
         {"label": "D", "text": "No — the FAA's medical database automatically revokes the certificate the moment the pharmacy fills the disqualifying prescription"}
       ],
       "correct_answer": "B",
-      "explanation": "14 CFR 61.53(a)(2) prohibits a pilot from acting as PIC while 'taking medication or receiving other treatment for a medical condition that results in the person being unable to meet the requirements for the medical certificate.' The standard is based on the treatment, not the pilot's subjective feeling. The certificate is not technically revoked (Option D is wrong) — the pilot is simply prohibited from exercising its privileges until the disqualifying condition is resolved.",
+      "explanation": "14 CFR 61.53(a)(2) prohibits a pilot from acting as PIC while 'taking medication or receiving other treatment for a medical condition that results in the person being unable to meet the requirements for the medical certificate.' The standard is based on the treatment, not the pilot's subjective feeling. The certificate is not technically revoked — the FAA's medical database does not automatically revoke it the moment the pharmacy fills the disqualifying prescription — the pilot is simply prohibited from exercising its privileges until the disqualifying condition is resolved.",
       "far_reference": "14 CFR 61.53(a)",
       "acs_element": "PA.I.A.K3"
     },
@@ -49,7 +49,7 @@
         {"label": "D", "text": "Nine hours comfortably exceeds the FAA's recommended 5x half-life clearance window, so the drug has fully metabolized and the pilot is safe to fly"}
       ],
       "correct_answer": "A",
-      "explanation": "The FAA recommends waiting at least 5 times the half-life of a medication before flying. Diphenhydramine has a half-life of 4-6 hours, so the clearance window is 20-30 hours. At 9 hours, the pilot is well within the residual impairment window. OTC medications ARE subject to 61.53 (Option C is wrong). The disclosure to an AME is irrelevant to the immediate safety question (Option D is wrong).",
+      "explanation": "The FAA recommends waiting at least 5 times the half-life of a medication before flying. Diphenhydramine has a half-life of 4-6 hours, so the clearance window is 20-30 hours. At 9 hours, the pilot is well within the residual impairment window. OTC medications ARE subject to 61.53 — an over-the-counter antihistamine like Benadryl is not exempt. And whether the pilot disclosed the medication to their AME is irrelevant to the immediate safety question.",
       "far_reference": "14 CFR 61.53",
       "acs_element": "PA.I.A.K3"
     },
@@ -66,7 +66,7 @@
         {"label": "D", "text": "March 31, 2028 — the FAA uses a 48-month compromise duration when the pilot turns 40 within 30 days of the examination date"}
       ],
       "correct_answer": "C",
-      "explanation": "Under 14 CFR 61.23(d), the expiration is determined solely by the pilot's age on the date of the examination. The pilot was 39 on March 10, so the Third-Class medical is valid for 60 calendar months. March 2024 + 60 months = March 2029, extended to the end of the month: March 31, 2029. Turning 40 fifteen days later does NOT retroactively change the duration. There is no '48-month compromise' provision (Option D is fabricated).",
+      "explanation": "Under 14 CFR 61.23(d), the expiration is determined solely by the pilot's age on the date of the examination. The pilot was 39 on March 10, so the Third-Class medical is valid for 60 calendar months. March 2024 + 60 months = March 2029, extended to the end of the month: March 31, 2029. Turning 40 fifteen days later does NOT retroactively change the duration. There is no '48-month compromise' provision — that duration is fabricated.",
       "far_reference": "14 CFR 61.23(d)",
       "acs_element": "PA.I.A.K3"
     },
@@ -83,7 +83,7 @@
         {"label": "D", "text": "Yes — the photo identification requirement under 14 CFR 61.3 only applies at towered airports where TSA security screening is conducted"}
       ],
       "correct_answer": "C",
-      "explanation": "14 CFR 61.3(a)(2) explicitly requires a valid photo identification. The word 'valid' means current and unexpired. An expired driver's license — even if it expired yesterday — does not meet the regulatory requirement. The photo ID rule applies everywhere, not just at towered airports (Option C is wrong). A pilot certificate is not a substitute for a government-issued photo ID (Option A is wrong).",
+      "explanation": "14 CFR 61.3(a)(2) explicitly requires a valid photo identification. The word 'valid' means current and unexpired. An expired driver's license — even if it expired yesterday — does not meet the regulatory requirement. The photo ID rule applies everywhere, not just at towered airports. A pilot certificate is not a substitute for a government-issued photo ID.",
       "far_reference": "14 CFR 61.3(a)(2)",
       "acs_element": "PA.I.A.K4"
     },
@@ -117,7 +117,7 @@
         {"label": "D", "text": "Test equalization with a Valsalva maneuver on the ground first — if it fails or causes pain, cancel; if it clears, depart but plan a lower cruise altitude"}
       ],
       "correct_answer": "D",
-      "sjt_rationale": "All four options are legal — pseudoephedrine is not on the Do Not Fly list and the pilot is not prohibited from flying with mild congestion. Option A focuses on the passenger's schedule rather than the pilot's medical state (get-there-itis). Option B dismisses the risk based on past experience — a classic overconfidence trap (macho). Option C treats a manageable situation as hopeless when a reasonable self-assessment exists (resignation). Option D is safest because it introduces an objective test (Valsalva) before committing, and includes a risk mitigation plan (lower altitude).",
+      "sjt_rationale": "All four options are legal — pseudoephedrine is not on the Do Not Fly list and the pilot is not prohibited from flying with mild congestion. Departing because the passenger rearranged their schedule focuses on that schedule rather than the pilot's medical state (get-there-itis). Departing because you have flown with worse congestion before dismisses the risk based on past experience — a classic overconfidence trap (macho). Canceling the entire flight treats a manageable situation as hopeless when a reasonable self-assessment exists (resignation). Testing equalization on the ground with a Valsalva maneuver first is safest because it introduces an objective test before committing, and includes a risk mitigation plan (lower altitude).",
       "explanation": "Sinus congestion at altitude can cause severe barotrauma — a sinus block during descent can produce incapacitating facial pain, disorientation, and nosebleed. The Valsalva maneuver tests whether the Eustachian tubes and sinuses can equalize pressure. If equalization fails on the ground, it will fail worse at 8,500 feet during descent. FAA-H-8083-25C covers the effects of altitude on the sinuses. Reference: NTSB has cited sinus barotrauma as a contributing factor to pilot incapacitation in general aviation accidents (ntsb.gov aeromedical reports); NTSB SS-14/01 ('Drug Use Trends in Aviation') documents that self-medicating pilots who fly with active physiological conditions represent a disproportionate share of incapacitation-related accidents.",
       "far_reference": "14 CFR 61.53",
       "acs_element": "PA.I.A.K3"
@@ -135,7 +135,7 @@
         {"label": "D", "text": "Cancel the entire trip right now — the schedule is already blown, the weather is trending poorly, and it is not worth the effort of driving home and back", "hazardous_attitude": "resignation"}
       ],
       "correct_answer": "B",
-      "sjt_rationale": "All four options acknowledge the legal requirement — the pilot must go get the certificate. The differentiation is in what happens after. Option A skips the fuel stop, introducing the physical risk of marginal fuel reserves (get-there-itis). Option B promises to beat deteriorating weather through speed — overconfidence compounding the original delay (macho). Option C cancels entirely when a reasonable middle path exists — giving up unnecessarily (resignation). Option D is safest because it solves the original problem without introducing new risks: get the document, accept the delay, then make a fresh go/no-go decision.",
+      "sjt_rationale": "All four options acknowledge the legal requirement — the pilot must go get the certificate. The differentiation is in what happens after. Skipping the planned fuel stop to fly direct introduces the physical risk of marginal fuel reserves (get-there-itis). Departing quickly at higher-than-normal cruise speed promises to beat deteriorating weather through speed — overconfidence compounding the original delay (macho). Canceling the entire trip when a reasonable middle path exists is giving up unnecessarily (resignation). Retrieving the certificate, accepting the hour delay, and re-evaluating with the adjusted departure time is safest because it solves the original problem without introducing new risks: get the document, accept the delay, then make a fresh go/no-go decision.",
       "explanation": "14 CFR 61.3(a) requires the pilot certificate to be in personal possession or readily accessible in the aircraft. The forgotten certificate creates time pressure that can trigger hazardous attitudes. FAA-H-8083-2A identifies this exact pattern: an initial setback compounds into poor risk management when the pilot tries to 'make up' for lost time instead of accepting the new reality and re-planning. Reference: FAA-H-8083-2A Chapter 2 (Five Hazardous Attitudes — Get-There-Itis, Macho, Resignation); FAA Order 2150.3C documents 14 CFR 61.3 as one of the most commonly cited violations in FAA ramp-check enforcement actions, confirming the real-world consequence of this scenario.",
       "far_reference": "14 CFR 61.3(a)",
       "acs_element": "PA.I.A.K4"

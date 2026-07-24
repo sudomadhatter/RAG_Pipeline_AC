@@ -1,4 +1,4 @@
-# _docs/instruction_docs/ — INDEX  (the authoring guides)
+# docs/instruction_docs/ — INDEX  (the authoring guides)
 
 The six how-to guides. The **skills** (`.claude/skills/`) are the operational version of these —
 a skill loads the guide's rules and enforces the grounding gate; the guide is the reference text.

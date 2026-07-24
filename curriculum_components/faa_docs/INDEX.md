@@ -1,4 +1,4 @@
-# faa_docs/ — INDEX
+# faadocs/ — INDEX
 
 Staging area for FAA PDFs bound for **DB2** (`aviation-library-v2`) via
 `src/gcp/import_db2_docs.py`. PDFs are **gitignored** (`*.pdf`) — only `_db2_import.jsonl`

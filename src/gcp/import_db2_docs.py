@@ -1,7 +1,7 @@
 """Add the staged FAA source PDFs to DB2 (aviation-library-v2) and apply document_tags.
 
 Two live-write actions, both GATED behind --execute (default is a dry run that mutates nothing):
-  1. Upload curriculum_components/faa_docs/*.pdf to the library bucket, then INCREMENTAL-import
+  1. Upload curriculum_components/faadocs/*.pdf to the library bucket, then INCREMENTAL-import
      them into aviation-library-v2 (INCREMENTAL = upsert by id; the existing 16 docs are NOT
      touched — never FULL here, which would wipe the store).
   2. Patch `document_tags` onto EVERY DB2 document (existing 16 have none) using the shared

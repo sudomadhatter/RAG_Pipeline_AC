@@ -30,9 +30,11 @@ that FIRST**; read its `INDEX.md`/`README.md` only when you need the inventory.
   - `pipeline/library/` — FAA source PDFs: `new/` → `active/` → `superseded/` (PDFs gitignored).
   - `curriculum_components/` — authored assets: `curriculum_modules/` (masters exported from Drive) ·
     `rkp_manifests/` · `quiz_banks/` · `lesson_podcasts/` (scripts only; audio lives in Drive).
-  - `_docs/` — the PRD (`docs_prds/Master_Curriculum_Pipeline.md`), `asset_registry.md`, generated
-    `STATE.md`, the 6 authoring guides (`instruction_docs/`), and **the two-team SOP**.
-  - `docs/` — the ACS PDFs (grounding sources) + `repo-map.md` (navigation index).
+  - `docs/` — **all documentation, one folder** (merged 2026-07-23; there is no `_docs/`):
+    **the two-team SOP** (`SOP_curriculum_operations.md`) · the PRD
+    (`docs_prds/Master_Curriculum_Pipeline.md`) · `asset_registry.md` · generated `STATE.md` ·
+    the 6 authoring guides (`instruction_docs/`) · product context (`project_context_prps/`) ·
+    the 3 ACS PDFs (grounding sources) · `repo-map.md` (navigation index).
   - `.agents/` — vendored toolkit (rules · skills · scripts · hooks), deliberately **LEAN** (Daniel,
     2026-07-22): curriculum + hygiene skills only — no sudo flow, no autopilots, no app skills.
     Shared rules edit at the lobby master then re-sync; **a blanket `/sync-agents -Target` re-imports
@@ -64,15 +66,15 @@ read-only/investigatory asks and trivial one-liners. Full protocol →
 ## 6. ROUTING TABLE (task → read these / skills)
 | Task | Read these | Skills / tools |
 |---|---|---|
-| Session boot / "what's the state?" | `docs/repo-map.md`, `_bmad-output/active-context/active-context.md`, `_bmad-output/project-context.md`, `_docs/docs_prds/STATE.md` (regen: `python scripts/generate_state_map.py [--live]`) | `/sudo-boot-sprint-memory` — run FROM the command center (the sudo flow + BMAD module live at the lobby, not in this repo) |
-| **How the two teams work together** | `_docs/SOP_curriculum_operations.md` | — |
+| Session boot / "what's the state?" | `docs/repo-map.md`, `_bmad-output/active-context/active-context.md`, `_bmad-output/project-context.md`, `docs/docs_prds/STATE.md` (regen: `python scripts/generate_state_map.py [--live]`) | `/sudo-boot-sprint-memory` — run FROM the command center (the sudo flow + BMAD module live at the lobby, not in this repo) |
+| **How the two teams work together** | `docs/SOP_curriculum_operations.md` | — |
 | Pull new masters from Drive | the SOP's Drive-station section (folder: `AVIAIONCHAT/ACS Modules`) | Google Drive connector (interactive sessions only) |
-| Author / edit an RKP manifest | the master module + `_docs/instruction_docs/rkp_creation_guide.md` | `rkp-manifest-creation` + `faa-grounding-gate` |
-| Author / edit a quiz bank | the lesson's RKP manifest + `_docs/instruction_docs/quiz_authoring_guide.md` | `quiz-bank-generation` + `faa-grounding-gate` |
-| Verify bridge keys / DB1↔DB2 | `_docs/instruction_docs/bridge_key_guide.md` | `bridge-key-verification` |
+| Author / edit an RKP manifest | the master module + `docs/instruction_docs/rkp_creation_guide.md` | `rkp-manifest-creation` + `faa-grounding-gate` |
+| Author / edit a quiz bank | the lesson's RKP manifest + `docs/instruction_docs/quiz_authoring_guide.md` | `quiz-bank-generation` + `faa-grounding-gate` |
+| Verify bridge keys / DB1↔DB2 | `docs/instruction_docs/bridge_key_guide.md` | `bridge-key-verification` |
 | Ingest / repair the live stores | README "Common operations" table + the tool's `--help` | gated `src/gcp/*` (constitution.project gates apply) |
 | Prove it end-to-end | `src/gcp/probe_bridge_hop.py` (read-only) + `generate_state_map.py --live` | — |
-| Full end-to-end mental model | `_docs/docs_prds/Master_Curriculum_Pipeline.md` (the PRD) | — |
+| Full end-to-end mental model | `docs/docs_prds/Master_Curriculum_Pipeline.md` (the PRD) | — |
 | Story / sprint work | `_bmad-output/implementation-artifacts/sprint-status.yaml` + the story file | `bmad-*` skills |
 | **"What's next" / open tasks** (Daniel's notes) | `_my_resources/open_tasks/todo_list.md` — **READ-ONLY** (never edit; cross-check vs live files) | — |
 
@@ -80,8 +82,8 @@ read-only/investigatory asks and trivial one-liners. Full protocol →
 | What | Where |
 |---|---|
 | Repo map / navigation index (read FIRST) | `docs/repo-map.md` |
-| End-to-end PRD · asset inventory · live state | `_docs/docs_prds/Master_Curriculum_Pipeline.md` · `asset_registry.md` · `STATE.md` (generated) |
-| The two-team SOP | `_docs/SOP_curriculum_operations.md` |
+| End-to-end PRD · asset inventory · live state | `docs/docs_prds/Master_Curriculum_Pipeline.md` · `asset_registry.md` · `STATE.md` (generated) |
+| The two-team SOP | `docs/SOP_curriculum_operations.md` |
 | Sprint board · active context · project context | `_bmad-output/implementation-artifacts/sprint-status.yaml` · `_bmad-output/active-context/active-context.md` · `_bmad-output/project-context.md` |
 | Path/env/credential resolution | `src/config.py` (+ `.agents/rules/credential-resolution.md`) |
 | Grounding sources (the ONLY permitted cites) | `docs/*_acs_*.pdf` · `pipeline/curriculum/1 ACS Curriculum Key.json` · FAA docs in `pipeline/library/` / the DB2 tag vocabulary |

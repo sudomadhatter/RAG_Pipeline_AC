@@ -39,7 +39,7 @@ flowchart LR
         QB["quiz_banks/\n48 JSON"]
         POD["lesson_podcasts/\n34 .md"]
         SPLIT["curriculum/elements/\n184 micro-lessons"]
-        FAA["faa_docs/\nFAA PDFs"]
+        FAA["faadocs/\nFAA PDFs"]
     end
 
     subgraph GCP ["GCP Production"]
@@ -75,9 +75,9 @@ flowchart LR
 | **Firestore RKPs** | Database: `aviationchat-database`, Collection: `rkp_manifests` | Document ID = `lesson_id` (e.g., `PPL_PA_I_A_01`) |
 | **Firestore Quizzes** | Database: `aviationchat-database`, Collection: `quiz_banks` | Document ID = `lesson_id` |
 | **Local RKPs (pipeline)** | `curriculum_components/rkp_manifests/{lesson_id}_rkp.json` | 48 files |
-| **Local RKPs (app)** | `AGY_AVIATIONCHAT/_docs/specialist_lesson/rkp_manifests/{lesson_id}_rkp.json` | 48 files |
+| **Local RKPs (app)** | `AGY_AVIATIONCHAT/docs/specialist_lesson/rkp_manifests/{lesson_id}_rkp.json` | 48 files |
 | **Local Quizzes (pipeline)** | `curriculum_components/quiz_banks/{lesson_id}_quiz.json` | 48 files |
-| **Local Quizzes (app)** | `AGY_AVIATIONCHAT/_docs/specialist_lesson/quiz_banks/{lesson_id}_quiz.json` | 48 files |
+| **Local Quizzes (app)** | `AGY_AVIATIONCHAT/docs/specialist_lesson/quiz_banks/{lesson_id}_quiz.json` | 48 files |
 | **Local Podcasts** | `curriculum_components/lesson_podcasts/{lesson_id}_podcast.md` | 34 files (Area I only) |
 | **Master Modules** | `curriculum_components/curriculum_modules/Area {N} Task {X} PPL.md` | 13 files |
 | **Split Lessons** | `pipeline/curriculum/elements/lesson_pa_{area}_{task}_{element}.md` | 184 files |
@@ -314,7 +314,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A["FAA PDFs\ncurriculum_components/faa_docs/"] -->|"Upload to GCS"| B["gs://aviationchat-library/v2/"]
+    A["FAA PDFs\ncurriculum_components/faadocs/"] -->|"Upload to GCS"| B["gs://aviationchat-library/v2/"]
     B -->|"import_db2_docs.py"| C["Vertex AI Search\naviation-library-v2"]
     C -->|"Patch document_tags"| D["27 docs with tags"]
 
@@ -390,7 +390,7 @@ These are the **only** tokens that match `document_tags: ANY(...)` filters in th
 
 ### Local FAA Document Storage
 
-FAA PDFs are stored in `curriculum_components/faa_docs/` (gitignored via `*.pdf`). 8 documents confirmed + downloaded from faa.gov on 2026-06-18 (365 MB, integrity-checked).
+FAA PDFs are stored in `curriculum_components/faadocs/` (gitignored via `*.pdf`). 8 documents confirmed + downloaded from faa.gov on 2026-06-18 (365 MB, integrity-checked).
 
 > [!WARNING]
 > The full AFH (`FAA-H-8083-3C.pdf`, 273 MB) exceeds Vertex's 200 MB per-doc limit. It was split into 4 parts using `pypdf`. An orphan `gs://aviationchat-library/v2/FAA-H-8083-3C.pdf` may still exist in the bucket — safe to delete.
