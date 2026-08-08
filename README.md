@@ -41,7 +41,7 @@ generated [docs/docs_prds/STATE.md](docs/docs_prds/STATE.md).
 │   ├── instruction_docs/     #  the 6 authoring guides (rkp, quiz, bridge_key, flashcard, lifecycle, recovery)
 │   ├── project_context_prps/ #  broader product / architecture context (what the downstream app is)
 │   ├── *.pdf                 #  the 3 ACS books (private · instrument · commercial) — grounding sources
-│   └── repo-map.md · workspace-standard.md
+│   └── repo-map.md
 │
 ├── auth_keys/                # credentials (GITIGNORED): .env + service-account.json
 ├── _artifacts/               # session artifacts (per-session folders + INDEX.md)

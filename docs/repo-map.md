@@ -66,7 +66,6 @@ RAG_Pipeline_AC/
         [22 files: .mdx21, .txtx1 | e.g. INDEX.md]
       SOP_curriculum_operations.md
       repo-map.md
-      workspace-standard.md
   pipeline/
     curriculum/
       elements/
