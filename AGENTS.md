@@ -35,24 +35,33 @@ that FIRST**; read its `INDEX.md`/`README.md` only when you need the inventory.
     (`docs_prds/Master_Curriculum_Pipeline.md`) · `asset_registry.md` · generated `STATE.md` ·
     the 6 authoring guides (`instruction_docs/`) · product context (`project_context_prps/`) ·
     the 3 ACS PDFs (grounding sources) · `repo-map.md` (navigation index).
-  - `.agents/` — vendored toolkit (rules · skills · scripts · hooks), deliberately **LEAN** (Daniel,
-    2026-07-22): curriculum + hygiene skills only — no sudo flow, no autopilots, no app skills.
-    Shared rules edit at the lobby master then re-sync; **a blanket `/sync-agents -Target` re-imports
-    the full kit — re-prune to the keep-list in `.agents/skills/INDEX.md` after any rules refresh.**
+  - `.agents/` — **this project's OWN law only** (tier 2, 2026-08-07 SCC-31): `constitution.project.md`
+    + `credential-resolution.md`, its 4 curriculum skills, and `INDEX.md` which routes them. The shared
+    toolkit lives at the command center — nothing here duplicates it, and `/sync-agents` no longer has a
+    project target, so the old "re-prune after every refresh" chore is gone for good.
   - `_artifacts/` — session artifacts, project-local (continuity file lives in `_bmad-output/` — §9).
   - `_my_resources/` — **Daniel's personal area. Protected: do NOT edit or reference unless he says so (§8).**
 - **MISSION:** author curriculum artifacts (skills-gated), ingest them (dry-run-gated), prove them
   (bridge probe + state map) — batched by ACS Area via the BMAD-lite board.
-- **SUPPORT:** rules load by path from `.agents/rules/`; the authoring skills are
-  `rkp-manifest-creation` · `quiz-bank-generation` · `bridge-key-verification` · `faa-grounding-gate`
-  (Claude resolves them from `.claude/skills/`); the sprint board lives in `_bmad-output/`.
+- **SUPPORT:** this project's rules + its 4 authoring skills (`rkp-manifest-creation` ·
+  `quiz-bank-generation` · `bridge-key-verification` · `faa-grounding-gate`) load **by path** from
+  `.agents/INDEX.md`; all shared workflow law comes from the command center. The sprint board lives in
+  `_bmad-output/`.
 
-## 4. ALWAYS-LOAD (small)
-- `.agents/rules/operator-profile.md` (**who you're talking to** — Daniel is the visionary/chair, you
-  are the engineer; the eight speaking obligations that govern every reply) +
-  `.agents/rules/constitution.md` (shared hard stops) + `.agents/rules/constitution.project.md`
-  (**THIS repo's data-side hard stops**) + `.agents/rules/karpathy-guidelines.md` (how to work) +
-  `.agents/rules/artifacts-always-first.md` (the plan-first gate — see §5).
+## 4. ALWAYS-LOAD (two tiers, one center)
+
+**Sessions run FROM the command center** (`Sudo_Hatter_Command`), so its `.agents/` — the shared rules,
+every `/` command, the skills, the scripts — is already loaded before you get here. This project adds
+only its own law on top. Full contract → the center's `.agents/rules/project-law.md`.
+
+- **⛔ ON BINDING THIS PROJECT — read `.agents/INDEX.md` and honor its `Load` column**, before any other
+  step: `constitution.project.md` (**THIS repo's data-side hard stops**) loads as floor;
+  `credential-resolution.md` and the 4 curriculum skills load on their triggers, by path.
+- **From the center (already loaded, not duplicated here):** the floor (`operator-profile`,
+  `constitution`, `karpathy-guidelines`), the protocol rules (`artifacts-always-first` — the plan-first
+  gate, see §5 — plus `git-policy` and `worktree-per-story`), and every on-demand rule.
+- **Jira:** this repo has no `jira.conf`, so the commit gate no-ops here. System work carries the
+  lobby's `SCC-<n>` keys on `epic/SCC-<n>-<slug>` / `chore/SCC-<n>-<slug>` branches.
 
 ## 5. ARTIFACTS PROTOCOL — MANDATORY FIRST ACTION
 Before touching any project file (anything outside `_artifacts/`): create
@@ -61,7 +70,7 @@ Before touching any project file (anything outside `_artifacts/`): create
 Daniel says "approved."** Close with ONE `walkthrough.md` ending in `## Task Checklist` (final
 TodoWrite snapshot) + `## Your Actions` (manual steps + the exact git command). Skip only for
 read-only/investigatory asks and trivial one-liners. Full protocol →
-`.agents/rules/artifacts-always-first.md`.
+the center's `.agents/rules/artifacts-always-first.md`.
 
 ## 6. ROUTING TABLE (task → read these / skills)
 | Task | Read these | Skills / tools |
@@ -102,7 +111,7 @@ code scheme (`PPL_PA_<Area>_<Task>_<nn>` — see the Curriculum Key). Drive mast
 `Area N Task X PPL` (Doc + `.md` export side by side).
 
 ## 8. GATES (consult before acting)
-- **GIT — desktop default** (canonical rule → `.agents/rules/git-policy.md`): agents **NEVER
+- **GIT — desktop default** (canonical rule → the center's `.agents/rules/git-policy.md`): agents **NEVER
   commit/push**; hand Daniel the copy-paste command in "Your Actions". Enforced by
   `.claude/hooks/require-push-approval.py`. **BRANCH MODEL: single `main` — BY DESIGN** (Daniel,
   2026-07-22): this is a workhorse repo, deployed nowhere; the protected surface is the DATA, not a

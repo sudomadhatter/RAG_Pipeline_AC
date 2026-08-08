@@ -1,20 +1,39 @@
-# `.agents/` INDEX — master toolkit inventory
+# `.agents/` INDEX — RAG_Pipeline_AC project law (tier 2)
 
-The single source of authorship for the whole system. **Read `AGENTS.md` first** (how to act here); this is
-the "what's in here" map. Edit at master, then `/sync-agents`.
+**This project holds only its OWN law.** All workflow law — rules, `/` commands, skills, workflows,
+scripts, sync — lives in the command center (`Sudo_Hatter_Command/.agents/`) and is already loaded in
+your session; nothing here duplicates it. Contract: the center's `.agents/rules/project-law.md`.
 
-| Subfolder | Holds | Dispatch via |
+> ⛔ **Binding this project MEANS reading this file.** Every `/sudo-*` Step 0 §BIND and any work under
+> `Projects/RAG_Pipeline_AC/` loads the `Load` column below before its first step.
+
+## Rules (`rules/`)
+
+| Rule | Load | Trigger — reach for it when… |
 |---|---|---|
-| `rules/` | behavioral law — constitution, karpathy-guidelines, git-policy, artifacts-always-first, mobile-mode, … | `rules/INDEX.md` |
-| `commands/` | the canonical slash-command set — `/sudo-*`, `/autopilot_*`, `/sync-agents`, `/new-project`, `/merge_main_debug`, … | `commands/INDEX.md` |
-| `skills/` | model-invoked capabilities | `skills/INDEX.md` |
-| `workflows/` | the Antigravity workflow mirror + real multi-stage workflows — **this is Antigravity's `/` surface**, so everything here is invocable by Gemini | `workflows/INDEX.md` |
-| `reference/` | long-form reference docs deliberately OFF every command surface (e.g. the autopilot relay reference — a Claude/opencode-only pipeline Gemini can't run) | `reference/INDEX.md` |
-| `bmad/` | the BMAD method install — **owned, regenerated on update, never hand-edit** | — |
-| `scripts/` | maintenance — `check_maps.py`, `generate_repo_map.py`, `record_map_changes.py`, `generate_doc_graph.py`, `check-repo-map-drift.ps1`, `sync-agents.ps1`, `new-project.ps1` | — |
-| `templates/` | `project-template/` — the scaffold `/new-project` clones | — |
-| `hooks/` | `require-push-approval.py` — the git write-approval gate (synced into every `.claude/hooks/`) | — |
-| `opencode-agents/` | opencode agent definitions | — |
+| `constitution.project.md` | **floor** | always, in this project — the curriculum-pipeline hard stops and carve-outs on top of the shared constitution. |
+| `credential-resolution.md` | on-demand | running scripts or ingest jobs that need Firebase / Vertex credentials (pipeline-adapted — differs from AviationChat's). |
 
-Adapters `CLAUDE.md` / `GEMINI.md` here both point to `AGENTS.md`. **No GitNexus block by design** — the
-toolkit is markdown, navigated by these indexes (and the doc-graph), not the code-graph.
+## Skills (`skills/`)
+
+This project's domain — the curriculum-authoring and gated-ingest pipeline upstream of the app.
+Loaded **by path** from here, never as slash commands:
+
+| Skill | For |
+|---|---|
+| `rkp-manifest-creation` | authoring the per-lesson RKP manifests |
+| `bridge-key-verification` | verifying Bridge Keys across the dual-store topology |
+| `faa-grounding-gate` | the regulatory grounding gate on ingested content |
+| `quiz-bank-generation` | generating the quiz banks from curriculum source |
+
+## Not here (by design — 2026-08-07 thin conversion, SCC-31)
+
+`hooks/` · the maintenance `scripts/` · the shared `rules/` · 4 toolkit skills · the toolkit
+`AGENTS.md`/`CLAUDE.md`/`GEMINI.md` adapters · pointer txts · `.claude/{commands,skills,hooks}` ·
+`.opencode/{commands,agent}` · `opencode.json`. All of it is the command center's, reachable from any
+session. This repo was never on the sync allowlist, so its copies were frozen-stale before deletion.
+
+## Jira
+
+This repo has **no `jira.conf`** and no `.githooks/`, so the commit-msg gate no-ops here by design —
+there is no separate Jira project for the pipeline. System work carries the lobby's `SCC-<n>` keys.

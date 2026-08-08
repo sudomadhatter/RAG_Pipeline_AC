@@ -65,35 +65,22 @@ RAG_Pipeline_AC/
     project_context_prps/
         [22 files: .mdx21, .txtx1 | e.g. INDEX.md]
       SOP_curriculum_operations.md
-      commercial_airplane_acs_7.pdf
-      instrument_rating_airplane_acs_8.pdf
-      private_airplane_acs_6.pdf
       repo-map.md
       workspace-standard.md
   pipeline/
     curriculum/
-      active/
       elements/
           [184 files: .mdx184 | e.g. lesson_pa_i_a_k1.md]
       new/
           README.md
       sidecars/
           [12 files: .jsonx12 | e.g. lesson_pa_ix_b_k1.json]
-      superseded/
         1 ACS Curriculum Key.json
         INDEX.md
         README.md
         manifest.json
     library/
-      active/
-        advisory_circulars/
-        handbooks/
-        regulations/
-      new/
-          [17 files: .pdfx17 | e.g. 14 CFR Part 67 (2025).pdf]
-      superseded/
         INDEX.md
-        manifest.json
   scripts/
       audit_sidecars.py
           def audit_and_clean_sidecars()
@@ -131,7 +118,6 @@ RAG_Pipeline_AC/
           def main()
   specialist_curriculum/
     curriculum_modules/
-        1 ACS Curriculum Key.json
         INDEX.md
   src/
     gcp/
